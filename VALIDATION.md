@@ -434,3 +434,64 @@ QS/TT/PV=true、MoveOverhead10、seed20261015、timeout1200s，同一 R3 binary�
 `ctest --preset release -R '^(uci|experiments)$'` 2/2、完整 Release 6/6；
 日志 r35-targeted/release.log。新模型 benchmark 集成测试也验证保留身份与篡改。
 正式实验必须在本配置提交及 clean rebuild 后运行；未执行正式 match。
+
+R3.5 正式实验运行状态（可恢复记录）：clean code/binary
+`476ceeee4b96d0ee1f2ffcf1f572f08833c4bf70`，binary SHA-256
+`95bb42aaac9d770446f854e80d9562fc2bde89f88db2766aec0fb6a63986729e`。
+按 README 运行 benchmark 至 `experiments/results/r3-benchmark-final-20261015`，
+120查询和70条静态计时全部完成；validate/report 通过。depth4 hand/linear
+266968/287201 nodes、76.152790/81.244622ms；静态 23.016249/24.300165ns/call。
+同深度变更 evaluator 会改变搜索树，不能把节点差异当纯推理开销或 Elo。
+32局正式赛于 2026-10-15 09:19:52 UTC 开始，输出
+`experiments/results/r3-match-final-20261015`；record.json 在运行中保留命令/
+身份/硬件，fastchess.log 和 games.pgn 持续写入。仍为本次唯一正式赛，
+不要因会话恢复而重复启动、换种子或调整权重。未达到最终验收，不启动 R4。
+R3.4 Actions #38711662455 五项全部 success；最新配置 Actions #38711949849
+另行核查。运行中不启动本地 builds/tests 干扰计时。
+
+R3.5 配置版本 Actions #38711949849 五项全部 success（r35-ci.json）；
+R3.4 快照 r34-ci.json。额外来源审查：月库名为 January 2017，但首3000局原始
+UTCDate/UTCTime 实际窗口为 2016-12-31 23:00:00–23:16:53 UTC；不推测其原因。
+这是非常窄的方便样本，不具有全月/全平台代表性；冻结后不据此换数据或重训。
+原始源码比对：从 R3 起点 b9fac65 到476ceee，engine/src/search.cpp 与
+engine/src/evaluator.cpp 无任何差异，保留 R1/R2 算法与原手工特征/权重。
+
+## R3 最终研究验收（2026-10-15）
+
+R3.1–R3.5 全部完成，未启动 R4。正式报告：docs/r3/final-report.md。
+真实数据、冻结独立测试、C++ 推理、UCI 部署、benchmark 和 fastchess 闭环已完成；
+工程与研究验收通过，**没有证据证明棋力提升**，继续使用 Handcrafted 默认。
+
+### 最终量化与完整性
+
+- 正式代码完整 SHA `476ceeee4b96d0ee1f2ffcf1f572f08833c4bf70`，clean binary
+  SHA-256 `95bb42aaac9d770446f854e80d9562fc2bde89f88db2766aec0fb6a63986729e`；
+  同一 binary/evaluator 选项对照，冻结模型 hash `446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b`。
+  精确 binary/configure/build 日志保留于 .tools/r3-frozen-engine-476ceee，不入 Git。
+- Mac 正式32局/16轮（2026-10-15 09:19:52–09:27:04 UTC）：12W/5D/15L，
+  得分45.3125%，五档计数[4,1,7,2,2]，配对bootstrap CI95 [28.125%,60.9375%]。
+  32局自然结束，0裁决/异常；27将杀、1重复、1子力不足、3五十步；16指定开局
+  各恰好2局。仅本批正式赛，未追加/调参/换种子。fastchess自动Elo不作研究结论。
+- depth4 hand/linear：266968/287201 nodes，76.152790/81.244622ms；静态
+  23.016249/24.300165ns/call。独立解释推理、树变化、耗时与实际对弈。
+- 离线 test：BCE .587908078→.583818366，Brier .189141550→.188307783，
+  棋局聚类差值区间均跨零，早期/和棋标签分层退步，不能断言泛化改善。
+- 正式包完整哈希/元信息/模型/合法PGN/配对/终局/统计重算 validate/report 通过。
+  最终审计覆盖两个数据版本、6039特征输入、冻结模型、16开局、9个保留历史及
+  正式 bundle；命令 `.venv/bin/python docs/validation/r3/audit_final.py`，
+  r35-final-audit.json/log 保存结果。此审计不重跑比赛、不重新评价 test 指标。
+- 最终归档前 configure/build/Release CTest 6/6，pip check 无依赖冲突；
+  测试版本476ceee + dirty docs/archive/setup metadata，精确日志
+  r35-acceptance-configure/build/release.log 与 r35-dependencies.log。
+  数值库 metadata 显示 Requires-Python>=3.12，故同步 pyproject/CMake/README/
+  requirements 的最低版本；不影响此前3.14训练或正式C++ binary，不重跑正式实验。
+- macOS/Windows Release/Debug、macOS sanitizer 的正式代码 Actions #38711949849
+  五项success，R3.4 #38711662455亦五项success；快照 r35-ci/r34-ci.json。
+  归档提交还将触发一次当前主分支CI，最终状态在后续同步记录。
+
+### 边界和后续
+
+保留历史源/失败记录，无搜索或手工评估算法改动，无新增特征/神经网络/MCTS。
+来源窗口仅约17分钟，数据/开局范围小；玩家相关性、标签噪声和bootstrap限制
+不能被工程通过抵消。Windows持续实验主机、长赛/SPRT和广泛外推未验证。
+R4 需另行授权，建议先扩大跨日期数据与独立开局，再评估特征/模型扩展。

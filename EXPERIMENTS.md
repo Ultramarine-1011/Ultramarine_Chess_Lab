@@ -58,7 +58,7 @@ fastchess 由 `scripts/bootstrap_fastchess.py` 固定构建；安装脚本与
   当前 CLI 不实现 SPRT/显著性检验，不自动输出 Elo。
 - 禁止删除失败记录、选取有利种子、混用不同编译参数却声称算法收益。
 
-## 数据与训练预留
+## R1 数据与训练预留（历史规范，现由 R3 落实）
 
 TrainingSpec 预留 dataset_manifest、features、seed、target、split_manifest。
 后续数据清单必须包括来源、许可证、SHA-256、位置/棋局数量和标签定义；

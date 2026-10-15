@@ -1,4 +1,4 @@
-# Python runtime/test dependencies. Install with Python >=3.11, then pip install --no-deps -e .
+# Python runtime/test dependencies. Install with Python >=3.12, then pip install --no-deps -e .
 attrs==26.1.0
 chess==1.11.2
 jsonschema==4.25.1

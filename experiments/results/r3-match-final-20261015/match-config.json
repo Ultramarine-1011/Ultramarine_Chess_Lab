@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "comparison": "ablation",
+  "seed": 20261015,
+  "engines": [
+    {
+      "name": "Linear",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release, same binary; default search; single thread",
+      "ucl_build_info": true,
+      "options": {
+        "ModelSHA256": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+        "ModelFile": "experiments/results/r3-model-v1/model.txt",
+        "Evaluator": "Linear",
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10
+      }
+    },
+    {
+      "name": "Handcrafted",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release, same binary; default search; single thread",
+      "ucl_build_info": true,
+      "options": {
+        "Evaluator": "Handcrafted",
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10
+      }
+    }
+  ],
+  "rounds": 16,
+  "games": 2,
+  "concurrency": 1,
+  "tc": "5+0.05",
+  "maxmoves": 150,
+  "timeout_seconds": 1200,
+  "openings": {
+    "path": "experiments/openings/r3-v1.epd",
+    "format": "epd",
+    "order": "sequential"
+  }
+}

@@ -1,11 +1,11 @@
 # Ultramarine Chess Lab (UCL)
 
 可运行、可比较、可复现的 UCI 国际象棋引擎研究项目。C++20 负责引擎与推理，
-Python 负责数据、训练接口、实验和统计。R1 经典基线保留可构建；R2 增加 QS、TT 和 PV 排序，本轮不开发学习模型。
+Python 负责数据、训练接口、实验和统计。R1 经典基线保留可构建；R2 提供 QS、TT 和 PV 排序，R3 增加可选监督线性评估，默认仍用手工评估。
 
 ## 从全新克隆开始：macOS
 
-前置条件：Git、Apple Command Line Tools、Python 3.11+、CMake 3.24+、Ninja。
+前置条件：Git、Apple Command Line Tools、Python 3.12+、CMake 3.24+、Ninja。
 首次安装工具：`xcode-select --install`，然后 `brew install cmake ninja python gh`。
 
 ```sh
@@ -27,7 +27,7 @@ ctest --preset release
 
 ## Windows
 
-安装 Git、Python 3.11+、CMake 3.24+、Ninja 和 Visual Studio 2022/2026 C++
+安装 Git、Python 3.12+、CMake 3.24+、Ninja 和 Visual Studio 2022/2026 C++
 桌面开发工具。在 **Developer PowerShell for VS** 中执行：
 
 ```powershell
@@ -139,8 +139,8 @@ python docs/validation/skills-20261015/probe_discovery.py <codex可执行文件�
 ```
 
 不重复安装内置 `skill-creator` / `skill-installer` / `openai-docs`。
-当前没有 Notebook 流程，暂不安装 `jupyter-notebook`；R3 获授权且需要 `.ipynb`
-时再评估。全局文档、表格、浏览器和插件 Skills 不复制进本项目，也不为本项目
+当前 R3 使用脚本流程，没有 Notebook 需求，暂不安装 `jupyter-notebook`；
+将来需要 `.ipynb` 时再评估。全局文档、表格、浏览器和插件 Skills 不复制进本项目，也不为本项目
 卸载其他工作的全局能力。以后机器若已全局安装同名 `gh-fix-ci`，优先保留仓库
 版本，移走或禁用用户目录副本以避免选择器重复；项目自有 Skills 只保留此处一份。
 
@@ -171,18 +171,18 @@ UCL 自有代码采用 MIT；第三方依赖保留各自许可证。
 
 ```sh
 .venv/bin/python -m ucl.dataset --output .tools/r3-dataset-new
-.venv/bin/python -c 'from ucl.dataset import validate_dataset; validate_dataset("experiments/results/r3-data-v1")'
+.venv/bin/python -c 'from ucl.dataset import validate_dataset; validate_dataset("experiments/results/r3-data-v2")'
 ```
 
 下载固定历史月度库的 2 MiB 前缀，最多取 3000 完整局；不下载整个数据库。
-正式保留数据与冻结划分见 `experiments/results/r3-data-v1/manifest.json`，
+正式保留数据与冻结划分见 `experiments/results/r3-data-v2/manifest.json`，
 标签/过滤/去重/训练与比赛预算见 [R3 协议](docs/r3/protocol.md)。
 CI 使用三局有来源的 CC0 小棋谱 fixture，无需联网获取训练数据。
 
 R3 特征导出（先提交、重新 configure/build）：
 
 ```sh
-.venv/bin/python -c 'from ucl.feature_data import export_dataset; export_dataset("experiments/results/r3-data-v1", "build/release/ucl", ".tools/r3-features-new")'
+.venv/bin/python -c 'from ucl.feature_data import export_dataset; export_dataset("experiments/results/r3-data-v2", "build/release/ucl", ".tools/r3-features-new")'
 ```
 
 `ucl --features` 也接受逐行 FEN，逐行返回版本化 JSON；非法 FEN 退出非零。
@@ -220,3 +220,5 @@ R3 对照实验（先提交、重新 configure/build，输出目录不可复用�
 .venv/bin/ucl-lab validate experiments/results/r3-bench-new/record.json
 .venv/bin/ucl-lab validate experiments/results/r3-match-new/record.json
 ```
+
+R3 工程与研究结果、冻结身份和限制见 [最终研究报告](docs/r3/final-report.md)。

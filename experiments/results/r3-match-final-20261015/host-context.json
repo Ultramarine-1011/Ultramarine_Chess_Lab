@@ -1,0 +1,7 @@
+{
+  "captured_at": "2026-10-15T09:21:03.605270+00:00",
+  "power": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=22544483)\t85%; AC attached; not charging present: true\n",
+  "power_settings": "Battery Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 0\n networkoversleep     0\n sleep                1\n lessbright           0\n tcpkeepalive         1\n disksleep            10\nAC Power:\n Sleep On Power Button 1\n lowpowermode         0\n standby              1\n ttyskeepawake        1\n hibernatemode        3\n powernap             1\n hibernatefile        /var/vm/sleepimage\n displaysleep         30\n womp                 1\n networkoversleep     0\n sleep                0\n tcpkeepalive         1\n disksleep            10\n",
+  "load_snapshot": "17:21  up  6:31, 1 user, load averages: 2.36 2.31 2.19\n",
+  "protocol": "32 fixed games; one fastchess concurrent game; no other local builds or tests during the timed match; desktop background processes not controlled"
+}

@@ -1,0 +1,242 @@
+{
+  "dataset_v1": {
+    "source_games": 3000,
+    "reject:termination": 970,
+    "reject:rating": 629,
+    "reject:short_game": 90,
+    "reject:time_control": 400,
+    "reject:invalid literal for int() with base 10: '-'": 2,
+    "reject:invalid or unfinished PGN": 1,
+    "cross_split_position_removed": 4,
+    "duplicate_position_removed": 1,
+    "accepted_games": 908,
+    "positions_before_dedup": 5693,
+    "positions": 5688,
+    "positions:train": 3972,
+    "positions:validation": 922,
+    "positions:test": 794
+  },
+  "dataset_v2": {
+    "source_games": 3000,
+    "reject:termination": 970,
+    "reject:rating": 629,
+    "reject:short_game": 90,
+    "reject:time_control": 400,
+    "reject:invalid literal for int() with base 10: '-'": 2,
+    "reject:invalid or unfinished PGN": 1,
+    "duplicate_position_removed": 1,
+    "cross_split_position_removed": 2,
+    "accepted_games": 908,
+    "positions_before_dedup": 6042,
+    "positions": 6039,
+    "positions:train": 4208,
+    "positions:validation": 990,
+    "positions:test": 841
+  },
+  "feature_rows": 6039,
+  "model_sha256": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+  "opening_coverage": {
+    "unique": 16,
+    "games_each": 2,
+    "natural": {
+      "Termination.CHECKMATE": 27,
+      "Termination.THREEFOLD_REPETITION": 1,
+      "Termination.INSUFFICIENT_MATERIAL": 1,
+      "Termination.FIFTY_MOVES": 3
+    }
+  },
+  "bundle_validation": [
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r1-r2-benchmark-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r1-r2-benchmark-final-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r1-r2-match-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r1-r2-match-final-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r1-smoke-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r2-ablation-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r2-ablation-final-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r3-benchmark-final-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "validate",
+        "experiments/results/r3-match-final-20261015/record.json"
+      ],
+      "exit_code": 0,
+      "output": "valid experiment bundle (artifacts and recomputed results)\n"
+    }
+  ],
+  "reports": [
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r1-r2-benchmark-20261015/record.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r1-r2-benchmark-final-20261015/record.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r1-r2-match-20261015/record.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r1-r2-match-final-20261015/record.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r1-smoke-20261015/record.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r2-ablation-20261015/record.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r2-ablation-final-20261015/record.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r3-benchmark-final-20261015/record.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python",
+        "-m",
+        "ucl.cli",
+        "report",
+        "experiments/results/r3-match-final-20261015/record.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "search_and_handcrafted_source_unchanged": true
+}

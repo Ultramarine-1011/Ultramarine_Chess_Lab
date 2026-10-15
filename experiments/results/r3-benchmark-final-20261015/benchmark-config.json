@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "seed": 20261015,
+  "suite": "experiments/positions/r2-v1.json",
+  "repeats": 3,
+  "limits": [
+    {
+      "depth": 3
+    },
+    {
+      "depth": 4
+    }
+  ],
+  "engines": [
+    {
+      "name": "Linear",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release, same binary; default search; single thread",
+      "ucl_build_info": true,
+      "options": {
+        "ModelSHA256": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+        "ModelFile": "experiments/results/r3-model-v1/model.txt",
+        "Evaluator": "Linear",
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10
+      }
+    },
+    {
+      "name": "Handcrafted",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release, same binary; default search; single thread",
+      "ucl_build_info": true,
+      "options": {
+        "Evaluator": "Handcrafted",
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10
+      }
+    }
+  ],
+  "static_evaluation": true
+}

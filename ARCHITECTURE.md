@@ -66,8 +66,8 @@ Perft 独立于评估与搜索，不应用和棋截断。
 `records.py` 收集元信息并原子写 JSON；`match.py` 验证配置、解析路径、
 计算哈希、调用 fastchess 并记录失败；`report.py` 校验 PGN 和换色配对，
 输出 W/D/L、得分率与按轮重采样的 bootstrap 区间。
-`training.py` 只定义 TrainingSpec/Trainer 边界，后续加入数据清单、线性模型，
-不提供假训练实现。依赖由 pyproject.toml 声明，requirements.lock 固定实际版本。
+`training.py` 复用 TrainingSpec/Trainer 边界，提供版本化数据输入、正则线性
+训练、validation 选择和冻结模型后的独立测试。依赖由 pyproject.toml 声明，requirements.lock 固定实际版本。
 
 ## 验证层次
 
