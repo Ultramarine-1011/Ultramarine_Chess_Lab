@@ -1,7 +1,9 @@
 # R1 验证记录（2026-10-15，Asia/Singapore）
 
-被验证的代码提交：`fe3a23cfeeebade4e826ac8b2af2a96b34a06f50`。
-本文件及选定实验 bundle 随后的提交仅保存验收证据。
+本地引擎与实验验收基线：`fe3a23cfeeebade4e826ac8b2af2a96b34a06f50`。
+双平台最终验收提交：`e603d431a721c3f883bb1843059d122ef6bd4de5`。
+最终验收包含一项测试可移植性修正：使用显式 Windows/POSIX 路径覆盖空格参数，
+避免把当前主机的路径分隔符写死在断言中。此后仅补充验收文档。
 
 ## 本地环境
 
@@ -24,6 +26,11 @@ fastchess `alpha 1.8.2 20261011-ebfd64c`，完整提交见 third_party/README.md
 | JSON Schema | 实验记录有效 |
 | GitHub Actions 语法 | actionlint 1.7.12 通过 |
 | 全新克隆 | 独立临时目录、全新 venv、锁定依赖安装、Release 构建和 5/5 CTest 通过 |
+| GitHub 私有仓库克隆 | 从远程重新克隆到另一临时目录，全新 venv、构建和 5/5 CTest 通过 |
+| Windows CI Release | MSVC 14.51，5/5 CTest 通过 |
+| Windows CI Debug | MSVC 14.51，5/5 CTest 通过 |
+| macOS CI Release/Debug | 两个构建分别 5/5 CTest 通过；Release fastchess 对弈通过 |
+| macOS CI sanitizer | ASan/UBSan，5/5 CTest 通过 |
 
 Perft 包括 startpos depth 4 = 197281、Kiwipete depth 3 = 97862、
 残局 depth 4 = 43238、升变/易位局面 depth 3 = 9467 和 62379。
@@ -33,5 +40,6 @@ Perft 包括 startpos depth 4 = 197281、Kiwipete depth 3 = 97862、
 同目录保存配置、完整记录、开局副本、PGN 与日志。
 本次两个名称使用同一二进制，仅用于流程验证，不能推断 Elo。
 
-Windows 本地未运行；远程 macOS/Windows 验证须以 GitHub Actions 实际运行结果为准。
-当前 CI 定义包含两个平台的 Release/Debug，以及 macOS sanitizer 和 fastchess 冒烟对弈。
+双平台远程运行：[GitHub Actions #38693572181](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38693572181)，
+5 个 job 全部 success。Windows 验证由 GitHub 托管 runner 执行；未在用户的
+Windows 实验主机上测试硬件性能或长时间负载。
