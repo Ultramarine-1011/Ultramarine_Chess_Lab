@@ -1,0 +1,27 @@
+Preparing worktree (detached HEAD f933fe2)
+HEAD is now at f933fe2 docs(windows): record host setup and localized MSVC dependency fix [skip ci]
+-- The CXX compiler identification is MSVC 19.51.36260.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE
+-- Configuring done (2.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/26255/AppData/Local/Temp/ucl-revision-amq9c8m1/build
+[1/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\evaluator.cpp.obj
+[2/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\extended_features.cpp.obj
+[3/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\linear_evaluator.cpp.obj
+[4/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\search.cpp.obj
+[5/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\position.cpp.obj
+[6/9] Linking CXX static library ucl_core.lib
+[7/9] Building CXX object CMakeFiles\ucl.dir\engine\src\main.cpp.obj
+[8/9] Building CXX object CMakeFiles\ucl.dir\engine\src\uci.cpp.obj
+[9/9] Linking CXX executable ucl.exe

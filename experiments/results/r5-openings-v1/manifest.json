@@ -1,0 +1,80 @@
+{
+  "kind": "r5-independent-openings",
+  "code": {
+    "revision": "fcdfef0ff761ea97fcc35dbd7b364ed437454aa0",
+    "dirty": true
+  },
+  "source": {
+    "month": "2017-09",
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2017-09.pgn.zst",
+    "license": "CC0-1.0",
+    "license_url": "https://database.lichess.org/",
+    "acquired_at": "2026-10-15T16:31:40.170993+00:00",
+    "range": [
+      0,
+      3145727
+    ],
+    "headers": {
+      "Server": "nginx",
+      "Date": "Thu, 15 Oct 2026 16:31:11 GMT",
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "3145728",
+      "Last-Modified": "Fri, 04 Nov 2022 23:01:57 GMT",
+      "Connection": "close",
+      "ETag": "\"636599e5-e44879a7\"",
+      "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+      "X-Frame-Options": "DENY",
+      "Content-Range": "bytes 0-3145727/3829954983"
+    },
+    "bytes": 3145728,
+    "sha256": "eb170d1d53613d094ff8c3965e00896bcc3dc7b1619924f413d710a13d18d9e0"
+  },
+  "seed": 20261016,
+  "positions": 200,
+  "target": 200,
+  "filter_counts": {
+    "source_games": 4000,
+    "reject:termination": 1365,
+    "reject:rating": 982,
+    "reject:time_control": 416,
+    "reject:short_game": 129,
+    "reject:invalid literal for int() with base 10: '-'": 7,
+    "reject:invalid or unfinished PGN": 1,
+    "duplicate_position_removed": 1,
+    "accepted_games": 1100,
+    "positions_before_dedup": 7531,
+    "positions": 7530,
+    "positions:train": 5397,
+    "positions:validation": 1011,
+    "positions:test": 1122
+  },
+  "status": "PASS",
+  "exclusions": {
+    "experiments/openings/r3-v1.json": "134a12561a308f673f3f0602231220409ace60b9d7a5119941b022a9949d48ab",
+    "experiments/results/r4-openings-v1/positions.json": "75e23fa042d6c93167e74d61ab286fbb9dbecaa225bd2dbbc9fddf28771d80e3",
+    "experiments/results/r3-data-v1/positions.jsonl.gz": "f8a0ac321fbc10ecc4fb3a6681dbc373d5361c809f64c2e6ceb64e6a2844b7ab",
+    "experiments/results/r3-data-v1/splits.json": "5d367ca9a34d70814179a8f74bbe58fb51704bbc62dc864f58567fd656bc51ed",
+    "experiments/results/r3-data-v1/source.pgn.gz": "9eeb12b2e13f3fd75160a5542b9de92cc230be45d588b7914e0827592eeda779",
+    "experiments/results/r3-data-v2/positions.jsonl.gz": "9ae9bf32a6d346a6f712e3f42294e0d976a11f6b23ab5c8c5a5bab68910032ba",
+    "experiments/results/r3-data-v2/splits.json": "5d367ca9a34d70814179a8f74bbe58fb51704bbc62dc864f58567fd656bc51ed",
+    "experiments/results/r3-data-v2/source.pgn.gz": "9eeb12b2e13f3fd75160a5542b9de92cc230be45d588b7914e0827592eeda779",
+    "experiments/results/r4-data-v1/positions.jsonl.gz": "fb48d81d9c322ed628224aa9a18b96ace25c72a7247cd61dcc8706df022df61f",
+    "experiments/results/r4-data-v1/splits.json": "7cc01c05ea1950827b1e25cd1471a916a3dd8569919ad1b6860a2db97c43c09f",
+    "experiments/results/r4-data-v1/source.pgn.gz": "37fb4b27058389c6248654d8300fb3b8ce7140391e32a334c70a9ab90736a841"
+  },
+  "protocol_sha256": "d81bc51e093476602da2095c4f77777bc41e0ac9ec09abda15ffb93c45c539c0",
+  "files": {
+    "openings.epd": {
+      "sha256": "5753882fcea086c9e0531b7364d0f0d8084991b7b282dd134ad5195d76881e75",
+      "bytes": 15048
+    },
+    "positions.json": {
+      "sha256": "117cbee51589ffd7ce00db6893e1daea3e94a9c55a3fa044bb8f3b9a3bdf1eca",
+      "bytes": 117253
+    },
+    "source.pgn.gz": {
+      "sha256": "9358d5588ec928bce89e5fe505af3c9c77baf87fe581b06751ede4d94ad66543",
+      "bytes": 1719392
+    }
+  }
+}

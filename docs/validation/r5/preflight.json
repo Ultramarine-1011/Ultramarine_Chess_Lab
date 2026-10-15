@@ -1,0 +1,201 @@
+{
+  "code": {
+    "revision": "fcdfef0ff761ea97fcc35dbd7b364ed437454aa0",
+    "dirty": true
+  },
+  "at": "2026-10-15T16:31:11.468240+00:00",
+  "groups": {
+    "A": {
+      "record": "experiments\\results\\r5-preflight-v2-a\\record.json",
+      "record_sha256": "7a7c73d8305db3dbcbcffd14c225c4c28c9126cd1e2f05561fd08cbaf8fc71d4",
+      "status": "completed"
+    },
+    "B": {
+      "record": "experiments\\results\\r5-preflight-v2-b\\record.json",
+      "record_sha256": "b52f8c93724c7a7b71ca07c0b09c3207ae24e42db840862413ad30d2ff7b69b0",
+      "status": "completed",
+      "go_commands": [
+        "[Engine] [00:31:07.443058] <  2>  OriginalFull14 <--- go nodes 50000 wtime 1010000 btime 1010000 winc 10000 binc 10000",
+        "[Engine] [00:31:07.484052] <  2>  Handcrafted <--- go nodes 50000 wtime 1019960 btime 1010000 winc 10000 binc 10000",
+        "[Engine] [00:31:07.515249] <  2>  OriginalFull14 <--- go nodes 50000 wtime 1019960 btime 1019970 winc 10000 binc 10000",
+        "[Engine] [00:31:07.553864] <  2>  Handcrafted <--- go nodes 50000 wtime 1029923 btime 1019970 winc 10000 binc 10000",
+        "[Engine] [00:31:07.584717] <  2>  OriginalFull14 <--- go nodes 50000 wtime 1029923 btime 1029940 winc 10000 binc 10000",
+        "[Engine] [00:31:07.627314] <  2>  Handcrafted <--- go nodes 50000 wtime 1039881 btime 1029940 winc 10000 binc 10000",
+        "[Engine] [00:31:07.652955] <  2>  Handcrafted <--- go nodes 50000 wtime 1010000 btime 1010000 winc 10000 binc 10000",
+        "[Engine] [00:31:07.685552] <  2>  OriginalFull14 <--- go nodes 50000 wtime 1019968 btime 1010000 winc 10000 binc 10000",
+        "[Engine] [00:31:07.729238] <  2>  Handcrafted <--- go nodes 50000 wtime 1019968 btime 1019957 winc 10000 binc 10000",
+        "[Engine] [00:31:07.760806] <  2>  OriginalFull14 <--- go nodes 50000 wtime 1029937 btime 1019957 winc 10000 binc 10000",
+        "[Engine] [00:31:07.803985] <  2>  Handcrafted <--- go nodes 50000 wtime 1029937 btime 1029915 winc 10000 binc 10000",
+        "[Engine] [00:31:07.837487] <  2>  OriginalFull14 <--- go nodes 50000 wtime 1039905 btime 1029915 winc 10000 binc 10000"
+      ],
+      "stats": [
+        {
+          "depth": 4,
+          "score_cp": 40,
+          "nodes": 50000,
+          "qnodes": 47798,
+          "tt_probes": 2202,
+          "tt_hits": 375,
+          "tt_cutoffs": 33,
+          "tt_stores": 2164,
+          "pv_order_hits": 10,
+          "tt_order_hits": 342,
+          "elapsed_us": 39328
+        },
+        {
+          "depth": 4,
+          "score_cp": -1,
+          "nodes": 50000,
+          "qnodes": 47185,
+          "tt_probes": 2815,
+          "tt_hits": 388,
+          "tt_cutoffs": 61,
+          "tt_stores": 2748,
+          "pv_order_hits": 10,
+          "tt_order_hits": 327,
+          "elapsed_us": 29599
+        },
+        {
+          "depth": 4,
+          "score_cp": 89,
+          "nodes": 50000,
+          "qnodes": 46562,
+          "tt_probes": 3438,
+          "tt_hits": 637,
+          "tt_cutoffs": 48,
+          "tt_stores": 3380,
+          "pv_order_hits": 11,
+          "tt_order_hits": 589,
+          "elapsed_us": 37287
+        },
+        {
+          "depth": 4,
+          "score_cp": 9,
+          "nodes": 50000,
+          "qnodes": 48200,
+          "tt_probes": 1800,
+          "tt_hits": 214,
+          "tt_cutoffs": 6,
+          "tt_stores": 1788,
+          "pv_order_hits": 10,
+          "tt_order_hits": 208,
+          "elapsed_us": 29926
+        },
+        {
+          "depth": 4,
+          "score_cp": 103,
+          "nodes": 50000,
+          "qnodes": 48053,
+          "tt_probes": 1947,
+          "tt_hits": 342,
+          "tt_cutoffs": 29,
+          "tt_stores": 1912,
+          "pv_order_hits": 10,
+          "tt_order_hits": 313,
+          "elapsed_us": 41634
+        },
+        {
+          "depth": 5,
+          "score_cp": 60,
+          "nodes": 50000,
+          "qnodes": 45823,
+          "tt_probes": 4177,
+          "tt_hits": 1458,
+          "tt_cutoffs": 181,
+          "tt_stores": 3990,
+          "pv_order_hits": 17,
+          "tt_order_hits": 1277,
+          "elapsed_us": 23557
+        },
+        {
+          "depth": 4,
+          "score_cp": -5,
+          "nodes": 50000,
+          "qnodes": 47318,
+          "tt_probes": 2682,
+          "tt_hits": 438,
+          "tt_cutoffs": 55,
+          "tt_stores": 2619,
+          "pv_order_hits": 10,
+          "tt_order_hits": 383,
+          "elapsed_us": 31393
+        },
+        {
+          "depth": 4,
+          "score_cp": -34,
+          "nodes": 50000,
+          "qnodes": 47977,
+          "tt_probes": 2023,
+          "tt_hits": 328,
+          "tt_cutoffs": 24,
+          "tt_stores": 1993,
+          "pv_order_hits": 10,
+          "tt_order_hits": 304,
+          "elapsed_us": 42666
+        },
+        {
+          "depth": 4,
+          "score_cp": 0,
+          "nodes": 50000,
+          "qnodes": 47992,
+          "tt_probes": 2008,
+          "tt_hits": 243,
+          "tt_cutoffs": 20,
+          "tt_stores": 1982,
+          "pv_order_hits": 10,
+          "tt_order_hits": 223,
+          "elapsed_us": 30069
+        },
+        {
+          "depth": 3,
+          "score_cp": -51,
+          "nodes": 50000,
+          "qnodes": 49253,
+          "tt_probes": 747,
+          "tt_hits": 37,
+          "tt_cutoffs": 0,
+          "tt_stores": 743,
+          "pv_order_hits": 6,
+          "tt_order_hits": 37,
+          "elapsed_us": 42208
+        },
+        {
+          "depth": 3,
+          "score_cp": 7,
+          "nodes": 50000,
+          "qnodes": 48410,
+          "tt_probes": 1590,
+          "tt_hits": 182,
+          "tt_cutoffs": 9,
+          "tt_stores": 1576,
+          "pv_order_hits": 6,
+          "tt_order_hits": 173,
+          "elapsed_us": 32183
+        },
+        {
+          "depth": 4,
+          "score_cp": -67,
+          "nodes": 50000,
+          "qnodes": 48029,
+          "tt_probes": 1971,
+          "tt_hits": 428,
+          "tt_cutoffs": 8,
+          "tt_stores": 1958,
+          "pv_order_hits": 11,
+          "tt_order_hits": 420,
+          "elapsed_us": 39176
+        }
+      ]
+    },
+    "C": {
+      "record": "experiments\\results\\r5-preflight-v2-c\\record.json",
+      "record_sha256": "728f23d0224978859976671c2e2c40bf5fe15977343ef07c56392bad31098498",
+      "status": "completed"
+    },
+    "D": {
+      "record": "experiments\\results\\r5-preflight-v2-d\\record.json",
+      "record_sha256": "4eda07c4fddec11690c0062b00ddcbf9560c7418c14767376ef54f8e775cd2d6",
+      "status": "completed"
+    }
+  }
+}

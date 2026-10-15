@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "comparison": "smoke",
+  "seed": 20261016,
+  "engines": [
+    {
+      "name": "OptimizedFull14",
+      "path": ".tools/engines/f933fe24ed983cb011b7a1bb0b9382c36a9b8d11/ucl.exe",
+      "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+      "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+      "ucl_build_info": true,
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+        "ModelFile": "experiments/results/r4-models-v1/full.txt",
+        "Evaluator": "Linear"
+      }
+    },
+    {
+      "name": "OriginalFull14",
+      "path": ".tools/engines/f933fe24ed983cb011b7a1bb0b9382c36a9b8d11/ucl.exe",
+      "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+      "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+      "ucl_build_info": true,
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+        "ModelFile": "experiments/results/r4-models-v1/full.txt",
+        "Evaluator": "Linear"
+      }
+    }
+  ],
+  "rounds": 1,
+  "games": 2,
+  "concurrency": 1,
+  "tc": "1+0.01",
+  "maxmoves": 3,
+  "timeout_seconds": 120,
+  "pgn_telemetry": true,
+  "openings": {
+    "path": "experiments/results/r4-openings-v1/openings.epd",
+    "format": "epd",
+    "order": "sequential"
+  }
+}

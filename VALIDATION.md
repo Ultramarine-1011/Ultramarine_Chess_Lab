@@ -779,3 +779,21 @@ MSVC19.51.36260 /O2 /Ob2 /DNDEBUG，dirty=false，SHA256
 预检首次 A 在启动 fastchess 前因尚未生成 R5 EPD 失败，保留 r5-preflight-a/record.json
 failed 状态；修复为使用历史独立 EPD 的低成本预检，新输出目录带 v2，不覆盖失败。
 R5正式比赛/性能/优化均尚未执行。
+
+### R5.1 验收（2026-10-16）
+
+协议预注册 fcdfef0ff761ea97fcc35dbd7b364ed437454aa0 已推送，Schannel握手失败后仅当前命令
+用 openssl 后端成功，未更改系统/Git配置。正式比赛尚未启动。
+R5.1 PASS：Original独立clean构建；Release6/6；四种真实fastchess解析/运行/validate通过；
+长时控形状冒烟2局自然结束；FixedNodes12次搜索逐次50000，go/最终节点见preflight.json。
+正式四组配置先冻结预算/开局/分析规则；C/D候选二进制将于等价验收后固定到精确SHA。
+2017-09 HTTP206恰好3MiB，前4000完整局、1100合格源局，排除R3/R4正式开局、
+保留训练位置及全部可重建来源局的12ply位置/游戏/Site后，确定性得到200个唯一合法开局。
+离线源码重建位置/EPD/统计完全一致；source.pgn.gz 1719392字节。
+采集脚本当时dirty属明确保留的来源状态，R5.1提交封存其源码；未涉及模型训练/test选择。
+物理机Windows11 26100 /Ryzen8940HX 16C32T /约32GiB，电池100%接电，Turbo电源计划；
+HypervisorPresent=true为系统报告，不将其误认作本次远程CI。ACPI温度查询拒绝访问，
+不请求管理员权限；可用背景CPU/功耗计划/电池和前后快照作为运行条件，限制明确保留。
+工具SHA c6d7e4458a58025983c81bf38c524cb213e6f27559657dcfd72543392a431a71；
+R4 Mac固定开发版与本轮官方发布版不同。全部原始/失败/重建证据与命令见docs/validation/r5。
+后续：提交/推送本阶段，核对CI，clean重构建，再按组件profile选择局部优化。

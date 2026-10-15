@@ -1,0 +1,56 @@
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "1"]
+[White "OriginalFull14"]
+[Black "Handcrafted"]
+[Result "1/2-1/2"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rnbq1rk1/ppp2pbp/3p1np1/4p3/8/3P1NPP/PPP1PPB1/RNBQ1RK1 w - - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-16T00:31:07 +0800"]
+[GameEndTime "2026-10-16T00:31:07 +0800"]
+[PlyCount "6"]
+[Termination "adjudication"]
+[TimeControl "1000+10"]
+
+1. Bd2 {+0.40/4 0.040s, tl=1019.960s, latency=0.004s, n=45357, nps=1259916}
+Nc6 {-0.01/4 0.030s, tl=1019.970s, latency=0.015s, n=25309, nps=1687266}
+2. Ng5 {+0.89/4 0.037s, tl=1029.923s, latency=0.020s, n=20407, nps=1200411}
+a5 {+0.09/4 0.030s, tl=1029.940s, latency=0.002s, n=48054, nps=1716214}
+3. Bxc6 {+1.03/4 0.042s, tl=1039.881s, latency=0.003s, n=47098, nps=1207641}
+bxc6 {+0.60/5 0.024s, tl=1039.916s, latency=0.001s, n=49525, nps=2153260, Draw by adjudication}
+1/2-1/2
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "1"]
+[White "Handcrafted"]
+[Black "OriginalFull14"]
+[Result "1/2-1/2"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rnbq1rk1/ppp2pbp/3p1np1/4p3/8/3P1NPP/PPP1PPB1/RNBQ1RK1 w - - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-16T00:31:07 +0800"]
+[GameEndTime "2026-10-16T00:31:07 +0800"]
+[PlyCount "6"]
+[Termination "adjudication"]
+[TimeControl "1000+10"]
+
+1. Nc3 {-0.05/4 0.032s, tl=1019.968s, latency=0.009s, n=36324, nps=1579304}
+h6 {-0.34/4 0.043s, tl=1019.957s, latency=0.012s, n=36168, nps=1166709}
+2. Be3 {0.00/4 0.031s, tl=1029.937s, latency=0.004s, n=45938, nps=1701407}
+Nc6 {-0.51/3 0.042s, tl=1029.915s, latency=0.006s, n=41876, nps=1163222}
+3. Qc1 {+0.07/3 0.032s, tl=1039.905s, latency=0.024s, n=10554, nps=1319250}
+g5 {-0.67/4 0.039s, tl=1039.876s, latency=0.012s, n=34610, nps=1281851, Draw by adjudication}
+1/2-1/2
+
