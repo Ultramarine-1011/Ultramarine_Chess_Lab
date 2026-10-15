@@ -128,3 +128,15 @@ R3 预注册参数与有限预算见 [研究协议](docs/r3/protocol.md)。先�
 fastchess 的 `Termination "normal"` 必须与棋盘自然结果一致；外部裁决
 `adjudication` 单独统计，仍不能与强制终局矛盾。Lichess `Normal` 包含认输，
 数据管线仅检查强制终局矛盾，不把它误当 fastchess 自然终局标记。
+
+R3 正式冻结对比使用 `r3-benchmark.json` / `r3-match.json`：同一个 clean R3
+Release binary，通过 UCI 切换 Handcrafted / 固定 hash Linear；QS/TT/PV=true、
+Hash=16、MoveOverhead=10、并发1。预定义16个合法标准开局见 r3-v1.json/epd，
+与训练结果无关的人工常用变例；每开局换色一次，共32局，5+0.05，无 depth/nodes
+限制，maxmoves=150，1200s 超时、seed=20261015，不按比赛结果追加样本。
+自然/裁决结果分开，模型原始文件与实际 evalinfo 一起留档。
+
+benchmark-v1 可选 `static_evaluation=true`：额外对同一十局面用 C++ 各调用
+Handcrafted/Linear 100000次、7轮交替顺序，保存 ns、checksum、模型哈希。
+`validate` 复算 checksum、覆盖和汇总；`report` 独立显示静态耗时和搜索耗时。
+同深度两种 evaluator 会产生不同树，节点差异不直接代表推理速度或棋力。

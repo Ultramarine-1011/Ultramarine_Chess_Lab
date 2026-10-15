@@ -236,13 +236,14 @@ class UciTests(unittest.TestCase):
             engines=[]
             for name,opts in [('hand',{'Evaluator':'Handcrafted'}),('linear',{'Evaluator':'Linear','ModelFile':str(model),'ModelSHA256':model_hash})]:
                 engines.append({'name':name,'path':str(Path(ENGINE).resolve()),'revision':info['revision'],'build':'CTest binary','ucl_build_info':True,'options':opts})
-            config={'version':1,'seed':7,'suite':str(suite),'repeats':1,'limits':[{'depth':1}],'engines':engines}
+            config={'version':1,'seed':7,'suite':str(suite),'repeats':1,'limits':[{'depth':1}],'engines':engines,'static_evaluation':True}
             source=tmp/'input.json';write_json(source,config)
             out=tmp/'bundle';record=run_benchmark(root,source,out,allow_dirty=True)
             self.assertEqual(record['status'],'completed',record['error'])
             schema=json.loads((root/'schemas/benchmark-v1.schema.json').read_text())
             validate_bundle(out/'record.json',schema)
             self.assertEqual(record['engines'][1]['evaluation']['model_sha256'],model_hash)
+            self.assertEqual(len(json.loads((out/'static-evaluation.json').read_text())),7)
             bad=deepcopy(record);bad['engines'][1]['evaluation']['model_sha256']='0'*64
             write_json(out/'record.json',bad)
             with self.assertRaisesRegex(ValueError,'model identity'):validate_bundle(out/'record.json',schema)

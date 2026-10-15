@@ -14,8 +14,11 @@ from .records import new_record, sha256, utc_now, write_json, validate_record
 
 
 def validate_config_benchmark(c):
-    if set(c) != {"version", "seed", "suite", "repeats", "limits", "engines"} or c["version"] != 1:
+    required = {"version", "seed", "suite", "repeats", "limits", "engines"}
+    if not required <= c.keys() or c.keys() - required - {"static_evaluation"} or c["version"] != 1:
         raise ValueError("invalid benchmark configuration")
+    if "static_evaluation" in c and type(c["static_evaluation"]) is not bool:
+        raise ValueError("static_evaluation must be boolean")
     if type(c["repeats"]) is not int or not 1 <= c["repeats"] <= 100:
         raise ValueError("repeats must be 1..100")
     if not c["limits"] or any(set(l) not in ({"depth"}, {"nodes"}) or any(type(v) is not int or v < 1 for v in l.values()) or l.get("depth", 1) > 128 for l in c["limits"]):
@@ -111,6 +114,11 @@ def markdown_benchmark(record):
              "| Engine | Limit | Nodes | Wall ms | Wall NPS | Tactical checks |", "|---|---|---:|---:|---:|---:|"]
     for row in record["summary"]:
         lines.append(f"| {row['engine']} | {row['limit']} | {row['median_nodes_sum']:g} | {row['median_wall_ms_sum']:.2f} | {row['wall_nps']:.0f} | {row['tactical_passes']}/{row['tactical_total']} |")
+    if 'static_evaluation' in record['tools']:
+        static = record['tools']['static_evaluation']['summary']
+        lines += ['', 'Static evaluation: mean of per-position median ns/call (7 alternating repeats, 100000 calls/model/position):',
+                  f"Handcrafted {static['mean_position_median_handcrafted_ns']:.2f} ns; Linear {static['mean_position_median_linear_ns']:.2f} ns.",
+                  'Raw static measurements and checksums are retained separately; repeated timings are descriptive, not a significance test.']
     lines += ["", "QS changes leaf semantics. Tactical labels are narrow regression checks; this suite and throughput do not measure Elo.",
               "R1 lacks final interrupted-search counters; its node-limited totals are last completed iteration only. Compare R1 at fixed depth.", ""]
     return "\n".join(lines)
@@ -172,6 +180,11 @@ def run_benchmark(root, config_path, output, allow_dirty=False):
                         row["tactical_pass"] = tactical_pass(case, row["move"], score)
                         record["rows"].append(row)
         record["summary"] = summarize(record["rows"])
+        if config.get("static_evaluation"):
+            linear = [e for e in record["engines"] if e["options"].get("Evaluator") == "Linear"]
+            if len(linear) != 1:
+                raise ValueError("static evaluation requires exactly one linear evaluator")
+            record["tools"]["static_evaluation"] = run_static_evaluation(linear[0], runtime_options(root, linear[0]["options"], output), suite, output)
         record["status"] = "completed"
     except (Exception, KeyboardInterrupt) as exc:
         record["status"], record["error"] = "failed", f"{type(exc).__name__}: {exc}"
@@ -218,6 +231,8 @@ def validate_benchmark_bundle(path, record):
             raise ValueError("benchmark engine declaration mismatch")
         if declared.get("ucl_build_info") and (not actual.get("build_info") or actual["build_info"]["revision"] != revision):
             raise ValueError("benchmark binary provenance mismatch")
+    if config.get("static_evaluation"):
+        validate_static(record, path, cases)
     seen = set()
     for row in record["rows"]:
         identity = (row["engine"], row["position"], row["repeat"], json.dumps(row["limit"], sort_keys=True))
@@ -255,3 +270,62 @@ def validate_benchmark_bundle(path, record):
     if len(seen) != expected or record["summary"] != summarize(record["rows"]):
         raise ValueError("benchmark coverage/summary mismatch")
     return record
+
+
+def summarize_static(rows):
+    groups = {}
+    for r in rows:
+        groups.setdefault(r['position'], []).append(r)
+    positions = []
+    for name, group in groups.items():
+        positions.append({'position': name, **{kind+'_ns_per_call': statistics.median(
+            r[kind+'_ns']/r['iterations'] for r in group) for kind in ('handcrafted', 'linear')}})
+    return {'positions': positions,
+            'mean_position_median_handcrafted_ns': statistics.mean(p['handcrafted_ns_per_call'] for p in positions),
+            'mean_position_median_linear_ns': statistics.mean(p['linear_ns_per_call'] for p in positions)}
+
+
+def run_static_evaluation(entry, options, suite, output):
+    import subprocess
+    args = [entry['path'], '--eval-benchmark', options['ModelFile'], options['ModelSHA256']]
+    result = subprocess.run(args, input='\n'.join(p['fen'] for p in suite['positions'])+'\n',
+                            capture_output=True, text=True, check=True, timeout=60)
+    raw = [json.loads(line) for line in result.stdout.splitlines()]
+    if len(raw) != len(suite['positions'])*7:
+        raise ValueError('static evaluation row count mismatch')
+    rows = [{**r, 'position': suite['positions'][i//7]['id']} for i,r in enumerate(raw)]
+    write_json(output/'static-evaluation.json', rows)
+    return {'command': args, 'summary': summarize_static(rows)}
+
+
+def validate_static(record, path, cases):
+    import math
+    from .feature_data import reference_features, WEIGHTS
+    from .model import load_model
+    static = record['tools'].get('static_evaluation')
+    if not static or 'static-evaluation.json' not in record['artifacts']:
+        raise ValueError('missing static evaluation evidence')
+    linear = [e for e in record['engines'] if e['options'].get('Evaluator') == 'Linear']
+    if len(linear) != 1:
+        raise ValueError('static evaluation requires one linear evaluator')
+    model_hash = linear[0]['evaluation']['model_sha256']
+    weights = load_model(path.parent/('model-'+model_hash+'.txt'), model_hash)
+    rows = json.loads((path.parent/'static-evaluation.json').read_text())
+    seen = set()
+    for r in rows:
+        if set(r) != {'position','repeat','iterations','handcrafted_ns','linear_ns','checksum','model_sha256'}:
+            raise ValueError('static evaluation schema mismatch')
+        key = r['position'], r['repeat']
+        if key in seen or key[0] not in cases or type(key[1]) is not int or not 0 <= key[1] < 7:
+            raise ValueError('static evaluation identity mismatch')
+        seen.add(key)
+        if r['iterations'] != 100000 or r['model_sha256'] != model_hash or any(type(r[k]) is not int or r[k] <= 0 for k in ('handcrafted_ns','linear_ns')):
+            raise ValueError('invalid static evaluation measurement')
+        b = chess.Board(cases[key[0]]['fen']); x = reference_features(b)
+        def score(w):
+            s = sum(a*v for a,v in zip(w,x))
+            return math.floor(abs(s)+.5)*(1 if s>=0 else -1)*(1 if b.turn else -1)
+        if r['checksum'] != (score(WEIGHTS)+score(weights))*100000:
+            raise ValueError('static evaluation checksum mismatch')
+    if len(rows) != len(cases)*7 or static['summary'] != summarize_static(rows):
+        raise ValueError('static evaluation coverage/summary mismatch')

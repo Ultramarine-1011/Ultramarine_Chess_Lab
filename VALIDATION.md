@@ -420,3 +420,17 @@ UCI 支持 ModelSHA256 → ModelFile → Evaluator 顺序、实际 evalinfo、�
 - 初次 UCI fixture 的白走局面正将军对方国王，原 parser 正确拒绝，修正为合法
   queen-d2；一次脚本编辑误插入另一个测试方法，修正后全回归。失败日志保留。
 - 已准备固定 16 个自编标准开局与协议一致的 32 局配置；正式对弈尚未执行。
+
+## R3.5 — 冻结实验配置（2026-10-15，运行前）
+
+已准备16个不同开局的合法 SAN 重放清单/EPD，未参考实验结果筛选。与预注册
+协议一致，32局/16换色轮，5+0.05、无深度限制、maxmoves150、并发1、Hash16、
+QS/TT/PV=true、MoveOverhead10、seed20261015、timeout1200s，同一 R3 binary。
+十局面固定深度3/4、三次重复；静态调用7轮交替顺序、每模型/局面100000次。
+静态证据最小扩展既有 benchmark 的 tools/artifacts 与可选配置，validate
+重算 checksum/覆盖/中位数，report 分开显示；不另造比赛或统计系统。
+
+基底 `96e41da2b1174252c93f309a02f3efe526860703` + dirty R3.5 Python/config/docs：
+`ctest --preset release -R '^(uci|experiments)$'` 2/2、完整 Release 6/6；
+日志 r35-targeted/release.log。新模型 benchmark 集成测试也验证保留身份与篡改。
+正式实验必须在本配置提交及 clean rebuild 后运行；未执行正式 match。

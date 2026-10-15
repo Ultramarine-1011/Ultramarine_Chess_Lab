@@ -211,3 +211,12 @@ go depth 4
 `evalinfo` 可核对实际模型；加载失败输出 command rejected 并保留有效配置。
 切回使用 `setoption name Evaluator value Handcrafted`。实验 CLI 自动按加载顺序
 设置选项并使用绝对路径，保存模型副本和实际 evaluator 身份。
+
+R3 对照实验（先提交、重新 configure/build，输出目录不可复用）：
+
+```sh
+.venv/bin/ucl-lab benchmark --config experiments/configs/r3-benchmark.json --output experiments/results/r3-bench-new
+.venv/bin/ucl-lab match --config experiments/configs/r3-match.json --output experiments/results/r3-match-new --fastchess .tools/bin/fastchess
+.venv/bin/ucl-lab validate experiments/results/r3-bench-new/record.json
+.venv/bin/ucl-lab validate experiments/results/r3-match-new/record.json
+```
