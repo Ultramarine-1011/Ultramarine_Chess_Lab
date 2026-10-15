@@ -59,7 +59,12 @@ def extract(engine, fens):
 
 def export_dataset(dataset, engine, output):
     dataset, output = Path(dataset), Path(output)
-    validate_dataset(dataset)
+    kind = json.loads((dataset / 'manifest.json').read_text())['kind']
+    if kind == 'r4-dataset':
+        from .r4_data import validate_dataset as validate_r4
+        validate_r4(dataset)
+    else:
+        validate_dataset(dataset)
     rows = [json.loads(line) for line in gzip.decompress((dataset / 'positions.jsonl.gz').read_bytes()).decode().splitlines()]
     features = extract(engine, [r['fen'] for r in rows])
     for row, feature in zip(rows, features, strict=True):

@@ -521,3 +521,21 @@ Actions #38714098522 五项success。已读现行规则/架构/实验/R3报告�
 采用等棋局损失与棋局聚类bootstrap，报告玩家重复和窗口相关性限制。
 Windows实验主机当前无可访问配置，物理主机NOT_RUN；计划Mac资源可控fallback。
 R3源/模型/结果不改写，Handcrafted默认保留。尚未查看新模型test指标。
+
+### R4.1 数据完成，重建审计进行中
+
+预注册提交 `4e1bb700e0db1fda5d15571e3a795bb4fcbc991b`，Actions
+#38717781845 五项success（plan-ci.json）。按冻结计划获取6x3MiB，24000完整源局。
+共6670通过过滤、44681唯一局面；train3613局/24187局面，validation884/5924，
+test2173/14570。六个UTC日期全部覆盖；实际窗口是月库名前一天约13–24分钟，
+明确仍为月内方便前缀，不能声称均匀抽样。开发最大2017-04-30，test最小05-31。
+跨split位置（含颜色镜像）移除75次、内部重复20；游戏ID不跨split。
+train/validation、train/test、validation/test玩家重叠709/398/127，限制已记录。
+主统计采用等棋局损失和整局bootstrap，不能消除跨棋局玩家/窗口相关性。
+测试4e1bb70+dirty R4.1：research通过（含R3 v1/v2源重建），完整Release6/6。
+源URL/许可/HTTP206/Range/UTC/hash、每月原始PGN、位置/划分/诊断全部保留。
+正式无网络重建审计正在运行；不得将运行中误写PASS。R4.2 fit未运行，test未打开。
+
+R4.1 正式源重建审计完成，位置/游戏/划分/全部计数/诊断与每文件hash逐项相同，
+见r41-audit.log；6670局/44681局面/6日期/时间隔离四项目标均PASS。
+研究限制不影响数据完整性结论；独立test模型指标仍未计算。

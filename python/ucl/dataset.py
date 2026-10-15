@@ -33,7 +33,7 @@ def split_for(game_id, seed=SEED):
     return "train" if bucket < 70 else "validation" if bucket < 85 else "test"
 
 
-def prepare(pgn_text, seed=SEED, spacing=7):
+def prepare(pgn_text, seed=SEED, spacing=7, split_resolver=None, metadata=False):
     counts, games, rows = Counter(), {}, []
     stream = io.StringIO(pgn_text)
     while True:
@@ -68,8 +68,12 @@ def prepare(pgn_text, seed=SEED, spacing=7):
         if gid in games:
             counts["duplicate_game"] += 1
             continue
-        split = split_for(gid, seed)
+        split = split_resolver(h, gid) if split_resolver else split_for(gid, seed)
         games[gid] = {"split": split, "site": h.get("Site"), "plies": len(moves), "result": h["Result"]}
+        if metadata:
+            games[gid].update({"utc": h.get("UTCDate", "") + " " + h.get("UTCTime", ""),
+                               "players": [h.get("White", "").casefold(), h.get("Black", "").casefold()],
+                               "eco": h.get("ECO", "?"), "month": h.get("UCLSourceMonth", "?")})
         label = {"1-0": 1.0, "1/2-1/2": 0.5, "0-1": 0.0}[h["Result"]]
         board, positions = game.board(), []
         for ply, move in enumerate(moves, 1):

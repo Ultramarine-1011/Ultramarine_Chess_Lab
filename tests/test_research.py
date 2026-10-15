@@ -198,3 +198,21 @@ class InferenceTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+class R4DataTests(unittest.TestCase):
+    def test_temporal_plan_and_r3_compatibility(self):
+        from ucl.r4_data import annotated, temporal_split, diagnostics
+        from ucl.dataset import validate_dataset
+        text=(Path(__file__).parent/'fixtures/data-games.pgn').read_text()
+        a=annotated(text,'2017-02')
+        rows,games,counts=prepare(a,split_resolver=temporal_split,metadata=True)
+        self.assertTrue(rows)
+        self.assertTrue(all(g['split']!='test' for g in games.values()))
+        rows2,games2,_=prepare(annotated(text,'2017-06'),split_resolver=temporal_split,metadata=True)
+        self.assertEqual({r['split'] for r in rows2},{'test'})
+        self.assertEqual(set(games),set(games2))
+        self.assertEqual(set(r['position_id'] for r in rows),set(r['position_id'] for r in rows2))
+        self.assertFalse(diagnostics(rows,games)['strict_temporal_separation'])
+        for name in ('r3-data-v1','r3-data-v2'):
+            validate_dataset(Path(__file__).resolve().parents[1]/'experiments/results'/name)
+        with self.assertRaises(ValueError): temporal_split({'UCLSourceMonth':'2017-09'},'a'*64)
