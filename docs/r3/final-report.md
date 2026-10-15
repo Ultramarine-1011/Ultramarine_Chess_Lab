@@ -168,7 +168,10 @@ fastchess compliance40/40。全部6039局面Python/C++推理误差<1e-9cp，取�
 Mac Release另含fastchess smoke）五项通过：
 [R3.4](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38711662455)、
 [正式实验代码](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38711949849)。
-最终归档提交的独立CI状态另在VALIDATION末尾记录，不能替换正式实验SHA。
+归档及Python最低版本修复 `b8e33cdd2bbd45cd7b5b393289a90e978a39938a` 的
+[最终Actions](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38714098522)
+亦五项全部通过；该clean版本本地Release6/6。CI快照和最终同步记录在VALIDATION末尾。
+文档归档提交不替换正式实验SHA。
 
 真实修复：历史EXPERIMENTS覆盖回归、自然终局误接受、八ply采样走棋方混叠、
 Windows CRLF导致哈希失效、分层标签文字，以及数值依赖要求Python≥3.12

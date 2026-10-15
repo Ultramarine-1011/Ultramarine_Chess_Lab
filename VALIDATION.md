@@ -495,3 +495,18 @@ R3.1–R3.5 全部完成，未启动 R4。正式报告：docs/r3/final-report.md
 来源窗口仅约17分钟，数据/开局范围小；玩家相关性、标签噪声和bootstrap限制
 不能被工程通过抵消。Windows持续实验主机、长赛/SPRT和广泛外推未验证。
 R4 需另行授权，建议先扩大跨日期数据与独立开局，再评估特征/模型扩展。
+
+### R3 最终 GitHub 与干净版本复核
+
+归档/最低Python版本契约提交
+`b8e33cdd2bbd45cd7b5b393289a90e978a39938a` 已推送 origin/main；
+clean configure/build 的 `--build-info` 为该完整 SHA、dirty=false，
+`ctest --preset release` 6/6（r3-clean-configure/build/release.log）。
+[Actions #38714098522](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38714098522)
+macOS/Windows Release/Debug 与macOS sanitizer五项全部success，Mac Release
+fastchess smoke通过；原始状态快照 r3-archive-ci.json。
+至此所有相关代码/数据/配置/报告均已归档，最终相关代码CI通过。
+本节及报告CI链接采用 `[skip ci]` 文档收尾提交，不再改变工程或研究产物。
+正式实验仍准确引用476ceeee...的相同二进制和446d1837...的冻结模型。
+R3完成，保留手工默认；R4未授权、未开始。未验证项仅为报告明确列出的
+Windows持续实验主机、长赛/更广数据与棋力外推，不属于本轮承诺的完成项。
