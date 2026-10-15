@@ -7,7 +7,7 @@ name = "ucl-lab"
 version = "0.1.0"
 description = "Reproducible experiment tools for Ultramarine Chess Lab"
 requires-python = ">=3.11"
-dependencies = ["chess==1.11.2", "jsonschema==4.25.1"]
+dependencies = ["chess==1.11.2", "jsonschema==4.25.1", "zstandard==0.25.0"]
 
 [project.scripts]
 ucl-lab = "ucl.cli:main"

@@ -49,8 +49,9 @@ if(BUILD_TESTING)
   add_test(NAME perft COMMAND ucl_tests perft)
   add_test(NAME uci COMMAND ${Python3_EXECUTABLE} ${CMAKE_SOURCE_DIR}/tests/test_uci.py $<TARGET_FILE:ucl>)
   add_test(NAME experiments COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tests -p test_experiments.py)
-  set_tests_properties(experiments PROPERTIES WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  add_test(NAME research COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tests -p test_research.py)
+  set_tests_properties(experiments research PROPERTIES WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     ENVIRONMENT "PYTHONPATH=${CMAKE_SOURCE_DIR}/python")
-  set_tests_properties(unit search perft uci experiments PROPERTIES TIMEOUT 60)
+  set_tests_properties(unit search perft uci experiments research PROPERTIES TIMEOUT 60)
   set_tests_properties(search PROPERTIES TIMEOUT 180) # Expanded ablation matrix under ASan/MSVC Debug.
 endif()

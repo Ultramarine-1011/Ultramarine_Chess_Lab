@@ -166,3 +166,15 @@ third_party/         chess-library 头文件、许可证与来源
 UCL 自有代码采用 MIT；第三方依赖保留各自许可证。
 棋盘库来源及版本见 [third_party](third_party/README.md)；Python 工具使用
 独立安装的 [python-chess](https://github.com/niklasf/python-chess)（GPL-3.0+）。
+
+## R3 数据准备
+
+```sh
+.venv/bin/python -m ucl.dataset --output .tools/r3-dataset-new
+.venv/bin/python -c 'from ucl.dataset import validate_dataset; validate_dataset("experiments/results/r3-data-v1")'
+```
+
+下载固定历史月度库的 2 MiB 前缀，最多取 3000 完整局；不下载整个数据库。
+正式保留数据与冻结划分见 `experiments/results/r3-data-v1/manifest.json`，
+标签/过滤/去重/训练与比赛预算见 [R3 协议](docs/r3/protocol.md)。
+CI 使用三局有来源的 CC0 小棋谱 fixture，无需联网获取训练数据。

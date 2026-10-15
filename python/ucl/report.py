@@ -24,6 +24,22 @@ class CheckedGameBuilder(chess.pgn.GameBuilder):
         super().visit_result(result)
 
 
+def check_game_result(game, require_natural=False):
+    """Check forced board outcomes; external resignations/adjudications stay distinct."""
+    result = game.headers.get("Result")
+    if game.errors or result not in ("1-0", "0-1", "1/2-1/2"):
+        raise ValueError("invalid or unfinished PGN")
+    final = game.end().board()
+    forced = final.outcome(claim_draw=False)
+    if forced is not None and forced.result() != result:
+        raise ValueError("PGN result contradicts terminal board")
+    if require_natural and game.headers.get("Termination") == "normal":
+        outcome = final.outcome(claim_draw=True)
+        if outcome is None or outcome.result() != result:
+            raise ValueError("natural termination contradicts final board")
+    return final
+
+
 def summarize_pgn(path, candidate, baseline, expected_games=None, seed=0, samples=2000):
     outcomes, pairs = [], {}
     terminations = {}
@@ -42,10 +58,7 @@ def summarize_pgn(path, candidate, baseline, expected_games=None, seed=0, sample
             # fastchess writes one Round value per color-swapped pair.
             round_id = game.headers.get("Round", "?")
             pairs.setdefault(round_id, []).append((white, score, game.board().fen()))
-            final = game.end().board()
-            outcome = final.outcome(claim_draw=True)
-            if outcome is not None and outcome.result() != result:
-                raise ValueError("PGN result contradicts terminal board")
+            check_game_result(game, require_natural=True)
             reason = game.headers.get("Termination", "unknown")
             terminations[reason] = terminations.get(reason, 0) + 1
     if not outcomes or (expected_games is not None and len(outcomes) != expected_games):

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "kind": "r3-dataset",
+  "seed": 20261015,
+  "source": {
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2017-01.pgn.zst",
+    "license": "CC0-1.0",
+    "license_url": "https://database.lichess.org/",
+    "acquired_at": "2026-10-15T08:47:30.188824+00:00",
+    "range": [
+      0,
+      2097151
+    ],
+    "headers": {
+      "Server": "nginx",
+      "Date": "Thu, 15 Oct 2026 08:47:14 GMT",
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "2097152",
+      "Last-Modified": "Fri, 04 Nov 2022 19:12:28 GMT",
+      "Connection": "close",
+      "ETag": "\"6365641c-71613d05\"",
+      "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+      "X-Frame-Options": "DENY",
+      "Content-Range": "bytes 0-2097151/1902198021"
+    },
+    "compressed_prefix": {
+      "sha256": "d2eac0a6797bc104efc3ba2429073fd60905fdcc8e3b346fb4de82f6e69e091a",
+      "bytes": 2097152
+    }
+  },
+  "protocol": "docs/r3/protocol.md",
+  "counts": {
+    "source_games": 3000,
+    "reject:termination": 970,
+    "reject:rating": 629,
+    "reject:short_game": 90,
+    "reject:time_control": 400,
+    "reject:invalid literal for int() with base 10: '-'": 2,
+    "reject:invalid or unfinished PGN": 1,
+    "cross_split_position_removed": 4,
+    "duplicate_position_removed": 1,
+    "accepted_games": 908,
+    "positions_before_dedup": 5693,
+    "positions": 5688,
+    "positions:train": 3972,
+    "positions:validation": 922,
+    "positions:test": 794
+  },
+  "split_games": {
+    "train": 634,
+    "test": 124,
+    "validation": 150
+  },
+  "files": {
+    "source.pgn.gz": {
+      "sha256": "9eeb12b2e13f3fd75160a5542b9de92cc230be45d588b7914e0827592eeda779",
+      "bytes": 784539
+    },
+    "positions.jsonl.gz": {
+      "sha256": "f8a0ac321fbc10ecc4fb3a6681dbc373d5361c809f64c2e6ceb64e6a2844b7ab",
+      "bytes": 430905
+    },
+    "splits.json": {
+      "sha256": "5d367ca9a34d70814179a8f74bbe58fb51704bbc62dc864f58567fd656bc51ed",
+      "bytes": 164404
+    }
+  }
+}
