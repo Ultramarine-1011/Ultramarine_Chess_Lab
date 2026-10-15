@@ -47,11 +47,19 @@ def check_arrays(x, y):
     return x, y
 
 
-def objective(beta, x, y, prior, penalty):
+def objective(beta, x, y, prior, penalty, sample_weight=None):
     z = x @ beta
     delta = beta - prior
-    loss = np.mean(np.logaddexp(0., z) - y*z) + penalty/2 * (delta @ delta)
-    grad = x.T @ (expit(z)-y) / len(y) + penalty * delta
+    if sample_weight is None:
+        loss = np.mean(np.logaddexp(0., z) - y*z) + penalty/2 * (delta @ delta)
+        grad = x.T @ (expit(z)-y) / len(y) + penalty * delta
+    else:
+        weight = np.asarray(sample_weight, dtype=float)
+        if weight.shape != y.shape or not np.isfinite(weight).all() or (weight < 0).any() or weight.sum() <= 0:
+            raise ValueError('invalid observation weights')
+        weight = weight / weight.sum()
+        loss = weight @ (np.logaddexp(0., z) - y*z) + penalty/2 * (delta @ delta)
+        grad = x.T @ ((expit(z)-y)*weight) + penalty * delta
     return float(loss), grad
 
 

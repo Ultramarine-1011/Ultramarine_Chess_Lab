@@ -222,3 +222,17 @@ R3 对照实验（先提交、重新 configure/build，输出目录不可复用�
 ```
 
 R3 工程与研究结果、冻结身份和限制见 [最终研究报告](docs/r3/final-report.md)。
+
+## R4 数据与开发基准
+
+冻结方案见 [R4协议](docs/r4/protocol.md)，保留R3全部产物。
+
+```sh
+.venv/bin/python -m ucl.r4_data acquire --output experiments/results/r4-data-new
+.venv/bin/python -m ucl.r4_data validate --output experiments/results/r4-data-v1
+.venv/bin/python -c 'from ucl.feature_data import export_dataset; export_dataset("experiments/results/r4-data-v1", "build/release/ucl", "experiments/results/r4-features-v1")'
+OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m ucl.r4_training --output experiments/results/r4-baselines-v1
+```
+
+正式导出/拟合前提交并重新configure/build；输出拒绝覆盖。此fit不计算test指标；
+待所有扩展模型与候选选择冻结后统一进行独立测试。

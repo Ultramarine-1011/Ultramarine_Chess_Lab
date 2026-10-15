@@ -216,3 +216,44 @@ class R4DataTests(unittest.TestCase):
         for name in ('r3-data-v1','r3-data-v2'):
             validate_dataset(Path(__file__).resolve().parents[1]/'experiments/results'/name)
         with self.assertRaises(ValueError): temporal_split({'UCLSourceMonth':'2017-09'},'a'*64)
+
+class R4TrainingTests(unittest.TestCase):
+    def test_equal_game_and_weighted_gradient(self):
+        import numpy as np
+        from ucl.r4_training import arrays, metrics
+        from ucl.training import objective
+        rows=[{'split':'train','game_id':g,'features':[v]*8,'label':y}
+              for g,v,y in [('a',1,1.),('a',2,1.),('b',3,0.)]]
+        _,x,y,q=arrays(rows,'train')
+        np.testing.assert_allclose(q,[.25,.25,.5])
+        beta=np.arange(8)*.03;prior=np.zeros(8)
+        value,gradient=objective(beta,x,y,prior,.01,q)
+        numeric=[]
+        for i in range(8):
+            d=np.zeros(8);d[i]=1e-5
+            numeric.append((objective(beta+d,x,y,prior,.01,q)[0]-objective(beta-d,x,y,prior,.01,q)[0])/2e-5)
+        np.testing.assert_allclose(gradient,numeric,atol=1e-9)
+        self.assertTrue(np.isfinite(value))
+        with self.assertRaises(ValueError): objective(beta,x,y,prior,.01,[-1,1,1])
+
+    def test_fit_never_evaluates_test(self):
+        import json, tempfile
+        import numpy as np
+        from unittest.mock import patch
+        import ucl.r4_training as study
+        rng=np.random.default_rng(42)
+        rows=[{'split':split,'game_id':f'{split}-{i//2}','features':rng.normal(size=8).tolist(),
+               'label':float(i%2),'position_id':f'{split}-{i}'}
+              for split in ('train','validation','test') for i in range(24)]
+        original=study.arrays
+        def guard(rows,split):
+            self.assertNotEqual(split,'test')
+            return original(rows,split)
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp);(p/'manifest.json').write_text('{}');(p/'splits.json').write_text('{}')
+            with patch.object(study,'read_rows',return_value=(rows,{})), patch.object(study,'arrays',side_effect=guard):
+                result=study.fit(p,p,p/'output')
+            self.assertFalse(result['test_evaluated'])
+            self.assertGreater(result['models']['calibration']['scale'],0)
+            self.assertEqual(set(result['models']),{'handcrafted','calibration','frozen_r3','refit8'})
+            self.assertFalse((p/'output/test-results.json').exists())

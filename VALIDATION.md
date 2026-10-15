@@ -539,3 +539,11 @@ train/validation、train/test、validation/test玩家重叠709/398/127，限制�
 R4.1 正式源重建审计完成，位置/游戏/划分/全部计数/诊断与每文件hash逐项相同，
 见r41-audit.log；6670局/44681局面/6日期/时间隔离四项目标均PASS。
 研究限制不影响数据完整性结论；独立test模型指标仍未计算。
+
+### R4.2 校准/统计基准实现（正式拟合前）
+
+复用R3稳定BCE/梯度，新增可选观测权重保持R3默认路径；R4等棋局损失/RMS。
+正尺度训练界限[.01,10]、R3冻结权重和正则八维重拟合均只访问开发split。
+解析加权梯度有限差分、每局总权重和fit绝不评价test的guard测试通过；
+测试基底4e1bb70/2af9bb0+dirty R4.2，research通过，完整Release见r42-release.log。
+R4.1审计已通过；其提交2af9bb0已推送，CI待核对。正式fit在代码提交后clean运行。

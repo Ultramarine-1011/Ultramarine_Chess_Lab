@@ -168,3 +168,12 @@ Evaluator=Linear；没有有效模型时拒绝切换。新模型先完全验证�
 match/benchmark 复用统一选项排序和加载检查，实际 UCI probe 核对配置，
 记录可选 `engines[].evaluation`，保持旧包兼容。正式包复制模型原始文件，
 validate 检查 evaluator 配置、实际 hash 和保留模型，拒绝伪装加载/丢失身份。
+
+## R4 数据与校准研究边界
+
+`r4_data`复用R3合法PGN、game ID、七ply采样与镜像去重；新增可选split resolver
+和元数据，默认路径严格保留R3输出。六个月分源Range、原始PGN与合成来源header
+分别保存，未来两源为test；重建验证包括全部文件和诊断。特征导出按数据kind分派
+验证，不改变原八维接口。`r4_training`复用Trainer的数值目标函数并添加可选观测
+权重；每局总权重相同，R3默认无权路径不变。fit仅计算train/validation指标，
+正尺度校准及八维重拟合冻结后等待R4.3消融/性能选择，独立test仍关闭。
