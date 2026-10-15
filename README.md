@@ -178,3 +178,11 @@ UCL 自有代码采用 MIT；第三方依赖保留各自许可证。
 正式保留数据与冻结划分见 `experiments/results/r3-data-v1/manifest.json`，
 标签/过滤/去重/训练与比赛预算见 [R3 协议](docs/r3/protocol.md)。
 CI 使用三局有来源的 CC0 小棋谱 fixture，无需联网获取训练数据。
+
+R3 特征导出（先提交、重新 configure/build）：
+
+```sh
+.venv/bin/python -c 'from ucl.feature_data import export_dataset; export_dataset("experiments/results/r3-data-v1", "build/release/ucl", ".tools/r3-features-new")'
+```
+
+`ucl --features` 也接受逐行 FEN，逐行返回版本化 JSON；非法 FEN 退出非零。

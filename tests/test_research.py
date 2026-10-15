@@ -49,5 +49,39 @@ class DatasetTests(unittest.TestCase):
         check_game_result(game('1. e4', '1-0', 'Normal'))
 
 
+
+
+
+class FeatureTests(unittest.TestCase):
+    def test_cpp_consistency(self):
+        import json
+        import os
+        import random
+        from ucl.feature_data import extract
+        engine = os.environ.get('UCL_ENGINE', str(Path(__file__).resolve().parents[1] / 'build/release/ucl'))
+        root = Path(__file__).resolve().parents[1]
+        fens = [p['fen'] for p in json.loads((root / 'experiments/positions/r2-v1.json').read_text())['positions']]
+        rng, b = random.Random(20261015), chess.Board()
+        for _ in range(120):
+            if b.is_game_over(): b = chess.Board()
+            b.push(rng.choice(list(b.legal_moves)))
+            fens.extend([b.fen(), b.mirror().fen()])
+        records = extract(engine, fens)
+        self.assertEqual(len(records), len(fens))
+        for i in range(10, len(records), 2):
+            self.assertEqual(records[i]['features'], [-x for x in records[i+1]['features']])
+            self.assertEqual(records[i]['handcrafted_cp'], records[i+1]['handcrafted_cp'])
+        import subprocess
+        self.assertNotEqual(subprocess.run([engine, '--features'], input='invalid fen\n', text=True, capture_output=True).returncode, 0)
+
+    def test_input_errors(self):
+        from ucl.feature_data import validate_vector
+        from copy import deepcopy
+        valid = {'feature_version': 'handcrafted-v1', 'features': [0]*8, 'handcrafted_cp': 0}
+        for key, value in [('features', [0]*7), ('features', [float('nan')]*8), ('features', [float('inf')]*8), ('features', [True]*8), ('feature_version', 'v2')]:
+            bad = deepcopy(valid); bad[key] = value
+            with self.assertRaises(ValueError): validate_vector(bad)
+
+
 if __name__ == '__main__':
     unittest.main()

@@ -305,3 +305,20 @@ Windows Codex 桌面调用、用户 Windows 实验主机未实测；未独立测
 R3.1 代码/数据提交 `fcc652370c646ed6bfd37d0c308da4ab4c44a3ba` 已推送。
 [对应 Actions](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38708443580)
 已启动，状态待检查；本记录另作可恢复的文档提交。
+
+## R3.2 — C++ 特征导出与一致性（2026-10-15）
+
+R3.1 对应 Actions #38708443580 五项全部 success；快照 r31-ci.json。
+本阶段测试基底 `5065f0962e5023576080961c76574697af35e7b0` + dirty R3.2。
+`ucl --features` 复用原 position parser/HandcraftedFeatures，非法 FEN 明确失败。
+Python 逐行检查版本、八维有限值、独立特征实现和原权重评分，训练输入来自 C++。
+
+- 5688 个正式数据局面诊断导出全部精确一致；局面 ID/棋局 ID/标签/划分均保留。
+- 随机合法走棋及颜色镜像、原十局面特殊走法/残局、正负符号和原评分取整边界，
+  以及非法维度/NaN/Inf/bool/版本/FEN 测试通过；handcrafted-v1 语义未变。
+- 精确命令见 docs/validation/r3/commands.md，Release targeted 3/3，
+  Release/Debug/ASan+UBSan 各 6/6。日志 r32-*.log。没有 sanitizer 诊断。
+- 初次测试错误地调用 python-chess legal_moves 属性，已修正并保留失败日志。
+  更新取整测试时两个本地 preset 验证序列短暂重叠，均已退出成功；未用于性能测量。
+- 正式 clean binary 特征导出在本阶段代码提交后执行，随后以原始哈希归档。
+  R3.3 未训练，冻结测试集未用于模型选择。

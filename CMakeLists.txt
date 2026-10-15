@@ -52,6 +52,7 @@ if(BUILD_TESTING)
   add_test(NAME research COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tests -p test_research.py)
   set_tests_properties(experiments research PROPERTIES WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     ENVIRONMENT "PYTHONPATH=${CMAKE_SOURCE_DIR}/python")
+  set_property(TEST research APPEND PROPERTY ENVIRONMENT "UCL_ENGINE=$<TARGET_FILE:ucl>")
   set_tests_properties(unit search perft uci experiments research PROPERTIES TIMEOUT 60)
   set_tests_properties(search PROPERTIES TIMEOUT 180) # Expanded ablation matrix under ASan/MSVC Debug.
 endif()

@@ -123,3 +123,12 @@ R2 最终节点数直接相比；跨版本采用固定深度。
 配对赛和基准配置。comparison=revision 要求不同 SHA、不同 binary hash、干净
 UCL provenance、相同 compiler/build_type/flags；comparison=ablation 要求同一
 二进制、不同显式选项。smoke 允许同二进制。身份核对和合法选项检查失败会留档。
+
+## R3 特征数据边界
+
+`ucl --features` 从 stdin 每行读取一个经过既有 position parser 校验的 FEN，
+每行输出 feature_version、八维白方 features 和 side-to-move handcrafted_cp。
+非法输入使进程明确失败，防止行错位。Python `feature_data.extract` 调用同一
+C++ extractor，并用独立 python-chess 特征实现逐行精确交叉检查；训练输入
+始终采用 C++ 输出。`export_dataset` 保留局面/游戏 ID、split、label、FEN、
+特征版本和导出 binary/build provenance。handcrafted-v1 的定义和顺序不变。

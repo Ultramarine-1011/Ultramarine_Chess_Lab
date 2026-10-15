@@ -50,6 +50,19 @@ void unit() {
     chess::Board black("4k3/8/8/8/8/8/4Q3/4K3 b - - 0 1");
     check(eval.evaluate(white) == 900, "queen value");
     check(eval.evaluate(black) == -900, "side to move perspective");
+    struct FractionalFeatures : ucl::FeatureExtractor {
+        float pawn = 0.0051F;
+        std::vector<float> extract(const chess::Board&) const override {
+            std::vector<float> values(8, 0); values[0] = pawn; return values;
+        }
+        std::string_view name() const override { return "handcrafted-v1"; }
+    } fractional;
+    ucl::HandcraftedEvaluator rounding(fractional);
+    check(rounding.evaluate(white) == 1 && rounding.evaluate(black) == -1, "rounding above half cp");
+    fractional.pawn = -0.0051F;
+    check(rounding.evaluate(white) == -1, "negative rounding away from zero");
+    fractional.pawn = 0.0049F;
+    check(rounding.evaluate(white) == 0, "rounding below half cp");
     std::string error;
     check(ucl::parse_position(words("position startpos moves e2e4 e7e5 g1f3"), b, error), error);
     check(b.fullMoveNumber() == 2 && b.sideToMove() == chess::Color::BLACK, "move replay");
