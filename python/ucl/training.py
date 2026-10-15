@@ -185,7 +185,7 @@ def evaluate_frozen(manifest_path, feature_manifest):
     for name, predicate in {'white_to_move': lambda r: r['fen'].split()[1] == 'w',
                             'black_to_move': lambda r: r['fen'].split()[1] == 'b',
                             'early_ply16_40': lambda r: r['ply'] <= 40,
-                            'later_ply48_160': lambda r: r['ply'] > 40,
+                            'later_ply41_160': lambda r: r['ply'] > 40,
                             'draw_label': lambda r: r['label'] == .5,
                             'decisive_label': lambda r: r['label'] != .5}.items():
         idx = [i for i, r in enumerate(selected) if predicate(r)]

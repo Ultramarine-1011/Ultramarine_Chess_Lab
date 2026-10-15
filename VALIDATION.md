@@ -371,5 +371,19 @@ R3.3 正式训练完成：clean `09335c08291f3a7f3c831372fda750903cef4ad5`。
 同配置第二次仅 train/validation 拟合至 `.tools/r3-reproduce-v1`，模型字节一致。
 原始 test 中 later_ply48_160 为标签文字错误，实际 predicate >40（v2 首个44），
 已在报告明确说明；不重跑/改写正式 test。其余原始记录和冻结 marker 均保留。
-R3.1 v2 Actions #38709478484、R3.3 Actions #38709750930 五项均 success；
+R3.1 v2 Actions #38709478484 五项 success；R3.3 Actions #38709750930
+Mac 三项 success，Windows Release/Debug 失败，正在按 gh-fix-ci 调查修复；
 CI 快照 r31-v2-ci.json / r33-ci.json。R3.4 和 R3.5 待完成。
+
+### R3.3 CI 修复
+
+`gh run view 38709750930 --log-failed` 定位 Windows 两个 job 的 research
+训练输入 SHA mismatch，其他测试全通过；日志 r33-windows-failed.log.gz。
+Windows Git 默认文本 CRLF 转换改变清单/划分字节，而 gzip 不变。
+新增 `.gitattributes` 固定文本 LF、压缩文件 binary，保留冻结文件原始字节/hash。
+顺带修正未来分层输出标签为 later_ply41_160；不修改/重算已有冻结 test。
+此前一条文档提交将尚未核查的 R3.3 CI 误写为全通过，已更正并保留失败证据。
+这是记录错误，不是一次成功 CI；以之后精确 SHA 对应的 run 为最终依据。
+
+修复前一次 core.autocrlf=true 临时克隆复现相同 hash mismatch。
+原始 Actions 日志含行尾空白，首个 diff --check 阻止提交；改为 gzip 原样保留。
