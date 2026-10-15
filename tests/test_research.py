@@ -14,6 +14,7 @@ class DatasetTests(unittest.TestCase):
         text = (Path(__file__).parent / 'fixtures/data-games.pgn').read_text()
         rows, games, counts = prepare(text)
         self.assertTrue(rows)
+        self.assertEqual({r['fen'].split()[1] for r in rows}, {'w', 'b'})
         self.assertEqual((rows, games, counts), prepare(text))
         self.assertEqual(len({r['position_id'] for r in rows}), len(rows))
         self.assertEqual({r['label'] for r in rows}, {0., 0.5, 1.})

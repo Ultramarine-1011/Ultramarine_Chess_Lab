@@ -1,0 +1,5450 @@
+{
+  "be40a832272b624624de574e8936d328cb8eec1038751eb30de53348eccb45c8": {
+    "split": "train",
+    "site": "https://lichess.org/Z5NSdZX4",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "978571e811a1477e3ed32ab3cc35e47d5a0ec52bd79348ba8ae1a64af7616035": {
+    "split": "test",
+    "site": "https://lichess.org/OhlxM0VC",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "881e16c3e9bde2f5b316a8e70dc4fedda7eff8242f77889f9b7f41630e97f0e3": {
+    "split": "train",
+    "site": "https://lichess.org/FWF39sMs",
+    "plies": 41,
+    "result": "1-0"
+  },
+  "cc108a4120fc8ee06195c128df722218adb312c6c97f6f2611bfd0d31b27eed2": {
+    "split": "train",
+    "site": "https://lichess.org/m3EvpEiG",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "bcb21ee4027609751c35394c002df8e263d9a5e4fbc11fd3a261cbb182cdb91d": {
+    "split": "train",
+    "site": "https://lichess.org/YTmM2vw0",
+    "plies": 100,
+    "result": "0-1"
+  },
+  "306d2ba597952a9f27f8f0e0540536e86d6a22b68a31f36553c0f9f5b0453cfe": {
+    "split": "train",
+    "site": "https://lichess.org/68lDIUD1",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "68ac9b544c1c4673a50201aa8399c784fa1a36a04cbb4aea51583ae64412a990": {
+    "split": "test",
+    "site": "https://lichess.org/ujPyUZwK",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "e6d204a0b8ecd6bc873365e4e2583804591b3d222c3270b1d62ee1f97af266cc": {
+    "split": "train",
+    "site": "https://lichess.org/nUuv6oeB",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "21d3cc7aabb0b3ddd47a2a2afd7047aaaa360b71253df31d95c17f1a9c26b03b": {
+    "split": "train",
+    "site": "https://lichess.org/bSfiuer3",
+    "plies": 34,
+    "result": "0-1"
+  },
+  "1652feeb868f6965cf89187f015347027a0e3e5df7aae27b7bdd7771dff44af8": {
+    "split": "train",
+    "site": "https://lichess.org/jqGTCKta",
+    "plies": 174,
+    "result": "1/2-1/2"
+  },
+  "aa03ddd3e2e977d3343600b8d7ed3d95e1307112e532edc67a1321a882cd0fd4": {
+    "split": "train",
+    "site": "https://lichess.org/QZP9j8fS",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "5e22d5cda48b2dd919b5a2e27f519c4d99458f4669509e53a84088d6d9fd7bfb": {
+    "split": "validation",
+    "site": "https://lichess.org/yvnfw4bo",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "c3d4d3467f39eda98be3856395aba45b24ce21c2c90973936d73f690d4e57724": {
+    "split": "train",
+    "site": "https://lichess.org/1fCjUnD3",
+    "plies": 164,
+    "result": "1/2-1/2"
+  },
+  "4f58cfe343db4a6a71500f5c067dc5d4b5905a1a65d7b615ca99c3417b7d5ed4": {
+    "split": "test",
+    "site": "https://lichess.org/RPoYAb18",
+    "plies": 98,
+    "result": "0-1"
+  },
+  "31cfb9d0b2a83eb14bfc03f30003284b89f7f4d2ee9875c323ca807a47cf2a8e": {
+    "split": "train",
+    "site": "https://lichess.org/L2KdI9MG",
+    "plies": 49,
+    "result": "0-1"
+  },
+  "ced1b526889f43584978b5f5b3ae256715f4c9307f0b9770368bc8788cf767b0": {
+    "split": "train",
+    "site": "https://lichess.org/DudTtAOu",
+    "plies": 104,
+    "result": "0-1"
+  },
+  "5566d0c5b4a7eff1e39b74034f76967ddf7dab78729c0c6ac794a77a5d1bd2c9": {
+    "split": "train",
+    "site": "https://lichess.org/jHJdqJif",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "6d891551d76f657f63c31b9589e93755172f1d733906a24f03d9f6195f80edb9": {
+    "split": "train",
+    "site": "https://lichess.org/vop18Ih9",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "b34ab4a73bcd7fc5242eeeef8dcc206ed35926b998cd7e6e2192a89adee8ad25": {
+    "split": "test",
+    "site": "https://lichess.org/l0dF6C1U",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "5d29a9e4a4e099acfdd9752e409cbb9e5ea95b64c8fd67ac7232cd3d96d245f1": {
+    "split": "train",
+    "site": "https://lichess.org/RlRO2XOj",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "6c310898b7fa981bdcbcd7d3d91e3b988bb869d1b728328fded5142b93d05084": {
+    "split": "train",
+    "site": "https://lichess.org/cJbEyiA5",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "ae32cf2a535ca2dfc5c624d9ace25f992a4dd7ba5f36c475e632f10461eea87d": {
+    "split": "validation",
+    "site": "https://lichess.org/PVkuPDQy",
+    "plies": 117,
+    "result": "1-0"
+  },
+  "8b9214be9cb7efb6a9611edb24e4df0df522136a0fd529bb36ef87b17af046b4": {
+    "split": "train",
+    "site": "https://lichess.org/wLTPlUka",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "689ed87a6e31454867e836db8193cb23e1879dc5540ba388f6da0067496bb842": {
+    "split": "train",
+    "site": "https://lichess.org/e4BMqoLL",
+    "plies": 50,
+    "result": "1-0"
+  },
+  "3eb013e6b3354a06b46fa5caede0e859fa9ff51d6a323fb1a5331a183373daf4": {
+    "split": "train",
+    "site": "https://lichess.org/Jgga7mi1",
+    "plies": 185,
+    "result": "1/2-1/2"
+  },
+  "08128311eab68bf0613c569192b134234792d7250f52fde459cb5aea55adf9e3": {
+    "split": "train",
+    "site": "https://lichess.org/r0Myqssa",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "990a3559baeb415e0329624dea14113810b25f448f7c22857319c4da2b5b3e30": {
+    "split": "validation",
+    "site": "https://lichess.org/jNUWclor",
+    "plies": 136,
+    "result": "0-1"
+  },
+  "e5d5b8d587feb6a838fd8a75f491e682487cb8abcb3b3bdae23555513ade4bb0": {
+    "split": "validation",
+    "site": "https://lichess.org/faqgi5i1",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "da0f5715e47f9a2bdb44e5d56e170da9e95e369458dcf399d6cf60cb4be0f0e5": {
+    "split": "validation",
+    "site": "https://lichess.org/ipARtQok",
+    "plies": 84,
+    "result": "0-1"
+  },
+  "d658f2a431209e18a29ad0222fbd0b868f95bcdd917b2bf7cbbe1d72a83f04de": {
+    "split": "train",
+    "site": "https://lichess.org/z7pKI6ij",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "2b5b470fea8531fdf0abdbe8cc9adcc55ef443f0cc29ed056e429177ab5eb875": {
+    "split": "train",
+    "site": "https://lichess.org/iFlxMC2o",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "dcdddc33c2cd345e14f5b2b8e16c2a8d669de9009e269a33b22acc7419485610": {
+    "split": "train",
+    "site": "https://lichess.org/oqmX0X5U",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "bd81515e5e78840772cd18a982222b933905ff704e74c57bca60fe75240e9d06": {
+    "split": "test",
+    "site": "https://lichess.org/EzmaWJYx",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "afaf11941f02dffff1d45fbafc12a7f974b30f617918f316f775f9d6263318e4": {
+    "split": "validation",
+    "site": "https://lichess.org/AGO8w0xQ",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "ef1a4422fb11fe85a57a35fe8f31912e9c9f89772080ca868b41b994f96f9191": {
+    "split": "train",
+    "site": "https://lichess.org/FBEkinMe",
+    "plies": 100,
+    "result": "0-1"
+  },
+  "4b5ada26c8b7a0a9f9f5629ab06a8e9ad0dbcedf801eea3e2838f29fea31ab9b": {
+    "split": "train",
+    "site": "https://lichess.org/39RBSodf",
+    "plies": 99,
+    "result": "1-0"
+  },
+  "744f59d937c7f5082618320a7943ab507885b387e6160229bbb5760fe75c217f": {
+    "split": "train",
+    "site": "https://lichess.org/oUDzbB2j",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "359d41fbb5997834ef10b1f172cb5bc9e9a7c325fd458c738c0b85ac4c15e12f": {
+    "split": "test",
+    "site": "https://lichess.org/jPb0atGY",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "87a84b05b90d0575f092e82512c3bea2c27a4cbfb19c78351843296b95a4b5d7": {
+    "split": "train",
+    "site": "https://lichess.org/OS17hyZj",
+    "plies": 138,
+    "result": "0-1"
+  },
+  "cc5e12ea66df8591717459d475907cdfeb0dea9c6f98ca19eb738ba865562203": {
+    "split": "validation",
+    "site": "https://lichess.org/OhGpXXPs",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "757f4fb1bf209fc7529d6e76a1ad84890832cb1e03859ba99c160980a936871f": {
+    "split": "train",
+    "site": "https://lichess.org/fiW28RvZ",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "3b4ffa8c4e808a5a7e3ef168636e0665ddb9a3ac677066bf823ecff5269a020f": {
+    "split": "test",
+    "site": "https://lichess.org/dl3l71q7",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "4e2b544df7f666d9baa90d8ece133c61bc0e4ee1821313c9e6b2f09e36d10299": {
+    "split": "train",
+    "site": "https://lichess.org/ThW5mPbd",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "0b68159223924bd3eb8784224be48a39580e87359a6e31ee65d123100e6c536b": {
+    "split": "test",
+    "site": "https://lichess.org/ATzFiFYI",
+    "plies": 112,
+    "result": "1-0"
+  },
+  "947c4d34ff12e943f56b524519bd44ae8e84530c0045d3a49b3e414d340cf1f8": {
+    "split": "train",
+    "site": "https://lichess.org/mAZB1svR",
+    "plies": 61,
+    "result": "0-1"
+  },
+  "8527e49e42a23663a1916a826cae546abe4dc887ed7cb0e85a6adc3e988fe5a1": {
+    "split": "train",
+    "site": "https://lichess.org/lXTX2QCq",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "9fff6c181df752a18aea808e741cbfc74aed90c32a0ef8232db0760bfd270686": {
+    "split": "test",
+    "site": "https://lichess.org/FpBPriFh",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "86ba2d7633f2f2e7b82b71223ed0a652fb7ae9586c382b98dbecf6f29e001b83": {
+    "split": "validation",
+    "site": "https://lichess.org/zu0DrXCa",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "49ae62d709b680aacbaf8c4d8d8d9494b8894d37230f0cb82f4b45db33b1c540": {
+    "split": "validation",
+    "site": "https://lichess.org/Uj2u79Ff",
+    "plies": 33,
+    "result": "1-0"
+  },
+  "9c635c9fc0a218be90827d902766f3b970a000d55ac341ecc3b60ab232c79902": {
+    "split": "train",
+    "site": "https://lichess.org/rwe4m6At",
+    "plies": 96,
+    "result": "0-1"
+  },
+  "090fdbb78eab16157da2ad412b2ceae35ab307c4d670eb9c903eeacca596cec7": {
+    "split": "train",
+    "site": "https://lichess.org/qABcH7SR",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "92f1e465ce0fb36cfca093dfbe1672bd94013360c3c3e1ea07e81b45de9dbec3": {
+    "split": "validation",
+    "site": "https://lichess.org/KKIZZ38C",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "7d6373b94a322a4dbaa0a7900830eb9aa43c80bd6344689c8d952568e86c7a7a": {
+    "split": "train",
+    "site": "https://lichess.org/XGHZFy1u",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "63038050d5fb247096060cfa920ec7ae15e258a8cfa58318f2ee4ca9d1493b7f": {
+    "split": "train",
+    "site": "https://lichess.org/okjosAKL",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "637ca388c38879b7ea2d117478d9366d9eda00727049fef6501b73ce03825f49": {
+    "split": "train",
+    "site": "https://lichess.org/t4kIIaVG",
+    "plies": 102,
+    "result": "0-1"
+  },
+  "39a318f8cefb7c901298c6166c3dd062badb1937db1ebf0d0677ea4eb16facb6": {
+    "split": "train",
+    "site": "https://lichess.org/EZJQNi3q",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "ce43d632bdf0e0f62acb360c28895564fbbef11675a529e889dc7143688732be": {
+    "split": "train",
+    "site": "https://lichess.org/sG19JhFw",
+    "plies": 77,
+    "result": "1-0"
+  },
+  "58065895bb4d63734b9349122c3aafdc38bb845ba1d14988e9a8776400739e4a": {
+    "split": "train",
+    "site": "https://lichess.org/c0l1YGSR",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "babd7fb94af3b0789bf5a569e5bc8d51f6ce5f7edbf7a657301e8574ae78029a": {
+    "split": "train",
+    "site": "https://lichess.org/W26nrshM",
+    "plies": 96,
+    "result": "0-1"
+  },
+  "c3def0e9a451190668b29796e381e6d54920b47c10337c2f2ab875e216b2e327": {
+    "split": "test",
+    "site": "https://lichess.org/4qETWY7T",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "9a47d7496bee1a88054d7a4f13b744c2ba0c2c8a19ec96431a82e122c3a15185": {
+    "split": "train",
+    "site": "https://lichess.org/G8OI2S4l",
+    "plies": 78,
+    "result": "0-1"
+  },
+  "328792145f63c5f451f82ee787cd8f2b678df931e6d2e5a0e27446de08e800af": {
+    "split": "train",
+    "site": "https://lichess.org/74m8E1ek",
+    "plies": 132,
+    "result": "0-1"
+  },
+  "d697c8eab9310db4a722998e2341a692eec31ba8d25b59c1e57d49d80291abbc": {
+    "split": "validation",
+    "site": "https://lichess.org/YMO1FbvQ",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "72839b37cc01d98fd8af3f957354d28d359485b1c40feeaaca441a5f4c887ba8": {
+    "split": "train",
+    "site": "https://lichess.org/EYtmkmgK",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "0c3ce3dbf722b3b357c73120ccb60a7b21bd000739e5612b43db987d25311deb": {
+    "split": "train",
+    "site": "https://lichess.org/Fp2NpwFo",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "709c25c7daaf15f17dc5c3dc25c8a659b460b1c62bdda580905b0b811f5de836": {
+    "split": "train",
+    "site": "https://lichess.org/vfrA9cjX",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "ce974c5bbc387625eb2d5b686893debc664e94b5831ee66a6da9b3524ddfcf3c": {
+    "split": "train",
+    "site": "https://lichess.org/YyzELnDM",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "99a6b6a2959a20ecef2c373fe5f6ee8145491f9b9e580c7b5cc01295ae62c87a": {
+    "split": "test",
+    "site": "https://lichess.org/yHcbkEuU",
+    "plies": 51,
+    "result": "0-1"
+  },
+  "cda0ffa5c7a1655751fafeb4da05296dd8067492c037745bb25417cb681c89fc": {
+    "split": "validation",
+    "site": "https://lichess.org/Nxr5BHAH",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "be2fe97b2f7ef6fe10f2486f558efd143e2d211c4827ebafa9a9e3a127329408": {
+    "split": "train",
+    "site": "https://lichess.org/TGW6boXn",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "5b96c56a89ff418c9b709d894f414392312d3e8d96f53c1d431ca6b18c334488": {
+    "split": "train",
+    "site": "https://lichess.org/SrH8GgEj",
+    "plies": 48,
+    "result": "0-1"
+  },
+  "0b49c54279abd017fadf6b4fe5ecd1af41b7e02c2ecc979b424e446f357c85ca": {
+    "split": "train",
+    "site": "https://lichess.org/9wsDLQ3r",
+    "plies": 121,
+    "result": "1-0"
+  },
+  "40d1f9b1571d6473da3d57d87cff53ea8202e85bc6b82ce7d61d1db9d8b97049": {
+    "split": "train",
+    "site": "https://lichess.org/Wc3Z28CK",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "56c12b0f032cf88f9e13855757d8c293b16a43144844d13f827bca12c6b03207": {
+    "split": "train",
+    "site": "https://lichess.org/7o0rb2Im",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "e814696d0a97b22582264b9d550e26966f19df15750ef1eb5905f6d7654a7d27": {
+    "split": "validation",
+    "site": "https://lichess.org/dxsMu5bX",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "8aa77f79c9864c30799fa421f029163c82c3dd48e62747786d8bcadd6141d847": {
+    "split": "train",
+    "site": "https://lichess.org/UzLv8AGT",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "cf7ac15bcd336f9588b1bf3b28fa8e68ca447425cf7a30c6a8aac83f6022c9f4": {
+    "split": "train",
+    "site": "https://lichess.org/qFVGiKrq",
+    "plies": 42,
+    "result": "1-0"
+  },
+  "f51124041d809035c56ba672fc05ef5ef707b73d8deed589c85436c02c07da29": {
+    "split": "validation",
+    "site": "https://lichess.org/yhy2zpv0",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "06ebca7bb4a712812509ad281c1b4a76b1d6519ac294e53ad38b5e8bc3db46fa": {
+    "split": "train",
+    "site": "https://lichess.org/xwGifWI5",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "15bd2ca64bd37d983787cf870f80222546c834fcc2a321691a9ca0d4265a430e": {
+    "split": "train",
+    "site": "https://lichess.org/KG0Sc26J",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "cb66bc94585fe4f3fbe0e55cac95f436e160fa0db6d0403e883950ad32bfdc37": {
+    "split": "train",
+    "site": "https://lichess.org/Uiqdysdc",
+    "plies": 90,
+    "result": "0-1"
+  },
+  "2830cde152ab7084a94824e30b9037994b0a4907be09947686672e8a4b36da1f": {
+    "split": "test",
+    "site": "https://lichess.org/gWhmB8n0",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "ea95ad0039568c072ff34c4c13dbdca652657995c359ef2a689ceff7210fb545": {
+    "split": "train",
+    "site": "https://lichess.org/dUQRs17O",
+    "plies": 106,
+    "result": "0-1"
+  },
+  "7c07a943e105a4276e38967c422e318885fb22a6005c91407cc03a3e03ae5666": {
+    "split": "train",
+    "site": "https://lichess.org/c13PtzD2",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "a539935062c1e5b48049812f52c29d374708a8c8395ff516b1c973f01af15708": {
+    "split": "train",
+    "site": "https://lichess.org/Xxe0Rcl0",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "f2cbe6acb9b91a0eb4afe7e5bd88f6e87dbf194d26b6acc8c3e5afe6144e4b31": {
+    "split": "train",
+    "site": "https://lichess.org/n4x82bqB",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "469f20d46102b749e9d370ec9923d712180e48863953313176327db88afa9497": {
+    "split": "validation",
+    "site": "https://lichess.org/m7CErgcz",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "a631f0999b420740c804442171de933418853421de7ba8144a000746bc1e8435": {
+    "split": "train",
+    "site": "https://lichess.org/UwoKEuMW",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "2feb74df76441694cce74a8f0b487dd90befff74bfbfa8ed936e6c434234e551": {
+    "split": "train",
+    "site": "https://lichess.org/6CLj8HLm",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "a12543c0765c8e02086b305f6f5f16cbb66187fbf28a8c09fed9275b3a7b8ad5": {
+    "split": "validation",
+    "site": "https://lichess.org/duCRpMlk",
+    "plies": 156,
+    "result": "0-1"
+  },
+  "6df6f0bda8fefbda6e196a309d8e7cc591fb35cd3dc0ce08d29c7667c3eeb7e1": {
+    "split": "train",
+    "site": "https://lichess.org/bAMUFuEW",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "c5dc5a63ab59ed235808119f90da9e6640bec62656e73a229bf04270056df1d4": {
+    "split": "test",
+    "site": "https://lichess.org/twdhVNCX",
+    "plies": 128,
+    "result": "0-1"
+  },
+  "fedd3eba1890a85d2aae5f1fb26086f17d1bc5e779bf45d1f77a59f6dafff053": {
+    "split": "test",
+    "site": "https://lichess.org/W4N4Wini",
+    "plies": 151,
+    "result": "1-0"
+  },
+  "0e0d782bd1e855f1b183d56b055d0cff0cf2ce3694a68f6b645a342027020c99": {
+    "split": "train",
+    "site": "https://lichess.org/Q3RGQocj",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "4eb51214c5bc27dd51124f7dd9c1b3e61d91b59b696fc5eddd809d2c639925aa": {
+    "split": "train",
+    "site": "https://lichess.org/nsEjlylL",
+    "plies": 62,
+    "result": "1-0"
+  },
+  "9325708d04e40c8fb4135fb344025b87d588ce70804363aa7e2efdb97b3237f6": {
+    "split": "test",
+    "site": "https://lichess.org/eYgLJOoz",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "6c6dd7dce22abe4f4f2b068ffa234bc01efdebbefda612bba4ef678e21d782a3": {
+    "split": "train",
+    "site": "https://lichess.org/4keKRViL",
+    "plies": 114,
+    "result": "0-1"
+  },
+  "70ae1a36837f94df3dd5e43af830583548c3fdc81bd250b4402efe6516052c00": {
+    "split": "train",
+    "site": "https://lichess.org/ELE8Gagi",
+    "plies": 105,
+    "result": "1-0"
+  },
+  "a7739525a214535998c897a96fb63e75d7d44ff3d589ed4fd0d961b198b71e12": {
+    "split": "validation",
+    "site": "https://lichess.org/oqZD4OxZ",
+    "plies": 36,
+    "result": "0-1"
+  },
+  "a165b2eabe102b2833f683c017f421b5c8c687d6c9f73592711f9246674c6b27": {
+    "split": "train",
+    "site": "https://lichess.org/J9nIvjZg",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "00f609d2eac5f8475d74b3340709edb676c853bfeae0994ad99516e7d81b704b": {
+    "split": "train",
+    "site": "https://lichess.org/DKfNM2AH",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "b224ed9e4b34f91275fd72357f255324e9db111763ab3953ad4af1346d167ccb": {
+    "split": "train",
+    "site": "https://lichess.org/oLdMNYoh",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "3ece5541b7362671ee27d713189b3878a073183c59186a554127e71aed98e1ef": {
+    "split": "test",
+    "site": "https://lichess.org/KVQA0B3Z",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "99037a084d29b7b9567a0606e6b7ecc5dcc989308ce14abffb16dc0c7f3f3c13": {
+    "split": "validation",
+    "site": "https://lichess.org/54bs2kqj",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "b130292c110312ef689f5bd75044912f5a7ace1b1269fbcde13e02ded6b7ea04": {
+    "split": "train",
+    "site": "https://lichess.org/K14cjJX1",
+    "plies": 67,
+    "result": "0-1"
+  },
+  "9643e24b9b01e0c69f4df6e9029b836912a70e26432124e8ca53a82c5c7c64eb": {
+    "split": "train",
+    "site": "https://lichess.org/HcSebAdO",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "081b1697006d08255665eb40465a39e1fd14f56d0c5f45c51151481167acba09": {
+    "split": "train",
+    "site": "https://lichess.org/pmyqM9HJ",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "bae679e79669b227d037382fb4cda9e17a603683df6d6160ccd82ea76a69d113": {
+    "split": "train",
+    "site": "https://lichess.org/qqYzv5bK",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "e282a901ff9db3d5a4ead7d781d39129017e3d23e8fc59d2c6c6d398f7f13cba": {
+    "split": "train",
+    "site": "https://lichess.org/fhmRbpp0",
+    "plies": 85,
+    "result": "1-0"
+  },
+  "dd69476df7029985942618491177ae9a8ae4ea25518c0abb63474a72cab8ad0f": {
+    "split": "train",
+    "site": "https://lichess.org/NajIRBeS",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "d0ccf85fbb677952714f6ed4392767cea01fbdda7758ddf0f119910c112a65fd": {
+    "split": "train",
+    "site": "https://lichess.org/LFJKrEL8",
+    "plies": 80,
+    "result": "0-1"
+  },
+  "1f872e120ed733a997ce0fe22e4c56d8c5140af8cee664dae6a5f8ce17bc1922": {
+    "split": "test",
+    "site": "https://lichess.org/kFjEA8gf",
+    "plies": 49,
+    "result": "0-1"
+  },
+  "16fc4904265be51637b94b6c241d92d8c9322986c3aea2f893b9ed08e05418f8": {
+    "split": "train",
+    "site": "https://lichess.org/p3GJ45nZ",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "436926eefe7abf7543562569a113ed20f0f98d77529664d413d22c00b42c1a1c": {
+    "split": "validation",
+    "site": "https://lichess.org/sKuY9ddi",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "1f7d1b0f7593f66121f6f8081ed1a5580c979f74674e55858284c210335dce57": {
+    "split": "test",
+    "site": "https://lichess.org/Tj6wcGll",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "7b191cf6ba547a95b54acb7c13de3fe9466d7703627629bcc9786937d8a1fdc2": {
+    "split": "train",
+    "site": "https://lichess.org/f5uPBkB0",
+    "plies": 88,
+    "result": "0-1"
+  },
+  "365db60d2c4c75c8ba3cde2df3bba8bad9e005e484a3c124ba506f6c436d2c9c": {
+    "split": "train",
+    "site": "https://lichess.org/2WvLK7AM",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "8a59c583ee6b2b26a21e56693bca4fcea864e03156f330bb5ca617b255b73a0d": {
+    "split": "validation",
+    "site": "https://lichess.org/nHV6gcTN",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "c4c1624f3695250d56a0dc009019507039276a86e6e447069afc8fa148721248": {
+    "split": "test",
+    "site": "https://lichess.org/osjDRH4q",
+    "plies": 78,
+    "result": "0-1"
+  },
+  "44cc92e3c4f08dc595dbf1967e3f5d36ac44f333e0b79a8dfa655c4ca1c37dcf": {
+    "split": "train",
+    "site": "https://lichess.org/MtTQtUcj",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "47fbb9cd45a8b976399e5c2804dc77501b822389868912f2026907b30116eb72": {
+    "split": "train",
+    "site": "https://lichess.org/DlPIyuBP",
+    "plies": 76,
+    "result": "0-1"
+  },
+  "e1fcd821dfa6976b93dcd3965b35908fb9cd4b3a68dbbd78722241d33707fbfc": {
+    "split": "train",
+    "site": "https://lichess.org/y9UrRWAL",
+    "plies": 110,
+    "result": "0-1"
+  },
+  "bc99d2e2867585f8f188dbbac0c76f5144870d82530736bea41c47b07de68cb5": {
+    "split": "train",
+    "site": "https://lichess.org/w8jKWsNz",
+    "plies": 114,
+    "result": "1/2-1/2"
+  },
+  "ee59b7d34733f4a208fd04465e4a1549886b8990af281d5c25d89ae4c73b981e": {
+    "split": "train",
+    "site": "https://lichess.org/zrN1KOqd",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "158c07c28759e0b2310e93fd6004a2940bfc0017ff20e9c07579eebd3141ef9e": {
+    "split": "train",
+    "site": "https://lichess.org/xri2MeQP",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "d5bea8ab361340152586cd89c09fbcabf1517f9752ae40d5b130e1622edeba43": {
+    "split": "train",
+    "site": "https://lichess.org/LaCG2Zi6",
+    "plies": 188,
+    "result": "0-1"
+  },
+  "0b4be638069db2891528ec698f11e7deabbf93a5944acad8f6d4f26195e02aea": {
+    "split": "train",
+    "site": "https://lichess.org/od3xe9xF",
+    "plies": 76,
+    "result": "0-1"
+  },
+  "a54efc654a841089dba0107557226ca8c9d91329be4aaa85a21559552f3e9061": {
+    "split": "train",
+    "site": "https://lichess.org/4qrgtU0E",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "d9049ba687c7a32a74cfd5a993cf3c95947a39dcc3c71d3228578b175f53e6f1": {
+    "split": "validation",
+    "site": "https://lichess.org/g4vErcHW",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "81035082cb5d770b7191a55fa3bca51a1889b95dccfe657ac43fd4a6be0d72fc": {
+    "split": "train",
+    "site": "https://lichess.org/pgltRDw7",
+    "plies": 33,
+    "result": "1-0"
+  },
+  "0013acd327847c756dc4849712afbb09acf6aadbb8aaeb3c78cad845512ce1a8": {
+    "split": "train",
+    "site": "https://lichess.org/Fe5nFovr",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "2a1cee0514dd8419cbe26afbc2e69686e508510ed8e67659885b2349cb2f2aa2": {
+    "split": "train",
+    "site": "https://lichess.org/3xabmsq8",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "e62428e200cdeb37af5c3b250c37aff4c75a1234bed6e9ae7e4e9d543e88ec7d": {
+    "split": "validation",
+    "site": "https://lichess.org/1jO9Nirs",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "ca45e9c85b3ec4d2843599ba522f1a7dd0171b93d7e27ffadc32b7bb0f3876cd": {
+    "split": "train",
+    "site": "https://lichess.org/5HZjZTAD",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "8c2839dc3df3c4be4d697a97aad3bc0b46dc2af618f9dbcaefec17f4875a80d4": {
+    "split": "train",
+    "site": "https://lichess.org/FmcXLF4v",
+    "plies": 126,
+    "result": "0-1"
+  },
+  "3fa21f9cd1e8f104c46833f4d272d4c122bd53a47e1ea672afa5caf531c5ab6e": {
+    "split": "train",
+    "site": "https://lichess.org/u69C9qK3",
+    "plies": 81,
+    "result": "1-0"
+  },
+  "33792d7e681e47f8dc686f423bb7c8beef2d08065b01690814aee1ed5658ae37": {
+    "split": "validation",
+    "site": "https://lichess.org/ad6Swvlv",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "e8dce49919863743de33648c9156bdae859df92ab6616c1abe6b3f4742afb288": {
+    "split": "test",
+    "site": "https://lichess.org/sFldSTEL",
+    "plies": 33,
+    "result": "1-0"
+  },
+  "396bab25025a3a32b49c39393434599303894ddb186369537c3e18cc31e6ab92": {
+    "split": "test",
+    "site": "https://lichess.org/NsBMQP0X",
+    "plies": 50,
+    "result": "1-0"
+  },
+  "01ae22a54cc0495775b4d7b3ea9240638d148a206d70c90d4e24857e223a05e5": {
+    "split": "train",
+    "site": "https://lichess.org/FYS3I0w9",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "f2fb49e0ad6ca7d5e94bc51c06712f361ed5a5fe6f9245cbef1ced9bf56c3415": {
+    "split": "validation",
+    "site": "https://lichess.org/JOpuBjxR",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "bbdb19f6a9a2363ebd691e5b75ff3ad644ff356f5e116634fdf581615a327a06": {
+    "split": "train",
+    "site": "https://lichess.org/FR0veqz3",
+    "plies": 91,
+    "result": "1-0"
+  },
+  "9b013e02d5e62af7d2475707d7426414b6427e990da3dbd96720b8599ea5f120": {
+    "split": "train",
+    "site": "https://lichess.org/wytNgfN9",
+    "plies": 98,
+    "result": "0-1"
+  },
+  "10e09a2b81264affbb4d04ec93678cbd6d283b7c8dac888de7237658e8830a07": {
+    "split": "train",
+    "site": "https://lichess.org/B5fG47gY",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "490b3bb723c3cde7fd221b94f6b677a7dd7b7bb04c59ea9dbc71eb61a9abe5a9": {
+    "split": "validation",
+    "site": "https://lichess.org/gbxtJ4FF",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "a742680d6deddf55a9a420b36a8132bf19535bf4a747c5ce916340fc665815f5": {
+    "split": "train",
+    "site": "https://lichess.org/isEqq4mX",
+    "plies": 82,
+    "result": "0-1"
+  },
+  "1742eecf11257f00861bfbf2ea357905e4e6e67fbc9acc809561adde91124d77": {
+    "split": "validation",
+    "site": "https://lichess.org/OmCEGRYk",
+    "plies": 114,
+    "result": "0-1"
+  },
+  "5390a75acae17b3398f2550c20f548a571852ee911babf40b879c707b9a23366": {
+    "split": "train",
+    "site": "https://lichess.org/bkKBRlY3",
+    "plies": 85,
+    "result": "1-0"
+  },
+  "cfede9762b276917f091c41114fb22cd57971b09869f70329aa7d7c6d4f3f972": {
+    "split": "train",
+    "site": "https://lichess.org/2XLoSvN0",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "359111ecafec366360a87e4bd2549c2296297cd6d0a0c09572fb51c6d309ff27": {
+    "split": "train",
+    "site": "https://lichess.org/lRFMFhFu",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "b92969a1e5a6c0c94e606a16d10a944c2ddbfac213ca1413776ccdf50b653ef8": {
+    "split": "train",
+    "site": "https://lichess.org/YaX8csOG",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "2844fd4a26fc35de1ebd74b3706e65e796b9f5accb029ee74fda8e6b0fbca5a8": {
+    "split": "train",
+    "site": "https://lichess.org/PgO4RhfS",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "1078430c178343895245fad82b3326c1cc1c83d6207384ffecc91e9622862aa4": {
+    "split": "train",
+    "site": "https://lichess.org/sIDeggGG",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "5b7c415a3e6a508f76f6248229cc983518f5a631a3f68e3bd6c27e730b6164df": {
+    "split": "train",
+    "site": "https://lichess.org/9itehWVq",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "9b960d002b13da7a60be9cca76a7a9514eebaa5f58a13e99f02be8fb8ee29ad7": {
+    "split": "train",
+    "site": "https://lichess.org/Vyo35j0I",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "9ee747f698168db78257df562c538d8375a4916178ec55a3523c75f71c7410c2": {
+    "split": "train",
+    "site": "https://lichess.org/Mr8enNmL",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "4537e65c274262614caec23bf8ac921689758330aca610c1889f337625069816": {
+    "split": "train",
+    "site": "https://lichess.org/YUU68sbP",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "cf0ac52ba4575ca31ab6b8e7df04f3ff7abddcf34ba9151d2b5f0b11716a832c": {
+    "split": "validation",
+    "site": "https://lichess.org/3DVMTfyc",
+    "plies": 100,
+    "result": "0-1"
+  },
+  "0fb418997269341b1d1215ae7c8b2ffa96ab25ed93c0e3c34c65fcb9405c5159": {
+    "split": "train",
+    "site": "https://lichess.org/Cin0felF",
+    "plies": 156,
+    "result": "0-1"
+  },
+  "c3084868b075cc6037567c83c517147816903144b4bb338eedfe5afeb6cd83a2": {
+    "split": "train",
+    "site": "https://lichess.org/JjNxaTCF",
+    "plies": 88,
+    "result": "0-1"
+  },
+  "81c7084c1a125e9a9b26337f37afb766699ecb2d9c5ea0a80b3db2d9288357dc": {
+    "split": "validation",
+    "site": "https://lichess.org/lCp42Jpt",
+    "plies": 56,
+    "result": "1-0"
+  },
+  "25acd46d5e1eaccedfce4ed6ba6fbd16d1010fa37b11dc6c14fa6dc094134a2a": {
+    "split": "train",
+    "site": "https://lichess.org/5JzToYbY",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "d1c57852b1bedc2afa1c3508c5d1e8129849dbb0267bc031023f303ea33714bb": {
+    "split": "train",
+    "site": "https://lichess.org/sEBS8DKO",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "a9c337359d469f1f8bfb0eefc011286371d9b8cc0eacd22f17ba246fe8f33314": {
+    "split": "train",
+    "site": "https://lichess.org/SrzH0ajs",
+    "plies": 78,
+    "result": "0-1"
+  },
+  "4849a9cfc6f45bf143931d99718a5ab9ff7854bb39cd1abd594dacb1ffd6f799": {
+    "split": "train",
+    "site": "https://lichess.org/f7C35lJ5",
+    "plies": 34,
+    "result": "0-1"
+  },
+  "a33ecbebafd29e01672ae0926ded72fb709e6fdecc7f6c3f7651894ccac594cb": {
+    "split": "train",
+    "site": "https://lichess.org/1DrjpRO5",
+    "plies": 81,
+    "result": "1-0"
+  },
+  "e8c2ad2d64aef7e36f551a19f7bac974065cb101b44013170c43bde197eee952": {
+    "split": "train",
+    "site": "https://lichess.org/BirOD0Qz",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "b541ec17306dc9dcb5e6fa4510d677a56fe648dfc5ac40dc44b6c35830709782": {
+    "split": "train",
+    "site": "https://lichess.org/uBjG3RZA",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "b6cb0ead704850600db0948565e0cc9901350a77a13dd12c235fa872103e115a": {
+    "split": "train",
+    "site": "https://lichess.org/VqcisrRu",
+    "plies": 108,
+    "result": "0-1"
+  },
+  "b6100b513853d07f166d7a1fb45b61656190adcdef62a1757a659878150d8839": {
+    "split": "train",
+    "site": "https://lichess.org/dFPbCzs0",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "fdbc2eeb2797c787525728ab9744174fcac2bbcc3dddd45e6f5578f5f2ab6301": {
+    "split": "train",
+    "site": "https://lichess.org/zCoaOziB",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "78b7a06e08952dafebf89c187630ac63756e3a5fbe328a0b15bd1d33f933fe1e": {
+    "split": "train",
+    "site": "https://lichess.org/lJQQ7epg",
+    "plies": 43,
+    "result": "1-0"
+  },
+  "6c1ad0ab7eebb0d84ad398bf16ba13afeb1b4db64707d2604c1acbb264f64494": {
+    "split": "train",
+    "site": "https://lichess.org/TRExe9VO",
+    "plies": 83,
+    "result": "1-0"
+  },
+  "6d93ac4f8940c0c14c9703b683b4a7fd9f0e9dfe23635740d57effd7e8bf2e31": {
+    "split": "train",
+    "site": "https://lichess.org/RL51OHEN",
+    "plies": 43,
+    "result": "1-0"
+  },
+  "60b61e5b4ebe81805b1cb9128b64a4337f3d8699a26cef20f5cee284a342239d": {
+    "split": "train",
+    "site": "https://lichess.org/utMpXIhJ",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "6796b7af2f736b3e6619470e5ac1eb1b5461bbcfd7d30637f57c93705a4d4298": {
+    "split": "train",
+    "site": "https://lichess.org/lGvgZPdL",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "7032f3c32311ee00af80ebc420f3b22c175ecbf24fc1a92f882fa7462dda36a4": {
+    "split": "validation",
+    "site": "https://lichess.org/ECUCKjBb",
+    "plies": 34,
+    "result": "0-1"
+  },
+  "121a6c8913c0377bd8beb509ac2cf79c8e16781252d6278979f1dbbdd45e22d9": {
+    "split": "train",
+    "site": "https://lichess.org/n2dcbrKo",
+    "plies": 48,
+    "result": "0-1"
+  },
+  "9665901cd00bfac6907f815c8aded500bbf09fd0bc00a8bb493e65bbb76b3a57": {
+    "split": "train",
+    "site": "https://lichess.org/vyGm8Uj6",
+    "plies": 117,
+    "result": "1-0"
+  },
+  "614253c584f447b22e9ddd3ccb31bd79fe8ea35e4d89121e5c76e9fe3f35f611": {
+    "split": "train",
+    "site": "https://lichess.org/vUKxBNAh",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "f04aa4a91007a60c2543dc7bb14c727ad02e9363a60e3bed7a140ebcdf32649e": {
+    "split": "test",
+    "site": "https://lichess.org/svizDDCI",
+    "plies": 196,
+    "result": "0-1"
+  },
+  "c3e2ee68b6a32ba2bdc6027bfa638d2918e51b74178c35d6e9ffcf45a3382ae3": {
+    "split": "train",
+    "site": "https://lichess.org/sWi1J3rl",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "892fb7640e400ca3778b7a7737fee2bed929148229e9470ad2933921b93d2dcd": {
+    "split": "train",
+    "site": "https://lichess.org/rkJIc24w",
+    "plies": 37,
+    "result": "0-1"
+  },
+  "0e1a10fbeba8532e83e73c2319b331000bd9f0c91d87d91cef314800754001dc": {
+    "split": "train",
+    "site": "https://lichess.org/bazzeFxx",
+    "plies": 76,
+    "result": "1-0"
+  },
+  "34f8cd77aba03e8d17e9d73bc38e10dbcb49ce233a7ddca25c98035514d34339": {
+    "split": "train",
+    "site": "https://lichess.org/qdY1YaIU",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "4083660cb772333bc3bfc90a87f9a19715a3aefc8ccac6f9546dc1abf77c8467": {
+    "split": "train",
+    "site": "https://lichess.org/gTZm1kAw",
+    "plies": 145,
+    "result": "1-0"
+  },
+  "83eb26ccb782be3a0d9ae20c6bd6861ac762cd6d1aaf78726edb80a1f8056bf2": {
+    "split": "validation",
+    "site": "https://lichess.org/0Ez47baw",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "1f9cb7d3eb4a2541437c82fbf83fdd7a45757832f16e752ecef5897aef651af0": {
+    "split": "train",
+    "site": "https://lichess.org/9JhiyrhH",
+    "plies": 149,
+    "result": "1-0"
+  },
+  "725cc6256c74ad157b036f9de80ffbfa0fcd137432c1350f8ddd1545a289209f": {
+    "split": "test",
+    "site": "https://lichess.org/1Ek9SObh",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "0682acfa8330c1b4d38772bd6cf2ef46eb9034179f3c31b8d498fd3a776140c5": {
+    "split": "test",
+    "site": "https://lichess.org/j7KtYw34",
+    "plies": 100,
+    "result": "0-1"
+  },
+  "e345edff0fb4cded829030d30c8d93769445d9e5dc1862e289a79d49f8043119": {
+    "split": "train",
+    "site": "https://lichess.org/N6H0A3xW",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "78a8f4d57b0981bdf32ec447e2f0873744859b514dc6bbfbf7a3c94318a87ad7": {
+    "split": "train",
+    "site": "https://lichess.org/vpwL8BW9",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "4292d94d7ad5f77f3d25bedbfe131e5a708fa86378890a14eb12d1fcb704036e": {
+    "split": "train",
+    "site": "https://lichess.org/dQCTDFcG",
+    "plies": 137,
+    "result": "1-0"
+  },
+  "0dfafaf6ae0ed082329d342e2b38d618fc034ff3aba13b779f77a1c82fbb6ecd": {
+    "split": "train",
+    "site": "https://lichess.org/QBBeMyp8",
+    "plies": 140,
+    "result": "1/2-1/2"
+  },
+  "7c3b0da63fef25ce4d86b16c62a8921aae52931b19b3e93c11a341840c6f6d35": {
+    "split": "train",
+    "site": "https://lichess.org/H8Ud5EuK",
+    "plies": 103,
+    "result": "1-0"
+  },
+  "fe377e145e99d4550061b29173ef13a9ab705bed57d9ed6153d60d2be53779b9": {
+    "split": "train",
+    "site": "https://lichess.org/05wxhl14",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "59035368143a22073efbbaa2be0f7f1c406c2dd85b88bda676a90c029ff71014": {
+    "split": "train",
+    "site": "https://lichess.org/uYA1eXXQ",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "f27eab96b7864458cdbf795a24b1b38112ac2c1085e70456dab0119dea23113a": {
+    "split": "train",
+    "site": "https://lichess.org/J3Eu6Lww",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "cd317c9301b8f69086fb7f319cfc4ed3b740eebf53145a7f6e603d331f1a4e83": {
+    "split": "train",
+    "site": "https://lichess.org/5fkBkSH0",
+    "plies": 83,
+    "result": "0-1"
+  },
+  "b60cfbc9abfac90354bcfb1bc9e2a43e08d9f92076eed66afd3c5bc47f7f8911": {
+    "split": "train",
+    "site": "https://lichess.org/BvOx8zQ2",
+    "plies": 98,
+    "result": "0-1"
+  },
+  "5aed2748325282253d8cbac5e7ef8441a2810c706dcdc61349d83c1c2c5ffcc1": {
+    "split": "test",
+    "site": "https://lichess.org/bpkd8afs",
+    "plies": 81,
+    "result": "1-0"
+  },
+  "0a377ed2d9aeeb17e3884b1682f32f108a0bc46effdcccc1426e4ac8f236d071": {
+    "split": "validation",
+    "site": "https://lichess.org/YrSD08D0",
+    "plies": 135,
+    "result": "1-0"
+  },
+  "588fa1ff4a41297da797e480b9a77238b2fb3fd51d587b2dab6eb80bbc322f78": {
+    "split": "train",
+    "site": "https://lichess.org/8mr8lzjB",
+    "plies": 141,
+    "result": "1-0"
+  },
+  "4a0248de68d200c236492cea8251b651315a987ddd177a05ee4c6f68669034f4": {
+    "split": "train",
+    "site": "https://lichess.org/dfIIQ9Jg",
+    "plies": 79,
+    "result": "0-1"
+  },
+  "eed1733b1721b5c0719f30fc988f4fe00efc8fcd854acec7631fe033c2d6e553": {
+    "split": "train",
+    "site": "https://lichess.org/U5NNKl6U",
+    "plies": 99,
+    "result": "1-0"
+  },
+  "72ab31e1163efd8b459c73b3c949c5cdf913adcd3f3bf762f5b8ac3429f732bc": {
+    "split": "train",
+    "site": "https://lichess.org/74wDybzS",
+    "plies": 83,
+    "result": "1-0"
+  },
+  "a53389ac720b5c6bce13f74dfc059c296edd30dbdc30e6e169a9fb2ddd741f1d": {
+    "split": "train",
+    "site": "https://lichess.org/Z62NWeAj",
+    "plies": 93,
+    "result": "1-0"
+  },
+  "82dc62ff6c655c75dba0cbaabd33775870150cd96ebfaafb03dd709c030f75b4": {
+    "split": "validation",
+    "site": "https://lichess.org/mvz3Z6if",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "d8d80e4b95d53a2bac5c16e4cb611e8dda40e317f78aca19da4ad839e5121889": {
+    "split": "train",
+    "site": "https://lichess.org/bmbXarqb",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "2d462a13ebed3a8d1d283a7b856b21d5577aa23ef46dff68e7e02bf5e4f893af": {
+    "split": "train",
+    "site": "https://lichess.org/4K3Tq2vp",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "c22cc6ab02288fa75a2884194e09cbeb6cd8782b3aba9d64228fe3a1a5da32b2": {
+    "split": "train",
+    "site": "https://lichess.org/k089j0jD",
+    "plies": 74,
+    "result": "1/2-1/2"
+  },
+  "3929197e0f297a2757bef6a2b46ec15e6d76be653a5c5df83910a2f20d505c43": {
+    "split": "train",
+    "site": "https://lichess.org/z9Y4sehq",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "6e21807e5caa94b6d5624d175414e34d74674c7526c342ccf976dbbc00beb411": {
+    "split": "train",
+    "site": "https://lichess.org/jDdgIzZl",
+    "plies": 41,
+    "result": "1-0"
+  },
+  "9514509417191896f7cfde1e668cc95433325687bafc491574f4c1e0a18fe73c": {
+    "split": "train",
+    "site": "https://lichess.org/pF3ugfWw",
+    "plies": 51,
+    "result": "0-1"
+  },
+  "a8c7f6ed956d7a00e29b2a8a40a1ef98bf62d0312b497a1a6eff053a619152c9": {
+    "split": "validation",
+    "site": "https://lichess.org/AFcTBC1Q",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "31c0420e2f358e79e15ae2d8b5d89577b7971e4f488a918604ab24eb8743db24": {
+    "split": "validation",
+    "site": "https://lichess.org/GbYUEdm0",
+    "plies": 116,
+    "result": "0-1"
+  },
+  "8e18b841decb118a5cce90eb810b1147fe56f2d7fc1976ceee07156b4ee877e4": {
+    "split": "train",
+    "site": "https://lichess.org/6Te0Td0m",
+    "plies": 82,
+    "result": "0-1"
+  },
+  "3860f32004aa2c2c79628b33e75cd64c045e7341dcd9467792e654550a78aee8": {
+    "split": "train",
+    "site": "https://lichess.org/9Jg2g7Lo",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "7567c2c4542711c7248aca164b1efac9a47e474186e3d0ca98db9151fec21be0": {
+    "split": "train",
+    "site": "https://lichess.org/WEGYjnWI",
+    "plies": 97,
+    "result": "1-0"
+  },
+  "ead652fc32a765477720a6977f7ce3390ba9e5cf84ce7cfedae7719e1d608360": {
+    "split": "train",
+    "site": "https://lichess.org/0iaboBn6",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "42e5ae7da6cb66a0ec41d8275b290f9d10daba0f3247949d28142cb94a0c994b": {
+    "split": "train",
+    "site": "https://lichess.org/iQMLJ042",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "4e0f66afe4dd701108dfaa9562891bdf05fc037b4a38499c34f486e0c88920cd": {
+    "split": "train",
+    "site": "https://lichess.org/PQeXsILM",
+    "plies": 102,
+    "result": "0-1"
+  },
+  "015d72254bfc77f2072f6dac182e628b47659ce5fcc2435eef8fb7c74455182d": {
+    "split": "train",
+    "site": "https://lichess.org/PrvD6HpZ",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "1e062dbd54710259ef654f45b56c69a481e48fc1873b9dcfe2b9b1a277123e9e": {
+    "split": "test",
+    "site": "https://lichess.org/6RCtIEvK",
+    "plies": 80,
+    "result": "0-1"
+  },
+  "2b4a3ea65eb553b46a8ef6bbabe04adae6d739feda3e559cd4a294abb098a8ca": {
+    "split": "train",
+    "site": "https://lichess.org/XCoeAuNn",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "764cec15ffbc7d5f5b96b3fe1c5451f0067343cda5cde3083f32c45e849476ba": {
+    "split": "train",
+    "site": "https://lichess.org/x91e8BC6",
+    "plies": 89,
+    "result": "1/2-1/2"
+  },
+  "4c4c20849beb5e9e418991949dd43ba660de98ac12c95ae7f2e02142b8b2dec1": {
+    "split": "train",
+    "site": "https://lichess.org/rISDg6ta",
+    "plies": 48,
+    "result": "0-1"
+  },
+  "dd133a8cece66c7371ec891f0df35d1eb6228629ac0c1e11ff7f43b0477a7bfd": {
+    "split": "validation",
+    "site": "https://lichess.org/Gvbfp24p",
+    "plies": 127,
+    "result": "1-0"
+  },
+  "11cf85e9fe1e063bad49a1ff260123834525220aefd19ea5bfac042719ba1aa4": {
+    "split": "train",
+    "site": "https://lichess.org/XmKtbpr9",
+    "plies": 124,
+    "result": "0-1"
+  },
+  "d1fab18a5a7aa8aa221117714a1742441d837f365f592f2bad8b9356d375263b": {
+    "split": "train",
+    "site": "https://lichess.org/1OPFAOKA",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "88e20f283137796975676479ab780ece143fb2f5c9107c7d5353860884b9c904": {
+    "split": "validation",
+    "site": "https://lichess.org/eJd4nvI2",
+    "plies": 92,
+    "result": "0-1"
+  },
+  "c02720c4c1fce0e7a60d197683444a1e58d4dda223aaf902f988eb60c97a72a9": {
+    "split": "train",
+    "site": "https://lichess.org/8R0Ie0BT",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "8569a1bfe219b9b56c3c1024a9f8e283d6655a7d8a6950e197e33149640a50c2": {
+    "split": "validation",
+    "site": "https://lichess.org/HitcOJxU",
+    "plies": 114,
+    "result": "0-1"
+  },
+  "ad9ba1ebbf734ece451496a6cf7e97caa4722ffa7ab13e8cef557ccb99c26ebe": {
+    "split": "validation",
+    "site": "https://lichess.org/YQFoay2u",
+    "plies": 81,
+    "result": "1-0"
+  },
+  "069f394979e546933fc8041a319622d9484a3079d423bf1ea2ace00619f2f6d2": {
+    "split": "train",
+    "site": "https://lichess.org/Aqur4kE6",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "31419de85560e7d352f85bec49683fc460d629bc58fde345633b59445ae4ac38": {
+    "split": "train",
+    "site": "https://lichess.org/c7ZvITMq",
+    "plies": 157,
+    "result": "1-0"
+  },
+  "fb99232cad94f27dcd2410d40c68ca67d15380d5e958d26207ce8fbc05d40c88": {
+    "split": "train",
+    "site": "https://lichess.org/1GcO5ODk",
+    "plies": 91,
+    "result": "1-0"
+  },
+  "451b7aaa2941c0ab4bf8bf90a79171a64625fa99bd5b780d35b1228f7def8e27": {
+    "split": "train",
+    "site": "https://lichess.org/pOiPBEAH",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "a4b29c27b26f0648be528ec4e065567bafa521a865c5f62af13e5c0b9ba0fc3e": {
+    "split": "train",
+    "site": "https://lichess.org/1ethzoSq",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "65fd25a6afd3ef79e301387b18cae40a87c8e0918036fa51e2b8a7bf26e46905": {
+    "split": "train",
+    "site": "https://lichess.org/LMvDbejG",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "3c966f0ba8538b7b03539b2046e48a6b0325351d429dfa0c4a32a4dcbb6bb799": {
+    "split": "train",
+    "site": "https://lichess.org/9OUagGdP",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "479f2f6f7e735dd9f07185a430b63ebdefcd525ba6e66c02253d6d404acc47c8": {
+    "split": "train",
+    "site": "https://lichess.org/XLyq6Mlj",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "dccfbfb6c78c60bd77c9e2f881a42988ddcec23919cefeca057abaf5f95bb809": {
+    "split": "train",
+    "site": "https://lichess.org/WU6jM9ik",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "473db169fb786375385140d20234b8c5eb0109c6da060ca9b59de45dcde53dd3": {
+    "split": "train",
+    "site": "https://lichess.org/BxB8inB7",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "857d6d09cc36acd525765379e92a91c746acee3638408201a5a640d4acaabbbe": {
+    "split": "validation",
+    "site": "https://lichess.org/duXhNVv4",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "970fea53f68f18a76e1ee9ce8220ae82564569cd786e8c373374414c558055fb": {
+    "split": "validation",
+    "site": "https://lichess.org/ymIc2UFn",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "d28fc47b4340872b3c3f3c72f506d39810262db04fe1c9deddb630396dcd335f": {
+    "split": "test",
+    "site": "https://lichess.org/150LrSHh",
+    "plies": 179,
+    "result": "1-0"
+  },
+  "bb50ec49328aee4afd1b14df3ce39a247993ae939b0dd039b9994d0f19ea3142": {
+    "split": "train",
+    "site": "https://lichess.org/Z2a5Yyc9",
+    "plies": 96,
+    "result": "1/2-1/2"
+  },
+  "f912f5d6711185d6fdc32d08509bef90abe9067c34578af376d83268315bfe09": {
+    "split": "validation",
+    "site": "https://lichess.org/02ZgmcqM",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "d8d8f6dac2ed67f7c448766d6995126ba5ebb6a0cbfa0cb55e3da2963dec273f": {
+    "split": "validation",
+    "site": "https://lichess.org/mcGD7K2Y",
+    "plies": 65,
+    "result": "0-1"
+  },
+  "c1ea58e80a403d82bd5a054dabf3a1c5532e9c275f6bd22acf6b0e1f4d1e5672": {
+    "split": "validation",
+    "site": "https://lichess.org/AmXLz3YR",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "fb6848101d297b15efd5c57f413a358b4cd90774d9a121238f3ed0e67f924b8e": {
+    "split": "train",
+    "site": "https://lichess.org/CikXkJbl",
+    "plies": 116,
+    "result": "0-1"
+  },
+  "7ca6ed73dd3cebae03468351636a0990a2360ac9a677bd2281b7248f2902537d": {
+    "split": "train",
+    "site": "https://lichess.org/YrMLWczZ",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "5dd18d3c85a214b991ee2bc8898e4bbd5e3f817896df242514f08b74b3c892e8": {
+    "split": "test",
+    "site": "https://lichess.org/BVRmaSmq",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "728a7cb636444c694a33e7929f9b4c27ae4f5c20252c80a7c66ba494a519b174": {
+    "split": "train",
+    "site": "https://lichess.org/WecjlN5I",
+    "plies": 38,
+    "result": "1-0"
+  },
+  "1af5a68d5f1d3c722cd10aaf02f2e25608244245e8daeaf3ac8ec4a61736e892": {
+    "split": "train",
+    "site": "https://lichess.org/zlIiS3Ue",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "5e86191b0963f7d01a7a7f625a049a21b7bd299b2d5389e70f6a9ebd52d6dd24": {
+    "split": "test",
+    "site": "https://lichess.org/vdoRbein",
+    "plies": 95,
+    "result": "1-0"
+  },
+  "6ec0c6c49c9c1fa3d55a6b9c1a051858520505c590987f770d1106fd0a6d43a6": {
+    "split": "train",
+    "site": "https://lichess.org/gjlWKlwa",
+    "plies": 88,
+    "result": "0-1"
+  },
+  "62829f2aaa09326a37205e0fe0b2b49e8bfab705c0a917cd66fbd9b81ad63225": {
+    "split": "train",
+    "site": "https://lichess.org/OIYYozEv",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "0624c17d44b597873aae14defd9f0707d31de29315fab6159232e7cc7161ee6c": {
+    "split": "validation",
+    "site": "https://lichess.org/IQGeESob",
+    "plies": 101,
+    "result": "1-0"
+  },
+  "927dd42d46600113e2bf3293c27b9d3d7952d245b27360540278f5e84bf6f875": {
+    "split": "train",
+    "site": "https://lichess.org/9qPtxqAq",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "783ee8ac9bdb7399ac079770a95232e81ec99e7e19072b2a9f23477974f304b8": {
+    "split": "validation",
+    "site": "https://lichess.org/ELRP9Ig8",
+    "plies": 87,
+    "result": "1-0"
+  },
+  "f835a7c2f4f14ec68e65afb190dee14955ba81c8d27f1a945e488a2515c2ae7e": {
+    "split": "train",
+    "site": "https://lichess.org/dClbT1JR",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "7a6d3ccdc89c1423ae2344eb272ddfdd948a556978ac915b5420a45951aad024": {
+    "split": "train",
+    "site": "https://lichess.org/1btjPs71",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "7a043609d7d4ee2698dc927923b7fd1631bcdc1a3d016d11ffa036bfb759cceb": {
+    "split": "test",
+    "site": "https://lichess.org/OqcJ6TW5",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "d1e984dec32ffc47e5380bf6742fd4878355617a7d2af585338031d4523b4db2": {
+    "split": "validation",
+    "site": "https://lichess.org/qyuD78dL",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "da7535b16d91487950f945f75549455bef0f4a08c6b44193af8edbadebe05f81": {
+    "split": "train",
+    "site": "https://lichess.org/4SE5GSPe",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "935d50aaa1cb3df7ba0fa858b3c41194485c046782015c83f329a07b734588b8": {
+    "split": "train",
+    "site": "https://lichess.org/1r820wVe",
+    "plies": 98,
+    "result": "0-1"
+  },
+  "a6004c82375b78daea3df95612675d49e744440e243a3f863bbc7e7cc4c31c66": {
+    "split": "train",
+    "site": "https://lichess.org/OeafgWiM",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "999558e8bd317fc3a016e64fcfe50dc563faa9ed6822eb8daa7d0579399b446f": {
+    "split": "train",
+    "site": "https://lichess.org/wcuaPyY6",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "ff448e31cb60ac56a55fbabc356a98105d93a0d9b302d5489e72e030a1d6ff58": {
+    "split": "test",
+    "site": "https://lichess.org/py9JaT29",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "48a27e437540e3c043bcb420e1656e23b0bf98e6a572a51fedbd5b61736e1725": {
+    "split": "validation",
+    "site": "https://lichess.org/GKKfmMCA",
+    "plies": 96,
+    "result": "0-1"
+  },
+  "a539ca157825a100057a4f5288d6a917a773ab79cf50d4a4a2fa01e0d50e2a93": {
+    "split": "train",
+    "site": "https://lichess.org/C2upeiwW",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "184f7690d795313da7d362387fec0b2842191c55602bb35f7b26996cd1354183": {
+    "split": "validation",
+    "site": "https://lichess.org/A0JpFcxk",
+    "plies": 125,
+    "result": "1/2-1/2"
+  },
+  "4aeac529a526ee38debd469e8f7f94e4dba37c58ade25476bade39fcaf01aa08": {
+    "split": "train",
+    "site": "https://lichess.org/mp29eY9w",
+    "plies": 123,
+    "result": "1/2-1/2"
+  },
+  "9affd50238af8e0b2abaa949b604e62a51b1aeb3b1d777926441179d3d21f576": {
+    "split": "test",
+    "site": "https://lichess.org/981DS3zS",
+    "plies": 43,
+    "result": "1-0"
+  },
+  "b26ba22e4d7fe7cea37b792ff5640e0110bd84c656d938035b17b6e9d6c4a7d2": {
+    "split": "train",
+    "site": "https://lichess.org/EJNm3izw",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "99584db297194180a7de24b57cfa62db351bdf569c916faa6508939a32b8b1e8": {
+    "split": "validation",
+    "site": "https://lichess.org/HDlqrQzB",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "7af196c0788fd3ec86da59785aec3dd2b4cf2657a1f3d8cbf77381791ec63c8f": {
+    "split": "train",
+    "site": "https://lichess.org/fWcDtnS0",
+    "plies": 36,
+    "result": "0-1"
+  },
+  "f5dc64aa7f78b6debb78d6940d2f4f6c8bbd90b65e0a98787220668a90c55f34": {
+    "split": "train",
+    "site": "https://lichess.org/jsBZhOoV",
+    "plies": 103,
+    "result": "1/2-1/2"
+  },
+  "b9054061a88b4bb369444103da1d3d2a05ffd85680b992b699dd7d1da3587dc8": {
+    "split": "train",
+    "site": "https://lichess.org/VdmcnZU5",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "f33f4aa7d438a211606f5e89e8c63bd88f96de94f727dd7cf0e16dc6d6451053": {
+    "split": "validation",
+    "site": "https://lichess.org/FCnn3grf",
+    "plies": 53,
+    "result": "0-1"
+  },
+  "87b3a63f01d155c2c0605ca6e62a52eaafa735d1a241cd2314a92abe6833e175": {
+    "split": "test",
+    "site": "https://lichess.org/ZwvK9JY5",
+    "plies": 95,
+    "result": "1-0"
+  },
+  "8c1ff6dd6223b0b2238e2685b9d34b4bc038fe99935a9b793a80ae3976a9d396": {
+    "split": "train",
+    "site": "https://lichess.org/7HW0vwe6",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "77c690c0ee384236539ad116cb08bf1bc090d6fcf5dfe8a5f5828ace3caceb8c": {
+    "split": "validation",
+    "site": "https://lichess.org/cvITVeWy",
+    "plies": 126,
+    "result": "0-1"
+  },
+  "064f4178937a11d57c4a061ecc6a07c67be8a8c428e5b83ec8b43c75cdcba18d": {
+    "split": "train",
+    "site": "https://lichess.org/O04c3l0r",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "0cbc7cbfd780d90c846e07dc56293fe7520fad0ffef5dbd062ad4e8244bc4ebc": {
+    "split": "train",
+    "site": "https://lichess.org/ES5jqxH8",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "fd47c0810a9cacd8e588fad4a4df446aa6801cf9600ff44226faaad04a44204c": {
+    "split": "train",
+    "site": "https://lichess.org/1szxfD24",
+    "plies": 107,
+    "result": "1-0"
+  },
+  "2568ae2910149e431f18e604dda0d62dcea59695a8d0c689d97df6a2da4f83e4": {
+    "split": "train",
+    "site": "https://lichess.org/BMFhsvUN",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "37b2d15d698865051dfc1aed57b3f1eff45ebd71086a9292d77edaa24f2a7c0b": {
+    "split": "train",
+    "site": "https://lichess.org/jfOyqi27",
+    "plies": 38,
+    "result": "1-0"
+  },
+  "7ae3540d6560de2cdb17274023b2553d6e697160f6a000c057d886ca52f27f29": {
+    "split": "train",
+    "site": "https://lichess.org/kDMg3rU9",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "6b150fa7e133a0a22de3db9cd735b47b23cc0f99bb4d818a4586a0cd05449763": {
+    "split": "validation",
+    "site": "https://lichess.org/d2Fvn8N6",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "ff31962aab6e07186fa80791c07496799bfa146966ba96abd418ff08088cb7a5": {
+    "split": "train",
+    "site": "https://lichess.org/xrLDUN09",
+    "plies": 120,
+    "result": "0-1"
+  },
+  "8eeb9d5c1ca48c156f4a796ad5eb473a61fff3ca4b7a6791e95d09d5aa75f9d5": {
+    "split": "train",
+    "site": "https://lichess.org/ANGPwdMe",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "7affd1875cce954fe7caa79c650a45341e14cf1ac5dfeeddc7b7b4db3e8b0323": {
+    "split": "validation",
+    "site": "https://lichess.org/mirOcHhr",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "966d049ced79f21d1917796be8743cdd3b2a8b448f700d7959dec51b715d433b": {
+    "split": "validation",
+    "site": "https://lichess.org/ZXwRBxtO",
+    "plies": 86,
+    "result": "0-1"
+  },
+  "73b588347c3fff931a54167a3d2181bf848c9a55f8c9f33823eb58f92ae4ff4b": {
+    "split": "train",
+    "site": "https://lichess.org/mWDe6ETx",
+    "plies": 86,
+    "result": "0-1"
+  },
+  "be32102a2f25f295e858b8f87a43c782fb9df036762cb5f3f24cd65567a81520": {
+    "split": "train",
+    "site": "https://lichess.org/Im1oPurb",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "ae26eea5829c2040c0dd541f27ee4a8d2af5b9223b09055b7677217f3d6faea4": {
+    "split": "test",
+    "site": "https://lichess.org/BCWqNDZp",
+    "plies": 62,
+    "result": "1/2-1/2"
+  },
+  "75195199e73a8505abd1ebe0f53215f2f70c0b6b5b9d603b4dcdcfb00c5465b8": {
+    "split": "train",
+    "site": "https://lichess.org/e3hRP27Y",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "86a39bc3c31af02b49a8919066315d60f675c853c09f2de19c83a722ca65bb5b": {
+    "split": "test",
+    "site": "https://lichess.org/3kI0ycPE",
+    "plies": 118,
+    "result": "0-1"
+  },
+  "4a71ae61de1c597a6129b2d72be1c7c6ffcd3fb8fe006cbba5f3a8af8bc451ab": {
+    "split": "train",
+    "site": "https://lichess.org/CR5IpRKl",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "f52250841d3e3a4b76ffe60d75be7ec55fa5f9355dc1256f374c283d4214bd68": {
+    "split": "train",
+    "site": "https://lichess.org/ONgkHmzi",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "414c0cef79bfabcf03d49588d08876bb0833dd229f52e7d8557973113aff8f37": {
+    "split": "test",
+    "site": "https://lichess.org/6MaNQHvJ",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "f51443986112a0f6c9ff8d9ceb1a967c88c38fad6a54e04dc0efbb728a47210b": {
+    "split": "validation",
+    "site": "https://lichess.org/jKRIW4NC",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "6cd4d3a5b78353c261a0ec89c05516c9f7b1eae7b6fc117a0018f73ce869d06a": {
+    "split": "test",
+    "site": "https://lichess.org/5WHKLDWj",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "25f4fdfd2f2785ac96e9cd4f0461ce28c02ba1850879120560887a467f594014": {
+    "split": "validation",
+    "site": "https://lichess.org/uyjSMglD",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "2a621dff6d3150242befc50a8ad1585b20cd6b8a77b325222746ac24f13c12a4": {
+    "split": "test",
+    "site": "https://lichess.org/GkmuB2zT",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "607847b100d0a5e82f570fbf51649506bfeeef41a9d9c184ecc8216ab522ff9f": {
+    "split": "train",
+    "site": "https://lichess.org/Irkhdb4s",
+    "plies": 84,
+    "result": "0-1"
+  },
+  "0dc1c9b7ea43c1db0a9e8935863a58edf0b96cc05ff76a39ba3285a7064ecc84": {
+    "split": "validation",
+    "site": "https://lichess.org/GTWMyeSt",
+    "plies": 60,
+    "result": "0-1"
+  },
+  "255064cae0f68ed0f91d9f27cca463cb27749605bb1db8916b13ce893e5dbafb": {
+    "split": "train",
+    "site": "https://lichess.org/HjYguCKr",
+    "plies": 58,
+    "result": "1-0"
+  },
+  "cc0e37cd8f2041c19850b80ced9f09eaa10063a0086cfb6fbd76249206cd3313": {
+    "split": "train",
+    "site": "https://lichess.org/R6VyccoQ",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "077889d3cf612bc06244942bd1251036c50a97aee7a8db571fa1a02ed88ffa81": {
+    "split": "train",
+    "site": "https://lichess.org/5J234uWP",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "218c371051e18feb1703ec7b252af9ea041677fef9ad93d41973dd4015f656bb": {
+    "split": "train",
+    "site": "https://lichess.org/hxU5gczO",
+    "plies": 137,
+    "result": "1-0"
+  },
+  "86780c04bf5327eaf60bd6d32ff30bd85291a11456127828fee7ba8cd0dc2851": {
+    "split": "test",
+    "site": "https://lichess.org/0v9o2y84",
+    "plies": 57,
+    "result": "0-1"
+  },
+  "ac23ba3728fc8dd4b91b5dabe05bebcf99bc57cc5323e6d917813b5f6917dff4": {
+    "split": "train",
+    "site": "https://lichess.org/bfYspZFN",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "20d70052fb1f191e321a28e670e2c3d0bd2fa85c70e46f6e8902e47e50948891": {
+    "split": "test",
+    "site": "https://lichess.org/tPCzBoeo",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "5d258b87f9928f3983c007453835c6296fd1ee7a80741428be1585bf0519c9b0": {
+    "split": "train",
+    "site": "https://lichess.org/X9bmqWyA",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "de4355a21c0b97212e060f4420af86f8ef20e53f76e59fcd28f3c831e75ad47c": {
+    "split": "test",
+    "site": "https://lichess.org/lh4IoOuy",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "0f454bfb9d198a890cc5e4d7ccc733611e65190db4022cdaf1fad2413baa24cd": {
+    "split": "train",
+    "site": "https://lichess.org/PLrmKJPf",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "62298694f119be7e5e3ef9de33dd3c30a5b9adfb1444678070acb8b2fe7f6fa0": {
+    "split": "train",
+    "site": "https://lichess.org/7PYEWAdT",
+    "plies": 77,
+    "result": "1-0"
+  },
+  "6dfa0f2a26526a42a1fec180d5cbc1823e9a0fc3c112459e04b8cac49591c134": {
+    "split": "train",
+    "site": "https://lichess.org/p9L1E5UB",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "ca67a9897f790abce0b9e625e8e1077facdb8794acdd703ac5d9f93e02656141": {
+    "split": "test",
+    "site": "https://lichess.org/fBMJFPjq",
+    "plies": 84,
+    "result": "0-1"
+  },
+  "177f1f0c00822a7c59045641b31c00dcc62571ae6d84f10dec7a6ca6967ea961": {
+    "split": "train",
+    "site": "https://lichess.org/r9ShI5hp",
+    "plies": 41,
+    "result": "1-0"
+  },
+  "3f2f0168dde22295c1c9add1ca8a95d103f7ff7e38f98513024e92e0892af22f": {
+    "split": "train",
+    "site": "https://lichess.org/sb6UvyDm",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "f67ce9e52de51358c707ff95d45b3789eedafd5db439e803659c5f0a6356d7c1": {
+    "split": "train",
+    "site": "https://lichess.org/s0WScgL8",
+    "plies": 99,
+    "result": "1-0"
+  },
+  "f5b45d9c2fa58b5ff5f940591968e6efe3a12fe64d0cb26812cb7d6292aaf971": {
+    "split": "test",
+    "site": "https://lichess.org/Ta1hbF2B",
+    "plies": 43,
+    "result": "1-0"
+  },
+  "e9fa8adb0df9efdc0f8bd8839d804773125057f479c907f17b28c0c31f22062b": {
+    "split": "train",
+    "site": "https://lichess.org/VP1iQfBW",
+    "plies": 84,
+    "result": "0-1"
+  },
+  "0ad087577729647a50814ea942798bea8a9e14faa820c723433748056e806920": {
+    "split": "train",
+    "site": "https://lichess.org/aGMWNHIp",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "48275c7e3e89d826fd5c849770b334ecbe2f20d01e9e74034f73b157fef6e1e4": {
+    "split": "train",
+    "site": "https://lichess.org/RCiIaIg4",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "d1e0e1ae8443d18ace5224ea8e0e11c72e5e4545878a321eae0481f30bc9aaa0": {
+    "split": "test",
+    "site": "https://lichess.org/jOeFruVQ",
+    "plies": 98,
+    "result": "0-1"
+  },
+  "b6653feb8b7d96241369c1063369b2460b4de27fb838fc8b824eae3cc6f740e8": {
+    "split": "train",
+    "site": "https://lichess.org/pkyd0Ki4",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "575d8457527e49ed3f247131e6ca180d31f7f699d20141a3d793a1432ef9d6d4": {
+    "split": "train",
+    "site": "https://lichess.org/sQRv8s8h",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "c86033ea14d7e4feb4e522f1d58932e0721d216732b973726fb27a3ae0b49225": {
+    "split": "train",
+    "site": "https://lichess.org/n7EqJvlc",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "70095f5712ae75bcb9b75a712ffa7ec7b11f316e3aeb1de06a65eb45b14b27b6": {
+    "split": "train",
+    "site": "https://lichess.org/nVFmTUiE",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "3fa8e84100d3363344b66d21d904466eb9fb8599aa023a23477c1a26b8a5fab2": {
+    "split": "train",
+    "site": "https://lichess.org/nDrAhdoC",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "5faddcf70224c2ef46c8ab340d2845830770751db866cf75a4707356e59c072e": {
+    "split": "train",
+    "site": "https://lichess.org/yWAXQQpk",
+    "plies": 147,
+    "result": "1-0"
+  },
+  "d8714f66640f7fe144c9d19ec0d8008170fc01cbc5843d02a4b8fac50363a2c4": {
+    "split": "train",
+    "site": "https://lichess.org/TtQExytj",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "ad5511869f7021d36f2a92b6b55a4ed0e6f32e97399a0889ed2d0cb38e865490": {
+    "split": "train",
+    "site": "https://lichess.org/MurB71t3",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "1fc00f17dbd13d4d80d2a59d655f7bf4bd14077416c88b9ae932f1f4b7114d06": {
+    "split": "train",
+    "site": "https://lichess.org/HsGSjFP7",
+    "plies": 140,
+    "result": "0-1"
+  },
+  "014c1a3c54b98ad4436dfac2fe27bbc09504f1e0bf7a6e74fa63519c846b7c4c": {
+    "split": "train",
+    "site": "https://lichess.org/iG0QYRqk",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "7c767d8df6b4f079d4cbc65816a2a4ce7918d06875023fbec7bb08930b7819a3": {
+    "split": "train",
+    "site": "https://lichess.org/jNNTnhLT",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "8542c322e7a2dedd8b31a102079712729b77c05e646105b16c254e5cbba03fd5": {
+    "split": "train",
+    "site": "https://lichess.org/kpeelwiw",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "0e4f6c3942b4770a9a3877cf852b6726770fc4c6e30aff590db9de89a758abd1": {
+    "split": "test",
+    "site": "https://lichess.org/GyWObRdX",
+    "plies": 49,
+    "result": "0-1"
+  },
+  "4aefb3db5b925dc842a151ccf500db3c6e14953b0949c151d1276490167625b0": {
+    "split": "validation",
+    "site": "https://lichess.org/cN1hb1wu",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "e0373dd51626d81a6f1f0a22596b8dbab067294d3b7b72767882a474b2d697a0": {
+    "split": "train",
+    "site": "https://lichess.org/YqdQmsMH",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "eb866190cba612f128a04fa1ae1e1b05bc93957f6e65d75a4312d2d2c5474a55": {
+    "split": "train",
+    "site": "https://lichess.org/t6Eyw9Kc",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "9c91fb2f7a01996d0f9465890f4dffaaa2f2194c260302ee890ea975f57d0b53": {
+    "split": "train",
+    "site": "https://lichess.org/FvZyIkas",
+    "plies": 81,
+    "result": "1/2-1/2"
+  },
+  "a8da10f9e2254258cf45f2fdf9109912b6b3f8b12e4c9233830d66adf708e85b": {
+    "split": "train",
+    "site": "https://lichess.org/qw9tDidf",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "f2d77197c7ca01b6ac8e3415445f1b49debb1efe08e6fb3cc9f137ef7e975c86": {
+    "split": "train",
+    "site": "https://lichess.org/sOZBiaum",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "8a75225122a47a038a61b2f2b620a0f58c00a19e45972af838c34c47db61c189": {
+    "split": "train",
+    "site": "https://lichess.org/YFzkaI7Q",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "665f5e1cb474c1fb7fc1b584be56b1c9eef5def441dbc85e27e1033cae74fc4c": {
+    "split": "validation",
+    "site": "https://lichess.org/cyvfnR00",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "d2ef9adc4df11b001659a618825a0ad0b93227127bd620fd4e871221db2be10a": {
+    "split": "train",
+    "site": "https://lichess.org/YWw40RO1",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "6c3bf1beefa64bf6f3cdad2a6670c0c827bbe92018b9b62eafbc5bac218f4307": {
+    "split": "validation",
+    "site": "https://lichess.org/IVGp39wE",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "f47d649b7a1d0b3b2f08525302488d41705d2f5ce66a99b0e56fbb37c4dde164": {
+    "split": "train",
+    "site": "https://lichess.org/VxDu7NYL",
+    "plies": 41,
+    "result": "1-0"
+  },
+  "5311fc7583a2c15f66c57b793ad6634842b7a40b88c09ba0729bec616526110d": {
+    "split": "train",
+    "site": "https://lichess.org/6RYvpxnU",
+    "plies": 83,
+    "result": "1-0"
+  },
+  "a36ce024cfdc606dda4949b24437adb9e494fd2d6c253dfaae1d3b039545b56e": {
+    "split": "train",
+    "site": "https://lichess.org/zwZXjgTT",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "451d4abfeba4bff6f58f717d2a4d19092e3d7be065ad1e44582fe4154f1ae7d3": {
+    "split": "train",
+    "site": "https://lichess.org/E38p5xC0",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "51e8f7a76519eaa4da8307be8ff772542ae72c2a6eb9305e9562c6a817729b58": {
+    "split": "train",
+    "site": "https://lichess.org/sIEHGCOw",
+    "plies": 99,
+    "result": "0-1"
+  },
+  "d4db745fe5035eb13b83de63ad367cab2a18454f25dac98641fd141c50fcbf65": {
+    "split": "train",
+    "site": "https://lichess.org/KNRLRPzh",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "12ff91806a2cba907c1e1101a04dd5383f3605cf605f7a31aaa2f86ce6941662": {
+    "split": "train",
+    "site": "https://lichess.org/38qovQH8",
+    "plies": 143,
+    "result": "1/2-1/2"
+  },
+  "0a3c966df8d2539744e5358790c7e812ec3daf71853a6ac037c9810aaa2e2deb": {
+    "split": "train",
+    "site": "https://lichess.org/qnUO9XJr",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "1d5822435ed746b9bad687e96f6edecc01e4946524469ed6e89e860fa7fa4392": {
+    "split": "validation",
+    "site": "https://lichess.org/C8VOTaGa",
+    "plies": 51,
+    "result": "1/2-1/2"
+  },
+  "8304055142a5f7d562374e5e102bd8303e3c8f7ecc5a40baa999db9f14c38494": {
+    "split": "test",
+    "site": "https://lichess.org/v5g3mI9U",
+    "plies": 88,
+    "result": "0-1"
+  },
+  "ba102fe5e34afb3ddeedf7b38bb8f4b15fc10f292cbda80e5f61a4c4563cb594": {
+    "split": "test",
+    "site": "https://lichess.org/cdt9NXj2",
+    "plies": 103,
+    "result": "0-1"
+  },
+  "d1ac4252824cb1039226d97008711d231f9c048acaed4505476e6ed664ee9d29": {
+    "split": "train",
+    "site": "https://lichess.org/DU2zmCgL",
+    "plies": 134,
+    "result": "0-1"
+  },
+  "68d30a4c37babf1f94b32f349c75d69ac6cd57757cda4626ab7c9ccba7d9c212": {
+    "split": "test",
+    "site": "https://lichess.org/MXjom4mz",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "c8c12a632a6535485d37172237e9471d2009acf9e25d18eff3251c33b77a40a2": {
+    "split": "test",
+    "site": "https://lichess.org/QkIGyISO",
+    "plies": 82,
+    "result": "0-1"
+  },
+  "54549d2f9f6d6844c5bd20cdef56a01ebd549c600fb3d4307584ea3ce0898463": {
+    "split": "test",
+    "site": "https://lichess.org/aVXETffG",
+    "plies": 92,
+    "result": "1/2-1/2"
+  },
+  "64a64dcd423debdc765d4458fa30633441507e3039f6d95eacf53e33cd21bad5": {
+    "split": "train",
+    "site": "https://lichess.org/eh6EynWc",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "3494a84dcf0873f836c4151b3e6a81048a1c2698e088031c9b88796c05e8f45c": {
+    "split": "train",
+    "site": "https://lichess.org/xImhgc1C",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "3a25d772f1005bc9e0c9f004d9504cccc2ab7a139916dceb006e8eba78a9dac5": {
+    "split": "validation",
+    "site": "https://lichess.org/ZVOUUujG",
+    "plies": 78,
+    "result": "0-1"
+  },
+  "e95a09e589bba5b4eae558725003d9078d5101a9a14b648f41c86dc6c6d50081": {
+    "split": "train",
+    "site": "https://lichess.org/Qs8lK2Cb",
+    "plies": 83,
+    "result": "1-0"
+  },
+  "1f5f29dfe78e377ea8d0ad9ec38ac86bdc2158d9096373c0d3963ddd43292c71": {
+    "split": "validation",
+    "site": "https://lichess.org/ONqjxtbP",
+    "plies": 34,
+    "result": "0-1"
+  },
+  "341429587ce7678659d5e795fc70d3453c0344e397d2924eb08d70dc7c4e978c": {
+    "split": "train",
+    "site": "https://lichess.org/1UOyOmJh",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "942c35db9dfc3261fa46ad1bfabc3eb85502e650dfa4d62615b9002b9f1015ee": {
+    "split": "train",
+    "site": "https://lichess.org/l2kqwcyj",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "66063dd1135ace7d1295cfdcd2d468a0e7ae59dbd6e23d6463dd235ae4216103": {
+    "split": "validation",
+    "site": "https://lichess.org/5l4yYPH4",
+    "plies": 98,
+    "result": "0-1"
+  },
+  "4fd8a31812ec7fec52c89dd4377690df9fc8ae97128757c9403146b5dd9ab4f0": {
+    "split": "train",
+    "site": "https://lichess.org/BkQcIPl7",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "880df77cfc50384d281ba8ef5cca847b278490143055e898c4f27919d15db137": {
+    "split": "test",
+    "site": "https://lichess.org/IQXKbkZ9",
+    "plies": 61,
+    "result": "0-1"
+  },
+  "dd3ee7a382f54d8d4f69751e32f26e091aa070528b3562c01b2bc9d6e8138404": {
+    "split": "test",
+    "site": "https://lichess.org/PdRdTveQ",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "95a8bbbb252290c4025dc60ff3f31f453640262f4d7bb098e49fc5c37d65e8d8": {
+    "split": "train",
+    "site": "https://lichess.org/zCRgKxdY",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "f8ca859421acef0dcf13da2b02596edfc2a1a4e9eb0d4c5d1b701e17b1343aa8": {
+    "split": "train",
+    "site": "https://lichess.org/e7Lf0oBf",
+    "plies": 90,
+    "result": "0-1"
+  },
+  "e46f08d44461298f9547bc5056c66a5079b5138523ef876cbb02c8b7738564cc": {
+    "split": "train",
+    "site": "https://lichess.org/PgnsamdR",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "8ceccd042bf746ba4939ac5e7bf37c47cdc6cf3b60f3933cadd37c71d19da7e3": {
+    "split": "train",
+    "site": "https://lichess.org/cyyyLmGK",
+    "plies": 41,
+    "result": "1-0"
+  },
+  "2405ae410c2627dd5c76591e1f3e35f191ce6ba6d505a9535bceed9fd98badda": {
+    "split": "train",
+    "site": "https://lichess.org/LU37I1FU",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "207fc88541ae0345100d72c81ef7543ed238f5701185e3fc71cc6d4c325dd51b": {
+    "split": "train",
+    "site": "https://lichess.org/L5wZDw42",
+    "plies": 93,
+    "result": "1-0"
+  },
+  "2e2f57b59f35d20b75b51019d931a4d9b65c882107962caf4db4735e7210cf6b": {
+    "split": "train",
+    "site": "https://lichess.org/2M10GNJy",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "698947dc21586c2abd1618ba58e68925449d62c325814855c7d363a899f57b0a": {
+    "split": "validation",
+    "site": "https://lichess.org/nJp9q43d",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "b2215edda7cf209d088c1b31b9f4ce8fd8caf5a2c5f383d5d39058f0fe11b7af": {
+    "split": "validation",
+    "site": "https://lichess.org/qphrixOr",
+    "plies": 76,
+    "result": "0-1"
+  },
+  "ae4c718ccb6d0431b74a34dc3def0f761e782ce212ce0c68ba49354e34ca8552": {
+    "split": "train",
+    "site": "https://lichess.org/KnKQN9j7",
+    "plies": 92,
+    "result": "0-1"
+  },
+  "7d820b8f709ac999a8606465b95aa1d48697bd93e16da9dc00fcca74610f9f47": {
+    "split": "train",
+    "site": "https://lichess.org/lDLy15oW",
+    "plies": 91,
+    "result": "1-0"
+  },
+  "b2ebc06580b8bce22fcc4b5ab13f846dcd0237bf9228fdbfb392c21306da20f5": {
+    "split": "validation",
+    "site": "https://lichess.org/J8zej8Wy",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "bf7739dfd0e5194635887965ab194fc93a9ac7d14c1ba8546e2f9a1bcd059872": {
+    "split": "train",
+    "site": "https://lichess.org/GPzvBntW",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "4aa258ae554645d5c825279d56e96d69033da6c5530826a45a49bf1e035d6d99": {
+    "split": "validation",
+    "site": "https://lichess.org/aQJeMe5G",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "40717b83093c3439cfaab3f6a8a2388dcf1faf799bd68957f1f78317022fdac1": {
+    "split": "test",
+    "site": "https://lichess.org/LKkalDZv",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "53aea67ece717d73e6df8a9f0b7c31c4e2c6501b535178276f51431716567100": {
+    "split": "train",
+    "site": "https://lichess.org/NvBdXhpO",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "b3537237ce4000beee0e7b0b4b258d8c396ce58956f6e3a2119d2384cbcd3356": {
+    "split": "train",
+    "site": "https://lichess.org/TFDYJErc",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "814c56d6ea5501de674499e498a2eb968369b8af2ce83c3ca855270d845b0fc7": {
+    "split": "train",
+    "site": "https://lichess.org/BoVcyQ0l",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "48a5b565e56faf07ebccc49bfd273a50646ad9268441e6fa5708665555ecb308": {
+    "split": "train",
+    "site": "https://lichess.org/hOqDlgml",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "ad286ee3c696f6befef3ed402e131946cb5b719b78d16ecb724bb0e6b8d80980": {
+    "split": "train",
+    "site": "https://lichess.org/A3c8klMn",
+    "plies": 103,
+    "result": "1-0"
+  },
+  "ae8e14b3ea35edef8c1afbfa59aa50c8ce24d636567196eb3db5cf76a239f0af": {
+    "split": "train",
+    "site": "https://lichess.org/sJWfLleH",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "1c9dccf3c5411dda5ee42708b0f61d4b8d02edcaf2ad103d2b276a647b521216": {
+    "split": "test",
+    "site": "https://lichess.org/I0E8rmw2",
+    "plies": 111,
+    "result": "0-1"
+  },
+  "06ea2cbc56983fe497c67e0f775aa038d881f7dbe40a5d55df3a40b6aca565d4": {
+    "split": "validation",
+    "site": "https://lichess.org/zAMIpmQO",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "6d4af7cc74fd357201c296e5b45dc1582e05ce212c43e1d93f5ac9313731dea6": {
+    "split": "train",
+    "site": "https://lichess.org/lEtPvyHt",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "830ed0b3ae7846704132ca8e66150f3f088a521a41687c43dc739dc4fe7b30c4": {
+    "split": "train",
+    "site": "https://lichess.org/5UfiGc0g",
+    "plies": 43,
+    "result": "1-0"
+  },
+  "868bce682644bc79f1ffc95f97df13123873585e75006b5b2b26b33c188cc4c4": {
+    "split": "train",
+    "site": "https://lichess.org/E9GL8VjK",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "b97923a405114855c8ebb55828d8749ca5277bb2e0c3bdb8c05c0fdf0a0963b6": {
+    "split": "train",
+    "site": "https://lichess.org/dXOAhsCd",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "c271a4961c96e0b72a0de6db31be17daa0abd3134a7c15c7be3576d99dbe32de": {
+    "split": "train",
+    "site": "https://lichess.org/AC4p1djh",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "da36d769b372b447e8fbdcedf8c4cec541f5453ed431d5a50f2714a993ba8a63": {
+    "split": "train",
+    "site": "https://lichess.org/2hoe8YBc",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "3e0a0793f7b476b5f58c11bd98fefbb59a3606a42b5a84b1432ba9e065d39cea": {
+    "split": "train",
+    "site": "https://lichess.org/2ioVcy5K",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "30614a716bdae1e7a297e6b31dbc1d5b3f1a9da64ba7842a64d7b04f989e295b": {
+    "split": "train",
+    "site": "https://lichess.org/vfgELbmx",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "73a56602d2791670cb53fac9b06370c8c7cc619b7a1a90bac483e424c54cde37": {
+    "split": "train",
+    "site": "https://lichess.org/rOPfeVQm",
+    "plies": 113,
+    "result": "1-0"
+  },
+  "21e6086318f4036e1a4aea20246053f82c271078a142599f377399113b9b9c23": {
+    "split": "test",
+    "site": "https://lichess.org/t1DpSLMc",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "c42a71b81b41cd07a3af9ea982314c10cacadd43b529bbecc7e92a4a1500811c": {
+    "split": "validation",
+    "site": "https://lichess.org/jNDsw1Yh",
+    "plies": 97,
+    "result": "1-0"
+  },
+  "c970e7e04e65b25703a10eb620d8235c44dea6b99247c4f2ed70e43a7adc90a7": {
+    "split": "train",
+    "site": "https://lichess.org/1mhnccRO",
+    "plies": 102,
+    "result": "0-1"
+  },
+  "eb288a01ad50d74d15a14eb6ddc93d0a0b59b4f951c46ac8a091f5d004bcad64": {
+    "split": "train",
+    "site": "https://lichess.org/9RIZMeeo",
+    "plies": 46,
+    "result": "1-0"
+  },
+  "5d6baf9a74475eab94a391975093e400da52460fb110e376124dbb9ab69e0d2d": {
+    "split": "train",
+    "site": "https://lichess.org/9D5h8vE1",
+    "plies": 76,
+    "result": "0-1"
+  },
+  "8210106b6b252c5e40938525ce7f49cf125aaca02df6ebacf36e3008bdb401be": {
+    "split": "train",
+    "site": "https://lichess.org/nQbSwdgY",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "6b63a68dea6df550cbdb4a255a4351be9ca21e9b1197fe196b918aab033ebcae": {
+    "split": "train",
+    "site": "https://lichess.org/0nXyET6R",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "6bba8e080d8c9bb37c2c1f625088bc6fed3b9f93016933263de248291ac6b63e": {
+    "split": "test",
+    "site": "https://lichess.org/RHfGnzek",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "c8c2c03abaebed6dda8cccdb9dde9ac062a87b7c59710fbc54afe9139255f99b": {
+    "split": "train",
+    "site": "https://lichess.org/oPB1Rwg9",
+    "plies": 120,
+    "result": "0-1"
+  },
+  "eee85f403089630e1e413abb5b01b78cdb32f97aa168f661e1f8ec96c87f52cc": {
+    "split": "test",
+    "site": "https://lichess.org/UtxMEF5a",
+    "plies": 112,
+    "result": "0-1"
+  },
+  "d7672217985e0aaf19bc62a1fe624fbacf05f888f08aa906282aa81ad0b1570e": {
+    "split": "train",
+    "site": "https://lichess.org/SD3Ohuiu",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "c0b0e9ec962073b94726852cb18651d7a80656844dfbd9022643dd380e7de869": {
+    "split": "test",
+    "site": "https://lichess.org/FKv9gFUY",
+    "plies": 103,
+    "result": "1-0"
+  },
+  "8193f3532ee7b833e27225175cb91101e40d897cefe42ea561d27348b815a3dc": {
+    "split": "train",
+    "site": "https://lichess.org/sBZBNIMB",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "efdf24c823adc7cf1a9696b25f940e676bf1b8ec45b07097ada241f0d3437330": {
+    "split": "train",
+    "site": "https://lichess.org/v0Jbb4af",
+    "plies": 107,
+    "result": "1-0"
+  },
+  "e85229d7b5263e44f7b6d7e8aee86fa9c95d40988db26c35c855a1cd3a168f1a": {
+    "split": "test",
+    "site": "https://lichess.org/wQUUJCZg",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "163a7880277e0a5031acfa15ed5bc15914099b9bba2422d47a8504133193d04c": {
+    "split": "validation",
+    "site": "https://lichess.org/vuUFJFl3",
+    "plies": 154,
+    "result": "0-1"
+  },
+  "3fb17aa8037d52c7246a77a2ee85286b9047a765014d1d2a4b89f9e09451d36b": {
+    "split": "train",
+    "site": "https://lichess.org/bjn7gXDu",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "b49d24cb694034bc219fce3fb298776af6504f5cbff6e60b50229057293a812e": {
+    "split": "validation",
+    "site": "https://lichess.org/fpn5GE72",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "ddca7b6402edb1c929e20d88d3d4a9eb4a7a19f8b4e72754683e6d60646ff60d": {
+    "split": "train",
+    "site": "https://lichess.org/MS4BW4Id",
+    "plies": 88,
+    "result": "0-1"
+  },
+  "080d92418ec78a821bcd149b5703fcc0e086bacd7feef3304cb3dfb6fd6ffc46": {
+    "split": "test",
+    "site": "https://lichess.org/YLyo8IX6",
+    "plies": 48,
+    "result": "1-0"
+  },
+  "4e21374ebb09f66bb31c27d131865be9ca73c96177a76dd61fe4a8e360395bc7": {
+    "split": "train",
+    "site": "https://lichess.org/peUgU8Nm",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "1ec63d113e6ae0b012cff7b7360f25bb6c9108aa33d78ba862ce0bd24c70b1a0": {
+    "split": "train",
+    "site": "https://lichess.org/PbgcE5er",
+    "plies": 116,
+    "result": "0-1"
+  },
+  "0382104271af11bfb4e21a4366325a723a7846cd9489822900b381bc0cbd7553": {
+    "split": "train",
+    "site": "https://lichess.org/UwMmAMOG",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "45a9cbf3755b36a52ac972d1f347002efd692a870fe58a6994ab1ce7fc97d87f": {
+    "split": "train",
+    "site": "https://lichess.org/EsxjnseZ",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "9338c412c2f1cb8ab2f82e5a66e21387914e79fe63afe95238e58febeee295f4": {
+    "split": "train",
+    "site": "https://lichess.org/SBIkbVin",
+    "plies": 87,
+    "result": "1-0"
+  },
+  "2429267dfceb9428514fa9809e3b938b9741ba888930d02c97c7a5a654de6a1a": {
+    "split": "test",
+    "site": "https://lichess.org/JC8kE92W",
+    "plies": 107,
+    "result": "0-1"
+  },
+  "e3d2dd82527510c8962e3f287dc7841cdb0e026b113d0a6635547784c24789f3": {
+    "split": "train",
+    "site": "https://lichess.org/KaE8AyJN",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "20baf07fdc774967a4da1d0251d47d67e6812325f639a258046abc469d3f4763": {
+    "split": "train",
+    "site": "https://lichess.org/rCcZWm5K",
+    "plies": 85,
+    "result": "1-0"
+  },
+  "4e5a9f714e622f06b498b3c46cb4156bc98d04ecace9ebc914cc7bbd7a7e3a32": {
+    "split": "train",
+    "site": "https://lichess.org/x78tUafS",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "b2f832f3be8a745b33cf50f8535ae6af273fcc6c7cabf124c137eac59b83fb3c": {
+    "split": "train",
+    "site": "https://lichess.org/MkPHrjEy",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "8cee5b9b592ebe3b44361bfa28f5484d9583729c0eeb13aba35bf4e625459aa7": {
+    "split": "train",
+    "site": "https://lichess.org/zdKRBTFX",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "472e98ec54cb13fbb78e11b8fbe7659a5d53981ed00556ed58fa474accdab751": {
+    "split": "train",
+    "site": "https://lichess.org/BFJZublf",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "7396d54e4e2dfebbb05d4eecfc7e4e0a2df2366263d67df2cf1e8894533b496b": {
+    "split": "train",
+    "site": "https://lichess.org/QNmZ0YDB",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "1912d4f1ffcd0b64f295dbdb24bb40c01d4aa8ead040d6366f8ceb18978eb006": {
+    "split": "train",
+    "site": "https://lichess.org/nvCW29rF",
+    "plies": 87,
+    "result": "1-0"
+  },
+  "64d9e1e98511d1147a4b6fba8ccfa86706d7dc80145b87757aef3a2a8902a977": {
+    "split": "test",
+    "site": "https://lichess.org/rPSwVxLP",
+    "plies": 80,
+    "result": "0-1"
+  },
+  "153eb3bff35fe106b329c5126e04990fd3821208ab02ce703d0df54194869697": {
+    "split": "validation",
+    "site": "https://lichess.org/Ri5VvXe4",
+    "plies": 99,
+    "result": "1-0"
+  },
+  "b08f4528e8111846e7b5ea72dbd6ddec300a367c752c89edcae9155a60c857b0": {
+    "split": "train",
+    "site": "https://lichess.org/Uzspkbyx",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "9a9d81b902fc95530b68329ac5f7dacfe8a09adbc90b2f0b9802fcaea3c64705": {
+    "split": "train",
+    "site": "https://lichess.org/AXxPCUaT",
+    "plies": 124,
+    "result": "0-1"
+  },
+  "e683f09197b4b50a25e6bc636e81feb14aec0b349f583986ba532ff604fa7180": {
+    "split": "train",
+    "site": "https://lichess.org/R63vxVt2",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "93d2444e1187b1cb293d92d13ed0e04be5f1fcc43714f90d1c56f0ea2ebebedd": {
+    "split": "train",
+    "site": "https://lichess.org/HnrIW8up",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "d3858e9059f147069caa2c569a55e581fa533fadae3f220d79e8dbcd546b0ad0": {
+    "split": "validation",
+    "site": "https://lichess.org/avJeLiF6",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "ebf3532c0000e05b0644dde399fbd967fd04e5520c9c1dbd5d12f356c13c6762": {
+    "split": "train",
+    "site": "https://lichess.org/HuxCW0gZ",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "39429aa2cabee73fb871875578369b7e99ec33cabf26eb7f1df44a49ef0e3cfa": {
+    "split": "train",
+    "site": "https://lichess.org/fPSqdxVu",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "8c6e292d5da282eec11e987c01921ed349139f611ab65d394c9d96334db692bd": {
+    "split": "train",
+    "site": "https://lichess.org/hKrR0tz8",
+    "plies": 33,
+    "result": "1-0"
+  },
+  "1f4e03b7878974607155769ac4c45a894166fbbbab8aeabbe730903a3f447d70": {
+    "split": "train",
+    "site": "https://lichess.org/Uw5eZSi1",
+    "plies": 115,
+    "result": "1-0"
+  },
+  "479ebb4101a88ece901b2b511a23d7766e6015b37fa02a0ce6c3e2c31912c972": {
+    "split": "test",
+    "site": "https://lichess.org/v2yaqgfr",
+    "plies": 76,
+    "result": "0-1"
+  },
+  "409d15b3e7aeb42eb3f8d5718baa600709d3964f019da5fd2c9289f4f8e39669": {
+    "split": "test",
+    "site": "https://lichess.org/dOLjTw7L",
+    "plies": 78,
+    "result": "0-1"
+  },
+  "9b32f337f2a6dbf4236cf27ecf395fcce31af9b68ade56c1e3cb24bd0ee45dcf": {
+    "split": "train",
+    "site": "https://lichess.org/fhU5KAcT",
+    "plies": 84,
+    "result": "1/2-1/2"
+  },
+  "2257ecb96659b8aff54a5243179a22e4125ae67fb411c90d1487f084d0dea410": {
+    "split": "train",
+    "site": "https://lichess.org/Gkz1Te2V",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "f2ec18e05a50be45638a3812150d9d12420dcfc60f1e587f6efd3cc55074e5f1": {
+    "split": "test",
+    "site": "https://lichess.org/rXVvTbvX",
+    "plies": 69,
+    "result": "1/2-1/2"
+  },
+  "4682c827ee7c0dcfb0a759695aaebac9840d9dddf2e663490e7cdcba0c79770a": {
+    "split": "train",
+    "site": "https://lichess.org/7Euxn34r",
+    "plies": 114,
+    "result": "0-1"
+  },
+  "b1cb46ae45b8d22c5ba96b4178f7de3eb3a83b02513eb9cfa46b84eaaac6311a": {
+    "split": "validation",
+    "site": "https://lichess.org/DBKXEhXT",
+    "plies": 103,
+    "result": "1-0"
+  },
+  "8f7886350cd3978a4cce0e94512d89a1993c69af4a6b94795baeed1a013370ee": {
+    "split": "validation",
+    "site": "https://lichess.org/iKXoWbUf",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "54d86c2db1dd12a8db1d2f5bcab9edf4a888e50231294aa03f3acfd289f0e711": {
+    "split": "validation",
+    "site": "https://lichess.org/4V28h1d6",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "07a3ee95dd55fbea25980e3cebf7b3331cbaf37eacda9fed69dd58d524e2c7cf": {
+    "split": "train",
+    "site": "https://lichess.org/UVjxLy7v",
+    "plies": 97,
+    "result": "1-0"
+  },
+  "c0d236c58e394f869d6429d5d08377c24f09a6d54435f32612b1268ebb54717a": {
+    "split": "train",
+    "site": "https://lichess.org/3akZkd7M",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "721c36f7ed90672b33f0addf732f8c6ca28bfe9e26ce9f8745ea63622572aa68": {
+    "split": "validation",
+    "site": "https://lichess.org/YvwrFwNR",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "bf8b0171c90de3bf2565f2f83116e1b654f884920d1fd204ca846a27f0a46375": {
+    "split": "train",
+    "site": "https://lichess.org/WsC0kFi1",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "8a7c0dd3fe6d4f4849b97114042b3ed1c5d3f6a9f54e610289e0d1f7e04ed4f2": {
+    "split": "train",
+    "site": "https://lichess.org/0SbXrFEn",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "8229867c3ccb1d7fd677b1f33f885af97c4842a880627252b00d9b53e9c79d5f": {
+    "split": "train",
+    "site": "https://lichess.org/nc0SZYRM",
+    "plies": 43,
+    "result": "1-0"
+  },
+  "4944581c0838ea6e40ba8aa9096f7813ae831a3261e62c43e7ddb2333042d84b": {
+    "split": "test",
+    "site": "https://lichess.org/Ytx57OCe",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "842f2564fd7f8fadf66d4bde55f106a5c28b557683597a9536ad2795b5980be1": {
+    "split": "train",
+    "site": "https://lichess.org/bhPio5d0",
+    "plies": 121,
+    "result": "0-1"
+  },
+  "11f4d6638caa89e5f5df44bb2d1f3f1de1fdb518f4898e8019555a1fe82a2e21": {
+    "split": "train",
+    "site": "https://lichess.org/H0bgDaGM",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "d4bc05072291ab58101184ee6e60a546f1af15c8db1330d8b9af07915fe242ec": {
+    "split": "train",
+    "site": "https://lichess.org/BcUkNbds",
+    "plies": 116,
+    "result": "0-1"
+  },
+  "f2a0aed0078085c70ca408cd0e96e2f4833fc7bd6da4e1460831281f779edb07": {
+    "split": "validation",
+    "site": "https://lichess.org/lH86hbTx",
+    "plies": 133,
+    "result": "1/2-1/2"
+  },
+  "ae0e491fe9a799af7eca7808641805be5281128d7bb043d87f6129c1df5df35a": {
+    "split": "validation",
+    "site": "https://lichess.org/UnpFW5Eb",
+    "plies": 80,
+    "result": "0-1"
+  },
+  "921e3ca4f2a3844c8557b988044aea7e8a886b8d712d12bd7aa12b4981fe2785": {
+    "split": "train",
+    "site": "https://lichess.org/QpOFNDbt",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "9bedfff9d9fcd0d46eaca55dbbac8db35deff4b10db973503b9b9bed5eba5d7c": {
+    "split": "train",
+    "site": "https://lichess.org/DaIknz73",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "d66a09093b9ee0c74c3e3b0997634aedcca03129a939d586c4c2ebfdaa343027": {
+    "split": "train",
+    "site": "https://lichess.org/w6s3YoB7",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "ab08768c16f74f6ec996fc6e2ac54d8d1248fcdd5d873101c6dae9c935523998": {
+    "split": "test",
+    "site": "https://lichess.org/0Qvjhm5C",
+    "plies": 95,
+    "result": "1-0"
+  },
+  "72e21f2f7e392129ef4eb94e634a0036b6a1940b5ff4c8a906da1e78df42d92f": {
+    "split": "validation",
+    "site": "https://lichess.org/j1UOQftq",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "bd8ebf541ee1cfdb559a54c2f02411cb825b8b020674d47aa5316afe42c4e995": {
+    "split": "validation",
+    "site": "https://lichess.org/8dJvLO63",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "9d6adaec63258b89d698954a7133a74df4f509f61fbbcd23f0c019d979bcc4c8": {
+    "split": "train",
+    "site": "https://lichess.org/PoiFPiLq",
+    "plies": 146,
+    "result": "0-1"
+  },
+  "e2a27d5dd6a88cb245aa8442e5ef1dff0adc46270bff00002fdacd3ab94b5790": {
+    "split": "validation",
+    "site": "https://lichess.org/ib0ghjKv",
+    "plies": 113,
+    "result": "1-0"
+  },
+  "ada7822655a795dee6a317eea47ff40f0cb374c1ab81e82ccbe874256a538247": {
+    "split": "train",
+    "site": "https://lichess.org/mCCcPNkf",
+    "plies": 88,
+    "result": "0-1"
+  },
+  "4c8a42b319c86b2e07ebef24805f8796d78042819328fe953e5f5de4b372ae3e": {
+    "split": "train",
+    "site": "https://lichess.org/lmQlC15y",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "8077c94b9c2a57ddb428bf8df4e4775cd5dd68c6a011c86de15a151f30d60445": {
+    "split": "train",
+    "site": "https://lichess.org/IonuwFsm",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "4059954e8224e9fa20718175d2dd0558edcbf0624895706415aecededf6287ed": {
+    "split": "train",
+    "site": "https://lichess.org/dX3cdb2l",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "6e77136410ed1a2976645a82e8c6307a89bf9477d7f41dee8ec08c1348a47789": {
+    "split": "train",
+    "site": "https://lichess.org/FPiLtGx0",
+    "plies": 132,
+    "result": "0-1"
+  },
+  "5588e16cd9e5ec6c5fc00857f592fcef1a9ddbad17b394504899a8e67d89c92f": {
+    "split": "train",
+    "site": "https://lichess.org/e7FoABNU",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "456ee141267bf97a60357d6688ac284df4bbe391f34bcdd3a94de6b11f84b1da": {
+    "split": "train",
+    "site": "https://lichess.org/PNtxOIOI",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "61e160a292a4d64301cad7f7596362e49f9914ab184c8567da54ee64761959aa": {
+    "split": "train",
+    "site": "https://lichess.org/U8cRy99T",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "8c15f753f091441f1c35c43a8cfa658aa64f696e259b707b3df888019e072f2c": {
+    "split": "train",
+    "site": "https://lichess.org/ojjPBtDv",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "8bf6e725276186108d45005a37f4f8a6eed20778ce7dfaccba8a00ddade70a25": {
+    "split": "train",
+    "site": "https://lichess.org/00b3R2Ga",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "d7fc4c6090f140baa33d46de3300597f7c6c3c3af7c4c3d4d50afd07eeb414b6": {
+    "split": "train",
+    "site": "https://lichess.org/48AhXO3I",
+    "plies": 109,
+    "result": "1-0"
+  },
+  "a3d0423b4877d250d75448dcb341b9d9e8218718f11f35ff971b2eef5540401e": {
+    "split": "train",
+    "site": "https://lichess.org/AHYQTDGw",
+    "plies": 77,
+    "result": "1-0"
+  },
+  "2229ace9a9703a94d068d001ec0aa571b7c1859012450788e3631376bbd66277": {
+    "split": "train",
+    "site": "https://lichess.org/NA5pjsBC",
+    "plies": 130,
+    "result": "0-1"
+  },
+  "3d53b7f453e217b060e6076f4287ccec3b47c884d8c7089dc26069397fb0656f": {
+    "split": "train",
+    "site": "https://lichess.org/h2g4x0L5",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "14c7cc7fdcdc00211257e63d3f3867e08c1e75ecfff1446bb259e4231609dcdb": {
+    "split": "validation",
+    "site": "https://lichess.org/wCjSNcqP",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "99b4aad7ac312abeec4ef1341b33579fcdfa092258f59d1cf484b9fd9af8c303": {
+    "split": "train",
+    "site": "https://lichess.org/tFIk5Yb0",
+    "plies": 80,
+    "result": "0-1"
+  },
+  "a84f0d990bef4522ecdec8204272d7c471b19070d147153761de7f9a2bb75cb2": {
+    "split": "validation",
+    "site": "https://lichess.org/zUua2nC9",
+    "plies": 48,
+    "result": "0-1"
+  },
+  "adab9aec27e07abc94e2792e40aad42fbd8d8f3e08029fec4b9338639ab6f08c": {
+    "split": "train",
+    "site": "https://lichess.org/wjRYkmGY",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "6a4d33c8beba19fbfebb856d0ad8e6a9e16a8a08a4b3dfc1ac0afab9789338d7": {
+    "split": "test",
+    "site": "https://lichess.org/4WqKUe8E",
+    "plies": 44,
+    "result": "1-0"
+  },
+  "ba05e43edf665012008a08abddd63b7f4a9d75a1070b5adf78c33f117cbaa42d": {
+    "split": "train",
+    "site": "https://lichess.org/C7FwPzbw",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "98edf0040c615ed1d7a8bd24498e6c441ab87264e80816e0fa19b8dcab1b70dd": {
+    "split": "validation",
+    "site": "https://lichess.org/Y4lFYFjV",
+    "plies": 58,
+    "result": "1-0"
+  },
+  "6a3f8ad001df848c9b6c62e478665e70826685762760ec108da642122c2256f6": {
+    "split": "train",
+    "site": "https://lichess.org/hZw6kihp",
+    "plies": 87,
+    "result": "1-0"
+  },
+  "b71b14449ef67723cc997c3467d5e8d5a40df040df5460c60f09c6e9253f89d9": {
+    "split": "train",
+    "site": "https://lichess.org/Cly1lVnf",
+    "plies": 41,
+    "result": "0-1"
+  },
+  "d607e7c69611aa7651e60c6b372141419717a395df5356d849c0b23f9bb954cd": {
+    "split": "test",
+    "site": "https://lichess.org/gM0EuDmg",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "35a5a7c853d93316561491fb33b6b96d3388eeeb5c08e8ce6e443a32b18d02a7": {
+    "split": "train",
+    "site": "https://lichess.org/mgUj7dXo",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "a2ee54256f78295b4fb67aefa4729ded6219ad4f9fafafbce175283e2f8cbc62": {
+    "split": "train",
+    "site": "https://lichess.org/vvls17iU",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "3465edb6941f8e1b3cdf93a55d04ff7eb4441016cc7d6c5420a8c5965be22be3": {
+    "split": "train",
+    "site": "https://lichess.org/LSuiv8iV",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "b1e7e8c174030228556c97a5391fd1bc4aff6d191cc031480337b0f280c0a7d3": {
+    "split": "train",
+    "site": "https://lichess.org/wsp4Pio8",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "730423ae5ea1be93b8af02f7ffb6e7ef37619a63079def9e257c40974313dbfe": {
+    "split": "train",
+    "site": "https://lichess.org/KFnfQXW6",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "09b437a5c01b2f54e8dc0efa09dcadcd751c84c62e3c2be5c68299acb21b32d6": {
+    "split": "train",
+    "site": "https://lichess.org/ZMwMaLoT",
+    "plies": 91,
+    "result": "1-0"
+  },
+  "f6b38b26da80e24a7cc85da1bd85d5b87540cf2c27fada3112cbac7c3d85eee3": {
+    "split": "train",
+    "site": "https://lichess.org/rEtJlvA1",
+    "plies": 114,
+    "result": "0-1"
+  },
+  "496bbaeacdd670ab2dde846ff2f25e89b3c89cbfa847fd804114935cc3ab5d32": {
+    "split": "train",
+    "site": "https://lichess.org/5ToCYRfy",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "97d45f7921a8740c45f39f943d9b8e7de37c7156486b79614f15d5dfaa8c710c": {
+    "split": "validation",
+    "site": "https://lichess.org/B23HaLMO",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "0674884377b2b6b8d062f5f27829a973d5b66197e207338ce8d417966c3304f4": {
+    "split": "train",
+    "site": "https://lichess.org/UzWf7mzG",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "d90ee6b5d87b875ce157b3f3cbd073169c00eb3b5f682533530010afeb193b75": {
+    "split": "train",
+    "site": "https://lichess.org/rt9a10lh",
+    "plies": 103,
+    "result": "1-0"
+  },
+  "8a64c72b96d58e3e3dd22b0530468415d745734beb4e0febc12d0a34e1c5cb78": {
+    "split": "test",
+    "site": "https://lichess.org/VqRR6OwR",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "820b5f5573a30c3f90eda89cfe39f51d1868ab28b8c3dc136a4dff7db73192c3": {
+    "split": "train",
+    "site": "https://lichess.org/NT6ZsFga",
+    "plies": 104,
+    "result": "0-1"
+  },
+  "61220ae63ed7177933727810b46db2efa83d80b4478b19b6ec5af28ed3bbbd42": {
+    "split": "train",
+    "site": "https://lichess.org/kIO2Ljjb",
+    "plies": 132,
+    "result": "0-1"
+  },
+  "8e44653e26cfa09d5bff19cb27e52073ef052f3dc8fcfe7ed434dd1a9c9b8095": {
+    "split": "train",
+    "site": "https://lichess.org/5nLmY6if",
+    "plies": 36,
+    "result": "0-1"
+  },
+  "eba864ff6148a08029b5f39dd55370a22059da8fc96f0aa78ad90fd7943c7921": {
+    "split": "train",
+    "site": "https://lichess.org/ouFxJnc4",
+    "plies": 78,
+    "result": "0-1"
+  },
+  "2282b598b8d71b90b20caa9bc57f366bad437b80e01c5d5fc3e450689069c776": {
+    "split": "train",
+    "site": "https://lichess.org/iJ0f1DTr",
+    "plies": 84,
+    "result": "0-1"
+  },
+  "3a393d9bfe3e349ed05bd3f624103ff811d8c55a332b07fc44be41abdd71cd45": {
+    "split": "train",
+    "site": "https://lichess.org/rT0IPYmH",
+    "plies": 133,
+    "result": "1-0"
+  },
+  "eeda1c8d0a4f057197f845f73f060e0fdd937617907c4f67e1a9683a919e2aaa": {
+    "split": "train",
+    "site": "https://lichess.org/NhhEDxpe",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "00240bde5a20fdbd980ef5a9e9cc2d1cb2f97ac1f55a4554861ec877a190f358": {
+    "split": "validation",
+    "site": "https://lichess.org/wOAIOiqf",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "e432c7edae070974528c18316fc46f2e732c935dcee2b196b20b3839d1551f5f": {
+    "split": "train",
+    "site": "https://lichess.org/1rCrUAMK",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "ee4cd12dacd8e7579019841cf615ac6378e54639d31c810ba8eb7251a7c9e3df": {
+    "split": "train",
+    "site": "https://lichess.org/LFEETYA4",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "b21672b842db90305a882b3b8405e9b0931de3b6b725cac572367bcad7ab7c0b": {
+    "split": "test",
+    "site": "https://lichess.org/kAjnb06M",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "f11006a4de4a0fbfbcf11ba713e37cb24f0238d1b190364bb29aeb2a1ca43069": {
+    "split": "validation",
+    "site": "https://lichess.org/KNp2BEw1",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "54ccec7122302c9f0113957cff43b288da149f6a6f393ad1c0c395a34cf3ba5f": {
+    "split": "train",
+    "site": "https://lichess.org/LoldB2o9",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "628874c8697ea6bb4e61796b6567a3bf909891bdfcf40621ce0e6ed76300189b": {
+    "split": "train",
+    "site": "https://lichess.org/gfLvt4u3",
+    "plies": 95,
+    "result": "1-0"
+  },
+  "2d64d00acf1e350adab4fd71fb7ca8c27a902c15ab8dc13a2c764320a3a73c4d": {
+    "split": "validation",
+    "site": "https://lichess.org/CpuoJibD",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "542763b1c4fb7a95a5996c2c33b6b8ff448d698c955c504c9384ebfc4abd5ed4": {
+    "split": "train",
+    "site": "https://lichess.org/ztQXl95t",
+    "plies": 82,
+    "result": "0-1"
+  },
+  "c90364987bc4a28639c820dd512630b09e9c31f79bd46118ba9fdedebb24f71f": {
+    "split": "validation",
+    "site": "https://lichess.org/ChEjS94Q",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "f2e37ffc8043ba82b805d29d166e90dc07c5847caa12a175a305bad05ce54b03": {
+    "split": "train",
+    "site": "https://lichess.org/L0EV6jKh",
+    "plies": 33,
+    "result": "1/2-1/2"
+  },
+  "9cc5fb229035c9e3ecb4ce580e27d7e5c094fff8fe741e9a12bd4b63fb4595ca": {
+    "split": "train",
+    "site": "https://lichess.org/59sTLrdp",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "51f59cb1009a3b5c793bcb46023b5fc4aee215c5d32042c267c540b460863c06": {
+    "split": "test",
+    "site": "https://lichess.org/b1AzLZE2",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "059ae28641bfb70d06f2808470d6bb2fe3f4c305d1406f60214c5376291a7529": {
+    "split": "train",
+    "site": "https://lichess.org/qRc79C5W",
+    "plies": 129,
+    "result": "1/2-1/2"
+  },
+  "9e22d0fff93d0340e2fd5ae3a78a21bfe60acfebbc426f48b01d4c86f7c77182": {
+    "split": "validation",
+    "site": "https://lichess.org/sfxnhqhh",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "9e82c109791b53a7473f6d1e2330ddedf38c9ce8d5365ea6d8c1f938ff958058": {
+    "split": "validation",
+    "site": "https://lichess.org/HYR07laD",
+    "plies": 47,
+    "result": "0-1"
+  },
+  "47827e3c9cfa099b649b1560503fa9e3e786f892453ac883c71add9036b5eaf8": {
+    "split": "validation",
+    "site": "https://lichess.org/sHp5nM4u",
+    "plies": 121,
+    "result": "1-0"
+  },
+  "f7e92420cb1bf26d8cdbbd189c11847f1c7ac62ba987cb1a9cf9cca34899c5cd": {
+    "split": "train",
+    "site": "https://lichess.org/VRCSuXoI",
+    "plies": 85,
+    "result": "1-0"
+  },
+  "14775c472d5aa3831f236a8cdb5ee3ececaf9353ed6240f097b6850a85eb7820": {
+    "split": "train",
+    "site": "https://lichess.org/W0JWYzPU",
+    "plies": 34,
+    "result": "0-1"
+  },
+  "d7f1ea4d6177709d51c7e03783511f6652682f7bb79064228647644b0c2a2aa9": {
+    "split": "validation",
+    "site": "https://lichess.org/xmF6ptic",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "67f7efb9ae5a61e596e2a0372505024ce44279b3e14809805013699cd013c041": {
+    "split": "train",
+    "site": "https://lichess.org/1JeC1fkK",
+    "plies": 114,
+    "result": "0-1"
+  },
+  "539c426648ec21757146fd958eb0585d27adc63ec16eea1437dbc91cd595cb2a": {
+    "split": "train",
+    "site": "https://lichess.org/e7eWR322",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "7e8ffff546ae1e0af7aaff5d31a507a1a78ebae3ee8fea46d40aea62c02c0395": {
+    "split": "validation",
+    "site": "https://lichess.org/KoJHxUtz",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "1df31f794cf379394fb8882395f85a00d7c549ee063ae0354fbb3dfd7455d571": {
+    "split": "train",
+    "site": "https://lichess.org/NIQ911Lo",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "fc38df79d123880d983ef1b417ef812e752fb8c58d26faa470f6393ea0ec5fad": {
+    "split": "test",
+    "site": "https://lichess.org/6YWu6D9V",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "3061a9573b02cc0f7cac468f74609d8bd287e5ab1b51a2ae3558d5588a38fd30": {
+    "split": "train",
+    "site": "https://lichess.org/MkSJh4gq",
+    "plies": 144,
+    "result": "1/2-1/2"
+  },
+  "cbc57bb9c54d5b28f8abf7fadd22c21473365e3774a4ccfcbcac6eb793f7cdb7": {
+    "split": "train",
+    "site": "https://lichess.org/vHqE3Ojr",
+    "plies": 99,
+    "result": "1-0"
+  },
+  "3739a15378d974047a7d91108ac1526c87306567f48f9ddad5258826d66cc584": {
+    "split": "validation",
+    "site": "https://lichess.org/WTEYy0ja",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "27018de410af4c9c373c7f5c01da2926cff3dd28423374cc84e8109a8dc16002": {
+    "split": "train",
+    "site": "https://lichess.org/oi0R0s6S",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "a8adbbd351bb7541f8abffbde370363c37fe86751dd38c4b2c08f08271d6c132": {
+    "split": "validation",
+    "site": "https://lichess.org/dsvb0Yrb",
+    "plies": 41,
+    "result": "1-0"
+  },
+  "5b70b024410a0110cb7f35373e18021e50337367c73faf51098e902a1d424350": {
+    "split": "train",
+    "site": "https://lichess.org/Oc7AwEoo",
+    "plies": 97,
+    "result": "1-0"
+  },
+  "b553068c59c041e61e073688954ba99445fff8320d088c684c30a3d865879f94": {
+    "split": "train",
+    "site": "https://lichess.org/HVb2dOgu",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "bc3a1c5b359a49ea3df2aa81d240c27eb087a5e631fbf4268b79e9982189e484": {
+    "split": "train",
+    "site": "https://lichess.org/YOgG7HJl",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "c3b8f0375adeb52e37616e5e506b0e96f80269224a6d60883619988bd6ca0099": {
+    "split": "train",
+    "site": "https://lichess.org/HxrN1YBL",
+    "plies": 86,
+    "result": "0-1"
+  },
+  "3abba3bde22dc386fcb34b234e5bd827dc25e96ddcb8a364b5f3e0ac0935a0e9": {
+    "split": "test",
+    "site": "https://lichess.org/o8egmviy",
+    "plies": 52,
+    "result": "1-0"
+  },
+  "78d77be6dd72aaad8cfce6af992f93d9d159c39ecea68030b882d12677fc03c6": {
+    "split": "train",
+    "site": "https://lichess.org/IJqRRSWa",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "f50d5489a1bfcc5a4869bbffdf98e956ccd33acec8f0e6092abc7fc9e0a293d8": {
+    "split": "train",
+    "site": "https://lichess.org/k9KtrkeC",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "4855cbbd5695f3fcbff6338e71c2823df204dd04a866771f92475b20ce2100d6": {
+    "split": "train",
+    "site": "https://lichess.org/TOUcgst6",
+    "plies": 80,
+    "result": "0-1"
+  },
+  "5911e025a31f271850bece12f3caac17e12825493116dad4496a25f9e134e3f5": {
+    "split": "train",
+    "site": "https://lichess.org/31fzTGru",
+    "plies": 41,
+    "result": "1-0"
+  },
+  "84ef6812767eb4607b549a48f0c9f4a4dbe35e63808fc418b0bbc08c1938c954": {
+    "split": "train",
+    "site": "https://lichess.org/FCWsplpM",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "bda4ecb6eea0d6fab0b418f4a8e5c0a10a98485a2355671e62d9559fbfc8b84d": {
+    "split": "train",
+    "site": "https://lichess.org/TMdyL6W3",
+    "plies": 41,
+    "result": "1-0"
+  },
+  "31e7360673784f07a53bcabe890b61f98d37b057faee10f60bfbb11eabdbfe2e": {
+    "split": "test",
+    "site": "https://lichess.org/QIHeGVM2",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "a804fc5eae74cd4c9db6afb9bab2c2c7bd513825b19fd7679de7a6b029e9322c": {
+    "split": "train",
+    "site": "https://lichess.org/UlE4YJic",
+    "plies": 151,
+    "result": "1/2-1/2"
+  },
+  "17fef06d10377b4ae0733d3c01150c4f0a60a8a73a8c99c74b84f473e2230970": {
+    "split": "train",
+    "site": "https://lichess.org/pVuqmSbd",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "95de4c98dcc9cf9790cf209cd403b31cd7e62f8106f4950d2d2c9c07ce2166e0": {
+    "split": "validation",
+    "site": "https://lichess.org/Yvr4tm4X",
+    "plies": 85,
+    "result": "1-0"
+  },
+  "6a4dee5947a076bef4a47fc62be16d7cc288fdc60e3a0668be208891f8f54855": {
+    "split": "train",
+    "site": "https://lichess.org/q9VCtffh",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "9b853e0adf52b89e8ad802b3ec7cacf9764b519d6c1f6e5544b052f421ea5685": {
+    "split": "train",
+    "site": "https://lichess.org/5mphEj1c",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "9b84f061c10f4016b5cf7796c6bccdf96a34d44dc1aca4f81b2218c6ba34c900": {
+    "split": "train",
+    "site": "https://lichess.org/SeCW7n6p",
+    "plies": 127,
+    "result": "1/2-1/2"
+  },
+  "9a79b35c14cff86ce2579e5f5ed852793a12ecced99f25c2d3a1555947275849": {
+    "split": "train",
+    "site": "https://lichess.org/x7hBTwTd",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "01b7a96e1bac9b24144684ad0188f3bf7728123c55fdfd4e9af6621e68da123d": {
+    "split": "train",
+    "site": "https://lichess.org/MKsukex7",
+    "plies": 95,
+    "result": "1-0"
+  },
+  "787cfab5d177ba9a44d88a4131d445aa869119efa0b2a71d72db73d4bdcc8ffb": {
+    "split": "train",
+    "site": "https://lichess.org/t0lVDFfv",
+    "plies": 84,
+    "result": "0-1"
+  },
+  "597eb805ea3ee1f699459db761ea24e47a896028389816a3a3b9ba7cad19c670": {
+    "split": "train",
+    "site": "https://lichess.org/qZWeOhKP",
+    "plies": 42,
+    "result": "1-0"
+  },
+  "0bfe210dd7db151feb1b8f9ceb67881a1cb194f963b295813e74ddd6ab79e222": {
+    "split": "validation",
+    "site": "https://lichess.org/HJv41DzL",
+    "plies": 36,
+    "result": "0-1"
+  },
+  "f6ee4335eaef485d2bc6cac824b86ad2483e2f8d01335cf62d482f026a59a59e": {
+    "split": "train",
+    "site": "https://lichess.org/aKOG5uBg",
+    "plies": 136,
+    "result": "0-1"
+  },
+  "f3430838f6a173ac4ab51f9ef4f44e8e4d6932541d662f602029e6a12d3a79c0": {
+    "split": "test",
+    "site": "https://lichess.org/i2Ptjeya",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "a8fe1be800e9b4313844476add3d21a2f4d7ab37e6d2f4aac95231f2e3183df5": {
+    "split": "train",
+    "site": "https://lichess.org/Z6m9UzkZ",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "4bd26800bb06785338cb02c5724dd7c6c8edcfabd54c7efaac21a7b18a1cb8b1": {
+    "split": "train",
+    "site": "https://lichess.org/r6fOZJpf",
+    "plies": 82,
+    "result": "0-1"
+  },
+  "e368152ecf791ed95a2fdcdaff2d784a3a8e491a0d290547b659a6d5d1bd6c3b": {
+    "split": "validation",
+    "site": "https://lichess.org/t9ElsMxc",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "65b158dca844605a7aa4a28a484490f4bcf74ed2566622c9c52536fbf4b2f9db": {
+    "split": "train",
+    "site": "https://lichess.org/nyd0lhEO",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "34d5650fa326163464a9ad63323bb33f1379a5a973ef833b2669ba537682be0c": {
+    "split": "train",
+    "site": "https://lichess.org/rrfhq4yB",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "90ec0791a3d38b71f75cd02b91799134cf1be18369921f7495ce4ba734c87149": {
+    "split": "train",
+    "site": "https://lichess.org/n2K4p36l",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "b214f3b0527cfbe31ab9dc1cbcd5366e9b6811128222a00625867379e5b8d264": {
+    "split": "train",
+    "site": "https://lichess.org/1lSyXlGV",
+    "plies": 85,
+    "result": "1-0"
+  },
+  "faee039d76eafdb06c8ffe335e6c6311ab86215a3a5fb03eb229006749d6f23b": {
+    "split": "train",
+    "site": "https://lichess.org/PHAcbcYC",
+    "plies": 60,
+    "result": "0-1"
+  },
+  "ffa4658f90fd34220480fb24b6bc3100f85f2a467d4dff418aeccdd6318099a9": {
+    "split": "train",
+    "site": "https://lichess.org/LA67MXPQ",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "3bde7e4eb4a43650dcf72b8249297cfbd40623d9d8b23d32cc8bd0f27ffcdbae": {
+    "split": "validation",
+    "site": "https://lichess.org/fKJyFdi8",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "2ee18145f51c1eff733f8d8596df9fac5866f7ee51e91c63822c7349e74d99a7": {
+    "split": "train",
+    "site": "https://lichess.org/TBgP2vVa",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "fc559d35349d8d6df0d05022d3487fb6afc43716b25b1763114ca8a6cef76c87": {
+    "split": "train",
+    "site": "https://lichess.org/KCGT817o",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "39b46480672d2a70b0f2384c813871f816a62780d15c94290642ccd69cef542e": {
+    "split": "validation",
+    "site": "https://lichess.org/2YspxsQJ",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "e7bda768f95f13d0be8a2bb80600a42d5e5d1290510ef380061bf7b093569f71": {
+    "split": "train",
+    "site": "https://lichess.org/gncTSwT0",
+    "plies": 43,
+    "result": "1/2-1/2"
+  },
+  "39b4c627e8a779bed685758c9f61238c8dfaddc7c2a8f4f2d13e4aaf4135ac78": {
+    "split": "test",
+    "site": "https://lichess.org/6LqgYRdb",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "5359b033968b25d5e34bfeaf4d4e2da790237ef5dc29694bbf91581a8a711569": {
+    "split": "train",
+    "site": "https://lichess.org/GWicOV0Z",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "c39cb68ba0fe390bd4b5de377f5abd40e0b543817edd026bbc08f08f9947552b": {
+    "split": "train",
+    "site": "https://lichess.org/gxSjzR46",
+    "plies": 113,
+    "result": "0-1"
+  },
+  "eaf37f205e96565b93ea5c3b661e95a2f3422a675212857380a83bbeebba11b4": {
+    "split": "train",
+    "site": "https://lichess.org/lWSBuUCi",
+    "plies": 129,
+    "result": "1/2-1/2"
+  },
+  "db13d8e83251352160c045d51401dd6e9aabf36bc758fd98c8e74d9ff83a4560": {
+    "split": "train",
+    "site": "https://lichess.org/5yxNbNSS",
+    "plies": 109,
+    "result": "1-0"
+  },
+  "7b5567f16f1bfdbfcc5e80ea3e8bfbcc685f1ad5a26c2303fc9a0fe283db01d8": {
+    "split": "train",
+    "site": "https://lichess.org/dq9xd4Lm",
+    "plies": 60,
+    "result": "0-1"
+  },
+  "a74a47b72ef87cef23e553627ada5f8204d61a767c29ffa1e0bf39a2f43bb02d": {
+    "split": "train",
+    "site": "https://lichess.org/0OnrYTlo",
+    "plies": 98,
+    "result": "0-1"
+  },
+  "7bb46bf65803af75d608cc0caccf6b7a4c2d37c92e40e882574178a99f090ecd": {
+    "split": "test",
+    "site": "https://lichess.org/9rw4xchc",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "1df4a2f3b514436a6e48dff6213c5517e397e01da51d1f92f17e8108654bb491": {
+    "split": "train",
+    "site": "https://lichess.org/0HFXkufv",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "682e580c4d606a3db5a505d9458bb7c5f1f4e3ecb8afd8565ad711b5fcaebbc9": {
+    "split": "train",
+    "site": "https://lichess.org/XUDbG8nc",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "41d2ee19403e869803c4500c6ebd730c5d5c0caedf4a00ecb12b5d21db0a6196": {
+    "split": "test",
+    "site": "https://lichess.org/2xg4O7lr",
+    "plies": 159,
+    "result": "1-0"
+  },
+  "365b327acf7a3b289efa0cf15392da3a7ef621407e5269b7f4dd889f37456db7": {
+    "split": "train",
+    "site": "https://lichess.org/1lFzQ1Wp",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "6c2058e2fc761a1a9cb23201ca54c66303635c26934a27a7e281d6cf9c79d2bf": {
+    "split": "validation",
+    "site": "https://lichess.org/wM8Z9XUY",
+    "plies": 36,
+    "result": "0-1"
+  },
+  "4ac26e99f1c3d0b4eca1589a656d121519e1146ae5cec6acc4526d86c0fe093e": {
+    "split": "train",
+    "site": "https://lichess.org/PqkfDMOy",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "44fc97d04c625e8200c5de45ceb465e64a1f325b84e5bd81261880c34e614eb2": {
+    "split": "train",
+    "site": "https://lichess.org/68yhZ1yk",
+    "plies": 51,
+    "result": "0-1"
+  },
+  "cdd43d305962b19fd1b306f05c7ddcc002cd23cbfa44dbf51e8d25bba87658ac": {
+    "split": "test",
+    "site": "https://lichess.org/O5HaKkMD",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "85a2a83ef866563cb8963e1212d9475cdeca203538d31424232b386e978d884f": {
+    "split": "validation",
+    "site": "https://lichess.org/C5TalQgn",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "19e9eb32773b9c47ddb37fd77f28bba3773e4390eb4714703191b44311574e0e": {
+    "split": "train",
+    "site": "https://lichess.org/QBf09Aac",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "37b9ca4e4394c13fef9812941fe00de21d7b71088ccaaf028232144475897ec7": {
+    "split": "train",
+    "site": "https://lichess.org/xhqKqqA7",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "e87b89610d3502ad215fbdaa0d9bedd964776431c32a786f238192bfbb3aed5d": {
+    "split": "validation",
+    "site": "https://lichess.org/F6eZZVeg",
+    "plies": 77,
+    "result": "1-0"
+  },
+  "1f450c5d9935c39d4a6737f3864a0588dfa154e653e9bc3b5c8b584242929c64": {
+    "split": "validation",
+    "site": "https://lichess.org/zc1zUKCf",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "f31710b7653124b29aa6501cddafd2b3998670cf04f41a62de3d90d6167c969f": {
+    "split": "train",
+    "site": "https://lichess.org/xgR7347T",
+    "plies": 58,
+    "result": "0-1"
+  },
+  "4c43f1e9c6e70c12f2cd61d1824202bfef3c55c4a300ebbf52a21df77248205a": {
+    "split": "validation",
+    "site": "https://lichess.org/D51kKpHc",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "5386c45a6ab71f7d29812f6f42d1ed998259a96c110c4a1576c2cf4f7a0d9248": {
+    "split": "train",
+    "site": "https://lichess.org/1V58Cwlm",
+    "plies": 135,
+    "result": "1/2-1/2"
+  },
+  "9179511254df65d864ad67c99091f6631c528aa1a7cb6619d12545e0adf6c5e4": {
+    "split": "train",
+    "site": "https://lichess.org/fBN4wZgo",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "2d25a78b5eff1557bc54b26368eb03d962b394c506c746466019c04e1c85d1f1": {
+    "split": "train",
+    "site": "https://lichess.org/W7bteMBx",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "3af5908c9c53415a335ed60fba47d530ae42ccd9c4965298dfed3714e9e4403d": {
+    "split": "train",
+    "site": "https://lichess.org/jabgTeHE",
+    "plies": 85,
+    "result": "1-0"
+  },
+  "7867fe1351f7af07388110605c7e72f3ea74c843465037e41bb59e3fbe125a0d": {
+    "split": "train",
+    "site": "https://lichess.org/Rpibdk8Y",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "1bab3230921c3987550f1df8ab8d8c57eeff7d378e83be16ac5fdcfebe2c3422": {
+    "split": "validation",
+    "site": "https://lichess.org/PlmaRYBv",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "b67dc592c9e7f87a730b5def0d2c24981306009fb4f4a06c3bdc3181861dcd19": {
+    "split": "train",
+    "site": "https://lichess.org/PeWtv7DM",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "a0c1a71344e00c0690430128c56bf3703c828ce95c7f292de17b5fe45897aa05": {
+    "split": "train",
+    "site": "https://lichess.org/aowQs7YS",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "47ed81794ae9c10b0b5ad74878fcef8d77be7f4e8b1c643dc40f71be88d50205": {
+    "split": "train",
+    "site": "https://lichess.org/IXQPv13k",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "a044443c5a85e92576399023d9777826cbcf6518d85e226ecbc186525c18aa0e": {
+    "split": "train",
+    "site": "https://lichess.org/62FTB6TO",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "900c4bb1f870e863e5a6262dd3e207624ee7ad80c0bc0bba15cde07de3a93a49": {
+    "split": "train",
+    "site": "https://lichess.org/uKmzzR5m",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "8f4707084aba493a4c4ac19df23026c896024ab7e555e1335cd0d8114d276c5f": {
+    "split": "validation",
+    "site": "https://lichess.org/f6ECu9mx",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "d45c2b9d6b4cdb2e85c8559f243ac7affbdf13df2fa69dba5b1a30b60f1686af": {
+    "split": "test",
+    "site": "https://lichess.org/doPISJ81",
+    "plies": 86,
+    "result": "1-0"
+  },
+  "08d7d3b3980738dfaf70adcfc04e4c5c302fa74f1007aa0dacc92a9b6478c66a": {
+    "split": "train",
+    "site": "https://lichess.org/moQPdyRw",
+    "plies": 141,
+    "result": "1-0"
+  },
+  "09ff9dca24fc52547f8ffb6a8de32da7eb799fa94c15f27d77757eb03a306972": {
+    "split": "train",
+    "site": "https://lichess.org/RGfphTD3",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "c4f6de3e3694bf6cd29153124115ff20b28f07463e038951c7a9bd803d026a4a": {
+    "split": "validation",
+    "site": "https://lichess.org/QmU2EnJs",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "c827f3c418226b87144276a5e4bba3f002d981cc46c5d938f53fd966dda62dff": {
+    "split": "train",
+    "site": "https://lichess.org/clI6ZEw1",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "c76a8cf9668ee831726ddaa7b23f6b9f87f91c320580def7cfc0c93877d56e19": {
+    "split": "train",
+    "site": "https://lichess.org/FpH08S5m",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "2eec894c2375a97e4f75ffcb26d86e7fa8af61ae9fc43c21a23656955de1ac44": {
+    "split": "train",
+    "site": "https://lichess.org/gbJKKmWI",
+    "plies": 118,
+    "result": "0-1"
+  },
+  "77c33e2ee34d2116d39cbb5edf1631cb2d961dca1d63ede60db40ccb6dd17a12": {
+    "split": "train",
+    "site": "https://lichess.org/SQvAo7TR",
+    "plies": 77,
+    "result": "1-0"
+  },
+  "73873378e197b9e82a7fa183298bc29348687a9fef16e7bcb398e723e53e5c6d": {
+    "split": "train",
+    "site": "https://lichess.org/rXSJ5RcF",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "75fbfd8270202c3046fdeb36c76f7b41b7c494d6c3c6fd8d6e84f14678dc8a57": {
+    "split": "train",
+    "site": "https://lichess.org/nas87rng",
+    "plies": 86,
+    "result": "0-1"
+  },
+  "73f0f57243a11786e9641d223cb953e2a7dc31896bcde74fc925dfffdd2707fc": {
+    "split": "train",
+    "site": "https://lichess.org/iBJ5qaA3",
+    "plies": 83,
+    "result": "1-0"
+  },
+  "f43c87480178ac372e0a0c136a13c75fb6af831b125739303984e7c022de7683": {
+    "split": "validation",
+    "site": "https://lichess.org/yB1GDCFV",
+    "plies": 71,
+    "result": "0-1"
+  },
+  "bd8d94666b4b68e2225ec757eaa2a656132f7abc5b663215292587a4e88d8b80": {
+    "split": "train",
+    "site": "https://lichess.org/KzscvrKE",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "daee187ee0e1ee9fbff26f5ad30378eba2834e617c26d790adea75bd3a0c8d80": {
+    "split": "train",
+    "site": "https://lichess.org/qZBSIpAI",
+    "plies": 86,
+    "result": "0-1"
+  },
+  "2e67ac669bf92bea0f756323fc0e395b3b48631de63d299a0a80811aafec1649": {
+    "split": "train",
+    "site": "https://lichess.org/YAtaFXQs",
+    "plies": 83,
+    "result": "1-0"
+  },
+  "593777bc34e4bf8f394692511a01ad580884b4b49b29f8335b2bef88cca15ca9": {
+    "split": "test",
+    "site": "https://lichess.org/oiZoUOwe",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "97d4f6fb952db83d100ad231907332d60ea47e3362dbe71a9a7b5572d123adf6": {
+    "split": "train",
+    "site": "https://lichess.org/1HMUdBm8",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "325a90e9e9c9a1c389f75c3d591e213733708ec7f8ae20f390535848e8b5ba7f": {
+    "split": "train",
+    "site": "https://lichess.org/f3fRJBuB",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "59ef31fbb1244ac5e4ab07d578bb6c0259915899e07ba28edb78a9f2f58ffc2a": {
+    "split": "train",
+    "site": "https://lichess.org/I1Bo3obl",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "401971b91f34ffa56d37c9567a582812a1f9b4a31b9a53065e146d2434d8bc40": {
+    "split": "validation",
+    "site": "https://lichess.org/rLIXF5JB",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "35957d0c7365328bc395a7181339f1a837a2856be5e53a20f98adcf62c067607": {
+    "split": "train",
+    "site": "https://lichess.org/A6QmxfXf",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "460060c6387df68500fcb5a5dade78e5412203906bbe8eb02d8a8923566f144d": {
+    "split": "train",
+    "site": "https://lichess.org/BQqtDAzH",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "306ba6a8de19d4b003613a73bda06b1b082101f5f00129da1fbedb07d959f548": {
+    "split": "train",
+    "site": "https://lichess.org/vbJhwHIH",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "08400721859497ad1d48808ebc2d475253012595747053731895848c1ea7a9a0": {
+    "split": "train",
+    "site": "https://lichess.org/Yt5C2N7Q",
+    "plies": 54,
+    "result": "1-0"
+  },
+  "9baee86cd3812958337e6ea77c669d7beac10095b132d7d056dc76d03219ab46": {
+    "split": "train",
+    "site": "https://lichess.org/hjM8GV1H",
+    "plies": 93,
+    "result": "1-0"
+  },
+  "4333008935cc945868e11de0c5ef2b2cbd05ed6b53c77bc6d53b6d050bc9b25a": {
+    "split": "test",
+    "site": "https://lichess.org/o0RwtslA",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "9e3705c4c9c0c788221c2f7beffbb3531f003f7a59eb1e5ac7b2e8677e5953f4": {
+    "split": "train",
+    "site": "https://lichess.org/39icfyJU",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "78652089cf60f3fbe59da6e8bbc4c31abef71523dc880db3a6cec8d73aa86476": {
+    "split": "train",
+    "site": "https://lichess.org/pfJyD0F5",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "f7ad21721bcf6f049243d8889e0e77c4f6d515338a451267ef0c20fd8b454e1c": {
+    "split": "train",
+    "site": "https://lichess.org/J7EJBPeo",
+    "plies": 127,
+    "result": "1-0"
+  },
+  "84c5055b984e1743b47e8678a3c4da138728d5108aed55a2d4ebbe3e7543290d": {
+    "split": "test",
+    "site": "https://lichess.org/gXRhOW8l",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "484ca5d43b06fc49222a0cca6ca36bb6724efdafe8fb1030474dbd2ef582f869": {
+    "split": "train",
+    "site": "https://lichess.org/rNtrJ9QH",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "5b7f6100da1f0c2ac45e6053962b4f0b11e9a8f04b7f4497b57248264f7425d8": {
+    "split": "train",
+    "site": "https://lichess.org/eGuuVp3J",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "29d1012f27abdc2345c8b3309237395b921f75c263e004a5f6023778e9d40a9c": {
+    "split": "train",
+    "site": "https://lichess.org/2WypU8I8",
+    "plies": 95,
+    "result": "1-0"
+  },
+  "c2a34edb676b44927594ef4f95b80941cb44348a299d718a7e3f3b4bfd8b152a": {
+    "split": "train",
+    "site": "https://lichess.org/4vhvOoMq",
+    "plies": 119,
+    "result": "1/2-1/2"
+  },
+  "849020793ec69bf2600d171843bc870f2b608f20516fba498d7db545cc395411": {
+    "split": "train",
+    "site": "https://lichess.org/pOgyuGkp",
+    "plies": 127,
+    "result": "1-0"
+  },
+  "2cfef3db0a6484fbf477bdf612531b40587e5ddd4d29168b810e3ad989e6e141": {
+    "split": "train",
+    "site": "https://lichess.org/TebJTjjt",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "5b289821a1703b184678c2ca8552eee5985a509796821eea7088ca935384fbae": {
+    "split": "test",
+    "site": "https://lichess.org/BW9fQUp9",
+    "plies": 109,
+    "result": "0-1"
+  },
+  "4a69f9d42f0828dde40e96671f7a9acd5df98e6cd5817e6f851687e65bff48cd": {
+    "split": "train",
+    "site": "https://lichess.org/0MVQONoS",
+    "plies": 60,
+    "result": "0-1"
+  },
+  "a3bfec7fd8ff560e56817a6f2847e435a2ee7417d957eaf1e9d3ebbf5cbf5e7c": {
+    "split": "test",
+    "site": "https://lichess.org/nB6grxNt",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "80129b3c9959b15377769363d06f54d83caa754e69ffc51c9347467886f3ff36": {
+    "split": "train",
+    "site": "https://lichess.org/4iC3dvR1",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "709984089728e0830757ccfa3a2cc1da20db1fb8ed52aea333e16b4ee3af503b": {
+    "split": "validation",
+    "site": "https://lichess.org/YVkNXH6D",
+    "plies": 57,
+    "result": "1/2-1/2"
+  },
+  "d0aa0f2a2402db131151ef8298cd8a019da7bd41ff139a7a6589141e9772a241": {
+    "split": "validation",
+    "site": "https://lichess.org/tXpg4XOp",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "eb12cab1812821c3f439eb17d238e5603ac0ae7beb8a17348d54478355e3ea0d": {
+    "split": "train",
+    "site": "https://lichess.org/X7lzr3o5",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "1268376501ef4b422f78f89dc2e8f816f7e25382f9862314c049d25260a0bcbc": {
+    "split": "test",
+    "site": "https://lichess.org/33rcDPJB",
+    "plies": 93,
+    "result": "1-0"
+  },
+  "ff1ec3437ec95369a461051c261e1d30cbbb898d33eb92491337a093316fac08": {
+    "split": "test",
+    "site": "https://lichess.org/0cyaTP63",
+    "plies": 158,
+    "result": "1/2-1/2"
+  },
+  "78642072375dbe5a2c9e7bcff82da199e234a08be73d95656688f875fec27aac": {
+    "split": "validation",
+    "site": "https://lichess.org/lkv1RUb7",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "6df32e4fb0ab0895cf3f755bacddf903fa06b5c1caad9af63778ec9e55371e5a": {
+    "split": "train",
+    "site": "https://lichess.org/MoOMIMfF",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "c5956d28cf64eab45be4333eff3bf15ba99b1133796c4ec78ea6b8c002fa1d42": {
+    "split": "train",
+    "site": "https://lichess.org/5y7TEYZ4",
+    "plies": 81,
+    "result": "1-0"
+  },
+  "edf0814eacf5fd92c7a4a25d0f9f93e74fbff39481379dcfa3acf67cad445dca": {
+    "split": "validation",
+    "site": "https://lichess.org/heNfzF6I",
+    "plies": 119,
+    "result": "1-0"
+  },
+  "e4d5f333a66efc43e70623b5607e2644eb791826c5f4f9107370d45ed9faf358": {
+    "split": "train",
+    "site": "https://lichess.org/JezwCH9T",
+    "plies": 122,
+    "result": "1/2-1/2"
+  },
+  "0cbafebe57dcd8c981dd1e4647da6a8aca3c2fbd99b54b959d061f5f1bdd2aa9": {
+    "split": "train",
+    "site": "https://lichess.org/4twfPSph",
+    "plies": 111,
+    "result": "1-0"
+  },
+  "26de997716b787b9b7af6e9bb936f43ae5954eca450a777235d5532859c63fe0": {
+    "split": "train",
+    "site": "https://lichess.org/05v7Mzhf",
+    "plies": 36,
+    "result": "0-1"
+  },
+  "625ea8fbc7e1ca14ae1d3c6a75c32e265bbf1626c78a88477736a340c1c267f4": {
+    "split": "train",
+    "site": "https://lichess.org/4bWKmHKj",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "d502d62df0aa7228a18a5fc29c1176994d8568b42e18086d1f8560c0c866f21c": {
+    "split": "train",
+    "site": "https://lichess.org/zkOJfO2e",
+    "plies": 97,
+    "result": "0-1"
+  },
+  "ff31930a924ed3bba213d976326cb6cf6c72edc44326d9835cde4a36eba991f8": {
+    "split": "validation",
+    "site": "https://lichess.org/5eINsyoC",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "3e0e04ade4b37af870c76d1bab49c01647fd6efadad2b775b2a5d08f1cdf1b3a": {
+    "split": "train",
+    "site": "https://lichess.org/sHTIrNzq",
+    "plies": 98,
+    "result": "1-0"
+  },
+  "d89f2f0b4c13f6ab8056d1f451ec822fa23d17d9d6a845981076ab8ca54c8963": {
+    "split": "train",
+    "site": "https://lichess.org/takmQXOn",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "ac6baca6ac1fecf4acf4fcfdb337af7639fd73c7744c3a6f76f5e869b5e84f77": {
+    "split": "train",
+    "site": "https://lichess.org/1o1vp9XY",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "1265531696e7f335124feb3b486657eeb0505a6352af47cf04d2bbb8b9bfee3e": {
+    "split": "test",
+    "site": "https://lichess.org/wFH1rwrQ",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "33c11089d11e7327a447ccecc6a68e9741d5105598986a1601da25aaee9fab63": {
+    "split": "train",
+    "site": "https://lichess.org/2yhFF50U",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "3094d15510f1023135a48c606eb30079f0eb5eaaada76851aebf0d6bfa667c04": {
+    "split": "train",
+    "site": "https://lichess.org/C8N2pzzt",
+    "plies": 90,
+    "result": "0-1"
+  },
+  "9a077a411b274f4debc4b3e3df0abe77f4e2ac9612e0571441fb112f5e653069": {
+    "split": "train",
+    "site": "https://lichess.org/eQzKc7TL",
+    "plies": 118,
+    "result": "1/2-1/2"
+  },
+  "50934f3edd122584a783669e7c0f27b9e4071a19de9d7071908959f8f97e6a36": {
+    "split": "train",
+    "site": "https://lichess.org/XZDpLdzV",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "49de881592e68c64ee93db27a224d9fac5f301994b03a1c6bab0da59c48a28cb": {
+    "split": "test",
+    "site": "https://lichess.org/J2LBPyAS",
+    "plies": 45,
+    "result": "1-0"
+  },
+  "a3e38116fa6e124dbad4bcaf6e1fbea3a90f69c4f5d8fbaca0b080b5918c58e4": {
+    "split": "train",
+    "site": "https://lichess.org/KwAnAmFQ",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "241ee64916470b9abf9e53616562dcf2daf00311be2dd662a5ce609a04377cb7": {
+    "split": "validation",
+    "site": "https://lichess.org/8AiiigXS",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "0a430328d661b06cf91dca3fd9e39b81f94aa59844a5d698f2d14cce643b29a3": {
+    "split": "train",
+    "site": "https://lichess.org/Z2sqdOzI",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "49d2afcc0d009049544328d844b6f3b03070e96723bfba853ac454d35e8a623e": {
+    "split": "train",
+    "site": "https://lichess.org/DPAJ0Wz2",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "7d43a9cac85040f2836572050d9c6e653e778e65524fa406a5d45ed20c7696ba": {
+    "split": "test",
+    "site": "https://lichess.org/BSzIY63Q",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "3dcd77ce90d90b8ed68bab4ffeeea3decc9822ae139276722dc3306013949a2e": {
+    "split": "train",
+    "site": "https://lichess.org/9guwno0t",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "38b9f4dd8153b8ec6ea9e431a1eb4fe5bf50f3b1f6b008d9d4d7ced9fe1b35ab": {
+    "split": "test",
+    "site": "https://lichess.org/Kryebuj3",
+    "plies": 95,
+    "result": "1-0"
+  },
+  "64092ee19baf58740104f4907cd0c8d8fe8df9a637add2da0a820606f97e751f": {
+    "split": "test",
+    "site": "https://lichess.org/Rf9xzVJ3",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "e32d09babd6cdfcc418ce5b99763dca5d5b12fc0abcf399de1e73691f90e166c": {
+    "split": "train",
+    "site": "https://lichess.org/yC8jKZ7V",
+    "plies": 92,
+    "result": "1/2-1/2"
+  },
+  "3923dcaeb2112a0d07874914631a0967a03611ad332979aa2ca7f7f833c372e9": {
+    "split": "train",
+    "site": "https://lichess.org/NPq5VcaV",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "4f56c44a5fe5f4be3a5bb2a43c58976a2507ac3261023bf023be39e3428d9851": {
+    "split": "test",
+    "site": "https://lichess.org/FDjcVC1R",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "cc94986c53cba65b8c3477745d361b1528d96cf5407d94eb3f170c38af7136da": {
+    "split": "train",
+    "site": "https://lichess.org/uRhGWxiQ",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "2ec2b8ae96746da5929736a5307424b9b659c0d2215c47fa0ec91b84faaf3030": {
+    "split": "train",
+    "site": "https://lichess.org/NRHlp2vn",
+    "plies": 33,
+    "result": "1-0"
+  },
+  "6d1f12d0e403fbd6de706df5995032b8d864175d18cdcee7b261c813d3d55d1f": {
+    "split": "train",
+    "site": "https://lichess.org/D1ZQ5J3L",
+    "plies": 93,
+    "result": "1-0"
+  },
+  "14607352fc659199d81fba71558ce84f001c3d375cb5657480f1b3a1fcab7d67": {
+    "split": "validation",
+    "site": "https://lichess.org/UX9ekrAl",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "b2d29c36cda154b3141e8655ee00b96c833cd7e7dc16e9094cc0fbf1f07ca1d6": {
+    "split": "train",
+    "site": "https://lichess.org/dzsxMlJM",
+    "plies": 86,
+    "result": "0-1"
+  },
+  "76721fa8175a6a8c144dc580fa9954dd8f84529b0d25deb45ff6117bd078c29a": {
+    "split": "train",
+    "site": "https://lichess.org/YgNJaNai",
+    "plies": 65,
+    "result": "1-0"
+  },
+  "4fcc388d1a0e1be704a630343da9908ca4d560a0034333011e5ef1a99e80e927": {
+    "split": "train",
+    "site": "https://lichess.org/1ib1arv9",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "12760e051b90aca46bd743860d2dc1f821835b494e17011f59c2be27213d312d": {
+    "split": "train",
+    "site": "https://lichess.org/PDq9w0an",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "510e8b0a8eb01f02aeca5a1f6ae7229944d4e1d42c6aea047c72b1a46e6a1c60": {
+    "split": "test",
+    "site": "https://lichess.org/UWinJrc0",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "b1feae87a67473aa326e4636c1b909c57fa41cd57b9b35444b4f9a1f0fc717c9": {
+    "split": "train",
+    "site": "https://lichess.org/LGSHigCh",
+    "plies": 43,
+    "result": "1-0"
+  },
+  "9ac62916b34a75d051acc1f90fe1a8d62e7911df3ae5abffd4bcea1af5d015bc": {
+    "split": "train",
+    "site": "https://lichess.org/9QuSd5cA",
+    "plies": 55,
+    "result": "0-1"
+  },
+  "2e22b6abc60b3369f4993ea6465593f3cc9ae911ae8eddbcaaabd730ff0f7d6b": {
+    "split": "train",
+    "site": "https://lichess.org/V5rFJhLy",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "120455efddc6be7827a31fac51d58e5fcba64a3317a835ac358456b114337488": {
+    "split": "train",
+    "site": "https://lichess.org/nG5dFlz8",
+    "plies": 35,
+    "result": "0-1"
+  },
+  "e48c387a9e9a7a6411102fdec66ee51fa20dabded76126da8d047d18f7c796e4": {
+    "split": "test",
+    "site": "https://lichess.org/0wS0W3bR",
+    "plies": 114,
+    "result": "0-1"
+  },
+  "fac7e37520fc337906507b6628458a882061cca54d6288dba97778151474fb41": {
+    "split": "train",
+    "site": "https://lichess.org/jlbs7pgK",
+    "plies": 131,
+    "result": "1-0"
+  },
+  "4718b35a61b8cf4042af79e7539867b35ac298047565886326113f56ff06e037": {
+    "split": "train",
+    "site": "https://lichess.org/lKyWbvv1",
+    "plies": 107,
+    "result": "1-0"
+  },
+  "87c0b74c9f495bef93542c6cc9cac6381a870f4b1516d1bba18d484969c39d2a": {
+    "split": "train",
+    "site": "https://lichess.org/SJk8Idc0",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "5c6c1fcb2ef09ac1035d9436856e260ab44f3b86804cf2f0ca5a0f6cb3767406": {
+    "split": "train",
+    "site": "https://lichess.org/gSynHMcS",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "aba02c24d67f2f12a8753a39ac6b1c35eed05ab475a76e42170557546ba4ac0d": {
+    "split": "train",
+    "site": "https://lichess.org/OINVpv83",
+    "plies": 34,
+    "result": "0-1"
+  },
+  "2d594f1dd4a17059ef1060745cc5ed9597bf5c4e02a904f8681b9a0d7f6bbd53": {
+    "split": "train",
+    "site": "https://lichess.org/2OHNU3aw",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "8f7ca13741f97fe4191577ba77f50fa605414b3b2a052c75e76d16782abb6f7a": {
+    "split": "train",
+    "site": "https://lichess.org/Yi5YOFBa",
+    "plies": 117,
+    "result": "1/2-1/2"
+  },
+  "47bd2e07d040725b0a0432d684f9115e5b5f25bf05287e30af174f8dc531f03e": {
+    "split": "train",
+    "site": "https://lichess.org/IyLGwxaT",
+    "plies": 81,
+    "result": "1-0"
+  },
+  "a4e7e10c2fc73705671f68d64574a0c0e6c6910605e6d9fb4b9dce7debf92845": {
+    "split": "train",
+    "site": "https://lichess.org/k3i0DQw0",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "40138d4ad9667aa84bfef91be24ccba9488422d8407ce89b6dc9524404001e0a": {
+    "split": "validation",
+    "site": "https://lichess.org/gbP7RAOA",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "696dad57632e13e161b7d30f84b0ee6c5e7f06b07fed83a064ef1c299af1adea": {
+    "split": "validation",
+    "site": "https://lichess.org/kLxRDuAI",
+    "plies": 92,
+    "result": "0-1"
+  },
+  "5544df46e23f88ac6d7d31b77fe931cae6edec4ad89417315f81bfab923ddaef": {
+    "split": "test",
+    "site": "https://lichess.org/8axu1ITZ",
+    "plies": 47,
+    "result": "0-1"
+  },
+  "5d30c9903b9d61176b4a3a794076fb5519ed9e81b4d3218067fc76ab7f20e7d5": {
+    "split": "train",
+    "site": "https://lichess.org/gR2ptvHP",
+    "plies": 114,
+    "result": "0-1"
+  },
+  "c32575f7f7ee64d34da51d3cf90ea95cd6bf16f0eb2a3197683e3e80ae5e9e5e": {
+    "split": "test",
+    "site": "https://lichess.org/PbsdrQZe",
+    "plies": 90,
+    "result": "1/2-1/2"
+  },
+  "c2d32fac749d5f1902e897cee9ec9031f672e30057eef533b88676e0713d1a0d": {
+    "split": "test",
+    "site": "https://lichess.org/z9HCZtnq",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "0989a1204b79c46cc94ba5bc55126be6d4a6466d8052562bc18e295b2e00e25f": {
+    "split": "train",
+    "site": "https://lichess.org/zP1xHx3u",
+    "plies": 141,
+    "result": "1-0"
+  },
+  "29911398e20992659c6edfbe1c568002a970f0d79909da11404fad73abf2f06f": {
+    "split": "train",
+    "site": "https://lichess.org/hdJAr6K0",
+    "plies": 58,
+    "result": "1-0"
+  },
+  "69ea9b3ea1f98148a270d5532ac77721d9d09b2d1d8d3c67cddcad248480a0c0": {
+    "split": "train",
+    "site": "https://lichess.org/YLvfubiB",
+    "plies": 42,
+    "result": "0-1"
+  },
+  "f5fbc865a40d66c51aa187222347fc9a65a8ceb540a7cf052fcc61ebffe00cc6": {
+    "split": "train",
+    "site": "https://lichess.org/XVq9sCrF",
+    "plies": 109,
+    "result": "1-0"
+  },
+  "985cfae1b4f60c5857ec80e1d388090310a99ef4884861479431957f59595b9b": {
+    "split": "train",
+    "site": "https://lichess.org/mE4zHtFH",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "27d0182cabbe601c07f74c9cd97fc6b2c3360eb7aaf86de915b53a0f1a28886f": {
+    "split": "train",
+    "site": "https://lichess.org/IK8Cw9IV",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "232c9c5249c348205c235de14ffb150796940e6a3735e2e79593e55fdd2ef0b8": {
+    "split": "train",
+    "site": "https://lichess.org/ina5G01L",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "f40c35cabe256208c8a50e2813b78b41735d55ee74c7d9820674b15f37751afd": {
+    "split": "train",
+    "site": "https://lichess.org/Wlbyqoej",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "fec56d3d9ee3a28b5ea44935dd46a6cba60fe0dbc74433f370cad07f61a8836f": {
+    "split": "train",
+    "site": "https://lichess.org/WvIUF0kn",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "f2569e7a5b1425195605b5378a127be6f13e78204ee36decbd44dc64b291726c": {
+    "split": "test",
+    "site": "https://lichess.org/e0xhstPV",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "1a5578af4db2bc67a4f24ae9b0f2168b072fab834b02b16fcf5595a82c529713": {
+    "split": "validation",
+    "site": "https://lichess.org/nNK6XOg2",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "4e25eaf8b53ebb9dd92287a18de27aac4bdd5ce12162b42d36e02bfb822a9b96": {
+    "split": "train",
+    "site": "https://lichess.org/btvcdDB8",
+    "plies": 77,
+    "result": "1-0"
+  },
+  "ac9d6289e05810ac463ae63c5e5d2592a01a021f5c4410c70bb50b396d93b278": {
+    "split": "train",
+    "site": "https://lichess.org/feNv4em5",
+    "plies": 124,
+    "result": "0-1"
+  },
+  "592e158a6d192543999fae165f968c708498d075c37370b5efbc5759ae21d752": {
+    "split": "validation",
+    "site": "https://lichess.org/tcKX2TPJ",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "609410b0cf702cd12837d1ab0de75ab741793317527ad273b4adf8fa32568727": {
+    "split": "train",
+    "site": "https://lichess.org/hIhX2tpq",
+    "plies": 80,
+    "result": "0-1"
+  },
+  "cb5ab0a5c247d6dbebc11ff5001ae0ca3cb8a7bc6d5b3e719ed14d1dc2301f67": {
+    "split": "train",
+    "site": "https://lichess.org/gq8kYjuy",
+    "plies": 36,
+    "result": "0-1"
+  },
+  "7983ddbd044e8ab6d97611ffe254c0032e18e16765abae13680db6bc69fbf1ca": {
+    "split": "train",
+    "site": "https://lichess.org/0D73zAAs",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "00e903637f7e57370e2e2bda5bbbc29599c2668a8048fdf47968e7e1bba800d1": {
+    "split": "train",
+    "site": "https://lichess.org/PRYgrmgL",
+    "plies": 110,
+    "result": "0-1"
+  },
+  "468ad02f595fb85529242a84fae502a23456f270c0d99f9b23d3b2c6feba0f7d": {
+    "split": "train",
+    "site": "https://lichess.org/LqV7dEDU",
+    "plies": 103,
+    "result": "1-0"
+  },
+  "bb76591342777bdbbc5e649c45d3101b30c547c3feb94e7d3ae78d42f85f9f87": {
+    "split": "train",
+    "site": "https://lichess.org/pqd2BMqO",
+    "plies": 45,
+    "result": "1/2-1/2"
+  },
+  "91a12bef4a5b82a649abefd8175d9b3611aa25f0272b7616e0850d574f52c85c": {
+    "split": "train",
+    "site": "https://lichess.org/cxVrJzK5",
+    "plies": 73,
+    "result": "1-0"
+  },
+  "d6032d4ba751abe13ef0e509e9516f2c7076bd396f75dcb3175faabddc786c46": {
+    "split": "train",
+    "site": "https://lichess.org/DEtNWjSf",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "85686639d00d8da630c7e455bed18f0336e40c310c9141ea5d9aa502e9945910": {
+    "split": "train",
+    "site": "https://lichess.org/ky5lYWZJ",
+    "plies": 124,
+    "result": "0-1"
+  },
+  "e7b0120f9cd262dfb52481634897aa550cce0cf95c90010f6a79190954096b46": {
+    "split": "validation",
+    "site": "https://lichess.org/tbdv9VAB",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "ede9423d3f39a5313bd235410afa1e2c87ebcb8fb0b5203ed89f48917035b31b": {
+    "split": "train",
+    "site": "https://lichess.org/3EcCpbpF",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "ebf2dcb79974bb83598ac19165e6e7be181ff90edfff466e21c53374e9e092b4": {
+    "split": "train",
+    "site": "https://lichess.org/18SYh9Tx",
+    "plies": 78,
+    "result": "0-1"
+  },
+  "bba4e08ae7fc554d620a67b73f1ed7638f341495f740748e9ba4d834d654f1d8": {
+    "split": "test",
+    "site": "https://lichess.org/EwkPX15e",
+    "plies": 95,
+    "result": "1-0"
+  },
+  "6a99e12c9ab67655279c21649675a8299a36e8809d24a635635fc013fe63c0c4": {
+    "split": "validation",
+    "site": "https://lichess.org/qhfFocLo",
+    "plies": 39,
+    "result": "1/2-1/2"
+  },
+  "e17842072fdde06d49b99e198e542fcd7a21fb71e89c89889d80df667fb35647": {
+    "split": "test",
+    "site": "https://lichess.org/4M9j7RCc",
+    "plies": 119,
+    "result": "1-0"
+  },
+  "ffa258e4536a9c8962ae0f92145aed0418638aafcdb7a0113f08fc71eff3a54b": {
+    "split": "train",
+    "site": "https://lichess.org/rg5XWhkW",
+    "plies": 48,
+    "result": "1-0"
+  },
+  "08252c7c26f8727bd0093aaa68ff99ce0e2e43e27d53d804e4371311baaeae61": {
+    "split": "train",
+    "site": "https://lichess.org/9PIZTQyD",
+    "plies": 122,
+    "result": "1/2-1/2"
+  },
+  "02a1aeae93fd7b8f8cc1998993646f0bd20af0ec2c10aef4592df08222d4bcf2": {
+    "split": "train",
+    "site": "https://lichess.org/Lt73usK7",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "3fec09fab86bddcabe46c4b380a0c746c166ead7c618daa6286bfcd0f15040a8": {
+    "split": "test",
+    "site": "https://lichess.org/6hG0ZrS4",
+    "plies": 116,
+    "result": "0-1"
+  },
+  "a99b501fcdc672a4e8667b666db9e87002aa51b6a45757ab170b79b88ccfee21": {
+    "split": "train",
+    "site": "https://lichess.org/AnUijPXX",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "417afc6c3f754aa30389c2d4aaf573e4de33706d7affba16360622bedd3f6337": {
+    "split": "train",
+    "site": "https://lichess.org/xBV7ZYGz",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "812c538cdbf461c674d054b2e5c84b98c6666ad30f0a8a06f099f1067525a973": {
+    "split": "train",
+    "site": "https://lichess.org/OkehHsGt",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "0fa50dfdf6cb8378aa03f1de0e1ecefd81633b54deccd62af730523a876778e4": {
+    "split": "train",
+    "site": "https://lichess.org/CfQTv55D",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "7d07ceba53096c4c4dcda0e0d61aa5e5a77fe94545b8050d89409e0a2c26e8d2": {
+    "split": "test",
+    "site": "https://lichess.org/O6IbHVRd",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "aa40f60ff9cb73422eb8ad4a9a049ab97199b7ad53c27904f574036d750a541f": {
+    "split": "train",
+    "site": "https://lichess.org/IGMgv72I",
+    "plies": 86,
+    "result": "0-1"
+  },
+  "769def5a3dcf290c3dfbf15142cd41783c80037c7b9eebb53ef3c40e0a0c93cd": {
+    "split": "train",
+    "site": "https://lichess.org/SxylTdcD",
+    "plies": 135,
+    "result": "1-0"
+  },
+  "164d912c696c1c40dba8ed3809ee56ac09c83f38f10b2ebebc9e8d8319f60925": {
+    "split": "validation",
+    "site": "https://lichess.org/aQMB3W8b",
+    "plies": 129,
+    "result": "1-0"
+  },
+  "b4e03de73e8c1625697010ea06733dbc91e61ae3fe99711047e1ffdae42b3a53": {
+    "split": "train",
+    "site": "https://lichess.org/VfaPt4qB",
+    "plies": 60,
+    "result": "0-1"
+  },
+  "ea4fa5f4311889b4ea176032081db015698406a7dac377a5777cc5b1b1b1c5e2": {
+    "split": "validation",
+    "site": "https://lichess.org/R0vgcIpf",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "2ae38bdb5bd92967162bae739222ad29b7c8151f1425d09b8bf461caf53b35b9": {
+    "split": "test",
+    "site": "https://lichess.org/ROWtX5UU",
+    "plies": 90,
+    "result": "0-1"
+  },
+  "8b1ee83bd7762931db3ec64e2fac3145e86aa3e863b3b637113687f9b7d9b6c4": {
+    "split": "train",
+    "site": "https://lichess.org/2EkPTRNc",
+    "plies": 84,
+    "result": "0-1"
+  },
+  "214bfc4ab55739b695cc90a8bdf5f0983d4bdc984994c8ba0bdd4a32a974ddc3": {
+    "split": "train",
+    "site": "https://lichess.org/xS73FiZo",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "575f2e9a4853572e3bb41dda786aa64376feb54d4d0316912bee5ed5696be15a": {
+    "split": "train",
+    "site": "https://lichess.org/KyDtQjWP",
+    "plies": 164,
+    "result": "1/2-1/2"
+  },
+  "496837932b75200584a0196e59cd1bb724087ee3831b64d1a16f12cc9cb59c14": {
+    "split": "train",
+    "site": "https://lichess.org/hgfEizNU",
+    "plies": 70,
+    "result": "0-1"
+  },
+  "ae15fe4f5c09029948b84735fa92675eafd1fda262297e029933fdc6e8302f98": {
+    "split": "train",
+    "site": "https://lichess.org/rfMQHbk7",
+    "plies": 103,
+    "result": "1-0"
+  },
+  "5b7564eb0c48329d398c5d253669052a641f6063bcdeaee8700706be3e618ad4": {
+    "split": "test",
+    "site": "https://lichess.org/IOaFBv47",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "508a2003014b9d2bb9f85b3d68b3a590876b78e8f1a1f5d48dc70a3d71fe8e5a": {
+    "split": "test",
+    "site": "https://lichess.org/0NP6VWWk",
+    "plies": 33,
+    "result": "1-0"
+  },
+  "e55c81ffd3fab6f998ea9fac532c7e00809218cb0fc172605d37f945e30098a6": {
+    "split": "train",
+    "site": "https://lichess.org/Xr320wak",
+    "plies": 82,
+    "result": "0-1"
+  },
+  "4c37073f7086618b3b2b19f242a100b3cb38354f647907193cf6ff25dd4f4c19": {
+    "split": "train",
+    "site": "https://lichess.org/5PkiilGB",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "c959b0672834ca1de33149bea0014760809ac23a0c55de531da5b38782764ec7": {
+    "split": "train",
+    "site": "https://lichess.org/FvKuyWqe",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "c160914f4e22ce3abf8e052a06a2d0b906871720e45b9c19627e6308f4570222": {
+    "split": "train",
+    "site": "https://lichess.org/M3HCEYvv",
+    "plies": 147,
+    "result": "1-0"
+  },
+  "f2aa4e973080795c562040f3e404f459d720faf63e122fcc187320ace4f6502b": {
+    "split": "test",
+    "site": "https://lichess.org/nBBrMGap",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "6d56efd215eb402e52c001277940bbe0adad86c6a22dc66669d931ac83c0cda0": {
+    "split": "test",
+    "site": "https://lichess.org/UpeqmDXl",
+    "plies": 82,
+    "result": "0-1"
+  },
+  "499fa49b51c9b4e26807ba1f64ae874236494cc9d88a17fed2721af999b51d07": {
+    "split": "train",
+    "site": "https://lichess.org/2OaYNDus",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "996412b309e425f8607c725dbfab3d623dd397829ec4e92a2489e9e9160da0fb": {
+    "split": "train",
+    "site": "https://lichess.org/s9aFcNoo",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "f745ca08bd6a00c1d5588a502b33deb605a9d69f39b8ffce508f49abcf2850ea": {
+    "split": "test",
+    "site": "https://lichess.org/r7yBlB17",
+    "plies": 96,
+    "result": "1/2-1/2"
+  },
+  "d381f56cf9509def0226d774f2020ddb98dc87a9e3fcf6cc4afd0a7771ef81e7": {
+    "split": "train",
+    "site": "https://lichess.org/goSQh1my",
+    "plies": 37,
+    "result": "1-0"
+  },
+  "7b84998d493c99110ebecee3e40d01ddc93b7fc5caeaf2046d67ee176c4e9160": {
+    "split": "test",
+    "site": "https://lichess.org/gwyYYvY2",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "3e627cf1e1b911f31b531535ab461782b3c10dd2d0435a9f15f3eeaa47b3a00d": {
+    "split": "train",
+    "site": "https://lichess.org/b0XK9bhV",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "a0058b01e7fcf724f39bd9bb40f94dd5d5c12ffc5e4a0f6d551952abdf712ebd": {
+    "split": "validation",
+    "site": "https://lichess.org/E8lc7Htd",
+    "plies": 50,
+    "result": "0-1"
+  },
+  "f841c3a93ea22096d5dbfd2ef18277dd3668bd1d73345d55213fa25a299fece1": {
+    "split": "train",
+    "site": "https://lichess.org/C4QQ4INH",
+    "plies": 37,
+    "result": "0-1"
+  },
+  "6db95656e4274e2a90260709ca41a9f114548f7d8d2266571fa4b7e3fe237e45": {
+    "split": "validation",
+    "site": "https://lichess.org/MWPIKXJr",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "d94911c1c7ceb7c25fa368f5e2795687fcd32e70f7c917c568364e75e52a0b0c": {
+    "split": "validation",
+    "site": "https://lichess.org/DkjpmKue",
+    "plies": 77,
+    "result": "1-0"
+  },
+  "93567ad879df7768f327662b3f4092cb1824cbfe0d0ad8e8b9d94fb1a78c4c68": {
+    "split": "validation",
+    "site": "https://lichess.org/mdhXfGsn",
+    "plies": 96,
+    "result": "0-1"
+  },
+  "a8282da73f3678d9b65ea52f5a73999b9419bec9a99192b41a15a88c4103204f": {
+    "split": "train",
+    "site": "https://lichess.org/1BJGFWyV",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "bd44fdc4943fb2c541f7576114383ac5e973aacee51701d58bc54deda22787a1": {
+    "split": "train",
+    "site": "https://lichess.org/cXRLF2pu",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "c2a249c6532ba8ee1fd1225bdfd45f6f6c5eb31ba07eb056d12a4a903b07b0d6": {
+    "split": "train",
+    "site": "https://lichess.org/cNjoXpVi",
+    "plies": 46,
+    "result": "1-0"
+  },
+  "c30465e4b135d61ea55786da436f8ca13837caa5de140bfbb8916f6315174adb": {
+    "split": "validation",
+    "site": "https://lichess.org/0X1KalUr",
+    "plies": 84,
+    "result": "0-1"
+  },
+  "110b51f74d9329906390dc80bc8abd3bc934f8ac005d7509abb3bca613c8965b": {
+    "split": "train",
+    "site": "https://lichess.org/7gbJOyvu",
+    "plies": 112,
+    "result": "0-1"
+  },
+  "031ddc1dd21bf4a16052dadc3a8524b5765b31f460c3ed2603313dfdfeeff581": {
+    "split": "train",
+    "site": "https://lichess.org/48VkycYY",
+    "plies": 107,
+    "result": "1-0"
+  },
+  "a6ca2d765f498c067c80c7a471e114b2a6dea01c6a5aa20796862f4966214d89": {
+    "split": "train",
+    "site": "https://lichess.org/pggBCGmY",
+    "plies": 51,
+    "result": "1-0"
+  },
+  "d43df6f1c3ef119d928af3b5416bba4154c6c4f15cc76ad37d9675ca5f91ef7c": {
+    "split": "test",
+    "site": "https://lichess.org/xCxOn6O5",
+    "plies": 94,
+    "result": "0-1"
+  },
+  "d03f58630ff51065cb2c7d869ae23eb12dffc7ee2e5638da0c5b8c4e2f7a9b94": {
+    "split": "train",
+    "site": "https://lichess.org/VqoKe2NH",
+    "plies": 135,
+    "result": "1-0"
+  },
+  "b859ab49aa67432521ab9e482e45fbe38e7f42246d35996f52d5235e5b95d278": {
+    "split": "validation",
+    "site": "https://lichess.org/m6giHNai",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "0cbcce8f26001b3e34cfecfeb53b3f0fde8b5dd4785716f6a1e41a4a17c6e917": {
+    "split": "train",
+    "site": "https://lichess.org/7UfaOXkO",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "60379af3a8249bd87a4b490742351c367f0adefbcb08fc227e549404e396e0c0": {
+    "split": "validation",
+    "site": "https://lichess.org/aD46hH6G",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "24efe611d6d0a879bc9d8e91466194604e3ad432a51553e0ae829bc7a08f13e0": {
+    "split": "test",
+    "site": "https://lichess.org/cLdFnlPb",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "4b62074b1bc3a0f0d700762c53ee908f1783fdd1c7cd2f824544516e463dee95": {
+    "split": "train",
+    "site": "https://lichess.org/BH8t2urN",
+    "plies": 59,
+    "result": "1-0"
+  },
+  "a4bc579acbac9849992f8471f26a5db653f25fd9025457cb0277c217029314f9": {
+    "split": "train",
+    "site": "https://lichess.org/4sCBMLZV",
+    "plies": 107,
+    "result": "1-0"
+  },
+  "ac725cbf7ccec6bd803508e9bb8fe0e29d99ed83a08eafcfc96444ce84f28b73": {
+    "split": "train",
+    "site": "https://lichess.org/jArmDnnJ",
+    "plies": 103,
+    "result": "1-0"
+  },
+  "77065b1d43f61de0ce32f1f035d666f4941accc17a82b47939c4a917a2671945": {
+    "split": "validation",
+    "site": "https://lichess.org/Jn6NDjkr",
+    "plies": 125,
+    "result": "1-0"
+  },
+  "4c35bdbc13c899e0e0b4f5418e78325944927a4266a511ca4db51be8429bde3f": {
+    "split": "train",
+    "site": "https://lichess.org/TRGQmqxs",
+    "plies": 114,
+    "result": "1/2-1/2"
+  },
+  "14905bbb1505a1e131fbc3f62f852676743479108f21d02437102d9e1f8192fa": {
+    "split": "train",
+    "site": "https://lichess.org/hy0w0nz6",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "2b6362af52e0fc6d17ee5153c4fcc9d2d1567f89f6a9e94dd6814f243571afb6": {
+    "split": "train",
+    "site": "https://lichess.org/x3Zp1sNz",
+    "plies": 38,
+    "result": "0-1"
+  },
+  "a0fcf2257b2d26c73a983de3b162574a082d47d83cc03ccf7be82abc351f96db": {
+    "split": "train",
+    "site": "https://lichess.org/qEuHr42e",
+    "plies": 146,
+    "result": "0-1"
+  },
+  "6fc0c1e22a4ea9ff487c11da74d568518cb41e420379a3e8bdb82303be7715a8": {
+    "split": "train",
+    "site": "https://lichess.org/XZ2BR47f",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "3fc91745d89306fe200e7ce6a923504607588989960ba9914a3067faa75ee93f": {
+    "split": "validation",
+    "site": "https://lichess.org/9Am6OIlP",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "1d266c106bb00ff6eb6edaafea3dd664460a1712a46e8c0e2be6d22051b15a8c": {
+    "split": "train",
+    "site": "https://lichess.org/GLswllC0",
+    "plies": 67,
+    "result": "1-0"
+  },
+  "e13081695f5bb122dc7d34c82ecc791770bbe52189ebc13f61ff12b46a406df1": {
+    "split": "validation",
+    "site": "https://lichess.org/tvcHnZeK",
+    "plies": 76,
+    "result": "0-1"
+  },
+  "4bab0dad4043734800692d9dd074ad27e36ad2b2a9a79efc80e42f4768407566": {
+    "split": "train",
+    "site": "https://lichess.org/1gLIMPwP",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "f014976a1eaf9383d57a0d60f38431a303e2671643dccee7e4dc2ee5e262f718": {
+    "split": "train",
+    "site": "https://lichess.org/X2Oz9UoH",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "94bd6eeaee48315e139ed23771fdfdf9f2b73173fb951ada2b7a8a1b5c341f82": {
+    "split": "validation",
+    "site": "https://lichess.org/KVH75ofd",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "b16ef9770fcf7cb817c7e0811b36964335f90fbb6863271a3a972ac59ab74b8e": {
+    "split": "train",
+    "site": "https://lichess.org/Zh3Eb2gO",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "3d949896fa5669d9649e8bf37244eb5c9536744c5b74c7469ccd82acc6cd5efa": {
+    "split": "train",
+    "site": "https://lichess.org/FxadMkLO",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "3ff752ee131c4f9eb32b963d6392c7728430dbe54c3074d628910c81fcd4a84e": {
+    "split": "train",
+    "site": "https://lichess.org/rpcCtdHE",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "1d19b63346987cc5230470f24b510f1b93396fcfe32efe6f033e594c5dade6f5": {
+    "split": "test",
+    "site": "https://lichess.org/8U8Jcrwy",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "99b470ac56ddc8d9d84769128da27bda4da9f2eb22032b17321d4bf0577dc56b": {
+    "split": "train",
+    "site": "https://lichess.org/f2cUHQ5z",
+    "plies": 52,
+    "result": "1-0"
+  },
+  "1d4ae57994988308873b5ea9499ba51670eeab9b2a490f410747262df323f4c2": {
+    "split": "train",
+    "site": "https://lichess.org/7v9kOb7z",
+    "plies": 62,
+    "result": "0-1"
+  },
+  "2044e5f76cef4882f2b7209a2bc7214311a988e642970299f3046903bde833ba": {
+    "split": "validation",
+    "site": "https://lichess.org/hW4d3ySm",
+    "plies": 71,
+    "result": "1-0"
+  },
+  "069f34c9928b08451fbf862b74a862cb75263ee485f298c8bae3d70b9df8ebe0": {
+    "split": "test",
+    "site": "https://lichess.org/IENEpLci",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "a5b0a755acfb3f2dc76757115f3f2ef8e1fc507c80844e55015d91cb34a21640": {
+    "split": "test",
+    "site": "https://lichess.org/kRf0jIjq",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "55fdd1de650741c284db1bcc4a66c092e762bcde5f2203152aeabe49b439dd4b": {
+    "split": "train",
+    "site": "https://lichess.org/00O8T49v",
+    "plies": 109,
+    "result": "1/2-1/2"
+  },
+  "4e439f38273b80864611d798f3d7da475fa1fc72b80dafe218d74461682166de": {
+    "split": "validation",
+    "site": "https://lichess.org/q6ot9WpF",
+    "plies": 85,
+    "result": "0-1"
+  },
+  "20d381c2f1dcd98e8f83b0f35843c73c5b2214ab2b968f7b8530ffb086668275": {
+    "split": "train",
+    "site": "https://lichess.org/r6BHbfV0",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "afc829f12537c80252a84709a8200ff6656c9c604ed6b34d4a817ab55b1459d7": {
+    "split": "train",
+    "site": "https://lichess.org/5b13bT7X",
+    "plies": 36,
+    "result": "1-0"
+  },
+  "8b05e9e1eaf4f9a2b546b1632563b1a5493d6b847895ac4868685a3287730163": {
+    "split": "train",
+    "site": "https://lichess.org/trhWOyco",
+    "plies": 34,
+    "result": "0-1"
+  },
+  "bc29cf4f1be7089c4a48316357cb0dcc6ec5f61d71e8933324c536c9c21eba19": {
+    "split": "train",
+    "site": "https://lichess.org/pqB5xYI6",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "78632a05ee2be108c8cc8ff6b22471048bb23e673285a23394a361d6c49a439a": {
+    "split": "train",
+    "site": "https://lichess.org/QgAGVU63",
+    "plies": 110,
+    "result": "0-1"
+  },
+  "d46828c8b58049cb5ab95cf17e54218de92dcf71b192231e96cdae06bb4735cf": {
+    "split": "train",
+    "site": "https://lichess.org/hKeXtu4a",
+    "plies": 52,
+    "result": "0-1"
+  },
+  "14b6688e3aa339e9ca2adb8cb8b43098d5ae09c490eff23ff361a08ece4bc437": {
+    "split": "train",
+    "site": "https://lichess.org/mNl30o6R",
+    "plies": 57,
+    "result": "1-0"
+  },
+  "d89f6539ab719884490ea285b238184469d51905eab2674337057518e19d3503": {
+    "split": "train",
+    "site": "https://lichess.org/q7DqL2Jj",
+    "plies": 32,
+    "result": "0-1"
+  },
+  "006c510e01ee7626adaea12d22edba345ed476c8eee58a6e4d37ad3851ab7b85": {
+    "split": "test",
+    "site": "https://lichess.org/A36yRJDF",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "6ab3b9e66e17d6239101077e87d60328f2d3f91c7801b2653a53a90a2af318fd": {
+    "split": "train",
+    "site": "https://lichess.org/4pgxa8Iy",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "3218d2acf943f296dc4ba6d6ca6e56f8022ef94c4889303e497af45965522e8f": {
+    "split": "test",
+    "site": "https://lichess.org/KKNClVkx",
+    "plies": 98,
+    "result": "0-1"
+  },
+  "a605f9932ff46e6595ec0ff11678cc3737c2fbd7edc53094f22c6bcf3934987a": {
+    "split": "train",
+    "site": "https://lichess.org/BzmEYsR8",
+    "plies": 91,
+    "result": "1-0"
+  },
+  "b52a7ab72bc67db1cf69fe3424713a528166629b0c8cfb6edf5120d15ddd7591": {
+    "split": "train",
+    "site": "https://lichess.org/0Pu15lyl",
+    "plies": 111,
+    "result": "1/2-1/2"
+  },
+  "ce23c6fbbf18be311fc3f9525b2fa1fff1c346495970fa1bc57041bb86a7548a": {
+    "split": "test",
+    "site": "https://lichess.org/pmOKI7n6",
+    "plies": 161,
+    "result": "1-0"
+  },
+  "8887f80817bdb9c7d464ee7e4432bb8f91f03a47daec760622277282551e0e02": {
+    "split": "train",
+    "site": "https://lichess.org/PdZqWcZl",
+    "plies": 120,
+    "result": "1/2-1/2"
+  },
+  "01e98b7b8e18b5e4bf6edcdeb3d84a774a8c0f55691719f04ea074a083fa9a62": {
+    "split": "train",
+    "site": "https://lichess.org/3DLuhmcT",
+    "plies": 91,
+    "result": "1-0"
+  },
+  "9c61b633e43bec4d902946350468485e799600955f82f934d60b54d4e9cde4c4": {
+    "split": "train",
+    "site": "https://lichess.org/krG6ZjvF",
+    "plies": 105,
+    "result": "1-0"
+  },
+  "ff40ebe029d12c3408c10c6473d0bd032ff1060f3d214858809b30dcc66d9532": {
+    "split": "train",
+    "site": "https://lichess.org/ADyRqzZ1",
+    "plies": 95,
+    "result": "1/2-1/2"
+  },
+  "35b60fc9e796ec7a3357ce77926b942eaf5591344168a41cdba46b15124e3863": {
+    "split": "train",
+    "site": "https://lichess.org/iKhrQKeJ",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "9b071946ac5f9508be72a4fe340669f509f206bb1a71f9958d4ccc4c2a1ffb75": {
+    "split": "validation",
+    "site": "https://lichess.org/6LnBWxsx",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "09b86175edb9a536f4a1692a90afefc52c7dcc6f50cefdb2a59f9b925f99a6e2": {
+    "split": "validation",
+    "site": "https://lichess.org/M0jHg0OO",
+    "plies": 101,
+    "result": "1-0"
+  },
+  "a88f3dacc66cad923907ccc7ec94bf71ecacce4ba813bcdd828a7d203468caef": {
+    "split": "train",
+    "site": "https://lichess.org/97WF1WGI",
+    "plies": 113,
+    "result": "1-0"
+  },
+  "bb3380ead3502cde4f86e5a9a5593f5d53b6993b0b82c85e5ff81f4c42f5be74": {
+    "split": "train",
+    "site": "https://lichess.org/tuBZyKJY",
+    "plies": 64,
+    "result": "0-1"
+  },
+  "5621ff181c967aaa92bf8c4f3d07712df8917f97f9a69dfe1edcbd1387fe0d1a": {
+    "split": "train",
+    "site": "https://lichess.org/7L1ZVNXz",
+    "plies": 100,
+    "result": "0-1"
+  },
+  "32fb0fe5792e594f96f0963d1062fed4d8c74d9567bef29e9421b360cd7b71c5": {
+    "split": "train",
+    "site": "https://lichess.org/2ES4dqMa",
+    "plies": 61,
+    "result": "1-0"
+  },
+  "9d1051f183ba8d330b94d622c76a952c435d3895bb25dd6609b4835286cb23a2": {
+    "split": "train",
+    "site": "https://lichess.org/Yl4nV8RE",
+    "plies": 48,
+    "result": "0-1"
+  },
+  "78842be5c0b8e76f15a0b6b917b287167d0c3cee438a2a228b053d0eba0059b7": {
+    "split": "validation",
+    "site": "https://lichess.org/jWH7m0F0",
+    "plies": 109,
+    "result": "1/2-1/2"
+  },
+  "0453e33c491072dd1f9696d748cecc557e502c23c58754365781b2d8d0c08144": {
+    "split": "train",
+    "site": "https://lichess.org/xzSWs551",
+    "plies": 35,
+    "result": "0-1"
+  },
+  "ae131382729e24c60658e5260b31cef8a8e851c13cd4e719cb9c325c6dcc8489": {
+    "split": "train",
+    "site": "https://lichess.org/eN6rp3uQ",
+    "plies": 46,
+    "result": "0-1"
+  },
+  "6d5418410327635debb5ff3b6a350f9f6d5134d6bd8785d26dc901eba97ea0f2": {
+    "split": "train",
+    "site": "https://lichess.org/aSP2HwEx",
+    "plies": 89,
+    "result": "1-0"
+  },
+  "3aa19cb7a6890a27ef0d885d58e9957bd29c2dda4e2f7a0f5079711ccf14c5d2": {
+    "split": "test",
+    "site": "https://lichess.org/S2tTAqHh",
+    "plies": 68,
+    "result": "0-1"
+  },
+  "fef71c3b04645439ec03fda5557d91a17db370aeb69383bd23c3c4e8adb60a82": {
+    "split": "train",
+    "site": "https://lichess.org/yMZPpG4H",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "1cd18c455387d83756997773cdcc44ec1a7f77a67e76dfef74615e4acb24c8f0": {
+    "split": "train",
+    "site": "https://lichess.org/2n8ZhslK",
+    "plies": 38,
+    "result": "1-0"
+  },
+  "e38c46d341bc41fa998865055018c5ea3ba50272450da4ba57b6de6784b90757": {
+    "split": "train",
+    "site": "https://lichess.org/Gs3CTBwF",
+    "plies": 69,
+    "result": "1-0"
+  },
+  "da28442954e021c55002c599fa1eb9a0b2980e5ffedd83d79e710dab5605ce1f": {
+    "split": "train",
+    "site": "https://lichess.org/jWjZwaC2",
+    "plies": 72,
+    "result": "0-1"
+  },
+  "1c7a53c29aa93636ebd8d850270c8768d873be5e94f882e2167467dafe0433d8": {
+    "split": "train",
+    "site": "https://lichess.org/fAJBr4X1",
+    "plies": 90,
+    "result": "0-1"
+  },
+  "66300002b127199a6d34b63f40daf3f99af0d795001e222d06bb76e791bfd168": {
+    "split": "train",
+    "site": "https://lichess.org/8aAn8mh9",
+    "plies": 81,
+    "result": "1-0"
+  },
+  "8cd96d9ccb4a9d6b4653935642d71c0cedaee2957389ba6f0fdcbbde824a95fe": {
+    "split": "test",
+    "site": "https://lichess.org/a6QGESRu",
+    "plies": 39,
+    "result": "1-0"
+  },
+  "aaa5a417145155956827ae8354c065205812393402d4fcc27a922665927a3a7c": {
+    "split": "validation",
+    "site": "https://lichess.org/MVywddfj",
+    "plies": 63,
+    "result": "1-0"
+  },
+  "7610692c04dfb8c62031c99f7ba14a7c28558789a6bf33a5107e3c5ee2d12e76": {
+    "split": "train",
+    "site": "https://lichess.org/RNQZoRBH",
+    "plies": 40,
+    "result": "0-1"
+  },
+  "c935975dfb0d8ec49365998975823759c8984cd269cff97c10c22642ef7929b9": {
+    "split": "train",
+    "site": "https://lichess.org/uzQhyh5D",
+    "plies": 74,
+    "result": "0-1"
+  },
+  "72ed84ecc965767c6239230f378405577e6ccd9cda6c6e3e0746246bb7154df4": {
+    "split": "train",
+    "site": "https://lichess.org/19TAw5zL",
+    "plies": 33,
+    "result": "1-0"
+  },
+  "41ccb6575c8c0bb4d4afbb55201fe63bd154d20f3d647ab459823419c9238cc3": {
+    "split": "train",
+    "site": "https://lichess.org/HhcpryS0",
+    "plies": 49,
+    "result": "0-1"
+  },
+  "93220933186a07b4752d7f6fe53085935792162d40432a8693b068be7b7ace49": {
+    "split": "validation",
+    "site": "https://lichess.org/q2lVUfDN",
+    "plies": 55,
+    "result": "1-0"
+  },
+  "6ff7d0c9054d74adafb29a2c2f8b4c3e95b0000dbaf1ad1688502559c1988747": {
+    "split": "validation",
+    "site": "https://lichess.org/YWt8EyRk",
+    "plies": 47,
+    "result": "1-0"
+  },
+  "5a3295f66e7066a744309ab56dcc0a294640af12b8618ac0c71f5081fc6fc7be": {
+    "split": "train",
+    "site": "https://lichess.org/xCg8erCf",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "43f837716ffe8a683d326b32ddd8081008608a843d22870c63b8770db6f322d7": {
+    "split": "train",
+    "site": "https://lichess.org/cuCVyjGL",
+    "plies": 56,
+    "result": "0-1"
+  },
+  "bfaf8055e094d41e4e26b4dc6dc9ddf8c40fd70683987937ed508e252788067f": {
+    "split": "test",
+    "site": "https://lichess.org/YCVOeUba",
+    "plies": 52,
+    "result": "1-0"
+  },
+  "98e49dbee8966cbb20fe3341a5b2f73fcdad5bd866beedf83ce586dc326c4da8": {
+    "split": "test",
+    "site": "https://lichess.org/QylpT1Fr",
+    "plies": 79,
+    "result": "1-0"
+  },
+  "b25dce938305485c3566001bc2bbbd2f19b2a915b475a952ee73f93391330e38": {
+    "split": "train",
+    "site": "https://lichess.org/hJpUOzMn",
+    "plies": 108,
+    "result": "0-1"
+  },
+  "ac2e4b7acc96d8ea689d2f02f895051f3eb27ad1923760e6927b4ed6bc82d035": {
+    "split": "train",
+    "site": "https://lichess.org/nFX8FNVV",
+    "plies": 48,
+    "result": "0-1"
+  },
+  "27841f3bbf5114f798437f0a867423a089788951a3260301f4549279cadf274c": {
+    "split": "train",
+    "site": "https://lichess.org/4dUCx0h9",
+    "plies": 53,
+    "result": "1-0"
+  },
+  "5924568238a81c0fbb5ca0a626fb3970226fc2a0d1ac08cce7c70878d54f77de": {
+    "split": "validation",
+    "site": "https://lichess.org/sSHgacGe",
+    "plies": 48,
+    "result": "0-1"
+  },
+  "fedbdd628dcb7a8d519b82a49c6320bca93855045805968e77fd9e0a12551dc7": {
+    "split": "test",
+    "site": "https://lichess.org/Rnnrsh7b",
+    "plies": 35,
+    "result": "1-0"
+  },
+  "1cf12d3523e2e0c3ead71f66be81ea66785f32cc6f2a8562563c76cb7ffa79e4": {
+    "split": "train",
+    "site": "https://lichess.org/kutzM0nq",
+    "plies": 33,
+    "result": "1-0"
+  },
+  "95112c785b6e3c027de2e854e93ff0f2a0c67f45aed9e6473ff15cb16f7af999": {
+    "split": "validation",
+    "site": "https://lichess.org/fnkHKPhd",
+    "plies": 44,
+    "result": "0-1"
+  },
+  "67e6c1edd311687b339420134dfcd213b6d8f489329b90f21b20442d9cc6dc98": {
+    "split": "train",
+    "site": "https://lichess.org/HCXuZT9w",
+    "plies": 54,
+    "result": "0-1"
+  },
+  "e16d08e61a1ad923bae65a3ccc86845ed9b56603c4a315d01780d1b278d68121": {
+    "split": "validation",
+    "site": "https://lichess.org/t5J3v6nI",
+    "plies": 123,
+    "result": "1-0"
+  },
+  "fcd2e23f302310abf29e8c767e71fab3e175674628af962e34df5dfd39e05ac2": {
+    "split": "train",
+    "site": "https://lichess.org/t2o8i2Hr",
+    "plies": 113,
+    "result": "1-0"
+  },
+  "178d2c93ff356431435e609d40d7d92747fca95d59d68d2490f14716afa6ff57": {
+    "split": "train",
+    "site": "https://lichess.org/hD3hwoL1",
+    "plies": 66,
+    "result": "0-1"
+  },
+  "7ca755f48ce89adf1f6a60bd65f5d2c6138e6cf543de2ffda1e277d9eca74d7f": {
+    "split": "train",
+    "site": "https://lichess.org/Eq1ZEFJi",
+    "plies": 49,
+    "result": "1-0"
+  },
+  "2a9d161eebe5b90e654d9e0be5af4b627715b527dd6cee068f4f09eb67a4db01": {
+    "split": "train",
+    "site": "https://lichess.org/hzswLJQ6",
+    "plies": 75,
+    "result": "1-0"
+  },
+  "5c289534aa08622ff4926208162e43f69f916816115b3b0b304a927650977ce9": {
+    "split": "train",
+    "site": "https://lichess.org/dpht5tho",
+    "plies": 121,
+    "result": "1-0"
+  },
+  "00f02457ab193f5f2cf362ac529158bd964666fd1efa4feafd442d7a10227ec6": {
+    "split": "train",
+    "site": "https://lichess.org/lpCMT38Q",
+    "plies": 79,
+    "result": "1-0"
+  }
+}

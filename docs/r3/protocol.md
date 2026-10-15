@@ -18,7 +18,7 @@ Keep standard, legal, completed games, normal Lichess termination (includes
 resignation), distinct players, both ratings >=1500, base time >=180 seconds,
 and at least 32 plies. Reject contradictions with forced final board outcomes.
 Select at most eight nonterminal positions per game from plies 16..160 at
-8-ply spacing, ordered by SHA-256(seed, game ID, ply). Seed=20261015.
+7-ply spacing (v2 correction before any training; avoids side-to-move aliasing), ordered by SHA-256(seed, game ID, ply). Seed=20261015.
 Game identity hashes the initial FEN and full mainline moves; duplicate games
 are excluded even if source IDs differ. Split by hashed game ID into 70/15/15
 train/validation/test. Position identity uses FEN's first four fields (legal EP),
@@ -54,3 +54,7 @@ Use existing fastchess runner, integrity validator and round bootstrap; distingu
 natural endings, maxmove adjudication and failures. No Elo claim or SPRT, no
 Windows experiment-host claim. Report raw artifacts and uncertainty even for a
 negative result. No extra match or test-set tuning to seek a positive outcome.
+
+Protocol correction before first fit: v1 eight-ply sampling retained only White-to-move.
+Preserve v1 evidence; use v2 seven-ply spacing and refreeze all split/position hashes.
+The source, game split seed and filters remain fixed; no model/test results existed.

@@ -33,7 +33,7 @@ def split_for(game_id, seed=SEED):
     return "train" if bucket < 70 else "validation" if bucket < 85 else "test"
 
 
-def prepare(pgn_text, seed=SEED):
+def prepare(pgn_text, seed=SEED, spacing=7):
     counts, games, rows = Counter(), {}, []
     stream = io.StringIO(pgn_text)
     while True:
@@ -76,7 +76,7 @@ def prepare(pgn_text, seed=SEED):
             if move not in board.legal_moves:
                 raise ValueError("unvalidated move")
             board.push(move)
-            if 16 <= ply <= 160 and ply % 8 == 0 and not board.is_game_over(claim_draw=True):
+            if 16 <= ply <= 160 and (ply - 16) % spacing == 0 and not board.is_game_over(claim_draw=True):
                 positions.append({"position_id": position_key(board), "game_id": gid,
                                   "fen": board.fen(), "ply": ply, "label": label, "split": split,
                                   "feature_version": "handcrafted-v1"})
@@ -128,6 +128,7 @@ def acquire(output, max_bytes=2097152, max_games=3000):
     write_gzip(output / "positions.jsonl.gz", ''.join(json.dumps(r, sort_keys=True) + '\n' for r in rows))
     write_json(output / "splits.json", games)
     manifest = {"schema_version": 1, "kind": "r3-dataset", "seed": SEED,
+                "sampling_version": "r3-sampling-v2-seven-ply",
                 "source": {"url": SOURCE, "license": "CC0-1.0", "license_url": "https://database.lichess.org/",
                            "acquired_at": utc_now(), "range": [0, max_bytes-1], "headers": headers},
                 "protocol": "docs/r3/protocol.md", "counts": counts,
@@ -161,7 +162,8 @@ def validate_dataset(directory):
         path = directory / name
         if sha256(path) != meta['sha256'] or path.stat().st_size != meta['bytes']:
             raise ValueError('dataset artifact integrity mismatch: ' + name)
-    rows, games, counts = prepare(gzip.decompress((directory / 'source.pgn.gz').read_bytes()).decode(), manifest['seed'])
+    rows, games, counts = prepare(gzip.decompress((directory / 'source.pgn.gz').read_bytes()).decode(), manifest['seed'],
+                                  spacing=7 if manifest.get('sampling_version') == 'r3-sampling-v2-seven-ply' else 8)
     actual = [json.loads(line) for line in gzip.decompress((directory / 'positions.jsonl.gz').read_bytes()).decode().splitlines()]
     if rows != actual or games != json.loads((directory / 'splits.json').read_text()) or counts != manifest['counts']:
         raise ValueError('dataset reconstruction mismatch')

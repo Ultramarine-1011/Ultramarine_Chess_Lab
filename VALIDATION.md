@@ -328,3 +328,12 @@ Python 逐行检查版本、八维有限值、独立特征实现和原权重评�
 归档于 experiments/results/r3-features-v1（含源清单/划分/binary 哈希与 build info）。
 R3.2 [Actions #38709009820](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38709009820)
 运行中，后续必须核对最终状态。
+
+R3.2 代码 Actions #38709009820 五项全部 success（r32-ci.json）。
+训练前审查发现 v1 每 8 ply 采样只包含白走局面，属于分布缺陷。尚未拟合任何
+模型或查看测试指标；按预注册修正规则改为从 ply16 开始间隔 7 ply，保留 v1
+原始包与旧采样版本的重建能力，重新冻结 v2。来源、过滤、game ID 和游戏划分
+保持不变。两种走棋方的回归检查已加入；正式训练仅使用 v2。
+修正版的完整计数/哈希见 experiments/results/r3-data-v2；
+`ctest --preset release -R '^research$'`、完整 Release 6/6 通过，
+命令/日志 r31-v2-*.log；测试基底 61282b6 + dirty sampling 修复。
