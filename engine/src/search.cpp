@@ -1,4 +1,6 @@
 #include "ucl/search.hpp"
+#include "ucl/transposition.hpp"
+#include <memory>
 #include <algorithm>
 #include <stdexcept>
 
@@ -32,13 +34,20 @@ struct Context {
     std::uint64_t nodes = 0;
     std::uint64_t qnodes = 0;
     bool aborted = false;
+    std::unique_ptr<TranspositionTable> table;
+    int generation = 0;
+    std::uint64_t probes = 0, hits = 0, cutoffs = 0, stores = 0;
+    Context(const Evaluator& evaluator, const SearchLimits& search_limits,
+            const SearchOptions& search_options, std::stop_token token)
+        : eval(evaluator), limits(search_limits), options(search_options), stop(token), start(Clock::now()),
+          table(options.tt ? std::make_unique<TranspositionTable>(options.hash_mb) : nullptr) {}
     bool cancelled() {
         aborted = aborted || stop.stop_requested() || (limits.nodes && nodes >= *limits.nodes) ||
             (limits.time && Clock::now() - start >= *limits.time);
         return aborted;
     }
     int negamax(chess::Board& b, int depth, int ply, int alpha, int beta,
-                std::vector<chess::Move>& pv) {
+                std::vector<chess::Move>& pv, std::uint64_t history) {
         if (cancelled()) return 0;
         ++nodes;
         const bool quiet = depth == 0 && options.quiescence;
@@ -53,6 +62,23 @@ struct Context {
         auto evaluate = [&] { return std::clamp(eval.evaluate(b), -mate_score + max_search_ply + 1,
                                                 mate_score - max_search_ply - 1); };
         if (depth == 0 && !quiet) return evaluate();
+        const int original_alpha = alpha;
+        if (table && depth > 0) {
+            ++probes;
+            if (const auto* entry = table->probe(b.hash())) {
+                ++hits;
+                const int value = score_from_tt(entry->score, ply);
+                const bool legal = std::find(moves.begin(), moves.end(), entry->move) != moves.end();
+                if (ply > 0 && legal && entry->depth == depth && entry->history == history &&
+                    entry->halfmoves == static_cast<int>(b.halfMoveClock()) &&
+                    (entry->bound == Bound::exact || (entry->bound == Bound::lower && value >= beta) ||
+                     (entry->bound == Bound::upper && value <= alpha))) {
+                    ++cutoffs;
+                    pv = {entry->move}; // A legal cached prefix; no fabricated continuation.
+                    return value;
+                }
+            }
+        }
         int best = -infinity;
         if (quiet && !b.inCheck()) {
             best = evaluate(); // Stand pat is invalid in check.
@@ -62,9 +88,11 @@ struct Context {
         order(moves, b);
         for (auto move : moves) {
             if (quiet && !b.inCheck() && !b.isCapture(move) && move.typeOf() != chess::Move::PROMOTION) continue;
+            const auto parent_hash = b.hash();
             b.makeMove(move);
+            const auto child_history = b.halfMoveClock() == 0 ? 0 : history + history_mix(parent_hash);
             std::vector<chess::Move> child;
-            const int score = -negamax(b, std::max(0, depth - 1), ply + 1, -beta, -alpha, child);
+            const int score = -negamax(b, std::max(0, depth - 1), ply + 1, -beta, -alpha, child, child_history);
             b.unmakeMove(move);
             if (aborted) return 0;
             if (score > best) {
@@ -75,6 +103,11 @@ struct Context {
             alpha = std::max(alpha, score);
             if (alpha >= beta) break;
         }
+        if (table && depth > 0 && !pv.empty()) {
+            const auto bound = best <= original_alpha ? Bound::upper : best >= beta ? Bound::lower : Bound::exact;
+            if (table->store({b.hash(), history, static_cast<int>(b.halfMoveClock()), depth,
+                              score_to_tt(best, ply), generation, bound, pv.front()})) ++stores;
+        }
         return best;
     }
 };
@@ -83,7 +116,7 @@ SearchResult AlphaBetaSearch::run(chess::Board b, const Evaluator& eval, const S
                                   std::stop_token stop, SearchObserver observer) {
     if (limits.depth < 1 || limits.depth > max_depth || (limits.nodes && *limits.nodes == 0) ||
         (limits.time && limits.time->count() < 0)) throw std::invalid_argument("invalid search limits");
-    Context ctx{eval, limits, options_, stop, Clock::now()};
+    Context ctx{eval, limits, options_, stop};
     SearchResult result;
     chess::Movelist moves;
     chess::movegen::legalmoves(moves, b);
@@ -92,7 +125,9 @@ SearchResult AlphaBetaSearch::run(chess::Board b, const Evaluator& eval, const S
     if (drawn(b)) return result;
     for (int depth = 1; depth <= limits.depth; ++depth) {
         std::vector<chess::Move> pv;
-        const int score = ctx.negamax(b, depth, 0, -infinity, infinity, pv);
+        ctx.generation = depth;
+        const auto history = b.halfMoveClock() == 0 ? 0 : history_mix(0x55434c524f4f54ULL);
+        const int score = ctx.negamax(b, depth, 0, -infinity, infinity, pv, history);
         if (ctx.aborted) break;
         result.score = score;
         result.depth = depth;
@@ -100,12 +135,16 @@ SearchResult AlphaBetaSearch::run(chess::Board b, const Evaluator& eval, const S
         result.best_move = result.pv.front();
         result.nodes = ctx.nodes;
         result.qnodes = ctx.qnodes;
+        result.tt_probes = ctx.probes; result.tt_hits = ctx.hits;
+        result.tt_cutoffs = ctx.cutoffs; result.tt_stores = ctx.stores;
         result.elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - ctx.start);
         if (observer) observer(result);
         if (std::abs(score) >= mate_score - depth) break;
     }
     result.nodes = ctx.nodes;
     result.qnodes = ctx.qnodes;
+    result.tt_probes = ctx.probes; result.tt_hits = ctx.hits;
+    result.tt_cutoffs = ctx.cutoffs; result.tt_stores = ctx.stores;
     result.elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - ctx.start);
     return result;
 }

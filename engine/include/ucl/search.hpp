@@ -13,6 +13,8 @@ inline constexpr int max_depth = 128;
 inline constexpr int max_search_ply = 256;
 struct SearchOptions {
     bool quiescence = true;
+    bool tt = true;
+    std::size_t hash_mb = 16;
 };
 struct SearchLimits {
     int depth = 5;
@@ -25,6 +27,7 @@ struct SearchResult {
     int depth = 0; // Last fully completed iteration; zero means fallback.
     std::uint64_t nodes = 0;
     std::uint64_t qnodes = 0;
+    std::uint64_t tt_probes = 0, tt_hits = 0, tt_cutoffs = 0, tt_stores = 0;
     std::chrono::milliseconds elapsed{0};
     std::vector<chess::Move> pv;
 };

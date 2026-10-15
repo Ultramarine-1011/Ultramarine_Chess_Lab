@@ -1,6 +1,7 @@
 #include "ucl/evaluator.hpp"
 #include "ucl/position.hpp"
 #include "ucl/search.hpp"
+#include "ucl/transposition.hpp"
 #include <algorithm>
 #include <iostream>
 #include <sstream>
@@ -86,7 +87,7 @@ void perfts() {
 void searches() {
     ucl::HandcraftedFeatures features;
     ucl::HandcraftedEvaluator eval(features);
-    ucl::AlphaBetaSearch search({.quiescence = false});
+    ucl::AlphaBetaSearch search({.quiescence = false, .tt = false});
     for (const char* fen : {chess::constants::STARTPOS,
         "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
         "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1"}) {
@@ -127,7 +128,7 @@ void searches() {
         r = search.run(chess::Board(), eval, {.depth = 20, .nodes = cap});
         check(r.nodes <= cap && r.best_move, "strict node cap with fallback");
     }
-    ucl::AlphaBetaSearch qs;
+    ucl::AlphaBetaSearch qs({.tt = false});
     chess::Board poison("3rk3/8/8/3p4/8/8/8/3QK3 w - - 0 1");
     auto shallow = search.run(poison, eval, {.depth = 1});
     auto stable = qs.run(poison, eval, {.depth = 1});
@@ -156,6 +157,49 @@ void searches() {
     auto interrupted = qs.run(chess::Board(), eval, {.depth = 20}, midway.get_token(),
         [&](const auto& completed) { if (completed.depth == 2) midway.request_stop(); });
     check(interrupted.depth == 2 && interrupted.pv.size() >= 2, "QS retains completed iteration on stop");
+    for (int value : {123, -456, ucl::mate_score - 7, -ucl::mate_score + 9}) {
+        check(ucl::score_from_tt(ucl::score_to_tt(value, 5), 5) == value, "TT mate round trip");
+    }
+    check(ucl::score_from_tt(ucl::score_to_tt(ucl::mate_score - 7, 5), 2) == ucl::mate_score - 4,
+          "TT mate distance at different ply");
+    check(ucl::score_from_tt(ucl::score_to_tt(-ucl::mate_score + 9, 5), 2) == -ucl::mate_score + 6,
+          "TT losing mate distance at different ply");
+    ucl::TranspositionTable table(1);
+    check(!table.probe(42), "empty TT");
+    check(table.store({42, 10, 3, 5, 123, 1, ucl::Bound::lower, chess::Move(1)}), "TT store");
+    check(table.probe(42)->bound == ucl::Bound::lower, "TT bound retained");
+    check(!table.store({42, 11, 4, 2, 321, 1, ucl::Bound::upper, chess::Move(2)}), "TT depth replacement");
+    check(table.store({42, 11, 4, 2, 321, 2, ucl::Bound::upper, chess::Move(2)}), "TT age replacement");
+    check(table.probe(42)->history == 11 && table.probe(42)->halfmoves == 4, "TT path metadata");
+    const auto collision = 42 + 1024 * 1024 / sizeof(ucl::TTEntry);
+    check(table.store({collision, 0, 0, 3, 111, 3, ucl::Bound::exact, chess::Move(3)}), "TT collision replacement");
+    check(!table.probe(42) && table.probe(collision), "TT verifies full Zobrist key");
+    for (bool quiescence : {false, true}) {
+        ucl::AlphaBetaSearch cached({.quiescence = quiescence, .hash_mb = 1});
+        ucl::AlphaBetaSearch uncached({.quiescence = quiescence, .tt = false});
+        for (const char* position : {chess::constants::STARTPOS,
+             "3rk3/8/8/3p4/8/8/8/3QK3 w - - 0 1",
+             "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 97 1",
+             "7k/5Q2/6K1/8/8/8/8/8 w - - 0 1"}) {
+            chess::Board board(position);
+            auto a = cached.run(board, eval, {.depth = 3});
+            auto c = uncached.run(board, eval, {.depth = 3});
+            check(a.score == c.score && a.depth == c.depth, "TT preserves depth semantics");
+            for (auto m : a.pv) { check(board.isLegal(m), "TT legal PV prefix"); board.makeMove(m); }
+            check(c.tt_probes == 0 && c.tt_hits == 0, "TT independent switch");
+        }
+        // Identical board/hash with different reversible history must not leak.
+        chess::Board history;
+        std::string err;
+        check(ucl::parse_position(words("position startpos moves g1f3 g8f6 f3g1 f6g8"), history, err), err);
+        for (auto board : {history, chess::Board(history.getFen())}) {
+            auto a = cached.run(board, eval, {.depth = 4});
+            auto c = uncached.run(board, eval, {.depth = 4});
+            check(a.score == c.score, "TT repetition history isolation");
+        }
+        auto a = cached.run(chess::Board(), eval, {.depth = 4});
+        check(a.tt_hits > 0 && a.tt_cutoffs > 0 && a.tt_stores > 0, "TT actually reuses cached results");
+    }
     std::stop_source stop; stop.request_stop();
     r = search.run(chess::Board(), eval, {.depth = 20}, stop.get_token());
     check(r.nodes == 0 && r.best_move && r.depth == 0, "immediate stop");

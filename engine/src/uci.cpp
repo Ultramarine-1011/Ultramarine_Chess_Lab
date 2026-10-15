@@ -72,6 +72,8 @@ int run_uci(std::istream& in, std::ostream& out) {
                 emit("id author UCL contributors");
                 emit("option name MoveOverhead type spin default 10 min 0 max 5000");
                 emit("option name Quiescence type check default true");
+                emit("option name UseTT type check default true");
+                emit("option name Hash type spin default 16 min 1 max 1024");
                 emit("uciok");
             } else if (t[0] == "isready") emit("readyok");
             else if (t[0] == "stop") stop();
@@ -80,10 +82,13 @@ int run_uci(std::istream& in, std::ostream& out) {
             else if (t[0] == "setoption") {
                 if (t.size() == 5 && t[1] == "name" && t[2] == "MoveOverhead" && t[3] == "value")
                     overhead = static_cast<int>(integer(t[4], 0, 5000));
-                else if (t.size() == 5 && t[1] == "name" && t[3] == "value" && t[2] == "Quiescence") {
+                else if (t.size() == 5 && t[1] == "name" && t[3] == "value" && (t[2] == "Quiescence" || t[2] == "UseTT")) {
                     if (t[4] != "true" && t[4] != "false") throw std::invalid_argument("expected true/false");
-                    options.quiescence = t[4] == "true";
-                } else emit("info string unsupported option");
+                    if (t[2] == "Quiescence") options.quiescence = t[4] == "true";
+                    else options.tt = t[4] == "true";
+                } else if (t.size() == 5 && t[1] == "name" && t[3] == "value" && t[2] == "Hash")
+                    options.hash_mb = static_cast<std::size_t>(integer(t[4], 1, 1024));
+                else emit("info string unsupported option");
             } else if (t[0] == "position") {
                 stop();
                 std::string error;
@@ -97,7 +102,7 @@ int run_uci(std::istream& in, std::ostream& out) {
                         auto result = search.run(position, evaluator, go.limits, token, [&](const SearchResult& r) {
                             std::ostringstream s;
                             s << "info depth " << r.depth << " score ";
-                            if (std::abs(r.score) >= mate_score - max_depth) {
+                            if (std::abs(r.score) >= mate_score - max_search_ply) {
                                 const int plies = mate_score - std::abs(r.score);
                                 s << "mate " << (r.score >= 0 ? 1 : -1) * ((plies + 1) / 2);
                             } else s << "cp " << r.score;

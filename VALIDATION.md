@@ -94,3 +94,14 @@ Windows 实验主机上测试硬件性能或长时间负载。
 - 首次搜索测试崩溃：新增夹具错误地让非行棋方已处于将军；Sanitizer/Debug
   断言定位到棋盘缺王。改用合法起始局面后 Release/Sanitizer 搜索测试通过。
   顺便移除脚本编辑带来的未用变量与重复计数赋值，编译无警告。
+
+## TT 阶段
+
+- 测试版本：`1f5e0a0` + dirty TT/search/UCI/test 修改。
+- `cmake --build --preset release --parallel 4`、`build/release/ucl_tests search`：
+  91 checks 通过；`ctest --preset release`：5/5 通过。
+- 覆盖将杀分数跨 ply 双向归一化、bound 保存、深度/代龄替换、强制槽冲突和完整
+  主键比较、QS 开/关下与无 TT 的相同深度分数对照、97 半回合边界、重复历史与
+  同 FEN 无历史区分、合法 PV 前缀、实际缓存命中和截断、独立关闭。
+- TT 每次 run 新建；主键之外校验可逆历史次数指纹和半回合计数，只在剩余深度
+  完全相同时复用分数。此阶段未启用 TT 着法排序，留待独立 PV ordering 提交。
