@@ -124,6 +124,24 @@ class UciTests(unittest.TestCase):
                 if board.is_game_over():
                     break
 
+    def test_search_option_combinations(self):
+        with chess.engine.SimpleEngine.popen_uci(ENGINE, timeout=5) as engine:
+            for q in (False, True):
+                scores = []
+                for tt in (False, True):
+                    for pv in (False, True):
+                        engine.configure({"Quiescence": q, "UseTT": tt, "PVOrdering": pv, "Hash": 1})
+                        board = chess.Board()
+                        info = engine.analyse(board, chess.engine.Limit(depth=3))
+                        scores.append(info["score"])
+                        for move in info["pv"]:
+                            self.assertIn(move, board.legal_moves)
+                            board.push(move)
+                self.assertTrue(all(s == scores[0] for s in scores))
+        for bad in ("setoption name Quiescence value yes", "setoption name Hash value 0"):
+            self.pipe.send(bad)
+            self.pipe.until("info string command rejected:")
+
     def test_seeded_positions_and_pv(self):
         rng = random.Random(20261015)
         board = chess.Board()

@@ -74,6 +74,7 @@ int run_uci(std::istream& in, std::ostream& out) {
                 emit("option name Quiescence type check default true");
                 emit("option name UseTT type check default true");
                 emit("option name Hash type spin default 16 min 1 max 1024");
+                emit("option name PVOrdering type check default true");
                 emit("uciok");
             } else if (t[0] == "isready") emit("readyok");
             else if (t[0] == "stop") stop();
@@ -82,10 +83,11 @@ int run_uci(std::istream& in, std::ostream& out) {
             else if (t[0] == "setoption") {
                 if (t.size() == 5 && t[1] == "name" && t[2] == "MoveOverhead" && t[3] == "value")
                     overhead = static_cast<int>(integer(t[4], 0, 5000));
-                else if (t.size() == 5 && t[1] == "name" && t[3] == "value" && (t[2] == "Quiescence" || t[2] == "UseTT")) {
+                else if (t.size() == 5 && t[1] == "name" && t[3] == "value" && (t[2] == "Quiescence" || t[2] == "UseTT" || t[2] == "PVOrdering")) {
                     if (t[4] != "true" && t[4] != "false") throw std::invalid_argument("expected true/false");
                     if (t[2] == "Quiescence") options.quiescence = t[4] == "true";
-                    else options.tt = t[4] == "true";
+                    else if (t[2] == "UseTT") options.tt = t[4] == "true";
+                    else options.pv_ordering = t[4] == "true";
                 } else if (t.size() == 5 && t[1] == "name" && t[3] == "value" && t[2] == "Hash")
                     options.hash_mb = static_cast<std::size_t>(integer(t[4], 1, 1024));
                 else emit("info string unsupported option");

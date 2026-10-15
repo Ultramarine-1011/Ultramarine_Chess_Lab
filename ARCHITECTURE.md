@@ -100,3 +100,8 @@ TT 使用 chess-library 的 Zobrist 主键，直接映射固定内存（默认 1
 历史间混用分数。半回合计数另存，避免 50 步边界串用。哈希和历史指纹均为 64 位，
 存在通常的概率碰撞风险。此保守方案比忽略路径的 TT 命中率低，以正确性为先。
 `UseTT=false` 完全不分配和探测 TT；qnodes、TT probes/hits/cutoffs/stores 独立计数。
+
+`PVOrdering=true` 独立启用上一完整迭代的 PV 和 TT 最佳着法排序：仅在路径仍匹配
+旧 PV 前缀时采用该 ply 的 PV 提示，其次 TT 提示，再复用稳定吃子/升变排序。
+提示仅与已生成的合法走法比较，绝不直接应用缓存着法。关闭 TT 时旧 PV 排序仍工作；
+关闭 PVOrdering 时 TT 仍可复用分数。排序不引入 PVS、LMR、空着或并行算法。

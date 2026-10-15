@@ -105,3 +105,13 @@ Windows 实验主机上测试硬件性能或长时间负载。
   同 FEN 无历史区分、合法 PV 前缀、实际缓存命中和截断、独立关闭。
 - TT 每次 run 新建；主键之外校验可逆历史次数指纹和半回合计数，只在剩余深度
   完全相同时复用分数。此阶段未启用 TT 着法排序，留待独立 PV ordering 提交。
+
+## PV ordering 阶段
+
+- 测试版本：`d17b12f` + dirty 排序/search/UCI/test 修改。
+- `cmake --build --preset release --parallel 4`、`build/release/ucl_tests search`：
+  659 checks；`ctest --preset release`：5/5 通过，UCI 增至 7 个 unittest。
+- 固定种子 20261015 的 10 个局面，QS/TT/PV 的全部 8 种组合，固定 depth 3，
+  相同 QS 语义下分数/完成深度一致，逐着验证 PV。排序关闭无提示使用；TT 关闭
+  旧 PV 仍可用；默认组合确实使用 PV/TT 提示。各节点预算限制保持严格。
+- UCI 黑盒同样遍历 8 种组合、Hash=1，核对分数/PV，拒绝非法布尔值/Hash。

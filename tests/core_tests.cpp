@@ -4,6 +4,7 @@
 #include "ucl/transposition.hpp"
 #include <algorithm>
 #include <iostream>
+#include <random>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -87,7 +88,7 @@ void perfts() {
 void searches() {
     ucl::HandcraftedFeatures features;
     ucl::HandcraftedEvaluator eval(features);
-    ucl::AlphaBetaSearch search({.quiescence = false, .tt = false});
+    ucl::AlphaBetaSearch search({.quiescence = false, .tt = false, .pv_ordering = false});
     for (const char* fen : {chess::constants::STARTPOS,
         "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
         "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1"}) {
@@ -128,7 +129,7 @@ void searches() {
         r = search.run(chess::Board(), eval, {.depth = 20, .nodes = cap});
         check(r.nodes <= cap && r.best_move, "strict node cap with fallback");
     }
-    ucl::AlphaBetaSearch qs({.tt = false});
+    ucl::AlphaBetaSearch qs({.tt = false, .pv_ordering = false});
     chess::Board poison("3rk3/8/8/3p4/8/8/8/3QK3 w - - 0 1");
     auto shallow = search.run(poison, eval, {.depth = 1});
     auto stable = qs.run(poison, eval, {.depth = 1});
@@ -175,8 +176,8 @@ void searches() {
     check(table.store({collision, 0, 0, 3, 111, 3, ucl::Bound::exact, chess::Move(3)}), "TT collision replacement");
     check(!table.probe(42) && table.probe(collision), "TT verifies full Zobrist key");
     for (bool quiescence : {false, true}) {
-        ucl::AlphaBetaSearch cached({.quiescence = quiescence, .hash_mb = 1});
-        ucl::AlphaBetaSearch uncached({.quiescence = quiescence, .tt = false});
+        ucl::AlphaBetaSearch cached({.quiescence = quiescence, .pv_ordering = false, .hash_mb = 1});
+        ucl::AlphaBetaSearch uncached({.quiescence = quiescence, .tt = false, .pv_ordering = false});
         for (const char* position : {chess::constants::STARTPOS,
              "3rk3/8/8/3p4/8/8/8/3QK3 w - - 0 1",
              "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 97 1",
@@ -199,6 +200,38 @@ void searches() {
         }
         auto a = cached.run(chess::Board(), eval, {.depth = 4});
         check(a.tt_hits > 0 && a.tt_cutoffs > 0 && a.tt_stores > 0, "TT actually reuses cached results");
+    }
+    std::mt19937 random(20261015);
+    chess::Board sample;
+    for (int position = 0; position < 10; ++position) {
+        for (int step = 0; step < 3; ++step) {
+            chess::Movelist legal;
+            chess::movegen::legalmoves(legal, sample);
+            if (legal.empty() || sample.isGameOver().second != chess::GameResult::NONE) sample = chess::Board();
+            chess::movegen::legalmoves(legal, sample);
+            sample.makeMove(legal[static_cast<int>(random() % static_cast<unsigned>(legal.size()))]);
+        }
+        for (bool q : {false, true}) {
+            ucl::AlphaBetaSearch reference_search({.quiescence = q, .tt = false, .pv_ordering = false});
+            auto expected = reference_search.run(sample, eval, {.depth = 3});
+            for (bool tt : {false, true}) for (bool pv : {false, true}) {
+                ucl::AlphaBetaSearch variant({.quiescence = q, .tt = tt, .pv_ordering = pv, .hash_mb = 1});
+                auto a = variant.run(sample, eval, {.depth = 3});
+                check(a.score == expected.score && a.depth == expected.depth, "all eight switches preserve fixed-QS minimax score");
+                check(a.best_move && sample.isLegal(*a.best_move), "all switches legal move");
+                auto copy = sample;
+                for (auto m : a.pv) { check(copy.isLegal(m), "all switches legal PV"); copy.makeMove(m); }
+                check(pv || (a.pv_order_hits == 0 && a.tt_order_hits == 0), "ordering switch disables both hints");
+                check(tt || (a.tt_probes == 0 && a.tt_order_hits == 0), "PV works without TT");
+            }
+        }
+    }
+    ucl::AlphaBetaSearch ordered;
+    auto ordered_result = ordered.run(chess::Board(), eval, {.depth = 4});
+    check(ordered_result.pv_order_hits > 0 && ordered_result.tt_order_hits > 0, "previous PV and TT ordering used");
+    for (std::uint64_t cap : {1ULL, 50ULL, 1500ULL}) {
+        auto a = ordered.run(chess::Board(), eval, {.depth = 20, .nodes = cap});
+        check(a.nodes <= cap && a.best_move, "all optimizations strict node cap");
     }
     std::stop_source stop; stop.request_stop();
     r = search.run(chess::Board(), eval, {.depth = 20}, stop.get_token());

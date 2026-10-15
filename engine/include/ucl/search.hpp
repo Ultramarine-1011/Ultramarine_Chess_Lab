@@ -14,6 +14,7 @@ inline constexpr int max_search_ply = 256;
 struct SearchOptions {
     bool quiescence = true;
     bool tt = true;
+    bool pv_ordering = true;
     std::size_t hash_mb = 16;
 };
 struct SearchLimits {
@@ -28,6 +29,7 @@ struct SearchResult {
     std::uint64_t nodes = 0;
     std::uint64_t qnodes = 0;
     std::uint64_t tt_probes = 0, tt_hits = 0, tt_cutoffs = 0, tt_stores = 0;
+    std::uint64_t pv_order_hits = 0, tt_order_hits = 0;
     std::chrono::milliseconds elapsed{0};
     std::vector<chess::Move> pv;
 };
