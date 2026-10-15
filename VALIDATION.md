@@ -764,3 +764,18 @@ Python 包下载中断/截断后经断点续传和官方哈希核验恢复。没
 不修改项目 CMakeLists/presets 或算法。最终标准工具链 Release **6/6（34.23秒）**、
 UCI/CLI、fastchess **40/40**；8061633+仅文档证据 dirty 状态准确保留，全部
 219 研究文件仍原字节不变。详见同一报告的标准 VS 最终验证及 `vs-*` 证据。
+
+## R5 授权与预注册开始（2026-10-16）
+
+完整授权 R5.1–R5.5，阶段间自主继续，允许 stage commit/push/CI 修复，R5 完成后停止。
+实际工作目录为 C:/Ultramarine_Chess_Lab/Ultramarine_Chess_Lab，main 初始 clean，
+HEAD f933fe24ed983cb011b7a1bb0b9382c36a9b8d11。已读 AGENTS/ROADMAP/架构/实验/
+最近验证、R4 最终报告与 Windows 初始化证据；现有 Actions 最后工程版本685bf63五项success。
+GOAL.md 与 docs/r5/protocol.md 定义本轮合同，先提交协议再获取新的2017-09有界开局。
+Original 从 f933fe2 经 scripts/build_revision.py 独立临时 worktree 构建退出0，
+MSVC19.51.36260 /O2 /Ob2 /DNDEBUG，dirty=false，SHA256
+82cdd1be701ad30be9ddc08ea255a9c0da864663b815ad0a222e100fe30f1605。
+工具链复用，无重装；fastchess官方v1.8.2-alpha，工具身份/原始help已保存。
+预检首次 A 在启动 fastchess 前因尚未生成 R5 EPD 失败，保留 r5-preflight-a/record.json
+failed 状态；修复为使用历史独立 EPD 的低成本预检，新输出目录带 v2，不覆盖失败。
+R5正式比赛/性能/优化均尚未执行。
