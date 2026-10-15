@@ -2,33 +2,12 @@
 import argparse
 import json
 from pathlib import Path
-import shutil
 import statistics
-import subprocess
 
 from .benchmark import run_benchmark
 from .integrity import validate_bundle
-from .r5_study import ROOT, RESULTS, CONFIGS, EVIDENCE, SEED, engine
-from .records import git_state, sha256, utc_now, write_json
-
-
-def host(path):
-    subprocess.run(['powershell', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File',
-        str(EVIDENCE/'capture-host.ps1'), '-Output', str(Path(path).resolve())],
-        stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=True)
-
-
-def prepare(optimized):
-    base = {'version': 1, 'seed': SEED, 'suite': 'experiments/positions/r2-v1.json'}
-    write_json(CONFIGS/'benchmark-search.json', {**base, 'repeats': 5,
-        'limits': [{'depth': 3}, {'depth': 4}, {'nodes': 50000}],
-        'engines': [engine('Handcrafted', hand=True), engine('OriginalFull14'), engine('OptimizedFull14', optimized)]})
-    for block, order in enumerate(('OP', 'PO', 'OP')):
-        for kind in order:
-            name = 'OriginalFull14' if kind == 'O' else 'OptimizedFull14'
-            write_json(CONFIGS/f'benchmark-static-{block}-{kind}.json', {**base, 'repeats': 1,
-                'limits': [{'depth': 3}], 'static_evaluation': True,
-                'engines': [engine(name, optimized if kind=='P' else None), engine('Handcrafted', hand=True)]})
+from .r5_study import ROOT, CONFIGS
+from .records import write_json
 
 
 def summarize(directory):
@@ -69,36 +48,25 @@ def summarize(directory):
         'full14_search_semantics_equal': True, 'search_queries': len(main['rows'])}
 
 
-def run():
-    if git_state(ROOT)['dirty']: raise ValueError('commit before formal performance measurements')
-    output = RESULTS/'r5-performance-v1'; output.mkdir(parents=True, exist_ok=False)
-    index = {'kind': 'r5-performance', 'code': git_state(ROOT), 'started_at': utc_now(), 'status': 'running', 'error': None}
-    write_json(output/'index.json', index)
-    try:
-        if shutil.disk_usage(ROOT).free < 10*1024**3: raise ValueError('disk guard failed')
-        host(output/'host-before.json')
-        for block, order in enumerate(('OP', 'PO', 'OP')):
-            for kind in order:
-                record = run_benchmark(ROOT, CONFIGS/f'benchmark-static-{block}-{kind}.json', output/f'static-{block}-{kind}')
-                if record['status']!='completed': raise ValueError(record['error'])
-            host(output/f'host-block-{block}.json')
-        record = run_benchmark(ROOT, CONFIGS/'benchmark-search.json', output/'search')
-        if record['status']!='completed': raise ValueError(record['error'])
-        host(output/'host-after.json')
-        index.update(status='PASS', summary=summarize(output))
-    except Exception as exc:
-        index.update(status='FAIL', error=f'{type(exc).__name__}: {exc}')
-    finally:
-        index['finished_at'] = utc_now()
-        index['files'] = {str(p.relative_to(output)): {'sha256': sha256(p), 'bytes': p.stat().st_size}
-                          for p in output.rglob('*') if p.is_file() and p!=output/'index.json'}
-        write_json(output/'index.json', index)
-    return index
+def run(output):
+    output = Path(output)
+    for block, order in enumerate(('OP', 'PO', 'OP')):
+        for kind in order:
+            record = run_benchmark(ROOT, CONFIGS/f'benchmark-static-{block}-{kind}.json',
+                                   output/f'static-{block}-{kind}', formal=True)
+            if record['status'] != 'completed':
+                raise RuntimeError(record['error'])
+    record = run_benchmark(ROOT, CONFIGS/'benchmark-search.json', output/'search', formal=True)
+    if record['status'] != 'completed':
+        raise RuntimeError(record['error'])
+    result = summarize(output)
+    write_json(output/'summary.json', result)
+    return result
 
 
-if __name__=='__main__':
-    p = argparse.ArgumentParser(description=__doc__); p.add_argument('operation', choices=['prepare','run','validate']); p.add_argument('--optimized')
+if __name__ == '__main__':
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('operation', choices=['run', 'validate'])
+    p.add_argument('--output', required=True)
     a = p.parse_args()
-    r = prepare(a.optimized) if a.operation=='prepare' else run() if a.operation=='run' else summarize(RESULTS/'r5-performance-v1')
-    print(json.dumps(r, indent=2))
-    if isinstance(r, dict) and r.get('status')=='FAIL': raise SystemExit(1)
+    print(json.dumps(run(a.output) if a.operation == 'run' else summarize(a.output), indent=2))

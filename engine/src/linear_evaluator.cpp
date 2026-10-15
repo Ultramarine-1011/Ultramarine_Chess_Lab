@@ -15,9 +15,8 @@ bool valid_hash(const std::string& value) {
     });
 }
 }
-LinearEvaluator LinearEvaluator::load(const FeatureExtractor& features, const std::string& path,
+LinearEvaluator LinearEvaluator::load(const std::string& path,
                                       const std::string& expected_sha256) {
-    if (features.name() != "handcrafted-v1") throw std::invalid_argument("linear feature version mismatch");
     if (!valid_hash(expected_sha256)) throw std::invalid_argument("expected model SHA-256 required");
     std::ifstream file(path, std::ios::binary);
     if (!file) throw std::invalid_argument("cannot open model file");
@@ -46,20 +45,17 @@ LinearEvaluator LinearEvaluator::load(const FeatureExtractor& features, const st
         if (error != std::errc{} || end != token.data() + token.size() || !std::isfinite(weights[i]) ||
             std::abs(weights[i]) > 10000) throw std::invalid_argument("invalid model weight");
     }
+    static const HandcraftedFeatures features;
     static const InterpretableFeatures extended;
     return LinearEvaluator(expanded ? static_cast<const FeatureExtractor&>(extended) : features,
                            std::move(weights), expected_sha256);
 }
 double LinearEvaluator::white_score(const chess::Board& board) const {
     const auto values = features_.extract(board);
-    if (values.size() != weights_.size()) throw std::invalid_argument("linear feature dimension mismatch");
     double score = 0;
     for (std::size_t i = 0; i < weights_.size(); ++i) {
-        if (!std::isfinite(values[i])) throw std::invalid_argument("nonfinite linear feature");
         score += static_cast<double>(values[i]) * weights_[i];
     }
-    // Valid handcrafted-v1 chess features are far below this conversion bound.
-    if (!std::isfinite(score) || std::abs(score) > 100000000) throw std::invalid_argument("linear score out of range");
     return score;
 }
 int LinearEvaluator::evaluate(const chess::Board& board) const {

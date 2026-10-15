@@ -20,7 +20,14 @@ from ucl.records import sha256, write_json
 def build_revision(revision):
     full = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "--verify", revision + "^{commit}"], text=True).strip()
     output = ROOT / ".tools" / "engines" / full
-    output.mkdir(parents=True, exist_ok=False)
+    manifest_path = output / 'manifest.json'
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text())
+        if sha256(manifest['binary']) != manifest['sha256']:
+            raise ValueError('cached binary differs from its manifest')
+        print(manifest_path)
+        return
+    output.mkdir(parents=True, exist_ok=True)
     commands = []
     with tempfile.TemporaryDirectory(prefix="ucl-revision-") as tmp:
         source = Path(tmp) / "source"

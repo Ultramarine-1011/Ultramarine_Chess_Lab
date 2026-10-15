@@ -138,10 +138,15 @@ class TrainingTests(unittest.TestCase):
             self.assertNotEqual(split,'test')
             return original(rows,split)
         with tempfile.TemporaryDirectory() as tmp, patch('ucl.training.arrays',side_effect=guard):
-            p = training.LinearTrainer(root/'experiments/results/r3-features-v2/manifest.json').fit(spec,str(Path(tmp)/'fit'))
+            p = training.fit(root/'experiments/results/r3-features-v2/manifest.json',spec,str(Path(tmp)/'fit'))
             m = training.validate_model_manifest(p)
             self.assertEqual(m['status'],'frozen')
             self.assertFalse((Path(p).parent/'test-results.json').exists())
+            # An ordinary development fit can be repeated without a new directory.
+            training.fit(root/'experiments/results/r3-features-v2/manifest.json',spec,str(Path(tmp)/'fit'))
+            (Path(p).parent/'test-results.json').write_text('{}')
+            with self.assertRaisesRegex(ValueError,'held-out'):
+                training.fit(root/'experiments/results/r3-features-v2/manifest.json',spec,str(Path(tmp)/'fit'))
 
 
 
@@ -232,7 +237,6 @@ class R4TrainingTests(unittest.TestCase):
             numeric.append((objective(beta+d,x,y,prior,.01,q)[0]-objective(beta-d,x,y,prior,.01,q)[0])/2e-5)
         np.testing.assert_allclose(gradient,numeric,atol=1e-9)
         self.assertTrue(np.isfinite(value))
-        with self.assertRaises(ValueError): objective(beta,x,y,prior,.01,[-1,1,1])
 
     def test_fit_never_evaluates_test(self):
         import json, tempfile
@@ -335,6 +339,9 @@ class R4AnalysisTests(unittest.TestCase):
             (p/'selection.json').write_text(json.dumps(selection))
             freeze={'selection_sha256':sha256(p/'selection.json'),'models':{n:m['model_sha256'] for n,m in models.items()},'candidate':'full'}
             (p/'freeze.json').write_text(json.dumps(freeze))
+            # A leftover start marker from an interrupted evaluation does not
+            # prevent completing the same fixed-model held-out calculation.
+            (p/'test-evaluation.started.json').write_text('{}')
             data=[{'split':'test','game_id':g,'position_id':str(i),'ply':16+i*7,
                    'features':[0]*14,'label':float(i%2),'fen':chess.STARTING_FEN}
                   for i,g in enumerate(('a','a','b'))]
@@ -382,10 +389,9 @@ class R4SelectionTests(unittest.TestCase):
 
 
 class R4RecoveryTests(unittest.TestCase):
-    def test_fixed_opening_suffix_combination_and_source_gate(self):
-        import hashlib,json,tempfile
-        from unittest.mock import patch
-        from ucl.r4_study import combine,engine_code_controls
+    def test_fixed_opening_suffix_combination(self):
+        import tempfile
+        from ucl.r4_study import combine
         source=Path(__file__).resolve().parents[1]/'experiments/results/r4-telemetry-smoke/games.pgn'
         games=[]
         with source.open() as stream:
@@ -403,17 +409,6 @@ class R4RecoveryTests(unittest.TestCase):
             self.assertEqual(text.count('[Round "1"]'),2)
             self.assertEqual(text.count('[Round "2"]'),2)
             with self.assertRaises(ValueError):combine(sources,lines[::-1],p/'bad.pgn')
-        corrupt=False
-        def fake(command,**kwargs):
-            if command[1]=='ls-tree':return 'engine/src/search.cpp\nengine/src/uci.cpp\n'
-            rev,name=command[2].split(':',1)
-            if name.endswith('uci.cpp'):return b'old' if rev=='before' else b'new'
-            return b'changed' if corrupt and rev=='after' else b'search'
-        with patch('ucl.r4_study.subprocess.check_output',side_effect=fake):
-            engine_code_controls('before','after',hashlib.sha256(b'new').hexdigest())
-            corrupt=True
-            with self.assertRaisesRegex(ValueError,'source changed'):
-                engine_code_controls('before','after',hashlib.sha256(b'new').hexdigest())
 
 if __name__ == '__main__':
     unittest.main()

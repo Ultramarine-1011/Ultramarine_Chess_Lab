@@ -23,6 +23,7 @@
     "summary"
   ],
   "properties": {
+    "mode": {"enum": ["exploratory", "formal"]},
     "schema_version": {
       "const": 1
     },

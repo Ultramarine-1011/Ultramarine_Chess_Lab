@@ -6,6 +6,7 @@
   "additionalProperties": false,
   "required": ["schema_version", "id", "kind", "status", "started_at", "finished_at", "code", "parameters", "seed", "hardware", "tools", "engines", "artifacts", "results", "error"],
   "properties": {
+    "mode": {"enum": ["exploratory", "formal"]},
     "schema_version": {"const": 1},
     "id": {"type": "string", "format": "uuid"},
     "kind": {"enum": ["match"]},

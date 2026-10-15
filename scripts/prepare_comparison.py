@@ -22,7 +22,7 @@ def prepare(baseline, candidate, output):
                         "options": {"MoveOverhead": 0}})
     entries[0]["options"].update(Quiescence=True, UseTT=True, PVOrdering=True, Hash=16)
     validate_comparison({"comparison": "revision"}, [dict(e, sha256=m["sha256"], build_info=m["build_info"]) for e, m in zip(entries, manifests, strict=True)])
-    output = Path(output); output.mkdir(parents=True, exist_ok=False)
+    output = Path(output); output.mkdir(parents=True, exist_ok=True)
     write_json(output / "match.json", {"version": 1, "comparison": "revision", "seed": 20261015,
         "engines": entries, "rounds": 8, "games": 2, "concurrency": 1, "tc": "30+0.1", "depth": 4,
         "openings": {"path": "experiments/openings/r2.epd", "format": "epd", "order": "sequential"},

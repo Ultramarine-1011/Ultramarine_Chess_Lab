@@ -17,19 +17,20 @@ def main():
     match.add_argument("--config", type=Path, required=True)
     match.add_argument("--output", type=Path, required=True)
     match.add_argument("--fastchess", default="fastchess")
-    match.add_argument("--allow-dirty", action="store_true")
     bench = commands.add_parser("benchmark")
     bench.add_argument("--config", type=Path, required=True)
     bench.add_argument("--output", type=Path, required=True)
-    bench.add_argument("--allow-dirty", action="store_true")
+    for runner in (match, bench):
+        runner.add_argument("--formal", action="store_true", help="check binary provenance and comparison controls")
+        runner.add_argument("--overwrite", action="store_true", help="replace an untracked exploratory run")
     for name in ("validate", "report"):
         sub = commands.add_parser(name)
         sub.add_argument("record", type=Path)
     args = parser.parse_args()
     try:
         if args.command in ("match", "benchmark"):
-            record = (run_match(args.root, args.config, args.output, args.fastchess, args.allow_dirty)
-                      if args.command == "match" else run_benchmark(args.root, args.config, args.output, args.allow_dirty))
+            record = (run_match(args.root, args.config, args.output, args.fastchess, formal=args.formal, overwrite=args.overwrite)
+                      if args.command == "match" else run_benchmark(args.root, args.config, args.output, formal=args.formal, overwrite=args.overwrite))
             print(f"{record['status']}: {args.output / 'record.json'}")
             if record["status"] != "completed":
                 parser.exit(1, record["error"] + "\n")

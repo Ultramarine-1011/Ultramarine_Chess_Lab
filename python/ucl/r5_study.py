@@ -1,13 +1,9 @@
 """Bounded R5 orchestration using existing match, benchmark and validation contracts."""
 import argparse
-import copy
-import gzip
 import json
 from pathlib import Path
-import shutil
-import subprocess
 
-from .records import git_state, sha256, utc_now, write_json
+from .records import write_json
 
 ROOT = Path(__file__).resolve().parents[2]
 ORIGINAL = 'f933fe24ed983cb011b7a1bb0b9382c36a9b8d11'
@@ -20,154 +16,22 @@ RESULTS = ROOT/'experiments/results'
 COMMON = {'Quiescence': True, 'UseTT': True, 'PVOrdering': True, 'Hash': 16, 'MoveOverhead': 10}
 
 
-def engine(name, optimized=None, hand=False):
-    revision = optimized or ORIGINAL
-    return {'name': name, 'path': f'.tools/engines/{revision}/ucl.exe', 'revision': revision,
-            'build': 'isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread',
-            'ucl_build_info': True,
-            'options': {**COMMON, **({'Evaluator': 'Handcrafted'} if hand else
-                {'ModelSHA256': MODEL_SHA, 'ModelFile': MODEL, 'Evaluator': 'Linear'})}}
-
-
-def configs(optimized='HEAD'):
-    original = engine('OriginalFull14')
-    opt = engine('OptimizedFull14', optimized)
-    if optimized == 'HEAD':
-        opt['path'] = 'build/release/ucl.exe'
-    hand = engine('Handcrafted', hand=True)
-    for group, engines in {'A': [original, hand], 'B': [original, hand],
-                           'C': [opt, hand], 'D': [opt, original]}.items():
-        config = {'version': 1, 'comparison': 'ablation' if group in 'AB' else 'revision',
-                  'seed': SEED, 'engines': engines, 'rounds': 200, 'games': 2, 'concurrency': 1,
-                  'tc': '1000+10' if group == 'B' else '1+0.01', 'maxmoves': 150,
-                  'timeout_seconds': 21600, 'pgn_telemetry': True,
-                  'openings': {'path': 'experiments/results/r5-openings-v1/openings.epd',
-                               'format': 'epd', 'order': 'sequential'}}
-        if group == 'B':
-            config['nodes'] = 50000
-        yield group, config
-
-
-def prepare():
-    EVIDENCE.mkdir(parents=True, exist_ok=True)
-    CONFIGS.mkdir(parents=True, exist_ok=False)
-    from .match import validate_config
-    for group, config in configs():
-        validate_config(config)
-        write_json(CONFIGS/f'{group}.json', config)
-    tracked = subprocess.check_output(['git', 'ls-files', 'experiments/results', 'docs/r3', 'docs/r4'],
-                                      cwd=ROOT, text=True).splitlines()
-    write_json(EVIDENCE/'r4-preservation-before.json', {n: sha256(ROOT/n) for n in tracked})
-    src = ROOT/'.tools/engines'/ORIGINAL
-    shutil.copyfile(src/'manifest.json', EVIDENCE/'original-build.json')
-    shutil.copyfile(src/'build.log', EVIDENCE/'original-build.log')
-    for name in ('fastchess-help.log', 'fastchess-version.log'):
-        shutil.copyfile(ROOT/'.tools/r5-preflight'/name, EVIDENCE/name)
-    write_json(EVIDENCE/'tool.json', {'path': '.tools/bin/fastchess.exe',
-        'sha256': sha256(ROOT/'.tools/bin/fastchess.exe'),
-        'r4_mac_revision': 'ebfd64cb7fac80d4822c50b07dca4fe934779d21',
-        'r5_revision': 'f618e34540f94f4719ad3817950618dabe441318'})
-
-
-def preflight():
-    from .integrity import validate_bundle
+def matches(output, fastchess):
+    """Execute the stored schedule only when explicitly invoked."""
     from .match import run_match
-    schema = json.loads((ROOT/'schemas/experiment-v1.schema.json').read_text())
-    outcomes = {}
-    for group, config in configs():
-        # Real runner/parser coverage of all four shapes before optimized code exists.
-        # Explicit smoke identity; formal configuration keeps its strict comparison.
-        config = copy.deepcopy(config)
-        config.update(comparison='smoke', rounds=1, maxmoves=3, timeout_seconds=120)
-        config['openings']['path'] = 'experiments/results/r4-openings-v1/openings.epd'
-        for e in config['engines']:
-            e['path'] = f'.tools/engines/{ORIGINAL}/ucl.exe'
-            e['revision'] = ORIGINAL
-        path = ROOT/'.tools/r5-preflight'/f'{group}.json'
-        write_json(path, config)
-        output = RESULTS/f'r5-preflight-v2-{group.lower()}'
-        record = run_match(ROOT, path, output, '.tools/bin/fastchess.exe', allow_dirty=True)
+    records = {}
+    for group in 'ABCD':
+        record = run_match(ROOT, CONFIGS/f'{group}.json', Path(output)/group, fastchess, formal=True)
         if record['status'] != 'completed':
-            raise ValueError(f'preflight {group} failed: {record["error"]}')
-        validate_bundle(output/'record.json', schema)
-        outcomes[group] = {'record': str(output.relative_to(ROOT)/'record.json'),
-                           'record_sha256': sha256(output/'record.json'), 'status': record['status']}
-        if group == 'B':
-            text = gzip.decompress((output/'engine.log.gz').read_bytes()).decode()
-            go = [line for line in text.splitlines() if 'go ' in line and 'nodes' in line]
-            stats = [json.loads(line.split('ucl_stats ', 1)[1]) for line in text.splitlines()
-                     if 'info string ucl_stats ' in line]
-            if not go or not stats or any(r['nodes'] != 50000 for r in stats):
-                raise ValueError('nodes preflight did not exhaust exactly 50000 nodes')
-            outcomes[group].update(go_commands=go, stats=stats)
-    write_json(EVIDENCE/'preflight.json', {'code': git_state(ROOT), 'at': utc_now(), 'groups': outcomes})
-    return outcomes
-
-
-def freeze(optimized):
-    from .match import capture_engine, validate_config, validate_comparison
-    from .r5_openings import validate
-    validate(RESULTS/'r5-openings-v1')
-    controls = {}
-    for group, config in configs(optimized):
-        validate_config(config)
-        entries = [capture_engine(ROOT, e, git_state(ROOT)['revision']) for e in config['engines']]
-        validate_comparison(config, entries)
-        write_json(CONFIGS/f'{group}.json', config)
-        controls[group] = entries
-    frozen = {'kind': 'r5-formal-freeze', 'at': utc_now(), 'code': git_state(ROOT),
-              'original': ORIGINAL, 'optimized': optimized, 'engines': controls,
-              'protocol_sha256': sha256(ROOT/'docs/r5/protocol.md'),
-              'analysis_sha256': sha256(Path(__file__)), 'tool_sha256': sha256(ROOT/'.tools/bin/fastchess.exe'),
-              'support_code': {n: sha256(ROOT/n) for n in ('python/ucl/r5_analysis.py', 'python/ucl/r5_performance.py', 'python/ucl/r5_equivalence.py')},
-              'openings_sha256': sha256(RESULTS/'r5-openings-v1/openings.epd'),
-              'configs': {g: sha256(CONFIGS/f'{g}.json') for g in 'ABCD'}}
-    target = EVIDENCE/'formal-freeze.json'
-    if target.exists():
-        raise ValueError('formal freeze already exists')
-    write_json(target, frozen)
-    return frozen
-
-
-def matches():
-    """Run the frozen fixed schedule once. Failed groups require explicit recovery."""
-    from .match import run_match
-    from .integrity import validate_bundle
-    from .r5_performance import host
-    if git_state(ROOT)['dirty']: raise ValueError('formal run requires clean working tree')
-    frozen = json.loads((EVIDENCE/'formal-freeze.json').read_text())
-    if sha256(Path(__file__))!=frozen['analysis_sha256']: raise ValueError('frozen runner changed')
-    if sha256(ROOT/'.tools/bin/fastchess.exe')!=frozen['tool_sha256']: raise ValueError('tool changed')
-    for name, h in frozen['support_code'].items():
-        if sha256(ROOT/name)!=h: raise ValueError('frozen support code changed: '+name)
-    if sha256(RESULTS/'r5-openings-v1/openings.epd')!=frozen['openings_sha256']: raise ValueError('openings changed')
-    conditions = RESULTS/'r5-match-conditions-v1'; conditions.mkdir(parents=True, exist_ok=False)
-    index = {'code': git_state(ROOT), 'status': 'running', 'groups': {}, 'error': None}
-    write_json(conditions/'index.json', index)
-    try:
-        for group in 'ABCD':
-            if sha256(CONFIGS/f'{group}.json')!=frozen['configs'][group]: raise ValueError('config changed')
-            if shutil.disk_usage(ROOT).free<10*1024**3: raise ValueError('disk guard failed')
-            host(conditions/f'{group}-before.json')
-            output = RESULTS/f'r5-match-{group.lower()}-v1'
-            record = run_match(ROOT, CONFIGS/f'{group}.json', output, '.tools/bin/fastchess.exe')
-            index['groups'][group] = {'status': record['status'], 'record_sha256': sha256(output/'record.json')}
-            write_json(conditions/'index.json', index)
-            host(conditions/f'{group}-after.json')
-            if record['status']!='completed': raise ValueError(f'{group}: {record["error"]}')
-            validate_bundle(output/'record.json', json.loads((ROOT/'schemas/experiment-v1.schema.json').read_text()))
-        index['status'] = 'PASS'
-    except Exception as exc:
-        index.update(status='FAIL', error=f'{type(exc).__name__}: {exc}')
-    write_json(conditions/'index.json', index)
-    return index
+            raise RuntimeError(f"{group}: {record['error']}")
+        records[group] = record['results']
+    write_json(Path(output)/'summary.json', records)
+    return records
 
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('operation', choices=['prepare', 'preflight', 'freeze', 'matches'])
-    p.add_argument('--optimized')
+    p.add_argument('--output', required=True)
+    p.add_argument('--fastchess', default='fastchess')
     a = p.parse_args()
-    result = {'prepare': prepare, 'preflight': preflight, 'freeze': lambda: freeze(a.optimized), 'matches': matches}[a.operation]()
-    print(json.dumps(result, indent=2))
-    if isinstance(result, dict) and result.get('status')=='FAIL': raise SystemExit(1)
+    print(json.dumps(matches(a.output, a.fastchess), indent=2))

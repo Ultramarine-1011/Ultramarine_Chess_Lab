@@ -1,7 +1,0 @@
-{
-  "error": {
-    "code": -32603,
-    "message": "failed to reload config: /Users/ultramarine/.codex/config.toml:130:31: unknown variant `writes`, expected one of `auto`, `prompt`, `approve`"
-  },
-  "id": 2
-}

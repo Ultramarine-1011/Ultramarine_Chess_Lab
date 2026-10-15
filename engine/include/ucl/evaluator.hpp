@@ -48,7 +48,7 @@ private:
 class LinearEvaluator final : public Evaluator {
 public:
     // Loading is transactional: this function returns a fully validated value or throws.
-    [[nodiscard]] static LinearEvaluator load(const FeatureExtractor&, const std::string& path,
+    [[nodiscard]] static LinearEvaluator load(const std::string& path,
                                                const std::string& expected_sha256);
     [[nodiscard]] int evaluate(const chess::Board&) const override;
     [[nodiscard]] std::string_view name() const override { return features_.name() == "interpretable-v2" ? "linear-v2" : "linear-v1"; }

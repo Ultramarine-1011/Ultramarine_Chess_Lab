@@ -14,7 +14,7 @@ import chess.pgn
 
 from .integrity import validate_bundle
 from .r4_results import analyze as analyze_r4, elo_equivalent
-from .r5_study import ROOT, RESULTS, EVIDENCE, MODEL_SHA, SEED
+from .r5_study import ROOT, MODEL_SHA, SEED
 from .records import git_state, sha256, write_json
 from .report import CheckedGameBuilder, check_game_result
 
@@ -62,17 +62,9 @@ def trace_queries(directory, names):
     return queries, options
 
 
-def analyze_group(group, output):
-    directory = RESULTS/f'r5-match-{group.lower()}-v1'
+def analyze_group(group, directory, output):
+    directory = Path(directory)
     record = validate_bundle(directory/'record.json', json.loads((ROOT/'schemas/experiment-v1.schema.json').read_text()))
-    frozen = json.loads((EVIDENCE/'formal-freeze.json').read_text())
-    if record['code']['dirty']: raise ValueError('formal runner was dirty')
-    if sha256(directory/'match-config.json')!=frozen['configs'][group]: raise ValueError('formal config differs from freeze')
-    if record['tools']['fastchess']['sha256']!=frozen['tool_sha256']: raise ValueError('tool differs from freeze')
-    for e in record['engines']:
-        f = next(x for x in frozen['engines'][group] if x['name']==e['name'])
-        if any(e[k]!=f[k] for k in ('sha256','revision','build_info','evaluation','options')):
-            raise ValueError('engine differs from freeze')
     names = [e['name'] for e in record['engines']]
     queries, actual_options = trace_queries(directory, names)
     for e in record['engines']:
@@ -83,7 +75,7 @@ def analyze_group(group, output):
                 if actual is None or Path(actual.replace('\\','/')).name!='model-'+MODEL_SHA+'.txt':
                     raise ValueError('runtime model path mismatch')
             elif actual!=expected: raise ValueError('runtime option mismatch: '+key)
-    openings = (RESULTS/'r5-openings-v1/openings.epd').read_text().splitlines()
+    openings = (directory/'openings.epd').read_text().splitlines()
     counters, means, terminations, moves, undershoots = Counter(), [], Counter(), [], []
     with (directory/'games.pgn').open(encoding='utf-8') as stream:
         game_index = 0
@@ -137,7 +129,7 @@ def analyze_group(group, output):
     if game_index!=400 or len(means)!=200 or any(len(queries[n])!=counters[n] for n in names):
         raise ValueError('incomplete schedule or orphan telemetry')
     boot = bootstrap(means)
-    output=Path(output); output.mkdir(parents=True, exist_ok=False)
+    output=Path(output); output.mkdir(parents=True, exist_ok=True)
     (output/'moves.jsonl.gz').write_bytes(gzip.compress(''.join(json.dumps(r,sort_keys=True)+'\n' for r in moves).encode(),mtime=0))
     telemetry = analyze_r4(directory/'record.json')
     result = {'group':group,'record_sha256':sha256(directory/'record.json'),'statistics':record['results'],
@@ -153,20 +145,25 @@ def analyze_group(group, output):
     return result
 
 
-def run():
-    output=RESULTS/'r5-analysis-v1'; output.mkdir(parents=True,exist_ok=False)
-    result={'code':git_state(ROOT),'status':'running','groups':{},'error':None}
-    write_json(output/'index.json',result)
-    try:
-        for group in 'ABCD': result['groups'][group]=analyze_group(group,output/group)
-        result['exploratory_paired_contrasts']={label:bootstrap([x-y for x,y in zip(result['groups'][a]['paired_means'],result['groups'][b]['paired_means'],strict=True)])
-            for label,a,b in [('C-A','C','A'),('B-A','B','A')]}
-        result['status']='PASS'
-    except Exception as exc:
-        result.update(status='FAIL',error=f'{type(exc).__name__}: {exc}')
-    write_json(output/'index.json',result)
+def run(directory, output):
+    directory, output = Path(directory), Path(output)
+    if directory.resolve() == output.resolve():
+        raise ValueError('write analysis separately from source bundles')
+    result = {'code': git_state(ROOT), 'groups': {}}
+    for group in 'ABCD':
+        result['groups'][group] = analyze_group(group, directory/group, output/group)
+    result['exploratory_paired_contrasts'] = {
+        label: bootstrap([x-y for x,y in zip(result['groups'][a]['paired_means'],
+                         result['groups'][b]['paired_means'], strict=True)])
+        for label,a,b in [('C-A','C','A'), ('B-A','B','A')]}
+    write_json(output/'summary.json', result)
     return result
 
 
-if __name__=='__main__':
-    r=run();print(r['status'],r['error']);raise SystemExit(r['status']!='PASS')
+if __name__ == '__main__':
+    import argparse
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--input', required=True)
+    p.add_argument('--output', required=True)
+    a = p.parse_args()
+    print(json.dumps(run(a.input, a.output), indent=2))

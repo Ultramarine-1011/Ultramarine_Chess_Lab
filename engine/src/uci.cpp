@@ -110,7 +110,7 @@ int run_uci(std::istream& in, std::ostream& out) {
                     const auto value_at = line.find(" value ");
                     if (value_at == std::string::npos) throw std::invalid_argument("ModelFile requires value");
                     const auto path = line.substr(value_at + 7);
-                    auto candidate = std::make_shared<LinearEvaluator>(LinearEvaluator::load(features, path, expected_model_hash));
+                    auto candidate = std::make_shared<LinearEvaluator>(LinearEvaluator::load(path, expected_model_hash));
                     const bool active_linear = evaluator == linear;
                     stop();
                     linear = std::move(candidate);

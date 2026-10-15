@@ -9,8 +9,8 @@ from unittest.mock import patch
 
 from jsonschema import ValidationError
 
-from ucl.match import command, run_match, run_process, validate_config, validate_comparison
-from ucl.records import new_record, validate_record, write_json, sha256, utc_now
+from ucl.match import command, capture_engine, run_match, run_process, validate_config, validate_comparison
+from ucl.records import new_record, prepare_output, validate_record, write_json, sha256
 from ucl.integrity import validate_bundle
 from ucl.report import summarize_pgn
 from ucl.benchmark import uci_score_cp
@@ -52,6 +52,10 @@ class ExperimentTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'raw telemetry'):validate_telemetry(record,p)
             record['artifacts'].clear()
             with self.assertRaisesRegex(ValueError,'missing match telemetry'):validate_telemetry(record,p)
+            # New runs retain one compressed-file hash in artifacts.
+            record['artifacts']['engine.log.gz']={}
+            record['tools']['telemetry']={'file':'engine.log.gz'}
+            validate_telemetry(record,p)
 
     def test_failed_prefix_requires_explicit_opt_in(self):
         import shutil
@@ -131,12 +135,43 @@ class ExperimentTests(unittest.TestCase):
             output = Path(tmp) / "failed"
             # A missing executable fails before any external process is launched.
             record = run_match(ROOT, ROOT / "experiments/configs/smoke.json", output,
-                               fastchess="/missing/ucl-fastchess", allow_dirty=True)
+                               fastchess="/missing/ucl-fastchess")
             self.assertEqual(record["status"], "failed")
             validate_record(json.loads((output / "record.json").read_text()), SCHEMA)
             self.assertTrue((output / "report.md").exists())
             with self.assertRaises(FileExistsError):
-                run_match(ROOT, ROOT / "experiments/configs/smoke.json", output, allow_dirty=True)
+                run_match(ROOT, ROOT / "experiments/configs/smoke.json", output)
+            # Ordinary dirty runs can retry in place, including after failure.
+            record = run_match(ROOT, ROOT / "experiments/configs/smoke.json", output,
+                               fastchess="/missing/ucl-fastchess", overwrite=True)
+            self.assertEqual(record['mode'], 'exploratory')
+            self.assertEqual(record['status'], 'failed')
+
+    def test_overwrite_preserves_archived_and_tracked_evidence(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            subprocess.run(['git','init',str(root)],check=True,capture_output=True)
+            output=root/'run'
+            prepare_output(root,output)
+            for record in ({'status':'failed'}, {'mode':'formal'}):
+                write_json(output/'record.json',record)
+                with self.assertRaisesRegex(ValueError,'only exploratory'):
+                    prepare_output(root,output,overwrite=True)
+            write_json(output/'record.json',{'mode':'exploratory'})
+            subprocess.run(['git','-C',str(root),'add','run/record.json'],check=True)
+            with self.assertRaisesRegex(ValueError,'tracked'):
+                prepare_output(root,output,overwrite=True)
+            self.assertTrue((output/'record.json').exists())
+
+    def test_build_provenance_is_recorded_without_blocking_exploration(self):
+        engine={**CONFIG['engines'][0], 'path':sys.executable, 'ucl_build_info':True}
+        info={'revision':'a'*40,'dirty':True}
+        with patch('ucl.match.subprocess.check_output',return_value=json.dumps(info)):
+            entry=capture_engine(ROOT,engine,'b'*40)
+            self.assertEqual(entry['revision'],info['revision'])
+            self.assertEqual(entry['build_info'],info)
+            with self.assertRaisesRegex(ValueError,'formal comparison'):
+                capture_engine(ROOT,engine,'b'*40,formal=True)
 
     def test_bundle_integrity_and_tampering(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -165,7 +200,7 @@ class ExperimentTests(unittest.TestCase):
 
             with patch("ucl.match.run_process", side_effect=fake_match), patch(
                     "ucl.match.subprocess.check_output", side_effect=output_for):
-                record = run_match(ROOT, source, output, fastchess=sys.executable, allow_dirty=True)
+                record = run_match(ROOT, source, output, fastchess=sys.executable)
             self.assertEqual(record["status"], "completed", record["error"])
             self.assertEqual(json.loads((output / "match-config.json").read_text()), config)
             path = output / "record.json"
