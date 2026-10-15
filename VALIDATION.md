@@ -811,3 +811,19 @@ write_json后续显式newline=LF，保持跨平台生成一致。R3/R4文件未�
 组件profile已在2bd3111 clean源码上实际运行210条：全提取153.46ns，去王环127.03ns，
 去通路兵141.18ns；为移除组件的诊断，不把差值当可加因果成本。
 接下来选择预计算通路兵mask、合并已有扫描/向量分配的局部候选；保留王环isAttacked语义。
+
+### R5.2 等价局部优化验收
+
+profile选择局部修改extended_features.cpp：以2×64常量掩码替代逐兵敌兵扫描，
+合并v1计数/兵推进/phase读取，直接分配14维vector，避免先8维再resize的第二次分配。
+保留王环board.isAttacked、Handcrafted、LinearEvaluator、Search、UCI与所有模型原字节。
+未增加搜索状态、算法或增量缓存。profile-original.json保留210次原始诊断和源码/编译命令。
+诊断candidate实际构建为b339fa6+dirty（只含候选源码/等价工具/新增回归），Release6/6退出0。
+全44681保留R4位置+2048固定随机合法位置+19边界+2067镜像，共48815位置：
+原/候选14维值、unrounded白方double（binary64 round-trip）、最终cp全部精确相同，
+同时逐局面对独立python-chess特征reference核对。61局面×depth3/4/nodes50000×两引擎
+共366查询，move/score/PV/depth/nodes/qnodes/全部TT与ordering counters逐项相等，异常0。
+原始导出/位置/搜索trace/所有行见r5-equivalence-diagnostic-v1；dirty诊断不冒称clean正式证据。
+新增Windows原始bundle跨平台字节回归与JSON换行断言，防止归档问题复发。
+R5.2技术门已通过；提交后立即独立clean构建并重复同一比较，正式采用clean二进制身份。
+R5.1 Actions#38770217890已success；归档字节修复b339fa6 CI仍运行，后续追踪。

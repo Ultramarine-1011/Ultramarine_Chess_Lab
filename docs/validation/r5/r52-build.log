@@ -1,0 +1,5 @@
+[1/5] Building CXX object CMakeFiles\ucl_core.dir\engine\src\extended_features.cpp.obj
+[2/5] Linking CXX static library ucl_core.lib
+[3/5] Linking CXX executable ucl_tests.exe
+[4/5] Building CXX object CMakeFiles\ucl.dir\engine\src\main.cpp.obj
+[5/5] Linking CXX executable ucl.exe

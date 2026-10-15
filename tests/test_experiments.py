@@ -84,7 +84,13 @@ class ExperimentTests(unittest.TestCase):
             path = Path(tmp) / "record.json"
             write_json(path, record)
             self.assertEqual(json.loads(path.read_text()), record)
+            self.assertNotIn(b'\r\n', path.read_bytes())
             self.assertEqual(len(list(Path(tmp).iterdir())), 1)
+
+    def test_r5_windows_bundles_preserve_hashed_bytes(self):
+        for group in 'abcd':
+            path = ROOT / f'experiments/results/r5-preflight-v2-{group}/record.json'
+            self.assertEqual(validate_bundle(path, SCHEMA)['status'], 'completed')
 
     def test_pgn_pair_statistics_and_truncation(self):
         with tempfile.TemporaryDirectory() as tmp:
