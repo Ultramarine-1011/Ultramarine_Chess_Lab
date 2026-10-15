@@ -380,5 +380,40 @@ class R4SelectionTests(unittest.TestCase):
         self.assertEqual(choose(models,{'refit8':1,'pawn':1,'king':1,'full':11}),'pawn')
         with self.assertRaises(ValueError):choose(models,{n:11 for n in GROUPS})
 
+
+class R4RecoveryTests(unittest.TestCase):
+    def test_fixed_opening_suffix_combination_and_source_gate(self):
+        import hashlib,json,tempfile
+        from unittest.mock import patch
+        from ucl.r4_study import combine,engine_code_controls
+        source=Path(__file__).resolve().parents[1]/'experiments/results/r4-telemetry-smoke/games.pgn'
+        games=[]
+        with source.open() as stream:
+            while (g:=chess.pgn.read_game(stream)) is not None:games.append(g)
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp);sources=[];lines=[]
+            for part in range(2):
+                group=games[2*part:2*part+2]
+                lines.append(group[0].board().epd())
+                for g in group:g.headers['Round']='1'
+                path=p/f'{part}.pgn';path.write_text('\n\n'.join(str(g) for g in group))
+                sources.append((path,part,2))
+            combine(sources,lines,p/'combined.pgn')
+            text=(p/'combined.pgn').read_text()
+            self.assertEqual(text.count('[Round "1"]'),2)
+            self.assertEqual(text.count('[Round "2"]'),2)
+            with self.assertRaises(ValueError):combine(sources,lines[::-1],p/'bad.pgn')
+        corrupt=False
+        def fake(command,**kwargs):
+            if command[1]=='ls-tree':return 'engine/src/search.cpp\nengine/src/uci.cpp\n'
+            rev,name=command[2].split(':',1)
+            if name.endswith('uci.cpp'):return b'old' if rev=='before' else b'new'
+            return b'changed' if corrupt and rev=='after' else b'search'
+        with patch('ucl.r4_study.subprocess.check_output',side_effect=fake):
+            engine_code_controls('before','after',hashlib.sha256(b'new').hexdigest())
+            corrupt=True
+            with self.assertRaisesRegex(ValueError,'source changed'):
+                engine_code_controls('before','after',hashlib.sha256(b'new').hexdigest())
+
 if __name__ == '__main__':
     unittest.main()

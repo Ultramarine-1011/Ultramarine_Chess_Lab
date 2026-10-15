@@ -125,6 +125,16 @@ class UciTests(unittest.TestCase):
             p.send('setoption name Evaluator value Handcrafted');p.send('evalinfo')
             self.assertEqual(json.loads(p.until('info string ucl_evaluator ').removeprefix('info string ucl_evaluator ')),{'evaluator':'handcrafted-v1','model_sha256':None})
 
+    def test_zero_budget_reports_fallback_info(self):
+        p=self.pipe
+        p.send('position startpos');p.send('go movetime 0')
+        info=p.until('info depth 0 score cp ')
+        self.assertIn(' nodes ',info)
+        stats=json.loads(p.until('info string ucl_stats ').removeprefix('info string ucl_stats '))
+        self.assertEqual(stats['depth'],0)
+        move=p.until('bestmove ').split()[1]
+        self.assertIn(chess.Move.from_uci(move),chess.Board().legal_moves)
+
     def test_async_ready_stop_and_restart(self):
         p = self.pipe
         p.send("position startpos")

@@ -71,3 +71,28 @@ all374 moves have final stats; this diagnostic does not select model or openings
 Formal commands are in README; output `experiments/results/r4-match-final-20261015`
 is unique, 400 games/200 pairs. If `record.json` already exists, inspect process/
 status before any action; never restart just because a tool observation times out.
+
+## Fixed-sample protocol recovery
+
+Original run625d84e actually failed after120 completed games, rather than being
+lost to a tool observation timeout. Full raw bundle remains failed and immutable.
+
+```
+gh run view 38729565254 --log-failed
+# exact protocol+Windows fixture repair;625d84e+dirty:
+cmake --preset release -DPython3_EXECUTABLE="$PWD/.venv/bin/python"
+cmake --build --preset release --parallel 4
+ctest --preset release -R '^(uci|experiments)$'
+ctest --preset release
+# likewise debug/sanitize configure/build/ctest; logs r44-recovery-*
+.tools/bin/fastchess --compliance "$PWD/build/release/ucl"
+.venv/bin/python -m ucl.r4_study prepare
+.venv/bin/python -m ucl.r4_results experiments/results/r4-match-final-20261015/record.json --completed-prefix-games 120 --output experiments/results/r4-recovery-v1/prefix-analysis.json
+```
+
+The ordinary validator continues to reject the failed run. The explicit prefix
+operation checks all source hashes, all120 legal PGNs and60 full paired rounds;
+156 orphan queries in unfinished121 are preserved separately and excluded from
+move-cost totals. The recovery plan was saved before continuing the remaining
+original openings, with unchanged model/clock/total200 pairs and a frozen UCI-only
+patch. Record each batch's binary identity; never describe this as one uninterrupted run.

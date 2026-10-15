@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "id": "b409fed9-91a8-450f-875e-904d9ad2c21f",
+  "kind": "match",
+  "status": "failed",
+  "started_at": "2026-10-15T11:46:06.027450+00:00",
+  "finished_at": "2026-10-15T11:51:09.718642+00:00",
+  "code": {
+    "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+    "dirty": false
+  },
+  "parameters": {
+    "version": 1,
+    "comparison": "ablation",
+    "seed": 20261015,
+    "engines": [
+      {
+        "path": "build/release/ucl",
+        "revision": "HEAD",
+        "build": "CMake Release; same binary; one search thread",
+        "ucl_build_info": true,
+        "name": "full",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        }
+      },
+      {
+        "path": "build/release/ucl",
+        "revision": "HEAD",
+        "build": "CMake Release; same binary; one search thread",
+        "ucl_build_info": true,
+        "name": "Handcrafted",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Handcrafted"
+        }
+      }
+    ],
+    "rounds": 200,
+    "games": 2,
+    "concurrency": 1,
+    "tc": "1+0.01",
+    "maxmoves": 150,
+    "timeout_seconds": 10800,
+    "openings": {
+      "path": "experiments/results/r4-openings-v1/openings.epd",
+      "format": "epd",
+      "order": "sequential"
+    },
+    "pgn_telemetry": true
+  },
+  "seed": 20261015,
+  "hardware": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "tools": {
+    "fastchess": {
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/bin/fastchess",
+      "sha256": "11e7b51ce96815a362096fa3b64697b381257a61af42a7d215757a3dee56b39a",
+      "version": "fastchess alpha 1.8.2 20261011-ebfd64c"
+    },
+    "command": [
+      "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/bin/fastchess",
+      "-engine",
+      "cmd=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "name=full",
+      "proto=uci",
+      "option.ModelSHA256=43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "option.ModelFile=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-match-final-20261015/model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt",
+      "option.Evaluator=Linear",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-engine",
+      "cmd=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "name=Handcrafted",
+      "proto=uci",
+      "option.Evaluator=Handcrafted",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-each",
+      "tc=1+0.01",
+      "-rounds",
+      "200",
+      "-games",
+      "2",
+      "-concurrency",
+      "1",
+      "-maxmoves",
+      "150",
+      "-srand",
+      "20261015",
+      "-pgnout",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-match-final-20261015/games.pgn",
+      "append=false",
+      "nodes=true",
+      "nps=true",
+      "timeleft=true",
+      "latency=true",
+      "-log",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-match-final-20261015/engine.log",
+      "level=trace",
+      "engine=true",
+      "append=false",
+      "compress=false",
+      "-autosaveinterval",
+      "0",
+      "-strict",
+      "-openings",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-match-final-20261015/openings.epd",
+      "format=epd",
+      "order=sequential"
+    ],
+    "telemetry": {
+      "file": "engine.log.gz",
+      "raw_sha256": "019447f6b31519cb4c514a7aae5311226ee14f74adfc0a89f1075233d54a5bc7",
+      "raw_bytes": 44378976
+    }
+  },
+  "engines": [
+    {
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+      "build": "CMake Release; same binary; one search thread",
+      "name": "full",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+        "ModelFile": "experiments/results/r4-models-v1/full.txt",
+        "Evaluator": "Linear"
+      },
+      "sha256": "4792a7bd89b57059d77a941d5b7006a01913abbccd5a219e6ec13fa18aaefc06",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "linear-v2",
+        "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+      }
+    },
+    {
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+      "build": "CMake Release; same binary; one search thread",
+      "name": "Handcrafted",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Handcrafted"
+      },
+      "sha256": "4792a7bd89b57059d77a941d5b7006a01913abbccd5a219e6ec13fa18aaefc06",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "handcrafted-v1",
+        "model_sha256": null
+      }
+    }
+  ],
+  "artifacts": {
+    "model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "config.json": {
+      "sha256": "9ae3689deff82ea041a5184a497d0021ec6d0d0de84a535fe4903345b8ca81b1",
+      "bytes": 5366
+    },
+    "games.pgn": {
+      "sha256": "8a0176b8214a2901087a8332c37a9514f8b582b7d68d72f88bd7130cbd14dbd2",
+      "bytes": 1089867
+    },
+    "fastchess.log": {
+      "sha256": "88f42e942fd58312596a2d102ec291e7fdd301c8c959ec87c48c55fae070e719",
+      "bytes": 15358
+    },
+    "openings.epd": {
+      "sha256": "75d6915cab390a2187992d9cb0f4ea2cd99288f2117ee5619ee5d8741f0afa34",
+      "bytes": 15058
+    },
+    "match-config.json": {
+      "sha256": "911b78ab3af1f969ff2c81ca5256713e8284be1c3b6ccdb2eb789f50f718cf3f",
+      "bytes": 1275
+    },
+    "engine.log.gz": {
+      "sha256": "1a6ce7c2f49bfc98b1aab7d291e790f153d19897d062dd7c218f0a53c679b4c6",
+      "bytes": 3880039
+    }
+  },
+  "results": null,
+  "error": "RuntimeError: fastchess exited 1; see fastchess.log"
+}

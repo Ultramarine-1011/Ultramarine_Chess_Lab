@@ -257,3 +257,17 @@ OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/pyth
 `pgn_telemetry=true`保留每步PGN nodes/NPS/clock和原始UCI日志；赛后将日志原字节gzip，
 同时保存压缩/原字节hash。分析逐引擎核对全部PGN步数与最终ucl_stats覆盖，区分
 中断迭代节点和普通info最后完整层。已存在的冻结test/match不得再次执行或覆盖。
+
+本次R4原正式执行在60个完整配对后因零完成层缺普通info而中断，原目录永久保留failed。
+恢复方案严格保留这120局，仅续跑原开局61..200；不要重新运行原输出目录。
+
+```sh
+# plan已在续跑前冻结；完成协议修复提交后clean configure/build
+.venv/bin/ucl-lab match --config experiments/configs/r4-match-continuation.json --output experiments/results/r4-match-continuation-20261015 --fastchess .tools/bin/fastchess
+.venv/bin/python -m ucl.r4_study finalize
+.venv/bin/python -m ucl.r4_study validate
+```
+
+总体结果入口为`experiments/results/r4-study-final-20261015/record.json`，它保留两批
+实际binary身份、原失败状态、未完成局孤立查询和严格400局开局覆盖。普通validate
+仍拒绝failed原包；只有显式`--completed-prefix-games 120`可审计其完整前缀。

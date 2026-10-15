@@ -32,7 +32,7 @@ class ExperimentTests(unittest.TestCase):
         telemetry={**CONFIG,'pgn_telemetry':True}
         validate_config(telemetry)
         detailed=command(telemetry,[Path('/engine1'),Path('/engine2')],Path('/fastchess'),Path('/run/games.pgn'))
-        for item in ('nodes=true','nps=true','-log','file=/run/engine.log','engine=true'):
+        for item in ('nodes=true','nps=true','-log',f"file={Path('/run')/'engine.log'}",'engine=true'):
             self.assertIn(item,detailed)
         for field, value in (("rounds", 0), ("games", 1), ("seed", -1), ("depth", True), ('pgn_telemetry',1)):
             bad = deepcopy(CONFIG); bad[field] = value
@@ -52,6 +52,26 @@ class ExperimentTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'raw telemetry'):validate_telemetry(record,p)
             record['artifacts'].clear()
             with self.assertRaisesRegex(ValueError,'missing match telemetry'):validate_telemetry(record,p)
+
+    def test_failed_prefix_requires_explicit_opt_in(self):
+        import shutil
+        source=ROOT/'experiments/results/r4-telemetry-smoke'
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)/'prefix';shutil.copytree(source,p)
+            record=json.loads((p/'record.json').read_text())
+            record['status']='failed';record['error']='simulated protocol warning';record['results']=None
+            record['parameters']['rounds']=3
+            write_json(p/'match-config.json',record['parameters'])
+            record['artifacts']['match-config.json']={'sha256':sha256(p/'match-config.json'),'bytes':(p/'match-config.json').stat().st_size}
+            write_json(p/'record.json',record)
+            before=(p/'record.json').read_bytes()
+            with self.assertRaisesRegex(ValueError,'failed'):validate_bundle(p/'record.json',SCHEMA)
+            checked=validate_bundle(p/'record.json',SCHEMA,completed_prefix_games=4)
+            self.assertEqual(checked['status'],'failed')
+            self.assertEqual(checked['tools']['completed_prefix']['results']['paired_rounds'],2)
+            self.assertEqual(before,(p/'record.json').read_bytes())
+            for count in (2,3,6):
+                with self.assertRaises(ValueError):validate_bundle(p/'record.json',SCHEMA,completed_prefix_games=count)
 
     def test_schema_and_atomic_json(self):
         with patch("ucl.records.git_state", return_value={"revision": "a" * 40, "dirty": False}):

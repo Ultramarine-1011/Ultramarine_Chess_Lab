@@ -6,7 +6,7 @@ from .records import sha256, validate_record
 from .report import summarize_pgn
 
 
-def validate_bundle(record_path, schema):
+def validate_bundle(record_path, schema, completed_prefix_games=None):
     path = Path(record_path).resolve()
     record = json.loads(path.read_text(encoding="utf-8"))
     validate_record(record, schema)
@@ -31,7 +31,12 @@ def validate_bundle(record_path, schema):
     if "match-config.json" in record["artifacts"]:
         if json.loads((path.parent / "match-config.json").read_text(encoding="utf-8")) != config:
             raise ValueError("saved input configuration mismatch")
-    if record["status"] != "completed":
+    prefix = completed_prefix_games is not None
+    if prefix:
+        if (record['status']!='failed' or type(completed_prefix_games) is not int or completed_prefix_games<2
+                or completed_prefix_games%2 or completed_prefix_games>=config['rounds']*config['games']):
+            raise ValueError('invalid completed-prefix request')
+    elif record["status"] != "completed":
         raise ValueError(f"experiment is {record['status']}, not completed")
     required = {"games.pgn", "fastchess.log"}
     if "openings" in config:
@@ -53,12 +58,18 @@ def validate_bundle(record_path, schema):
     validate_comparison(config, record["engines"])
     a, b = config["engines"]
     results = summarize_pgn(path.parent / "games.pgn", a["name"], b["name"],
-                            config["rounds"] * config["games"], record["seed"])
+                            completed_prefix_games if prefix else config["rounds"] * config["games"], record["seed"])
     # Accept R1 records predating optional paired_score_counts, while checking
     # every statistic they actually retained.
-    if record["results"] != {k: results[k] for k in record["results"]}:
+    if not prefix and record["results"] != {k: results[k] for k in record["results"]}:
         raise ValueError("PGN/statistics mismatch")
-    if results["paired_rounds"] != config["rounds"] or any(
+    expected_rounds=completed_prefix_games//2 if prefix else config['rounds']
+    if results["paired_rounds"] != expected_rounds or any(
             reason not in ("normal", "adjudication") for reason in results["terminations"]):
         raise ValueError("invalid pairs or abnormal termination")
+    if prefix:
+        # The original failed record stays failed and is never rewritten. This
+        # explicit opt-in only validates complete paired PGNs for fixed-plan recovery.
+        record['tools']['completed_prefix']={'games':completed_prefix_games,'results':results,
+            'source_status':record['status'],'source_error':record['error'],'source_record_sha256':sha256(path)}
     return record

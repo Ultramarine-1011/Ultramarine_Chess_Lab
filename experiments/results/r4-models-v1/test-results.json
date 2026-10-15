@@ -1,0 +1,1269 @@
+{
+  "kind": "r4-independent-test",
+  "code": {
+    "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+    "dirty": false
+  },
+  "freeze_sha256": "0fa0ed0a01a477282caf56da43cb06753bd6db38b03e8604c45abf0b3e2bfd61",
+  "games": 2173,
+  "positions": 14570,
+  "primary": "equal-game BCE",
+  "models": {
+    "handcrafted": {
+      "positions": 14570,
+      "equal_game": {
+        "bce": 0.60826419210156,
+        "brier": 0.19610069187387252
+      },
+      "position_weighted": {
+        "bce": 0.6032732305231042,
+        "brier": 0.1912417222252607
+      }
+    },
+    "calibration": {
+      "positions": 14570,
+      "equal_game": {
+        "bce": 0.6054350712824544,
+        "brier": 0.1948375351414311
+      },
+      "position_weighted": {
+        "bce": 0.6000353369278434,
+        "brier": 0.18979398839207676
+      }
+    },
+    "frozen_r3": {
+      "positions": 14570,
+      "equal_game": {
+        "bce": 0.6028750839354441,
+        "brier": 0.19392914723787386
+      },
+      "position_weighted": {
+        "bce": 0.5978533281341245,
+        "brier": 0.18909899988987297
+      }
+    },
+    "refit8": {
+      "positions": 14570,
+      "equal_game": {
+        "bce": 0.6030397844101132,
+        "brier": 0.19401356722816082
+      },
+      "position_weighted": {
+        "bce": 0.5977742578287153,
+        "brier": 0.1890419786096849
+      }
+    },
+    "pawn": {
+      "positions": 14570,
+      "equal_game": {
+        "bce": 0.6014744491612742,
+        "brier": 0.19339392605867473
+      },
+      "position_weighted": {
+        "bce": 0.5958369454915318,
+        "brier": 0.18826556128238572
+      }
+    },
+    "king": {
+      "positions": 14570,
+      "equal_game": {
+        "bce": 0.597948685628431,
+        "brier": 0.19189147248924668
+      },
+      "position_weighted": {
+        "bce": 0.5942928610905609,
+        "brier": 0.1876766085956852
+      }
+    },
+    "full": {
+      "positions": 14570,
+      "equal_game": {
+        "bce": 0.5965118688796427,
+        "brier": 0.19131464939237225
+      },
+      "position_weighted": {
+        "bce": 0.5925073721905809,
+        "brier": 0.1869539903896329
+      }
+    }
+  },
+  "contrasts": {
+    "refit8 - calibration": {
+      "bce": {
+        "difference": -0.0023952868723412955,
+        "ci95": [
+          -0.004323150022611476,
+          -0.0004385615555004507
+        ],
+        "ci99": [
+          -0.004865146087754175,
+          9.481966004983289e-05
+        ],
+        "position_weighted_difference": -0.002261079099128023
+      },
+      "brier": {
+        "difference": -0.0008239679132702898,
+        "ci95": [
+          -0.0016499222763539834,
+          3.168429479828096e-05
+        ],
+        "ci99": [
+          -0.0018784050897355067,
+          0.0002693665281984556
+        ],
+        "position_weighted_difference": -0.000752009782391835
+      }
+    },
+    "pawn - refit8": {
+      "bce": {
+        "difference": -0.0015653352488389587,
+        "ci95": [
+          -0.0034815587891040846,
+          0.00036903040294694736
+        ],
+        "ci99": [
+          -0.004361778063166013,
+          0.0008115566731130787
+        ],
+        "position_weighted_difference": -0.001937312337183675
+      },
+      "brier": {
+        "difference": -0.0006196411694860812,
+        "ci95": [
+          -0.0015084848765981752,
+          0.00023672597816061302
+        ],
+        "ci99": [
+          -0.001791166108255829,
+          0.00042562147271014083
+        ],
+        "position_weighted_difference": -0.0007764173272991828
+      }
+    },
+    "king - refit8": {
+      "bce": {
+        "difference": -0.005091098781682172,
+        "ci95": [
+          -0.008011632049998317,
+          -0.0022526357064173714
+        ],
+        "ci99": [
+          -0.00869797079518209,
+          -0.0012583107156993278
+        ],
+        "position_weighted_difference": -0.0034813967381543765
+      },
+      "brier": {
+        "difference": -0.002122094738914111,
+        "ci95": [
+          -0.003381005061303986,
+          -0.0008562980544146036
+        ],
+        "ci99": [
+          -0.0037868066872498874,
+          -0.00047831415050342654
+        ],
+        "position_weighted_difference": -0.0013653700139997294
+      }
+    },
+    "full - pawn": {
+      "bce": {
+        "difference": -0.0049625802816315465,
+        "ci95": [
+          -0.007799622722603558,
+          -0.002154666168810721
+        ],
+        "ci99": [
+          -0.008510410528404408,
+          -0.0012014491454125037
+        ],
+        "position_weighted_difference": -0.0033295733009507506
+      },
+      "brier": {
+        "difference": -0.0020792766663024474,
+        "ci95": [
+          -0.0033316166615957312,
+          -0.0008198871739015976
+        ],
+        "ci99": [
+          -0.0037004665022414376,
+          -0.0004915682985105555
+        ],
+        "position_weighted_difference": -0.0013115708927528343
+      }
+    },
+    "full - king": {
+      "bce": {
+        "difference": -0.001436816748788333,
+        "ci95": [
+          -0.0032484830433922524,
+          0.00034880904150387916
+        ],
+        "ci99": [
+          -0.003915994157813967,
+          0.0007784417729861512
+        ],
+        "position_weighted_difference": -0.001785488899980049
+      },
+      "brier": {
+        "difference": -0.0005768230968744172,
+        "ci95": [
+          -0.0013979306343966816,
+          0.0002294121924614919
+        ],
+        "ci99": [
+          -0.0016257262704665527,
+          0.0004096769716796343
+        ],
+        "position_weighted_difference": -0.000722618206052288
+      }
+    },
+    "frozen_r3 - handcrafted": {
+      "bce": {
+        "difference": -0.0053891081661159475,
+        "ci95": [
+          -0.008321793765626055,
+          -0.0022979840894858613
+        ],
+        "ci99": [
+          -0.009291220838627068,
+          -0.0012220262535290532
+        ],
+        "position_weighted_difference": -0.0054199023889798395
+      },
+      "brier": {
+        "difference": -0.002171544635998689,
+        "ci95": [
+          -0.003418401537363158,
+          -0.0008348459457193598
+        ],
+        "ci99": [
+          -0.00392283471451642,
+          -0.0003997553050724244
+        ],
+        "position_weighted_difference": -0.00214272233538771
+      }
+    },
+    "calibration - handcrafted": {
+      "bce": {
+        "difference": -0.0028291208191055716,
+        "ci95": [
+          -0.0047046536391109695,
+          -0.0007356744852266154
+        ],
+        "ci99": [
+          -0.00529033150165963,
+          -0.00013332500213107887
+        ],
+        "position_weighted_difference": -0.003237893595260834
+      },
+      "brier": {
+        "difference": -0.0012631567324414392,
+        "ci95": [
+          -0.001889032914011689,
+          -0.0006130967646889349
+        ],
+        "ci99": [
+          -0.0021009292701945612,
+          -0.00040839515658932526
+        ],
+        "position_weighted_difference": -0.0014477338331839258
+      }
+    },
+    "refit8 - handcrafted": {
+      "bce": {
+        "difference": -0.005224407691446866,
+        "ci95": [
+          -0.007814128595609851,
+          -0.0024955658877955007
+        ],
+        "ci99": [
+          -0.008701761039770602,
+          -0.001696533046741933
+        ],
+        "position_weighted_difference": -0.005498972694388857
+      },
+      "brier": {
+        "difference": -0.0020871246457117285,
+        "ci95": [
+          -0.003108178426693556,
+          -0.0009973019487958309
+        ],
+        "ci99": [
+          -0.0034673608716190877,
+          -0.0006811101154102417
+        ],
+        "position_weighted_difference": -0.002199743615575761
+      }
+    },
+    "full - calibration": {
+      "bce": {
+        "difference": -0.0089232024028118,
+        "ci95": [
+          -0.012973554779026664,
+          -0.005025896175627329
+        ],
+        "ci99": [
+          -0.014325104655486363,
+          -0.004043866542097674
+        ],
+        "position_weighted_difference": -0.00752796473726245
+      },
+      "brier": {
+        "difference": -0.0035228857490588192,
+        "ci95": [
+          -0.005254007171263044,
+          -0.001877642412556713
+        ],
+        "ci99": [
+          -0.0058565658733741215,
+          -0.0014189617212581169
+        ],
+        "position_weighted_difference": -0.0028399980024438522
+      }
+    },
+    "full - handcrafted": {
+      "bce": {
+        "difference": -0.011752323221917372,
+        "ci95": [
+          -0.015922474326836137,
+          -0.007712889742945309
+        ],
+        "ci99": [
+          -0.017464354952000785,
+          -0.0061304679577041
+        ],
+        "position_weighted_difference": -0.010765858332523285
+      },
+      "brier": {
+        "difference": -0.004786042481500257,
+        "ci95": [
+          -0.006558832174855538,
+          -0.0031477198331065705
+        ],
+        "ci99": [
+          -0.0071762559427805865,
+          -0.0024842338980705513
+        ],
+        "position_weighted_difference": -0.004287731835627778
+      }
+    }
+  },
+  "bootstrap": {
+    "unit": "whole game, all positions together; equal weight per game",
+    "resamples": 2000,
+    "seed": 20261015,
+    "simultaneous_family": [
+      "refit8 - calibration",
+      "pawn - refit8",
+      "king - refit8",
+      "full - pawn",
+      "full - king"
+    ],
+    "interpretation": "Game-conditional descriptive intervals; repeated players and only two future windows limit population inference."
+  },
+  "strata": {
+    "white_to_move": {
+      "games": 2173,
+      "models": {
+        "handcrafted": {
+          "positions": 7756,
+          "equal_game": {
+            "bce": 0.6150625839312678,
+            "brier": 0.19914060003888573
+          },
+          "position_weighted": {
+            "bce": 0.6087583538394362,
+            "brier": 0.19401211365979135
+          }
+        },
+        "calibration": {
+          "positions": 7756,
+          "equal_game": {
+            "bce": 0.612766894237984,
+            "brier": 0.19807216368742692
+          },
+          "position_weighted": {
+            "bce": 0.6057625768251782,
+            "brier": 0.19263190987610326
+          }
+        },
+        "frozen_r3": {
+          "positions": 7756,
+          "equal_game": {
+            "bce": 0.6105732568860126,
+            "brier": 0.19734246920254372
+          },
+          "position_weighted": {
+            "bce": 0.6038131244876641,
+            "brier": 0.19208753587387495
+          }
+        },
+        "refit8": {
+          "positions": 7756,
+          "equal_game": {
+            "bce": 0.6102516347063871,
+            "brier": 0.19722315752850267
+          },
+          "position_weighted": {
+            "bce": 0.6034152435058445,
+            "brier": 0.19187702799795364
+          }
+        },
+        "pawn": {
+          "positions": 7756,
+          "equal_game": {
+            "bce": 0.6084048281785674,
+            "brier": 0.19642844802210624
+          },
+          "position_weighted": {
+            "bce": 0.6013880234136606,
+            "brier": 0.191027784944259
+          }
+        },
+        "king": {
+          "positions": 7756,
+          "equal_game": {
+            "bce": 0.6048821222303007,
+            "brier": 0.19491885711885443
+          },
+          "position_weighted": {
+            "bce": 0.5990271295686571,
+            "brier": 0.19005557083672112
+          }
+        },
+        "full": {
+          "positions": 7756,
+          "equal_game": {
+            "bce": 0.6030759937999773,
+            "brier": 0.19412174727602516
+          },
+          "position_weighted": {
+            "bce": 0.5970485240698432,
+            "brier": 0.18920737910551289
+          }
+        }
+      }
+    },
+    "black_to_move": {
+      "games": 2173,
+      "models": {
+        "handcrafted": {
+          "positions": 6814,
+          "equal_game": {
+            "bce": 0.6029557348909977,
+            "brier": 0.19373452862436888
+          },
+          "position_weighted": {
+            "bce": 0.5970298174850253,
+            "brier": 0.18808833860826332
+          }
+        },
+        "calibration": {
+          "positions": 6814,
+          "equal_game": {
+            "bce": 0.5998098869697094,
+            "brier": 0.19235939192045193
+          },
+          "position_weighted": {
+            "bce": 0.5935163359528318,
+            "brier": 0.186563739048063
+          }
+        },
+        "frozen_r3": {
+          "positions": 6814,
+          "equal_game": {
+            "bce": 0.5968140698688407,
+            "brier": 0.19120326639385157
+          },
+          "position_weighted": {
+            "bce": 0.5910696209844246,
+            "brier": 0.18569731437594292
+          }
+        },
+        "refit8": {
+          "positions": 6814,
+          "equal_game": {
+            "bce": 0.5976245157046103,
+            "brier": 0.19157013645618753
+          },
+          "position_weighted": {
+            "bce": 0.5913534352704803,
+            "brier": 0.18581499841370425
+          }
+        },
+        "pawn": {
+          "positions": 6814,
+          "equal_game": {
+            "bce": 0.5967877641245896,
+            "brier": 0.19132435047742946
+          },
+          "position_weighted": {
+            "bce": 0.5895184599670187,
+            "brier": 0.1851214745900627
+          }
+        },
+        "king": {
+          "positions": 6814,
+          "equal_game": {
+            "bce": 0.593246891184819,
+            "brier": 0.1898019430629902
+          },
+          "position_weighted": {
+            "bce": 0.5889041046602537,
+            "brier": 0.18496876721889113
+          }
+        },
+        "full": {
+          "positions": 6814,
+          "equal_game": {
+            "bce": 0.5925907440126859,
+            "brier": 0.18961870429920025
+          },
+          "position_weighted": {
+            "bce": 0.5873384297227855,
+            "brier": 0.18438908242362684
+          }
+        }
+      }
+    },
+    "early_ply16_40": {
+      "games": 2154,
+      "models": {
+        "handcrafted": {
+          "positions": 7322,
+          "equal_game": {
+            "bce": 0.6735664834481183,
+            "brier": 0.22502025659300032
+          },
+          "position_weighted": {
+            "bce": 0.6708864644878115,
+            "brier": 0.22733213646092773
+          }
+        },
+        "calibration": {
+          "positions": 7322,
+          "equal_game": {
+            "bce": 0.6787232725515798,
+            "brier": 0.22633942275412122
+          },
+          "position_weighted": {
+            "bce": 0.6754774412256344,
+            "brier": 0.22848431845368322
+          }
+        },
+        "frozen_r3": {
+          "positions": 7322,
+          "equal_game": {
+            "bce": 0.6752021532114147,
+            "brier": 0.22536822397489337
+          },
+          "position_weighted": {
+            "bce": 0.671699836268004,
+            "brier": 0.2273540834612914
+          }
+        },
+        "refit8": {
+          "positions": 7322,
+          "equal_game": {
+            "bce": 0.6754513290077673,
+            "brier": 0.22531368803749163
+          },
+          "position_weighted": {
+            "bce": 0.67226935847438,
+            "brier": 0.22745888850401916
+          }
+        },
+        "pawn": {
+          "positions": 7322,
+          "equal_game": {
+            "bce": 0.6759174709372443,
+            "brier": 0.22547889512003272
+          },
+          "position_weighted": {
+            "bce": 0.6728211780237859,
+            "brier": 0.22770435460866534
+          }
+        },
+        "king": {
+          "positions": 7322,
+          "equal_game": {
+            "bce": 0.6740391498202947,
+            "brier": 0.22439556936072633
+          },
+          "position_weighted": {
+            "bce": 0.6703687540511455,
+            "brier": 0.22639001483895513
+          }
+        },
+        "full": {
+          "positions": 7322,
+          "equal_game": {
+            "bce": 0.6743570932987285,
+            "brier": 0.22447387417027684
+          },
+          "position_weighted": {
+            "bce": 0.670718585021709,
+            "brier": 0.22652383499197984
+          }
+        }
+      }
+    },
+    "later_ply41_160": {
+      "games": 1879,
+      "models": {
+        "handcrafted": {
+          "positions": 7248,
+          "equal_game": {
+            "bce": 0.5325863368822306,
+            "brier": 0.1609802420335394
+          },
+          "position_weighted": {
+            "bce": 0.5349696848429736,
+            "brier": 0.15478283521731998
+          }
+        },
+        "calibration": {
+          "positions": 7248,
+          "equal_game": {
+            "bce": 0.5211263444254631,
+            "brier": 0.15693731928392485
+          },
+          "position_weighted": {
+            "bce": 0.5238229903952241,
+            "brier": 0.15070864116372648
+          }
+        },
+        "frozen_r3": {
+          "positions": 7248,
+          "equal_game": {
+            "bce": 0.5204242914050816,
+            "brier": 0.15652539135271898
+          },
+          "position_weighted": {
+            "bce": 0.5232528683443526,
+            "brier": 0.1504533428934704
+          }
+        },
+        "refit8": {
+          "positions": 7248,
+          "equal_game": {
+            "bce": 0.5196247106273089,
+            "brier": 0.15634938526664022
+          },
+          "position_weighted": {
+            "bce": 0.5225185835837435,
+            "brier": 0.1502328430900498
+          }
+        },
+        "pawn": {
+          "positions": 7248,
+          "equal_game": {
+            "bce": 0.5159668795976954,
+            "brier": 0.15488318127925388
+          },
+          "position_weighted": {
+            "bce": 0.5180667260377286,
+            "brier": 0.1484241091942208
+          }
+        },
+        "king": {
+          "positions": 7248,
+          "equal_game": {
+            "bce": 0.508677897976557,
+            "brier": 0.15229394845035377
+          },
+          "position_weighted": {
+            "bce": 0.5174402550947829,
+            "brier": 0.14856794958447897
+          }
+        },
+        "full": {
+          "positions": 7248,
+          "equal_game": {
+            "bce": 0.5056117252266353,
+            "brier": 0.15106117593237284
+          },
+          "position_weighted": {
+            "bce": 0.513497645321166,
+            "brier": 0.14698014902948053
+          }
+        }
+      }
+    },
+    "draw_label": {
+      "games": 137,
+      "models": {
+        "handcrafted": {
+          "positions": 1073,
+          "equal_game": {
+            "bce": 0.7392906487489199,
+            "brier": 0.017810977494895696
+          },
+          "position_weighted": {
+            "bce": 0.7386333758340535,
+            "brier": 0.017542668983903748
+          }
+        },
+        "calibration": {
+          "positions": 1073,
+          "equal_game": {
+            "bce": 0.7678577545986525,
+            "brier": 0.026124260977290523
+          },
+          "position_weighted": {
+            "bce": 0.7667824120151456,
+            "brier": 0.025748817400542003
+          }
+        },
+        "frozen_r3": {
+          "positions": 1073,
+          "equal_game": {
+            "bce": 0.7645263398223968,
+            "brier": 0.026383687935942965
+          },
+          "position_weighted": {
+            "bce": 0.7641010319667125,
+            "brier": 0.0261513497022385
+          }
+        },
+        "refit8": {
+          "positions": 1073,
+          "equal_game": {
+            "bce": 0.7666727362573087,
+            "brier": 0.026435178041926355
+          },
+          "position_weighted": {
+            "bce": 0.7661324884261816,
+            "brier": 0.02617205944336088
+          }
+        },
+        "pawn": {
+          "positions": 1073,
+          "equal_game": {
+            "bce": 0.7704688360082736,
+            "brier": 0.02758347492286391
+          },
+          "position_weighted": {
+            "bce": 0.7700648092534088,
+            "brier": 0.027384122542042973
+          }
+        },
+        "king": {
+          "positions": 1073,
+          "equal_game": {
+            "bce": 0.7825234126393823,
+            "brier": 0.030979720611009516
+          },
+          "position_weighted": {
+            "bce": 0.7825629906367109,
+            "brier": 0.03088140273504461
+          }
+        },
+        "full": {
+          "positions": 1073,
+          "equal_game": {
+            "bce": 0.7852459214965384,
+            "brier": 0.031736260707957833
+          },
+          "position_weighted": {
+            "bce": 0.7854153651432317,
+            "brier": 0.03167949139343318
+          }
+        }
+      }
+    },
+    "decisive_label": {
+      "games": 2036,
+      "models": {
+        "handcrafted": {
+          "positions": 13497,
+          "equal_game": {
+            "bce": 0.5994475788595717,
+            "brier": 0.2080975930869962
+          },
+          "position_weighted": {
+            "bce": 0.5925122143033036,
+            "brier": 0.20505064895919975
+          }
+        },
+        "calibration": {
+          "positions": 13497,
+          "equal_game": {
+            "bce": 0.5945058435740462,
+            "brier": 0.2061900491691753
+          },
+          "position_weighted": {
+            "bce": 0.5867790865337799,
+            "brier": 0.20283543971266033
+          }
+        },
+        "frozen_r3": {
+          "positions": 13497,
+          "equal_game": {
+            "bce": 0.5919977646542492,
+            "brier": 0.20520308040308233
+          },
+          "position_weighted": {
+            "bce": 0.5846367773293258,
+            "brier": 0.20205319924167942
+          }
+        },
+        "refit8": {
+          "positions": 13497,
+          "equal_game": {
+            "bce": 0.5920291191826741,
+            "brier": 0.20528971620581998
+          },
+          "position_weighted": {
+            "bce": 0.5843899219443647,
+            "brier": 0.20198999841152723
+          }
+        },
+        "pawn": {
+          "positions": 13497,
+          "equal_game": {
+            "bce": 0.5901030193979937,
+            "brier": 0.20455111260366787
+          },
+          "position_weighted": {
+            "bce": 0.5819859787717797,
+            "brier": 0.20105549858462973
+          }
+        },
+        "king": {
+          "positions": 13497,
+          "equal_game": {
+            "bce": 0.5855288734474386,
+            "brier": 0.20271903143193748
+          },
+          "position_weighted": {
+            "bce": 0.5793255462055481,
+            "brier": 0.2001416938656316
+          }
+        },
+        "full": {
+          "positions": 13497,
+          "equal_game": {
+            "bce": 0.5838121806632797,
+            "brier": 0.2020524879236909
+          },
+          "position_weighted": {
+            "bce": 0.5771713511164019,
+            "brier": 0.19929818075956118
+          }
+        }
+      }
+    },
+    "source_2017-06": {
+      "games": 1114,
+      "models": {
+        "handcrafted": {
+          "positions": 7435,
+          "equal_game": {
+            "bce": 0.6122449900171691,
+            "brier": 0.19718946209651989
+          },
+          "position_weighted": {
+            "bce": 0.6056522020472495,
+            "brier": 0.1916008556510497
+          }
+        },
+        "calibration": {
+          "positions": 7435,
+          "equal_game": {
+            "bce": 0.6101821668152811,
+            "brier": 0.19610118753808364
+          },
+          "position_weighted": {
+            "bce": 0.6029883080920129,
+            "brier": 0.19025064793414573
+          }
+        },
+        "frozen_r3": {
+          "positions": 7435,
+          "equal_game": {
+            "bce": 0.6082196079645756,
+            "brier": 0.19560475766244456
+          },
+          "position_weighted": {
+            "bce": 0.6013413395249994,
+            "brier": 0.18997151531663894
+          }
+        },
+        "refit8": {
+          "positions": 7435,
+          "equal_game": {
+            "bce": 0.6074492708535851,
+            "brier": 0.1952691680427299
+          },
+          "position_weighted": {
+            "bce": 0.6004147956479585,
+            "brier": 0.1895228278366389
+          }
+        },
+        "pawn": {
+          "positions": 7435,
+          "equal_game": {
+            "bce": 0.6060530912418307,
+            "brier": 0.19471721677185244
+          },
+          "position_weighted": {
+            "bce": 0.5985802238852151,
+            "brier": 0.18880343822535325
+          }
+        },
+        "king": {
+          "positions": 7435,
+          "equal_game": {
+            "bce": 0.6009605332265731,
+            "brier": 0.1924946249446195
+          },
+          "position_weighted": {
+            "bce": 0.5951452488782453,
+            "brier": 0.18731119468403623
+          }
+        },
+        "full": {
+          "positions": 7435,
+          "equal_game": {
+            "bce": 0.5999020039854163,
+            "brier": 0.1920936722323362
+          },
+          "position_weighted": {
+            "bce": 0.5936863530656376,
+            "brier": 0.18675710303295254
+          }
+        }
+      }
+    },
+    "source_2017-07": {
+      "games": 1059,
+      "models": {
+        "handcrafted": {
+          "positions": 7135,
+          "equal_game": {
+            "bce": 0.6040766483074254,
+            "brier": 0.19495537551123876
+          },
+          "position_weighted": {
+            "bce": 0.600794232165428,
+            "brier": 0.190867488585353
+          }
+        },
+        "calibration": {
+          "positions": 7135,
+          "equal_game": {
+            "bce": 0.6004414316001419,
+            "brier": 0.19350825396119412
+          },
+          "position_weighted": {
+            "bce": 0.5969582043972758,
+            "brier": 0.18931812802833706
+          }
+        },
+        "frozen_r3": {
+          "positions": 7135,
+          "equal_game": {
+            "bce": 0.5972529878368109,
+            "brier": 0.19216651266471824
+          },
+          "position_weighted": {
+            "bce": 0.5942186589412505,
+            "brier": 0.18818979846058004
+          }
+        },
+        "refit8": {
+          "positions": 7135,
+          "equal_game": {
+            "bce": 0.5984012878114089,
+            "brier": 0.1926927557952713
+          },
+          "position_weighted": {
+            "bce": 0.5950226952938769,
+            "brier": 0.18854091147550092
+          }
+        },
+        "pawn": {
+          "positions": 7135,
+          "equal_game": {
+            "bce": 0.5966580116940977,
+            "brier": 0.19200190919892024
+          },
+          "position_weighted": {
+            "bce": 0.5929783225262847,
+            "brier": 0.18770506863053377
+          }
+        },
+        "king": {
+          "positions": 7135,
+          "equal_game": {
+            "bce": 0.5947804153504985,
+            "brier": 0.19125699483553066
+          },
+          "position_weighted": {
+            "bce": 0.5934046335921123,
+            "brier": 0.1880573867923369
+          }
+        },
+        "full": {
+          "positions": 7135,
+          "equal_game": {
+            "bce": 0.592945664434098,
+            "brier": 0.19049516738697114
+          },
+          "position_weighted": {
+            "bce": 0.5912788195898738,
+            "brier": 0.18715915612150652
+          }
+        }
+      }
+    },
+    "endgame_0_8": {
+      "games": 874,
+      "models": {
+        "handcrafted": {
+          "positions": 2983,
+          "equal_game": {
+            "bce": 0.4608830224575386,
+            "brier": 0.11908410350098006
+          },
+          "position_weighted": {
+            "bce": 0.4888835170582869,
+            "brier": 0.12162968784136764
+          }
+        },
+        "calibration": {
+          "positions": 2983,
+          "equal_game": {
+            "bce": 0.43709972075978015,
+            "brier": 0.11130681914984666
+          },
+          "position_weighted": {
+            "bce": 0.46859362252712217,
+            "brier": 0.11463831770634635
+          }
+        },
+        "frozen_r3": {
+          "positions": 2983,
+          "equal_game": {
+            "bce": 0.4365935226717158,
+            "brier": 0.11073659823893951
+          },
+          "position_weighted": {
+            "bce": 0.46731422350143315,
+            "brier": 0.113910332659494
+          }
+        },
+        "refit8": {
+          "positions": 2983,
+          "equal_game": {
+            "bce": 0.4338993899138912,
+            "brier": 0.10986176177768979
+          },
+          "position_weighted": {
+            "bce": 0.465255274897144,
+            "brier": 0.11320986208119856
+          }
+        },
+        "pawn": {
+          "positions": 2983,
+          "equal_game": {
+            "bce": 0.42606414207081733,
+            "brier": 0.1066956065017936
+          },
+          "position_weighted": {
+            "bce": 0.4573305454335234,
+            "brier": 0.10998902978549041
+          }
+        },
+        "king": {
+          "positions": 2983,
+          "equal_game": {
+            "bce": 0.43745460453062546,
+            "brier": 0.11235199375809246
+          },
+          "position_weighted": {
+            "bce": 0.4709809400889448,
+            "brier": 0.11641250486494463
+          }
+        },
+        "full": {
+          "positions": 2983,
+          "equal_game": {
+            "bce": 0.4300625038302965,
+            "brier": 0.10939040526023719
+          },
+          "position_weighted": {
+            "bce": 0.4637485889287623,
+            "brier": 0.11349110269291324
+          }
+        }
+      }
+    },
+    "middle_9_16": {
+      "games": 1488,
+      "models": {
+        "handcrafted": {
+          "positions": 3513,
+          "equal_game": {
+            "bce": 0.5590016884258484,
+            "brier": 0.17069072560650894
+          },
+          "position_weighted": {
+            "bce": 0.5561880803566427,
+            "brier": 0.16978111464254866
+          }
+        },
+        "calibration": {
+          "positions": 3513,
+          "equal_game": {
+            "bce": 0.5589040474957527,
+            "brier": 0.16953606128503101
+          },
+          "position_weighted": {
+            "bce": 0.552022069444325,
+            "brier": 0.1676828031149214
+          }
+        },
+        "frozen_r3": {
+          "positions": 3513,
+          "equal_game": {
+            "bce": 0.5546489826507698,
+            "brier": 0.16885431916328375
+          },
+          "position_weighted": {
+            "bce": 0.5491220307318434,
+            "brier": 0.16706962306612735
+          }
+        },
+        "refit8": {
+          "positions": 3513,
+          "equal_game": {
+            "bce": 0.5552442283823034,
+            "brier": 0.16861356084685597
+          },
+          "position_weighted": {
+            "bce": 0.5485271089773289,
+            "brier": 0.1665808828513563
+          }
+        },
+        "pawn": {
+          "positions": 3513,
+          "equal_game": {
+            "bce": 0.5540512106061799,
+            "brier": 0.1680154440474485
+          },
+          "position_weighted": {
+            "bce": 0.5493055117965651,
+            "brier": 0.16697194454534842
+          }
+        },
+        "king": {
+          "positions": 3513,
+          "equal_game": {
+            "bce": 0.5480822422862819,
+            "brier": 0.1659000002502326
+          },
+          "position_weighted": {
+            "bce": 0.541889218678076,
+            "brier": 0.16390709826479116
+          }
+        },
+        "full": {
+          "positions": 3513,
+          "equal_game": {
+            "bce": 0.5469395526574714,
+            "brier": 0.16530356079550917
+          },
+          "position_weighted": {
+            "bce": 0.5425050643822211,
+            "brier": 0.16419755366837402
+          }
+        }
+      }
+    },
+    "opening_17_24": {
+      "games": 2060,
+      "models": {
+        "handcrafted": {
+          "positions": 8074,
+          "equal_game": {
+            "bce": 0.6725651473298286,
+            "brier": 0.225773906049377
+          },
+          "position_weighted": {
+            "bce": 0.666022134139692,
+            "brier": 0.22629792893881284
+          }
+        },
+        "calibration": {
+          "positions": 8074,
+          "equal_game": {
+            "bce": 0.6778638368002932,
+            "brier": 0.22721929282881492
+          },
+          "position_weighted": {
+            "bce": 0.6694880546299677,
+            "brier": 0.22718139977852464
+          }
+        },
+        "frozen_r3": {
+          "positions": 8074,
+          "equal_game": {
+            "bce": 0.6748328046283534,
+            "brier": 0.2263823673743225
+          },
+          "position_weighted": {
+            "bce": 0.6672849849205414,
+            "brier": 0.2264630072133853
+          }
+        },
+        "refit8": {
+          "positions": 8074,
+          "equal_game": {
+            "bce": 0.675205573068741,
+            "brier": 0.22643182301825077
+          },
+          "position_weighted": {
+            "bce": 0.6681618426689182,
+            "brier": 0.22683155416126818
+          }
+        },
+        "pawn": {
+          "positions": 8074,
+          "equal_game": {
+            "bce": 0.6741437634814569,
+            "brier": 0.22591535285208048
+          },
+          "position_weighted": {
+            "bce": 0.6672550180631761,
+            "brier": 0.22645027382294192
+          }
+        },
+        "king": {
+          "positions": 8074,
+          "equal_game": {
+            "bce": 0.6708899279632488,
+            "brier": 0.2242339519272914
+          },
+          "position_weighted": {
+            "bce": 0.6626522190473212,
+            "brier": 0.22434778907886943
+          }
+        },
+        "full": {
+          "positions": 8074,
+          "equal_game": {
+            "bce": 0.6699073556975368,
+            "brier": 0.22374753349938967
+          },
+          "position_weighted": {
+            "bce": 0.6618342928991235,
+            "brier": 0.22399673948563203
+          }
+        }
+      }
+    }
+  }
+}

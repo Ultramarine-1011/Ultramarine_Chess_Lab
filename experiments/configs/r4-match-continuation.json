@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "comparison": "ablation",
+  "seed": 20261015,
+  "engines": [
+    {
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake Release; same binary; one search thread",
+      "ucl_build_info": true,
+      "name": "full",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+        "ModelFile": "experiments/results/r4-models-v1/full.txt",
+        "Evaluator": "Linear"
+      }
+    },
+    {
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake Release; same binary; one search thread",
+      "ucl_build_info": true,
+      "name": "Handcrafted",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Handcrafted"
+      }
+    }
+  ],
+  "rounds": 140,
+  "games": 2,
+  "concurrency": 1,
+  "tc": "1+0.01",
+  "maxmoves": 150,
+  "timeout_seconds": 10800,
+  "openings": {
+    "path": "experiments/results/r4-recovery-v1/openings.epd",
+    "format": "epd",
+    "order": "sequential"
+  },
+  "pgn_telemetry": true
+}

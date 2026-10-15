@@ -621,3 +621,55 @@ R4.4日志扩展targeted3/3与完整Release6/6通过（r44-targeted/release.log�
 归档检查识别fastchess原始PGN/stdout末尾的标准空行；原字节保持不变。
 代码/文档diff --check通过，原始产物仅对blank-at-eof关闭样式告警后归档，
 不改实验结果或验证标准。
+
+### R4 独立测试完成、唯一正式比赛运行中（恢复锚点）
+
+clean `625d84e370395cfd013eeac429b059bb107ca33d` Release，binary SHA-256
+`4792a7bd89b57059d77a941d5b7006a01913abbccd5a219e6ec13fa18aaefc06`。
+重新configure/build/Release CTest6/6，冻结analysis/protocol/openings哈希逐个核对。
+独立test已唯一一次完成，marker与test-results.json在r4-models-v1，禁止重跑。
+2173局/14570局面，等棋局BCE：hand .60826419、cal .60543507、冻结R3 .60287508、
+refit8 .60303978、pawn .60147445、king .59794869、full .59651187。
+full-hand差−.01175232，95%整局bootstrap[−.01592247,−.00771289]；
+full-cal差−.00892320，[−.01297355,−.00502590]。
+预定五项消融99%边界：king-refit8与full-pawn排除0；pawn-refit8、full-king及
+refit8-cal均包含0。仅是本窗口/游戏聚类假设下的证据；玩家/日期相关性仍限制总体结论。
+
+唯一正式赛于2026-10-15 11:46:06 UTC（新加坡19:46:06）启动：
+`experiments/results/r4-match-final-20261015`，进程会话24593，record.json=running。
+完整fastchess命令/真实二进制与模型身份/硬件已写record，PGN和engine.log持续增长。
+配置固定400局/200换色轮、1+0.01、单并发、QS/TT/PV=true、Hash16、maxmoves150。
+不要因观察超时重启；先检查现有进程句柄与record/PGN状态。正式参数/模型不再调整。
+运行中不执行本地build/test/benchmark/图表渲染；Windows物理主机NOT_RUN。
+尚未分析正式赛结果，不宣称棋力收益；比赛完成后仍需完整validate/telemetry汇总、
+R4报告、证据归档、最终回归/CI核查与推送。Handcrafted默认不变，R5不启动。
+
+### R4.4 已确认的协议中断与预定样本恢复
+
+原进程24593实际退出1，record.json=failed，完成120局/60个完整换色轮；
+最后时间11:51:09 UTC，未重启原目录。严格fastchess因Handcrafted未输出普通info
+告警中断；原trace证实depth0/nodes0/elapsed17674us且bestmove合法，下一局121未写完PGN。
+修复仅在result.depth==0时输出普通info depth0 score/nodes/time/nps；Search和全部
+Evaluator/FeatureExtractor代码不变，不改变兜底着法或预算。新增zero-budget黑盒回归。
+原120局得分35.4167%，并非为正结果而丢弃；保留failed原记录、全部PGN和44MB原trace
+的无损gzip、未完成121局的孤立查询。独立test不再打开，不换模型、不增减总200轮。
+
+恢复方案在剩余比赛前冻结于r4-recovery-v1/plan.json：保留最初60轮，仅续跑原开局
+61..200的140轮/280局，重复的仅为未产生结果的121局。两个binary身份分开保留，
+同编译器/flags；自动检查所有engine源码除UCI协议修复外逐文件完全相同。
+原failed包默认validate仍拒绝；新增显式complete-prefix只验证完整合法配对前缀，
+不把原包改成completed。最终固定400局由来源明确的派生study重建/配对bootstrap。
+开局拼接、来源源码变更拒绝、failed-prefix opt-in/拒绝错误计数均有测试。
+
+625d84e Actions#38729565254：Mac三项success，Windows Release/Debug因新增测试
+硬编码file=/run/engine.log失败（实际Windows正确生成反斜杠路径）；不是引擎失败。
+按gh-fix-ci现有授权修正断言的路径构造，原始CI状态和失败日志保留，不弱化检查。
+首次读取GitHub有unexpected EOF，重试同一run成功，未把网络观察失败当CI状态。
+实际正式赛前电源为Battery85%放电，load7.51/6.06/4.41；此前草稿从R3推测AC接电
+的句子已更正，R4不声称电源/背景负载受控；benchmark未单独记录电源，属限制。
+
+恢复验证：625d84e+dirty协议/测试/恢复工具，targeted UCI/experiments2/2，
+最新Release6/6、Debug6/6、ASan+UBSan6/6、fastchess40/40，日志r44-recovery-*。
+120局前缀全部合法、60配对，156个未完成局查询（双方各78）单独计数并排除。
+Windows断言已按平台Path构造；source/拼接恢复的新增测试在最新Release通过。
+恢复提交后将从clean版本只运行剩余280局；当前没有任何正式比赛进程运行。

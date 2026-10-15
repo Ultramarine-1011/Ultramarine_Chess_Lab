@@ -1,0 +1,23 @@
+{
+  "kind": "r4-fixed-sample-recovery",
+  "status": "frozen-before-continuation",
+  "code": {
+    "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+    "dirty": true
+  },
+  "original_record": "experiments/results/r4-match-final-20261015/record.json",
+  "original_record_sha256": "a3b5795155f414881b4ad65b2870502ec3b5f4cdfb862411abfec988c3c8d69f",
+  "original_config_sha256": "911b78ab3af1f969ff2c81ca5256713e8284be1c3b6ccdb2eb789f50f718cf3f",
+  "candidate_freeze_sha256": "0fa0ed0a01a477282caf56da43cb06753bd6db38b03e8604c45abf0b3e2bfd61",
+  "prefix_games": 120,
+  "prefix_pairs": 60,
+  "remaining_games": 280,
+  "remaining_pairs": 140,
+  "total_pairs": 200,
+  "reason": "Warning; No info line available to extract score from engine Handcrafted",
+  "decision": "Keep all first120 games. Rerun only unfinished game121 as part of original remaining140 pairs; no model, clock, opening, total-sample or statistical change.",
+  "approved_uci_sha256": "f104ddf187ad28e24c678e42c0e55fbc9e4a932002d828eef97e8b108dfa2267",
+  "remaining_openings_sha256": "a2758ffd6e7afa0778295965a6e2032a1c9589e45fa374895e3c391da9447eb2",
+  "continuation_config_sha256": "778c138a2ab7aaed02d996235fb8ad099870ccfa481d656b1f067cd752eec6a2",
+  "uci_patch_sha256": "34a6222637c32038a976e4020bf1d053c9643b5609fddd46ecd273ca1833ae05"
+}

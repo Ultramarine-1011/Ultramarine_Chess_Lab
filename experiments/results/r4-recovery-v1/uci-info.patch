@@ -1,0 +1,20 @@
+diff --git a/engine/src/uci.cpp b/engine/src/uci.cpp
+index d57b3de..ba03a17 100644
+--- a/engine/src/uci.cpp
++++ b/engine/src/uci.cpp
+@@ -155,6 +155,15 @@ int run_uci(std::istream& in, std::ostream& out) {
+                             std::unique_lock lock(wait_mutex);
+                             wake.wait(lock, token, [] { return false; });
+                         }
++                        if (result.depth == 0) {
++                            // A legal fallback can precede the first completed iteration.
++                            // Match clients still need an ordinary, parseable info line.
++                            emit("info depth 0 score cp " + std::to_string(result.score) +
++                                 " nodes " + std::to_string(result.nodes) + " time " +
++                                 std::to_string(result.elapsed.count()) + " nps " +
++                                 std::to_string(result.nodes * 1000 / static_cast<std::uint64_t>(
++                                     std::max<std::int64_t>(1, result.elapsed.count()))));
++                        }
+                         std::ostringstream stats;
+                         stats << "info string ucl_stats {\"depth\":" << result.depth << ",\"score_cp\":" << result.score
+                               << ",\"nodes\":" << result.nodes << ",\"qnodes\":" << result.qnodes
