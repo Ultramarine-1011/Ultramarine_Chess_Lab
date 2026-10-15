@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "kind": "ucl-linear-model",
+  "status": "frozen",
+  "feature_version": "handcrafted-v1",
+  "perspective": "white",
+  "temperature": 400.0,
+  "intercept": 0,
+  "weights": [
+    168.06951324272435,
+    279.3346539592425,
+    279.9760821165223,
+    591.4780891114027,
+    1003.5427488858073,
+    6.003487276961483,
+    24.938477618921123,
+    116.0173413354679
+  ],
+  "lambda": 0.0001,
+  "seed": 20261015,
+  "model_file": "model.txt",
+  "model_sha256": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+  "dataset_sha256": "e1e777aa1afaff9ba211e701cd7482a59f8ddd7a46890829bdbde4e9e70f84fe",
+  "split_sha256": "5d367ca9a34d70814179a8f74bbe58fb51704bbc62dc864f58567fd656bc51ed",
+  "features_sha256": "6a061c95073f71ff25909d4eaaa7407a14e926c5612c453c0850cca230e633b4",
+  "selection_sha256": "21177f5ce550153d41faf43f823a0ef6ed41fc4eb0eafde7e0c9b99d45966f20",
+  "code": {
+    "revision": "09335c08291f3a7f3c831372fda750903cef4ad5",
+    "dirty": false
+  },
+  "environment": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    },
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "numpy_config": "{'Compilers': {'c': {'name': 'clang', 'linker': 'ld64', 'version': '15.0.0', 'commands': 'cc'}, 'cython': {'name': 'cython', 'linker': 'cython', 'version': '3.3.0', 'commands': 'cython'}, 'c++': {'name': 'clang', 'linker': 'ld64', 'version': '15.0.0', 'commands': 'c++'}}, 'Machine Information': {'host': {'cpu': 'aarch64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}, 'build': {'cpu': 'aarch64', 'family': 'aarch64', 'endian': 'little', 'system': 'darwin'}}, 'Build Dependencies': {'blas': {'name': 'accelerate', 'found': True, 'version': 'unknown', 'detection method': 'system', 'include directory': 'unknown', 'lib directory': 'unknown', 'openblas configuration': 'unknown', 'pc file directory': 'unknown'}, 'lapack': {'name': 'accelerate', 'found': True, 'version': 'unknown', 'detection method': 'system', 'include directory': 'unknown', 'lib directory': 'unknown', 'openblas configuration': 'unknown', 'pc file directory': 'unknown'}}, 'Python Information': {'path': '/private/var/folders/s6/5hzmn6lx4dz5nxs7k_0slzph0000gn/T/build-env-buaiw__1/bin/python', 'version': '3.14'}, 'SIMD Extensions': {'baseline': ['NEON', 'NEON_FP16', 'NEON_VFPV4', 'ASIMD'], 'found': ['ASIMDHP', 'ASIMDDP'], 'not found': ['ASIMDFHM']}}"
+  },
+  "training_spec": {
+    "dataset_manifest": "experiments/results/r3-data-v2/manifest.json",
+    "features": "handcrafted-v1",
+    "seed": 20261015,
+    "target": "white-game-result",
+    "split_manifest": "experiments/results/r3-data-v2/splits.json"
+  },
+  "configuration": {
+    "lambdas": [
+      0.0,
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "loss": "fractional-BCE",
+    "penalty": "lambda/2 * ||w*train_RMS/400 - w_handcrafted*train_RMS/400||^2",
+    "intercept": 0,
+    "scaling": "train-only RMS; no centering; raw deploy weights",
+    "optimizer": "L-BFGS-B",
+    "maxiter": 1000,
+    "gtol": 1e-09,
+    "ftol": 1e-12
+  }
+}

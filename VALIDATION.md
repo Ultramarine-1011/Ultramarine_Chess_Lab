@@ -359,3 +359,17 @@ https://docs.scipy.org/doc/scipy/reference/optimize.minimize-lbfgsb.html
 完整 `ctest --preset release` 6/6。日志 r33-targeted/release.log。
 本阶段为 Python 训练实现，未改变 C++ 搜索，未额外重跑 Debug/sanitizer。
 正式模型将在此代码提交后从干净版本拟合；未执行 test 指标或根据 test 调参。
+
+R3.3 正式训练完成：clean `09335c08291f3a7f3c831372fda750903cef4ad5`。
+确切命令为 README 的 fit/test 两步，均指定
+`OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1`，
+输出 `experiments/results/r3-model-v1`。6 候选全部收敛，validation 选 λ=.0001。
+正式 test 仅一次：841 局面/124 局，手工 BCE .587908078 / Brier .189141550，
+正则模型 .583818366 / .188307783。以棋局聚类的差值区间均跨零，不能断言总体
+改善；早期与和棋标签分层退步。详细参数/成本/指标/限制见 docs/r3/model-report.md。
+部署 SHA-256 `446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b`。
+同配置第二次仅 train/validation 拟合至 `.tools/r3-reproduce-v1`，模型字节一致。
+原始 test 中 later_ply48_160 为标签文字错误，实际 predicate >40（v2 首个44），
+已在报告明确说明；不重跑/改写正式 test。其余原始记录和冻结 marker 均保留。
+R3.1 v2 Actions #38709478484、R3.3 Actions #38709750930 五项均 success；
+CI 快照 r31-v2-ci.json / r33-ci.json。R3.4 和 R3.5 待完成。

@@ -1,0 +1,164 @@
+{
+  "model_sha256": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+  "test_games": 124,
+  "models": {
+    "handcrafted": {
+      "positions": 841,
+      "bce": 0.5879080779688777,
+      "brier": 0.18914155027539686
+    },
+    "unregularized": {
+      "positions": 841,
+      "bce": 0.5838231716290935,
+      "brier": 0.18831073433640644
+    },
+    "regularized": {
+      "positions": 841,
+      "bce": 0.5838183659560151,
+      "brier": 0.18830778304265192
+    }
+  },
+  "strata": {
+    "white_to_move": {
+      "handcrafted": {
+        "positions": 458,
+        "bce": 0.5924358938284014,
+        "brier": 0.1903561494201156
+      },
+      "unregularized": {
+        "positions": 458,
+        "bce": 0.5894007956955233,
+        "brier": 0.18979444496111517
+      },
+      "regularized": {
+        "positions": 458,
+        "bce": 0.5893962041694814,
+        "brier": 0.18979198979736372
+      }
+    },
+    "black_to_move": {
+      "handcrafted": {
+        "positions": 383,
+        "bce": 0.5824936140950868,
+        "brier": 0.18768910534515873
+      },
+      "unregularized": {
+        "positions": 383,
+        "bce": 0.5771533235287674,
+        "brier": 0.18653647985568428
+      },
+      "regularized": {
+        "positions": 383,
+        "bce": 0.5771482617738543,
+        "brier": 0.18653293527853176
+      }
+    },
+    "early_ply16_40": {
+      "handcrafted": {
+        "positions": 426,
+        "bce": 0.6455835755161803,
+        "brier": 0.21842894013285227
+      },
+      "unregularized": {
+        "positions": 426,
+        "bce": 0.646045074362565,
+        "brier": 0.21895350004817646
+      },
+      "regularized": {
+        "positions": 426,
+        "bce": 0.6460331445003725,
+        "brier": 0.2189475305580113
+      }
+    },
+    "later_ply48_160": {
+      "handcrafted": {
+        "positions": 415,
+        "bce": 0.5287038322938151,
+        "brier": 0.1590778681566595
+      },
+      "unregularized": {
+        "positions": 415,
+        "bce": 0.5199520136424456,
+        "brier": 0.15685575073830038
+      },
+      "regularized": {
+        "positions": 415,
+        "bce": 0.5199545209924098,
+        "brier": 0.1568558976413432
+      }
+    },
+    "draw_label": {
+      "handcrafted": {
+        "positions": 47,
+        "bce": 0.7565497071107249,
+        "brier": 0.0230298307721844
+      },
+      "unregularized": {
+        "positions": 47,
+        "bce": 0.8087279136636671,
+        "brier": 0.03896569338595139
+      },
+      "regularized": {
+        "positions": 47,
+        "bce": 0.8086726654352925,
+        "brier": 0.03895166399645462
+      }
+    },
+    "decisive_label": {
+      "handcrafted": {
+        "positions": 794,
+        "bce": 0.5779255130196751,
+        "brier": 0.19897435986815623
+      },
+      "unregularized": {
+        "positions": 794,
+        "bce": 0.5705101705262912,
+        "brier": 0.19715105791911602
+      },
+      "regularized": {
+        "positions": 794,
+        "bce": 0.570508350747544,
+        "brier": 0.19714876238165857
+      }
+    }
+  },
+  "game_cluster_bootstrap": {
+    "seed": 20261015,
+    "resamples": 2000,
+    "unit": "game",
+    "differences": {
+      "unregularized": {
+        "bce": {
+          "difference": -0.00408490633978417,
+          "ci95": [
+            -0.014669302911096981,
+            0.007017948559445316
+          ]
+        },
+        "brier": {
+          "difference": -0.0008308159389903916,
+          "ci95": [
+            -0.005412309946939003,
+            0.003758666243592372
+          ]
+        }
+      },
+      "regularized": {
+        "bce": {
+          "difference": -0.00408971201286255,
+          "ci95": [
+            -0.014669145945824394,
+            0.0070032892433522405
+          ]
+        },
+        "brier": {
+          "difference": -0.000833767232744939,
+          "ci95": [
+            -0.005409751438487526,
+            0.0037535995949882716
+          ]
+        }
+      }
+    }
+  }
+}
