@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-15T16:54:51.040067+00:00",
+  "frozen_revision": "d76ed2c28711e33d5a21dab5a8c840024eb00382",
+  "new_root": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner",
+  "source_hashes": {
+    "engine/src/extended_features.cpp": "3d813966c424a0abf0b9ae3915c54470babf4a04f3541a05097af7443484d399",
+    "python/ucl/r5_study.py": "2e43957148d1b7af0ee7ff38c39c1ec524c8d3687ec43277fce8d73da09c1ebe",
+    "python/ucl/match.py": "f2c692e2cc3d274ddb859373cb94f89d755790f7e2d82f3fbbd57d0a115801a8",
+    "python/ucl/benchmark.py": "11a927014525c8cedadf98d6c2206f35638fa90f75b84473c59c0ca3e500a750"
+  },
+  "reason": "Unrelated concurrent changes appeared in the original checkout after A started. Preserve all changes there; continue only missing whole groups in a clean frozen checkout. No engine/tool/model/config/opening or sample change."
+}

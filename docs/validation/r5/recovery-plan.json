@@ -1,0 +1,39 @@
+{
+  "kind": "r5-frozen-whole-group-recovery",
+  "frozen_at": "2026-10-15T17:08:40.425208+00:00",
+  "status": "frozen-before-BCD",
+  "completed_groups": [
+    "A"
+  ],
+  "completed_A_record_sha256": "a52a33bfe464b1c4adb56054525076e57e45e2d5a325acd4bdfe83531dd29a06",
+  "completed_A_games": 400,
+  "completed_A_pairs": 200,
+  "remaining_groups": [
+    "B",
+    "C",
+    "D"
+  ],
+  "remaining_games": 1200,
+  "remaining_pairs": 600,
+  "unchanged_total_games": 1600,
+  "source_coordinator_index_sha256": "d056ab943a595ab5af47aae5c73cd88c008cf6c23eefec4eaa3b08cb32b240a6",
+  "reason": "Concurrent unrelated tracked edits after A started. A completed; original coordinator stopped on its dirty-tree guard before B output creation. Preserve both the complete A bundle and outer FAIL status; transfer identical bytes to the clean frozen checkout.",
+  "frozen_source_files": {
+    "python/ucl/match.py": "f2c692e2cc3d274ddb859373cb94f89d755790f7e2d82f3fbbd57d0a115801a8",
+    "python/ucl/records.py": "7ff84566d5b09e8123bae40a9bf206691687b7e6bd8f959671f06e5642df50ed",
+    "python/ucl/benchmark.py": "11a927014525c8cedadf98d6c2206f35638fa90f75b84473c59c0ca3e500a750",
+    "python/ucl/integrity.py": "89948db54f76fac6d838637635e7f760b56623bca0b37d966e993cc89628aa1d",
+    "python/ucl/report.py": "7105d7ef34b7c51950e82fcaca72f0146527321ddc667c0175e1eb65d7a53f35",
+    "python/ucl/r5_study.py": "2e43957148d1b7af0ee7ff38c39c1ec524c8d3687ec43277fce8d73da09c1ebe",
+    "python/ucl/r5_analysis.py": "52e9398c74d570896701387c8b79d6591a685ef84f44de189470631cbc097d17",
+    "python/ucl/r5_performance.py": "5249c77b77c7970659b84d6b81136112cd41b8c18aaba03b495316906ef1cca6"
+  },
+  "continuation_script_sha256": "dda7944e91360a56f5bf308337a07b7c7b57b4a1dfc7fbdb414dd97833f907c8",
+  "formal_freeze_sha256": "903e0296562a4481abe0ee9cf69f4b839a2f6cd4a7b5a8cd10e761deb497583b",
+  "mapping": {
+    "A": "existing400 games copied byte-identically; never rerun",
+    "B": "missing all200 openings/400 games",
+    "C": "missing all200 openings/400 games",
+    "D": "missing all200 openings/400 games"
+  }
+}

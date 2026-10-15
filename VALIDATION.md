@@ -863,3 +863,25 @@ nodes50000组原169.8166ms/优158.3449ms，对应树完全相同；提前mate/�
 改用Select-String实际PGN headers确认调度，未重跑已完成实验。
 验收前Release6/6退出0；R5.3 PASS，速度改善假设在本批支持；棋力改善尚未测量。
 下一步按冻结A→B→C→D运行，正式目录每组只创建一次；中途仅观察进度，不按胜负改协议。
+
+### R5.4 A完整组与并行工作隔离恢复（2026-10-16）
+
+A原进程29261/fastchess15884完成400局，内层record=completed、clean d76ed2c启动身份；
+A记录SHA a52a33bfe464b1c4adb56054525076e57e45e2d5a325acd4bdfe83531dd29a06。
+共享main在A运行后出现本轮未产生的Python/C++/schema等并行修改；未回退、覆盖或提交这些改动。
+已启动进程使用已加载冻结Python和独立归档clean引擎，A配置/模型copy/工具不变。
+原outer coordinator在B创建前按dirty-tree检查退出1，index=FAIL、A=completed，全部原样保留。
+本机工具create_worktree因chat根目录是仓库父目录返回Not a git repository，随后明确指定
+真实仓库用git worktree add -b r5-windows-study创建C:/Ultramarine_Chess_Lab/r5-frozen-runner，
+基于d76ed2c28711e33d5a21dab5a8c840024eb00382；没有修改main checkout或其历史。
+复制封存Original/Optimized/fastchess相同字节，显式PYTHONPATH核对模块来自隔离worktree。
+A包逐文件SHA与原目录完全相同，并用冻结原schema/validate重新确认400局/200对。
+恢复计划recovery-plan.json在B/C/D之前冻结：A永不重跑，只执行完全缺失B/C/D各400局。
+所有原配置、开局、模型、binary、tool、原Python/analysis文件hash不变；新continue-frozen.py
+只做缺失整组调度和条件采集。原outer FAIL index/log与恢复映射一同保存。
+曾添加临时未跟踪协调marker保证原coordinator在A后停止，现已删除仅本轮创建的marker，
+其他并行修改原样保留；其patch仅在原.tools/r5-isolation本机保存，不混入R5提交。
+隔离工作树MSVC Release重新configure/build、CTest6/6退出0，包含真实Windows字节和统计/trace回归。
+R5.3两对应提交Actions#38771839137/#38772278198均五项success，已保存最终JSON。
+后续在本隔离分支commit/push恢复合同、clean重构建，继续B→C→D；R5最终GitHub交付也用此分支，
+保持共享main的其他工作完整。没有更改样本/顺序/冻结研究阈值或实现R6。

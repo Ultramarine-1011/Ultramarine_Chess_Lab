@@ -1,0 +1,14 @@
+{
+  "code": {
+    "revision": "d76ed2c28711e33d5a21dab5a8c840024eb00382",
+    "dirty": false
+  },
+  "status": "FAIL",
+  "groups": {
+    "A": {
+      "status": "completed",
+      "record_sha256": "a52a33bfe464b1c4adb56054525076e57e45e2d5a325acd4bdfe83531dd29a06"
+    }
+  },
+  "error": "ValueError: working tree is dirty; commit first or explicitly pass --allow-dirty for diagnostics"
+}
