@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "seed": 20261015,
+  "engines": [
+    {"name": "UCL-candidate", "path": "build/release/ucl", "revision": "HEAD", "build": "CMake release preset", "ucl_build_info": true, "options": {"MoveOverhead": 0}},
+    {"name": "UCL-baseline", "path": "build/release/ucl", "revision": "HEAD", "build": "CMake release preset; same binary smoke only", "ucl_build_info": true, "options": {"MoveOverhead": 0}}
+  ],
+  "rounds": 2,
+  "games": 2,
+  "concurrency": 1,
+  "tc": "10+0.1",
+  "depth": 2,
+  "openings": {"path": "experiments/openings/smoke.epd", "format": "epd", "order": "sequential"},
+  "maxmoves": 60,
+  "timeout_seconds": 120
+}

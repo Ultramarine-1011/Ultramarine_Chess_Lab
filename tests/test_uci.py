@@ -1,5 +1,6 @@
 """Black-box UCI tests, including real pipe timing and independent move validation."""
 import queue
+import random
 import subprocess
 import sys
 import threading
@@ -122,6 +123,21 @@ class UciTests(unittest.TestCase):
                 board.push(result.move)
                 if board.is_game_over():
                     break
+
+    def test_seeded_positions_and_pv(self):
+        rng = random.Random(20261015)
+        board = chess.Board()
+        with chess.engine.SimpleEngine.popen_uci(ENGINE, timeout=5) as engine:
+            for _ in range(20):
+                for _ in range(3):
+                    if board.is_game_over():
+                        board = chess.Board()
+                    board.push(rng.choice(list(board.legal_moves)))
+                info = engine.analyse(board, chess.engine.Limit(depth=2))
+                copy = board.copy()
+                for move in info.get("pv", []):
+                    self.assertIn(move, copy.legal_moves)
+                    copy.push(move)
 
 
 if __name__ == "__main__":

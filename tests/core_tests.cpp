@@ -22,6 +22,21 @@ struct ConstantEvaluator : ucl::Evaluator {
     int evaluate(const chess::Board&) const override { return 42; }
     std::string_view name() const override { return "test-constant"; }
 };
+// Exhaustive reference has no alpha-beta pruning or move ordering.
+int reference(chess::Board& b, const ucl::Evaluator& eval, int depth, int ply) {
+    chess::Movelist moves;
+    chess::movegen::legalmoves(moves, b);
+    if (moves.empty()) return b.inCheck() ? -ucl::mate_score + ply : 0;
+    if (b.isHalfMoveDraw() || b.isInsufficientMaterial() || b.isRepetition(2)) return 0;
+    if (depth == 0) return eval.evaluate(b);
+    int best = -32000;
+    for (auto m : moves) {
+        b.makeMove(m);
+        best = std::max(best, -reference(b, eval, depth - 1, ply + 1));
+        b.unmakeMove(m);
+    }
+    return best;
+}
 void unit() {
     ucl::HandcraftedFeatures f;
     ucl::HandcraftedEvaluator eval(f);
@@ -71,6 +86,13 @@ void searches() {
     ucl::HandcraftedFeatures features;
     ucl::HandcraftedEvaluator eval(features);
     ucl::AlphaBetaSearch search;
+    for (const char* fen : {chess::constants::STARTPOS,
+        "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
+        "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1"}) {
+        chess::Board position(fen);
+        auto actual = search.run(position, eval, {.depth = 2});
+        check(actual.score == reference(position, eval, 2, 0), "alpha-beta matches exhaustive minimax");
+    }
     chess::Board b;
     const auto fen = b.getFen();
     auto r = search.run(b, eval, {.depth = 3});

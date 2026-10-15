@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ucl.local/schemas/experiment-v1.schema.json",
+  "title": "UCL experiment record v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "kind", "status", "started_at", "finished_at", "code", "parameters", "seed", "hardware", "tools", "engines", "artifacts", "results", "error"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "format": "uuid"},
+    "kind": {"enum": ["match"]},
+    "status": {"enum": ["running", "completed", "failed"]},
+    "started_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": ["string", "null"], "format": "date-time"},
+    "code": {
+      "type": "object", "additionalProperties": false, "required": ["revision", "dirty"],
+      "properties": {"revision": {"$ref": "#/$defs/revision"}, "dirty": {"type": "boolean"}}
+    },
+    "parameters": {"type": "object"},
+    "seed": {"type": "integer", "minimum": 0, "maximum": 2147483647},
+    "hardware": {
+      "type": "object", "additionalProperties": false,
+      "required": ["os", "architecture", "cpu", "logical_cpus", "memory_bytes", "python", "packages"],
+      "properties": {
+        "os": {"type": "string"}, "architecture": {"type": "string"}, "cpu": {"type": "string"},
+        "logical_cpus": {"type": ["integer", "null"], "minimum": 1},
+        "memory_bytes": {"type": ["integer", "null"], "minimum": 1},
+        "python": {"type": "string"}, "packages": {"type": "object", "additionalProperties": {"type": "string"}}
+      }
+    },
+    "tools": {"type": "object"},
+    "engines": {
+      "type": "array", "maxItems": 2, "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["name", "path", "revision", "build", "options", "sha256"],
+        "properties": {"name": {"type": "string", "minLength": 1}, "path": {"type": "string"},
+          "revision": {"$ref": "#/$defs/revision"}, "build": {"type": "string", "minLength": 1},
+          "options": {"type": "object"}, "sha256": {"$ref": "#/$defs/hash"},
+          "build_info": {"type": ["object", "null"]}}
+      }
+    },
+    "artifacts": {"type": "object", "additionalProperties": {
+      "type": "object", "additionalProperties": false, "required": ["sha256", "bytes"],
+      "properties": {"sha256": {"$ref": "#/$defs/hash"}, "bytes": {"type": "integer", "minimum": 0}}
+    }},
+    "results": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/results"}]},
+    "error": {"type": ["string", "null"]}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "revision": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "results": {
+      "type": "object", "additionalProperties": false,
+      "required": ["candidate", "baseline", "games", "wins", "draws", "losses", "score", "paired_rounds", "score_ci95_paired_bootstrap", "bootstrap_seed", "terminations", "interpretation"],
+      "properties": {
+        "candidate": {"type": "string"}, "baseline": {"type": "string"},
+        "games": {"type": "integer", "minimum": 1}, "wins": {"type": "integer", "minimum": 0},
+        "draws": {"type": "integer", "minimum": 0}, "losses": {"type": "integer", "minimum": 0},
+        "score": {"type": "number", "minimum": 0, "maximum": 1},
+        "paired_rounds": {"type": "integer", "minimum": 0},
+        "score_ci95_paired_bootstrap": {"type": ["array", "null"], "minItems": 2, "maxItems": 2,
+          "items": {"type": "number", "minimum": 0, "maximum": 1}},
+        "bootstrap_seed": {"type": "integer"},
+        "terminations": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+        "interpretation": {"type": "string"}
+      }
+    }
+  },
+  "allOf": [
+    {"if": {"properties": {"status": {"const": "completed"}}}, "then": {
+      "properties": {"finished_at": {"type": "string"}, "results": {"$ref": "#/$defs/results"}, "error": {"type": "null"}, "engines": {"minItems": 2}}
+    }},
+    {"if": {"properties": {"status": {"const": "failed"}}}, "then": {
+      "properties": {"finished_at": {"type": "string"}, "error": {"type": "string", "minLength": 1}}
+    }}
+  ]
+}
