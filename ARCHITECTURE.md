@@ -132,3 +132,19 @@ UCL provenance、相同 compiler/build_type/flags；comparison=ablation 要求�
 C++ extractor，并用独立 python-chess 特征实现逐行精确交叉检查；训练输入
 始终采用 C++ 输出。`export_dataset` 保留局面/游戏 ID、split、label、FEN、
 特征版本和导出 binary/build provenance。handcrafted-v1 的定义和顺序不变。
+
+## R3 训练与模型格式
+
+`LinearTrainer` 实现既有 `Trainer.fit(TrainingSpec, output_directory)`，用 C++
+特征、train-only RMS、零截距 fractional BCE 和以手工 beta 为中心的 L2。
+模型选择只访问 train/validation；`evaluate_frozen` 在模型文件和选择记录已哈希
+冻结后，用独占 marker 限制正式 test 步骤。来源、环境和严格 JSON manifest 的
+契约为 `schemas/linear-model-v1.schema.json`。
+
+部署文件为轻量 ASCII `ucl-linear-v1` 固定顺序 token Schema：
+`features handcrafted-v1; perspective white; temperature 400; intercept 0;`
+`weights 8 <八个有限 double，绝对值<=10000>; dataset_sha256 <64 hex>;`
+`split_sha256 <64 hex>; end`（各字段用换行分隔，实际示例见正式 model.txt）。
+完整文件最大 4096 bytes，拒绝多余字段/错误版本/维数/数值；调用方提供完整
+SHA-256，加载前核对文件字节。温度只用于训练概率，部署直接算原空间 w·x，
+按 lround 的 half-away-from-zero 取整并转换当前行棋方符号。

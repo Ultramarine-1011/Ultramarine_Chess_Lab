@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UCL R3 frozen linear model manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "kind",
+    "status",
+    "feature_version",
+    "perspective",
+    "temperature",
+    "intercept",
+    "weights",
+    "lambda",
+    "seed",
+    "model_file",
+    "model_sha256",
+    "dataset_sha256",
+    "split_sha256",
+    "features_sha256",
+    "selection_sha256",
+    "code",
+    "environment",
+    "training_spec",
+    "configuration"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "kind": {
+      "const": "ucl-linear-model"
+    },
+    "status": {
+      "const": "frozen"
+    },
+    "feature_version": {
+      "const": "handcrafted-v1"
+    },
+    "perspective": {
+      "const": "white"
+    },
+    "temperature": {
+      "const": 400
+    },
+    "intercept": {
+      "const": 0
+    },
+    "weights": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": {
+        "type": "number",
+        "minimum": -10000,
+        "maximum": 10000
+      }
+    },
+    "lambda": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "model_file": {
+      "const": "model.txt"
+    },
+    "model_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "dataset_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "split_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "features_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "selection_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "code": {
+      "type": "object"
+    },
+    "environment": {
+      "type": "object"
+    },
+    "training_spec": {
+      "type": "object"
+    },
+    "configuration": {
+      "type": "object"
+    }
+  }
+}

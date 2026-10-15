@@ -186,3 +186,13 @@ R3 特征导出（先提交、重新 configure/build）：
 ```
 
 `ucl --features` 也接受逐行 FEN，逐行返回版本化 JSON；非法 FEN 退出非零。
+
+R3 模型训练和独立测试（两步分别执行；输出目录和 test marker 均拒绝覆盖）：
+
+```sh
+OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python scripts/train_linear.py fit --output experiments/results/r3-model-new
+.venv/bin/python scripts/train_linear.py test --output experiments/results/r3-model-new
+```
+
+默认使用已冻结的 `r3-data-v2` / `r3-features-v2`。正式结论只引用一次冻结测试，
+不按测试结果重训。v1 数据保留历史证据，因八 ply 采样只含白走而在训练前替换。

@@ -84,5 +84,65 @@ class FeatureTests(unittest.TestCase):
             with self.assertRaises(ValueError): validate_vector(bad)
 
 
+
+
+
+class TrainingTests(unittest.TestCase):
+    def test_gradient_stability_and_fit(self):
+        import numpy as np
+        from ucl.training import objective, optimize, metrics, check_arrays
+        from ucl.feature_data import WEIGHTS
+        rng = np.random.default_rng(123)
+        x = rng.normal(size=(40, 8))
+        y = np.array([0., .5, 1., .5]*10)
+        beta, prior = rng.normal(size=8), np.zeros(8)
+        value, gradient = objective(beta, x, y, prior, .1)
+        numeric = np.empty(8)
+        for i in range(8):
+            d = np.zeros(8); d[i] = 1e-5
+            numeric[i] = (objective(beta+d,x,y,prior,.1)[0]-objective(beta-d,x,y,prior,.1)[0])/2e-5
+        np.testing.assert_allclose(gradient,numeric,atol=1e-9)
+        self.assertTrue(np.isfinite(objective(beta*1e5, x, y, prior, 0)[0]))
+        a, b = optimize(x,y,.01), optimize(x,y,.01)
+        self.assertTrue(a['success'])
+        self.assertEqual(a['weights'], b['weights'])
+        self.assertLess(metrics(x,y,a['weights'])['bce'], metrics(x,y,WEIGHTS)['bce'])
+        for xx, yy in [(x[:,:7], y), (x, y[:-1]), (x*np.nan,y), (x,y+1)]:
+            with self.assertRaises(ValueError): check_arrays(xx,yy)
+
+    def test_strict_model_format(self):
+        import tempfile
+        from ucl.model import encode_model, load_model
+        from ucl.records import sha256
+        weights = [100.,320.,330.,500.,900.,5.,4.,30.]
+        text = encode_model(weights,'a'*64,'b'*64)
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp)/'model.txt'; p.write_bytes(text.encode())
+            self.assertEqual(load_model(p,sha256(p)),weights)
+            with self.assertRaises(ValueError): load_model(p,'0'*64)
+            for corrupt in [text+'extra', text.replace('handcrafted-v1','v2'), text.replace('weights 8','weights 7'),text.replace('100 320','nan 320'),text.replace('intercept 0','intercept 1')]:
+                p.write_bytes(corrupt.encode())
+                with self.assertRaises(ValueError): load_model(p,sha256(p))
+        for w in [weights[:-1], [float('inf')]*8, [10001]*8]:
+            with self.assertRaises(ValueError): encode_model(w,'a'*64,'b'*64)
+
+    def test_selection_never_evaluates_test(self):
+        import tempfile
+        from unittest.mock import patch
+        import ucl.training as training
+        root = Path(__file__).resolve().parents[1]
+        spec = training.TrainingSpec(str(root/'experiments/results/r3-data-v2/manifest.json'),
+            'handcrafted-v1',20261015,'white-game-result',str(root/'experiments/results/r3-data-v2/splits.json'))
+        original = training.arrays
+        def guard(rows, split):
+            self.assertNotEqual(split,'test')
+            return original(rows,split)
+        with tempfile.TemporaryDirectory() as tmp, patch('ucl.training.arrays',side_effect=guard):
+            p = training.LinearTrainer(root/'experiments/results/r3-features-v2/manifest.json').fit(spec,str(Path(tmp)/'fit'))
+            m = training.validate_model_manifest(p)
+            self.assertEqual(m['status'],'frozen')
+            self.assertFalse((Path(p).parent/'test-results.json').exists())
+
+
 if __name__ == '__main__':
     unittest.main()

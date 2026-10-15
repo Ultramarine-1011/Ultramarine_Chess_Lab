@@ -337,3 +337,25 @@ R3.2 代码 Actions #38709009820 五项全部 success（r32-ci.json）。
 修正版的完整计数/哈希见 experiments/results/r3-data-v2；
 `ctest --preset release -R '^research$'`、完整 Release 6/6 通过，
 命令/日志 r31-v2-*.log；测试基底 61282b6 + dirty sampling 修复。
+
+## R3.3 — 训练实现（2026-10-15，正式训练前）
+
+v2 数据 908 局/6039 局面：train/validation/test 4208/990/841；游戏划分
+634/150/124 不变。6039 个 C++/Python 特征与手工分数精确一致；
+clean exporter `e5b625fe70088935c6f3d41bf3e77f8ea574ccb1`，
+features SHA-256 `6a061c95073f71ff25909d4eaaa7407a14e926c5612c453c0850cca230e633b4`。
+
+实现 NumPy/SciPy float64 fractional BCE、解析梯度、train-only RMS、零截距、
+手工 beta 中心 L2，候选 lambda 与停止条件遵守预注册协议。保留所有候选与
+收敛信息；选择/模型冻结先于独占 marker 的正式 test 步骤。模型严格 ASCII
+部署 Schema 和严格 JSON manifest，哈希/维度/有限值/版本验证均覆盖。
+Python/数值依赖锁定 numpy=2.5.4、scipy=1.18.1，官方 API 依据：
+https://docs.scipy.org/doc/scipy/reference/optimize.minimize-lbfgsb.html
+和 https://numpy.org/doc/stable/reference/generated/numpy.logaddexp.html 。
+
+测试基底 `1f512d491b0d8fa960e27b1d5e060aa5649235a1` + dirty R3.3，
+`ctest --preset release -R '^research$'` 通过（8 unittest，含梯度有限差分、
+极端 logit、确定性、schema/hash 篡改，以及 fit 绝不调用 test 的集成 guard），
+完整 `ctest --preset release` 6/6。日志 r33-targeted/release.log。
+本阶段为 Python 训练实现，未改变 C++ 搜索，未额外重跑 Debug/sanitizer。
+正式模型将在此代码提交后从干净版本拟合；未执行 test 指标或根据 test 调参。
