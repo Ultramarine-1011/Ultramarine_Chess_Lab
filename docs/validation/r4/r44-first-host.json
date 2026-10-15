@@ -1,0 +1,21 @@
+{
+  "hardware": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "code": {
+    "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+    "dirty": false
+  },
+  "binary_sha256": "4792a7bd89b57059d77a941d5b7006a01913abbccd5a219e6ec13fa18aaefc06",
+  "windows_physical_host": "NOT_RUN: no connected Windows execution host or endpoint supplied"
+}

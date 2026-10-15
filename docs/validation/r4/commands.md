@@ -96,3 +96,21 @@ operation checks all source hashes, all120 legal PGNs and60 full paired rounds;
 move-cost totals. The recovery plan was saved before continuing the remaining
 original openings, with unchanged model/clock/total200 pairs and a frozen UCI-only
 patch. Record each batch's binary identity; never describe this as one uninterrupted run.
+
+## R4.5 final evidence
+
+```
+.venv/bin/ucl-lab validate experiments/results/r4-match-continuation-20261015/record.json
+.venv/bin/python -m ucl.r4_study finalize
+.venv/bin/python -m ucl.r4_study validate
+.venv/bin/python docs/validation/r4/audit_final.py
+.venv/bin/python scripts/build_revision.py 625d84e370395cfd013eeac429b059bb107ca33d
+python3 -m venv .tools/r4-plot-env
+.tools/r4-plot-env/bin/python -m pip install -r docs/validation/r4/plot-requirements.txt
+.tools/r4-plot-env/bin/python docs/validation/r4/plot_results.py
+```
+
+Matplotlib isolated from locked engine/training environment. PNGs visually checked;
+SVG metadata Date removed and hash salt fixed. Figures use stored metrics only.
+Both formal binaries retained locally; prefix rebuild exactly reproduces the
+recorded SHA-256. Formal clocks do not guarantee replay-identical games across runs.

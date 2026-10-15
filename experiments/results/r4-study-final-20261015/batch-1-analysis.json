@@ -1,0 +1,108 @@
+{
+  "kind": "r4-match-analysis",
+  "record_sha256": "a3b5795155f414881b4ad65b2870502ec3b5f4cdfb862411abfec988c3c8d69f",
+  "source_status": "failed",
+  "completed_prefix_games": 120,
+  "source_error": "RuntimeError: fastchess exited 1; see fastchess.log",
+  "games": 120,
+  "paired_rounds": 60,
+  "wins": 33,
+  "draws": 19,
+  "losses": 68,
+  "score": 0.3541666666666667,
+  "score_ci95_paired_bootstrap": [
+    0.2916666666666667,
+    0.42083333333333334
+  ],
+  "elo_equivalent": -104.36510898239948,
+  "elo_equivalent_ci95": [
+    -154.14035254560682,
+    -55.477370588580996
+  ],
+  "paired_score_counts": [
+    17,
+    9,
+    27,
+    6,
+    1
+  ],
+  "terminations": {
+    "normal": 120
+  },
+  "natural_reasons": {
+    "CHECKMATE": 101,
+    "FIFTY_MOVES": 12,
+    "INSUFFICIENT_MATERIAL": 1,
+    "THREEFOLD_REPETITION": 6
+  },
+  "abnormal_games": 0,
+  "engines": {
+    "full": {
+      "moves": 7061,
+      "orphan_queries_from_incomplete_game": 78,
+      "final_nodes": 441349317,
+      "final_qnodes": 398223374,
+      "engine_elapsed_us": 147898826,
+      "aggregate_final_nps": 2984129.9551627273,
+      "completed_depth_median": 5,
+      "completed_depth_counts": {
+        "4": 2263,
+        "5": 2615,
+        "6": 1074,
+        "2": 99,
+        "3": 554,
+        "7": 329,
+        "8": 62,
+        "9": 7,
+        "11": 3,
+        "10": 4,
+        "12": 2,
+        "1": 35,
+        "128": 10,
+        "32": 1,
+        "14": 2,
+        "38": 1
+      },
+      "pgn_last_completed_nodes": 227036058,
+      "pgn_move_wall_seconds_rounded_ms": 147.81400000000164,
+      "counter_scope": "final includes interrupted iteration; PGN n= uses last completed UCI info"
+    },
+    "Handcrafted": {
+      "moves": 7079,
+      "orphan_queries_from_incomplete_game": 78,
+      "final_nodes": 637290638,
+      "final_qnodes": 570767483,
+      "engine_elapsed_us": 147836641,
+      "aggregate_final_nps": 4310775.959797409,
+      "completed_depth_median": 5,
+      "completed_depth_counts": {
+        "5": 2873,
+        "4": 1473,
+        "6": 1556,
+        "7": 566,
+        "3": 329,
+        "1": 69,
+        "8": 114,
+        "9": 34,
+        "10": 4,
+        "12": 1,
+        "11": 4,
+        "13": 2,
+        "14": 1,
+        "2": 38,
+        "128": 12,
+        "40": 1,
+        "16": 1,
+        "38": 1
+      },
+      "pgn_last_completed_nodes": 332498113,
+      "pgn_move_wall_seconds_rounded_ms": 147.82700000000165,
+      "counter_scope": "final includes interrupted iteration; PGN n= uses last completed UCI info"
+    }
+  },
+  "limitations": [
+    "Fixed 60 paired-opening sample and short clock; not SPRT or universal Elo.",
+    "Opening dependence and desktop background activity limit external validity.",
+    "Elo interval is monotone transform of descriptive paired-score percentile bootstrap."
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "kind": "r4-fixed-study",
+  "status": "completed",
+  "code": {
+    "revision": "057f2cf6543028368fb9725f4142e34b7fa85805",
+    "dirty": true
+  },
+  "plan_sha256": "7df9a0c30cbd21c060680e81b70d8f8c31f37d85c23796a3d6e1af739b9d0cbb",
+  "results": {
+    "paired_score_counts": [
+      64,
+      32,
+      71,
+      19,
+      14
+    ],
+    "candidate": "full",
+    "baseline": "Handcrafted",
+    "games": 400,
+    "wins": 115,
+    "draws": 57,
+    "losses": 228,
+    "score": 0.35875,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.31625,
+      0.40125
+    ],
+    "bootstrap_seed": 20261015,
+    "terminations": {
+      "normal": 391,
+      "adjudication": 9
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "elo_equivalent": -100.89418735112959,
+  "elo_equivalent_ci95": [
+    -133.94672206304517,
+    -69.53219240387646
+  ],
+  "batches": [
+    {
+      "record": "experiments/results/r4-match-final-20261015/record.json",
+      "sha256": "a3b5795155f414881b4ad65b2870502ec3b5f4cdfb862411abfec988c3c8d69f",
+      "source_status": "failed",
+      "games": 120,
+      "opening_range": [
+        1,
+        60
+      ]
+    },
+    {
+      "record": "experiments/results/r4-match-continuation-20261015/record.json",
+      "sha256": "3afbc8bfdf770b492e3c6c336293d4b94cf51174ba8f735633bdfb4d8ef6db29",
+      "source_status": "completed",
+      "games": 280,
+      "opening_range": [
+        61,
+        200
+      ]
+    }
+  ],
+  "telemetry": {
+    "full": {
+      "moves": 23316,
+      "final_nodes": 1389596150,
+      "final_qnodes": 1252360115,
+      "engine_elapsed_us": 490163843,
+      "pgn_last_completed_nodes": 714625954,
+      "pgn_move_wall_seconds_rounded_ms": 490.18699999999217,
+      "orphan_queries_from_incomplete_game": 78,
+      "aggregate_final_nps": 2834962.5739326514,
+      "completed_depth_counts": {
+        "4": 7528,
+        "5": 8699,
+        "6": 3330,
+        "2": 345,
+        "3": 1983,
+        "7": 887,
+        "8": 169,
+        "9": 88,
+        "11": 12,
+        "10": 38,
+        "12": 7,
+        "1": 173,
+        "128": 28,
+        "32": 1,
+        "14": 5,
+        "38": 1,
+        "44": 1,
+        "114": 1,
+        "0": 5,
+        "13": 5,
+        "82": 1,
+        "119": 1,
+        "91": 1,
+        "15": 2,
+        "19": 1,
+        "17": 3,
+        "117": 1
+      },
+      "completed_depth_median": 5.0
+    },
+    "Handcrafted": {
+      "moves": 23374,
+      "final_nodes": 2019673678,
+      "final_qnodes": 1804207235,
+      "engine_elapsed_us": 490169452,
+      "pgn_last_completed_nodes": 1060601285,
+      "pgn_move_wall_seconds_rounded_ms": 490.1579999999932,
+      "orphan_queries_from_incomplete_game": 78,
+      "aggregate_final_nps": 4120358.112402321,
+      "completed_depth_counts": {
+        "5": 9356,
+        "4": 4952,
+        "6": 5186,
+        "7": 1713,
+        "3": 1165,
+        "1": 233,
+        "8": 289,
+        "9": 100,
+        "10": 68,
+        "12": 9,
+        "11": 40,
+        "13": 8,
+        "14": 8,
+        "2": 196,
+        "128": 35,
+        "40": 1,
+        "16": 4,
+        "38": 1,
+        "27": 1,
+        "85": 1,
+        "0": 3,
+        "103": 1,
+        "15": 3,
+        "18": 1
+      },
+      "completed_depth_median": 5.0
+    }
+  },
+  "engine_code_controls": {
+    "engine/include/ucl/evaluator.hpp": {
+      "before": "bfcc9779750e822a652a25772f59a4594db86dd078748df924008feed135fcf4",
+      "after": "bfcc9779750e822a652a25772f59a4594db86dd078748df924008feed135fcf4"
+    },
+    "engine/include/ucl/position.hpp": {
+      "before": "20876590a078597a0b28f6ab0886b4e1261f5fe99abfe38db4c90e59599ba274",
+      "after": "20876590a078597a0b28f6ab0886b4e1261f5fe99abfe38db4c90e59599ba274"
+    },
+    "engine/include/ucl/search.hpp": {
+      "before": "958a9d8047326a8981ca1c6a8ddc057786095523522a0d832c264b27011950a0",
+      "after": "958a9d8047326a8981ca1c6a8ddc057786095523522a0d832c264b27011950a0"
+    },
+    "engine/include/ucl/transposition.hpp": {
+      "before": "51f3386334086a3f3c66b0c9bf652481d76ca8a4e348258f9a0f3e156f5deb8a",
+      "after": "51f3386334086a3f3c66b0c9bf652481d76ca8a4e348258f9a0f3e156f5deb8a"
+    },
+    "engine/include/ucl/uci.hpp": {
+      "before": "8c4396fa596f0ff4e1c3eb7e6313ebe66a3bddc8f3316cdd38a42baaaa4a4940",
+      "after": "8c4396fa596f0ff4e1c3eb7e6313ebe66a3bddc8f3316cdd38a42baaaa4a4940"
+    },
+    "engine/src/build_info.hpp.in": {
+      "before": "690936b12477180828e6e443edf108c3f200c9ee881d7beaa7c1bc639b9d28fc",
+      "after": "690936b12477180828e6e443edf108c3f200c9ee881d7beaa7c1bc639b9d28fc"
+    },
+    "engine/src/evaluator.cpp": {
+      "before": "713e0e107660c85791947693391ff59b8f4522459b8a075c43327cf184173128",
+      "after": "713e0e107660c85791947693391ff59b8f4522459b8a075c43327cf184173128"
+    },
+    "engine/src/extended_features.cpp": {
+      "before": "762436e9c0c51f17e5aa3e43cadf289fc3f3133ba097a721574728a5194f95fe",
+      "after": "762436e9c0c51f17e5aa3e43cadf289fc3f3133ba097a721574728a5194f95fe"
+    },
+    "engine/src/linear_evaluator.cpp": {
+      "before": "c2f6a6ff1bc79ce9e7611ce05fedf64511709ee386332361d9a9d21585619166",
+      "after": "c2f6a6ff1bc79ce9e7611ce05fedf64511709ee386332361d9a9d21585619166"
+    },
+    "engine/src/main.cpp": {
+      "before": "23aa4a8a6c78fe5b3877f102d0e0abe9578676ede1ead480b66c6d4e324fd5d2",
+      "after": "23aa4a8a6c78fe5b3877f102d0e0abe9578676ede1ead480b66c6d4e324fd5d2"
+    },
+    "engine/src/position.cpp": {
+      "before": "0e7f2d32591c977fabdbe3bec9bc021b04c023678d720bf388a5219146192f29",
+      "after": "0e7f2d32591c977fabdbe3bec9bc021b04c023678d720bf388a5219146192f29"
+    },
+    "engine/src/search.cpp": {
+      "before": "6483ff6eb696d997f13a1a1e6e7508dbf6a385a7b60df3937db9e88b237f5310",
+      "after": "6483ff6eb696d997f13a1a1e6e7508dbf6a385a7b60df3937db9e88b237f5310"
+    },
+    "engine/src/uci.cpp": {
+      "before": "1486e214d86660db92d74ac877415a4565b64ed2c1c90ebca255c30d138a94f8",
+      "after": "f104ddf187ad28e24c678e42c0e55fbc9e4a932002d828eef97e8b108dfa2267"
+    }
+  },
+  "deviation": "Strict-mode protocol warning interrupted the original run after60 complete pairs. Preserve its failed status and all120 results; only UCI depth0 info output changed for remaining140 pairs. Search/evaluation/model/clock/opening/sample unchanged. Incomplete game121 abandoned and repeated within the original remaining sample.",
+  "natural_reasons": {
+    "CHECKMATE": 343,
+    "FIFTY_MOVES": 25,
+    "INSUFFICIENT_MATERIAL": 3,
+    "THREEFOLD_REPETITION": 19,
+    "STALEMATE": 1
+  },
+  "abnormal_completed_games": 0,
+  "files": {
+    "batch-1-analysis.json": {
+      "sha256": "529b868976708e9868ff5e50175bda90520a0b45f2cb0098c4b42ca2340db09a",
+      "bytes": 2805
+    },
+    "batch-2-analysis.json": {
+      "sha256": "8704918a6417fe8dfb86eb7a5cb93d3cd74b15648e3b069a1186057e18bdce28",
+      "bytes": 3032
+    },
+    "combined-games.pgn": {
+      "sha256": "fb1e70337ef7bf4fc096fd3a95365a5993a60a3878e1a35a7c97d756faa40c80",
+      "bytes": 3830642
+    }
+  }
+}

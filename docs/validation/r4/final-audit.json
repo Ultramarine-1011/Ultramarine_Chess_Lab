@@ -1,0 +1,215 @@
+{
+  "code": {
+    "revision": "057f2cf6543028368fb9725f4142e34b7fa85805",
+    "dirty": true
+  },
+  "worktree_changes": [
+    " M VALIDATION.md",
+    " M docs/r4/final-report.md",
+    "?? docs/validation/r4/audit_final.py",
+    "?? docs/validation/r4/final-audit.log",
+    "?? docs/validation/r4/plot_results.py"
+  ],
+  "r3_datasets": {
+    "1": {
+      "source_games": 3000,
+      "reject:termination": 970,
+      "reject:rating": 629,
+      "reject:short_game": 90,
+      "reject:time_control": 400,
+      "reject:invalid literal for int() with base 10: '-'": 2,
+      "reject:invalid or unfinished PGN": 1,
+      "cross_split_position_removed": 4,
+      "duplicate_position_removed": 1,
+      "accepted_games": 908,
+      "positions_before_dedup": 5693,
+      "positions": 5688,
+      "positions:train": 3972,
+      "positions:validation": 922,
+      "positions:test": 794
+    },
+    "2": {
+      "source_games": 3000,
+      "reject:termination": 970,
+      "reject:rating": 629,
+      "reject:short_game": 90,
+      "reject:time_control": 400,
+      "reject:invalid literal for int() with base 10: '-'": 2,
+      "reject:invalid or unfinished PGN": 1,
+      "duplicate_position_removed": 1,
+      "cross_split_position_removed": 2,
+      "accepted_games": 908,
+      "positions_before_dedup": 6042,
+      "positions": 6039,
+      "positions:train": 4208,
+      "positions:validation": 990,
+      "positions:test": 841
+    }
+  },
+  "r3_features": 6039,
+  "r3_model": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+  "r4_dataset": {
+    "games": true,
+    "positions": true,
+    "dates": true,
+    "temporal_separation": true
+  },
+  "r4_openings": 200,
+  "models": {
+    "handcrafted": {
+      "sha256": "f48c494c4b7a75634297b0d5da2a2f67ca3e2c76584c9893640736df193644ec",
+      "dimensions": 8
+    },
+    "calibration": {
+      "sha256": "b17b54d1cb9f33fc709a4a235a1b64b460676bdb7a773c27b55fb9e30b89a16e",
+      "dimensions": 8
+    },
+    "frozen_r3": {
+      "sha256": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+      "dimensions": 8
+    },
+    "refit8": {
+      "sha256": "fe8b34d5cf3fab436a03a4d7d15581aa5b5b35477990834cf168e977fb9deb18",
+      "dimensions": 8
+    },
+    "pawn": {
+      "sha256": "074a364b2f0b3b7137f2d5d725ea3da5e83a8e6749ac847204862653a4118993",
+      "dimensions": 14
+    },
+    "king": {
+      "sha256": "6213e17d885fbd86b0a2f3bf97abb97067a828a1a71678af71074f4337dce013",
+      "dimensions": 14
+    },
+    "full": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "dimensions": 14
+    }
+  },
+  "independent_test": {
+    "model_count": 7,
+    "test_sha256": "0f7785584c9c2130fe6df5a95e9231fc4d5ff90eb5b5e0df8de7821489d7742a",
+    "games": 2173,
+    "positions": 14570,
+    "code": {
+      "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+      "dirty": false
+    }
+  },
+  "bundles": [
+    {
+      "path": "experiments/results/r1-r2-benchmark-20261015/record.json",
+      "sha256": "d1406a3a8731567db8ead5448552885663ef0f9eaa6dea0fd5c8ab1e89e96661",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r1-r2-benchmark-final-20261015/record.json",
+      "sha256": "ac0bc4e49d0d16a583801c44bd8ae2673735871667d32fbeb7412fc446c2392e",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r1-r2-match-20261015/record.json",
+      "sha256": "d0ebb3a3d41a460b261dee7002d81132d65ab7880abc4f0e63530c47341d0653",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r1-r2-match-final-20261015/record.json",
+      "sha256": "0ecf0ef9c35ce8244c9cf9d5acab5236816004031feba6c97fb905aa0cdb61ff",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r1-smoke-20261015/record.json",
+      "sha256": "f58d5eb2f444aa7be42ae81a164654cb30d5ff1c0fea35984f3ccd7aa2dde528",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r2-ablation-20261015/record.json",
+      "sha256": "7aa89b3bd6f53802ce585f7ae9ec0aab4345a9b486ea37c7ad9c6fdfb93a9fc0",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r2-ablation-final-20261015/record.json",
+      "sha256": "9089211885904c8de483171b8212736d4c8166bc5e3ea831aa7960d2a863db51",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r3-benchmark-final-20261015/record.json",
+      "sha256": "ea224968ea5a2517c8332ac535fda43aabf4e70ebfbfb807f0389f35fbb768ec",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r3-match-final-20261015/record.json",
+      "sha256": "0ef61069ad261c572da71b68e8a78f94a951caeb4126e2352b962aefe13d5f63",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r4-benchmarks-v1/full/record.json",
+      "sha256": "11a30b26ec38c8d1baa07b806aa65513a8bc6e17b9c939549081f636efc36090",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r4-benchmarks-v1/king/record.json",
+      "sha256": "73535a46de7c6b8628ce6fd19ade956b87dc509a2b503071d645456e817f3bc2",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r4-benchmarks-v1/pawn/record.json",
+      "sha256": "9e639f436e13dfc15e2b2863babd2cea39ea10e21ea58f2df2fd1360084f48fb",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r4-benchmarks-v1/refit8/record.json",
+      "sha256": "6a441d1d68596a75a58cfcaf3cf422295f1bb729147d69ea8b50add48518965c",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r4-match-continuation-20261015/record.json",
+      "sha256": "3afbc8bfdf770b492e3c6c336293d4b94cf51174ba8f735633bdfb4d8ef6db29",
+      "status": "PASS"
+    },
+    {
+      "path": "experiments/results/r4-match-final-20261015/record.json",
+      "sha256": "a3b5795155f414881b4ad65b2870502ec3b5f4cdfb862411abfec988c3c8d69f",
+      "status": "FAILED_ORIGINAL_WITH_VALID120_GAME_PREFIX"
+    },
+    {
+      "path": "experiments/results/r4-telemetry-smoke/record.json",
+      "sha256": "3852a8f89600fc0d4032cca6a614f978e0f5764ea9075b0ed05726d1c2c7551b",
+      "status": "PASS"
+    }
+  ],
+  "study": {
+    "paired_score_counts": [
+      64,
+      32,
+      71,
+      19,
+      14
+    ],
+    "candidate": "full",
+    "baseline": "Handcrafted",
+    "games": 400,
+    "wins": 115,
+    "draws": 57,
+    "losses": 228,
+    "score": 0.35875,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.31625,
+      0.40125
+    ],
+    "bootstrap_seed": 20261015,
+    "terminations": {
+      "normal": 391,
+      "adjudication": 9
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "r1_r3_existing_evidence_unchanged": true,
+  "search_and_handcrafted_source_unchanged": true,
+  "no_builds_binaries_venv_tracked": true,
+  "default_evaluator": {
+    "evaluator": "handcrafted-v1",
+    "model_sha256": null
+  },
+  "windows_physical_host": "NOT_RUN"
+}

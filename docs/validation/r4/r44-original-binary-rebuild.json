@@ -1,0 +1,42 @@
+{
+  "binary": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/625d84e370395cfd013eeac429b059bb107ca33d/ucl",
+  "sha256": "4792a7bd89b57059d77a941d5b7006a01913abbccd5a219e6ec13fa18aaefc06",
+  "build_info": {
+    "version": "0.1.0",
+    "revision": "625d84e370395cfd013eeac429b059bb107ca33d",
+    "dirty": false,
+    "compiler": "AppleClang 21.0.0.21000101",
+    "build_type": "Release",
+    "flags": " -O3 -DNDEBUG"
+  },
+  "commands": [
+    [
+      "git",
+      "-C",
+      "/Users/ultramarine/Documents/Ultramarine_Chess_Lab",
+      "worktree",
+      "add",
+      "--detach",
+      "/var/folders/5h/h70f2y414c1_thp7lltsp5740000gn/T/ucl-revision-s7h93zgu/source",
+      "625d84e370395cfd013eeac429b059bb107ca33d"
+    ],
+    [
+      "cmake",
+      "-S",
+      "/var/folders/5h/h70f2y414c1_thp7lltsp5740000gn/T/ucl-revision-s7h93zgu/source",
+      "-B",
+      "/var/folders/5h/h70f2y414c1_thp7lltsp5740000gn/T/ucl-revision-s7h93zgu/build",
+      "-G",
+      "Ninja",
+      "-DBUILD_TESTING=OFF",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    [
+      "cmake",
+      "--build",
+      "/var/folders/5h/h70f2y414c1_thp7lltsp5740000gn/T/ucl-revision-s7h93zgu/build",
+      "--parallel",
+      "4"
+    ]
+  ]
+}

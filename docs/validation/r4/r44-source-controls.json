@@ -1,0 +1,54 @@
+{
+  "engine/include/ucl/evaluator.hpp": {
+    "before": "bfcc9779750e822a652a25772f59a4594db86dd078748df924008feed135fcf4",
+    "after": "bfcc9779750e822a652a25772f59a4594db86dd078748df924008feed135fcf4"
+  },
+  "engine/include/ucl/position.hpp": {
+    "before": "20876590a078597a0b28f6ab0886b4e1261f5fe99abfe38db4c90e59599ba274",
+    "after": "20876590a078597a0b28f6ab0886b4e1261f5fe99abfe38db4c90e59599ba274"
+  },
+  "engine/include/ucl/search.hpp": {
+    "before": "958a9d8047326a8981ca1c6a8ddc057786095523522a0d832c264b27011950a0",
+    "after": "958a9d8047326a8981ca1c6a8ddc057786095523522a0d832c264b27011950a0"
+  },
+  "engine/include/ucl/transposition.hpp": {
+    "before": "51f3386334086a3f3c66b0c9bf652481d76ca8a4e348258f9a0f3e156f5deb8a",
+    "after": "51f3386334086a3f3c66b0c9bf652481d76ca8a4e348258f9a0f3e156f5deb8a"
+  },
+  "engine/include/ucl/uci.hpp": {
+    "before": "8c4396fa596f0ff4e1c3eb7e6313ebe66a3bddc8f3316cdd38a42baaaa4a4940",
+    "after": "8c4396fa596f0ff4e1c3eb7e6313ebe66a3bddc8f3316cdd38a42baaaa4a4940"
+  },
+  "engine/src/build_info.hpp.in": {
+    "before": "690936b12477180828e6e443edf108c3f200c9ee881d7beaa7c1bc639b9d28fc",
+    "after": "690936b12477180828e6e443edf108c3f200c9ee881d7beaa7c1bc639b9d28fc"
+  },
+  "engine/src/evaluator.cpp": {
+    "before": "713e0e107660c85791947693391ff59b8f4522459b8a075c43327cf184173128",
+    "after": "713e0e107660c85791947693391ff59b8f4522459b8a075c43327cf184173128"
+  },
+  "engine/src/extended_features.cpp": {
+    "before": "762436e9c0c51f17e5aa3e43cadf289fc3f3133ba097a721574728a5194f95fe",
+    "after": "762436e9c0c51f17e5aa3e43cadf289fc3f3133ba097a721574728a5194f95fe"
+  },
+  "engine/src/linear_evaluator.cpp": {
+    "before": "c2f6a6ff1bc79ce9e7611ce05fedf64511709ee386332361d9a9d21585619166",
+    "after": "c2f6a6ff1bc79ce9e7611ce05fedf64511709ee386332361d9a9d21585619166"
+  },
+  "engine/src/main.cpp": {
+    "before": "23aa4a8a6c78fe5b3877f102d0e0abe9578676ede1ead480b66c6d4e324fd5d2",
+    "after": "23aa4a8a6c78fe5b3877f102d0e0abe9578676ede1ead480b66c6d4e324fd5d2"
+  },
+  "engine/src/position.cpp": {
+    "before": "0e7f2d32591c977fabdbe3bec9bc021b04c023678d720bf388a5219146192f29",
+    "after": "0e7f2d32591c977fabdbe3bec9bc021b04c023678d720bf388a5219146192f29"
+  },
+  "engine/src/search.cpp": {
+    "before": "6483ff6eb696d997f13a1a1e6e7508dbf6a385a7b60df3937db9e88b237f5310",
+    "after": "6483ff6eb696d997f13a1a1e6e7508dbf6a385a7b60df3937db9e88b237f5310"
+  },
+  "engine/src/uci.cpp": {
+    "before": "1486e214d86660db92d74ac877415a4565b64ed2c1c90ebca255c30d138a94f8",
+    "after": "f104ddf187ad28e24c678e42c0e55fbc9e4a932002d828eef97e8b108dfa2267"
+  }
+}

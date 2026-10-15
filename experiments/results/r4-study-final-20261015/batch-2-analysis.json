@@ -1,0 +1,123 @@
+{
+  "kind": "r4-match-analysis",
+  "record_sha256": "3afbc8bfdf770b492e3c6c336293d4b94cf51174ba8f735633bdfb4d8ef6db29",
+  "source_status": "completed",
+  "completed_prefix_games": null,
+  "source_error": null,
+  "games": 280,
+  "paired_rounds": 140,
+  "wins": 82,
+  "draws": 38,
+  "losses": 160,
+  "score": 0.3607142857142857,
+  "score_ci95_paired_bootstrap": [
+    0.30892857142857144,
+    0.4125
+  ],
+  "elo_equivalent": -99.41266287890024,
+  "elo_equivalent_ci95": [
+    -139.86594475604636,
+    -61.43356722313202
+  ],
+  "paired_score_counts": [
+    47,
+    23,
+    44,
+    13,
+    13
+  ],
+  "terminations": {
+    "normal": 271,
+    "adjudication": 9
+  },
+  "natural_reasons": {
+    "CHECKMATE": 242,
+    "FIFTY_MOVES": 13,
+    "THREEFOLD_REPETITION": 13,
+    "STALEMATE": 1,
+    "INSUFFICIENT_MATERIAL": 2
+  },
+  "abnormal_games": 0,
+  "engines": {
+    "full": {
+      "moves": 16255,
+      "orphan_queries_from_incomplete_game": 0,
+      "final_nodes": 948246833,
+      "final_qnodes": 854136741,
+      "engine_elapsed_us": 342265017,
+      "aggregate_final_nps": 2770504.684678306,
+      "completed_depth_median": 5,
+      "completed_depth_counts": {
+        "4": 5265,
+        "3": 1429,
+        "2": 246,
+        "5": 6084,
+        "6": 2256,
+        "1": 138,
+        "7": 558,
+        "8": 107,
+        "10": 34,
+        "9": 81,
+        "11": 9,
+        "128": 18,
+        "44": 1,
+        "114": 1,
+        "0": 5,
+        "13": 5,
+        "82": 1,
+        "119": 1,
+        "91": 1,
+        "12": 5,
+        "14": 3,
+        "15": 2,
+        "19": 1,
+        "17": 3,
+        "117": 1
+      },
+      "pgn_last_completed_nodes": 487589896,
+      "pgn_move_wall_seconds_rounded_ms": 342.37299999999055,
+      "counter_scope": "final includes interrupted iteration; PGN n= uses last completed UCI info"
+    },
+    "Handcrafted": {
+      "moves": 16295,
+      "orphan_queries_from_incomplete_game": 0,
+      "final_nodes": 1382383040,
+      "final_qnodes": 1233439752,
+      "engine_elapsed_us": 342332811,
+      "aggregate_final_nps": 4038126.0445409073,
+      "completed_depth_median": 5,
+      "completed_depth_counts": {
+        "4": 3479,
+        "3": 836,
+        "5": 6483,
+        "6": 3630,
+        "1": 164,
+        "2": 158,
+        "8": 175,
+        "7": 1147,
+        "9": 66,
+        "10": 64,
+        "11": 36,
+        "128": 23,
+        "27": 1,
+        "12": 8,
+        "85": 1,
+        "0": 3,
+        "13": 6,
+        "103": 1,
+        "15": 3,
+        "14": 7,
+        "16": 3,
+        "18": 1
+      },
+      "pgn_last_completed_nodes": 728103172,
+      "pgn_move_wall_seconds_rounded_ms": 342.33099999999155,
+      "counter_scope": "final includes interrupted iteration; PGN n= uses last completed UCI info"
+    }
+  },
+  "limitations": [
+    "Fixed 140 paired-opening sample and short clock; not SPRT or universal Elo.",
+    "Opening dependence and desktop background activity limit external validity.",
+    "Elo interval is monotone transform of descriptive paired-score percentile bootstrap."
+  ]
+}

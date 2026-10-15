@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "id": "9f1eb2e0-4472-4efc-9ec8-ad5cc37f73d7",
+  "kind": "match",
+  "status": "completed",
+  "started_at": "2026-10-15T12:02:55.892378+00:00",
+  "finished_at": "2026-10-15T12:14:31.758604+00:00",
+  "code": {
+    "revision": "057f2cf6543028368fb9725f4142e34b7fa85805",
+    "dirty": false
+  },
+  "parameters": {
+    "version": 1,
+    "comparison": "ablation",
+    "seed": 20261015,
+    "engines": [
+      {
+        "path": "build/release/ucl",
+        "revision": "HEAD",
+        "build": "CMake Release; same binary; one search thread",
+        "ucl_build_info": true,
+        "name": "full",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        }
+      },
+      {
+        "path": "build/release/ucl",
+        "revision": "HEAD",
+        "build": "CMake Release; same binary; one search thread",
+        "ucl_build_info": true,
+        "name": "Handcrafted",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Handcrafted"
+        }
+      }
+    ],
+    "rounds": 140,
+    "games": 2,
+    "concurrency": 1,
+    "tc": "1+0.01",
+    "maxmoves": 150,
+    "timeout_seconds": 10800,
+    "openings": {
+      "path": "experiments/results/r4-recovery-v1/openings.epd",
+      "format": "epd",
+      "order": "sequential"
+    },
+    "pgn_telemetry": true
+  },
+  "seed": 20261015,
+  "hardware": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "tools": {
+    "fastchess": {
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/bin/fastchess",
+      "sha256": "11e7b51ce96815a362096fa3b64697b381257a61af42a7d215757a3dee56b39a",
+      "version": "fastchess alpha 1.8.2 20261011-ebfd64c"
+    },
+    "command": [
+      "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/bin/fastchess",
+      "-engine",
+      "cmd=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "name=full",
+      "proto=uci",
+      "option.ModelSHA256=43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "option.ModelFile=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-match-continuation-20261015/model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt",
+      "option.Evaluator=Linear",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-engine",
+      "cmd=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "name=Handcrafted",
+      "proto=uci",
+      "option.Evaluator=Handcrafted",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-each",
+      "tc=1+0.01",
+      "-rounds",
+      "140",
+      "-games",
+      "2",
+      "-concurrency",
+      "1",
+      "-maxmoves",
+      "150",
+      "-srand",
+      "20261015",
+      "-pgnout",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-match-continuation-20261015/games.pgn",
+      "append=false",
+      "nodes=true",
+      "nps=true",
+      "timeleft=true",
+      "latency=true",
+      "-log",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-match-continuation-20261015/engine.log",
+      "level=trace",
+      "engine=true",
+      "append=false",
+      "compress=false",
+      "-autosaveinterval",
+      "0",
+      "-strict",
+      "-openings",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-match-continuation-20261015/openings.epd",
+      "format=epd",
+      "order=sequential"
+    ],
+    "telemetry": {
+      "file": "engine.log.gz",
+      "raw_sha256": "5da8a98d56014f845252e396cd80afa2f83c44ababd4e59a1d2bbaab021d3a30",
+      "raw_bytes": 100878504
+    }
+  },
+  "engines": [
+    {
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "revision": "057f2cf6543028368fb9725f4142e34b7fa85805",
+      "build": "CMake Release; same binary; one search thread",
+      "name": "full",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+        "ModelFile": "experiments/results/r4-models-v1/full.txt",
+        "Evaluator": "Linear"
+      },
+      "sha256": "a3f57c70c7f5e2480d835538903d9f785864b3862997ac2afe664c711ed1b725",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "057f2cf6543028368fb9725f4142e34b7fa85805",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "linear-v2",
+        "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+      }
+    },
+    {
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "revision": "057f2cf6543028368fb9725f4142e34b7fa85805",
+      "build": "CMake Release; same binary; one search thread",
+      "name": "Handcrafted",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Handcrafted"
+      },
+      "sha256": "a3f57c70c7f5e2480d835538903d9f785864b3862997ac2afe664c711ed1b725",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "057f2cf6543028368fb9725f4142e34b7fa85805",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "handcrafted-v1",
+        "model_sha256": null
+      }
+    }
+  ],
+  "artifacts": {
+    "model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "config.json": {
+      "sha256": "949310a5e5401b8d080296b12f75ad6c32a967e734dfd3ca8f1f7ae83005b51b",
+      "bytes": 5398
+    },
+    "games.pgn": {
+      "sha256": "76a8ee09b128ee0859ed788f40c6671b147e63454e673b15a24f083466a11938",
+      "bytes": 2510314
+    },
+    "fastchess.log": {
+      "sha256": "42188ea9406dcb76a913496799c2158ccebfcbd1b57d85a21593707bd77fc3e9",
+      "bytes": 35266
+    },
+    "openings.epd": {
+      "sha256": "a2758ffd6e7afa0778295965a6e2032a1c9589e45fa374895e3c391da9447eb2",
+      "bytes": 10562
+    },
+    "match-config.json": {
+      "sha256": "778c138a2ab7aaed02d996235fb8ad099870ccfa481d656b1f067cd752eec6a2",
+      "bytes": 1275
+    },
+    "engine.log.gz": {
+      "sha256": "e9ec68e7411f264afd467b9e377683060e588f9fe38c8ab75642cda243dffee9",
+      "bytes": 8840500
+    }
+  },
+  "results": {
+    "paired_score_counts": [
+      47,
+      23,
+      44,
+      13,
+      13
+    ],
+    "candidate": "full",
+    "baseline": "Handcrafted",
+    "games": 280,
+    "wins": 82,
+    "draws": 38,
+    "losses": 160,
+    "score": 0.3607142857142857,
+    "paired_rounds": 140,
+    "score_ci95_paired_bootstrap": [
+      0.30892857142857144,
+      0.4125
+    ],
+    "bootstrap_seed": 20261015,
+    "terminations": {
+      "normal": 271,
+      "adjudication": 9
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "error": null
+}

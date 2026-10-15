@@ -673,3 +673,52 @@ Evaluator/FeatureExtractor代码不变，不改变兜底着法或预算。新增
 120局前缀全部合法、60配对，156个未完成局查询（双方各78）单独计数并排除。
 Windows断言已按平台Path构造；source/拼接恢复的新增测试在最新Release通过。
 恢复提交后将从clean版本只运行剩余280局；当前没有任何正式比赛进程运行。
+
+### 续跑实际启动
+
+恢复提交`057f2cf6543028368fb9725f4142e34b7fa85805`已推送；clean Release重新构建，
+binary SHA-256 `a3f57c70c7f5e2480d835538903d9f785864b3862997ac2afe664c711ed1b725`。
+启动前逐个核对所有engine文件：除冻结的UCI info-only修复外与625d84e完全相同；
+模型和编译参数不变。续跑于2026-10-15 12:02:55 UTC（新加坡20:02:55）开始，
+路径`experiments/results/r4-match-continuation-20261015`，会话32038，初始record=running。
+只运行剩余140原定开局的280局；不要重启或重跑首120局。赛前实际Battery84%放电，
+load3.12/2.69/3.03，电源/背景负载未控制，结果仅在此设置解释。
+R4.4累计400局、派生study重建、最终报告/图表/审计/回归/最新CI仍待完成。
+
+## R4.4 / R4.5 最终研究结果（2026-10-15）
+
+续跑原进程32038退出0，280局完整结束（12:14:31 UTC/新加坡20:14:31）。
+两批固定400局/200开局换色轮已通过源PGN、配对、逐开局、二进制/模型/源码差异、
+原始/压缩trace哈希和全部逐步计数重建，研究入口r4-study-final-20261015。
+源failed包仍failed，未修改原记录；恢复统计明确包含首120局和后280局，未重跑已完成局。
+
+- full115W/57D/228L，得分35.875%，五档配对[64,32,71,19,14]。
+- 预定整轮bootstrap2000次CI95[31.625%,40.125%]；Elo等效−100.894，
+  区间[−133.947,−69.532]，仅本短时控/开局/硬件设置，非SPRT或普遍Elo定级。
+- 391自然结束（343将杀、25五十步、19重复、3子力不足、1逼和）；
+  9局恰好300ply按预定maxmoves外部裁和，逐局证据adjudications.json；完整局异常0。
+- 完整局final节点full1,389,596,150 / hand2,019,673,678；搜索时间各约490.16s，
+  聚合NPS2,834,963 /4,120,358（full低31.2%）；中位完成深度均5，>=6比例19.66/31.95%。
+  差异同时涉及搜索位置/树形/成本，不能作为纯推理开销的因果估计。
+- 离线full改善没有转化为本设置棋力优势；**继续Handcrafted默认**。
+  王安全/阶段预测组较可靠，兵结构边际仍不确定；早期/和棋标签退步保留。
+
+最终报告docs/r4/final-report.md回答八项研究问题；PNG/SVG图表来自冻结JSON，
+不重新拟合或resample。Matplotlib3.10.8置于隔离.tools/r4-plot-env，未更改引擎训练venv；
+plot-requirements.txt记录全部版本。R5仅建议目标/数据与计算预算控制，不实施。
+
+最终审计（057f2cf+dirty R4.5报告/审计文件）PASS：重建R3 v1/v2和R4数据，
+核对全部模型/来源/一次test freeze、独立开局、所有保留bundle及400局研究重建；
+默认Handcrafted、原Search/Handcrafted源码和R1–R3既有证据不变，未跟踪build/venv/binary。
+命令`.venv/bin/python docs/validation/r4/audit_final.py`，证据final-audit.json/log。
+首批625d84e经现有build_revision重建后binary SHA与原4792a7bd...逐字节完全一致，
+原始/续跑binary都留在.tools，不入Git；manifest记录命令/flags/哈希。
+
+恢复057f2cf Actions#38731674339五项全部success，保留r44-fixed-ci.json；
+625d84e原Windows路径断言失败保留，未将其误记成功。最终归档提交CI及clean回归待核对。
+Windows8940HX物理主机NOT_RUN；Mac电池/背景负载、六个短窗口/玩家重复、噪声标签、
+maxmoves及两批协议恢复均为报告限制。R4全范围已执行，剩余只有最终Git/CI验收归档。
+图表已视觉检查，legend/刻度重叠已修正；产物索引逐文件hash/size核对通过。
+Matplotlib原SVG的路径数据行保留生成器尾部空白；风格检查只排除这些生成SVG和
+原始实验包，代码/文档仍完整diff --check。未改统计、测试标准或研究数据。
+最终归档前Release6/6、pip check无冲突（r45-release/dependencies.log）。
