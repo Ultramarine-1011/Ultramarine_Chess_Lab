@@ -722,3 +722,19 @@ maxmoves及两批协议恢复均为报告限制。R4全范围已执行，剩余�
 Matplotlib原SVG的路径数据行保留生成器尾部空白；风格检查只排除这些生成SVG和
 原始实验包，代码/文档仍完整diff --check。未改统计、测试标准或研究数据。
 最终归档前Release6/6、pip check无冲突（r45-release/dependencies.log）。
+
+### R4 最终GitHub与clean验收（已完成）
+
+归档提交`685bf63f486abeff7267c66ca84f8eefbf422b92`已推送origin/main。
+该clean版本重新configure/build，build-info dirty=false，Release CTest6/6；
+精确日志r45-clean-configure/build/release.log及build-info.json。
+Actions#38734978260 macOS/Windows Release/Debug、macOS sanitizer五项全部success，
+Mac Release fastchess smoke通过；r45-archive-ci.json保存最终状态。
+`gh run watch`中一次TLS handshake timeout仅是观察失败；重新读取同一run确认已完成success，
+未重启CI或把观察错误当实验失败。所有相关代码/数据/配置/报告与原始研究证据已推送。
+
+R4.1–R4.5验收完成。最终报告及requirements-audit逐项区分PASS、原执行FAIL、
+Mac恢复研究PASS、Windows物理主机NOT_RUN与棋力改善假设在本设置FAIL。
+完整400局、独立test与16个保留实验包/派生研究都实际核验；Handcrafted继续默认。
+最后仅追加本节/报告CI链接/clean日志的[skip ci]文档收尾，不改工程与研究产物，
+正式实验仍准确引用625d84e和057f2cf及43e2e1ad...模型。停止R4，不实施R5。

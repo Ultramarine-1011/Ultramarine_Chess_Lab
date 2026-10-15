@@ -25,8 +25,8 @@ proof of statistical validity. Final Git/CI closure is recorded in VALIDATION.md
 | Windows8940HX sustained physical host | no connected endpoint | NOT_RUN;Mac fallback performed |
 | Elo improvement |35.875%,paired CI31.625..40.125%,Elo-equivalent−100.89 | FAIL in this setting;retain Handcrafted |
 | All eight report questions, tables/figures/identity/commands/limits | final-report.md,artifact-index.json,plot scripts/lock,commands.md | PASS |
-| Release/Debug/sanitizer/UCI/perft/regression/hosted CI | local logs and exact-SHA Actions snapshots | PASS for inspected code;latest archive CI checked at closure |
-| Git stage commits/pushes, no R5 implementation | commit history/ROADMAP/VALIDATION;final clean state at closure | Final closure pending until archive CI confirmation |
+| Release/Debug/sanitizer/UCI/perft/regression/hosted CI | local logs and exact-SHA Actions snapshots | PASS; archive685bf63 clean Release6/6 and Actions#38734978260 all5 success |
+| Git stage commits/pushes, no R5 implementation | commit history/ROADMAP/VALIDATION;final clean state at closure | PASS;685bf63 pushed, final docs-only closure recorded in VALIDATION.md |
 
 The original failed run remains a failure. The recovered400-game study is the
 preplanned sample with an explicitly documented protocol-only software repair,

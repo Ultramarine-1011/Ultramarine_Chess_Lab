@@ -19,6 +19,7 @@ R3数据、模型、原始对弈及研究报告全部保留；本轮不重解释
 | R4.2基准实现 | `37d72807319d1085ecf755827ce131c2f0430470` |
 | 冻结R3来源修复 | `a0c34436335b6629f0171ad1890b082bd9c4dfe4` |
 | 14维特征/拟合 | `00faca452e288ec5f6bf17f410d0c1aec246fb71`，clean |
+| R4.5报告/证据归档 | `685bf63f486abeff7267c66ca84f8eefbf422b92` |
 | 四组性能/候选选择 | `deab47005cad0615d7f150e008c33cb2017311bf`，clean |
 | 独立测试/首120局 | `625d84e370395cfd013eeac429b059bb107ca33d`，clean |
 | 仅协议修复/剩余280局 | `057f2cf6543028368fb9725f4142e34b7fa85805`，clean |
@@ -301,7 +302,7 @@ v1原样保留为来源缺陷历史，v2直接复制原R3文件，后续正式�
 | R4.2 校准/冻结R3/refit8/等棋局基准 | PASS，37d7280/a0c3443；独立test625d84e |
 | R4.3 14维/消融/安全部署/性能 | PASS，00faca4/deab470；全量一致、四组benchmark |
 | R4.4 固定200轮研究 | PASS（恢复分析），625d84e首执行FAIL，057f2cf按原计划完成剩余140轮；不是单次同binary运行 |
-| R4.5 报告/证据重建 | 本地审计PASS，最终归档CI后封存 |
+| R4.5 报告/证据重建 | PASS，685bf63；本地审计/clean Release及归档CI均通过 |
 | 棋力改善假设 | 本设置FAIL：得分区间低于50%；保留Handcrafted |
 | Windows8940HX物理实验主机 | NOT_RUN，无连接端点；Mac fallback已实际执行 |
 
@@ -328,3 +329,14 @@ Search及原Handcrafted源码不变，默认仍为Handcrafted，无生成binary/
 这证明构建身份可复现，不保证时钟比赛跨硬件逐局结果相同。原压缩数据前缀和可执行文件不入Git。
 
 R4研究结果为负仍构成有效研究闭环。默认保持Handcrafted；不启动R5。
+
+
+### 最终归档核查
+
+归档提交`685bf63f486abeff7267c66ca84f8eefbf422b92`已推送origin/main。
+该clean版本重新configure/build，build-info dirty=false，Release CTest6/6。
+[归档Actions#38734978260](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38734978260)
+macOS/Windows Release/Debug及macOS sanitizer五项全部success，Mac fastchess smoke通过；
+原始快照与clean构建日志保留于docs/validation/r4/r45-*。
+本节及验证记录用`[skip ci]`文档收尾提交，不改代码/模型/数据/正式结果，
+不替换正式比赛625d84e/057f2cf的实际身份。R4验收结束，未实施R5。
