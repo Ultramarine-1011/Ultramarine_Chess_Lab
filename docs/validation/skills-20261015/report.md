@@ -91,4 +91,20 @@ default_prompt 中加入 `$gh-fix-ci`。以后更新时先比较固定版本，�
 主机测试，也未验证模型在独立回合中的隐式选择。Git 同步与跨平台文件布局不等同
 于 Windows 实验主机验收。后续需要 Notebook 时再按授权配置，不预装训练工具。
 
-尚待：提交、干净克隆发现验证、推送和对应 CI。
+## 提交、同步与最终 CI
+
+配置提交 `9606cdb30db76efe7253d8b621fea25344f079b5` 已推送 origin/main。
+从该干净提交以 `git clone --no-local` 建立临时独立克隆，执行同一发现探针，
+root/tests 三个 Skill 均唯一启用；所有 Skills 文件与已留档 SHA-256 一致，
+没有符号链接依赖。克隆命令、探针调用及输出见 [clean-clone.json](clean-clone.json)。
+临时克隆测试后移除。这证明 Git 包含所需文件；Windows 桌面调用仍未实机执行。
+
+干净 `9606cdb` 重新 configure/build，Release CTest 5/5，
+[命令](clean-release-commands.json) / [日志](clean-release.log) 保留精确参数。
+对应 [Actions #38705038767](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38705038767)
+五个 job 全 success（macOS/Windows Release/Debug、macOS sanitizer），
+Mac Release 包含原有 fastchess smoke；[实际快照](ci.json)。这些是托管 CI 证据，
+不宣称用户 Windows 实验主机或 Windows Codex 选择器已经验证。
+
+完成后仅追加本节、VALIDATION.md 与小型证据文件，以文档收尾提交同步，不改变
+Skills 内容或工程实现。授权范围已完成，无需启动后续研究阶段。

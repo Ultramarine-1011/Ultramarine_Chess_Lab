@@ -245,7 +245,7 @@ Windows 证据来自托管 runner，不代表用户实验主机验收。本轮�
 `git -c core.whitespace=-blank-at-eof diff --cached --check` 通过。
 最终验收文档修改后 `ctest --preset release` 再次 5/5 通过。
 
-## Skills 配置优化（2026-10-15，进行中）
+## Skills 配置优化（2026-10-15，已完成）
 
 授权范围：精简并验证 Skills，允许提交/推送；不启动 R3。
 起点 `8a7d450` 干净且与 origin/main 一致，最新已有代码 CI 五项 success。
@@ -260,4 +260,14 @@ Windows 证据来自托管 runner，不代表用户实验主机验收。本轮�
 gh helper 的历史失败 Actions 日志读取 status=ok，无 PR 返回 1 为预期。
 首次回归误将 venv 符号链接解析成系统 Python，缺包导致 3/5；按 README 修正解释器
 重试成功，失败/成功命令与日志均保留。测试版本为 `8a7d450` + dirty Skills/docs。
-尚待：提交、干净克隆发现验证、推送与对应 CI 记录。
+配置提交 `9606cdb30db76efe7253d8b621fea25344f079b5` 已推送 origin/main。
+该干净版本重新 configure/build、Release CTest 5/5；临时独立 Git 克隆的
+root/tests Skills 发现及所有内容哈希一致，见审计记录的 clean-clone/clean-release
+证据。对应
+[Actions #38705038767](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38705038767)
+macOS/Windows Release/Debug、macOS sanitizer 五项 success，Mac fastchess smoke
+通过；[CI 快照](docs/validation/skills-20261015/ci.json)。
+Windows Codex 桌面调用、用户 Windows 实验主机未实测；未独立测试模型隐式选择。
+保留全局 Skills，仓库只有三个目标 Skill，不添加无关能力；本轮完成，未启动 R3。
+最后仅追加本节及文档证据，以 `[skip ci]` 文档收尾提交同步；其前的最终 Release
+与上述配置提交 CI 证据保持有效。
