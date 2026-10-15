@@ -1,0 +1,15 @@
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+    Start 1: unit
+1/5 Test #1: unit .............................   Passed    0.01 sec
+    Start 3: perft
+2/5 Test #3: perft ............................   Passed    0.00 sec
+    Start 4: uci
+3/5 Test #4: uci ..............................   Passed    0.51 sec
+    Start 5: experiments
+4/5 Test #5: experiments ......................   Passed    0.27 sec
+    Start 6: research
+5/5 Test #6: research .........................   Passed    9.58 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =  10.38 sec

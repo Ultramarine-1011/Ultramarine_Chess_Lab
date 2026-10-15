@@ -21,6 +21,12 @@ public:
     [[nodiscard]] std::string_view name() const override { return "handcrafted-v1"; }
 };
 
+class InterpretableFeatures final : public FeatureExtractor {
+public:
+    [[nodiscard]] std::vector<float> extract(const chess::Board&) const override;
+    [[nodiscard]] std::string_view name() const override { return "interpretable-v2"; }
+};
+
 class Evaluator {
 public:
     virtual ~Evaluator() = default;
@@ -45,14 +51,14 @@ public:
     [[nodiscard]] static LinearEvaluator load(const FeatureExtractor&, const std::string& path,
                                                const std::string& expected_sha256);
     [[nodiscard]] int evaluate(const chess::Board&) const override;
-    [[nodiscard]] std::string_view name() const override { return "linear-v1"; }
+    [[nodiscard]] std::string_view name() const override { return features_.name() == "interpretable-v2" ? "linear-v2" : "linear-v1"; }
     [[nodiscard]] const std::string& model_sha256() const { return sha256_; }
     [[nodiscard]] double white_score(const chess::Board&) const;
 private:
-    LinearEvaluator(const FeatureExtractor& features, std::array<double, 8> weights, std::string hash)
-        : features_(features), weights_(weights), sha256_(std::move(hash)) {}
+    LinearEvaluator(const FeatureExtractor& features, std::vector<double> weights, std::string hash)
+        : features_(features), weights_(std::move(weights)), sha256_(std::move(hash)) {}
     const FeatureExtractor& features_;
-    std::array<double, 8> weights_;
+    std::vector<double> weights_;
     std::string sha256_;
 };
 } // namespace ucl

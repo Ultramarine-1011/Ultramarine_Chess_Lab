@@ -181,8 +181,8 @@ def capture_engine(root, e, code_revision, allow_dirty=False):
         if len(identities) != 1:
             raise ValueError('missing actual evaluator identity')
         entry['evaluation'] = identities[0]
-        expected = 'linear-v1' if e['options']['Evaluator'] == 'Linear' else 'handcrafted-v1'
-        if entry['evaluation'] != {'evaluator': expected, 'model_sha256': e['options'].get('ModelSHA256') if expected == 'linear-v1' else None}:
+        expected = model_identity(options['ModelFile'], options['ModelSHA256']) if e['options']['Evaluator'] == 'Linear' else 'handcrafted-v1'
+        if entry['evaluation'] != {'evaluator': expected, 'model_sha256': e['options'].get('ModelSHA256') if expected.startswith('linear-') else None}:
             raise ValueError('engine evaluator/model identity mismatch')
     return entry
 
@@ -216,10 +216,12 @@ def validate_evaluation(entry, directory, artifacts):
     if 'Evaluator' not in options:
         return # Historical bundles have no evaluator identity protocol.
     identity = entry.get('evaluation')
-    expected = {'Handcrafted': 'handcrafted-v1', 'Linear': 'linear-v1'}.get(options['Evaluator'])
+    expected = 'handcrafted-v1' if options['Evaluator'] == 'Handcrafted' else None
+    if options['Evaluator'] == 'Linear':
+        expected = model_identity(Path(directory)/('model-'+str(options.get('ModelSHA256'))+'.txt'), options.get('ModelSHA256'))
     if identity is None or identity['evaluator'] != expected:
         raise ValueError('actual evaluator identity mismatch')
-    if expected == 'linear-v1':
+    if expected and expected.startswith('linear-'):
         from .model import load_model
         model_hash = options.get('ModelSHA256')
         name = 'model-' + str(model_hash) + '.txt'
@@ -228,3 +230,8 @@ def validate_evaluation(entry, directory, artifacts):
         load_model(Path(directory)/name, model_hash)
     elif identity['model_sha256'] is not None:
         raise ValueError('handcrafted evaluator cannot claim a model hash')
+
+
+def model_identity(path, model_hash):
+    from .model import load_model
+    return 'linear-v2' if len(load_model(path,model_hash))==14 else 'linear-v1'

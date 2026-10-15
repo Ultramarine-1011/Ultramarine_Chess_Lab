@@ -14,7 +14,7 @@ from .dataset import SEED
 from .feature_data import WEIGHTS
 from .model import encode_model, load_model
 from .records import git_state, hardware, sha256, write_json
-from .training import objective, LAMBDAS, TAU
+from .training import objective, LAMBDAS, TAU, TrainingSpec
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -118,6 +118,22 @@ def fit(dataset,features,output,expanded=False):
     return selection
 
 
+class R4Trainer:
+    """Existing Trainer.fit boundary for the grouped, calibrated study."""
+    def __init__(self, feature_manifest, expanded=False):
+        self.feature_manifest=Path(feature_manifest)
+        self.expanded=expanded
+
+    def fit(self, spec: TrainingSpec, output_directory: str) -> str:
+        version='interpretable-v2' if self.expanded else 'handcrafted-v1'
+        dataset=Path(spec.dataset_manifest).parent
+        if (spec.features!=version or spec.target!='white-game-result' or spec.seed!=SEED
+                or Path(spec.split_manifest).resolve()!=(dataset/'splits.json').resolve()):
+            raise ValueError('R4 TrainingSpec mismatch')
+        fit(dataset,self.feature_manifest.parent,output_directory,self.expanded)
+        return str(Path(output_directory)/'selection.json')
+
+
 if __name__=='__main__':
     import argparse
     p=argparse.ArgumentParser(description=__doc__)
@@ -126,5 +142,8 @@ if __name__=='__main__':
     p.add_argument('--output',required=True)
     p.add_argument('--expanded',action='store_true')
     a=p.parse_args()
-    s=fit(a.dataset,a.features,a.output,a.expanded)
+    manifest=R4Trainer(Path(a.features)/'manifest.json',a.expanded).fit(
+        TrainingSpec(str(Path(a.dataset)/'manifest.json'),'interpretable-v2' if a.expanded else 'handcrafted-v1',
+                     SEED,'white-game-result',str(Path(a.dataset)/'splits.json')),a.output)
+    s=json.loads(Path(manifest).read_text())
     print(json.dumps({k:{'validation':v['validation'],'hash':v['model_sha256']} for k,v in s['models'].items()},indent=2))

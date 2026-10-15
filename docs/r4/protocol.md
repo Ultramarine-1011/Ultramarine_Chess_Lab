@@ -116,3 +116,12 @@ fastchess compliance. Keep actual commands, revision/dirty state and failures in
 VALIDATION.md / docs/validation/r4. Final report answers all eight objective
 questions, links raw evidence, distinguishes facts, inferences, hypotheses,
 PARTIAL/NOT_RUN/BLOCKED_ENV. Stop after R4; recommend but do not implement R5.
+
+### Analysis detail sealed before any held-out evaluation
+
+Five feature contrasts (refit8-calibration, pawn-refit8, king-refit8, full-pawn,
+full-king) additionally receive 99% marginal game-bootstrap intervals (Bonferroni
+five, nominal familywise >=95%). Primary 95% intervals remain descriptive;
+99% intervals are only simultaneous for this specified five-contrast BCE family,
+not all strata/metrics. The small number of windows and player dependence still
+limit inferential claims. No feature or model outcome prompted this clarification.

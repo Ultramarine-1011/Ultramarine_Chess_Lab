@@ -321,7 +321,12 @@ def validate_static(record, path, cases):
         seen.add(key)
         if r['iterations'] != 100000 or r['model_sha256'] != model_hash or any(type(r[k]) is not int or r[k] <= 0 for k in ('handcrafted_ns','linear_ns')):
             raise ValueError('invalid static evaluation measurement')
-        b = chess.Board(cases[key[0]]['fen']); x = reference_features(b)
+        b = chess.Board(cases[key[0]]['fen'])
+        if len(weights) == 14:
+            from .r4_features import reference
+            x = reference(b)
+        else:
+            x = reference_features(b)
         def score(w):
             s = sum(a*v for a,v in zip(w,x))
             return math.floor(abs(s)+.5)*(1 if s>=0 else -1)*(1 if b.turn else -1)

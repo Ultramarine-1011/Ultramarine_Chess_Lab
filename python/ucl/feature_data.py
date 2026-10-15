@@ -57,7 +57,7 @@ def extract(engine, fens):
     return records
 
 
-def export_dataset(dataset, engine, output):
+def export_dataset(dataset, engine, output, feature_version=VERSION):
     dataset, output = Path(dataset), Path(output)
     kind = json.loads((dataset / 'manifest.json').read_text())['kind']
     if kind == 'r4-dataset':
@@ -66,13 +66,19 @@ def export_dataset(dataset, engine, output):
     else:
         validate_dataset(dataset)
     rows = [json.loads(line) for line in gzip.decompress((dataset / 'positions.jsonl.gz').read_bytes()).decode().splitlines()]
-    features = extract(engine, [r['fen'] for r in rows])
+    if feature_version == VERSION:
+        features = extract(engine, [r['fen'] for r in rows])
+    elif feature_version == 'interpretable-v2':
+        from .r4_features import extract as extract_v2
+        features = extract_v2(engine, [r['fen'] for r in rows])
+    else:
+        raise ValueError('unsupported export version')
     for row, feature in zip(rows, features, strict=True):
-        row.update(features=feature['features'], handcrafted_cp=feature['handcrafted_cp'])
+        row.update(feature_version=feature['feature_version'], features=feature['features'], handcrafted_cp=feature['handcrafted_cp'])
     output.mkdir(parents=True, exist_ok=False)
     write_gzip(output / 'features.jsonl.gz', ''.join(json.dumps(r, sort_keys=True)+'\n' for r in rows))
     info = json.loads(subprocess.check_output([str(Path(engine).resolve()), '--build-info'], text=True))
-    manifest = {'schema_version': 1, 'feature_version': VERSION, 'count': len(rows),
+    manifest = {'schema_version': 1, 'feature_version': feature_version, 'count': len(rows),
                 'dataset_manifest_sha256': sha256(dataset / 'manifest.json'),
                 'positions_sha256': sha256(dataset / 'positions.jsonl.gz'),
                 'splits_sha256': sha256(dataset / 'splits.json'),

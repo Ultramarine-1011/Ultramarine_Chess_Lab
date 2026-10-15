@@ -23,9 +23,10 @@ std::string json_string(std::string_view text) {
 }
 }
 int main(int argc, char** argv) {
-    if ((argc == 2 && std::string_view(argv[1]) == "--features") ||
+    if ((argc == 2 && (std::string_view(argv[1]) == "--features" || std::string_view(argv[1]) == "--features-v2")) ||
         (argc == 4 && (std::string_view(argv[1]) == "--infer" || std::string_view(argv[1]) == "--eval-benchmark"))) {
         ucl::HandcraftedFeatures features;
+        ucl::InterpretableFeatures extended;
         ucl::HandcraftedEvaluator evaluator(features);
         std::optional<ucl::LinearEvaluator> linear;
         if (argc == 4) {
@@ -43,7 +44,9 @@ int main(int argc, char** argv) {
                 std::cerr << "feature export rejected: " << error << '\n';
                 return 1;
             }
-            const auto values = features.extract(board);
+            const auto& active_features = argc == 2 && std::string_view(argv[1]) == "--features-v2"
+                ? static_cast<const ucl::FeatureExtractor&>(extended) : features;
+            const auto values = active_features.extract(board);
             if (linear && std::string_view(argv[1]) == "--eval-benchmark") {
                 constexpr int iterations = 100000;
                 for (int repeat = 0; repeat < 7; ++repeat) {
@@ -67,7 +70,7 @@ int main(int argc, char** argv) {
                           << linear->white_score(board) << ",\"model_sha256\":\"" << linear->model_sha256() << "\"}\n";
                 continue;
             }
-            std::cout << "{\"feature_version\":\"handcrafted-v1\",\"features\":[";
+            std::cout << "{\"feature_version\":\"" << active_features.name() << "\",\"features\":[";
             for (std::size_t i = 0; i < values.size(); ++i) {
                 if (i) std::cout << ',';
                 std::cout << values[i];

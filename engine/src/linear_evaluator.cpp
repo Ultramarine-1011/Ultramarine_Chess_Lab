@@ -30,23 +30,29 @@ LinearEvaluator LinearEvaluator::load(const FeatureExtractor& features, const st
     std::istringstream in(text);
     std::vector<std::string> tokens;
     for (std::string token; in >> token;) tokens.push_back(token);
-    const std::array<std::string_view, 11> prefix{"ucl-linear-v1", "features", "handcrafted-v1",
-        "perspective", "white", "temperature", "400", "intercept", "0", "weights", "8"};
-    if (tokens.size() != 24 || !std::equal(prefix.begin(), prefix.end(), tokens.begin()) ||
-        tokens[19] != "dataset_sha256" || tokens[21] != "split_sha256" || tokens[23] != "end" ||
-        !valid_hash(tokens[20]) || !valid_hash(tokens[22])) throw std::invalid_argument("model schema/version mismatch");
-    std::array<double, 8> weights{};
+    const bool expanded = tokens.size() > 2 && tokens[0] == "ucl-linear-v2" && tokens[2] == "interpretable-v2";
+    const std::size_t dimension = expanded ? 14 : 8;
+    const std::array<std::string_view, 11> prefix{expanded ? "ucl-linear-v2" : "ucl-linear-v1", "features",
+        expanded ? "interpretable-v2" : "handcrafted-v1", "perspective", "white", "temperature", "400",
+        "intercept", "0", "weights", expanded ? "14" : "8"};
+    if (tokens.size() != dimension + 16 || !std::equal(prefix.begin(), prefix.end(), tokens.begin()) ||
+        tokens[11 + dimension] != "dataset_sha256" || tokens[13 + dimension] != "split_sha256" ||
+        tokens[15 + dimension] != "end" || !valid_hash(tokens[12 + dimension]) || !valid_hash(tokens[14 + dimension]))
+        throw std::invalid_argument("model schema/version mismatch");
+    std::vector<double> weights(dimension);
     for (std::size_t i = 0; i < weights.size(); ++i) {
         const auto& token = tokens[i + 11];
         const auto [end, error] = std::from_chars(token.data(), token.data() + token.size(), weights[i]);
         if (error != std::errc{} || end != token.data() + token.size() || !std::isfinite(weights[i]) ||
             std::abs(weights[i]) > 10000) throw std::invalid_argument("invalid model weight");
     }
-    return LinearEvaluator(features, weights, expected_sha256);
+    static const InterpretableFeatures extended;
+    return LinearEvaluator(expanded ? static_cast<const FeatureExtractor&>(extended) : features,
+                           std::move(weights), expected_sha256);
 }
 double LinearEvaluator::white_score(const chess::Board& board) const {
     const auto values = features_.extract(board);
-    if (values.size() != weights_.size()) throw std::invalid_argument("linear-v1 requires 8 features");
+    if (values.size() != weights_.size()) throw std::invalid_argument("linear feature dimension mismatch");
     double score = 0;
     for (std::size_t i = 0; i < weights_.size(); ++i) {
         if (!std::isfinite(values[i])) throw std::invalid_argument("nonfinite linear feature");

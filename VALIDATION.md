@@ -556,3 +556,28 @@ refit8 .60511051，均只为开发指标。test未计算。
 为避免混淆“旧权重”与“原始部署字节”，修复为直接复制原R3文件。
 首轮v1保留为元数据缺陷证据，不用于正式部署；下一轮v2仅修复该来源身份，
 不改采样、超参或选择规则，不利用test。两轮fit与所有hash将在最终报告区分。
+
+### R4.3 工程实现与正式分析封存准备
+
+新增14维interpretable-v2：八维原值+3兵结构+3王安全/阶段维，严格v2部署加载，
+独立Python参考、随机合法走棋/颜色镜像/特殊局面/数值边界和UCI事务覆盖。
+engine/src/search.cpp、原engine/src/evaluator.cpp零差异；默认Handcrafted保留。
+match/benchmark按真实部署维数核对linear-v1/v2与模型hash；旧R3仍全兼容。
+独立test分析代码和五项消融99%边界说明在看test前封存；test未运行。
+加入独立开局源/选择工具，复用已有PGN检查，按身份排序，排除R3位置/R4游戏。
+
+测试a0c3443+dirty R4.3：targeted5/5；Release6/6、Debug6/6、ASan+UBSan6/6，
+日志r43-*。后续增加的分析/开局测试将在最终回归再次覆盖。初次手写fixture
+错误地把通路兵推进量写为2，实际1；C++和独立Python一致，修正断言并保留
+r43-targeted-fixture-failed.log。没有算法为迎合断言而改变。fastchess compliance待结果。
+R4.1 2af9bb0 Actions#38718363121、R4.2 37d7280#38718439833及来源修复
+ a0c3443#38718766589全部五项success；正式v2基准在clean a0c3443拟合，
+frozen_r3.txt原始SHA恢复为446d1837...，其它权重/开发指标与首轮相同。
+
+R4.3最终回归：Release/Debug/sanitizer各6/6（r43-final-*），无sanitizer诊断；
+新增独立分析marker/聚类权重、开局选择/排除/重放测试全部通过。
+fastchess compliance40/40（原始log.gz）。200个独立2017-08开局准备完成，
+源1124合格局；来源与原始棋谱/身份/合法12ply重放/位置hash均保留。
+生成器处于本阶段dirty开发状态，如实保留；后续clean代码从源重建再核对。
+正式14维全数据导出、消融拟合、成本门槛及候选选择尚待clean代码执行。
+R4.2 v2各模型权重与v1完全一致，冻结R3部署字节/原训练来源均保持不变。

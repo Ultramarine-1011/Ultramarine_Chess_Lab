@@ -177,3 +177,24 @@ validate 检查 evaluator 配置、实际 hash 和保留模型，拒绝伪装加
 验证，不改变原八维接口。`r4_training`复用Trainer的数值目标函数并添加可选观测
 权重；每局总权重相同，R3默认无权路径不变。fit仅计算train/validation指标，
 正尺度校准及八维重拟合冻结后等待R4.3消融/性能选择，独立test仍关闭。
+
+## R4 可解释特征与部署
+
+`InterpretableFeatures`固定名称`interpretable-v2`，14维，前8维精确复用v1；
+后六维依序是孤兵数、叠兵额外数、通路兵推进量、兵盾数、受攻击王环格数、
+残局国王中心性整数分子。定义见冻结协议；全部白减黑、颜色镜像反号。
+王环使用chess-library伪攻击（含被牵制棋子），通过python-chess独立参考逐行核对。
+phase=min(24,N+B+2R+4Q两方总计)，末维=中心性差*(24-phase)，避免分数误差。
+升变额外子力按24截断。王盾为同/邻文件一或二格前方的兵，与是否易位无关。
+
+`--features-v2`是独立导出入口；`--features`八维字节语义不变。新部署格式
+`ucl-linear-v2 / features interpretable-v2 / weights 14 ...`，其余固定token和
+4096字节、有限值/范围/sha256限制与v1相同。加载器按严格版本/维数选择静态生命周期
+特征器，v1仍使用调用方原特征器；任何混合格式拒绝。UCI选项保持Evaluator=Linear，
+实际identity分别linear-v1/linear-v2，加载/stop/join/失败保留有效模型的事务不变。
+实验schema仅扩展identity枚举；旧包仍可校验。benchmark静态checksum按模型维数
+选择独立参考，不把新增维静默截断。
+
+R4扩展研究拟合base/pawn/king/full四组；absent列权重固定0，v2统一14维契约。
+selection.json及全部模型/成本证据先冻结，`r4_analysis`只在独占marker后评价test；
+重算BCE/Brier、等棋局bootstrap、预定义消融对比和分层。研究JSON与部署txt分别保留。

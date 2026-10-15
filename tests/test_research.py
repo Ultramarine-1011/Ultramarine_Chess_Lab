@@ -196,8 +196,6 @@ class InferenceTests(unittest.TestCase):
             self.assertNotEqual(subprocess.run([engine,'--infer',str(p),'0'*64],capture_output=True).returncode,0)
 
 
-if __name__ == '__main__':
-    unittest.main()
 
 class R4DataTests(unittest.TestCase):
     def test_temporal_plan_and_r3_compatibility(self):
@@ -257,3 +255,117 @@ class R4TrainingTests(unittest.TestCase):
             self.assertGreater(result['models']['calibration']['scale'],0)
             self.assertEqual(set(result['models']),{'handcrafted','calibration','frozen_r3','refit8'})
             self.assertFalse((p/'output/test-results.json').exists())
+
+class R4FeatureTests(unittest.TestCase):
+    def test_v2_reference_symmetry_and_boundaries(self):
+        import os, random, json
+        from ucl.r4_features import extract, reference
+        engine=os.environ.get('UCL_ENGINE',str(Path(__file__).resolve().parents[1]/'build/release/ucl'))
+        fens=[p['fen'] for p in json.loads((Path(__file__).resolve().parents[1]/'experiments/positions/r2-v1.json').read_text())['positions']]
+        # Isolated/doubled and advanced/passed pawns; shield/attacks; promotion-rich
+        # material clamps phase, and bare kings test the full endgame numerator.
+        fens += ['4k3/8/8/2p5/2P5/P7/P7/4K3 w - - 0 1',
+                 '4k3/P7/8/8/8/8/5PPP/6K1 w - - 0 1',
+                 '4k3/8/8/8/8/8/8/3K4 w - - 0 1',
+                 'q2qk2q/8/8/8/8/8/8/Q2QK2Q w - - 0 1']
+        # The promotion-rich board must be legal: opponent king not attacked.
+        fens[-1]='qqqqk3/8/8/8/8/8/8/QQQ1K3 w - - 0 1'
+        rng=random.Random(20261015);b=chess.Board()
+        for _ in range(200):
+            if b.is_game_over():b=chess.Board()
+            b.push(rng.choice(list(b.legal_moves)));fens.append(b.fen())
+        pairs=[f for fen in fens for f in (fen,chess.Board(fen).mirror().fen())]
+        actual=extract(engine,pairs)
+        for i in range(0,len(actual),2):
+            self.assertEqual(actual[i]['features'],[-x for x in actual[i+1]['features']])
+        f=reference(chess.Board(fens[10]))
+        self.assertEqual(f[8:11],[2.,1.,1.])
+        self.assertEqual(reference(chess.Board('4k3/8/8/8/3K4/8/8/8 w - - 0 1'))[13],72.)
+        self.assertEqual(reference(chess.Board('4k3/8/8/8/8/8/5PPP/6K1 w - - 0 1'))[11],3.)
+        self.assertEqual(reference(chess.Board('4k1r1/8/8/8/8/8/8/6K1 w - - 0 1'))[12],1.)
+        self.assertEqual(reference(chess.Board('qqqqk3/8/8/8/8/8/8/QQQ1K3 w - - 0 1'))[13],0.)
+        self.assertEqual(reference(chess.Board())[8:],[0.]*6)
+
+    def test_v2_model_parity_and_errors(self):
+        import json, math, os, subprocess, tempfile
+        from ucl.r4_features import reference
+        from ucl.model import encode_model,load_model
+        from ucl.records import sha256
+        engine=os.environ.get('UCL_ENGINE',str(Path(__file__).resolve().parents[1]/'build/release/ucl'))
+        fens=['4k3/8/8/2p5/2P5/P7/P7/4K3 w - - 0 1',
+              '4k3/8/8/8/8/8/P7/4K3 b - - 0 1',chess.STARTING_FEN]
+        weights=[100,320,330,500,900,5,4,30,-12,-7,8,11,-9,.125]
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)/'v2 model.txt';text=encode_model(weights,'a'*64,'b'*64);p.write_bytes(text.encode())
+            self.assertEqual(load_model(p,sha256(p)),weights)
+            raw=subprocess.run([engine,'--infer',str(p),sha256(p)],input='\n'.join(fens)+'\n',capture_output=True,text=True,check=True)
+            for fen,r in zip(fens,map(json.loads,raw.stdout.splitlines())):
+                score=sum(a*b for a,b in zip(weights,reference(chess.Board(fen))))
+                self.assertAlmostEqual(r['white_score'],score)
+                self.assertEqual(r['score_cp'],math.floor(abs(score)+.5)*(1 if score>=0 else -1)*(1 if chess.Board(fen).turn else -1))
+            for bad in (text.replace('interpretable-v2','handcrafted-v1'),text.replace('ucl-linear-v2','ucl-linear-v1'),
+                        text.replace('weights 14','weights 8'),text.replace('0.125','nan'),text+'extra'):
+                p.write_bytes(bad.encode())
+                with self.assertRaises(ValueError):load_model(p,sha256(p))
+                self.assertNotEqual(subprocess.run([engine,'--infer',str(p),sha256(p)],capture_output=True).returncode,0)
+
+
+class R4AnalysisTests(unittest.TestCase):
+    def test_game_bootstrap_and_exclusive_test_gate(self):
+        import json, tempfile
+        import numpy as np
+        from unittest.mock import patch
+        from ucl.r4_analysis import game_means,paired_interval,evaluate
+        from ucl.records import sha256
+        from ucl.model import encode_model
+        rows=[{'game_id':g} for g in ('a','a','b')]
+        np.testing.assert_allclose(game_means([0,2,4],rows),[1,4])
+        interval=paired_interval(np.array([0,2,4]),rows,np.array([[0,0],[1,1],[0,1]]))
+        self.assertEqual(interval['difference'],2.5)
+        self.assertEqual(interval['position_weighted_difference'],2.)
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp);models={}
+            for name in ('handcrafted','calibration','frozen_r3','refit8','pawn','king','full'):
+                weights=[100,320,330,500,900,5,4,30]+[0]*6
+                path=p/(name+'.txt');path.write_bytes(encode_model(weights,'a'*64,'b'*64).encode())
+                models[name]={'weights':weights,'model_file':path.name,'model_sha256':sha256(path)}
+            games={'a':{'month':'2017-06'},'b':{'month':'2017-07'}}
+            (p/'splits.json').write_text(json.dumps(games))
+            selection={'models':models,'dataset':str(p),'features':str(p)}
+            (p/'selection.json').write_text(json.dumps(selection))
+            freeze={'selection_sha256':sha256(p/'selection.json'),'models':{n:m['model_sha256'] for n,m in models.items()},'candidate':'full'}
+            (p/'freeze.json').write_text(json.dumps(freeze))
+            data=[{'split':'test','game_id':g,'position_id':str(i),'ply':16+i*7,
+                   'features':[0]*14,'label':float(i%2),'fen':chess.STARTING_FEN}
+                  for i,g in enumerate(('a','a','b'))]
+            with patch('ucl.r4_analysis.read_rows',return_value=(data,{})):
+                result=evaluate(p,p/'freeze.json')
+                self.assertEqual(result['games'],2)
+                self.assertAlmostEqual(result['models']['handcrafted']['equal_game']['bce'],np.log(2))
+                with self.assertRaises(FileExistsError):evaluate(p,p/'freeze.json')
+            before=(p/'test-results.json').read_bytes()
+            (p/'full.txt').write_bytes(b'tampered')
+            with self.assertRaises(ValueError):evaluate(p,p/'freeze.json')
+            self.assertEqual(before,(p/'test-results.json').read_bytes())
+
+
+class R4OpeningTests(unittest.TestCase):
+    def test_identity_selection_and_exclusions(self):
+        from ucl.r4_openings import select
+        text=(Path(__file__).parent/'fixtures/data-games.pgn').read_text()
+        a,counts=select(text,2,set())
+        self.assertEqual(len(a),2)
+        self.assertEqual(a,select(text,2,set())[0])
+        self.assertEqual(len({r['position_id'] for r in a}),2)
+        excluded={r['position_id'] for r in a}
+        b,_=select(text,2,excluded)
+        self.assertFalse(excluded & {r['position_id'] for r in b})
+        c,_=select(text,2,set(),{r['game_id'] for r in a})
+        self.assertFalse({r['game_id'] for r in a}&{r['game_id'] for r in c})
+        for r in a:
+            board=chess.Board()
+            for move in r['moves']:board.push_uci(move)
+            self.assertEqual(board.fen(),r['fen'])
+
+if __name__ == '__main__':
+    unittest.main()

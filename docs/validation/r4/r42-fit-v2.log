@@ -1,0 +1,58 @@
+{
+  "handcrafted": {
+    "validation": {
+      "positions": 5924,
+      "equal_game": {
+        "bce": 0.6108091688092445,
+        "brier": 0.19996793262160883
+      },
+      "position_weighted": {
+        "bce": 0.6061071660783742,
+        "brier": 0.19582670542932445
+      }
+    },
+    "hash": "f48c494c4b7a75634297b0d5da2a2f67ca3e2c76584c9893640736df193644ec"
+  },
+  "calibration": {
+    "validation": {
+      "positions": 5924,
+      "equal_game": {
+        "bce": 0.6080669778278895,
+        "brier": 0.19892933304479965
+      },
+      "position_weighted": {
+        "bce": 0.6029785303815413,
+        "brier": 0.19462158829763565
+      }
+    },
+    "hash": "b17b54d1cb9f33fc709a4a235a1b64b460676bdb7a773c27b55fb9e30b89a16e"
+  },
+  "frozen_r3": {
+    "validation": {
+      "positions": 5924,
+      "equal_game": {
+        "bce": 0.6044738791631021,
+        "brier": 0.1974666623753638
+      },
+      "position_weighted": {
+        "bce": 0.5994898391825035,
+        "brier": 0.19322352466202208
+      }
+    },
+    "hash": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b"
+  },
+  "refit8": {
+    "validation": {
+      "positions": 5924,
+      "equal_game": {
+        "bce": 0.605110514570092,
+        "brier": 0.19777445851286152
+      },
+      "position_weighted": {
+        "bce": 0.6000638251593451,
+        "brier": 0.19348870965945117
+      }
+    },
+    "hash": "fe8b34d5cf3fab436a03a4d7d15581aa5b5b35477990834cf168e977fb9deb18"
+  }
+}

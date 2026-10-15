@@ -176,7 +176,7 @@
               "evaluator": {
                 "enum": [
                   "handcrafted-v1",
-                  "linear-v1"
+                  "linear-v1", "linear-v2"
                 ]
               },
               "model_sha256": {

@@ -103,6 +103,28 @@ class UciTests(unittest.TestCase):
         p.send('position fen 7k/6Q1/6K1/8/8/8/8/8 b - - 0 1')
         p.send('go depth 1');self.assertEqual(p.until('bestmove'),'bestmove 0000')
 
+    def test_v2_transactional_switch(self):
+        from ucl.model import encode_model
+        from ucl.records import sha256
+        p=self.pipe
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'v2 model with spaces.txt'
+            path.write_bytes(encode_model([100,320,330,500,900,5,4,30,-12,-7,8,11,-9,.125],'a'*64,'b'*64).encode())
+            model_hash=sha256(path)
+            p.send('setoption name ModelSHA256 value '+model_hash)
+            p.send('setoption name ModelFile value '+str(path));p.until('info string model loaded')
+            p.send('setoption name Evaluator value Linear');p.send('evalinfo')
+            expected={'evaluator':'linear-v2','model_sha256':model_hash}
+            self.assertEqual(json.loads(p.until('info string ucl_evaluator ').removeprefix('info string ucl_evaluator ')),expected)
+            p.send('go infinite');p.until('info depth 1')
+            p.send('setoption name ModelFile value '+str(path));p.until('bestmove');p.until('info string model loaded')
+            path.write_bytes(path.read_bytes()+b'extra')
+            p.send('setoption name ModelFile value '+str(path));p.until('info string command rejected:')
+            p.send('evalinfo')
+            self.assertEqual(json.loads(p.until('info string ucl_evaluator ').removeprefix('info string ucl_evaluator ')),expected)
+            p.send('setoption name Evaluator value Handcrafted');p.send('evalinfo')
+            self.assertEqual(json.loads(p.until('info string ucl_evaluator ').removeprefix('info string ucl_evaluator ')),{'evaluator':'handcrafted-v1','model_sha256':None})
+
     def test_async_ready_stop_and_restart(self):
         p = self.pipe
         p.send("position startpos")

@@ -33,7 +33,7 @@ def split_for(game_id, seed=SEED):
     return "train" if bucket < 70 else "validation" if bucket < 85 else "test"
 
 
-def prepare(pgn_text, seed=SEED, spacing=7, split_resolver=None, metadata=False):
+def prepare(pgn_text, seed=SEED, spacing=7, split_resolver=None, metadata=False, opening_plies=0):
     counts, games, rows = Counter(), {}, []
     stream = io.StringIO(pgn_text)
     while True:
@@ -80,6 +80,9 @@ def prepare(pgn_text, seed=SEED, spacing=7, split_resolver=None, metadata=False)
             if move not in board.legal_moves:
                 raise ValueError("unvalidated move")
             board.push(move)
+            if opening_plies and ply == opening_plies and not board.is_game_over(claim_draw=True):
+                games[gid]['opening_fen'] = board.fen()
+                games[gid]['opening_moves'] = [m.uci() for m in moves[:opening_plies]]
             if 16 <= ply <= 160 and (ply - 16) % spacing == 0 and not board.is_game_over(claim_draw=True):
                 positions.append({"position_id": position_key(board), "game_id": gid,
                                   "fen": board.fen(), "ply": ply, "label": label, "split": split,

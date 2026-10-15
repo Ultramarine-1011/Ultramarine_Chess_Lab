@@ -1,0 +1,45 @@
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+    Start 1: unit
+1/5 Test #1: unit .............................   Passed    0.50 sec
+    Start 3: perft
+2/5 Test #3: perft ............................   Passed    0.01 sec
+    Start 4: uci
+3/5 Test #4: uci ..............................   Passed    0.93 sec
+    Start 5: experiments
+4/5 Test #5: experiments ......................   Passed    0.27 sec
+    Start 6: research
+5/5 Test #6: research .........................***Failed    9.56 sec
+.........F.....
+======================================================================
+FAIL: test_v2_reference_symmetry_and_boundaries (test_research.R4FeatureTests.test_v2_reference_symmetry_and_boundaries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/tests/test_research.py", line 284, in test_v2_reference_symmetry_and_boundaries
+    self.assertEqual(f[8:11],[2.,1.,2.])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [2.0, 1.0, 1.0] != [2.0, 1.0, 2.0]
+
+First differing element 2:
+1.0
+2.0
+
+- [2.0, 1.0, 1.0]
+?            ^
+
++ [2.0, 1.0, 2.0]
+?            ^
+
+
+----------------------------------------------------------------------
+Ran 15 tests in 9.424s
+
+FAILED (failures=1)
+
+
+80% tests passed, 1 tests failed out of 5
+
+Total Test time (real) =  11.27 sec
+
+The following tests FAILED:
+	  6 - research (Failed)
+Errors while running CTest
