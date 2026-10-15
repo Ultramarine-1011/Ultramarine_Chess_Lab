@@ -1,6 +1,6 @@
 from copy import deepcopy
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 import tempfile
 import unittest
 import subprocess
@@ -21,8 +21,10 @@ SCHEMA = json.loads((ROOT / "schemas/experiment-v1.schema.json").read_text())
 class ExperimentTests(unittest.TestCase):
     def test_configuration_and_argument_boundaries(self):
         validate_config(CONFIG)
-        args = command(CONFIG, [Path("/engine one"), Path("/engine two")], Path("/fastchess"), Path("/run/games.pgn"))
-        self.assertIn("cmd=/engine one", args)
+        args = command(CONFIG, [PureWindowsPath("C:/engine one.exe"), PurePosixPath("/engine two")],
+                       PurePosixPath("/fastchess"), PurePosixPath("/run/games.pgn"))
+        self.assertIn(r"cmd=C:\engine one.exe", args)
+        self.assertIn("cmd=/engine two", args)
         self.assertIn("-srand", args)
         self.assertIn("-strict", args)
         for field, value in (("rounds", 0), ("games", 1), ("seed", -1), ("depth", True)):
