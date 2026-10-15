@@ -245,16 +245,25 @@ class UciTests(unittest.TestCase):
                 validate_bundle(output / "record.json", schema)
 
     def test_retained_model_benchmark_identity(self):
+        self._check_retained_model_benchmark_identity(Path(__file__).resolve().parents[1]/'experiments/results/r3-model-v1/model.txt', chess.STARTING_FEN)
+
+    def test_retained_v2_model_benchmark_identity(self):
+        from ucl.model import encode_model
+        with tempfile.TemporaryDirectory() as tmp:
+            model=Path(tmp)/'v2.txt'
+            model.write_bytes(encode_model([100,320,330,500,900,5,4,30,-12,-7,8,11,-9,.125],'a'*64,'b'*64).encode())
+            self._check_retained_model_benchmark_identity(model,'4k3/8/8/2p5/2P5/P7/P7/4K3 w - - 0 1')
+
+    def _check_retained_model_benchmark_identity(self, model, fen):
         from ucl.benchmark import run_benchmark
         from ucl.integrity import validate_bundle
         from ucl.records import write_json, sha256
         root=Path(__file__).resolve().parents[1]
-        model=root/'experiments/results/r3-model-v1/model.txt'
         model_hash=sha256(model)
         info=json.loads(subprocess.check_output([ENGINE,'--build-info'],text=True))
         with tempfile.TemporaryDirectory() as tmp:
             tmp=Path(tmp);suite=tmp/'suite.json'
-            write_json(suite,{'version':1,'positions':[{'id':'start','fen':chess.STARTING_FEN}]})
+            write_json(suite,{'version':1,'positions':[{'id':'start','fen':fen}]})
             engines=[]
             for name,opts in [('hand',{'Evaluator':'Handcrafted'}),('linear',{'Evaluator':'Linear','ModelFile':str(model),'ModelSHA256':model_hash})]:
                 engines.append({'name':name,'path':str(Path(ENGINE).resolve()),'revision':info['revision'],'build':'CTest binary','ucl_build_info':True,'options':opts})

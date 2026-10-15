@@ -367,5 +367,18 @@ class R4OpeningTests(unittest.TestCase):
             for move in r['moves']:board.push_uci(move)
             self.assertEqual(board.fen(),r['fen'])
 
+
+class R4SelectionTests(unittest.TestCase):
+    def test_selection_uses_validation_and_cost_gate(self):
+        from ucl.r4_experiment import choose,GROUPS
+        models={n:{'success':True,'active':list(range(8+i)),
+                   'validation':{'equal_game':{'bce':.6-i*.001}},'test':{'bce':i}}
+                for i,n in enumerate(GROUPS)}
+        self.assertEqual(choose(models,{n:1 for n in GROUPS}),'full')
+        self.assertEqual(choose(models,{'refit8':1,'pawn':1,'king':1,'full':11}),'king')
+        models['king']['success']=False
+        self.assertEqual(choose(models,{'refit8':1,'pawn':1,'king':1,'full':11}),'pawn')
+        with self.assertRaises(ValueError):choose(models,{n:11 for n in GROUPS})
+
 if __name__ == '__main__':
     unittest.main()

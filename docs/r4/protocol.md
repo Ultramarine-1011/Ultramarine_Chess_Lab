@@ -125,3 +125,8 @@ five, nominal familywise >=95%). Primary 95% intervals remain descriptive;
 99% intervals are only simultaneous for this specified five-contrast BCE family,
 not all strata/metrics. The small number of windows and player dependence still
 limit inferential claims. No feature or model outcome prompted this clarification.
+
+Cost aggregation detail (before measurements): use the existing benchmark summary's
+ratio of mean per-position median ns/call (7 alternating repeats), matching R3's
+aggregation. This specifies the static <=10x eligibility gate without adding a
+second timing/statistics system. All four groups receive the same frozen suite.

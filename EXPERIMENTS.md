@@ -140,3 +140,18 @@ benchmark-v1 可选 `static_evaluation=true`：额外对同一十局面用 C++ �
 Handcrafted/Linear 100000次、7轮交替顺序，保存 ns、checksum、模型哈希。
 `validate` 复算 checksum、覆盖和汇总；`report` 独立显示静态耗时和搜索耗时。
 同深度两种 evaluator 会产生不同树，节点差异不直接代表推理速度或棋力。
+
+## R4 冻结研究
+
+[R4协议](docs/r4/protocol.md)先于采集/训练封存。六个月窗口，前四月仅train/validation、
+后两月独立时间test；每局总权重相同，整局bootstrap2000次。五个消融对比额外报告
+99%边界，属于限定家族的名义Bonferroni控制；玩家与月份相关性限制仍保留。
+所有模型先只在开发集拟合。固定R2局面逐组benchmark后，按validation BCE和
+<=10倍静态成本门槛冻结唯一候选；由`r4_experiment freeze`保存选择/模型/成本/
+分析代码/开局hash，随后一次独占test操作。禁止按test或比赛中途结果改模型。
+
+独立2017-08 CC0源开局：12ply、按游戏身份hash排序去重、排除R3开局/R4源局；
+固定200开局换色400局、1+0.01、Hash16、QS/TT/PV=true、并发1、maxmoves150。
+Mac fallback预算约20–40分钟；Windows物理实验主机NOT_RUN，CI与物理主机分开。
+保留PGN注释中的深度/节点/用时及完整log；自然/裁决/异常分列。Elo等效估计为
+400log10(p/(1-p))，从配对得分区间变换，只适用于本设置；不是SPRT或总体定级。

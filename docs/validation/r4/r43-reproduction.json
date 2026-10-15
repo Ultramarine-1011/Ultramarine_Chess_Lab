@@ -1,0 +1,40 @@
+{
+  "first_code": {
+    "revision": "00faca452e288ec5f6bf17f410d0c1aec246fb71",
+    "dirty": false
+  },
+  "repeat_code": {
+    "revision": "00faca452e288ec5f6bf17f410d0c1aec246fb71",
+    "dirty": false
+  },
+  "model_hashes": {
+    "handcrafted": {
+      "first": "f48c494c4b7a75634297b0d5da2a2f67ca3e2c76584c9893640736df193644ec",
+      "repeat": "f48c494c4b7a75634297b0d5da2a2f67ca3e2c76584c9893640736df193644ec"
+    },
+    "calibration": {
+      "first": "b17b54d1cb9f33fc709a4a235a1b64b460676bdb7a773c27b55fb9e30b89a16e",
+      "repeat": "b17b54d1cb9f33fc709a4a235a1b64b460676bdb7a773c27b55fb9e30b89a16e"
+    },
+    "frozen_r3": {
+      "first": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+      "repeat": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b"
+    },
+    "refit8": {
+      "first": "fe8b34d5cf3fab436a03a4d7d15581aa5b5b35477990834cf168e977fb9deb18",
+      "repeat": "fe8b34d5cf3fab436a03a4d7d15581aa5b5b35477990834cf168e977fb9deb18"
+    },
+    "pawn": {
+      "first": "074a364b2f0b3b7137f2d5d725ea3da5e83a8e6749ac847204862653a4118993",
+      "repeat": "074a364b2f0b3b7137f2d5d725ea3da5e83a8e6749ac847204862653a4118993"
+    },
+    "king": {
+      "first": "6213e17d885fbd86b0a2f3bf97abb97067a828a1a71678af71074f4337dce013",
+      "repeat": "6213e17d885fbd86b0a2f3bf97abb97067a828a1a71678af71074f4337dce013"
+    },
+    "full": {
+      "first": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "repeat": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+    }
+  }
+}

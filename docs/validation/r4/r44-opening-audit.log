@@ -1,0 +1,69 @@
+{
+  "kind": "r4-independent-openings",
+  "source": {
+    "month": "2017-08",
+    "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2017-08.pgn.zst",
+    "license": "CC0-1.0",
+    "license_url": "https://database.lichess.org/",
+    "acquired_at": "2026-10-15T10:11:53.181163+00:00",
+    "range": [
+      0,
+      3145727
+    ],
+    "headers": {
+      "Server": "nginx",
+      "Date": "Thu, 15 Oct 2026 10:11:34 GMT",
+      "Content-Type": "application/octet-stream",
+      "Content-Length": "3145728",
+      "Last-Modified": "Fri, 04 Nov 2022 22:26:57 GMT",
+      "Connection": "close",
+      "ETag": "\"636591b1-e3183c0e\"",
+      "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+      "X-Frame-Options": "DENY",
+      "Content-Range": "bytes 0-3145727/3810016270"
+    },
+    "bytes": 3145728,
+    "sha256": "de440d719a4991fd3e64cb08bd676fea349f878e279577233e2c4ddb99b9a1a2"
+  },
+  "seed": 20261015,
+  "code": {
+    "revision": "a0c34436335b6629f0171ad1890b082bd9c4dfe4",
+    "dirty": true
+  },
+  "selection": "first unique 12-ply positions in SHA256(seed:game_id) order; exclude R3 positions and R4 games",
+  "target": 200,
+  "positions": 200,
+  "status": "PASS",
+  "filter_counts": {
+    "source_games": 4000,
+    "reject:time_control": 371,
+    "reject:rating": 992,
+    "reject:termination": 1403,
+    "reject:invalid literal for int() with base 10: '-'": 5,
+    "reject:short_game": 103,
+    "reject:invalid or unfinished PGN": 2,
+    "cross_split_position_removed": 2,
+    "accepted_games": 1124,
+    "positions_before_dedup": 7402,
+    "positions": 7400,
+    "positions:train": 5323,
+    "positions:validation": 1053,
+    "positions:test": 1024
+  },
+  "r3_openings_sha256": "134a12561a308f673f3f0602231220409ace60b9d7a5119941b022a9949d48ab",
+  "r4_splits_sha256": "7cc01c05ea1950827b1e25cd1471a916a3dd8569919ad1b6860a2db97c43c09f",
+  "files": {
+    "openings.epd": {
+      "sha256": "75d6915cab390a2187992d9cb0f4ea2cd99288f2117ee5619ee5d8741f0afa34",
+      "bytes": 15058
+    },
+    "positions.json": {
+      "sha256": "75e23fa042d6c93167e74d61ab286fbb9dbecaa225bd2dbbc9fddf28771d80e3",
+      "bytes": 112661
+    },
+    "source.pgn.gz": {
+      "sha256": "5a85d71033eada7d278a963e43067a7080883507f4384d0aa2a35d8a2e14913c",
+      "bytes": 1740518
+    }
+  }
+}

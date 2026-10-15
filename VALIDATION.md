@@ -581,3 +581,20 @@ fastchess compliance40/40（原始log.gz）。200个独立2017-08开局准备完
 生成器处于本阶段dirty开发状态，如实保留；后续clean代码从源重建再核对。
 正式14维全数据导出、消融拟合、成本门槛及候选选择尚待clean代码执行。
 R4.2 v2各模型权重与v1完全一致，冻结R3部署字节/原训练来源均保持不变。
+
+### R4.3 clean消融拟合与独立推理
+
+clean `00faca452e288ec5f6bf17f410d0c1aec246fb71` Release，44681行14维与原手工
+cp全部独立Python精确一致。base/pawn/king/full均选λ=.01，所有20个候选收敛。
+validation等棋局BCE分别.60511051/.60451505/.59933902/.59872999；只属开发结果。
+四种部署模型各44681行C++double与Python差值<1e-9cp，取整/符号全部相同；
+细节r43-inference.json，检验脚本check_inference.py。七个模型train/validation-only
+第二次拟合至.tools/r4-reproduce-v1，部署文件hash逐个完全一致。
+独立200开局已用clean代码从源重建完全一致，r44-opening-audit.log。
+成本尚未测量，候选未选定；test仍关闭。准备固定四组benchmark配置和自动成本门槛，
+不会根据test或正式比赛换候选。R4.3 Actions#38719798185待核对。
+
+R4.3代码Actions#38719798185五项success（r43-ci.json）。新增v2真实benchmark
+完整性测试（含非零新增特征checksum）、成本/validation选择guard通过；
+最新完整Release6/6（r43-models-release.log）。成本定义在任何计时前明确为原R3
+统计口径：逐局面中位数的均值之比。接下来只跑冻结四组性能，不打开test。

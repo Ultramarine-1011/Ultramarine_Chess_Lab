@@ -1,0 +1,37 @@
+{
+  "build_info": {
+    "version": "0.1.0",
+    "revision": "00faca452e288ec5f6bf17f410d0c1aec246fb71",
+    "dirty": false,
+    "compiler": "AppleClang 21.0.0.21000101",
+    "build_type": "Release",
+    "flags": " -O3 -DNDEBUG"
+  },
+  "binary_sha256": "28f77878cc8e7657135b9261e37bc874d9381059c5516deacfc20e38eb95b7a3",
+  "models": {
+    "refit8": {
+      "positions": 44681,
+      "max_absolute_cp_error": 9.094947017729282e-13,
+      "rounded_cp_all_equal": true,
+      "model_sha256": "fe8b34d5cf3fab436a03a4d7d15581aa5b5b35477990834cf168e977fb9deb18"
+    },
+    "pawn": {
+      "positions": 44681,
+      "max_absolute_cp_error": 9.094947017729282e-13,
+      "rounded_cp_all_equal": true,
+      "model_sha256": "074a364b2f0b3b7137f2d5d725ea3da5e83a8e6749ac847204862653a4118993"
+    },
+    "king": {
+      "positions": 44681,
+      "max_absolute_cp_error": 9.094947017729282e-13,
+      "rounded_cp_all_equal": true,
+      "model_sha256": "6213e17d885fbd86b0a2f3bf97abb97067a828a1a71678af71074f4337dce013"
+    },
+    "full": {
+      "positions": 44681,
+      "max_absolute_cp_error": 9.094947017729282e-13,
+      "rounded_cp_all_equal": true,
+      "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+    }
+  }
+}
