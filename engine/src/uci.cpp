@@ -6,6 +6,7 @@
 #include <condition_variable>
 #include <iostream>
 #include <mutex>
+#include <memory>
 #include <sstream>
 #include <stdexcept>
 #include <thread>
@@ -54,7 +55,14 @@ int run_uci(std::istream& in, std::ostream& out) {
     std::mutex output_mutex;
     auto emit = [&](const std::string& line) { const std::lock_guard lock(output_mutex); out << line << '\n' << std::flush; };
     HandcraftedFeatures features;
-    HandcraftedEvaluator evaluator(features);
+    auto handcrafted = std::make_shared<HandcraftedEvaluator>(features);
+    std::shared_ptr<LinearEvaluator> linear;
+    std::shared_ptr<const Evaluator> evaluator = handcrafted;
+    std::string expected_model_hash;
+    auto identity = [&] {
+        return std::string("{\"evaluator\":\"") + std::string(evaluator->name()) + "\",\"model_sha256\":" +
+            (evaluator == linear ? "\"" + linear->model_sha256() + "\"" : "null");
+    };
     chess::Board board;
     int overhead = 10;
     SearchOptions options;
@@ -62,6 +70,7 @@ int run_uci(std::istream& in, std::ostream& out) {
     auto stop = [&] { if (worker.joinable()) { worker.request_stop(); worker.join(); } };
     std::string line;
     while (std::getline(in, line)) {
+        if (!line.empty() && line.back() == '\r') line.pop_back();
         std::istringstream stream(line);
         std::vector<std::string> t;
         for (std::string word; stream >> word;) t.push_back(word);
@@ -75,13 +84,39 @@ int run_uci(std::istream& in, std::ostream& out) {
                 emit("option name UseTT type check default true");
                 emit("option name Hash type spin default 16 min 1 max 1024");
                 emit("option name PVOrdering type check default true");
+                emit("option name Evaluator type combo default Handcrafted var Handcrafted var Linear");
+                emit("option name ModelSHA256 type string default <empty>");
+                emit("option name ModelFile type string default <empty>");
                 emit("uciok");
             } else if (t[0] == "isready") emit("readyok");
             else if (t[0] == "stop") stop();
             else if (t[0] == "quit") { stop(); break; }
             else if (t[0] == "ucinewgame") { stop(); board = chess::Board(); }
+            else if (t[0] == "evalinfo") emit("info string ucl_evaluator " + identity() + "}");
+            else if (t[0] == "eval") emit("info string ucl_eval " + identity() + ",\"score_cp\":" + std::to_string(evaluator->evaluate(board)) + "}");
             else if (t[0] == "setoption") {
-                if (t.size() == 5 && t[1] == "name" && t[2] == "MoveOverhead" && t[3] == "value")
+                if (t.size() == 5 && t[1] == "name" && t[2] == "Evaluator" && t[3] == "value") {
+                    if (t[4] != "Handcrafted" && t[4] != "Linear") throw std::invalid_argument("unknown Evaluator");
+                    if (t[4] == "Linear" && !linear) throw std::invalid_argument("Linear requires a validated ModelFile and ModelSHA256");
+                    stop();
+                    evaluator = t[4] == "Handcrafted" ? std::shared_ptr<const Evaluator>(handcrafted) : linear;
+                } else if (t.size() == 5 && t[1] == "name" && t[2] == "ModelSHA256" && t[3] == "value") {
+                    if (t[4].size() != 64 || !std::all_of(t[4].begin(), t[4].end(), [](char c) {
+                        return (c >= '0' && c <= '9') || (c >= 'a' && c <= 'f');
+                    })) throw std::invalid_argument("expected 64 lowercase hex SHA-256");
+                    expected_model_hash = t[4];
+                } else if (t.size() >= 5 && t[1] == "name" && t[2] == "ModelFile" && t[3] == "value") {
+                    // Keep spaces in paths; only the fixed UCI prefix is parsed as tokens.
+                    const auto value_at = line.find(" value ");
+                    if (value_at == std::string::npos) throw std::invalid_argument("ModelFile requires value");
+                    const auto path = line.substr(value_at + 7);
+                    auto candidate = std::make_shared<LinearEvaluator>(LinearEvaluator::load(features, path, expected_model_hash));
+                    const bool active_linear = evaluator == linear;
+                    stop();
+                    linear = std::move(candidate);
+                    if (active_linear) evaluator = linear;
+                    emit("info string model loaded SHA256 " + linear->model_sha256());
+                } else if (t.size() == 5 && t[1] == "name" && t[2] == "MoveOverhead" && t[3] == "value")
                     overhead = static_cast<int>(integer(t[4], 0, 5000));
                 else if (t.size() == 5 && t[1] == "name" && t[3] == "value" && (t[2] == "Quiescence" || t[2] == "UseTT" || t[2] == "PVOrdering")) {
                     if (t[4] != "true" && t[4] != "false") throw std::invalid_argument("expected true/false");
@@ -98,10 +133,10 @@ int run_uci(std::istream& in, std::ostream& out) {
             } else if (t[0] == "go") {
                 auto go = parse_go(t, board.sideToMove(), overhead);
                 stop();
-                worker = std::jthread([&, position = board, go, search_options = options](std::stop_token token) {
+                worker = std::jthread([&, position = board, go, search_options = options, active_eval = evaluator](std::stop_token token) {
                     try {
                         AlphaBetaSearch search(search_options);
-                        auto result = search.run(position, evaluator, go.limits, token, [&](const SearchResult& r) {
+                        auto result = search.run(position, *active_eval, go.limits, token, [&](const SearchResult& r) {
                             std::ostringstream s;
                             s << "info depth " << r.depth << " score ";
                             if (std::abs(r.score) >= mate_score - max_search_ply) {

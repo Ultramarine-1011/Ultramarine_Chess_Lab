@@ -144,5 +144,57 @@ class TrainingTests(unittest.TestCase):
             self.assertFalse((Path(p).parent/'test-results.json').exists())
 
 
+
+
+
+class InferenceTests(unittest.TestCase):
+    def test_cpp_python_real_model(self):
+        import gzip, json, math, os, subprocess
+        import numpy as np
+        from ucl.model import load_model
+        root = Path(__file__).resolve().parents[1]
+        engine = os.environ.get('UCL_ENGINE', str(root/'build/release/ucl'))
+        model = root/'experiments/results/r3-model-v1/model.txt'
+        m = json.loads(model.with_name('model-manifest.json').read_text())
+        weights = load_model(model,m['model_sha256'])
+        rows = [json.loads(x) for x in gzip.decompress((root/'experiments/results/r3-features-v2/features.jsonl.gz').read_bytes()).decode().splitlines()]
+        fens = [r['fen'] for r in rows]
+        p = subprocess.run([engine,'--infer',str(model),m['model_sha256']],input='\n'.join(fens)+'\n',capture_output=True,text=True,check=True,timeout=60)
+        actual = [json.loads(line) for line in p.stdout.splitlines()]
+        self.assertEqual(len(actual),len(rows))
+        for r,a in zip(rows,actual):
+            score = sum(w*x for w,x in zip(weights,r['features']))
+            self.assertAlmostEqual(a['white_score'],score,places=9)
+            cp = math.floor(abs(score)+.5)*(1 if score>=0 else -1)
+            self.assertEqual(a['score_cp'],cp*(1 if r['fen'].split()[1]=='w' else -1))
+            self.assertEqual(a['model_sha256'],m['model_sha256'])
+
+    def test_cpp_schema_hash_and_rounding(self):
+        import os, subprocess, tempfile
+        from ucl.model import encode_model
+        from ucl.records import sha256
+        engine = os.environ.get('UCL_ENGINE',str(Path(__file__).resolve().parents[1]/'build/release/ucl'))
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp)/'model with spaces.txt'
+            text = encode_model([.5,0,0,0,0,0,0,0],'a'*64,'b'*64)
+            fens = ['4k3/8/8/8/8/8/P7/4K3 w - - 0 1','4k3/8/8/8/8/8/P7/4K3 b - - 0 1', '4k3/p7/8/8/8/8/8/4K3 w - - 0 1']
+            p.write_bytes(text.encode())
+            result = subprocess.run([engine,'--infer',str(p),sha256(p)],input='\n'.join(fens)+'\n',capture_output=True,text=True,check=True)
+            import json
+            self.assertEqual([json.loads(x)['score_cp'] for x in result.stdout.splitlines()],[1,-1,-1])
+            from ucl.feature_data import WEIGHTS, extract
+            baseline_text=encode_model(WEIGHTS,'a'*64,'b'*64)
+            p.write_bytes(baseline_text.encode())
+            baseline=subprocess.run([engine,'--infer',str(p),sha256(p)],input='\n'.join(fens)+'\n',capture_output=True,text=True,check=True)
+            self.assertEqual([json.loads(x)['score_cp'] for x in baseline.stdout.splitlines()], [r['handcrafted_cp'] for r in extract(engine,fens)])
+            for corrupt in [text+'extra',text.replace('weights 8','weights 7'),text.replace('handcrafted-v1','wrong'),text.replace('0.5 0','nan 0'),text.replace('0.5 0','inf 0'),text.replace('0.5 0','10001 0'),text.replace('intercept 0','intercept 1'), 'x'*4097, '']:
+                p.write_bytes(corrupt.encode())
+                q = subprocess.run([engine,'--infer',str(p),sha256(p)],input=fens[0]+'\n',capture_output=True,text=True)
+                self.assertNotEqual(q.returncode,0)
+                self.assertIn('model rejected',q.stderr)
+            p.write_bytes(text.encode())
+            self.assertNotEqual(subprocess.run([engine,'--infer',str(p),'0'*64],capture_output=True).returncode,0)
+
+
 if __name__ == '__main__':
     unittest.main()

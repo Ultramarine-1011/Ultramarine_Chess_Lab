@@ -53,11 +53,11 @@ def validate_config(c):
             raise ValueError("invalid openings configuration")
 
 
-def command(config, paths, fastchess, pgn, opening=None):
+def command(config, paths, fastchess, pgn, opening=None, engine_options=None):
     args = [str(fastchess)]
-    for e, path in zip(config["engines"], paths, strict=True):
+    for index, (e, path) in enumerate(zip(config["engines"], paths, strict=True)):
         args += ["-engine", f"cmd={path}", f"name={e['name']}", "proto=uci"]
-        args += [f"option.{k}={str(v).lower() if isinstance(v, bool) else v}" for k, v in sorted(e["options"].items())]
+        args += [f"option.{k}={str(v).lower() if isinstance(v, bool) else v}" for k, v in ordered_options(e["options"] if engine_options is None else engine_options[index]).items()]
     args += ["-each", f"tc={config['tc']}"]
     for field in ("depth", "nodes"):
         if field in config:
@@ -115,7 +115,8 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
             original = (root / config["openings"]["path"]).resolve()
             opening = output / ("openings." + config["openings"]["format"])
             shutil.copyfile(original, opening)
-        args = command(config, paths, fast, output / "games.pgn", opening)
+        runtime = [runtime_options(root, e["options"], output) for e in config["engines"]]
+        args = command(config, paths, fast, output / "games.pgn", opening, runtime)
         record["tools"]["command"] = args
         validate_record(record, schema)
         write_json(output / "record.json", record)
@@ -169,4 +170,61 @@ def capture_engine(root, e, code_revision, allow_dirty=False):
         entry["build_info"] = info
         if info["revision"] != entry["revision"] or (info["dirty"] and not allow_dirty):
             raise ValueError("UCL binary revision/dirty state mismatch: reconfigure and rebuild after committing")
+    if 'Evaluator' in e['options']:
+        options = runtime_options(root, e['options'])
+        lines = ['uci'] + ['setoption name '+k+' value '+(str(v).lower() if isinstance(v,bool) else str(v)) for k,v in options.items()]
+        lines += ['evalinfo','quit']
+        response = subprocess.run([str(path)], input='\n'.join(lines)+'\n', capture_output=True, text=True, timeout=10, check=True)
+        if 'command rejected' in response.stdout or 'unsupported option' in response.stdout:
+            raise ValueError('engine rejected evaluator configuration')
+        identities = [json.loads(line.removeprefix('info string ucl_evaluator ')) for line in response.stdout.splitlines() if line.startswith('info string ucl_evaluator ')]
+        if len(identities) != 1:
+            raise ValueError('missing actual evaluator identity')
+        entry['evaluation'] = identities[0]
+        expected = 'linear-v1' if e['options']['Evaluator'] == 'Linear' else 'handcrafted-v1'
+        if entry['evaluation'] != {'evaluator': expected, 'model_sha256': e['options'].get('ModelSHA256') if expected == 'linear-v1' else None}:
+            raise ValueError('engine evaluator/model identity mismatch')
     return entry
+
+
+def ordered_options(options):
+    """Hash and file must load successfully before selecting Linear."""
+    priority = {'ModelSHA256': 0, 'ModelFile': 1, 'Evaluator': 2}
+    return dict(sorted(options.items(), key=lambda kv: (priority.get(kv[0], 3), kv[0])))
+
+
+def runtime_options(root, options, output=None):
+    options = ordered_options(options)
+    if options.get('Evaluator') == 'Linear' or 'ModelFile' in options:
+        from .model import load_model
+        if not {'ModelFile', 'ModelSHA256'} <= options.keys():
+            raise ValueError('Linear requires explicit ModelFile and ModelSHA256')
+        model = (Path(root)/options['ModelFile']).resolve()
+        load_model(model, options['ModelSHA256'])
+        if output is not None:
+            target = Path(output)/('model-'+options['ModelSHA256']+'.txt')
+            if not target.exists():
+                shutil.copyfile(model, target)
+            model = target.resolve()
+        options['ModelFile'] = str(model)
+    return options
+
+
+def validate_evaluation(entry, directory, artifacts):
+    """Retained metadata must identify what the configured engine actually used."""
+    options = entry['options']
+    if 'Evaluator' not in options:
+        return # Historical bundles have no evaluator identity protocol.
+    identity = entry.get('evaluation')
+    expected = {'Handcrafted': 'handcrafted-v1', 'Linear': 'linear-v1'}.get(options['Evaluator'])
+    if identity is None or identity['evaluator'] != expected:
+        raise ValueError('actual evaluator identity mismatch')
+    if expected == 'linear-v1':
+        from .model import load_model
+        model_hash = options.get('ModelSHA256')
+        name = 'model-' + str(model_hash) + '.txt'
+        if identity['model_sha256'] != model_hash or name not in artifacts:
+            raise ValueError('model identity/artifact mismatch')
+        load_model(Path(directory)/name, model_hash)
+    elif identity['model_sha256'] is not None:
+        raise ValueError('handcrafted evaluator cannot claim a model hash')

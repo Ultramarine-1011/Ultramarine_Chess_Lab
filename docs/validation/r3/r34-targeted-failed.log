@@ -1,0 +1,36 @@
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+    Start 1: unit
+1/4 Test #1: unit .............................   Passed    0.52 sec
+    Start 4: uci
+2/4 Test #4: uci ..............................***Failed    0.83 sec
+.F/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/lib/python3.14/site-packages/chess/engine.py:65: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+  assert asyncio.iscoroutinefunction(coroutine)
+../Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/lib/python3.14/site-packages/chess/engine.py:65: DeprecationWarning: 'asyncio.iscoroutinefunction' is deprecated and slated for removal in Python 3.16; use inspect.iscoroutinefunction() instead
+  assert asyncio.iscoroutinefunction(coroutine)
+.....
+======================================================================
+FAIL: test_linear_loading_switch_and_lifecycle (__main__.UciTests.test_linear_loading_switch_and_lifecycle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/tests/test_uci.py", line 86, in test_linear_loading_switch_and_lifecycle
+    self.assertEqual(value['score_cp'],1004)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1004
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.697s
+
+FAILED (failures=1)
+
+    Start 5: experiments
+3/4 Test #5: experiments ......................   Passed    0.28 sec
+    Start 6: research
+4/4 Test #6: research .........................   Passed    0.70 sec
+
+75% tests passed, 1 tests failed out of 4
+
+Total Test time (real) =   2.33 sec
+
+The following tests FAILED:
+	  4 - uci (Failed)
+Errors while running CTest

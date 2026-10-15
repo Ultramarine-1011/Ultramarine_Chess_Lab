@@ -1,0 +1,28 @@
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+    Start 4: uci
+1/2 Test #4: uci ..............................   Passed    0.46 sec
+    Start 6: research
+2/2 Test #6: research .........................***Failed    0.70 sec
+.........E
+======================================================================
+ERROR: test_strict_model_format (test_research.TrainingTests.test_strict_model_format)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/tests/test_research.py", line 126, in test_strict_model_format
+    baseline=subprocess.run([engine,'--infer',str(p),sha256(p)],input='\n'.join(fens)+'\n',capture_output=True,text=True,check=True)
+             ^^^^^^^^^^
+NameError: name 'subprocess' is not defined. Did you forget to import 'subprocess'?
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.554s
+
+FAILED (errors=1)
+
+
+50% tests passed, 1 tests failed out of 2
+
+Total Test time (real) =   1.15 sec
+
+The following tests FAILED:
+	  6 - research (Failed)
+Errors while running CTest

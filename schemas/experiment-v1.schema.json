@@ -36,7 +36,8 @@
         "properties": {"name": {"type": "string", "minLength": 1}, "path": {"type": "string"},
           "revision": {"$ref": "#/$defs/revision"}, "build": {"type": "string", "minLength": 1},
           "options": {"type": "object"}, "sha256": {"$ref": "#/$defs/hash"},
-          "build_info": {"type": ["object", "null"]}}
+          "build_info": {"type": ["object", "null"]},
+          "evaluation": {"type":"object","additionalProperties":false,"required":["evaluator","model_sha256"],"properties":{"evaluator":{"enum":["handcrafted-v1","linear-v1"]},"model_sha256":{"oneOf":[{"type":"null"},{"type":"string","pattern":"^[0-9a-f]{64}$"}]}}}}
       }
     },
     "artifacts": {"type": "object", "additionalProperties": {

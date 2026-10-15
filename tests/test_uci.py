@@ -63,6 +63,46 @@ class UciTests(unittest.TestCase):
         self.pipe.send("uci")
         self.pipe.until("uciok")
 
+    def test_linear_loading_switch_and_lifecycle(self):
+        root = Path(__file__).resolve().parents[1]
+        model = root/'experiments/results/r3-model-v1/model.txt'
+        m = json.loads(model.with_name('model-manifest.json').read_text())
+        p = self.pipe
+        def identity():
+            p.send('evalinfo')
+            return json.loads(p.until('info string ucl_evaluator ').removeprefix('info string ucl_evaluator '))
+        self.assertEqual(identity(),{'evaluator':'handcrafted-v1','model_sha256':None})
+        p.send('setoption name Evaluator value Linear')
+        p.until('info string command rejected:')
+        p.send('setoption name ModelSHA256 value '+m['model_sha256'])
+        p.send('setoption name ModelFile value '+str(model))
+        p.until('info string model loaded')
+        p.send('setoption name Evaluator value Linear')
+        expected={'evaluator':'linear-v1','model_sha256':m['model_sha256']}
+        self.assertEqual(identity(),expected)
+        p.send('position fen 4k3/8/8/8/8/8/3Q4/4K3 w - - 0 1')
+        p.send('eval')
+        value=json.loads(p.until('info string ucl_eval ').removeprefix('info string ucl_eval '))
+        self.assertEqual(value['score_cp'],1004)
+        p.send('setoption name ModelFile value /missing/model.txt')
+        p.until('info string command rejected:')
+        self.assertEqual(identity(),expected)
+        p.send('setoption name ModelSHA256 value '+'0'*64)
+        p.send('setoption name ModelFile value '+str(model))
+        p.until('info string command rejected:')
+        self.assertEqual(identity(),expected)
+        p.send('setoption name ModelSHA256 value '+m['model_sha256'])
+        p.send('position startpos'); p.send('go infinite'); p.until('info depth 1')
+        p.send('setoption name ModelFile value '+str(model))
+        p.until('bestmove'); p.until('info string model loaded')
+        self.assertEqual(identity(),expected)
+        p.send('go infinite'); p.until('info depth 1')
+        p.send('setoption name Evaluator value Handcrafted');p.until('bestmove')
+        self.assertEqual(identity(),{'evaluator':'handcrafted-v1','model_sha256':None})
+        p.send('setoption name Evaluator value Linear')
+        p.send('position fen 7k/6Q1/6K1/8/8/8/8/8 b - - 0 1')
+        p.send('go depth 1');self.assertEqual(p.until('bestmove'),'bestmove 0000')
+
     def test_async_ready_stop_and_restart(self):
         p = self.pipe
         p.send("position startpos")
@@ -181,6 +221,31 @@ class UciTests(unittest.TestCase):
                 stream.write("tamper")
             with self.assertRaisesRegex(ValueError, "integrity"):
                 validate_bundle(output / "record.json", schema)
+
+    def test_retained_model_benchmark_identity(self):
+        from ucl.benchmark import run_benchmark
+        from ucl.integrity import validate_bundle
+        from ucl.records import write_json, sha256
+        root=Path(__file__).resolve().parents[1]
+        model=root/'experiments/results/r3-model-v1/model.txt'
+        model_hash=sha256(model)
+        info=json.loads(subprocess.check_output([ENGINE,'--build-info'],text=True))
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp=Path(tmp);suite=tmp/'suite.json'
+            write_json(suite,{'version':1,'positions':[{'id':'start','fen':chess.STARTING_FEN}]})
+            engines=[]
+            for name,opts in [('hand',{'Evaluator':'Handcrafted'}),('linear',{'Evaluator':'Linear','ModelFile':str(model),'ModelSHA256':model_hash})]:
+                engines.append({'name':name,'path':str(Path(ENGINE).resolve()),'revision':info['revision'],'build':'CTest binary','ucl_build_info':True,'options':opts})
+            config={'version':1,'seed':7,'suite':str(suite),'repeats':1,'limits':[{'depth':1}],'engines':engines}
+            source=tmp/'input.json';write_json(source,config)
+            out=tmp/'bundle';record=run_benchmark(root,source,out,allow_dirty=True)
+            self.assertEqual(record['status'],'completed',record['error'])
+            schema=json.loads((root/'schemas/benchmark-v1.schema.json').read_text())
+            validate_bundle(out/'record.json',schema)
+            self.assertEqual(record['engines'][1]['evaluation']['model_sha256'],model_hash)
+            bad=deepcopy(record);bad['engines'][1]['evaluation']['model_sha256']='0'*64
+            write_json(out/'record.json',bad)
+            with self.assertRaisesRegex(ValueError,'model identity'):validate_bundle(out/'record.json',schema)
 
     def test_seeded_positions_and_pv(self):
         rng = random.Random(20261015)

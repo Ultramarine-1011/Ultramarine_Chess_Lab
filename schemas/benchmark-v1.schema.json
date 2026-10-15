@@ -164,6 +164,33 @@
               "object",
               "null"
             ]
+          },
+          "evaluation": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "evaluator",
+              "model_sha256"
+            ],
+            "properties": {
+              "evaluator": {
+                "enum": [
+                  "handcrafted-v1",
+                  "linear-v1"
+                ]
+              },
+              "model_sha256": {
+                "oneOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-f]{64}$"
+                  }
+                ]
+              }
+            }
           }
         }
       }

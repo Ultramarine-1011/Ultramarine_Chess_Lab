@@ -9,7 +9,7 @@ import time
 import chess
 import chess.engine
 
-from .match import capture_engine, validate_config
+from .match import capture_engine, validate_config, runtime_options, validate_evaluation
 from .records import new_record, sha256, utc_now, write_json, validate_record
 
 
@@ -141,7 +141,7 @@ def run_benchmark(root, config_path, output, allow_dirty=False):
             record["engines"].append(entry)
             client = chess.engine.SimpleEngine.popen_uci(entry["path"], timeout=30)
             clients[e["name"]] = client
-            client.configure(e["options"])
+            client.configure(runtime_options(root, e["options"], output))
         rng = random.Random(config["seed"])
         for repeat in range(config["repeats"]):
             for case in suite["positions"]:
@@ -212,6 +212,7 @@ def validate_benchmark_bundle(path, record):
         raise ValueError("benchmark engine names mismatch")
     for declared in config["engines"]:
         actual = engines[declared["name"]]
+        validate_evaluation(actual, path.parent, record["artifacts"])
         revision = record["code"]["revision"] if declared["revision"] == "HEAD" else declared["revision"]
         if any(actual[k] != declared[k] for k in ("name", "options", "build")) or actual["revision"] != revision:
             raise ValueError("benchmark engine declaration mismatch")

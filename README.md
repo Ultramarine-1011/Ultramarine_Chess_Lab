@@ -196,3 +196,18 @@ OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/pyth
 
 默认使用已冻结的 `r3-data-v2` / `r3-features-v2`。正式结论只引用一次冻结测试，
 不按测试结果重训。v1 数据保留历史证据，因八 ply 采样只含白走而在训练前替换。
+
+R3 LinearEvaluator（默认仍为 Handcrafted），UCI 设置顺序：
+
+```text
+setoption name ModelSHA256 value 446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b
+setoption name ModelFile value experiments/results/r3-model-v1/model.txt
+setoption name Evaluator value Linear
+evalinfo
+position startpos
+go depth 4
+```
+
+`evalinfo` 可核对实际模型；加载失败输出 command rejected 并保留有效配置。
+切回使用 `setoption name Evaluator value Handcrafted`。实验 CLI 自动按加载顺序
+设置选项并使用绝对路径，保存模型副本和实际 evaluator 身份。

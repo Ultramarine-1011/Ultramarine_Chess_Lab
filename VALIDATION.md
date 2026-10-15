@@ -387,3 +387,36 @@ Windows Git 默认文本 CRLF 转换改变清单/划分字节，而 gzip 不变�
 
 修复前一次 core.autocrlf=true 临时克隆复现相同 hash mismatch。
 原始 Actions 日志含行尾空白，首个 diff --check 阻止提交；改为 gzip 原样保留。
+
+R3.3 修复验证：clean checkout with `git -c core.autocrlf=true clone --no-local`
+到 `.tools/r3-windows-lineendings-fixed`，6039 行训练输入哈希和冻结模型哈希全部
+匹配。修复提交 `6113aef665c60e7d98caae793ad845711a8af082` 的
+[Actions #38710461241](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38710461241)
+五项全部 success；快照 r33-fixed-ci.json。R3.3 工程/模型验收完成，未改模型权重。
+
+## R3.4 — LinearEvaluator 与 UCI 部署（2026-10-15）
+
+测试基底 `6113aef665c60e7d98caae793ad845711a8af082` + dirty R3.4。
+轻量 C++ LinearEvaluator 复用原 8 维 extractor，按严格 ASCII Schema/有限值/
+范围/特征版本/完整 SHA-256 加载；固定 MIT PicoSHA2 原头与许可，来源及哈希
+见 third_party/README.md。Handcrafted 默认、固定权重与搜索源文件均未改变。
+
+UCI 支持 ModelSHA256 → ModelFile → Evaluator 顺序、实际 evalinfo、独立切回。
+模型完整验证后 stop/join 才替换，搜索按值捕获 shared_ptr<const Evaluator>；
+失败明确报错并保留原有效配置。路径空格、运行中 reload/switch、hash 失败、
+无模型切换拒绝与终局处理均覆盖。Python match/benchmark 实际 UCI probe 核对
+身份，统一选项顺序/路径，保存模型副本；Schema 仅增可选 evaluation 字段，
+旧包保持兼容。完整性校验拒绝 model/evaluator 身份篡改。
+
+- 6039 个正式局面 Python/C++ double 推理差值 <1e-9 cp，取整/符号全相同；
+  原手工权重、half-cp 正负边界、畸形/额外字段/版本/维度/NaN/Inf/超范围/
+  文件大小/hash 错误均验证。
+- configure/build 命令同 commands.md，targeted unit/research/uci/experiments
+  4/4，Release/Debug/ASan+UBSan 各 6/6，无 sanitizer 诊断；日志 r34-*.log。
+  当前 UCI 10 unittest，research 10 unittest；原 search/perft 无回归。
+- `.tools/bin/fastchess --compliance "$PWD/build/release/ucl"` 40/40，原始
+  日志 gzip 保留。`--eval-benchmark` 7 次交替顺序的静态调用 CLI 诊断通过；
+  诊断不作为性能结论，正式计时待 clean binary。
+- 初次 UCI fixture 的白走局面正将军对方国王，原 parser 正确拒绝，修正为合法
+  queen-d2；一次脚本编辑误插入另一个测试方法，修正后全回归。失败日志保留。
+- 已准备固定 16 个自编标准开局与协议一致的 32 局配置；正式对弈尚未执行。

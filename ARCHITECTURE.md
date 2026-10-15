@@ -148,3 +148,23 @@ C++ extractor，并用独立 python-chess 特征实现逐行精确交叉检查�
 完整文件最大 4096 bytes，拒绝多余字段/错误版本/维数/数值；调用方提供完整
 SHA-256，加载前核对文件字节。温度只用于训练概率，部署直接算原空间 w·x，
 按 lround 的 half-away-from-zero 取整并转换当前行棋方符号。
+
+## R3 Evaluator 部署与运行身份
+
+`LinearEvaluator::load` 验证最大文件长度、完整 SHA-256、固定 token Schema、
+八维 finite double 及范围、特征版本和来源哈希；SHA 使用固定 MIT PicoSHA2。
+每次 evaluate 直接调用原 FeatureExtractor，累加 double 后按当前行棋方转换。
+终局依然由未改动的 Search 优先处理，TT 每次 run 冷启动。
+
+默认 UCI Evaluator=Handcrafted。加载顺序为 ModelSHA256 → ModelFile →
+Evaluator=Linear；没有有效模型时拒绝切换。新模型先完全验证，成功后 stop/join
+再替换；失败保留有效 evaluator/model。搜索捕获 shared_ptr<const Evaluator>，
+特征器在会话全程存活；任何有效 evaluator/model 切换都会停止并 join 原搜索。
+`evalinfo` 返回实际 evaluator 和 model_sha256；`eval` 附加当前静态评分。
+`--infer <file> <sha>` 批量返回未取整 white_score 和 side-to-move cp。
+`--eval-benchmark <file> <sha>` 每个 FEN 做 7 次交替顺序、每模型 100000 次
+静态调用，保留 checksum 与原始 ns；不涉及搜索和棋力解释。
+
+match/benchmark 复用统一选项排序和加载检查，实际 UCI probe 核对配置，
+记录可选 `engines[].evaluation`，保持旧包兼容。正式包复制模型原始文件，
+validate 检查 evaluator 配置、实际 hash 和保留模型，拒绝伪装加载/丢失身份。
