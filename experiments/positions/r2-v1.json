@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "description": "UCL hand-authored regression/benchmark suite v1. Labels are narrow correctness checks, not a rated tactical test.",
+  "positions": [
+    {"id": "start", "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"},
+    {"id": "kiwipete", "fen": "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1"},
+    {"id": "rook-ending", "fen": "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1"},
+    {"id": "poisoned-pawn", "fen": "3rk3/8/8/3p4/8/8/8/3QK3 w - - 0 1", "avoid": ["d1d5"]},
+    {"id": "mate-one", "fen": "7k/5Q2/6K1/8/8/8/8/8 w - - 0 1", "mate_plies": 1},
+    {"id": "promotion-mate", "fen": "7k/4P3/6K1/8/8/8/8/8 w - - 0 1", "best": ["e7e8q"], "mate_plies": 1},
+    {"id": "check-evasion", "fen": "r6k/8/8/8/8/8/r7/K7 w - - 0 1", "best": ["a1b1"]},
+    {"id": "en-passant", "fen": "7k/8/8/3pP3/8/8/8/K7 w - d6 0 1", "best": ["e5d6"]},
+    {"id": "near-fifty", "fen": "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 97 1"},
+    {"id": "stalemate", "fen": "7k/5Q2/6K1/8/8/8/8/8 b - - 0 1", "score_cp": 0}
+  ]
+}

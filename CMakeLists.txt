@@ -52,4 +52,5 @@ if(BUILD_TESTING)
   set_tests_properties(experiments PROPERTIES WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     ENVIRONMENT "PYTHONPATH=${CMAKE_SOURCE_DIR}/python")
   set_tests_properties(unit search perft uci experiments PROPERTIES TIMEOUT 60)
+  set_tests_properties(search PROPERTIES TIMEOUT 180) # Expanded ablation matrix under ASan/MSVC Debug.
 endif()

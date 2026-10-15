@@ -31,7 +31,7 @@ Evaluator 不强制依赖 FeatureExtractor：手工/线性评估可用特征；�
 若 MCTS 需要 policy/value，届时再增加最小的专用接口，不提前塞入 Alpha-Beta。
 调用方负责让特征器比评估器活得久，评估器比搜索活得久。当前仅单搜索线程。
 
-## 第一轮算法
+## R1 算法（保留的历史基线）
 
 迭代加深、fail-soft Negamax/Alpha-Beta，稳定的吃子/升变排序。没有 TT、
 静态搜索、空着剪枝、LMR 或并行搜索，因此存在典型的水平线效应，棋力尚未标定。
@@ -105,3 +105,21 @@ TT 使用 chess-library 的 Zobrist 主键，直接映射固定内存（默认 1
 旧 PV 前缀时采用该 ply 的 PV 提示，其次 TT 提示，再复用稳定吃子/升变排序。
 提示仅与已生成的合法走法比较，绝不直接应用缓存着法。关闭 TT 时旧 PV 排序仍工作；
 关闭 PVOrdering 时 TT 仍可复用分数。排序不引入 PVS、LMR、空着或并行算法。
+
+
+## 基准和版本身份
+
+UCI 在 bestmove 前输出 `info string ucl_stats {JSON}`：最终实际 nodes、qnodes、
+完成深度、厘兵分、微秒计时及 TT/排序计数，包含中断迭代的工作量。普通 info depth
+仍只表示完整迭代。`benchmark.py` 通过独立 python-chess 客户端检查着法/PV，保存
+输入、局面集、每查询原始测量和完整 UCI transcript；按局面取重复测量中位数。
+benchmark-v1 与 match experiment-v1 分别有 Schema，validate 都检查文件哈希和
+统计重算。R1 没有最终中断统计，固定节点下仅能报告其最后完整迭代，不能把它与
+R2 最终节点数直接相比；跨版本采用固定深度。
+
+`build_revision.py` 从完整 SHA 创建临时 detached Git worktree，以同一 Release
+参数编译，保留 binary/build.log/manifest 后移除临时 checkout。manifest 记录
+命令、二进制哈希和嵌入版本。`prepare_comparison.py` 据两个 manifest 生成跨版本
+配对赛和基准配置。comparison=revision 要求不同 SHA、不同 binary hash、干净
+UCL provenance、相同 compiler/build_type/flags；comparison=ablation 要求同一
+二进制、不同显式选项。smoke 允许同二进制。身份核对和合法选项检查失败会留档。

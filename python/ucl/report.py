@@ -8,7 +8,17 @@ import chess.pgn
 
 
 class CheckedGameBuilder(chess.pgn.GameBuilder):
+    def begin_game(self):
+        self.saw_result = False
+        return super().begin_game()
+
+    def end_game(self):
+        if not self.saw_result:
+            raise ValueError("missing PGN movetext result")
+        super().end_game()
+
     def visit_result(self, result):
+        self.saw_result = True
         if self.game.headers.get("Result", "*") != result:
             raise ValueError("PGN header/movetext result mismatch")
         super().visit_result(result)

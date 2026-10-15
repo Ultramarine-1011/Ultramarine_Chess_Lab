@@ -1,4 +1,8 @@
 """Black-box UCI tests, including real pipe timing and independent move validation."""
+from copy import deepcopy
+import json
+from pathlib import Path
+import tempfile
 import queue
 import random
 import subprocess
@@ -141,6 +145,42 @@ class UciTests(unittest.TestCase):
         for bad in ("setoption name Quiescence value yes", "setoption name Hash value 0"):
             self.pipe.send(bad)
             self.pipe.until("info string command rejected:")
+
+    def test_retained_benchmark_and_validation(self):
+        from ucl.benchmark import run_benchmark
+        from ucl.integrity import validate_bundle
+        from ucl.records import write_json
+        root = Path(__file__).resolve().parents[1]
+        info = json.loads(subprocess.check_output([ENGINE, "--build-info"], text=True))
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp = Path(tmp)
+            suite = tmp / "suite.json"
+            write_json(suite, {"version": 1, "positions": [{"id": "start", "fen": chess.STARTING_FEN}]})
+            config = {"version": 1, "seed": 7, "suite": str(suite), "repeats": 2,
+                      "limits": [{"depth": 2}, {"nodes": 30}], "engines": [
+                          {"name": "test", "path": str(Path(ENGINE).resolve()), "revision": info["revision"],
+                           "build": "CTest binary", "ucl_build_info": True,
+                           "options": {"Quiescence": True, "UseTT": True, "PVOrdering": True, "Hash": 1}}]}
+            source = tmp / "input.json"; write_json(source, config)
+            output = tmp / "benchmark"
+            record = run_benchmark(root, source, output, allow_dirty=True)
+            self.assertEqual(record["status"], "completed", record["error"])
+            schema = json.loads((root / "schemas/benchmark-v1.schema.json").read_text())
+            validate_bundle(output / "record.json", schema)
+            self.assertEqual(len(record["rows"]), 4)
+            for row in record["rows"]:
+                self.assertEqual(row["counter_scope"], "final")
+                if "nodes" in row["limit"]:
+                    self.assertEqual(row["nodes"], 30)
+            bad = deepcopy(record); bad["summary"][0]["median_nodes_sum"] += 1
+            write_json(output / "record.json", bad)
+            with self.assertRaisesRegex(ValueError, "summary"):
+                validate_bundle(output / "record.json", schema)
+            write_json(output / "record.json", record)
+            with (output / "uci.log").open("a") as stream:
+                stream.write("tamper")
+            with self.assertRaisesRegex(ValueError, "integrity"):
+                validate_bundle(output / "record.json", schema)
 
     def test_seeded_positions_and_pv(self):
         rng = random.Random(20261015)

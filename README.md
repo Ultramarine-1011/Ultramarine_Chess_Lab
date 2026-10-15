@@ -1,7 +1,7 @@
 # Ultramarine Chess Lab (UCL)
 
 可运行、可比较、可复现的 UCI 国际象棋引擎研究项目。C++20 负责引擎与推理，
-Python 负责数据、训练接口、实验和统计。第一轮实现经典基线，不包含 NN/RL。
+Python 负责数据、训练接口、实验和统计。R1 经典基线保留可构建；R2 增加 QS、TT 和 PV 排序，本轮不开发学习模型。
 
 ## 从全新克隆开始：macOS
 
@@ -59,9 +59,10 @@ quit
 
 支持 `position fen ... moves ...`、`ucinewgame`、`go depth/nodes/movetime`、
 `wtime/btime/winc/binc/movestogo`、`go infinite`、`stop`、`isready`、`quit`。
-选项 `MoveOverhead`（默认 10ms）；深度上限 128；无参数 `go` 默认深度 5。
+选项 `MoveOverhead`（默认 10ms）、`Quiescence` / `UseTT` / `PVOrdering`（默认 true）、
+`Hash`（默认 16 MiB，1–1024）；深度上限 128；无参数 `go` 默认深度 5。
 无合法走法输出 `bestmove 0000`。搜索期间仍可响应 `isready` 和 `stop`。
-首版仅标准国际象棋，不支持 Chess960、ponder、searchmoves、UCI Hash/Threads。
+首版仅标准国际象棋，不支持 Chess960、ponder、searchmoves、Threads。
 
 `./build/release/ucl --build-info` 输出编译器、参数、配置和代码版本 JSON。
 每次提交后重新 configure/build，才能让编译版本与实验代码一致。
@@ -84,6 +85,34 @@ Windows 可在 MSYS2 UCRT64 中编译 fastchess，或使用官方 Windows 可执
 将配置的引擎路径改为 `build/release/ucl.exe`，再用
 `.\.venv\Scripts\ucl-lab.exe ... --fastchess <fastchess.exe路径>`。
 
+## 搜索基准与跨版本对比
+
+先提交代码并重新 configure/build，再执行三次重复、全 8 种开关组合的基准：
+
+```sh
+ucl-lab benchmark --config experiments/configs/r2-ablation.json \
+  --output experiments/results/r2-ablation-001
+ucl-lab validate experiments/results/r2-ablation-001/record.json
+```
+
+从指定提交独立构建保留的 R1 和候选版本（输出路径以完整 SHA 命名）：
+
+```sh
+python scripts/build_revision.py e603d431a721c3f883bb1843059d122ef6bd4de5
+python scripts/build_revision.py HEAD
+python scripts/prepare_comparison.py \
+  --baseline .tools/engines/e603d431a721c3f883bb1843059d122ef6bd4de5/manifest.json \
+  --candidate .tools/engines/<候选完整SHA>/manifest.json --output .tools/comparison-001
+ucl-lab benchmark --config .tools/comparison-001/benchmark.json \
+  --output experiments/results/version-bench-001
+ucl-lab match --config .tools/comparison-001/match.json \
+  --output experiments/results/version-match-001 --fastchess .tools/bin/fastchess
+```
+
+输出目录禁止覆盖；已存在的版本构建直接复用 manifest。Windows 使用对应 `.venv`
+Python/CLI 路径，在 VS Developer PowerShell 运行相同步骤。实际原始证据和限制见
+[验证记录](VALIDATION.md)；长实验条件见 [实验规范](EXPERIMENTS.md)。
+
 ## 工程结构
 
 ```text
@@ -100,7 +129,7 @@ third_party/         chess-library 头文件、许可证与来源
 
 详见 [架构](ARCHITECTURE.md)、[路线图](ROADMAP.md)、
 [实验规范](EXPERIMENTS.md)、[开发规则](AGENTS.md)。
-第一轮实测结果见 [VALIDATION.md](VALIDATION.md)。
+各阶段实测结果见 [VALIDATION.md](VALIDATION.md)。
 UCL 自有代码采用 MIT；第三方依赖保留各自许可证。
 棋盘库来源及版本见 [third_party](third_party/README.md)；Python 工具使用
 独立安装的 [python-chess](https://github.com/niklasf/python-chess)（GPL-3.0+）。

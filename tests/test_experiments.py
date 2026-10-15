@@ -9,7 +9,7 @@ from unittest.mock import patch
 
 from jsonschema import ValidationError
 
-from ucl.match import command, run_match, run_process, validate_config
+from ucl.match import command, run_match, run_process, validate_config, validate_comparison
 from ucl.records import new_record, validate_record, write_json, sha256, utc_now
 from ucl.integrity import validate_bundle
 from ucl.report import summarize_pgn
@@ -131,6 +131,26 @@ class ExperimentTests(unittest.TestCase):
             write_json(path, record)
             with self.assertRaisesRegex(ValueError, "result mismatch"):
                 validate_bundle(path, SCHEMA)
+
+    def test_revision_and_ablation_identity_guards(self):
+        a = {"revision": "a" * 40, "sha256": "1" * 64, "options": {},
+             "build_info": {"revision": "a" * 40, "dirty": False, "compiler": "same", "build_type": "Release", "flags": "-O3"}}
+        b = deepcopy(a)
+        with self.assertRaisesRegex(ValueError, "distinct"):
+            validate_comparison({"comparison": "revision"}, [a, b])
+        b["revision"] = "b" * 40
+        with self.assertRaisesRegex(ValueError, "distinct"):
+            validate_comparison({"comparison": "revision"}, [a, b])
+        b["sha256"] = "2" * 64
+        validate_comparison({"comparison": "revision"}, [a, b])
+        b["build_info"]["flags"] = "-O0"
+        with self.assertRaisesRegex(ValueError, "build control"):
+            validate_comparison({"comparison": "revision"}, [a, b])
+        b = deepcopy(a)
+        with self.assertRaisesRegex(ValueError, "different explicit options"):
+            validate_comparison({"comparison": "ablation"}, [a, b])
+        b["options"] = {"UseTT": False}
+        validate_comparison({"comparison": "ablation"}, [a, b])
 
     def test_timeout_stops_process(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -150,7 +150,8 @@ SearchResult AlphaBetaSearch::run(chess::Board b, const Evaluator& eval, const S
         result.tt_probes = ctx.probes; result.tt_hits = ctx.hits;
         result.tt_cutoffs = ctx.cutoffs; result.tt_stores = ctx.stores;
         result.pv_order_hits = ctx.pv_order_hits; result.tt_order_hits = ctx.tt_order_hits;
-        result.elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - ctx.start);
+        result.elapsed_us = std::chrono::duration_cast<std::chrono::microseconds>(Clock::now() - ctx.start);
+        result.elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(result.elapsed_us);
         if (observer) observer(result);
         if (std::abs(score) >= mate_score - depth) break;
     }
@@ -159,7 +160,8 @@ SearchResult AlphaBetaSearch::run(chess::Board b, const Evaluator& eval, const S
     result.tt_probes = ctx.probes; result.tt_hits = ctx.hits;
     result.tt_cutoffs = ctx.cutoffs; result.tt_stores = ctx.stores;
     result.pv_order_hits = ctx.pv_order_hits; result.tt_order_hits = ctx.tt_order_hits;
-    result.elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - ctx.start);
+    result.elapsed_us = std::chrono::duration_cast<std::chrono::microseconds>(Clock::now() - ctx.start);
+    result.elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(result.elapsed_us);
     return result;
 }
 std::uint64_t perft(chess::Board& b, int depth) {

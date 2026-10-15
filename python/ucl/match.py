@@ -21,7 +21,7 @@ def executable(value, root):
 
 def validate_config(c):
     required = {"version", "seed", "engines", "rounds", "games", "concurrency", "tc", "maxmoves", "timeout_seconds"}
-    if not required <= c.keys() or c.keys() - required - {"depth", "nodes", "openings"}:
+    if not required <= c.keys() or c.keys() - required - {"depth", "nodes", "openings", "comparison"}:
         raise ValueError("missing or unknown match configuration fields")
     if c["version"] != 1 or len(c["engines"]) != 2 or c["games"] != 2:
         raise ValueError("version 1 requires two engines and color-swapped game pairs")
@@ -32,6 +32,8 @@ def validate_config(c):
         raise ValueError("seed must be a nonnegative 31-bit integer")
     if not isinstance(c["tc"], str) or not c["tc"]:
         raise ValueError("tc must be a fastchess time-control string")
+    if c.get("comparison", "smoke") not in ("smoke", "ablation", "revision"):
+        raise ValueError("comparison must be smoke/ablation/revision")
     names = []
     for e in c["engines"]:
         if not {"name", "path", "revision", "build", "options"} <= e.keys() or e.keys() - {"name", "path", "revision", "build", "options", "ucl_build_info"} or not all(isinstance(e[k], str) and e[k] for k in ("name", "path", "revision", "build")):
@@ -104,19 +106,10 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
         record["tools"]["fastchess"] = {"path": str(fast), "sha256": sha256(fast),
             "version": subprocess.check_output([str(fast), "--version"], text=True, timeout=10).strip()}
         for e in config["engines"]:
-            path = executable(e["path"], root)
-            paths.append(path)
-            entry = {k: v for k, v in e.items() if k != "ucl_build_info"}
-            entry.update(path=str(path), sha256=sha256(path),
-                revision=record["code"]["revision"] if e["revision"] == "HEAD" else e["revision"], build_info=None)
-            if e.get("ucl_build_info"):
-                info = json.loads(subprocess.check_output([str(path), "--build-info"], text=True, timeout=10))
-                entry["build_info"] = info
-                record["engines"].append(entry)
-                if info["revision"] != entry["revision"] or (info["dirty"] and not allow_dirty):
-                    raise ValueError("UCL binary revision/dirty state mismatch: reconfigure and rebuild after committing")
-            else:
-                record["engines"].append(entry)
+            entry = capture_engine(root, e, record["code"]["revision"], allow_dirty)
+            paths.append(Path(entry["path"]))
+            record["engines"].append(entry)
+        validate_comparison(config, record["engines"])
         opening = None
         if "openings" in config:
             original = (root / config["openings"]["path"]).resolve()
@@ -149,3 +142,31 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
         write_json(output / "record.json", record)
         (output / "report.md").write_text(markdown_report(record), encoding="utf-8")
     return record
+
+
+def validate_comparison(config, engines):
+    kind = config.get("comparison", "smoke")
+    a, b = engines
+    if kind == "revision":
+        if a["sha256"] == b["sha256"] or a["revision"] == b["revision"]:
+            raise ValueError("revision comparison requires distinct binary hashes and Git revisions")
+        if any(not e.get("build_info") or e["build_info"]["dirty"] for e in engines):
+            raise ValueError("revision comparison requires clean UCL --build-info provenance")
+        for key in ("compiler", "build_type", "flags"):
+            if a["build_info"][key] != b["build_info"][key]:
+                raise ValueError(f"revision comparison build control differs: {key}")
+    if kind == "ablation" and (a["sha256"] != b["sha256"] or a["options"] == b["options"]):
+        raise ValueError("ablation requires the same binary with different explicit options")
+
+
+def capture_engine(root, e, code_revision, allow_dirty=False):
+    path = executable(e["path"], Path(root))
+    entry = {k: v for k, v in e.items() if k != "ucl_build_info"}
+    entry.update(path=str(path), sha256=sha256(path),
+                 revision=code_revision if e["revision"] == "HEAD" else e["revision"], build_info=None)
+    if e.get("ucl_build_info"):
+        info = json.loads(subprocess.check_output([str(path), "--build-info"], text=True, timeout=10))
+        entry["build_info"] = info
+        if info["revision"] != entry["revision"] or (info["dirty"] and not allow_dirty):
+            raise ValueError("UCL binary revision/dirty state mismatch: reconfigure and rebuild after committing")
+    return entry

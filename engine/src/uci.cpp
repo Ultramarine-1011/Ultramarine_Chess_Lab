@@ -120,6 +120,14 @@ int run_uci(std::istream& in, std::ostream& out) {
                             std::unique_lock lock(wait_mutex);
                             wake.wait(lock, token, [] { return false; });
                         }
+                        std::ostringstream stats;
+                        stats << "info string ucl_stats {\"depth\":" << result.depth << ",\"score_cp\":" << result.score
+                              << ",\"nodes\":" << result.nodes << ",\"qnodes\":" << result.qnodes
+                              << ",\"tt_probes\":" << result.tt_probes << ",\"tt_hits\":" << result.tt_hits
+                              << ",\"tt_cutoffs\":" << result.tt_cutoffs << ",\"tt_stores\":" << result.tt_stores
+                              << ",\"pv_order_hits\":" << result.pv_order_hits << ",\"tt_order_hits\":" << result.tt_order_hits
+                              << ",\"elapsed_us\":" << result.elapsed_us.count() << "}";
+                        emit(stats.str());
                         emit("bestmove " + (result.best_move ? chess::uci::moveToUci(*result.best_move) : "0000"));
                     } catch (const std::exception& e) { emit(std::string("info string search error: ") + e.what()); emit("bestmove 0000"); }
                 });

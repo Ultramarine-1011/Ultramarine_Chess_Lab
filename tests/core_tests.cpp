@@ -233,6 +233,41 @@ void searches() {
         auto a = ordered.run(chess::Board(), eval, {.depth = 20, .nodes = cap});
         check(a.nodes <= cap && a.best_move, "all optimizations strict node cap");
     }
+    struct ObserveTactics : ucl::Evaluator {
+        const ucl::Evaluator& base;
+        mutable bool ep = false, promotion = false;
+        explicit ObserveTactics(const ucl::Evaluator& e) : base(e) {}
+        int evaluate(const chess::Board& board) const override {
+            ep = ep || (board.at(chess::Square::SQ_D6) == chess::Piece(chess::PieceType::PAWN, chess::Color::WHITE) &&
+                        board.at(chess::Square::SQ_D5) == chess::Piece::NONE);
+            promotion = promotion || !board.pieces(chess::PieceType::QUEEN, chess::Color::BLACK).empty();
+            return base.evaluate(board);
+        }
+        std::string_view name() const override { return "observe-tactics"; }
+    } tactics(eval);
+    qs.run(chess::Board("7k/3p4/8/4P3/8/8/8/K7 b - - 0 1"), tactics, {.depth = 1});
+    check(tactics.ep, "QS includes en passant at horizon");
+    qs.run(chess::Board("7k/8/8/8/8/8/p7/7K w - - 0 1"), tactics, {.depth = 1});
+    check(tactics.promotion, "QS includes quiet promotions at horizon");
+    for (bool tt : {false, true}) for (bool pv : {false, true}) {
+        ucl::AlphaBetaSearch mate_search({.quiescence = false, .tt = tt, .pv_ordering = pv, .hash_mb = 1});
+        auto two = mate_search.run(chess::Board("1Q6/8/8/8/8/3K4/8/k7 w - - 0 1"), eval, {.depth = 4});
+        check(two.score == ucl::mate_score - 3, "mate in two distance independent of cache/order");
+        auto board = chess::Board("1Q6/8/8/8/8/3K4/8/k7 w - - 0 1");
+        for (auto m : two.pv) { check(board.isLegal(m), "mate distance PV legal"); board.makeMove(m); }
+        check(two.pv.size() <= 3 && (two.pv.size() < 3 || board.isGameOver().second == chess::GameResult::LOSE), "mate PV terminal or cached prefix");
+    }
+    std::stop_source default_stop;
+    auto stopped_default = ordered.run(chess::Board(), eval, {.depth = 20}, default_stop.get_token(),
+        [&](const auto& completed) { if (completed.depth == 2) default_stop.request_stop(); });
+    check(stopped_default.depth == 2 && stopped_default.best_move, "TT/PV search interruption retains complete iteration");
+    auto fresh_default = ordered.run(chess::Board(), eval, {.depth = 3});
+    auto repeat_default = ordered.run(chess::Board(), eval, {.depth = 3});
+    check(fresh_default.score == repeat_default.score && fresh_default.nodes == repeat_default.nodes, "interrupted TT never leaks between runs");
+    chess::Board repeated;
+    std::string repetition_error;
+    check(ucl::parse_position(words("position startpos moves g1f3 g8f6 f3g1 f6g8 g1f3 g8f6 f3g1 f6g8"), repeated, repetition_error), repetition_error);
+    check(ordered.run(repeated, eval, {.depth = 3}).depth == 0, "all optimizations retain threefold history");
     std::stop_source stop; stop.request_stop();
     r = search.run(chess::Board(), eval, {.depth = 20}, stop.get_token());
     check(r.nodes == 0 && r.best_move && r.depth == 0, "immediate stop");

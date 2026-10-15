@@ -31,6 +31,7 @@ struct SearchResult {
     std::uint64_t tt_probes = 0, tt_hits = 0, tt_cutoffs = 0, tt_stores = 0;
     std::uint64_t pv_order_hits = 0, tt_order_hits = 0;
     std::chrono::milliseconds elapsed{0};
+    std::chrono::microseconds elapsed_us{0};
     std::vector<chess::Move> pv;
 };
 using SearchObserver = std::function<void(const SearchResult&)>;

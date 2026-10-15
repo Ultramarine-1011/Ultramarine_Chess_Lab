@@ -1,0 +1,430 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ucl.local/schemas/benchmark-v1.schema.json",
+  "title": "UCL search benchmark v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "status",
+    "started_at",
+    "finished_at",
+    "code",
+    "parameters",
+    "seed",
+    "hardware",
+    "tools",
+    "engines",
+    "artifacts",
+    "error",
+    "rows",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "kind": {
+      "const": "benchmark"
+    },
+    "status": {
+      "enum": [
+        "running",
+        "completed",
+        "failed"
+      ]
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finished_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "code": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "revision",
+        "dirty"
+      ],
+      "properties": {
+        "revision": {
+          "$ref": "#/$defs/revision"
+        },
+        "dirty": {
+          "type": "boolean"
+        }
+      }
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "hardware": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "os",
+        "architecture",
+        "cpu",
+        "logical_cpus",
+        "memory_bytes",
+        "python",
+        "packages"
+      ],
+      "properties": {
+        "os": {
+          "type": "string"
+        },
+        "architecture": {
+          "type": "string"
+        },
+        "cpu": {
+          "type": "string"
+        },
+        "logical_cpus": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "memory_bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "python": {
+          "type": "string"
+        },
+        "packages": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tools": {
+      "type": "object"
+    },
+    "engines": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "path",
+          "revision",
+          "build",
+          "options",
+          "sha256"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string"
+          },
+          "revision": {
+            "$ref": "#/$defs/revision"
+          },
+          "build": {
+            "type": "string",
+            "minLength": 1
+          },
+          "options": {
+            "type": "object"
+          },
+          "sha256": {
+            "$ref": "#/$defs/hash"
+          },
+          "build_info": {
+            "type": [
+              "object",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "sha256",
+          "bytes"
+        ],
+        "properties": {
+          "sha256": {
+            "$ref": "#/$defs/hash"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "engine",
+          "position",
+          "repeat",
+          "limit",
+          "depth",
+          "score_cp",
+          "pv",
+          "move",
+          "nodes",
+          "wall_ns",
+          "elapsed_us",
+          "counter_scope",
+          "nps",
+          "tactical_pass",
+          "qnodes",
+          "tt_probes",
+          "tt_hits",
+          "tt_cutoffs",
+          "tt_stores",
+          "pv_order_hits",
+          "tt_order_hits"
+        ],
+        "properties": {
+          "repeat": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "depth": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "nodes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "wall_ns": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "elapsed_us": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "qnodes": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "tt_probes": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "tt_hits": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "tt_cutoffs": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "tt_stores": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "pv_order_hits": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "tt_order_hits": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "engine": {
+            "type": "string",
+            "minLength": 1
+          },
+          "position": {
+            "type": "string",
+            "minLength": 1
+          },
+          "score_cp": {
+            "type": "integer",
+            "minimum": -30000,
+            "maximum": 30000
+          },
+          "pv": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "move": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tactical_pass": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "nps": {
+            "type": "number",
+            "minimum": 0
+          },
+          "counter_scope": {
+            "enum": [
+              "final",
+              "last_completed_iteration"
+            ]
+          },
+          "limit": {
+            "oneOf": [
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "depth"
+                ],
+                "properties": {
+                  "depth": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "nodes"
+                ],
+                "properties": {
+                  "nodes": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "summary": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "$defs": {
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "finished_at": {
+            "type": "string"
+          },
+          "error": {
+            "type": "null"
+          },
+          "engines": {
+            "minItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "failed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "finished_at": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

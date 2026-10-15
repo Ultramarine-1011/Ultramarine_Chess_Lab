@@ -115,3 +115,25 @@ Windows 实验主机上测试硬件性能或长时间负载。
   相同 QS 语义下分数/完成深度一致，逐着验证 PV。排序关闭无提示使用；TT 关闭
   旧 PV 仍可用；默认组合确实使用 PV/TT 提示。各节点预算限制保持严格。
 - UCI 黑盒同样遍历 8 种组合、Hash=1，核对分数/PV，拒绝非法布尔值/Hash。
+
+## 基准/版本实验工具阶段
+
+- 测试版本：`53f7477` + dirty 工具、统计输出和边界测试修改。
+- 增加 benchmark-v1 Schema、冻结 10 局面、全 8 组合控制配置、重复测量中位数；
+  保存最终统计/内部微秒时间、含管道往返时间和完整 UCI transcript，支持完整性验证。
+- 历史构建：`.venv/bin/python scripts/build_revision.py e603d431a721c3f883bb1843059d122ef6bd4de5`
+  通过，独立 clean worktree 构建，manifest/build.log 保留于 `.tools/engines/<SHA>/`。
+- 增加 revision/ablation 身份保护（不同版本/二进制、相同编译控制，或同二进制不同
+  开关）、manifest 配置生成工具和 Windows 长实验准备程序。未运行 Windows 主机实验。
+- 诊断 `.tools/r2-diagnostic` 被过期二进制版本检查拦截（预期保护生效）。重新
+  configure/build 后 `.tools/r2-diagnostic-2`（dirty，仅诊断）160 查询成功并通过 validate。
+  正式测量将在干净提交重做，诊断数值不作为交付结论。
+- `cmake --build --preset release --parallel 4`、`build/release/ucl_tests search`：
+  新增 EP/安静升变 horizon、mate-in-two 距离、TT/PV stop/再次搜索历史隔离覆盖；
+  `ctest --preset release`：5/5 通过（UCI 8、Python 实验 7 unittest）。
+- `cmake --preset debug -DPython3_EXECUTABLE="$PWD/.venv/bin/python"`、
+  `cmake --build --preset debug --parallel 4`、`ctest --preset debug`：5/5 通过。
+- `cmake --preset sanitize -DPython3_EXECUTABLE="$PWD/.venv/bin/python"`、
+  `cmake --build --preset sanitize --parallel 4`、`ctest --preset sanitize`：5/5 通过，
+  无 ASan/UBSan 诊断。扩展搜索矩阵的 CTest timeout 调为 180s，避免慢速 Debug 主机误报。
+- 尚待：干净版本最终全套验证、正式消融/版本基准与轻量赛、推送及双平台 CI。
