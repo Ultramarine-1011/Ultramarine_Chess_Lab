@@ -1,0 +1,96 @@
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "1"]
+[White "OriginalFull14"]
+[Black "Handcrafted"]
+[Result "1/2-1/2"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rnbq1rk1/ppp2pbp/3p1np1/4p3/8/3P1NPP/PPP1PPB1/RNBQ1RK1 w - - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-16T00:48:10 +0800"]
+[GameEndTime "2026-10-16T00:48:10 +0800"]
+[PlyCount "2"]
+[Termination "adjudication"]
+[TimeControl "1+0.01"]
+
+1. c3 {+0.52/3 0.038s, tl=0.982s, latency=0.031s, n=7493, nps=1070428}
+Nc6 {+0.02/4 0.039s, tl=0.981s, latency=0.023s, n=24736, nps=1546000, Draw by adjudication}
+1/2-1/2
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "1"]
+[White "Handcrafted"]
+[Black "OriginalFull14"]
+[Result "1/2-1/2"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rnbq1rk1/ppp2pbp/3p1np1/4p3/8/3P1NPP/PPP1PPB1/RNBQ1RK1 w - - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-16T00:48:10 +0800"]
+[GameEndTime "2026-10-16T00:48:10 +0800"]
+[PlyCount "2"]
+[Termination "adjudication"]
+[TimeControl "1+0.01"]
+
+1. Nc3 {-0.05/4 0.038s, tl=0.982s, latency=0.015s, n=36324, nps=1579304}
+h6 {-0.34/4 0.038s, tl=0.982s, latency=0.009s, n=36168, nps=1247172, Draw by adjudication}
+1/2-1/2
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "2"]
+[White "OriginalFull14"]
+[Black "Handcrafted"]
+[Result "1/2-1/2"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rn1qk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N1Bb2/PPP2PPP/R2QK2R w KQkq - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-16T00:48:10 +0800"]
+[GameEndTime "2026-10-16T00:48:10 +0800"]
+[PlyCount "2"]
+[Termination "adjudication"]
+[TimeControl "1+0.01"]
+
+1. Qxf3 {+1.27/4 0.038s, tl=0.982s, latency=0.017s, n=25836, nps=1230285}
+Nf6 {-0.73/3 0.038s, tl=0.982s, latency=0.032s, n=7225, nps=1204166, Draw by adjudication}
+1/2-1/2
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "2"]
+[White "Handcrafted"]
+[Black "OriginalFull14"]
+[Result "1/2-1/2"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rn1qk1nr/pp2ppbp/2pp2p1/8/2BPP3/2N1Bb2/PPP2PPP/R2QK2R w KQkq - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-16T00:48:10 +0800"]
+[GameEndTime "2026-10-16T00:48:10 +0800"]
+[PlyCount "2"]
+[Termination "adjudication"]
+[TimeControl "1+0.01"]
+
+1. Qxf3 {+0.73/4 0.038s, tl=0.982s, latency=0.025s, n=23122, nps=1778615}
+e6 {-1.65/4 0.038s, tl=0.982s, latency=0.012s, n=32705, nps=1257884, Draw by adjudication}
+1/2-1/2
+

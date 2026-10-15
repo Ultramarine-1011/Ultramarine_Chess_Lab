@@ -844,3 +844,22 @@ R5.3配置：三个O-P/P-O/O-P交替静态块，每块复用7次×100000调用×
 下一commit将全部文件封存；正式运行只在该commit clean根目录启动，二进制仍固定原/0cf。
 节点组实际node cap而非时钟代替；终局/已证mate等提前停止逐条分类，任何未分类则阻断分析。
 正式性能/1600局均尚未运行，先commit/push，再clean configure/build、执行性能研究。
+
+### R5.3 Windows正式性能研究验收
+
+执行97621be5b2b23ff6c71b1e5d22dfad2c3366cd91 clean runner；重新configure/build退出0。
+Original与Optimized固定clean历史binary/同MSVC flags，正式实验包r5-performance-v1 PASS。
+完整450搜索查询、六个独立benchmark-v1静态包均经现有schema/artifacts/统计重算validate；
+原/优化全部对应search字段精确相等，保留完整PV/score/qnodes/TT/时间/每次重复原日志。
+静态三个O-P/P-O/O-P块：原/优比1.4673、1.4244、1.4587；平均逐局面中位ns/call
+Original159.4984（同块H47.4386），Optimized110.0119（同块H49.2704）。
+仅Windows本批测量：静态ns减少约31.03%，不可混合R4 Mac原始计时。
+depth4相同Full14节点195889，wall原161.5442ms/优146.5890ms；
+nodes50000组原169.8166ms/优158.3449ms，对应树完全相同；提前mate/终局使
+十局面汇总节点300974，并非每局面都耗尽上限。Handcrafted树不同，不能归因为纯推理成本。
+接电100%、Turbo、CPU/OS/系统型号/背景进程与每静态块前后快照完整保存；温度仍拒绝访问。
+真实多开局调度预检4局验证Round1/2均先首引擎白再交换，完整trace保留；仅调度smoke。
+一次只读Python内联打印因PowerShell引号SyntaxError退出1，不影响任何比赛/统计，
+改用Select-String实际PGN headers确认调度，未重跑已完成实验。
+验收前Release6/6退出0；R5.3 PASS，速度改善假设在本批支持；棋力改善尚未测量。
+下一步按冻结A→B→C→D运行，正式目录每组只创建一次；中途仅观察进度，不按胜负改协议。

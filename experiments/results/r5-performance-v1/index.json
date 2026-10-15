@@ -1,0 +1,1306 @@
+{
+  "kind": "r5-performance",
+  "code": {
+    "revision": "97621be5b2b23ff6c71b1e5d22dfad2c3366cd91",
+    "dirty": false
+  },
+  "started_at": "2026-10-15T16:47:02.891570+00:00",
+  "status": "PASS",
+  "error": null,
+  "summary": {
+    "static_blocks": [
+      {
+        "block": 0,
+        "order": "OP",
+        "O": {
+          "positions": [
+            {
+              "position": "start",
+              "handcrafted_ns_per_call": 62.846,
+              "linear_ns_per_call": 248.327
+            },
+            {
+              "position": "kiwipete",
+              "handcrafted_ns_per_call": 64.63,
+              "linear_ns_per_call": 232.505
+            },
+            {
+              "position": "rook-ending",
+              "handcrafted_ns_per_call": 45.85,
+              "linear_ns_per_call": 165.279
+            },
+            {
+              "position": "poisoned-pawn",
+              "handcrafted_ns_per_call": 42.555,
+              "linear_ns_per_call": 136.392
+            },
+            {
+              "position": "mate-one",
+              "handcrafted_ns_per_call": 42.029,
+              "linear_ns_per_call": 127.317
+            },
+            {
+              "position": "promotion-mate",
+              "handcrafted_ns_per_call": 42.734,
+              "linear_ns_per_call": 133.011
+            },
+            {
+              "position": "check-evasion",
+              "handcrafted_ns_per_call": 43.896,
+              "linear_ns_per_call": 126.321
+            },
+            {
+              "position": "en-passant",
+              "handcrafted_ns_per_call": 43.393,
+              "linear_ns_per_call": 133.003
+            },
+            {
+              "position": "near-fifty",
+              "handcrafted_ns_per_call": 45.871,
+              "linear_ns_per_call": 165.238
+            },
+            {
+              "position": "stalemate",
+              "handcrafted_ns_per_call": 42.114,
+              "linear_ns_per_call": 127.11
+            }
+          ],
+          "mean_position_median_handcrafted_ns": 47.5918,
+          "mean_position_median_linear_ns": 159.4503
+        },
+        "P": {
+          "positions": [
+            {
+              "position": "start",
+              "handcrafted_ns_per_call": 63.336,
+              "linear_ns_per_call": 152.872
+            },
+            {
+              "position": "kiwipete",
+              "handcrafted_ns_per_call": 64.565,
+              "linear_ns_per_call": 151.129
+            },
+            {
+              "position": "rook-ending",
+              "handcrafted_ns_per_call": 45.03,
+              "linear_ns_per_call": 116.213
+            },
+            {
+              "position": "poisoned-pawn",
+              "handcrafted_ns_per_call": 41.963,
+              "linear_ns_per_call": 100.88
+            },
+            {
+              "position": "mate-one",
+              "handcrafted_ns_per_call": 41.529,
+              "linear_ns_per_call": 89.986
+            },
+            {
+              "position": "promotion-mate",
+              "handcrafted_ns_per_call": 41.555,
+              "linear_ns_per_call": 94.136
+            },
+            {
+              "position": "check-evasion",
+              "handcrafted_ns_per_call": 41.54,
+              "linear_ns_per_call": 82.905
+            },
+            {
+              "position": "en-passant",
+              "handcrafted_ns_per_call": 42.218,
+              "linear_ns_per_call": 92.127
+            },
+            {
+              "position": "near-fifty",
+              "handcrafted_ns_per_call": 44.926,
+              "linear_ns_per_call": 116.263
+            },
+            {
+              "position": "stalemate",
+              "handcrafted_ns_per_call": 41.605,
+              "linear_ns_per_call": 90.154
+            }
+          ],
+          "mean_position_median_handcrafted_ns": 46.8267,
+          "mean_position_median_linear_ns": 108.6665
+        },
+        "original_over_optimized_ratio": 1.4673362995955515
+      },
+      {
+        "block": 1,
+        "order": "PO",
+        "P": {
+          "positions": [
+            {
+              "position": "start",
+              "handcrafted_ns_per_call": 64.163,
+              "linear_ns_per_call": 153.36
+            },
+            {
+              "position": "kiwipete",
+              "handcrafted_ns_per_call": 64.49,
+              "linear_ns_per_call": 151.153
+            },
+            {
+              "position": "rook-ending",
+              "handcrafted_ns_per_call": 45.182,
+              "linear_ns_per_call": 116.473
+            },
+            {
+              "position": "poisoned-pawn",
+              "handcrafted_ns_per_call": 42.111,
+              "linear_ns_per_call": 101.399
+            },
+            {
+              "position": "mate-one",
+              "handcrafted_ns_per_call": 41.746,
+              "linear_ns_per_call": 90.267
+            },
+            {
+              "position": "promotion-mate",
+              "handcrafted_ns_per_call": 41.67,
+              "linear_ns_per_call": 94.433
+            },
+            {
+              "position": "check-evasion",
+              "handcrafted_ns_per_call": 41.685,
+              "linear_ns_per_call": 83.201
+            },
+            {
+              "position": "en-passant",
+              "handcrafted_ns_per_call": 42.565,
+              "linear_ns_per_call": 92.511
+            },
+            {
+              "position": "near-fifty",
+              "handcrafted_ns_per_call": 49.545,
+              "linear_ns_per_call": 126.164
+            },
+            {
+              "position": "stalemate",
+              "handcrafted_ns_per_call": 52.175,
+              "linear_ns_per_call": 116.304
+            }
+          ],
+          "mean_position_median_handcrafted_ns": 48.5332,
+          "mean_position_median_linear_ns": 112.5265
+        },
+        "O": {
+          "positions": [
+            {
+              "position": "start",
+              "handcrafted_ns_per_call": 65.518,
+              "linear_ns_per_call": 261.601
+            },
+            {
+              "position": "kiwipete",
+              "handcrafted_ns_per_call": 63.912,
+              "linear_ns_per_call": 232.565
+            },
+            {
+              "position": "rook-ending",
+              "handcrafted_ns_per_call": 45.015,
+              "linear_ns_per_call": 164.05
+            },
+            {
+              "position": "poisoned-pawn",
+              "handcrafted_ns_per_call": 41.885,
+              "linear_ns_per_call": 136.799
+            },
+            {
+              "position": "mate-one",
+              "handcrafted_ns_per_call": 41.422,
+              "linear_ns_per_call": 127.933
+            },
+            {
+              "position": "promotion-mate",
+              "handcrafted_ns_per_call": 42.22,
+              "linear_ns_per_call": 132.905
+            },
+            {
+              "position": "check-evasion",
+              "handcrafted_ns_per_call": 41.41,
+              "linear_ns_per_call": 120.86
+            },
+            {
+              "position": "en-passant",
+              "handcrafted_ns_per_call": 43.074,
+              "linear_ns_per_call": 133.769
+            },
+            {
+              "position": "near-fifty",
+              "handcrafted_ns_per_call": 45.013,
+              "linear_ns_per_call": 164.868
+            },
+            {
+              "position": "stalemate",
+              "handcrafted_ns_per_call": 41.475,
+              "linear_ns_per_call": 127.424
+            }
+          ],
+          "mean_position_median_handcrafted_ns": 47.0944,
+          "mean_position_median_linear_ns": 160.2774
+        },
+        "original_over_optimized_ratio": 1.4243524858588865
+      },
+      {
+        "block": 2,
+        "order": "OP",
+        "O": {
+          "positions": [
+            {
+              "position": "start",
+              "handcrafted_ns_per_call": 63.258,
+              "linear_ns_per_call": 247.99
+            },
+            {
+              "position": "kiwipete",
+              "handcrafted_ns_per_call": 64.833,
+              "linear_ns_per_call": 231.696
+            },
+            {
+              "position": "rook-ending",
+              "handcrafted_ns_per_call": 45.997,
+              "linear_ns_per_call": 165.366
+            },
+            {
+              "position": "poisoned-pawn",
+              "handcrafted_ns_per_call": 42.903,
+              "linear_ns_per_call": 137.198
+            },
+            {
+              "position": "mate-one",
+              "handcrafted_ns_per_call": 42.302,
+              "linear_ns_per_call": 127.474
+            },
+            {
+              "position": "promotion-mate",
+              "handcrafted_ns_per_call": 42.965,
+              "linear_ns_per_call": 132.853
+            },
+            {
+              "position": "check-evasion",
+              "handcrafted_ns_per_call": 42.188,
+              "linear_ns_per_call": 119.943
+            },
+            {
+              "position": "en-passant",
+              "handcrafted_ns_per_call": 43.6,
+              "linear_ns_per_call": 132.681
+            },
+            {
+              "position": "near-fifty",
+              "handcrafted_ns_per_call": 45.865,
+              "linear_ns_per_call": 165.46
+            },
+            {
+              "position": "stalemate",
+              "handcrafted_ns_per_call": 42.386,
+              "linear_ns_per_call": 127.014
+            }
+          ],
+          "mean_position_median_handcrafted_ns": 47.6297,
+          "mean_position_median_linear_ns": 158.7675
+        },
+        "P": {
+          "positions": [
+            {
+              "position": "start",
+              "handcrafted_ns_per_call": 67.195,
+              "linear_ns_per_call": 153.892
+            },
+            {
+              "position": "kiwipete",
+              "handcrafted_ns_per_call": 68.808,
+              "linear_ns_per_call": 151.027
+            },
+            {
+              "position": "rook-ending",
+              "handcrafted_ns_per_call": 49.722,
+              "linear_ns_per_call": 116.024
+            },
+            {
+              "position": "poisoned-pawn",
+              "handcrafted_ns_per_call": 48.369,
+              "linear_ns_per_call": 100.817
+            },
+            {
+              "position": "mate-one",
+              "handcrafted_ns_per_call": 48.343,
+              "linear_ns_per_call": 90.084
+            },
+            {
+              "position": "promotion-mate",
+              "handcrafted_ns_per_call": 48.286,
+              "linear_ns_per_call": 93.999
+            },
+            {
+              "position": "check-evasion",
+              "handcrafted_ns_per_call": 48.119,
+              "linear_ns_per_call": 82.889
+            },
+            {
+              "position": "en-passant",
+              "handcrafted_ns_per_call": 47.9,
+              "linear_ns_per_call": 92.548
+            },
+            {
+              "position": "near-fifty",
+              "handcrafted_ns_per_call": 49.915,
+              "linear_ns_per_call": 116.643
+            },
+            {
+              "position": "stalemate",
+              "handcrafted_ns_per_call": 47.857,
+              "linear_ns_per_call": 90.503
+            }
+          ],
+          "mean_position_median_handcrafted_ns": 52.4514,
+          "mean_position_median_linear_ns": 108.8426
+        },
+        "original_over_optimized_ratio": 1.4586889692087475
+      }
+    ],
+    "static": {
+      "O": {
+        "mean_of_block_position_medians_ns": 159.4984,
+        "handcrafted_mean_ns": 47.438633333333335
+      },
+      "P": {
+        "mean_of_block_position_medians_ns": 110.01186666666666,
+        "handcrafted_mean_ns": 49.27043333333334
+      }
+    },
+    "search": [
+      {
+        "engine": "Handcrafted",
+        "limit": {
+          "depth": 3
+        },
+        "positions": 10,
+        "median_nodes_sum": 82410,
+        "median_wall_ms_sum": 78.2196,
+        "wall_nps": 1053572.2504333952,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 3,
+        "tt_hits_sum": 670,
+        "tt_cutoffs_sum": 0,
+        "per_position_median_sums": {
+          "qnodes": 81941,
+          "tt_probes": 469,
+          "tt_hits": 134,
+          "tt_cutoffs": 0,
+          "tt_stores": 469,
+          "elapsed_us": 61090
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "engine": "Handcrafted",
+        "limit": {
+          "depth": 4
+        },
+        "positions": 10,
+        "median_nodes_sum": 266968,
+        "median_wall_ms_sum": 153.7005,
+        "wall_nps": 1736936.4445789051,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 4,
+        "tt_hits_sum": 6815,
+        "tt_cutoffs_sum": 525,
+        "per_position_median_sums": {
+          "qnodes": 262517,
+          "tt_probes": 4353,
+          "tt_hits": 1363,
+          "tt_cutoffs": 105,
+          "tt_stores": 4247,
+          "elapsed_us": 136540
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "engine": "Handcrafted",
+        "limit": {
+          "nodes": 50000
+        },
+        "positions": 10,
+        "median_nodes_sum": 300994,
+        "median_wall_ms_sum": 128.4636,
+        "wall_nps": 2343029.4651558883,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 9,
+        "tt_hits_sum": 153565,
+        "tt_cutoffs_sum": 13415,
+        "per_position_median_sums": {
+          "qnodes": 253903,
+          "tt_probes": 46620,
+          "tt_hits": 30713,
+          "tt_cutoffs": 2683,
+          "tt_stores": 43775,
+          "elapsed_us": 111580
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          9,
+          9,
+          9,
+          9,
+          9
+        ]
+      },
+      {
+        "engine": "OptimizedFull14",
+        "limit": {
+          "depth": 3
+        },
+        "positions": 10,
+        "median_nodes_sum": 84320,
+        "median_wall_ms_sum": 88.8077,
+        "wall_nps": 949467.219621722,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 3,
+        "tt_hits_sum": 670,
+        "tt_cutoffs_sum": 0,
+        "per_position_median_sums": {
+          "qnodes": 83799,
+          "tt_probes": 521,
+          "tt_hits": 134,
+          "tt_cutoffs": 0,
+          "tt_stores": 521,
+          "elapsed_us": 72692
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "engine": "OptimizedFull14",
+        "limit": {
+          "depth": 4
+        },
+        "positions": 10,
+        "median_nodes_sum": 195889,
+        "median_wall_ms_sum": 146.589,
+        "wall_nps": 1336314.457428593,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 4,
+        "tt_hits_sum": 8790,
+        "tt_cutoffs_sum": 1200,
+        "per_position_median_sums": {
+          "qnodes": 189565,
+          "tt_probes": 6226,
+          "tt_hits": 1758,
+          "tt_cutoffs": 240,
+          "tt_stores": 5984,
+          "elapsed_us": 129093
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "engine": "OptimizedFull14",
+        "limit": {
+          "nodes": 50000
+        },
+        "positions": 10,
+        "median_nodes_sum": 300974,
+        "median_wall_ms_sum": 158.3449,
+        "wall_nps": 1900749.5662948412,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 9,
+        "tt_hits_sum": 132255,
+        "tt_cutoffs_sum": 8150,
+        "per_position_median_sums": {
+          "qnodes": 257486,
+          "tt_probes": 43027,
+          "tt_hits": 26451,
+          "tt_cutoffs": 1630,
+          "tt_stores": 41264,
+          "elapsed_us": 140009
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          9,
+          9,
+          9,
+          9,
+          9
+        ]
+      },
+      {
+        "engine": "OriginalFull14",
+        "limit": {
+          "depth": 3
+        },
+        "positions": 10,
+        "median_nodes_sum": 84320,
+        "median_wall_ms_sum": 95.7519,
+        "wall_nps": 880609.1576250707,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 3,
+        "tt_hits_sum": 670,
+        "tt_cutoffs_sum": 0,
+        "per_position_median_sums": {
+          "qnodes": 83799,
+          "tt_probes": 521,
+          "tt_hits": 134,
+          "tt_cutoffs": 0,
+          "tt_stores": 521,
+          "elapsed_us": 78154
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "engine": "OriginalFull14",
+        "limit": {
+          "depth": 4
+        },
+        "positions": 10,
+        "median_nodes_sum": 195889,
+        "median_wall_ms_sum": 161.5442,
+        "wall_nps": 1212603.1141941338,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 4,
+        "tt_hits_sum": 8790,
+        "tt_cutoffs_sum": 1200,
+        "per_position_median_sums": {
+          "qnodes": 189565,
+          "tt_probes": 6226,
+          "tt_hits": 1758,
+          "tt_cutoffs": 240,
+          "tt_stores": 5984,
+          "elapsed_us": 145410
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "engine": "OriginalFull14",
+        "limit": {
+          "nodes": 50000
+        },
+        "positions": 10,
+        "median_nodes_sum": 300974,
+        "median_wall_ms_sum": 169.8166,
+        "wall_nps": 1772347.3441347901,
+        "tactical_passes": 6,
+        "tactical_total": 6,
+        "depth_min": 0,
+        "depth_max": 9,
+        "tt_hits_sum": 132255,
+        "tt_cutoffs_sum": 8150,
+        "per_position_median_sums": {
+          "qnodes": 257486,
+          "tt_probes": 43027,
+          "tt_hits": 26451,
+          "tt_cutoffs": 1630,
+          "tt_stores": 41264,
+          "elapsed_us": 152663
+        },
+        "completed_depths": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5,
+          5,
+          5,
+          5,
+          5,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          9,
+          9,
+          9,
+          9,
+          9
+        ]
+      }
+    ],
+    "full14_search_semantics_equal": true,
+    "search_queries": 450
+  },
+  "finished_at": "2026-10-15T16:47:56.800910+00:00",
+  "files": {
+    "host-after.json": {
+      "sha256": "59c9341eb959733957ad1b27b6ebe3724bd91955e7e6295a42a1f6db65c8f4b9",
+      "bytes": 5980
+    },
+    "host-before.json": {
+      "sha256": "aaf006f8d83e5fa625fa0e0b1ab815275fec9af0797c4a900d0e47eb27f5fb83",
+      "bytes": 5978
+    },
+    "host-block-0.json": {
+      "sha256": "6be9e55a77c44510c95835bd17050cb0b8693eaee6d4a9517ee6ec39cf1ce734",
+      "bytes": 5979
+    },
+    "host-block-1.json": {
+      "sha256": "6b1794c798fefe790a57fa72983671b72dd9e0e39135297cf80c838cee879519",
+      "bytes": 5977
+    },
+    "host-block-2.json": {
+      "sha256": "ac169f4ecd1100310a44275aeaa529514ac265b573828aa87e551ac159e61ca1",
+      "bytes": 5977
+    },
+    "search\\benchmark-config.json": {
+      "sha256": "4c73cadc239de9768988e67bc8239a3ef6f4b20af678c35d28853c8add1c7e72",
+      "bytes": 2017
+    },
+    "search\\measurements.json": {
+      "sha256": "c90819b8fc1f963ca18a948ef5d6a51583456eebfbbd0d644bcea5edaf13ba39",
+      "bytes": 250825
+    },
+    "search\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "search\\positions.json": {
+      "sha256": "2ebd7564549a2bb470ac65603e475a59c136af55b1d74649754bcbcfa583d205",
+      "bytes": 1344
+    },
+    "search\\record.json": {
+      "sha256": "fa32d0989230a4add2d30cce887f6f949a4e9c91b6d7c0bdedf65423e6918a5a",
+      "bytes": 287907
+    },
+    "search\\report.md": {
+      "sha256": "e9a65ba8515595f57509704275fd78c5aef38fc7d2efdb5a4d74e96aca25dd4a",
+      "bytes": 1185
+    },
+    "search\\uci.log": {
+      "sha256": "bd4a4f5837cb53bee7fd5e3da1f31ea75b873ca0e966c71be9a7b947feaaa725",
+      "bytes": 377034
+    },
+    "static-0-O\\benchmark-config.json": {
+      "sha256": "6cd9ace6a0e4e6f6217d061f268ba43ef06b24fbaf803f072964416d387e3f20",
+      "bytes": 1335
+    },
+    "static-0-O\\measurements.json": {
+      "sha256": "e7095bc761d6b5d0de1ecbb1dff912296f1af50b00795755db11c095718bd11c",
+      "bytes": 10803
+    },
+    "static-0-O\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "static-0-O\\positions.json": {
+      "sha256": "2ebd7564549a2bb470ac65603e475a59c136af55b1d74649754bcbcfa583d205",
+      "bytes": 1344
+    },
+    "static-0-O\\record.json": {
+      "sha256": "14bab908d63a22b4b51f2a7a78d3d53f5c63c63f7161d7cbbd6e4765e44b21e9",
+      "bytes": 20152
+    },
+    "static-0-O\\report.md": {
+      "sha256": "7f35156c42a857224287e3738a965ba498063f7e58c773b27865369db5542338",
+      "bytes": 972
+    },
+    "static-0-O\\static-evaluation.json": {
+      "sha256": "75e76b546e205b44919008a5ee266d81f53d993cb426efaa6111d8974b865e6a",
+      "bytes": 17706
+    },
+    "static-0-O\\uci.log": {
+      "sha256": "845ef67ecf2aaec0d08796a83d7c04e208b6bdd965fe9f08171d784fce57b2f2",
+      "bytes": 17492
+    },
+    "static-0-P\\benchmark-config.json": {
+      "sha256": "de1080b4190209dc947f30b31467dff12a07d79129bb707dc749ebd3133b3112",
+      "bytes": 1336
+    },
+    "static-0-P\\measurements.json": {
+      "sha256": "a4288035ffa6c16ed7af76b6e755f4693a6568c12c42a7b453c2418d7b30dee0",
+      "bytes": 10817
+    },
+    "static-0-P\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "static-0-P\\positions.json": {
+      "sha256": "2ebd7564549a2bb470ac65603e475a59c136af55b1d74649754bcbcfa583d205",
+      "bytes": 1344
+    },
+    "static-0-P\\record.json": {
+      "sha256": "ff230e7f9004ef6183c01261453ab630c3502937f19971a887debc712741b441",
+      "bytes": 20164
+    },
+    "static-0-P\\report.md": {
+      "sha256": "1eaa4f89d6b453c19d671bf0b7dd5a599523caec8998c1156b5bbe16763a315f",
+      "bytes": 973
+    },
+    "static-0-P\\static-evaluation.json": {
+      "sha256": "2268d0d84d6a59373d1c8600cf547762883c5f1c4b875f83526a98802134e569",
+      "bytes": 17671
+    },
+    "static-0-P\\uci.log": {
+      "sha256": "93a965f7631fbee238f3c3a2124913ae0b2019625621ca45d4a32496f1fa5778",
+      "bytes": 17491
+    },
+    "static-1-O\\benchmark-config.json": {
+      "sha256": "6cd9ace6a0e4e6f6217d061f268ba43ef06b24fbaf803f072964416d387e3f20",
+      "bytes": 1335
+    },
+    "static-1-O\\measurements.json": {
+      "sha256": "1a2ae5f1fc1f177ad31e2f31dda5b86bf4ca145682d1ae5f6fdd5bdfc65d2f8f",
+      "bytes": 10809
+    },
+    "static-1-O\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "static-1-O\\positions.json": {
+      "sha256": "2ebd7564549a2bb470ac65603e475a59c136af55b1d74649754bcbcfa583d205",
+      "bytes": 1344
+    },
+    "static-1-O\\record.json": {
+      "sha256": "6905d5bcfe0fe479572baa0616826f25447588f429fd7dc06204c5298fa838fa",
+      "bytes": 20158
+    },
+    "static-1-O\\report.md": {
+      "sha256": "1dd0ce24efa13f6590f48beb78f9adf2dfebb20bd437b7c54d8c2db64d0455b8",
+      "bytes": 972
+    },
+    "static-1-O\\static-evaluation.json": {
+      "sha256": "1157085ee60b8996808276264edae32b0f585e6233e50f6b7af107e8d49671e8",
+      "bytes": 17706
+    },
+    "static-1-O\\uci.log": {
+      "sha256": "6785d12e8e4df9ede5cb7154d7ccb8aaaf49abb2a84bbf385ef4e6ec4146a7a6",
+      "bytes": 17491
+    },
+    "static-1-P\\benchmark-config.json": {
+      "sha256": "de1080b4190209dc947f30b31467dff12a07d79129bb707dc749ebd3133b3112",
+      "bytes": 1336
+    },
+    "static-1-P\\measurements.json": {
+      "sha256": "40c90c1cf53ec355b98f9bfdb2752a54fc91217093e71da10edfb283c463fea1",
+      "bytes": 10810
+    },
+    "static-1-P\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "static-1-P\\positions.json": {
+      "sha256": "2ebd7564549a2bb470ac65603e475a59c136af55b1d74649754bcbcfa583d205",
+      "bytes": 1344
+    },
+    "static-1-P\\record.json": {
+      "sha256": "5e47ea7966aabafc4ad599d6fa038bafb460c216ef32f3dc1b2690600cc5e062",
+      "bytes": 20159
+    },
+    "static-1-P\\report.md": {
+      "sha256": "0efa117560f4d0e8d12999e11a729dbc570471124c2ac8cd9adf829b218e3ca3",
+      "bytes": 973
+    },
+    "static-1-P\\static-evaluation.json": {
+      "sha256": "48779c3b6a1fe863f4b4d4be37e2bebf278aff5b89e988ed4502d5267f7fc0b4",
+      "bytes": 17676
+    },
+    "static-1-P\\uci.log": {
+      "sha256": "b2ab24b676c885b5022d6f0622ad9a355fa91c1d3fd55984c1e9f22f2d99fdcd",
+      "bytes": 17492
+    },
+    "static-2-O\\benchmark-config.json": {
+      "sha256": "6cd9ace6a0e4e6f6217d061f268ba43ef06b24fbaf803f072964416d387e3f20",
+      "bytes": 1335
+    },
+    "static-2-O\\measurements.json": {
+      "sha256": "8e3149c580e836eaaaa3cf68fe9d70cd79a0c39ad729c07476e289097313ac7a",
+      "bytes": 10797
+    },
+    "static-2-O\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "static-2-O\\positions.json": {
+      "sha256": "2ebd7564549a2bb470ac65603e475a59c136af55b1d74649754bcbcfa583d205",
+      "bytes": 1344
+    },
+    "static-2-O\\record.json": {
+      "sha256": "30d4baa2660d207376874a5c0ca98851c82573543cd22503c9785f9983002bcf",
+      "bytes": 20146
+    },
+    "static-2-O\\report.md": {
+      "sha256": "c1ce91f34aa863647237bd32d1a9725eb372a8a050401aa3fcb3e3ee76acf363",
+      "bytes": 972
+    },
+    "static-2-O\\static-evaluation.json": {
+      "sha256": "1f119834e951db557d575c620ec98a0b8b2db8ef244eb11ca703e089610becad",
+      "bytes": 17706
+    },
+    "static-2-O\\uci.log": {
+      "sha256": "bb4479f3b600926ba48d9754b56106d9d02f6e2aa8836bdce85f28ef184c27fe",
+      "bytes": 17491
+    },
+    "static-2-P\\benchmark-config.json": {
+      "sha256": "de1080b4190209dc947f30b31467dff12a07d79129bb707dc749ebd3133b3112",
+      "bytes": 1336
+    },
+    "static-2-P\\measurements.json": {
+      "sha256": "a396057f71aa1ab6899a3a973d3878783b20fcbbdd58d7fc1bc35337282a18e4",
+      "bytes": 10815
+    },
+    "static-2-P\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "static-2-P\\positions.json": {
+      "sha256": "2ebd7564549a2bb470ac65603e475a59c136af55b1d74649754bcbcfa583d205",
+      "bytes": 1344
+    },
+    "static-2-P\\record.json": {
+      "sha256": "0d7b041b43276ee599ab1ba1ad968ac60b81b6041f61817733b3d292f7982c04",
+      "bytes": 20164
+    },
+    "static-2-P\\report.md": {
+      "sha256": "fc837306055a1b1234891b25b8041322069136306ceec36f680d7df75212a1cb",
+      "bytes": 973
+    },
+    "static-2-P\\static-evaluation.json": {
+      "sha256": "841a62edfbb194e350fb2f544adc69c6e47fd4ecef3f3f83428f2d04ed371687",
+      "bytes": 17671
+    },
+    "static-2-P\\uci.log": {
+      "sha256": "791f94ef0713bb227cf923e896d116b9e5de2d4387f83f0bcc826596eb76c235",
+      "bytes": 17491
+    }
+  }
+}
