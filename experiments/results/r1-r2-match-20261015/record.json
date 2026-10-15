@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "id": "1b8a3fe8-ea76-4b22-9ffc-42d7977b4410",
+  "kind": "match",
+  "status": "completed",
+  "started_at": "2026-10-15T07:38:38.757914+00:00",
+  "finished_at": "2026-10-15T07:38:45.146639+00:00",
+  "code": {
+    "revision": "046d5b043ec5072238e8708c9f0df8e9d57834ee",
+    "dirty": false
+  },
+  "parameters": {
+    "version": 1,
+    "comparison": "revision",
+    "seed": 20261015,
+    "engines": [
+      {
+        "name": "R2",
+        "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/046d5b043ec5072238e8708c9f0df8e9d57834ee/ucl",
+        "revision": "046d5b043ec5072238e8708c9f0df8e9d57834ee",
+        "build": "CMake Release; isolated clean Git worktree",
+        "ucl_build_info": true,
+        "options": {
+          "MoveOverhead": 0,
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16
+        }
+      },
+      {
+        "name": "R1",
+        "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/e603d431a721c3f883bb1843059d122ef6bd4de5/ucl",
+        "revision": "e603d431a721c3f883bb1843059d122ef6bd4de5",
+        "build": "CMake Release; isolated clean Git worktree",
+        "ucl_build_info": true,
+        "options": {
+          "MoveOverhead": 0
+        }
+      }
+    ],
+    "rounds": 8,
+    "games": 2,
+    "concurrency": 1,
+    "tc": "30+0.1",
+    "depth": 4,
+    "openings": {
+      "path": "experiments/openings/r2.epd",
+      "format": "epd",
+      "order": "sequential"
+    },
+    "maxmoves": 100,
+    "timeout_seconds": 600
+  },
+  "seed": 20261015,
+  "hardware": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "tools": {
+    "fastchess": {
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/bin/fastchess",
+      "sha256": "11e7b51ce96815a362096fa3b64697b381257a61af42a7d215757a3dee56b39a",
+      "version": "fastchess alpha 1.8.2 20261011-ebfd64c"
+    },
+    "command": [
+      "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/bin/fastchess",
+      "-engine",
+      "cmd=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/046d5b043ec5072238e8708c9f0df8e9d57834ee/ucl",
+      "name=R2",
+      "proto=uci",
+      "option.Hash=16",
+      "option.MoveOverhead=0",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-engine",
+      "cmd=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/e603d431a721c3f883bb1843059d122ef6bd4de5/ucl",
+      "name=R1",
+      "proto=uci",
+      "option.MoveOverhead=0",
+      "-each",
+      "tc=30+0.1",
+      "depth=4",
+      "-rounds",
+      "8",
+      "-games",
+      "2",
+      "-concurrency",
+      "1",
+      "-maxmoves",
+      "100",
+      "-srand",
+      "20261015",
+      "-pgnout",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r1-r2-match-20261015/games.pgn",
+      "append=false",
+      "-autosaveinterval",
+      "0",
+      "-strict",
+      "-openings",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r1-r2-match-20261015/openings.epd",
+      "format=epd",
+      "order=sequential"
+    ]
+  },
+  "engines": [
+    {
+      "name": "R2",
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/046d5b043ec5072238e8708c9f0df8e9d57834ee/ucl",
+      "revision": "046d5b043ec5072238e8708c9f0df8e9d57834ee",
+      "build": "CMake Release; isolated clean Git worktree",
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16
+      },
+      "sha256": "e5f7e692d55963f1d19d9b42d407577b4b947741665ecbf1d13244d7df1f1bc6",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "046d5b043ec5072238e8708c9f0df8e9d57834ee",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      }
+    },
+    {
+      "name": "R1",
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/e603d431a721c3f883bb1843059d122ef6bd4de5/ucl",
+      "revision": "e603d431a721c3f883bb1843059d122ef6bd4de5",
+      "build": "CMake Release; isolated clean Git worktree",
+      "options": {
+        "MoveOverhead": 0
+      },
+      "sha256": "0bfd6fe5e9226c84822a0aa55190623cfc0534f4a275e46f52087674c0b8b10b",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "e603d431a721c3f883bb1843059d122ef6bd4de5",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      }
+    }
+  ],
+  "artifacts": {
+    "config.json": {
+      "sha256": "0a7ace5c9bf2a400030e661320db2720956108ac77640610a1ca775f7b7360bf",
+      "bytes": 4314
+    },
+    "games.pgn": {
+      "sha256": "ef77ba3a1396c7033cffa9e285d36a8f11d6418120af01cc550560647d9e5553",
+      "bytes": 48028
+    },
+    "fastchess.log": {
+      "sha256": "5ac4eb8b8e5f9df49b9a61390bf60ffe507fd678610c4dcbe832a7a7e0e9f66d",
+      "bytes": 1745
+    },
+    "openings.epd": {
+      "sha256": "470d95231ca981172f67f758eec1600af0b3a0d730748cfd8df21235433e7081",
+      "bytes": 474
+    },
+    "match-config.json": {
+      "sha256": "0f5e0f1dfb90130170aa3b1ea84eb4192eb6fa64a4b24ab928818e6918fed589",
+      "bytes": 1156
+    }
+  },
+  "results": {
+    "paired_score_counts": [
+      0,
+      0,
+      0,
+      3,
+      5
+    ],
+    "candidate": "R2",
+    "baseline": "R1",
+    "games": 16,
+    "wins": 13,
+    "draws": 3,
+    "losses": 0,
+    "score": 0.90625,
+    "paired_rounds": 8,
+    "score_ci95_paired_bootstrap": [
+      0.8125,
+      0.96875
+    ],
+    "bootstrap_seed": 20261015,
+    "terminations": {
+      "adjudication": 1,
+      "normal": 15
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "error": null
+}

@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "seed": 20261015,
+  "suite": "experiments/positions/r2-v1.json",
+  "repeats": 3,
+  "limits": [
+    {
+      "depth": 1
+    },
+    {
+      "depth": 4
+    },
+    {
+      "nodes": 10000
+    }
+  ],
+  "engines": [
+    {
+      "name": "q0t0p0",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release preset",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": false,
+        "UseTT": false,
+        "PVOrdering": false,
+        "Hash": 16
+      }
+    },
+    {
+      "name": "q1t0p0",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release preset",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": true,
+        "UseTT": false,
+        "PVOrdering": false,
+        "Hash": 16
+      }
+    },
+    {
+      "name": "q0t1p0",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release preset",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": false,
+        "UseTT": true,
+        "PVOrdering": false,
+        "Hash": 16
+      }
+    },
+    {
+      "name": "q0t0p1",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release preset",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": false,
+        "UseTT": false,
+        "PVOrdering": true,
+        "Hash": 16
+      }
+    },
+    {
+      "name": "q1t1p0",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release preset",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": false,
+        "Hash": 16
+      }
+    },
+    {
+      "name": "q1t0p1",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release preset",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": true,
+        "UseTT": false,
+        "PVOrdering": true,
+        "Hash": 16
+      }
+    },
+    {
+      "name": "q0t1p1",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release preset",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": false,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16
+      }
+    },
+    {
+      "name": "q1t1p1",
+      "path": "build/release/ucl",
+      "revision": "HEAD",
+      "build": "CMake release preset",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16
+      }
+    }
+  ]
+}

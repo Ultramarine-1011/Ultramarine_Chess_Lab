@@ -152,3 +152,95 @@ Windows 实验主机上测试硬件性能或长时间负载。
   增加正负 mate/零/普通分值回归测试，随后重新生成正式对照包。
 - 上述首次包保留为审计证据，后续修正版作为最终基准；不静默覆盖或删除记录。
   fastchess 原始日志自动打印的 Elo/LOS 不是 UCL 的结论，16 局只用于轻量验收。
+
+## R2 最终验收（2026-10-15，Asia/Singapore）
+
+**状态：本轮授权 R2 条件满足，停止；未开始 R3。**
+最终代码/实验版本 `eee9d44b5a73b36f06ae837e079a6afc66f8caaf`，下述正式运行起点
+工作树干净。验收后仅追加本节、路线图及已审核的小型实验包，无算法改动。
+R1 验收提交保持 `e603d431a721c3f883bb1843059d122ef6bd4de5`。
+
+完整 [技术报告](experiments/results/r2-validation-final-20261015/report.md)、
+[环境](experiments/results/r2-validation-final-20261015/environment.json)、
+[R1 构建清单](experiments/results/r2-validation-final-20261015/r1-build-manifest.json)、
+[R2 构建清单](experiments/results/r2-validation-final-20261015/r2-build-manifest.json)
+保留版本、SHA-256、编译器/参数、硬件和精确构建命令。
+本机为 Apple A18 Pro / 6 逻辑 CPU / 8 GiB，macOS 26.7.1；版本等同上方工具链。
+
+### 精确命令及结果
+
+```sh
+cmake --preset release -DPython3_EXECUTABLE="$PWD/.venv/bin/python"
+cmake --build --preset release --parallel 4
+ctest --preset release
+build/release/ucl_tests search
+build/release/ucl --build-info
+cmake --preset debug -DPython3_EXECUTABLE="$PWD/.venv/bin/python"
+cmake --build --preset debug --parallel 4
+ctest --preset debug
+cmake --preset sanitize -DPython3_EXECUTABLE="$PWD/.venv/bin/python"
+cmake --build --preset sanitize --parallel 4
+ctest --preset sanitize
+.venv/bin/python scripts/build_revision.py HEAD
+.venv/bin/python scripts/prepare_comparison.py \
+  --baseline .tools/engines/e603d431a721c3f883bb1843059d122ef6bd4de5/manifest.json \
+  --candidate .tools/engines/eee9d44b5a73b36f06ae837e079a6afc66f8caaf/manifest.json \
+  --output .tools/r2-comparison-final-20261015
+.venv/bin/ucl-lab benchmark --config experiments/configs/r2-ablation.json \
+  --output experiments/results/r2-ablation-final-20261015
+.venv/bin/ucl-lab validate experiments/results/r2-ablation-final-20261015/record.json
+.venv/bin/ucl-lab benchmark --config .tools/r2-comparison-final-20261015/benchmark.json \
+  --output experiments/results/r1-r2-benchmark-final-20261015
+.venv/bin/ucl-lab validate experiments/results/r1-r2-benchmark-final-20261015/record.json
+.tools/bin/fastchess --compliance .tools/engines/eee9d44b5a73b36f06ae837e079a6afc66f8caaf/ucl
+.venv/bin/ucl-lab match --config .tools/r2-comparison-final-20261015/match.json \
+  --output experiments/results/r1-r2-match-final-20261015 --fastchess .tools/bin/fastchess
+.venv/bin/ucl-lab validate experiments/results/r1-r2-match-final-20261015/record.json
+.venv/bin/python experiments/results/r2-validation-final-20261015/check_reference.py
+```
+
+| 验证 | 实际结果 / 证据 |
+|---|---|
+| Mac Release | 5/5 CTest，[log](experiments/results/r2-validation-final-20261015/release.log) |
+| Mac Debug | 5/5 CTest，[log](experiments/results/r2-validation-final-20261015/debug.log) |
+| Mac ASan/UBSan | 5/5 CTest，无诊断，[log](experiments/results/r2-validation-final-20261015/sanitize.log) |
+| C++ / Perft | unit 27、search 685、perft 14 checks；原 R1 Perft 数值未变 |
+| UCI / Python 实验 | 各 8 unittest；含全部开关、实际基准留档/篡改、版本身份与 mate 转换 |
+| fastchess compliance | 40/40，[log](experiments/results/r2-validation-final-20261015/experiment-commands.log) |
+| 算法消融 | 8 组合 × 10 局面 × 3 重复 × 3 限制 = 720 查询，[包](experiments/results/r2-ablation-final-20261015/report.md) |
+| 版本基准 | 3 引擎配置 × 10 局面 × 3 重复 × 2 深度 = 180 查询，[包](experiments/results/r1-r2-benchmark-final-20261015/report.md) |
+| R1 语义回归 | R1 vs R2-reference 的 60 查询，score/depth/nodes/move/PV 零差异，[结果](experiments/results/r2-validation-final-20261015/reference-comparison.json) |
+| 版本小样本赛 | 两个不同完整 SHA/二进制，8 开局/16 局，13 W / 3 D / 0 L，无异常终局，[包](experiments/results/r1-r2-match-final-20261015/report.md) |
+| 全部包完整性 | 文件大小/哈希、PGN/配对/终局与统计重算通过，R1 历史包也通过 |
+
+### 量化结论及限制
+
+- depth 4 同 QS 语义：QS-only 389,687 nodes / 111.08ms，默认 QS+TT+PV 为
+  266,968 / 93.59ms；节点少 31.49%，这批短时测量 wall 少 15.75%。各局面重复
+  中位数求和，完整原始计时/NPS/TT 指标在包内；不将三次重复当成性能显著性检验。
+- 跨版本批次：depth 4 R1 91,000 / 13.31ms，默认 R2 266,968 / 80.02ms。
+  QS 扩展战术边界，工作量更大；不声称默认 R2 比 R1 更快。TT 分配和路径检查也
+  有成本，尤其浅层。关闭新优化的 R2 保持 R1 搜索语义。
+- 六项窄范围战术标签：depth 1 R1 5/6 → R2 6/6，修正毒兵；depth 4 均 6/6。
+- 对弈得分 90.625%，配对五档计数 [0,0,0,3,5]，按轮 bootstrap CI95
+  [81.25%,96.875%]。15 局正常、1 局步数裁决；小样本、少开局、同深度不同计算量，
+  不推导 Elo。两批同种子流程重跑不得合并为 32 局独立样本。
+- TT 为 64 位主键/历史指纹，保留通常概率碰撞风险；每次 run 清空，PV 可在缓存处
+  结束为合法前缀；256 ply 安全上限中止未完成迭代。FEN 无法恢复此前重复历史。
+- 用户 Windows 实验主机未执行持续实验；正式大样本棋力、SPRT/显著性检验未运行。
+  相应硬件/电源/线程、开局、预注册和运行步骤已写入 EXPERIMENTS.md。
+
+### 推送与跨平台 CI
+
+代码已推送 origin/main。`046d5b0` 的首次 CI #38699985781 五个 job 全 success；
+修正 mate 转换后的最终代码 `eee9d44` 对应
+[GitHub Actions #38700282364](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38700282364)，
+macOS Release/Debug、Windows Release/Debug、macOS sanitizer 五个 job 全 success，
+Mac Release fastchess smoke 通过。
+[CI 原始状态快照](experiments/results/r2-validation-final-20261015/ci.json) 留档。
+Windows 证据来自托管 runner，不代表用户实验主机验收。本轮无需 CI 修复。
+
+归档检查：`git diff --cached --check` 仅报告两批原始 fastchess.log / games.pgn
+各自文件末尾的空行（4 条）；为保留原始哈希未改写产物。执行
+`git -c core.whitespace=-blank-at-eof diff --cached --check` 通过。
+最终验收文档修改后 `ctest --preset release` 再次 5/5 通过。

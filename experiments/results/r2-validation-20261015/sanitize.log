@@ -1,0 +1,22 @@
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/sanitize
+[1/4] Building CXX object CMakeFiles/ucl.dir/engine/src/main.cpp.o
+[2/4] Linking CXX executable ucl
+[3/4] Building CXX object CMakeFiles/ucl_tests.dir/tests/core_tests.cpp.o
+[4/4] Linking CXX executable ucl_tests
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/sanitize
+    Start 1: unit
+1/5 Test #1: unit .............................   Passed    0.89 sec
+    Start 2: search
+2/5 Test #2: search ...........................   Passed   35.53 sec
+    Start 3: perft
+3/5 Test #3: perft ............................   Passed    0.47 sec
+    Start 4: uci
+4/5 Test #4: uci ..............................   Passed   10.91 sec
+    Start 5: experiments
+5/5 Test #5: experiments ......................   Passed    0.39 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =  48.20 sec

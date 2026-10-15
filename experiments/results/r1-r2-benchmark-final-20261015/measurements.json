@@ -1,0 +1,5042 @@
+[
+  {
+    "engine": "R2-reference",
+    "position": "start",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 539458,
+    "elapsed_us": 20,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 1050000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "start",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 1460542,
+    "elapsed_us": 1087,
+    "counter_scope": "final",
+    "qnodes": 20,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 19319.227230910765,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "start",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 352083,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 21000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "start",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 72020,
+    "wall_ns": 7510125,
+    "elapsed_us": 7143,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 10082598.348033039,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "start",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 4093,
+    "wall_ns": 1331666,
+    "elapsed_us": 997,
+    "counter_scope": "final",
+    "qnodes": 3487,
+    "tt_probes": 606,
+    "tt_hits": 158,
+    "tt_cutoffs": 56,
+    "tt_stores": 550,
+    "pv_order_hits": 6,
+    "tt_order_hits": 102,
+    "nps": 4105315.9478435307,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "start",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 72020,
+    "wall_ns": 7401833,
+    "elapsed_us": 7000,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 10288571.42857143,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "kiwipete",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 368,
+    "pv": [
+      "e2a6"
+    ],
+    "move": "e2a6",
+    "nodes": 49,
+    "wall_ns": 340791,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 49000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "kiwipete",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 34,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "d2c3",
+      "e6d5",
+      "g2h3",
+      "f6e4"
+    ],
+    "move": "e2a6",
+    "nodes": 3045,
+    "wall_ns": 1827750,
+    "elapsed_us": 1431,
+    "counter_scope": "final",
+    "qnodes": 3044,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 2127882.5995807126,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "kiwipete",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 368,
+    "pv": [
+      "e2a6"
+    ],
+    "move": "e2a6",
+    "nodes": 49,
+    "wall_ns": 330709,
+    "elapsed_us": 12,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4083333.3333333335,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "kiwipete",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 25,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "b2c3",
+      "b6d5"
+    ],
+    "move": "e2a6",
+    "nodes": 9832,
+    "wall_ns": 2433292,
+    "elapsed_us": 2000,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 4916000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "kiwipete",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 29,
+    "pv": [
+      "e2a6",
+      "e6d5",
+      "g2h3",
+      "e7e5"
+    ],
+    "move": "e2a6",
+    "nodes": 254309,
+    "wall_ns": 74187625,
+    "elapsed_us": 73771,
+    "counter_scope": "final",
+    "qnodes": 251741,
+    "tt_probes": 2568,
+    "tt_hits": 758,
+    "tt_cutoffs": 36,
+    "tt_stores": 2531,
+    "pv_order_hits": 16,
+    "tt_order_hits": 722,
+    "nps": 3447276.0298762387,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "kiwipete",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 25,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "b2c3",
+      "b6d5"
+    ],
+    "move": "e2a6",
+    "nodes": 9832,
+    "wall_ns": 3189333,
+    "elapsed_us": 2763,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3558450.959102425,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "rook-ending",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 386208,
+    "elapsed_us": 5,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "rook-ending",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4",
+      "h4g3"
+    ],
+    "move": "b4f4",
+    "nodes": 37,
+    "wall_ns": 808250,
+    "elapsed_us": 439,
+    "counter_scope": "final",
+    "qnodes": 36,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 84282.46013667426,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "rook-ending",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 331375,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 15000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "rook-ending",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1293,
+    "wall_ns": 578042,
+    "elapsed_us": 207,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 6246376.811594203,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "rook-ending",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 100,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4c4",
+      "c7c5"
+    ],
+    "move": "b4f4",
+    "nodes": 2275,
+    "wall_ns": 1194250,
+    "elapsed_us": 803,
+    "counter_scope": "final",
+    "qnodes": 1972,
+    "tt_probes": 303,
+    "tt_hits": 93,
+    "tt_cutoffs": 4,
+    "tt_stores": 299,
+    "pv_order_hits": 7,
+    "tt_order_hits": 89,
+    "nps": 2833125.778331258,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "rook-ending",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1293,
+    "wall_ns": 520667,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 1293000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "poisoned-pawn",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 400,
+    "pv": [
+      "d1d5"
+    ],
+    "move": "d1d5",
+    "nodes": 19,
+    "wall_ns": 339583,
+    "elapsed_us": 5,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3800000.0,
+    "tactical_pass": false
+  },
+  {
+    "engine": "R2",
+    "position": "poisoned-pawn",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 290,
+    "pv": [
+      "e1f1"
+    ],
+    "move": "e1f1",
+    "nodes": 35,
+    "wall_ns": 644333,
+    "elapsed_us": 326,
+    "counter_scope": "final",
+    "qnodes": 34,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 107361.96319018405,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "poisoned-pawn",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 400,
+    "pv": [
+      "d1d5"
+    ],
+    "move": "d1d5",
+    "nodes": 19,
+    "wall_ns": 508666,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 19000000.0,
+    "tactical_pass": false
+  },
+  {
+    "engine": "R2-reference",
+    "position": "poisoned-pawn",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2g4",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 5569,
+    "wall_ns": 854833,
+    "elapsed_us": 510,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 10919607.843137255,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "poisoned-pawn",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2d1",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 3524,
+    "wall_ns": 1192583,
+    "elapsed_us": 864,
+    "counter_scope": "final",
+    "qnodes": 3007,
+    "tt_probes": 517,
+    "tt_hits": 230,
+    "tt_cutoffs": 5,
+    "tt_stores": 512,
+    "pv_order_hits": 6,
+    "tt_order_hits": 225,
+    "nps": 4078703.703703704,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "poisoned-pawn",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2g4",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 5569,
+    "wall_ns": 819167,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 5569000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "mate-one",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 287833,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 27000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "mate-one",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 289167,
+    "elapsed_us": 4,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 6750000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "mate-one",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 29,
+    "wall_ns": 563292,
+    "elapsed_us": 285,
+    "counter_scope": "final",
+    "qnodes": 28,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 101754.38596491228,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "mate-one",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 284750,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 27000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "mate-one",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 282083,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 9000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "mate-one",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 29,
+    "wall_ns": 554291,
+    "elapsed_us": 283,
+    "counter_scope": "final",
+    "qnodes": 28,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 102473.49823321555,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "promotion-mate",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 273125,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 11000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "promotion-mate",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 630709,
+    "elapsed_us": 281,
+    "counter_scope": "final",
+    "qnodes": 10,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 39145.907473309606,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "promotion-mate",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 299084,
+    "elapsed_us": 4,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 2750000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "promotion-mate",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 273916,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 11000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "promotion-mate",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 569666,
+    "elapsed_us": 278,
+    "counter_scope": "final",
+    "qnodes": 10,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 39568.34532374101,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "promotion-mate",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 287209,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3666666.6666666665,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "check-evasion",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 573500,
+    "elapsed_us": 277,
+    "counter_scope": "final",
+    "qnodes": 1,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 7220.216606498195,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "check-evasion",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 284167,
+    "elapsed_us": 2,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 1000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "check-evasion",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 271875,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 2000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "check-evasion",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 954,
+    "wall_ns": 737292,
+    "elapsed_us": 382,
+    "counter_scope": "final",
+    "qnodes": 866,
+    "tt_probes": 88,
+    "tt_hits": 32,
+    "tt_cutoffs": 0,
+    "tt_stores": 88,
+    "pv_order_hits": 6,
+    "tt_order_hits": 32,
+    "nps": 2497382.1989528798,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "check-evasion",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 867,
+    "wall_ns": 441125,
+    "elapsed_us": 68,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 12750000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "check-evasion",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 867,
+    "wall_ns": 416792,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 867000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "en-passant",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 303375,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 2000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "en-passant",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 275208,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 6000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "en-passant",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 558458,
+    "elapsed_us": 277,
+    "counter_scope": "final",
+    "qnodes": 5,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 21660.649819494585,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "en-passant",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 125,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6"
+    ],
+    "move": "e5d6",
+    "nodes": 186,
+    "wall_ns": 424959,
+    "elapsed_us": 21,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 8857142.857142856,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "en-passant",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 125,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6"
+    ],
+    "move": "e5d6",
+    "nodes": 186,
+    "wall_ns": 419792,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 186000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "en-passant",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 900,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6",
+      "d7d8q",
+      "f6e5"
+    ],
+    "move": "e5d6",
+    "nodes": 207,
+    "wall_ns": 730792,
+    "elapsed_us": 306,
+    "counter_scope": "final",
+    "qnodes": 143,
+    "tt_probes": 64,
+    "tt_hits": 32,
+    "tt_cutoffs": 0,
+    "tt_stores": 64,
+    "pv_order_hits": 6,
+    "tt_order_hits": 32,
+    "nps": 676470.5882352941,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "near-fifty",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 300666,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 5000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "near-fifty",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4",
+      "h4g3"
+    ],
+    "move": "b4f4",
+    "nodes": 37,
+    "wall_ns": 591875,
+    "elapsed_us": 287,
+    "counter_scope": "final",
+    "qnodes": 36,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 128919.8606271777,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "near-fifty",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 272458,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 15000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "near-fifty",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1195,
+    "wall_ns": 453292,
+    "elapsed_us": 136,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 8786764.705882354,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "near-fifty",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 100,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4c4",
+      "c7c5"
+    ],
+    "move": "b4f4",
+    "nodes": 1566,
+    "wall_ns": 818666,
+    "elapsed_us": 508,
+    "counter_scope": "final",
+    "qnodes": 1263,
+    "tt_probes": 205,
+    "tt_hits": 60,
+    "tt_cutoffs": 4,
+    "tt_stores": 201,
+    "pv_order_hits": 7,
+    "tt_order_hits": 56,
+    "nps": 3082677.1653543306,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "near-fifty",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1195,
+    "wall_ns": 440792,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 1195000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "stalemate",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 531375,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "stalemate",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 268500,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "stalemate",
+    "repeat": 0,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 238208,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "stalemate",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 519250,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "stalemate",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 229958,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "stalemate",
+    "repeat": 0,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 219416,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "start",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 574542,
+    "elapsed_us": 281,
+    "counter_scope": "final",
+    "qnodes": 20,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 74733.09608540926,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "start",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 303208,
+    "elapsed_us": 5,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4200000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "start",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 496375,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 21000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "start",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 4093,
+    "wall_ns": 1251500,
+    "elapsed_us": 948,
+    "counter_scope": "final",
+    "qnodes": 3487,
+    "tt_probes": 606,
+    "tt_hits": 158,
+    "tt_cutoffs": 56,
+    "tt_stores": 550,
+    "pv_order_hits": 6,
+    "tt_order_hits": 102,
+    "nps": 4317510.548523207,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "start",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 72020,
+    "wall_ns": 7859500,
+    "elapsed_us": 7512,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 9587326.943556976,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "start",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 72020,
+    "wall_ns": 8066917,
+    "elapsed_us": 7000,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 10288571.42857143,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "kiwipete",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 368,
+    "pv": [
+      "e2a6"
+    ],
+    "move": "e2a6",
+    "nodes": 49,
+    "wall_ns": 339916,
+    "elapsed_us": 10,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4900000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "kiwipete",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 368,
+    "pv": [
+      "e2a6"
+    ],
+    "move": "e2a6",
+    "nodes": 49,
+    "wall_ns": 320292,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 49000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "kiwipete",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 34,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "d2c3",
+      "e6d5",
+      "g2h3",
+      "f6e4"
+    ],
+    "move": "e2a6",
+    "nodes": 3045,
+    "wall_ns": 1611917,
+    "elapsed_us": 1253,
+    "counter_scope": "final",
+    "qnodes": 3044,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 2430167.5977653633,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "kiwipete",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 25,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "b2c3",
+      "b6d5"
+    ],
+    "move": "e2a6",
+    "nodes": 9832,
+    "wall_ns": 2699500,
+    "elapsed_us": 2363,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4160812.526449429,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "kiwipete",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 25,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "b2c3",
+      "b6d5"
+    ],
+    "move": "e2a6",
+    "nodes": 9832,
+    "wall_ns": 2345375,
+    "elapsed_us": 2000,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 4916000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "kiwipete",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 29,
+    "pv": [
+      "e2a6",
+      "e6d5",
+      "g2h3",
+      "e7e5"
+    ],
+    "move": "e2a6",
+    "nodes": 254309,
+    "wall_ns": 71492625,
+    "elapsed_us": 71108,
+    "counter_scope": "final",
+    "qnodes": 251741,
+    "tt_probes": 2568,
+    "tt_hits": 758,
+    "tt_cutoffs": 36,
+    "tt_stores": 2531,
+    "pv_order_hits": 16,
+    "tt_order_hits": 722,
+    "nps": 3576376.7789840805,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "rook-ending",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 351500,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 15000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "rook-ending",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4",
+      "h4g3"
+    ],
+    "move": "b4f4",
+    "nodes": 37,
+    "wall_ns": 741792,
+    "elapsed_us": 349,
+    "counter_scope": "final",
+    "qnodes": 36,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 106017.19197707737,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "rook-ending",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 364666,
+    "elapsed_us": 4,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3750000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "rook-ending",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1293,
+    "wall_ns": 517792,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 1293000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "rook-ending",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 100,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4c4",
+      "c7c5"
+    ],
+    "move": "b4f4",
+    "nodes": 2275,
+    "wall_ns": 984584,
+    "elapsed_us": 662,
+    "counter_scope": "final",
+    "qnodes": 1972,
+    "tt_probes": 303,
+    "tt_hits": 93,
+    "tt_cutoffs": 4,
+    "tt_stores": 299,
+    "pv_order_hits": 7,
+    "tt_order_hits": 89,
+    "nps": 3436555.891238671,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "rook-ending",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1293,
+    "wall_ns": 471042,
+    "elapsed_us": 158,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 8183544.303797469,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "poisoned-pawn",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 400,
+    "pv": [
+      "d1d5"
+    ],
+    "move": "d1d5",
+    "nodes": 19,
+    "wall_ns": 289250,
+    "elapsed_us": 4,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4750000.0,
+    "tactical_pass": false
+  },
+  {
+    "engine": "R2",
+    "position": "poisoned-pawn",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 290,
+    "pv": [
+      "e1f1"
+    ],
+    "move": "e1f1",
+    "nodes": 35,
+    "wall_ns": 565958,
+    "elapsed_us": 282,
+    "counter_scope": "final",
+    "qnodes": 34,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 124113.47517730496,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "poisoned-pawn",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 400,
+    "pv": [
+      "d1d5"
+    ],
+    "move": "d1d5",
+    "nodes": 19,
+    "wall_ns": 269791,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 19000000.0,
+    "tactical_pass": false
+  },
+  {
+    "engine": "R2-reference",
+    "position": "poisoned-pawn",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2g4",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 5569,
+    "wall_ns": 795792,
+    "elapsed_us": 479,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 11626304.801670145,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "poisoned-pawn",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2d1",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 3524,
+    "wall_ns": 1150416,
+    "elapsed_us": 827,
+    "counter_scope": "final",
+    "qnodes": 3007,
+    "tt_probes": 517,
+    "tt_hits": 230,
+    "tt_cutoffs": 5,
+    "tt_stores": 512,
+    "pv_order_hits": 6,
+    "tt_order_hits": 225,
+    "nps": 4261185.00604595,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "poisoned-pawn",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2g4",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 5569,
+    "wall_ns": 815125,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 5569000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "mate-one",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 303667,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 9000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "mate-one",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 29,
+    "wall_ns": 596250,
+    "elapsed_us": 302,
+    "counter_scope": "final",
+    "qnodes": 28,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 96026.49006622516,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "mate-one",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 290125,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 27000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "mate-one",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 288375,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 9000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "mate-one",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 29,
+    "wall_ns": 599750,
+    "elapsed_us": 299,
+    "counter_scope": "final",
+    "qnodes": 28,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 96989.96655518394,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "mate-one",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 289584,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 27000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "promotion-mate",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 279834,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 11000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "promotion-mate",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 286125,
+    "elapsed_us": 2,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 5500000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "promotion-mate",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 595417,
+    "elapsed_us": 298,
+    "counter_scope": "final",
+    "qnodes": 10,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 36912.75167785235,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "promotion-mate",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 296250,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 11000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "promotion-mate",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 282666,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3666666.6666666665,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "promotion-mate",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 561375,
+    "elapsed_us": 280,
+    "counter_scope": "final",
+    "qnodes": 10,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 39285.71428571428,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "check-evasion",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 562917,
+    "elapsed_us": 276,
+    "counter_scope": "final",
+    "qnodes": 1,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 7246.376811594203,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "check-evasion",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 287500,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 2000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "check-evasion",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 280667,
+    "elapsed_us": 2,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 1000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "check-evasion",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 954,
+    "wall_ns": 735250,
+    "elapsed_us": 380,
+    "counter_scope": "final",
+    "qnodes": 866,
+    "tt_probes": 88,
+    "tt_hits": 32,
+    "tt_cutoffs": 0,
+    "tt_stores": 88,
+    "pv_order_hits": 6,
+    "tt_order_hits": 32,
+    "nps": 2510526.3157894737,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "check-evasion",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 867,
+    "wall_ns": 420250,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 867000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "check-evasion",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 867,
+    "wall_ns": 425500,
+    "elapsed_us": 65,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 13338461.538461538,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "en-passant",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 575750,
+    "elapsed_us": 282,
+    "counter_scope": "final",
+    "qnodes": 5,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 21276.59574468085,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "en-passant",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 291334,
+    "elapsed_us": 2,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "en-passant",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 278375,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 6000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "en-passant",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 900,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6",
+      "d7d8q",
+      "f6e5"
+    ],
+    "move": "e5d6",
+    "nodes": 207,
+    "wall_ns": 732792,
+    "elapsed_us": 304,
+    "counter_scope": "final",
+    "qnodes": 143,
+    "tt_probes": 64,
+    "tt_hits": 32,
+    "tt_cutoffs": 0,
+    "tt_stores": 64,
+    "pv_order_hits": 6,
+    "tt_order_hits": 32,
+    "nps": 680921.052631579,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "en-passant",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 125,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6"
+    ],
+    "move": "e5d6",
+    "nodes": 186,
+    "wall_ns": 432917,
+    "elapsed_us": 19,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 9789473.684210526,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "en-passant",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 125,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6"
+    ],
+    "move": "e5d6",
+    "nodes": 186,
+    "wall_ns": 652750,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 186000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "near-fifty",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4",
+      "h4g3"
+    ],
+    "move": "b4f4",
+    "nodes": 37,
+    "wall_ns": 583917,
+    "elapsed_us": 284,
+    "counter_scope": "final",
+    "qnodes": 36,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 130281.69014084506,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "near-fifty",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 286625,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 15000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "near-fifty",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 290750,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 5000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "near-fifty",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 100,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4c4",
+      "c7c5"
+    ],
+    "move": "b4f4",
+    "nodes": 1566,
+    "wall_ns": 819500,
+    "elapsed_us": 512,
+    "counter_scope": "final",
+    "qnodes": 1263,
+    "tt_probes": 205,
+    "tt_hits": 60,
+    "tt_cutoffs": 4,
+    "tt_stores": 201,
+    "pv_order_hits": 7,
+    "tt_order_hits": 56,
+    "nps": 3058593.75,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "near-fifty",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1195,
+    "wall_ns": 441917,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 1195000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "near-fifty",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1195,
+    "wall_ns": 455625,
+    "elapsed_us": 140,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 8535714.285714285,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "stalemate",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 257708,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "stalemate",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 517750,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "stalemate",
+    "repeat": 1,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 227208,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "stalemate",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 238875,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "stalemate",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 510375,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "stalemate",
+    "repeat": 1,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 231833,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "start",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 285958,
+    "elapsed_us": 5,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4200000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "start",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 580208,
+    "elapsed_us": 279,
+    "counter_scope": "final",
+    "qnodes": 20,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 75268.81720430107,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "start",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 12,
+    "pv": [
+      "b1c3"
+    ],
+    "move": "b1c3",
+    "nodes": 21,
+    "wall_ns": 278958,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 21000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "start",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 72020,
+    "wall_ns": 8716583,
+    "elapsed_us": 8394,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 8579938.0509888,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "start",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 4093,
+    "wall_ns": 1495917,
+    "elapsed_us": 1130,
+    "counter_scope": "final",
+    "qnodes": 3487,
+    "tt_probes": 606,
+    "tt_hits": 158,
+    "tt_cutoffs": 56,
+    "tt_stores": 550,
+    "pv_order_hits": 6,
+    "tt_order_hits": 102,
+    "nps": 3622123.8938053097,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "start",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 0,
+    "pv": [
+      "b1c3",
+      "b8c6",
+      "g1f3",
+      "g8f6"
+    ],
+    "move": "b1c3",
+    "nodes": 72020,
+    "wall_ns": 7467416,
+    "elapsed_us": 7000,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 10288571.42857143,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "kiwipete",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 34,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "d2c3",
+      "e6d5",
+      "g2h3",
+      "f6e4"
+    ],
+    "move": "e2a6",
+    "nodes": 3045,
+    "wall_ns": 1653750,
+    "elapsed_us": 1296,
+    "counter_scope": "final",
+    "qnodes": 3044,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 2349537.037037037,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "kiwipete",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 368,
+    "pv": [
+      "e2a6"
+    ],
+    "move": "e2a6",
+    "nodes": 49,
+    "wall_ns": 316834,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 49000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "kiwipete",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 368,
+    "pv": [
+      "e2a6"
+    ],
+    "move": "e2a6",
+    "nodes": 49,
+    "wall_ns": 338208,
+    "elapsed_us": 10,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4900000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "kiwipete",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 29,
+    "pv": [
+      "e2a6",
+      "e6d5",
+      "g2h3",
+      "e7e5"
+    ],
+    "move": "e2a6",
+    "nodes": 254309,
+    "wall_ns": 72551875,
+    "elapsed_us": 72142,
+    "counter_scope": "final",
+    "qnodes": 251741,
+    "tt_probes": 2568,
+    "tt_hits": 758,
+    "tt_cutoffs": 36,
+    "tt_stores": 2531,
+    "pv_order_hits": 16,
+    "tt_order_hits": 722,
+    "nps": 3525117.130104516,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "kiwipete",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 25,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "b2c3",
+      "b6d5"
+    ],
+    "move": "e2a6",
+    "nodes": 9832,
+    "wall_ns": 2527208,
+    "elapsed_us": 2000,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 4916000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "kiwipete",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 25,
+    "pv": [
+      "e2a6",
+      "b4c3",
+      "b2c3",
+      "b6d5"
+    ],
+    "move": "e2a6",
+    "nodes": 9832,
+    "wall_ns": 2791291,
+    "elapsed_us": 2425,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4054432.9896907215,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "rook-ending",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4",
+      "h4g3"
+    ],
+    "move": "b4f4",
+    "nodes": 37,
+    "wall_ns": 776792,
+    "elapsed_us": 426,
+    "counter_scope": "final",
+    "qnodes": 36,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 86854.46009389672,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "rook-ending",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 286958,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 15000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "rook-ending",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 282125,
+    "elapsed_us": 4,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3750000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "rook-ending",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 100,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4c4",
+      "c7c5"
+    ],
+    "move": "b4f4",
+    "nodes": 2275,
+    "wall_ns": 1004750,
+    "elapsed_us": 690,
+    "counter_scope": "final",
+    "qnodes": 1972,
+    "tt_probes": 303,
+    "tt_hits": 93,
+    "tt_cutoffs": 4,
+    "tt_stores": 299,
+    "pv_order_hits": 7,
+    "tt_order_hits": 89,
+    "nps": 3297101.4492753623,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "rook-ending",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1293,
+    "wall_ns": 476584,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 1293000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "rook-ending",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1293,
+    "wall_ns": 542250,
+    "elapsed_us": 212,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 6099056.603773585,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "poisoned-pawn",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 290,
+    "pv": [
+      "e1f1"
+    ],
+    "move": "e1f1",
+    "nodes": 35,
+    "wall_ns": 588541,
+    "elapsed_us": 298,
+    "counter_scope": "final",
+    "qnodes": 34,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 117449.6644295302,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "poisoned-pawn",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 400,
+    "pv": [
+      "d1d5"
+    ],
+    "move": "d1d5",
+    "nodes": 19,
+    "wall_ns": 281959,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 19000000.0,
+    "tactical_pass": false
+  },
+  {
+    "engine": "R2-reference",
+    "position": "poisoned-pawn",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 400,
+    "pv": [
+      "d1d5"
+    ],
+    "move": "d1d5",
+    "nodes": 19,
+    "wall_ns": 297917,
+    "elapsed_us": 4,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 4750000.0,
+    "tactical_pass": false
+  },
+  {
+    "engine": "R2",
+    "position": "poisoned-pawn",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2d1",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 3524,
+    "wall_ns": 1178500,
+    "elapsed_us": 863,
+    "counter_scope": "final",
+    "qnodes": 3007,
+    "tt_probes": 517,
+    "tt_hits": 230,
+    "tt_cutoffs": 5,
+    "tt_stores": 512,
+    "pv_order_hits": 6,
+    "tt_order_hits": 225,
+    "nps": 4083429.8957126304,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "poisoned-pawn",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2g4",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 5569,
+    "wall_ns": 828625,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 5569000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "poisoned-pawn",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 290,
+    "pv": [
+      "d1e2",
+      "e8d7",
+      "e2g4",
+      "d7c6"
+    ],
+    "move": "d1e2",
+    "nodes": 5569,
+    "wall_ns": 827459,
+    "elapsed_us": 510,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 10919607.843137255,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "mate-one",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 269750,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 27000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "mate-one",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 276083,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 9000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "mate-one",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 29,
+    "wall_ns": 575667,
+    "elapsed_us": 295,
+    "counter_scope": "final",
+    "qnodes": 28,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 98305.08474576271,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "mate-one",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 269875,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 27000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "mate-one",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 27,
+    "wall_ns": 290833,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 9000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "mate-one",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "f7g7"
+    ],
+    "move": "f7g7",
+    "nodes": 29,
+    "wall_ns": 575000,
+    "elapsed_us": 291,
+    "counter_scope": "final",
+    "qnodes": 28,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 99656.35738831614,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "promotion-mate",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 296542,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3666666.6666666665,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "promotion-mate",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 283667,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 11000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "promotion-mate",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 576667,
+    "elapsed_us": 290,
+    "counter_scope": "final",
+    "qnodes": 10,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 37931.03448275862,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "promotion-mate",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 556208,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3666666.6666666665,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "promotion-mate",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 276750,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 11000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "promotion-mate",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 1,
+    "score_cp": 29999,
+    "pv": [
+      "e7e8q"
+    ],
+    "move": "e7e8q",
+    "nodes": 11,
+    "wall_ns": 569625,
+    "elapsed_us": 291,
+    "counter_scope": "final",
+    "qnodes": 10,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 37800.687285223365,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "check-evasion",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 579959,
+    "elapsed_us": 289,
+    "counter_scope": "final",
+    "qnodes": 1,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 6920.415224913495,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "check-evasion",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 277208,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 2000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "check-evasion",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": -1000,
+    "pv": [
+      "a1b1"
+    ],
+    "move": "a1b1",
+    "nodes": 2,
+    "wall_ns": 282000,
+    "elapsed_us": 2,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 1000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "check-evasion",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 954,
+    "wall_ns": 737334,
+    "elapsed_us": 393,
+    "counter_scope": "final",
+    "qnodes": 866,
+    "tt_probes": 88,
+    "tt_hits": 32,
+    "tt_cutoffs": 0,
+    "tt_stores": 88,
+    "pv_order_hits": 6,
+    "tt_order_hits": 32,
+    "nps": 2427480.9160305345,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "check-evasion",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 867,
+    "wall_ns": 440458,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 867000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "check-evasion",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": -29996,
+    "pv": [
+      "a1b1",
+      "a2e2",
+      "b1c1",
+      "a8a1"
+    ],
+    "move": "a1b1",
+    "nodes": 867,
+    "wall_ns": 436792,
+    "elapsed_us": 69,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 12565217.391304348,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "en-passant",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 294625,
+    "elapsed_us": 2,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 3000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "en-passant",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 278875,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 6000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "en-passant",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 120,
+    "pv": [
+      "e5d6"
+    ],
+    "move": "e5d6",
+    "nodes": 6,
+    "wall_ns": 585583,
+    "elapsed_us": 293,
+    "counter_scope": "final",
+    "qnodes": 5,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 20477.815699658702,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "en-passant",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 125,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6"
+    ],
+    "move": "e5d6",
+    "nodes": 186,
+    "wall_ns": 434583,
+    "elapsed_us": 21,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 8857142.857142856,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "en-passant",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 125,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6"
+    ],
+    "move": "e5d6",
+    "nodes": 186,
+    "wall_ns": 423625,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 186000000.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "en-passant",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 900,
+    "pv": [
+      "e5d6",
+      "h8g7",
+      "d6d7",
+      "g7f6",
+      "d7d8q",
+      "f6e5"
+    ],
+    "move": "e5d6",
+    "nodes": 207,
+    "wall_ns": 748834,
+    "elapsed_us": 323,
+    "counter_scope": "final",
+    "qnodes": 143,
+    "tt_probes": 64,
+    "tt_hits": 32,
+    "tt_cutoffs": 0,
+    "tt_stores": 64,
+    "pv_order_hits": 6,
+    "tt_order_hits": 32,
+    "nps": 640866.8730650155,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "near-fifty",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4",
+      "h4g3"
+    ],
+    "move": "b4f4",
+    "nodes": 37,
+    "wall_ns": 596708,
+    "elapsed_us": 297,
+    "counter_scope": "final",
+    "qnodes": 36,
+    "tt_probes": 1,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 1,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 124579.12457912457,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "near-fifty",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 297125,
+    "elapsed_us": 3,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 5000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "near-fifty",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 1,
+    "score_cp": 110,
+    "pv": [
+      "b4f4"
+    ],
+    "move": "b4f4",
+    "nodes": 15,
+    "wall_ns": 276416,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 15000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2",
+    "position": "near-fifty",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 100,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4c4",
+      "c7c5"
+    ],
+    "move": "b4f4",
+    "nodes": 1566,
+    "wall_ns": 859333,
+    "elapsed_us": 545,
+    "counter_scope": "final",
+    "qnodes": 1263,
+    "tt_probes": 205,
+    "tt_hits": 60,
+    "tt_cutoffs": 4,
+    "tt_stores": 201,
+    "pv_order_hits": 7,
+    "tt_order_hits": 56,
+    "nps": 2873394.4954128442,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "near-fifty",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1195,
+    "wall_ns": 459750,
+    "elapsed_us": 138,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 8659420.289855072,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R1",
+    "position": "near-fifty",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 4,
+    "score_cp": 10,
+    "pv": [
+      "b4f4",
+      "h4g3",
+      "f4f3",
+      "g3g2"
+    ],
+    "move": "b4f4",
+    "nodes": 1195,
+    "wall_ns": 454541,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 1195000000.0,
+    "tactical_pass": null
+  },
+  {
+    "engine": "R2-reference",
+    "position": "stalemate",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 244875,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "stalemate",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 540625,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "stalemate",
+    "repeat": 2,
+    "limit": {
+      "depth": 1
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 237541,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2-reference",
+    "position": "stalemate",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 234875,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R2",
+    "position": "stalemate",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 537875,
+    "elapsed_us": 0,
+    "counter_scope": "final",
+    "qnodes": 0,
+    "tt_probes": 0,
+    "tt_hits": 0,
+    "tt_cutoffs": 0,
+    "tt_stores": 0,
+    "pv_order_hits": 0,
+    "tt_order_hits": 0,
+    "nps": 0.0,
+    "tactical_pass": true
+  },
+  {
+    "engine": "R1",
+    "position": "stalemate",
+    "repeat": 2,
+    "limit": {
+      "depth": 4
+    },
+    "depth": 0,
+    "score_cp": 0,
+    "pv": [],
+    "move": null,
+    "nodes": 0,
+    "wall_ns": 226000,
+    "elapsed_us": 0,
+    "counter_scope": "last_completed_iteration",
+    "qnodes": null,
+    "tt_probes": null,
+    "tt_hits": null,
+    "tt_cutoffs": null,
+    "tt_stores": null,
+    "pv_order_hits": null,
+    "tt_order_hits": null,
+    "nps": 0.0,
+    "tactical_pass": true
+  }
+]

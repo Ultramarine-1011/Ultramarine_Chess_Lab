@@ -1,0 +1,22 @@
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+[1/2] Building CXX object CMakeFiles/ucl.dir/engine/src/main.cpp.o
+[2/2] Linking CXX executable ucl
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+    Start 1: unit
+1/5 Test #1: unit .............................   Passed    0.01 sec
+    Start 2: search
+2/5 Test #2: search ...........................   Passed    0.41 sec
+    Start 3: perft
+3/5 Test #3: perft ............................   Passed    0.01 sec
+    Start 4: uci
+4/5 Test #4: uci ..............................   Passed    0.97 sec
+    Start 5: experiments
+5/5 Test #5: experiments ......................   Passed    0.32 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =   1.73 sec
+search: 685 checks passed
+{"version":"0.1.0","revision":"046d5b043ec5072238e8708c9f0df8e9d57834ee","dirty":false,"compiler":"AppleClang 21.0.0.21000101","build_type":"Release","flags":" -O3 -DNDEBUG"}

@@ -1,0 +1,19 @@
+{
+  "tested_code": {
+    "revision": "eee9d44b5a73b36f06ae837e079a6afc66f8caaf",
+    "dirty": false
+  },
+  "hardware": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  }
+}

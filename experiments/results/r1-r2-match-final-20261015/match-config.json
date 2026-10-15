@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "comparison": "revision",
+  "seed": 20261015,
+  "engines": [
+    {
+      "name": "R2",
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/eee9d44b5a73b36f06ae837e079a6afc66f8caaf/ucl",
+      "revision": "eee9d44b5a73b36f06ae837e079a6afc66f8caaf",
+      "build": "CMake Release; isolated clean Git worktree",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0,
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16
+      }
+    },
+    {
+      "name": "R1",
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/engines/e603d431a721c3f883bb1843059d122ef6bd4de5/ucl",
+      "revision": "e603d431a721c3f883bb1843059d122ef6bd4de5",
+      "build": "CMake Release; isolated clean Git worktree",
+      "ucl_build_info": true,
+      "options": {
+        "MoveOverhead": 0
+      }
+    }
+  ],
+  "rounds": 8,
+  "games": 2,
+  "concurrency": 1,
+  "tc": "30+0.1",
+  "depth": 4,
+  "openings": {
+    "path": "experiments/openings/r2.epd",
+    "format": "epd",
+    "order": "sequential"
+  },
+  "maxmoves": 100,
+  "timeout_seconds": 600
+}

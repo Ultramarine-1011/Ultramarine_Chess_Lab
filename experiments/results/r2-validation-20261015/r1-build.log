@@ -1,0 +1,21 @@
+Preparing worktree (detached HEAD e603d43)
+HEAD is now at e603d43 test: cover Windows and POSIX executable paths portably
+-- The CXX compiler identification is AppleClang 21.0.0.21000101
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /var/folders/5h/h70f2y414c1_thp7lltsp5740000gn/T/ucl-revision-7vq9lk55/build
+[1/7] Building CXX object CMakeFiles/ucl.dir/engine/src/main.cpp.o
+[2/7] Building CXX object CMakeFiles/ucl_core.dir/engine/src/evaluator.cpp.o
+[3/7] Building CXX object CMakeFiles/ucl_core.dir/engine/src/position.cpp.o
+[4/7] Building CXX object CMakeFiles/ucl_core.dir/engine/src/search.cpp.o
+[5/7] Linking CXX static library libucl_core.a
+[6/7] Building CXX object CMakeFiles/ucl.dir/engine/src/uci.cpp.o
+[7/7] Linking CXX executable ucl

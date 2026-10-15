@@ -1,0 +1,42 @@
+Started game 1 of 16 (R2 vs R1)
+Finished game 1 (R2 vs R1): 1/2-1/2 {Draw by adjudication}
+Started game 2 of 16 (R1 vs R2)
+Finished game 2 (R1 vs R2): 0-1 {Black mates}
+Started game 3 of 16 (R2 vs R1)
+Finished game 3 (R2 vs R1): 1-0 {White mates}
+Started game 4 of 16 (R1 vs R2)
+Finished game 4 (R1 vs R2): 0-1 {Black mates}
+Started game 5 of 16 (R2 vs R1)
+Finished game 5 (R2 vs R1): 1-0 {White mates}
+Started game 6 of 16 (R1 vs R2)
+Finished game 6 (R1 vs R2): 1/2-1/2 {Draw by fifty moves rule}
+Started game 7 of 16 (R2 vs R1)
+Finished game 7 (R2 vs R1): 1-0 {White mates}
+Started game 8 of 16 (R1 vs R2)
+Finished game 8 (R1 vs R2): 0-1 {Black mates}
+Started game 9 of 16 (R2 vs R1)
+Finished game 9 (R2 vs R1): 1-0 {White mates}
+Started game 10 of 16 (R1 vs R2)
+Finished game 10 (R1 vs R2): 0-1 {Black mates}
+Started game 11 of 16 (R2 vs R1)
+Finished game 11 (R2 vs R1): 1-0 {White mates}
+Started game 12 of 16 (R1 vs R2)
+Finished game 12 (R1 vs R2): 0-1 {Black mates}
+Started game 13 of 16 (R2 vs R1)
+Finished game 13 (R2 vs R1): 1-0 {White mates}
+Started game 14 of 16 (R1 vs R2)
+Finished game 14 (R1 vs R2): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 15 of 16 (R2 vs R1)
+Finished game 15 (R2 vs R1): 1-0 {White mates}
+Started game 16 of 16 (R1 vs R2)
+Finished game 16 (R1 vs R2): 0-1 {Black mates}
+--------------------------------------------------
+Results of R2 vs R1 (30+0.1, NULL, 16MB - NULL, openings.epd):
+Elo: 394.11 +/- 267.06, nElo: 824.63 +/- 170.24
+LOS: 100.00 %, DrawRatio: 0.00 %, PairsRatio: inf
+Games: 16, Wins: 13, Losses: 0, Draws: 3, Points: 14.5 (90.62 %)
+Ptnml(0-2): [0, 0, 0, 3, 5], WL/DD Ratio: nan
+--------------------------------------------------
+Finished match
+Total Time: 00:00:06 (hours:minutes:seconds)
+

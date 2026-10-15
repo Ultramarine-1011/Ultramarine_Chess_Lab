@@ -1,0 +1,16 @@
+{
+  "tool_revision": {
+    "revision": "eee9d44b5a73b36f06ae837e079a6afc66f8caaf",
+    "dirty": false
+  },
+  "reference_revision": "e603d431a721c3f883bb1843059d122ef6bd4de5",
+  "compared_queries": 60,
+  "fields": [
+    "depth",
+    "score_cp",
+    "nodes",
+    "move",
+    "pv"
+  ],
+  "mismatches": 0
+}
