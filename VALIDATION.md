@@ -43,3 +43,15 @@ Perft 包括 startpos depth 4 = 197281、Kiwipete depth 3 = 97862、
 双平台远程运行：[GitHub Actions #38693572181](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38693572181)，
 5 个 job 全部 success。Windows 验证由 GitHub 托管 runner 执行；未在用户的
 Windows 实验主机上测试硬件性能或长时间负载。
+
+## 协作规范维护（2026-10-15）
+
+- 范围：仅完善 AGENTS.md 的长期工作方式，并在此保留交接记录；未启动 R2。
+- 版本：基于 `e6de4a06698f00989aed2472d22b9a1a2758a970` 的文档修改工作树；
+  `build/release/ucl --build-info` 确认复用的 Release 产物来自该干净提交。
+- 一致性检查：核对 ROADMAP.md、ARCHITECTURE.md、EXPERIMENTS.md、README.md、
+  相关接口、搜索实现、测试与 CI 定义，无冲突；第一轮 NN/RL 限制改为按授权里程碑确定范围。
+- 执行 `git diff --check`：通过；`ctest --preset release`：5/5 通过，
+  覆盖 unit、search、perft、uci、experiments。
+- 本次仅修改文档，不重跑跨平台 CI；上方 R1 CI 和目标硬件验证范围保持原有含义。
+- 状态：本次维护完成，无阻塞；后续阶段等待明确授权。
