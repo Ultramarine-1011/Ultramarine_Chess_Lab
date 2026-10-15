@@ -92,6 +92,22 @@ class ExperimentTests(unittest.TestCase):
             path = ROOT / f'experiments/results/r5-preflight-v2-{group}/record.json'
             self.assertEqual(validate_bundle(path, SCHEMA)['status'], 'completed')
 
+    def test_r5_paired_statistics_and_real_node_trace(self):
+        from ucl.r5_analysis import bootstrap, trace_queries
+        sample = [0, .25, .5, .75, 1]
+        a = bootstrap(sample)
+        self.assertEqual(a, bootstrap(sample))
+        self.assertEqual(a['score'], .5)
+        self.assertLessEqual(a['ci98_75_bonferroni_four'][0], a['ci95'][0])
+        self.assertGreaterEqual(a['ci98_75_bonferroni_four'][1], a['ci95'][1])
+        directory = ROOT/'experiments/results/r5-preflight-v2-b'
+        queries, options = trace_queries(directory, ['OriginalFull14', 'Handcrafted'])
+        self.assertEqual(sum(map(len, queries.values())), 12)
+        self.assertEqual(options['OriginalFull14']['Evaluator'], 'Linear')
+        self.assertTrue(all(q['stats']['nodes']==50000 and 'nodes 50000' in q['go']
+                            for rows in queries.values() for q in rows))
+        with self.assertRaises(ValueError): trace_queries(directory, ['OriginalFull14'])
+
     def test_pgn_pair_statistics_and_truncation(self):
         with tempfile.TemporaryDirectory() as tmp:
             pgn = Path(tmp) / "games.pgn"

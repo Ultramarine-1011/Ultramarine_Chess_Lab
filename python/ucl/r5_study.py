@@ -119,6 +119,7 @@ def freeze(optimized):
               'original': ORIGINAL, 'optimized': optimized, 'engines': controls,
               'protocol_sha256': sha256(ROOT/'docs/r5/protocol.md'),
               'analysis_sha256': sha256(Path(__file__)), 'tool_sha256': sha256(ROOT/'.tools/bin/fastchess.exe'),
+              'support_code': {n: sha256(ROOT/n) for n in ('python/ucl/r5_analysis.py', 'python/ucl/r5_performance.py', 'python/ucl/r5_equivalence.py')},
               'openings_sha256': sha256(RESULTS/'r5-openings-v1/openings.epd'),
               'configs': {g: sha256(CONFIGS/f'{g}.json') for g in 'ABCD'}}
     target = EVIDENCE/'formal-freeze.json'
@@ -128,10 +129,45 @@ def freeze(optimized):
     return frozen
 
 
+def matches():
+    """Run the frozen fixed schedule once. Failed groups require explicit recovery."""
+    from .match import run_match
+    from .integrity import validate_bundle
+    from .r5_performance import host
+    if git_state(ROOT)['dirty']: raise ValueError('formal run requires clean working tree')
+    frozen = json.loads((EVIDENCE/'formal-freeze.json').read_text())
+    if sha256(Path(__file__))!=frozen['analysis_sha256']: raise ValueError('frozen runner changed')
+    if sha256(ROOT/'.tools/bin/fastchess.exe')!=frozen['tool_sha256']: raise ValueError('tool changed')
+    for name, h in frozen['support_code'].items():
+        if sha256(ROOT/name)!=h: raise ValueError('frozen support code changed: '+name)
+    if sha256(RESULTS/'r5-openings-v1/openings.epd')!=frozen['openings_sha256']: raise ValueError('openings changed')
+    conditions = RESULTS/'r5-match-conditions-v1'; conditions.mkdir(parents=True, exist_ok=False)
+    index = {'code': git_state(ROOT), 'status': 'running', 'groups': {}, 'error': None}
+    write_json(conditions/'index.json', index)
+    try:
+        for group in 'ABCD':
+            if sha256(CONFIGS/f'{group}.json')!=frozen['configs'][group]: raise ValueError('config changed')
+            if shutil.disk_usage(ROOT).free<10*1024**3: raise ValueError('disk guard failed')
+            host(conditions/f'{group}-before.json')
+            output = RESULTS/f'r5-match-{group.lower()}-v1'
+            record = run_match(ROOT, CONFIGS/f'{group}.json', output, '.tools/bin/fastchess.exe')
+            index['groups'][group] = {'status': record['status'], 'record_sha256': sha256(output/'record.json')}
+            write_json(conditions/'index.json', index)
+            host(conditions/f'{group}-after.json')
+            if record['status']!='completed': raise ValueError(f'{group}: {record["error"]}')
+            validate_bundle(output/'record.json', json.loads((ROOT/'schemas/experiment-v1.schema.json').read_text()))
+        index['status'] = 'PASS'
+    except Exception as exc:
+        index.update(status='FAIL', error=f'{type(exc).__name__}: {exc}')
+    write_json(conditions/'index.json', index)
+    return index
+
+
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('operation', choices=['prepare', 'preflight', 'freeze'])
+    p.add_argument('operation', choices=['prepare', 'preflight', 'freeze', 'matches'])
     p.add_argument('--optimized')
     a = p.parse_args()
-    result = {'prepare': prepare, 'preflight': preflight, 'freeze': lambda: freeze(a.optimized)}[a.operation]()
+    result = {'prepare': prepare, 'preflight': preflight, 'freeze': lambda: freeze(a.optimized), 'matches': matches}[a.operation]()
     print(json.dumps(result, indent=2))
+    if isinstance(result, dict) and result.get('status')=='FAIL': raise SystemExit(1)

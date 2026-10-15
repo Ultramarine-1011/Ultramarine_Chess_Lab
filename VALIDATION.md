@@ -827,3 +827,20 @@ profile选择局部修改extended_features.cpp：以2×64常量掩码替代逐�
 新增Windows原始bundle跨平台字节回归与JSON换行断言，防止归档问题复发。
 R5.2技术门已通过；提交后立即独立clean构建并重复同一比较，正式采用clean二进制身份。
 R5.1 Actions#38770217890已success；归档字节修复b339fa6 CI仍运行，后续追踪。
+
+### R5.2 clean复核与R5.3/R5.4执行冻结
+
+0cf58acacee5be9e5aee4385515caac2c3a8cb0c 已独立临时worktree clean构建，编译器/flags
+与Original完全相同；optimized-build.json/log记录binary SHA和精确命令。
+clean原/优化在同48815局面与366查询全部精确等价（r5-equivalence-clean-v1）。
+R5.2 PASS，Actions#38771077740 macOS/Windows Release/Debug和sanitizer五项success。
+R5.1归档兼容修复Actions#38770570283亦五项success；旧failed与Windows实际主机层次仍分开。
+R5.3配置：三个O-P/P-O/O-P交替静态块，每块复用7次×100000调用×10局面的现有命令；
+搜索三引擎depth3/4/nodes50000各5次，共450查询，保留全部counter/PV和原始UCI。
+预定分析代码、真实trace解析/逐步位置hash、开局颜色顺序、节点时钟guard/提前终止检查、
+2000同开局配对bootstrap/Bonferroni区间、四组runner均已实现并冻结，12项实验工具测试通过，
+最新Release6/6退出0。正式freeze重建200开局再次精确一致；formal-freeze.json保存
+最终四配置/开局/tool/支持源码/clean引擎身份hash。冻结准备时code dirty明确保留，
+下一commit将全部文件封存；正式运行只在该commit clean根目录启动，二进制仍固定原/0cf。
+节点组实际node cap而非时钟代替；终局/已证mate等提前停止逐条分类，任何未分类则阻断分析。
+正式性能/1600局均尚未运行，先commit/push，再clean configure/build、执行性能研究。

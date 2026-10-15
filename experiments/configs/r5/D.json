@@ -5,8 +5,8 @@
   "engines": [
     {
       "name": "OptimizedFull14",
-      "path": "build/release/ucl.exe",
-      "revision": "HEAD",
+      "path": ".tools/engines/0cf58acacee5be9e5aee4385515caac2c3a8cb0c/ucl.exe",
+      "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
       "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
       "ucl_build_info": true,
       "options": {

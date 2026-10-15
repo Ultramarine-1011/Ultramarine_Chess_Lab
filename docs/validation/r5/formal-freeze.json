@@ -1,0 +1,261 @@
+{
+  "kind": "r5-formal-freeze",
+  "at": "2026-10-15T16:46:02.356967+00:00",
+  "code": {
+    "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+    "dirty": true
+  },
+  "original": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+  "optimized": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+  "engines": {
+    "A": [
+      {
+        "name": "OriginalFull14",
+        "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+        "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        },
+        "sha256": "82cdd1be701ad30be9ddc08ea255a9c0da864663b815ad0a222e100fe30f1605",
+        "build_info": {
+          "version": "0.1.0",
+          "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+          "dirty": false,
+          "compiler": "MSVC 19.51.36260.0",
+          "build_type": "Release",
+          "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+        },
+        "evaluation": {
+          "evaluator": "linear-v2",
+          "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+        }
+      },
+      {
+        "name": "Handcrafted",
+        "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+        "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Handcrafted"
+        },
+        "sha256": "82cdd1be701ad30be9ddc08ea255a9c0da864663b815ad0a222e100fe30f1605",
+        "build_info": {
+          "version": "0.1.0",
+          "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+          "dirty": false,
+          "compiler": "MSVC 19.51.36260.0",
+          "build_type": "Release",
+          "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+        },
+        "evaluation": {
+          "evaluator": "handcrafted-v1",
+          "model_sha256": null
+        }
+      }
+    ],
+    "B": [
+      {
+        "name": "OriginalFull14",
+        "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+        "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        },
+        "sha256": "82cdd1be701ad30be9ddc08ea255a9c0da864663b815ad0a222e100fe30f1605",
+        "build_info": {
+          "version": "0.1.0",
+          "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+          "dirty": false,
+          "compiler": "MSVC 19.51.36260.0",
+          "build_type": "Release",
+          "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+        },
+        "evaluation": {
+          "evaluator": "linear-v2",
+          "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+        }
+      },
+      {
+        "name": "Handcrafted",
+        "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+        "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Handcrafted"
+        },
+        "sha256": "82cdd1be701ad30be9ddc08ea255a9c0da864663b815ad0a222e100fe30f1605",
+        "build_info": {
+          "version": "0.1.0",
+          "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+          "dirty": false,
+          "compiler": "MSVC 19.51.36260.0",
+          "build_type": "Release",
+          "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+        },
+        "evaluation": {
+          "evaluator": "handcrafted-v1",
+          "model_sha256": null
+        }
+      }
+    ],
+    "C": [
+      {
+        "name": "OptimizedFull14",
+        "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\0cf58acacee5be9e5aee4385515caac2c3a8cb0c\\ucl.exe",
+        "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        },
+        "sha256": "3fd3041074f42d9b76476a0892b1d0c304c810b03dc2a7a93e9fbb3f9ce3cf88",
+        "build_info": {
+          "version": "0.1.0",
+          "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+          "dirty": false,
+          "compiler": "MSVC 19.51.36260.0",
+          "build_type": "Release",
+          "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+        },
+        "evaluation": {
+          "evaluator": "linear-v2",
+          "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+        }
+      },
+      {
+        "name": "Handcrafted",
+        "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+        "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Handcrafted"
+        },
+        "sha256": "82cdd1be701ad30be9ddc08ea255a9c0da864663b815ad0a222e100fe30f1605",
+        "build_info": {
+          "version": "0.1.0",
+          "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+          "dirty": false,
+          "compiler": "MSVC 19.51.36260.0",
+          "build_type": "Release",
+          "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+        },
+        "evaluation": {
+          "evaluator": "handcrafted-v1",
+          "model_sha256": null
+        }
+      }
+    ],
+    "D": [
+      {
+        "name": "OptimizedFull14",
+        "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\0cf58acacee5be9e5aee4385515caac2c3a8cb0c\\ucl.exe",
+        "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        },
+        "sha256": "3fd3041074f42d9b76476a0892b1d0c304c810b03dc2a7a93e9fbb3f9ce3cf88",
+        "build_info": {
+          "version": "0.1.0",
+          "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+          "dirty": false,
+          "compiler": "MSVC 19.51.36260.0",
+          "build_type": "Release",
+          "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+        },
+        "evaluation": {
+          "evaluator": "linear-v2",
+          "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+        }
+      },
+      {
+        "name": "OriginalFull14",
+        "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+        "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        },
+        "sha256": "82cdd1be701ad30be9ddc08ea255a9c0da864663b815ad0a222e100fe30f1605",
+        "build_info": {
+          "version": "0.1.0",
+          "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+          "dirty": false,
+          "compiler": "MSVC 19.51.36260.0",
+          "build_type": "Release",
+          "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+        },
+        "evaluation": {
+          "evaluator": "linear-v2",
+          "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+        }
+      }
+    ]
+  },
+  "protocol_sha256": "d81bc51e093476602da2095c4f77777bc41e0ac9ec09abda15ffb93c45c539c0",
+  "analysis_sha256": "2e43957148d1b7af0ee7ff38c39c1ec524c8d3687ec43277fce8d73da09c1ebe",
+  "tool_sha256": "c6d7e4458a58025983c81bf38c524cb213e6f27559657dcfd72543392a431a71",
+  "support_code": {
+    "python/ucl/r5_analysis.py": "52e9398c74d570896701387c8b79d6591a685ef84f44de189470631cbc097d17",
+    "python/ucl/r5_performance.py": "5249c77b77c7970659b84d6b81136112cd41b8c18aaba03b495316906ef1cca6",
+    "python/ucl/r5_equivalence.py": "adff1232d1fee0880729b4315cce983ef8382b1acce4a3637cc4696b53bcd23f"
+  },
+  "openings_sha256": "5753882fcea086c9e0531b7364d0f0d8084991b7b282dd134ad5195d76881e75",
+  "configs": {
+    "A": "34629ae24e8d91799e40c538504ce163315c694a2d7c455e639d54bad3316332",
+    "B": "54787ce81c5e27d7ccd3bce526e6b045e6ca1ad31265fafc2f1a9bc1a61d5526",
+    "C": "00cbd35d3008f1d487748f4935f6c546d6ce9fc75560a3f9ecf353030643196e",
+    "D": "fe550b984b68924d6ced98a9ff6285cad2fbbd056da37dbb42a47c5ac734e68c"
+  }
+}

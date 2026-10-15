@@ -1,0 +1,42 @@
+{
+  "binary": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\engines\\0cf58acacee5be9e5aee4385515caac2c3a8cb0c\\ucl.exe",
+  "sha256": "3fd3041074f42d9b76476a0892b1d0c304c810b03dc2a7a93e9fbb3f9ce3cf88",
+  "build_info": {
+    "version": "0.1.0",
+    "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+    "dirty": false,
+    "compiler": "MSVC 19.51.36260.0",
+    "build_type": "Release",
+    "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+  },
+  "commands": [
+    [
+      "git",
+      "-C",
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab",
+      "worktree",
+      "add",
+      "--detach",
+      "C:\\Users\\26255\\AppData\\Local\\Temp\\ucl-revision-b3du7ahi\\source",
+      "0cf58acacee5be9e5aee4385515caac2c3a8cb0c"
+    ],
+    [
+      "cmake",
+      "-S",
+      "C:\\Users\\26255\\AppData\\Local\\Temp\\ucl-revision-b3du7ahi\\source",
+      "-B",
+      "C:\\Users\\26255\\AppData\\Local\\Temp\\ucl-revision-b3du7ahi\\build",
+      "-G",
+      "Ninja",
+      "-DBUILD_TESTING=OFF",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    [
+      "cmake",
+      "--build",
+      "C:\\Users\\26255\\AppData\\Local\\Temp\\ucl-revision-b3du7ahi\\build",
+      "--parallel",
+      "4"
+    ]
+  ]
+}

@@ -1,0 +1,1168 @@
+Preparing worktree (detached HEAD 0cf58ac)
+HEAD is now at 0cf58ac perf(r5.2): optimize exact Full14 extraction with exhaustive equivalence evidence
+-- The CXX compiler identification is MSVC 19.51.36260.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Found Threads: TRUE
+-- Configuring done (2.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/26255/AppData/Local/Temp/ucl-revision-b3du7ahi/build
+[1/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\evaluator.cpp.obj
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/evaluator.hpp
+注意: 包含文件:   C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\third_party\chess-library\chess.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\functional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals_core.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sal.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concurrencysal.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vadefs.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xkeycheck.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\exception
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_doom_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new_debug.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\crtdefs.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\use_ansi.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdlib
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\type_traits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtr1common
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdint
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdint.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_exception.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\eh.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tuple
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\compare
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concepts
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_iter_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\utility
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\initializer_list
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\typeinfo
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_typeinfo.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmemory
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\climits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cwchar
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/types.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.inl.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\setjmp.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\immintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\wmmintrin.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\nmmintrin.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\smmintrin.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tmmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\pmmintrin.h
+注意: 包含文件:                C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\emmintrin.h
+注意: 包含文件:                 C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmmintrin.h
+注意: 包含文件:                  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\mmintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\zmmintrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ammintrin.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\new
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xutility
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstring
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\unordered_map
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xhash
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cmath
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\list
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xpolymorphic_allocator.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vector
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_bit_utils.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xbit_ops.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xnode_handle.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bit
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\algorithm
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_int128.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_minmax.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bitset
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iosfwd
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xstring
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_string_view.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cassert
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iostream
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\istream
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ostream.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ios
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocnum
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iterator
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\streambuf
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xiosbase
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\system_error
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_system_error_abi.hpp
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cerrno
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdexcept
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcall_once.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xerrc.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\atomic
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xthreads.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_threads_core.hpp
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtimec.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ctime
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic_wait.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocale
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\memory
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfacet
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocinfo
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cctype
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\clocale
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ostream
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string_view
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\array
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\optional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xsmf_control.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\charconv
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu_tables.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_tables.h
+[2/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\extended_features.cpp.obj
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/evaluator.hpp
+注意: 包含文件:   C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\third_party\chess-library\chess.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\functional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals_core.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sal.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concurrencysal.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vadefs.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xkeycheck.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\exception
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_doom_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new_debug.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\crtdefs.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\use_ansi.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdlib
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\type_traits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtr1common
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdint
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdint.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_exception.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\eh.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tuple
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\compare
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concepts
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_iter_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\utility
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\initializer_list
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\typeinfo
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_typeinfo.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmemory
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\climits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cwchar
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/types.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.inl.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\setjmp.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\immintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\wmmintrin.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\nmmintrin.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\smmintrin.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tmmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\pmmintrin.h
+注意: 包含文件:                C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\emmintrin.h
+注意: 包含文件:                 C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmmintrin.h
+注意: 包含文件:                  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\mmintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\zmmintrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ammintrin.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\new
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xutility
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstring
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\unordered_map
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xhash
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cmath
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\list
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xpolymorphic_allocator.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vector
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_bit_utils.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xbit_ops.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xnode_handle.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bit
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\algorithm
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_int128.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_minmax.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bitset
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iosfwd
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xstring
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_string_view.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cassert
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iostream
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\istream
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ostream.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ios
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocnum
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iterator
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\streambuf
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xiosbase
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\system_error
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_system_error_abi.hpp
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cerrno
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdexcept
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcall_once.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xerrc.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\atomic
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xthreads.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_threads_core.hpp
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtimec.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ctime
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic_wait.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocale
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\memory
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfacet
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocinfo
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cctype
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\clocale
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ostream
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string_view
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\array
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\optional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xsmf_control.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\charconv
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu_tables.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_tables.h
+[3/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\linear_evaluator.cpp.obj
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/evaluator.hpp
+注意: 包含文件:   C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\third_party\chess-library\chess.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\functional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals_core.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sal.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concurrencysal.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vadefs.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xkeycheck.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\exception
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_doom_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new_debug.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\crtdefs.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\use_ansi.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdlib
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\type_traits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtr1common
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdint
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdint.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_exception.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\eh.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tuple
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\compare
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concepts
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_iter_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\utility
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\initializer_list
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\typeinfo
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_typeinfo.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmemory
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\climits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cwchar
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/types.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.inl.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\setjmp.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\immintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\wmmintrin.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\nmmintrin.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\smmintrin.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tmmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\pmmintrin.h
+注意: 包含文件:                C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\emmintrin.h
+注意: 包含文件:                 C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmmintrin.h
+注意: 包含文件:                  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\mmintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\zmmintrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ammintrin.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\new
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xutility
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstring
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\unordered_map
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xhash
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cmath
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\list
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xpolymorphic_allocator.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vector
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_bit_utils.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xbit_ops.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xnode_handle.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bit
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\algorithm
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_int128.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_minmax.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bitset
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iosfwd
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xstring
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_string_view.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cassert
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iostream
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\istream
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ostream.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ios
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocnum
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iterator
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\streambuf
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xiosbase
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\system_error
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_system_error_abi.hpp
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cerrno
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdexcept
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcall_once.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xerrc.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\atomic
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xthreads.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_threads_core.hpp
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtimec.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ctime
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic_wait.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocale
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\memory
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfacet
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocinfo
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cctype
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\clocale
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ostream
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string_view
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\array
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\optional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xsmf_control.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\charconv
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu_tables.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_tables.h
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\third_party\picosha2\picosha2.h
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cassert
+注意: 包含文件:    C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sstream
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\fstream
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_filebuf.hpp
+[4/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\search.cpp.obj
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/search.hpp
+注意: 包含文件:   C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/evaluator.hpp
+注意: 包含文件:    C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\third_party\chess-library\chess.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\functional
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals_core.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sal.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concurrencysal.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vadefs.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xkeycheck.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\exception
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_doom_core.hpp
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new_debug.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\crtdefs.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\use_ansi.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdlib
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\type_traits
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstddef
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtr1common
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdint
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdint.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_exception.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\eh.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tuple
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\compare
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concepts
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_iter_core.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\utility
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\initializer_list
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\typeinfo
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_typeinfo.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmemory
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cfloat
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\climits
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cwchar
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdio
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_string.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/stat.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/types.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.inl.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\setjmp.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\immintrin.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\wmmintrin.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\nmmintrin.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\smmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tmmintrin.h
+注意: 包含文件:                C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\pmmintrin.h
+注意: 包含文件:                 C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\emmintrin.h
+注意: 包含文件:                  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmmintrin.h
+注意: 包含文件:                   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\mmintrin.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\zmmintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ammintrin.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\new
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xutility
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstring
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\unordered_map
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xhash
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cmath
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\list
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xpolymorphic_allocator.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vector
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_bit_utils.hpp
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xbit_ops.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xnode_handle.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bit
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\algorithm
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_int128.hpp
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_minmax.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bitset
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iosfwd
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xstring
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_string_view.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cassert
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iostream
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\istream
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ostream.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ios
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocnum
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iterator
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\streambuf
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xiosbase
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\system_error
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_system_error_abi.hpp
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cerrno
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdexcept
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcall_once.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xerrc.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\atomic
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xthreads.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_threads_core.hpp
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtimec.h
+注意: 包含文件:                C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ctime
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic_wait.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocale
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\memory
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfacet
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocinfo
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cctype
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\clocale
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ostream
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string_view
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\array
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\optional
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xsmf_control.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\charconv
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu_tables.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_tables.h
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\chrono
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_chrono.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ratio
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfilesystem_abi.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_tzdb.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\format
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_format_ucd_tables.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_formatter.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_print.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ranges_tuple_formatter.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\locale
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocbuf
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocmes
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocmon
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xloctime
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\forward_list
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iomanip
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sstream
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stop_token
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/transposition.hpp
+[5/9] Building CXX object CMakeFiles\ucl_core.dir\engine\src\position.cpp.obj
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/position.hpp
+注意: 包含文件:   C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\third_party\chess-library\chess.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\functional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals_core.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sal.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concurrencysal.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vadefs.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xkeycheck.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\exception
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_doom_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new_debug.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\crtdefs.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\use_ansi.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdlib
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\type_traits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtr1common
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdint
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdint.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_exception.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\eh.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tuple
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\compare
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concepts
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_iter_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\utility
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\initializer_list
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\typeinfo
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_typeinfo.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmemory
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\climits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cwchar
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/types.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.inl.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\setjmp.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\immintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\wmmintrin.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\nmmintrin.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\smmintrin.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tmmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\pmmintrin.h
+注意: 包含文件:                C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\emmintrin.h
+注意: 包含文件:                 C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmmintrin.h
+注意: 包含文件:                  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\mmintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\zmmintrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ammintrin.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\new
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xutility
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstring
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\unordered_map
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xhash
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cmath
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\list
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xpolymorphic_allocator.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vector
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_bit_utils.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xbit_ops.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xnode_handle.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bit
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\algorithm
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_int128.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_minmax.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bitset
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iosfwd
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xstring
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_string_view.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cassert
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iostream
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\istream
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ostream.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ios
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocnum
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iterator
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\streambuf
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xiosbase
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\system_error
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_system_error_abi.hpp
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cerrno
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdexcept
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcall_once.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xerrc.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\atomic
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xthreads.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_threads_core.hpp
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtimec.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ctime
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic_wait.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocale
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\memory
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfacet
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocinfo
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cctype
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\clocale
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ostream
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string_view
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\array
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\optional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xsmf_control.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\charconv
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu_tables.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_tables.h
+[6/9] Linking CXX static library ucl_core.lib
+[7/9] Building CXX object CMakeFiles\ucl.dir\engine\src\main.cpp.obj
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/uci.hpp
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iosfwd
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals_core.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sal.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concurrencysal.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vadefs.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xkeycheck.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_doom_core.hpp
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new_debug.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\crtdefs.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\use_ansi.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdio
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstring
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_string.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cwchar
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/stat.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/types.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.inl.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\setjmp.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\immintrin.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\wmmintrin.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\nmmintrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\smmintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tmmintrin.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\pmmintrin.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\emmintrin.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\mmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\zmmintrin.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ammintrin.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtr1common
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\build\generated\ucl/build_info.hpp
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/evaluator.hpp
+注意: 包含文件:   C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\third_party\chess-library\chess.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\functional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\exception
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdlib
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\type_traits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstddef
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdint
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdint.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_exception.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\eh.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tuple
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\compare
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concepts
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_iter_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\utility
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\initializer_list
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\typeinfo
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_typeinfo.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmemory
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\climits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\new
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xutility
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\unordered_map
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xhash
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cmath
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\list
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xpolymorphic_allocator.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vector
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_bit_utils.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xbit_ops.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xnode_handle.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bit
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\algorithm
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_int128.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_minmax.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bitset
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xstring
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_string_view.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cassert
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iostream
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\istream
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ostream.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ios
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocnum
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iterator
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\streambuf
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xiosbase
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\system_error
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_system_error_abi.hpp
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cerrno
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdexcept
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcall_once.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xerrc.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\atomic
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xthreads.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_threads_core.hpp
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtimec.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ctime
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic_wait.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocale
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\memory
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfacet
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocinfo
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cctype
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\clocale
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ostream
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string_view
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\array
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\optional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xsmf_control.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\charconv
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu_tables.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_tables.h
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/position.hpp
+注意: 包含文件:  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sstream
+注意: 包含文件:  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iomanip
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocmon
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xloctime
+注意: 包含文件:  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\chrono
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_chrono.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ratio
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfilesystem_abi.h
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_tzdb.hpp
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\format
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_format_ucd_tables.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_formatter.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_print.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ranges_tuple_formatter.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\locale
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocbuf
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocmes
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\forward_list
+[8/9] Building CXX object CMakeFiles\ucl.dir\engine\src\uci.cpp.obj
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/uci.hpp
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iosfwd
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\yvals_core.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sal.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concurrencysal.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vadefs.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xkeycheck.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_doom_core.hpp
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\crtdbg.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new_debug.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_new.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\crtdefs.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\use_ansi.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdio
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdio.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstring
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\string.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memory.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\errno.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_string.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstring.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cwchar
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\wchar.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wconio.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wctype.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wio.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_share.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_wtime.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/stat.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\sys/types.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.inl.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\setjmp.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\immintrin.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\wmmintrin.h
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\nmmintrin.h
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\smmintrin.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tmmintrin.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\pmmintrin.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\emmintrin.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\mmintrin.h
+注意: 包含文件:               C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\malloc.h
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_malloc.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\zmmintrin.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ammintrin.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtr1common
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/position.hpp
+注意: 包含文件:   C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\third_party\chess-library\chess.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\functional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\exception
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdlib
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_math.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_search.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\stddef.h
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\type_traits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstddef
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cstdint
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdint.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_exception.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\eh.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_terminate.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\tuple
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\compare
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\concepts
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_iter_core.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\utility
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\initializer_list
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\typeinfo
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_typeinfo.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xmemory
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\limits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\float.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\climits
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\intrin0.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\new
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xutility
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\unordered_map
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xhash
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cmath
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\list
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xpolymorphic_allocator.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vector
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_bit_utils.hpp
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xbit_ops.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xnode_handle.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bit
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\algorithm
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_int128.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_minmax.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\bitset
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xstring
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_string_view.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cassert
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\assert.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iostream
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\istream
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ostream.hpp
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ios
+注意: 包含文件:        C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocnum
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iterator
+注意: 包含文件:         C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\streambuf
+注意: 包含文件:          C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xiosbase
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\share.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\system_error
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_system_error_abi.hpp
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cerrno
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stdexcept
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcall_once.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xerrc.h
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\atomic
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xthreads.h
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_threads_core.hpp
+注意: 包含文件:              C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xtimec.h
+注意: 包含文件:               C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ctime
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xatomic_wait.h
+注意: 包含文件:           C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocale
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\memory
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfacet
+注意: 包含文件:            C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocinfo
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\cctype
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\ctype.h
+注意: 包含文件:             C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\clocale
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\locale.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ostream
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\string_view
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\array
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\optional
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xsmf_control.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\charconv
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu.h
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_ryu_tables.h
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xcharconv_tables.h
+注意: 包含文件:  C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/search.hpp
+注意: 包含文件:   C:\Users\26255\AppData\Local\Temp\ucl-revision-b3du7ahi\source\engine\include\ucl/evaluator.hpp
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\chrono
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_chrono.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\ratio
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xfilesystem_abi.h
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_tzdb.hpp
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\format
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_format_ucd_tables.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_formatter.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_print.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\__msvc_ranges_tuple_formatter.hpp
+注意: 包含文件:     C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\locale
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocbuf
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocmes
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xlocmon
+注意: 包含文件:      C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\xloctime
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\forward_list
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\iomanip
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\sstream
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\stop_token
+注意: 包含文件:  C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\condition_variable
+注意: 包含文件:   C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\mutex
+注意: 包含文件:    C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\thread
+注意: 包含文件:     C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\process.h
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\corecrt_startup.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt\math.h
+注意: 包含文件:       C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools\VC\Tools\MSVC\14.51.36231\include\vcruntime_startup.h
+[9/9] Linking CXX executable ucl.exe

@@ -1,0 +1,9 @@
+{
+  "experiments\\configs\\r5\\benchmark-search.json": "4c73cadc239de9768988e67bc8239a3ef6f4b20af678c35d28853c8add1c7e72",
+  "experiments\\configs\\r5\\benchmark-static-0-O.json": "6cd9ace6a0e4e6f6217d061f268ba43ef06b24fbaf803f072964416d387e3f20",
+  "experiments\\configs\\r5\\benchmark-static-0-P.json": "de1080b4190209dc947f30b31467dff12a07d79129bb707dc749ebd3133b3112",
+  "experiments\\configs\\r5\\benchmark-static-1-O.json": "6cd9ace6a0e4e6f6217d061f268ba43ef06b24fbaf803f072964416d387e3f20",
+  "experiments\\configs\\r5\\benchmark-static-1-P.json": "de1080b4190209dc947f30b31467dff12a07d79129bb707dc749ebd3133b3112",
+  "experiments\\configs\\r5\\benchmark-static-2-O.json": "6cd9ace6a0e4e6f6217d061f268ba43ef06b24fbaf803f072964416d387e3f20",
+  "experiments\\configs\\r5\\benchmark-static-2-P.json": "de1080b4190209dc947f30b31467dff12a07d79129bb707dc749ebd3133b3112"
+}
