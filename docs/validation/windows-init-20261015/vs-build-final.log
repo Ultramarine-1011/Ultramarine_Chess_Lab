@@ -1,0 +1,11 @@
+[1/11] Building CXX object CMakeFiles\ucl_core.dir\engine\src\evaluator.cpp.obj
+[2/11] Building CXX object CMakeFiles\ucl_core.dir\engine\src\extended_features.cpp.obj
+[3/11] Building CXX object CMakeFiles\ucl_core.dir\engine\src\linear_evaluator.cpp.obj
+[4/11] Building CXX object CMakeFiles\ucl_core.dir\engine\src\search.cpp.obj
+[5/11] Building CXX object CMakeFiles\ucl_core.dir\engine\src\position.cpp.obj
+[6/11] Linking CXX static library ucl_core.lib
+[7/11] Building CXX object CMakeFiles\ucl.dir\engine\src\main.cpp.obj
+[8/11] Building CXX object CMakeFiles\ucl.dir\engine\src\uci.cpp.obj
+[9/11] Linking CXX executable ucl.exe
+[10/11] Building CXX object CMakeFiles\ucl_tests.dir\tests\core_tests.cpp.obj
+[11/11] Linking CXX executable ucl_tests.exe

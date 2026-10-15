@@ -1,0 +1,119 @@
+[
+  {
+    "name": "build-info",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\build\\release\\ucl.exe",
+      "--build-info"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "pip-check",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "pip-freeze",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cli-help",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\ucl-lab.exe",
+      "--help"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cli-match-help",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\ucl-lab.exe",
+      "match",
+      "--help"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cli-benchmark-help",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\ucl-lab.exe",
+      "benchmark",
+      "--help"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cli-validate-help",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\ucl-lab.exe",
+      "validate",
+      "--help"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cli-report-help",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\ucl-lab.exe",
+      "report",
+      "--help"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cli-validate",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\ucl-lab.exe",
+      "validate",
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r4-telemetry-smoke\\record.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "cli-report",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.venv\\Scripts\\ucl-lab.exe",
+      "report",
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r4-telemetry-smoke\\record.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "basic-uci",
+    "exit_code": 0,
+    "legal_bestmove": "b1c3"
+  },
+  {
+    "name": "fastchess-version",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\bin\\fastchess.exe",
+      "--version"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "fastchess-compliance",
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\bin\\fastchess.exe",
+      "--compliance",
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\build\\release\\ucl.exe"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "research-files-unchanged",
+    "files": 219,
+    "pass": true
+  }
+]

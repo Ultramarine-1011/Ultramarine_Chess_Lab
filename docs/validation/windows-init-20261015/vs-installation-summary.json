@@ -1,0 +1,12 @@
+{
+  "instanceId": "8b196b5e",
+  "installationPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools",
+  "installationVersion": "18.10.12306.391",
+  "isComplete": true,
+  "isLaunchable": true,
+  "isRebootRequired": false,
+  "productId": "Microsoft.VisualStudio.Product.BuildTools",
+  "install_exit_code": 0,
+  "winget_version": "18.10.4",
+  "compiler": "MSVC 19.51.36260.0"
+}

@@ -1,0 +1,31 @@
+> uci
+< id name Ultramarine Chess Lab 0.1.0
+< id author UCL contributors
+< option name MoveOverhead type spin default 10 min 0 max 5000
+< option name Quiescence type check default true
+< option name UseTT type check default true
+< option name Hash type spin default 16 min 1 max 1024
+< option name PVOrdering type check default true
+< option name Evaluator type combo default Handcrafted var Handcrafted var Linear
+< option name ModelSHA256 type string default <empty>
+< option name ModelFile type string default <empty>
+< uciok
+> isready
+< readyok
+> evalinfo
+< info string ucl_evaluator {"evaluator":"handcrafted-v1","model_sha256":null}
+> ucinewgame
+> position startpos moves e2e4 e7e5
+> go depth 4
+< info depth 1 score cp 12 nodes 32 time 2 nps 16000 pv b1c3
+< info depth 2 score cp 0 nodes 468 time 2 nps 234000 pv b1c3 b8c6
+< info depth 3 score cp 12 nodes 1736 time 3 nps 578666 pv b1c3 b8c6 g1e2
+< info depth 4 score cp 0 nodes 18053 time 13 nps 1388692 pv b1c3 b8c6 g1e2 g8f6
+< info string ucl_stats {"depth":4,"score_cp":0,"nodes":18053,"qnodes":16870,"tt_probes":1182,"tt_hits":209,"tt_cutoffs":27,"tt_stores":1155,"pv_order_hits":6,"tt_order_hits":182,"elapsed_us":13307}
+< bestmove b1c3
+> position fen 7k/6Q1/6K1/8/8/8/8/8 b - - 0 1
+> go depth 1
+< info depth 0 score cp -30000 nodes 0 time 0 nps 0
+< info string ucl_stats {"depth":0,"score_cp":-30000,"nodes":0,"qnodes":0,"tt_probes":0,"tt_hits":0,"tt_cutoffs":0,"tt_stores":0,"pv_order_hits":0,"tt_order_hits":0,"elapsed_us":0}
+< bestmove 0000
+> quit

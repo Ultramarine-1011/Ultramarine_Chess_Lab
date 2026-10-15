@@ -738,3 +738,29 @@ Mac恢复研究PASS、Windows物理主机NOT_RUN与棋力改善假设在本设�
 完整400局、独立test与16个保留实验包/派生研究都实际核验；Handcrafted继续默认。
 最后仅追加本节/报告CI链接/clean日志的[skip ci]文档收尾，不改工程与研究产物，
 正式实验仍准确引用625d84e和057f2cf及43e2e1ad...模型。停止R4，不实施R5。
+
+### Windows 8940HX 主机首次环境初始化（2026-10-15）
+
+仅 Windows 环境与兼容性验证；clean `80616335bdd1455201c13562ced8673d7da9b99f`
+在 Windows 11 / Ryzen 9 8940HX、Python 3.12.14、MSVC 19.44.35229、
+CMake 4.4.4 / Ninja 1.13.2 下 Release configure/build 退出 0，CTest **6/6**
+（25.66 秒）。独立 UCI、Python CLI help/只读 validate/report、pip check 均通过；
+官方 fastchess v1.8.2-alpha UCI compliance **40/40**。完整命令、版本、失败与恢复、
+二进制身份和日志见 [本机工程验证](docs/validation/windows-init-20261015/report.md)。
+
+MSVC 标准安装因 UAC 取消返回 1602，改用项目 ignored `.tools` 内的便携工具链；
+Python 包下载中断/截断后经断点续传和官方哈希核验恢复。没有发现需要修改算法、
+引擎、Python 或测试源码的 Windows 问题；本次仅归档文档与验证日志。
+现有 `experiments/results` **219 文件集合及全部 SHA-256 原样不变**。
+未运行正式比赛、benchmark、模型训练命令或已冻结的独立 test，未推进 R5。
+本机工程 PASS 与正式 Windows 研究 NOT_RUN 分开；发布版 fastchess 与研究固定开发
+提交不同，重定向时的 console mode 提示原样记录。不改变既有研究结果或结论。
+
+随后按用户要求重新触发 UAC，标准 VS Build Tools 2026 18.10.4 安装退出 0，
+完整且可启动，无需重启。最终默认 MSVC 19.51.36260 / SDK 10.0.26100.0。
+发现中文 MSVC 的 UTF-8 include 前缀被 CMake 误解码，首次虽能构建但 Ninja
+八项 header deps 均为 0；以本机显式 CMAKE_PROJECT_INCLUDE 修正精确前缀，
+八项依赖恢复为[2,2,3,4,2,5,5,5]，再次构建正确 no-op。配置文件仅显式启用，
+不修改项目 CMakeLists/presets 或算法。最终标准工具链 Release **6/6（34.23秒）**、
+UCI/CLI、fastchess **40/40**；8061633+仅文档证据 dirty 状态准确保留，全部
+219 研究文件仍原字节不变。详见同一报告的标准 VS 最终验证及 `vs-*` 证据。

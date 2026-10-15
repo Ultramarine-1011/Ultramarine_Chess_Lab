@@ -1,0 +1,10 @@
+{
+  "before_files": 219,
+  "after_files": 219,
+  "identical": true,
+  "snapshot_sha256": "016b63533d4dbbac3ae0bd1eefc4cb9c600413968ca0674354e3a0baab4a6dad",
+  "scope": "all files under experiments/results, including frozen test markers and official experiment bundles",
+  "config_check": "local Windows smoke config validated; executable/opening paths resolve; no games executed",
+  "engine_sha256": "fad406adbbc1ffe04f8ece18e52edb613b8b650708ebf301935026840d2ab74c",
+  "git_source_changes": ""
+}

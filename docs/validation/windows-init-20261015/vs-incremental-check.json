@@ -1,0 +1,25 @@
+{
+  "object_dependency_counts": [
+    2,
+    2,
+    3,
+    4,
+    2,
+    5,
+    5,
+    5
+  ],
+  "all_positive": true,
+  "project_and_generated_headers_present": true,
+  "fix": "CMAKE_PROJECT_INCLUDE=.tools/windows-msvc-rules.cmake",
+  "before_counts": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}

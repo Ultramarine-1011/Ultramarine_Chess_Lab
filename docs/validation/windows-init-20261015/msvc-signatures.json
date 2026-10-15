@@ -1,0 +1,12 @@
+[
+  {
+    "Path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\msvc\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+    "Status": 0,
+    "Signer": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+  },
+  {
+    "Path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\msvc\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe",
+    "Status": 0,
+    "Signer": "CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US"
+  }
+]

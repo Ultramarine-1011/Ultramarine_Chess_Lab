@@ -1,0 +1,12 @@
+# UCL experiment 383d1b2b-871e-4591-93a4-6210e2c7a4c9
+
+Revision: `deab47005cad0615d7f150e008c33cb2017311bf`; dirty: `True`
+
+UCL-candidate vs UCL-baseline: 2 W / 0 D / 2 L (4 games), score 0.500.
+
+Paired rounds: 2; paired bootstrap score CI95: [0.5, 0.5].
+
+Pair scores (0, 0.5, 1, 1.5, 2): [0, 0, 2, 0, 0].
+
+Descriptive smoke/baseline statistics; not evidence of Elo improvement.
+
