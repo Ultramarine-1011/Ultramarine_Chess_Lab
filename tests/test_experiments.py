@@ -10,7 +10,8 @@ from unittest.mock import patch
 from jsonschema import ValidationError
 
 from ucl.match import command, run_match, run_process, validate_config
-from ucl.records import new_record, validate_record, write_json
+from ucl.records import new_record, validate_record, write_json, sha256, utc_now
+from ucl.integrity import validate_bundle
 from ucl.report import summarize_pgn
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -74,6 +75,62 @@ class ExperimentTests(unittest.TestCase):
             self.assertTrue((output / "report.md").exists())
             with self.assertRaises(FileExistsError):
                 run_match(ROOT, ROOT / "experiments/configs/smoke.json", output, allow_dirty=True)
+
+    def test_bundle_integrity_and_tampering(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp) / "bundle"
+            config = deepcopy(CONFIG)
+            for e in config["engines"]:
+                e["ucl_build_info"] = False
+                e["path"] = sys.executable
+            source = Path(tmp) / "input.json"
+            write_json(source, config)
+
+            def fake_match(args, directory, log, timeout):
+                # Reproduce fastchess's filename collision.
+                write_json(directory / "config.json", {"fastchess": "generated"})
+                text = ""
+                a, b = [e["name"] for e in config["engines"]]
+                for rnd in (1, 2):
+                    for white, black in ((a, b), (b, a)):
+                        text += f'[Round "{rnd}"]\n[White "{white}"]\n[Black "{black}"]\n[Result "1/2-1/2"]\n[Termination "adjudication"]\n\n1. e4 1/2-1/2\n\n'
+                (directory / "games.pgn").write_text(text)
+                return 0
+
+            check_output = subprocess.check_output
+            def output_for(args, **kwargs):
+                return "fake-fastchess" if args[-1] == "--version" else check_output(args, **kwargs)
+
+            with patch("ucl.match.run_process", side_effect=fake_match), patch(
+                    "ucl.match.subprocess.check_output", side_effect=output_for):
+                record = run_match(ROOT, source, output, fastchess=sys.executable, allow_dirty=True)
+            self.assertEqual(record["status"], "completed", record["error"])
+            self.assertEqual(json.loads((output / "match-config.json").read_text()), config)
+            path = output / "record.json"
+            validate_bundle(path, SCHEMA)
+            for name in record["artifacts"]:
+                artifact = output / name
+                original = artifact.read_bytes()
+                artifact.write_bytes(original + b"tampered")
+                with self.assertRaisesRegex(ValueError, "integrity"):
+                    validate_bundle(path, SCHEMA)
+                artifact.write_bytes(original)
+            for mutate in (lambda r: r["results"].update(wins=1),
+                           lambda r: r["results"].update(score_ci95_paired_bootstrap=[0, 1]),
+                           lambda r: r.update(seed=0),
+                           lambda r: r["engines"][0].update(revision="b" * 40),
+                           lambda r: r["artifacts"].pop("games.pgn"),
+                           lambda r: r["artifacts"].update({"../outside": {"sha256": "a" * 64, "bytes": 0}})):
+                bad = deepcopy(record); mutate(bad); write_json(path, bad)
+                with self.assertRaises(ValueError):
+                    validate_bundle(path, SCHEMA)
+            write_json(path, record)
+            pgn = output / "games.pgn"
+            pgn.write_text(pgn.read_text().replace('1. e4 1/2-1/2', '1. e4 1-0', 1))
+            record["artifacts"]["games.pgn"] = {"sha256": sha256(pgn), "bytes": pgn.stat().st_size}
+            write_json(path, record)
+            with self.assertRaisesRegex(ValueError, "result mismatch"):
+                validate_bundle(path, SCHEMA)
 
     def test_timeout_stops_process(self):
         with tempfile.TemporaryDirectory() as tmp:

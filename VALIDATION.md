@@ -55,3 +55,26 @@ Windows 实验主机上测试硬件性能或长时间负载。
   覆盖 unit、search、perft、uci、experiments。
 - 本次仅修改文档，不重跑跨平台 CI；上方 R1 CI 和目标硬件验证范围保持原有含义。
 - 状态：本次维护完成，无阻塞；后续阶段等待明确授权。
+
+# R2 进行记录（2026-10-15，Asia/Singapore）
+
+授权范围：搜索 QS → TT → PV ordering，各自独立开关/提交；实验完整性、固定
+基准、R1/R2 小样本对照及本地/CI 验证。完成 R2 后停止，不启动 R3。
+起点 `628bd24`，工作树干净；重新查询 R1 CI #38693572181，5 个 job success。
+本地继续使用上方 Apple Silicon 工具链和 `.venv`，fastchess 固定版本不变。
+
+## 实验完整性修复
+
+- 测试版本：`628bd24` + 本阶段 dirty Python/schema/test 修改；C++ 复用 R1 二进制。
+- 输入配置改存 `match-config.json`，保留 fastchess 自有 `config.json`。
+- validate/report 实际检查每项产物大小/SHA-256、输入配置、引擎声明与编译版本、
+  PGN 引擎/换色/起始局面/终局、结果文本与头部、从 PGN 重算的全部已存统计。
+  增加每轮 0/0.5/1/1.5/2 分计数。R1 历史包保留原文件和统计格式兼容。
+- `.venv/bin/python -m unittest discover -s tests -p test_experiments.py`：6/6 通过；
+  包含配置覆盖模拟、逐个文件篡改、统计/种子/版本篡改、缺失 PGN、路径越界、
+  即使重写 PGN 哈希后仍检测结果头部/正文矛盾。
+- `.venv/bin/ucl-lab validate experiments/results/r1-smoke-20261015/record.json`：通过。
+- `ctest --preset release`：5/5 通过（unit/search/perft/uci/experiments）。
+- 初次新增测试失败：mock subprocess.check_output 意外影响 sysctl；已缩小到
+  `--version` 调用后重跑通过。这是测试夹具问题，无引擎修改。
+- 下一步：QS，随后 TT 和 PV；尚未声称 R2 性能或棋力收益。

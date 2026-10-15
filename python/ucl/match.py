@@ -97,7 +97,7 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
     schema = json.loads((root / "schemas/experiment-v1.schema.json").read_text(encoding="utf-8"))
     # Refuse to overwrite earlier experiment evidence.
     output.mkdir(parents=True, exist_ok=False)
-    write_json(output / "config.json", config)
+    write_json(output / "match-config.json", config)
     paths = []
     try:
         fast = executable(fastchess, root)

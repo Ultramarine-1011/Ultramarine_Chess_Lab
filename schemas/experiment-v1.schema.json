@@ -53,6 +53,7 @@
       "type": "object", "additionalProperties": false,
       "required": ["candidate", "baseline", "games", "wins", "draws", "losses", "score", "paired_rounds", "score_ci95_paired_bootstrap", "bootstrap_seed", "terminations", "interpretation"],
       "properties": {
+        "paired_score_counts": {"type": ["array", "null"], "minItems": 5, "maxItems": 5, "items": {"type": "integer", "minimum": 0}},
         "candidate": {"type": "string"}, "baseline": {"type": "string"},
         "games": {"type": "integer", "minimum": 1}, "wins": {"type": "integer", "minimum": 0},
         "draws": {"type": "integer", "minimum": 0}, "losses": {"type": "integer", "minimum": 0},

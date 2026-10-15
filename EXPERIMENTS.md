@@ -72,3 +72,10 @@ TrainingSpec 预留 dataset_manifest、features、seed、target、split_manifest
 大型棋谱、数据和模型放 release assets 或外部存储，保留下载位置与哈希。
 不要将 build、虚拟环境、可执行文件或原始大数据直接提交。
 Mac/Windows 正式对比应记录硬件与线程差异；长负载优先 Windows 固定主机。
+
+R2 起输入原样保存在 `match-config.json`；fastchess 生成的 `config.json` 独立留档。
+`validate` 与 `report` 都检查产物大小/哈希并重新解析 PGN、核对全部已存统计、
+换色配对和起始局面。它们可离线验证已归档的包，无需原主机二进制；二进制身份
+在运行时通过 SHA-256 和 `--build-info` 核对。哈希用于发现意外篡改，不是数字签名，
+不能识别同时恶意重写数据及全部元信息的行为。失败或 running 记录可供诊断，
+但不会被 validate 判为已完成实验。旧 R1 包保留其实际原始文件。

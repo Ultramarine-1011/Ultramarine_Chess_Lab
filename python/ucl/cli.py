@@ -4,7 +4,7 @@ from pathlib import Path
 from jsonschema import ValidationError
 
 from .match import run_match
-from .records import validate_record
+from .integrity import validate_bundle
 from .report import markdown_report
 
 
@@ -28,10 +28,9 @@ def main():
             if record["status"] != "completed":
                 parser.exit(1, record["error"] + "\n")
         else:
-            record = json.loads(args.record.read_text(encoding="utf-8"))
             schema = json.loads((args.root / "schemas/experiment-v1.schema.json").read_text(encoding="utf-8"))
-            validate_record(record, schema)
-            print("valid experiment-v1 record" if args.command == "validate" else markdown_report(record))
+            record = validate_bundle(args.record, schema)
+            print("valid experiment bundle (hashes, PGN, statistics)" if args.command == "validate" else markdown_report(record))
     except (ValueError, OSError, ValidationError) as exc:
         parser.exit(1, f"error: {exc}\n")
 
