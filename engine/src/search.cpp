@@ -26,9 +26,11 @@ void order(chess::Movelist& moves, const chess::Board& b) {
 struct Context {
     const Evaluator& eval;
     const SearchLimits& limits;
+    const SearchOptions& options;
     std::stop_token stop;
     Clock::time_point start;
     std::uint64_t nodes = 0;
+    std::uint64_t qnodes = 0;
     bool aborted = false;
     bool cancelled() {
         aborted = aborted || stop.stop_requested() || (limits.nodes && nodes >= *limits.nodes) ||
@@ -39,19 +41,30 @@ struct Context {
                 std::vector<chess::Move>& pv) {
         if (cancelled()) return 0;
         ++nodes;
+        const bool quiet = depth == 0 && options.quiescence;
+        if (quiet) ++qnodes;
         chess::Movelist moves;
         chess::movegen::legalmoves(moves, b);
         // Mate takes precedence over 50-move and repetition claims, including at horizon.
         if (moves.empty()) return b.inCheck() ? -mate_score + ply : 0;
         if (drawn(b)) return 0;
-        if (depth == 0) return std::clamp(eval.evaluate(b), -mate_score + max_depth + 1,
-                                        mate_score - max_depth - 1);
-        order(moves, b);
+        // Never claim a completed iteration after hitting the stack safety cap.
+        if (ply >= max_search_ply) { aborted = true; return 0; }
+        auto evaluate = [&] { return std::clamp(eval.evaluate(b), -mate_score + max_search_ply + 1,
+                                                mate_score - max_search_ply - 1); };
+        if (depth == 0 && !quiet) return evaluate();
         int best = -infinity;
+        if (quiet && !b.inCheck()) {
+            best = evaluate(); // Stand pat is invalid in check.
+            if (best >= beta) return best;
+            alpha = std::max(alpha, best);
+        }
+        order(moves, b);
         for (auto move : moves) {
+            if (quiet && !b.inCheck() && !b.isCapture(move) && move.typeOf() != chess::Move::PROMOTION) continue;
             b.makeMove(move);
             std::vector<chess::Move> child;
-            const int score = -negamax(b, depth - 1, ply + 1, -beta, -alpha, child);
+            const int score = -negamax(b, std::max(0, depth - 1), ply + 1, -beta, -alpha, child);
             b.unmakeMove(move);
             if (aborted) return 0;
             if (score > best) {
@@ -70,7 +83,7 @@ SearchResult AlphaBetaSearch::run(chess::Board b, const Evaluator& eval, const S
                                   std::stop_token stop, SearchObserver observer) {
     if (limits.depth < 1 || limits.depth > max_depth || (limits.nodes && *limits.nodes == 0) ||
         (limits.time && limits.time->count() < 0)) throw std::invalid_argument("invalid search limits");
-    Context ctx{eval, limits, stop, Clock::now()};
+    Context ctx{eval, limits, options_, stop, Clock::now()};
     SearchResult result;
     chess::Movelist moves;
     chess::movegen::legalmoves(moves, b);
@@ -86,11 +99,13 @@ SearchResult AlphaBetaSearch::run(chess::Board b, const Evaluator& eval, const S
         result.pv = std::move(pv);
         result.best_move = result.pv.front();
         result.nodes = ctx.nodes;
+        result.qnodes = ctx.qnodes;
         result.elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - ctx.start);
         if (observer) observer(result);
         if (std::abs(score) >= mate_score - depth) break;
     }
     result.nodes = ctx.nodes;
+    result.qnodes = ctx.qnodes;
     result.elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now() - ctx.start);
     return result;
 }

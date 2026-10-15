@@ -77,3 +77,12 @@ Perft 独立于评估与搜索，不应用和棋截断。
 4. UCI 使用真实管道和独立 python-chess 客户端校验合法着法、停止与时钟。
 5. Python 测试覆盖 schema、原子写入、参数边界、PGN 和失败留档。
 6. macOS/Windows Release/Debug CI；macOS ASan/UBSan；macOS fastchess 冒烟对弈。
+
+## R2 搜索增量
+
+`SearchOptions::quiescence` / UCI `Quiescence` 默认 true，可关闭以还原 R1 截断。
+QS 复用同一 Negamax 与停止/终局逻辑。非将军以静态分为 stand pat，仅扩展吃子和
+所有升变；将军扩展所有合法应对。每次进入节点计一次，qnodes 是总 nodes 的子集，
+包含深度 0 节点。主搜索深度仍上限 128，含 QS 的绝对 ply 上限 256；触顶中止
+整个未完成迭代，不把将军中的静态分当结果。QS 改变深度边界语义，因此同深度分数、
+PV 长度和节点数不要求等于关闭 QS 的搜索。

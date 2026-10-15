@@ -78,3 +78,19 @@ Windows 实验主机上测试硬件性能或长时间负载。
 - 初次新增测试失败：mock subprocess.check_output 意外影响 sysctl；已缩小到
   `--version` 调用后重跑通过。这是测试夹具问题，无引擎修改。
 - 下一步：QS，随后 TT 和 PV；尚未声称 R2 性能或棋力收益。
+
+## QS 阶段
+
+- 测试版本：`b128e0a` + dirty QS/search/UCI/test 修改；新增 Quiescence 独立开关，
+  默认启用。非将军搜索吃子（含 EP）与全部升变，将军搜索全部应对，无 stand pat。
+  先终局/和棋判定，再静态评估；256 ply 安全上限中止迭代，保留上一完整结果。
+- 命令：`cmake --preset release -DPython3_EXECUTABLE="$PWD/.venv/bin/python"`、
+  `cmake --build --preset release --parallel 4`、`build/release/ucl_tests search`、
+  `ctest --preset release`：搜索 33 checks；CTest 5/5 通过。
+- 命令：`cmake --preset sanitize -DPython3_EXECUTABLE="$PWD/.venv/bin/python"`、
+  `cmake --build --preset sanitize --parallel 4`、`build/sanitize/ucl_tests search`：通过。
+- 新测试覆盖毒兵回吃、将军时安静应对、终局优先级、严格节点限制、中途 stop
+  保留完整迭代及关闭 QS 的穷举 Minimax 对照。
+- 首次搜索测试崩溃：新增夹具错误地让非行棋方已处于将军；Sanitizer/Debug
+  断言定位到棋盘缺王。改用合法起始局面后 Release/Sanitizer 搜索测试通过。
+  顺便移除脚本编辑带来的未用变量与重复计数赋值，编译无警告。

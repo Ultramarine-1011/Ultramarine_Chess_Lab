@@ -86,7 +86,7 @@ void perfts() {
 void searches() {
     ucl::HandcraftedFeatures features;
     ucl::HandcraftedEvaluator eval(features);
-    ucl::AlphaBetaSearch search;
+    ucl::AlphaBetaSearch search({.quiescence = false});
     for (const char* fen : {chess::constants::STARTPOS,
         "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1",
         "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 1"}) {
@@ -127,6 +127,35 @@ void searches() {
         r = search.run(chess::Board(), eval, {.depth = 20, .nodes = cap});
         check(r.nodes <= cap && r.best_move, "strict node cap with fallback");
     }
+    ucl::AlphaBetaSearch qs;
+    chess::Board poison("3rk3/8/8/3p4/8/8/8/3QK3 w - - 0 1");
+    auto shallow = search.run(poison, eval, {.depth = 1});
+    auto stable = qs.run(poison, eval, {.depth = 1});
+    check(chess::uci::moveToUci(*shallow.best_move) == "d1d5", "reference horizon takes poisoned pawn");
+    check(stable.best_move != shallow.best_move && stable.qnodes > 0, "QS sees rook recapture");
+    check(shallow.qnodes == 0, "QS independently disabled");
+    struct NoCheckEval : ucl::Evaluator {
+        int evaluate(const chess::Board& board) const override {
+            if (board.inCheck()) throw std::runtime_error("static evaluation in check");
+            return 0;
+        }
+        std::string_view name() const override { return "no-check"; }
+    } no_check;
+    auto evasion = qs.run(chess::Board("k7/8/8/8/8/8/4R3/4K3 w - - 0 1"), no_check, {.depth = 1});
+    check(evasion.depth == 1 && evasion.qnodes > 10, "QS searches quiet check evasions");
+    for (auto fen_q : {"7k/6Q1/6K1/8/8/8/8/8 b - - 100 1", "7k/5Q2/6K1/8/8/8/8/8 b - - 0 1"}) {
+        auto a = qs.run(chess::Board(fen_q), eval, {.depth = 1});
+        auto c = search.run(chess::Board(fen_q), eval, {.depth = 1});
+        check(a.score == c.score && a.best_move == c.best_move, "QS preserves terminal precedence");
+    }
+    for (std::uint64_t cap : {1ULL, 30ULL, 500ULL}) {
+        auto limited = qs.run(poison, eval, {.depth = 20, .nodes = cap});
+        check(limited.nodes <= cap && limited.best_move && poison.isLegal(*limited.best_move), "QS strict budget");
+    }
+    std::stop_source midway;
+    auto interrupted = qs.run(chess::Board(), eval, {.depth = 20}, midway.get_token(),
+        [&](const auto& completed) { if (completed.depth == 2) midway.request_stop(); });
+    check(interrupted.depth == 2 && interrupted.pv.size() >= 2, "QS retains completed iteration on stop");
     std::stop_source stop; stop.request_stop();
     r = search.run(chess::Board(), eval, {.depth = 20}, stop.get_token());
     check(r.nodes == 0 && r.best_move && r.depth == 0, "immediate stop");

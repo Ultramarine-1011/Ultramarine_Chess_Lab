@@ -57,6 +57,7 @@ int run_uci(std::istream& in, std::ostream& out) {
     HandcraftedEvaluator evaluator(features);
     chess::Board board;
     int overhead = 10;
+    SearchOptions options;
     std::jthread worker;
     auto stop = [&] { if (worker.joinable()) { worker.request_stop(); worker.join(); } };
     std::string line;
@@ -70,6 +71,7 @@ int run_uci(std::istream& in, std::ostream& out) {
                 emit("id name Ultramarine Chess Lab " UCL_VERSION);
                 emit("id author UCL contributors");
                 emit("option name MoveOverhead type spin default 10 min 0 max 5000");
+                emit("option name Quiescence type check default true");
                 emit("uciok");
             } else if (t[0] == "isready") emit("readyok");
             else if (t[0] == "stop") stop();
@@ -78,7 +80,10 @@ int run_uci(std::istream& in, std::ostream& out) {
             else if (t[0] == "setoption") {
                 if (t.size() == 5 && t[1] == "name" && t[2] == "MoveOverhead" && t[3] == "value")
                     overhead = static_cast<int>(integer(t[4], 0, 5000));
-                else emit("info string unsupported option");
+                else if (t.size() == 5 && t[1] == "name" && t[3] == "value" && t[2] == "Quiescence") {
+                    if (t[4] != "true" && t[4] != "false") throw std::invalid_argument("expected true/false");
+                    options.quiescence = t[4] == "true";
+                } else emit("info string unsupported option");
             } else if (t[0] == "position") {
                 stop();
                 std::string error;
@@ -86,9 +91,9 @@ int run_uci(std::istream& in, std::ostream& out) {
             } else if (t[0] == "go") {
                 auto go = parse_go(t, board.sideToMove(), overhead);
                 stop();
-                worker = std::jthread([&, position = board, go](std::stop_token token) {
+                worker = std::jthread([&, position = board, go, search_options = options](std::stop_token token) {
                     try {
-                        AlphaBetaSearch search;
+                        AlphaBetaSearch search(search_options);
                         auto result = search.run(position, evaluator, go.limits, token, [&](const SearchResult& r) {
                             std::ostringstream s;
                             s << "info depth " << r.depth << " score ";
