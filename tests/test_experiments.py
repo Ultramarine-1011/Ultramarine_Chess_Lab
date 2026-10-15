@@ -13,6 +13,7 @@ from ucl.match import command, run_match, run_process, validate_config, validate
 from ucl.records import new_record, validate_record, write_json, sha256, utc_now
 from ucl.integrity import validate_bundle
 from ucl.report import summarize_pgn
+from ucl.benchmark import uci_score_cp
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = json.loads((ROOT / "experiments/configs/smoke.json").read_text())
@@ -151,6 +152,14 @@ class ExperimentTests(unittest.TestCase):
             validate_comparison({"comparison": "ablation"}, [a, b])
         b["options"] = {"UseTT": False}
         validate_comparison({"comparison": "ablation"}, [a, b])
+
+    def test_uci_mate_moves_to_ply_score(self):
+        import chess.engine
+        for score, expected in ((chess.engine.Cp(-42), -42), (chess.engine.Mate(1), 29999),
+                                (chess.engine.Mate(2), 29997), (chess.engine.Mate(-1), -29998),
+                                (chess.engine.Mate(-2), -29996), (chess.engine.Mate(0), -30000),
+                                (chess.engine.MateGiven, 30000)):
+            self.assertEqual(uci_score_cp(score), expected)
 
     def test_timeout_stops_process(self):
         with tempfile.TemporaryDirectory() as tmp:

@@ -137,3 +137,18 @@ Windows 实验主机上测试硬件性能或长时间负载。
   `cmake --build --preset sanitize --parallel 4`、`ctest --preset sanitize`：5/5 通过，
   无 ASan/UBSan 诊断。扩展搜索矩阵的 CTest timeout 调为 180s，避免慢速 Debug 主机误报。
 - 尚待：干净版本最终全套验证、正式消融/版本基准与轻量赛、推送及双平台 CI。
+
+## 正式基准审计：将杀分数展示修正
+
+- 干净 `046d5b043ec5072238e8708c9f0df8e9d57834ee`：Mac Release/Debug/Sanitizer
+  各 5/5 通过（搜索 685 checks）。日志暂存 `r2-validation-20261015`。
+- 此版本首次正式实验：`r2-ablation-20261015` 720 查询、
+  `r1-r2-benchmark-20261015` 180 查询和 `r1-r2-match-20261015` 16 局均完成并
+  通过文件/统计完整性校验。UCI compliance 40/40。
+- 进一步逐查询比较 R1 与 R2-reference 时，发现 Python 通用
+  `score(mate_score=30000)` 按 mate 的步数而非 UCL 的 ply 距离转换；输棋 mate -2
+  被展示为 -29998，UCL 原始为 -29996。节点、完成深度、着法和 PV 无差异。
+  这是基准归一化错误，不是搜索差异。修正正 mate N→2N−1、负 mate −N→2N ply，
+  增加正负 mate/零/普通分值回归测试，随后重新生成正式对照包。
+- 上述首次包保留为审计证据，后续修正版作为最终基准；不静默覆盖或删除记录。
+  fastchess 原始日志自动打印的 Elo/LOS 不是 UCL 的结论，16 局只用于轻量验收。

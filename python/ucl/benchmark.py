@@ -49,6 +49,20 @@ def load_suite(path):
     return suite
 
 
+def uci_score_cp(score):
+    """Restore UCL's root-relative ply distance from UCI mate-in-moves.
+
+    Positive mate N is 2*N-1 plies; negative mate -N is 2*N plies.
+    python-chess's generic score(mate_score=...) uses N directly instead.
+    """
+    mate = score.mate()
+    if mate is None:
+        return score.score()
+    if mate == 0:
+        return 30000 if score > chess.engine.Cp(0) else -30000
+    return 30000 - (2 * mate - 1) if mate > 0 else -30000 - 2 * mate
+
+
 def tactical_pass(case, move, score):
     checks = []
     if "best" in case:
@@ -145,7 +159,7 @@ def run_benchmark(root, config_path, output, allow_dirty=False):
                         pv = [m.uci() for m in info.get("pv", [])]
                         for move in pv:
                             board.push_uci(move) # Independent legal validation.
-                        score = native["score_cp"] if native else info.get("score", chess.engine.PovScore(chess.engine.Cp(0), board.turn)).relative.score(mate_score=30000)
+                        score = native["score_cp"] if native else (uci_score_cp(info["score"].relative) if "score" in info else (-30000 if board.is_checkmate() else 0))
                         row = {"engine": name, "position": case["id"], "repeat": repeat, "limit": limit,
                                "depth": native["depth"] if native else info.get("depth", 0),
                                "score_cp": score, "pv": pv, "move": played.move.uci() if played.move else None,
