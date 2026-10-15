@@ -271,3 +271,37 @@ Windows Codex 桌面调用、用户 Windows 实验主机未实测；未独立测
 保留全局 Skills，仓库只有三个目标 Skill，不添加无关能力；本轮完成，未启动 R3。
 最后仅追加本节及文档证据，以 `[skip ci]` 文档收尾提交同步；其前的最终 Release
 与上述配置提交 CI 证据保持有效。
+
+## R3.1 — 数据与协议（2026-10-15）
+
+授权完整 R3.1–R3.5，起点 `b9fac65cbcb68b492090b076f333dff861580a86`，
+干净 main=origin/main；最新已有代码 Actions #38705038767 五项 success。
+已读 ROADMAP/架构/历史协议、相关源码测试和 R2/Skills 验证证据。
+
+- 恢复 `b128e0a` 的历史 EXPERIMENTS.md 内容，保留 R2 固定实验/Windows
+  规范，并移除误复制的架构；R3 参数在训练前冻结于 docs/r3/protocol.md。
+- 修复 PGN 的自然终局必须匹配棋盘结果；外部 adjudication 单独保留，
+  不能与强制终局矛盾。Lichess Normal（含认输）按来源语义检查。
+- Lichess CC0 January 2017，HTTP 206，精确 2,097,152 byte 前缀（全文件
+  1,902,198,021 bytes，未完整下载），前 3000 完整局。保留来源/许可/HTTP
+  headers/获取时间/源及产物 SHA-256。原压缩前缀留于本机 .tools；可按 Range
+  重取；Git 保留选定 PGN gzip 784,539 bytes、局面 gzip 430,905 bytes、划分。
+- 固定规则保留 908 局；train/validation/test 634/150/124 局，
+  3972/922/794 局面，总 5688。跨集合（含颜色镜像）移除 4 个局面出现，
+  集合内重复移除 1。完整计数/游戏身份/哈希见 experiments/results/r3-data-v1。
+- `.venv/bin/python -m ucl.dataset --output .tools/r3-dataset-v1` 成功；
+  `validate_dataset("experiments/results/r3-data-v1")` 从真实源棋谱重建完全一致。
+  源数据是方便的时间顺序小样本；结果标签有噪声，不是精确 minimax value。
+- 测试版本：上述 SHA + dirty R3.1。按 README configure/build Release，
+  `ctest --preset release -R '^(experiments|research)$'` 2/2，
+  `ctest --preset release` 6/6，日志见 docs/validation/r3/r31-*.log。
+  R2 正式 match 的原始 bundle validate 通过。
+- 初次两个 fixture 断言错误（起始局面颜色镜像相同、fixture 含和棋），已修正；
+  初次通配发现误将独立 UCI runner 纳入 unittest，保留 r31-discovery-failed.log，
+  改为独立 research CTest，未改变已有 UCI runner。
+  一次历史路径 r1-smoke-clean 不存在的审计命令失败，不声称其通过。
+- CI 使用三局真实 CC0 fixture，无网络训练依赖；本阶段不涉及 C++ 核心修改，
+  未另跑 Debug/sanitizer。后续 R3.2–R3.5 尚待实施。
+R3.1 代码/数据提交 `fcc652370c646ed6bfd37d0c308da4ab4c44a3ba` 已推送。
+[对应 Actions](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38708443580)
+已启动，状态待检查；本记录另作可恢复的文档提交。
