@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "feature_version": "handcrafted-v1",
+  "count": 44681,
+  "dataset_manifest_sha256": "29cbf18fa20262d8607010c132d18374f37aa815d17b25856bd7c15ca2166c8d",
+  "positions_sha256": "fb48d81d9c322ed628224aa9a18b96ace25c72a7247cd61dcc8706df022df61f",
+  "splits_sha256": "7cc01c05ea1950827b1e25cd1471a916a3dd8569919ad1b6860a2db97c43c09f",
+  "features_sha256": "d90097ba40f91ff2daf46f221829e37e69d40c80f2a6eb15b3c70ca3e85ed2d9",
+  "engine_sha256": "718a93ce5456af1301ac939f42a59f392d363215b275f46b9258d90c22d54d9d",
+  "build_info": {
+    "version": "0.1.0",
+    "revision": "37d72807319d1085ecf755827ce131c2f0430470",
+    "dirty": false,
+    "compiler": "AppleClang 21.0.0.21000101",
+    "build_type": "Release",
+    "flags": " -O3 -DNDEBUG"
+  },
+  "consistency": "all rows exactly equal independent Python extraction and handcrafted score"
+}

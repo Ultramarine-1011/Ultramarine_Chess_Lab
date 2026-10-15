@@ -1,0 +1,246 @@
+{
+  "kind": "r4-study",
+  "status": "development-frozen",
+  "seed": 20261015,
+  "expanded": false,
+  "dataset": "experiments/results/r4-data-v1",
+  "features": "experiments/results/r4-features-v1",
+  "feature_provenance": {
+    "schema_version": 1,
+    "feature_version": "handcrafted-v1",
+    "count": 44681,
+    "dataset_manifest_sha256": "29cbf18fa20262d8607010c132d18374f37aa815d17b25856bd7c15ca2166c8d",
+    "positions_sha256": "fb48d81d9c322ed628224aa9a18b96ace25c72a7247cd61dcc8706df022df61f",
+    "splits_sha256": "7cc01c05ea1950827b1e25cd1471a916a3dd8569919ad1b6860a2db97c43c09f",
+    "features_sha256": "d90097ba40f91ff2daf46f221829e37e69d40c80f2a6eb15b3c70ca3e85ed2d9",
+    "engine_sha256": "718a93ce5456af1301ac939f42a59f392d363215b275f46b9258d90c22d54d9d",
+    "build_info": {
+      "version": "0.1.0",
+      "revision": "37d72807319d1085ecf755827ce131c2f0430470",
+      "dirty": false,
+      "compiler": "AppleClang 21.0.0.21000101",
+      "build_type": "Release",
+      "flags": " -O3 -DNDEBUG"
+    },
+    "consistency": "all rows exactly equal independent Python extraction and handcrafted score"
+  },
+  "protocol_sha256": "849bd318526669022a831fe1ce7104fa7d5f8f16b772d4cd7c60f8091419ea38",
+  "code": {
+    "revision": "37d72807319d1085ecf755827ce131c2f0430470",
+    "dirty": false
+  },
+  "environment": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    },
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "configuration": {
+    "lambdas": [
+      0.0001,
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "tau": 400.0,
+    "intercept": 0,
+    "loss": "equal-game fractional BCE",
+    "rms": "train-only equal-game RMS, no centering",
+    "prior": "handcrafted padded zero",
+    "optimizer": "L-BFGS-B",
+    "maxiter": 1000,
+    "gtol": 1e-09,
+    "ftol": 1e-12
+  },
+  "models": {
+    "handcrafted": {
+      "weights": [
+        100.0,
+        320.0,
+        330.0,
+        500.0,
+        900.0,
+        5.0,
+        4.0,
+        30.0
+      ],
+      "train": {
+        "positions": 24187,
+        "equal_game": {
+          "bce": 0.6051256372134955,
+          "brier": 0.19790773519623894
+        },
+        "position_weighted": {
+          "bce": 0.5975446903690879,
+          "brier": 0.19258108405356858
+        }
+      },
+      "validation": {
+        "positions": 5924,
+        "equal_game": {
+          "bce": 0.6108091688092445,
+          "brier": 0.19996793262160883
+        },
+        "position_weighted": {
+          "bce": 0.6061071660783742,
+          "brier": 0.19582670542932445
+        }
+      },
+      "model_file": "handcrafted.txt",
+      "model_sha256": "f48c494c4b7a75634297b0d5da2a2f67ca3e2c76584c9893640736df193644ec"
+    },
+    "calibration": {
+      "weights": [
+        130.72725763309245,
+        418.32722442589585,
+        431.3999501892051,
+        653.6362881654622,
+        1176.545318697832,
+        6.536362881654623,
+        5.229090305323698,
+        39.21817728992774
+      ],
+      "scale": 1.3072725763309245,
+      "bounds": [
+        0.01,
+        10
+      ],
+      "success": true,
+      "train": {
+        "positions": 24187,
+        "equal_game": {
+          "bce": 0.6017370057139205,
+          "brier": 0.19639725241514844
+        },
+        "position_weighted": {
+          "bce": 0.5930569009726462,
+          "brier": 0.19065963692380922
+        }
+      },
+      "validation": {
+        "positions": 5924,
+        "equal_game": {
+          "bce": 0.6080669778278895,
+          "brier": 0.19892933304479965
+        },
+        "position_weighted": {
+          "bce": 0.6029785303815413,
+          "brier": 0.19462158829763565
+        }
+      },
+      "model_file": "calibration.txt",
+      "model_sha256": "b17b54d1cb9f33fc709a4a235a1b64b460676bdb7a773c27b55fb9e30b89a16e"
+    },
+    "frozen_r3": {
+      "weights": [
+        168.06951324272435,
+        279.3346539592425,
+        279.9760821165223,
+        591.4780891114027,
+        1003.5427488858073,
+        6.003487276961483,
+        24.938477618921123,
+        116.0173413354679
+      ],
+      "train": {
+        "positions": 24187,
+        "equal_game": {
+          "bce": 0.6005708448822076,
+          "brier": 0.19624782612898262
+        },
+        "position_weighted": {
+          "bce": 0.592313714878138,
+          "brier": 0.19069724169862548
+        }
+      },
+      "validation": {
+        "positions": 5924,
+        "equal_game": {
+          "bce": 0.6044738791631021,
+          "brier": 0.1974666623753638
+        },
+        "position_weighted": {
+          "bce": 0.5994898391825035,
+          "brier": 0.19322352466202208
+        }
+      },
+      "model_file": "frozen_r3.txt",
+      "model_sha256": "b4e93918010ea17247c4f24d43fdfadb05b9697250c8d1e85e6d3eb897efee78"
+    },
+    "refit8": {
+      "weights": [
+        171.92966736950052,
+        324.59421958918887,
+        347.2552761437816,
+        611.6968858274716,
+        1094.6586845444624,
+        3.81789369645967,
+        13.753052916429894,
+        50.64590052924153
+      ],
+      "lambda": 0.01,
+      "rms": [
+        1.1471137435139405,
+        0.6840904297711979,
+        0.6874724639017136,
+        0.44849669892136945,
+        0.2688861544956313,
+        3.208477729362925,
+        3.7338748681116516,
+        0.4711365058097409
+      ],
+      "active": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "success": true,
+      "iterations": 13,
+      "objective": 0.5997703242216205,
+      "gradient_inf": 1.62678971192369e-08,
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "seconds": 0.007217333997687092,
+      "train": {
+        "positions": 24187,
+        "equal_game": {
+          "bce": 0.5993439779166345,
+          "brier": 0.19563343574429837
+        },
+        "position_weighted": {
+          "bce": 0.5908774935153571,
+          "brier": 0.1899972387788925
+        }
+      },
+      "validation": {
+        "positions": 5924,
+        "equal_game": {
+          "bce": 0.605110514570092,
+          "brier": 0.19777445851286152
+        },
+        "position_weighted": {
+          "bce": 0.6000638251593451,
+          "brier": 0.19348870965945117
+        }
+      },
+      "model_file": "refit8.txt",
+      "model_sha256": "fe8b34d5cf3fab436a03a4d7d15581aa5b5b35477990834cf168e977fb9deb18"
+    }
+  },
+  "primary_metric": "equal-game BCE",
+  "test_evaluated": false
+}

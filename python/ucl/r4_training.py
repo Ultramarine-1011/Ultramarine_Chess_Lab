@@ -101,6 +101,10 @@ def fit(dataset,features,output,expanded=False):
         w=m['weights'] if expanded and name in ('pawn','king','full') else m['weights'][:8]
         # v1 encoding remains byte-compatible; v2 enabled with the expanded engine.
         text=encode_model(w,sha256(Path(dataset)/'manifest.json'),sha256(Path(dataset)/'splits.json'))
+        if name == 'frozen_r3':
+            # Preserve the original training provenance and exact deployed bytes.
+            text=(ROOT/'experiments/results/r3-model-v1/model.txt').read_text(encoding='ascii')
+            m['origin']='frozen R3 model; no R4 fitting or provenance repacking'
         (output/f'{name}.txt').write_bytes(text.encode('ascii'))
         m['model_file']=f'{name}.txt';m['model_sha256']=sha256(output/f'{name}.txt')
     selection={'kind':'r4-study','status':'development-frozen','seed':SEED,'expanded':expanded,
