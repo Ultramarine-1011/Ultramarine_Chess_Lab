@@ -1,0 +1,59 @@
+name: build-and-test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest]
+        preset: [release, debug]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756 # v1
+        if: runner.os == 'Windows'
+      - name: Python tools
+        run: |
+          python -m pip install cmake==4.4.4 ninja==1.13.2
+          python -m pip install -r requirements.lock
+          python -m pip install --no-deps -e .
+      - name: Configure
+        run: python -c "import subprocess, sys; subprocess.run(['cmake', '--preset', '${{ matrix.preset }}', '-DPython3_EXECUTABLE=' + sys.executable], check=True)"
+      - name: Build
+        run: cmake --build --preset ${{ matrix.preset }} --parallel 4
+      - name: Test
+        run: ctest --preset ${{ matrix.preset }}
+      - name: Build fastchess and run smoke match
+        if: runner.os == 'macOS' && matrix.preset == 'release'
+        run: |
+          python scripts/bootstrap_fastchess.py
+          ucl-lab match --config experiments/configs/smoke.json --output experiments/results/ci-smoke --fastchess .tools/bin/fastchess
+          ucl-lab validate experiments/results/ci-smoke/record.json
+  sanitizers:
+    runs-on: macos-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.14'
+      - run: |
+          python -m pip install cmake==4.4.4 ninja==1.13.2
+          python -m pip install -r requirements.lock
+          python -m pip install --no-deps -e .
+          cmake --preset sanitize -DPython3_EXECUTABLE="$(command -v python)"
+          cmake --build --preset sanitize --parallel 4
+          ctest --preset sanitize

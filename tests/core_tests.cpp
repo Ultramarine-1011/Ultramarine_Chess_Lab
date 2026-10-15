@@ -1,6 +1,7 @@
 #include "ucl/evaluator.hpp"
 #include "ucl/position.hpp"
 #include "ucl/search.hpp"
+#include <algorithm>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
