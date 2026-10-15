@@ -43,4 +43,8 @@ A/B/C/D各400局完成，全部PGN与完整UCI逐着对应，异常完整局为0
 D组55.125%，校正区间[50.625%,59.500%]，只支持优化相对原版的条件性收益；
 C组37.25%，仍负于Handcrafted；B组47.50%，证据不确定。默认不变，未开展R6。
 本研究计时仅对应封存版本；697737c另有推理校验简化，额外性能未在正式组中测量。
-全部阶段提交及CI见命令索引；最终交付CI随对应提交核对。
+全部阶段提交及CI见命令索引。最终研究交付提交
+`8170f764a768fb2c3981e2bd75b25bf3ee98b676`已推送main，
+[对应GitHub Actions](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38784569667)
+五项全部成功。主工作树和隔离工作树均已重新configure/build，实际build-info为该提交、
+dirty=false、标准MSVC Release。随后仅补充本段与命令索引，不改代码或研究数据。

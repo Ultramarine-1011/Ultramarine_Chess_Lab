@@ -75,5 +75,10 @@ Release/Debug and sanitizer); host research and CI remain distinct.
 | R5.3 Windows performance results | d76ed2c28711e33d5a21dab5a8c840024eb00382 | [38772278198](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38772278198) |
 | A400 preserved / missing-group recovery | b065947cf5c2682a5765c4ba344581028a0c82fa | [38775050500](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38775050500) |
 | User's engineering simplification | 697737cdbed02f4bf0d29d00e5a15f62966b0f8c | [38774113323](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38774113323) |
+| R5 completed results / analysis / integration | 8170f764a768fb2c3981e2bd75b25bf3ee98b676 | [38784569667](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38784569667) |
 
-Final completion commit and its CI run are added after the push is verified.
+Completion commit8170f76 was fast-forwarded onto main and pushed; remote main
+matched the full SHA above. Its five CI jobs all succeeded. Both local checkouts
+were reconfigured/built clean at8170f76, and `ucl.exe --build-info` reported that
+revision, dirty=false and the same MSVC Release flags. This final documentation
+update only adds the verified delivery references; it changes no code or data.
