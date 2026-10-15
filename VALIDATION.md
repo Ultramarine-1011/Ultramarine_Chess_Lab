@@ -322,3 +322,9 @@ Python 逐行检查版本、八维有限值、独立特征实现和原权重评�
   更新取整测试时两个本地 preset 验证序列短暂重叠，均已退出成功；未用于性能测量。
 - 正式 clean binary 特征导出在本阶段代码提交后执行，随后以原始哈希归档。
   R3.3 未训练，冻结测试集未用于模型选择。
+正式特征导出：clean `e5b625fe70088935c6f3d41bf3e77f8ea574ccb1` Release，
+5688/5688 精确一致；features gzip SHA-256
+`ba76d6eab0bc6fffbd25c385a357589fa9646532e2dc47ef32219fedbe69a9f6`。
+归档于 experiments/results/r3-features-v1（含源清单/划分/binary 哈希与 build info）。
+R3.2 [Actions #38709009820](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38709009820)
+运行中，后续必须核对最终状态。
