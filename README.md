@@ -100,6 +100,7 @@ third_party/         chess-library 头文件、许可证与来源
 
 详见 [架构](ARCHITECTURE.md)、[路线图](ROADMAP.md)、
 [实验规范](EXPERIMENTS.md)、[开发规则](AGENTS.md)。
+第一轮实测结果见 [VALIDATION.md](VALIDATION.md)。
 UCL 自有代码采用 MIT；第三方依赖保留各自许可证。
 棋盘库来源及版本见 [third_party](third_party/README.md)；Python 工具使用
 独立安装的 [python-chess](https://github.com/niklasf/python-chess)（GPL-3.0+）。

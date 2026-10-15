@@ -1,0 +1,168 @@
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.15"]
+[Round "1"]
+[White "UCL-candidate"]
+[Black "UCL-baseline"]
+[Result "1-0"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-15T14:32:11 +0800"]
+[GameEndTime "2026-10-15T14:32:11 +0800"]
+[PlyCount "72"]
+[Termination "normal"]
+[TimeControl "10+0.1"]
+[ECO "C60"]
+[Opening "Ruy Lopez"]
+
+1... Nb4 {-1.26/2 0.000s} 2. Nxe5 {+0.30/2 0.000s} Nf6 {-2.14/2 0.000s}
+3. Nc3 {+0.08/2 0.000s} Bc5 {-2.14/2 0.000s} 4. a4 {+0.06/2 0.000s}
+a5 {-2.14/2 0.000s} 5. d4 {+0.06/2 0.000s} Bd6 {-2.24/2 0.000s}
+6. Nc4 {+0.02/2 0.000s} Be7 {-2.26/2 0.000s} 7. e5 {+0.33/2 0.000s}
+Ng8 {-2.43/2 0.000s} 8. Be3 {+0.57/2 0.000s} g5 {-2.49/2 0.000s}
+9. g4 {+0.57/2 0.000s} b6 {-2.54/2 0.000s} 10. Ne4 {+0.60/2 0.000s}
+Nd5 {-2.54/2 0.000s} 11. Bd2 {+1.32/2 0.000s} c6 {-2.49/2 0.000s}
+12. Bxg5 {-1.32/2 0.000s} Bxg5 {-2.41/2 0.000s} 13. Nxg5 {-1.10/2 0.000s}
+cxb5 {-0.05/2 0.000s} 14. Nd6+ {-1.10/2 0.000s} Ke7 {-2.16/2 0.000s}
+15. axb5 {-0.07/2 0.000s} f5 {-3.21/2 0.000s} 16. Nxf5+ {+1.05/2 0.000s}
+Ke8 {-2.15/2 0.000s} 17. Nd6+ {+1.05/2 0.000s} Ke7 {-4.31/2 0.000s}
+18. Nf5+ {+1.05/2 0.000s} Ke8 {-2.15/2 0.000s} 19. Nd6+ {+1.05/2 0.000s}
+Ke7 {-4.31/2 0.000s} 20. Nxc8+ {+1.03/2 0.000s} Rxc8 {-2.13/2 0.000s}
+21. h4 {+0.13/2 0.000s} d6 {-2.18/2 0.000s} 22. exd6+ {+0.98/2 0.000s}
+Qxd6 {-2.08/2 0.000s} 23. Qe2+ {+0.98/2 0.000s} Kf6 {-2.08/2 0.000s}
+24. Ne4+ {+1.06/2 0.000s} Ke6 {-10.02/2 0.000s} 25. Nxd6+ {+6.62/2 0.000s}
+Kxd6 {-7.72/2 0.000s} 26. Qe5+ {+6.62/2 0.000s} Kd7 {-11.62/2 0.000s}
+27. Qxh8 {+10.62/2 0.000s} Re8+ {-11.62/2 0.000s} 28. Kd1 {+11.50/2 0.000s}
+h5 {-14.76/2 0.000s} 29. gxh5 {+12.55/2 0.000s} a4 {-15.86/2 0.000s}
+30. Rxa4 {+13.65/2 0.000s} Kd6 {-17.01/2 0.000s} 31. c4 {+13.75/2 0.000s}
+Nf4 {-17.15/2 0.000s} 32. b4 {+12.94/2 0.000s} Nxh5 {-16.26/2 0.000s}
+33. Qxh5 {+16.14/2 0.000s} Re4 {-16.36/2 0.000s} 34. Qd5+ {+16.26/2 0.000s}
+Kc7 {-21.26/2 0.000s} 35. Qxe4 {+21.14/2 0.000s} Nf6 {-21.24/2 0.000s}
+36. Ra7+ {+21.14/2 0.000s} Kd6 {-M2/2 0.000s}
+37. Qe5# {+M1/1 0.000s, White mates} 1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.15"]
+[Round "1"]
+[White "UCL-baseline"]
+[Black "UCL-candidate"]
+[Result "1-0"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-15T14:32:11 +0800"]
+[GameEndTime "2026-10-15T14:32:11 +0800"]
+[PlyCount "72"]
+[Termination "normal"]
+[TimeControl "10+0.1"]
+[ECO "C60"]
+[Opening "Ruy Lopez"]
+
+1... Nb4 {-1.26/2 0.000s} 2. Nxe5 {+0.30/2 0.000s} Nf6 {-2.14/2 0.000s}
+3. Nc3 {+0.08/2 0.000s} Bc5 {-2.14/2 0.000s} 4. a4 {+0.06/2 0.000s}
+a5 {-2.14/2 0.000s} 5. d4 {+0.06/2 0.000s} Bd6 {-2.24/2 0.000s}
+6. Nc4 {+0.02/2 0.000s} Be7 {-2.26/2 0.000s} 7. e5 {+0.33/2 0.000s}
+Ng8 {-2.43/2 0.000s} 8. Be3 {+0.57/2 0.000s} g5 {-2.49/2 0.000s}
+9. g4 {+0.57/2 0.000s} b6 {-2.54/2 0.000s} 10. Ne4 {+0.60/2 0.000s}
+Nd5 {-2.54/2 0.000s} 11. Bd2 {+1.32/2 0.000s} c6 {-2.49/2 0.000s}
+12. Bxg5 {-1.32/2 0.000s} Bxg5 {-2.41/2 0.000s} 13. Nxg5 {-1.10/2 0.000s}
+cxb5 {-0.05/2 0.000s} 14. Nd6+ {-1.10/2 0.000s} Ke7 {-2.16/2 0.000s}
+15. axb5 {-0.07/2 0.000s} f5 {-3.21/2 0.000s} 16. Nxf5+ {+1.05/2 0.000s}
+Ke8 {-2.15/2 0.000s} 17. Nd6+ {+1.05/2 0.000s} Ke7 {-4.31/2 0.000s}
+18. Nf5+ {+1.05/2 0.000s} Ke8 {-2.15/2 0.000s} 19. Nd6+ {+1.05/2 0.000s}
+Ke7 {-4.31/2 0.000s} 20. Nxc8+ {+1.03/2 0.000s} Rxc8 {-2.13/2 0.000s}
+21. h4 {+0.13/2 0.000s} d6 {-2.18/2 0.000s} 22. exd6+ {+0.98/2 0.000s}
+Qxd6 {-2.08/2 0.000s} 23. Qe2+ {+0.98/2 0.000s} Kf6 {-2.08/2 0.000s}
+24. Ne4+ {+1.06/2 0.000s} Ke6 {-10.02/2 0.000s} 25. Nxd6+ {+6.62/2 0.000s}
+Kxd6 {-7.72/2 0.000s} 26. Qe5+ {+6.62/2 0.000s} Kd7 {-11.62/2 0.000s}
+27. Qxh8 {+10.62/2 0.000s} Re8+ {-11.62/2 0.000s} 28. Kd1 {+11.50/2 0.000s}
+h5 {-14.76/2 0.000s} 29. gxh5 {+12.55/2 0.000s} a4 {-15.86/2 0.000s}
+30. Rxa4 {+13.65/2 0.000s} Kd6 {-17.01/2 0.000s} 31. c4 {+13.75/2 0.000s}
+Nf4 {-17.15/2 0.000s} 32. b4 {+12.94/2 0.000s} Nxh5 {-16.26/2 0.000s}
+33. Qxh5 {+16.14/2 0.000s} Re4 {-16.36/2 0.000s} 34. Qd5+ {+16.26/2 0.000s}
+Kc7 {-21.26/2 0.000s} 35. Qxe4 {+21.14/2 0.000s} Nf6 {-21.24/2 0.000s}
+36. Ra7+ {+21.14/2 0.000s} Kd6 {-M2/2 0.000s}
+37. Qe5# {+M1/1 0.000s, White mates} 1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.15"]
+[Round "2"]
+[White "UCL-candidate"]
+[Black "UCL-baseline"]
+[Result "1-0"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-15T14:32:11 +0800"]
+[GameEndTime "2026-10-15T14:32:11 +0800"]
+[PlyCount "36"]
+[Termination "normal"]
+[TimeControl "10+0.1"]
+[ECO "D31"]
+[Opening "Queen's Gambit Declined: Queen's Knight Variation"]
+
+1... dxc4 {+0.86/2 0.000s} 2. Qa4+ {-1.10/2 0.000s} b5 {-0.07/2 0.000s}
+3. Qxb5+ {-0.10/2 0.000s} c6 {-3.21/2 0.000s} 4. Qxc4 {+0.02/2 0.000s}
+Nd7 {-2.05/2 0.000s} 5. Qxc6 {+1.93/2 0.000s} Bb7 {-5.73/2 0.000s}
+6. Qxb7 {+5.61/2 0.000s} Ngf6 {-10.61/2 0.000s} 7. Nf3 {+5.61/2 0.000s}
+Bc5 {-10.61/2 0.000s} 8. dxc5 {+7.97/2 0.000s} Nxc5 {-12.97/2 0.000s}
+9. Qb5+ {+7.97/2 0.000s} Ke7 {-11.37/2 0.000s} 10. Qxc5+ {+11.37/2 0.000s}
+Kd7 {-12.37/2 0.000s} 11. Ne5+ {+11.45/2 0.000s} Ke8 {-12.45/2 0.000s}
+12. Be3 {+11.47/2 0.000s} a6 {-12.40/2 0.000s} 13. a4 {+11.52/2 0.000s}
+h5 {-12.40/2 0.000s} 14. b4 {+11.52/2 0.000s} h4 {-12.45/2 0.000s}
+15. f4 {+11.57/2 0.000s} g6 {-12.55/2 0.000s} 16. Qc6+ {+11.62/2 0.000s}
+Ke7 {-16.62/2 0.000s} 17. Bc5+ {+11.62/2 0.000s} Qd6 {-20.62/2 0.000s}
+18. Bxd6+ {+20.62/2 0.000s} Kd8 {-M2/2 0.000s}
+19. Qxa8# {+M1/1 0.000s, White mates} 1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.15"]
+[Round "2"]
+[White "UCL-baseline"]
+[Black "UCL-candidate"]
+[Result "1-0"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rnbqkbnr/ppp2ppp/4p3/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR b KQkq - 0 1"]
+[GameDuration "00:00:00"]
+[GameStartTime "2026-10-15T14:32:11 +0800"]
+[GameEndTime "2026-10-15T14:32:11 +0800"]
+[PlyCount "36"]
+[Termination "normal"]
+[TimeControl "10+0.1"]
+[ECO "D31"]
+[Opening "Queen's Gambit Declined: Queen's Knight Variation"]
+
+1... dxc4 {+0.86/2 0.000s} 2. Qa4+ {-1.10/2 0.000s} b5 {-0.07/2 0.000s}
+3. Qxb5+ {-0.10/2 0.000s} c6 {-3.21/2 0.000s} 4. Qxc4 {+0.02/2 0.000s}
+Nd7 {-2.05/2 0.000s} 5. Qxc6 {+1.93/2 0.000s} Bb7 {-5.73/2 0.000s}
+6. Qxb7 {+5.61/2 0.000s} Ngf6 {-10.61/2 0.000s} 7. Nf3 {+5.61/2 0.000s}
+Bc5 {-10.61/2 0.000s} 8. dxc5 {+7.97/2 0.000s} Nxc5 {-12.97/2 0.000s}
+9. Qb5+ {+7.97/2 0.000s} Ke7 {-11.37/2 0.000s} 10. Qxc5+ {+11.37/2 0.000s}
+Kd7 {-12.37/2 0.000s} 11. Ne5+ {+11.45/2 0.000s} Ke8 {-12.45/2 0.000s}
+12. Be3 {+11.47/2 0.000s} a6 {-12.40/2 0.000s} 13. a4 {+11.52/2 0.000s}
+h5 {-12.40/2 0.000s} 14. b4 {+11.52/2 0.000s} h4 {-12.45/2 0.000s}
+15. f4 {+11.57/2 0.000s} g6 {-12.55/2 0.000s} 16. Qc6+ {+11.62/2 0.000s}
+Ke7 {-16.62/2 0.000s} 17. Bc5+ {+11.62/2 0.000s} Qd6 {-20.62/2 0.000s}
+18. Bxd6+ {+20.62/2 0.000s} Kd8 {-M2/2 0.000s}
+19. Qxa8# {+M1/1 0.000s, White mates} 1-0
+
