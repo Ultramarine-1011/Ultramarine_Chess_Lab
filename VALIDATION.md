@@ -244,3 +244,20 @@ Windows 证据来自托管 runner，不代表用户实验主机验收。本轮�
 各自文件末尾的空行（4 条）；为保留原始哈希未改写产物。执行
 `git -c core.whitespace=-blank-at-eof diff --cached --check` 通过。
 最终验收文档修改后 `ctest --preset release` 再次 5/5 通过。
+
+## Skills 配置优化（2026-10-15，进行中）
+
+授权范围：精简并验证 Skills，允许提交/推送；不启动 R3。
+起点 `8a7d450` 干净且与 origin/main 一致，最新已有代码 CI 五项 success。
+已创建仓库级 `ucl-engine-validation`、`ucl-experiment-audit`，固定版本安装
+`gh-fix-ci`；跳过目前无 Notebook 用途的 `jupyter-notebook`。复用现有工具，
+不改引擎、统计实现和项目 Python 依赖。
+配置决策、运行时兼容问题与可复现探针见
+[审计记录](docs/validation/skills-20261015/report.md)。
+桌面运行时已从根目录/tests 成功发现三个唯一启用的仓库 Skill，未修改全局配置。
+三个 Skill 的 quick_validate、引用/UI 元数据检查通过。手动按新 Skill 实际执行：
+历史三个正式包 validate/report 通过，实验 Python 8/8，Release CTest 5/5；
+gh helper 的历史失败 Actions 日志读取 status=ok，无 PR 返回 1 为预期。
+首次回归误将 venv 符号链接解析成系统 Python，缺包导致 3/5；按 README 修正解释器
+重试成功，失败/成功命令与日志均保留。测试版本为 `8a7d450` + dirty Skills/docs。
+尚待：提交、干净克隆发现验证、推送与对应 CI 记录。

@@ -1,0 +1,4 @@
+interface:
+  display_name: "UCL Experiment Audit"
+  short_description: "Audit experiment provenance and statistical claims"
+  default_prompt: "Use $ucl-experiment-audit to validate the requested UCL bundle and assess the conclusions supported by its evidence."

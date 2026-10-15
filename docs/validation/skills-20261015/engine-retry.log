@@ -1,0 +1,33 @@
+$ cmake --preset release -DPython3_EXECUTABLE=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python
+-- Found Python3: /Users/ultramarine/Documents/Ultramarine_Chess_Lab/.venv/bin/python (found suitable version "3.14.5", minimum required is "3.11") found components: Interpreter
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+$ cmake --build --preset release --parallel 4
+ninja: no work to do.
+$ ctest --preset release -R '^(unit|perft)$'
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+    Start 1: unit
+1/2 Test #1: unit .............................   Passed    0.00 sec
+    Start 3: perft
+2/2 Test #3: perft ............................   Passed    0.00 sec
+
+100% tests passed out of 2
+
+Total Test time (real) =   0.01 sec
+$ ctest --preset release
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+    Start 1: unit
+1/5 Test #1: unit .............................   Passed    0.00 sec
+    Start 2: search
+2/5 Test #2: search ...........................   Passed    0.24 sec
+    Start 3: perft
+3/5 Test #3: perft ............................   Passed    0.00 sec
+    Start 4: uci
+4/5 Test #4: uci ..............................   Passed    0.90 sec
+    Start 5: experiments
+5/5 Test #5: experiments ......................   Passed    0.28 sec
+
+100% tests passed out of 5
+
+Total Test time (real) =   1.43 sec

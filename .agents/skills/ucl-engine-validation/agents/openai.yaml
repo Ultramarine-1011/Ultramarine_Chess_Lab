@@ -1,0 +1,4 @@
+interface:
+  display_name: "UCL Engine Validation"
+  short_description: "Run existing engine checks and retain evidence"
+  default_prompt: "Use $ucl-engine-validation to verify the authorized UCL changes and record attributable evidence."

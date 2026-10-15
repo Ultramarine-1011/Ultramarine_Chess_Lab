@@ -1,0 +1,50 @@
+{
+  "tested_revision": "8a7d450fcad3ff1733160ffc29af178e837a5847",
+  "dirty": true,
+  "host": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "commands": [
+    {
+      "command": [
+        "cmake",
+        "--preset",
+        "release",
+        "-DPython3_EXECUTABLE=/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/bin/python3.14"
+      ],
+      "returncode": 0,
+      "seconds": 0.426
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "--preset",
+        "release",
+        "--parallel",
+        "4"
+      ],
+      "returncode": 0,
+      "seconds": 1.11
+    },
+    {
+      "command": [
+        "ctest",
+        "--preset",
+        "release",
+        "-N"
+      ],
+      "returncode": 0,
+      "seconds": 0.039
+    },
+    {
+      "command": [
+        "ctest",
+        "--preset",
+        "release",
+        "-R",
+        "^(unit|perft|search|uci|experiments)$"
+      ],
+      "returncode": 8,
+      "seconds": 0.399
+    }
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "inventory": [
+    {
+      "name": "gh-fix-ci",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "ucl-engine-validation",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "ucl-experiment-audit",
+      "scope": "repo",
+      "enabled": true
+    },
+    {
+      "name": "agent-browser",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "documents:documents",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "docx",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "find-skills",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "humanizer-zh",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "pdf",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "pdf:pdf",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "pptx",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "presentations:Presentations",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "remotion-best-practices",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "spreadsheets:Spreadsheets",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "spreadsheets:excel-live-control",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "template-creator:template-creator",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "xlsx",
+      "scope": "user",
+      "enabled": true
+    },
+    {
+      "name": "imagegen",
+      "scope": "system",
+      "enabled": true
+    },
+    {
+      "name": "openai-docs",
+      "scope": "system",
+      "enabled": true
+    },
+    {
+      "name": "review-agent",
+      "scope": "system",
+      "enabled": true
+    },
+    {
+      "name": "skill-creator",
+      "scope": "system",
+      "enabled": true
+    },
+    {
+      "name": "skill-installer",
+      "scope": "system",
+      "enabled": true
+    }
+  ],
+  "data": [
+    {
+      "cwd": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab",
+      "errors": [],
+      "totalSkills": 23,
+      "skills": [
+        {
+          "name": "gh-fix-ci",
+          "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+          "interface": {
+            "displayName": "GitHub Fix CI",
+            "shortDescription": "Debug failing GitHub Actions CI",
+            "iconSmall": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/gh-fix-ci/assets/github-small.svg",
+            "iconLarge": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/gh-fix-ci/assets/github.png",
+            "iconSmallUrl": null,
+            "iconLargeUrl": null,
+            "brandColor": null,
+            "defaultPrompt": "Use $gh-fix-ci to inspect failing GitHub Actions checks in this repo and repair them within the authorized scope."
+          },
+          "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/gh-fix-ci/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null
+        },
+        {
+          "name": "ucl-engine-validation",
+          "description": "Validate UCL engine changes and regressions with existing CTest, Perft, search and UCI checks; collect milestone evidence. Use for engine correctness or acceptance, not statistical experiment conclusions.",
+          "interface": {
+            "displayName": "UCL Engine Validation",
+            "shortDescription": "Run existing engine checks and retain evidence",
+            "iconSmall": null,
+            "iconLarge": null,
+            "iconSmallUrl": null,
+            "iconLargeUrl": null,
+            "brandColor": null,
+            "defaultPrompt": "Use $ucl-engine-validation to verify the authorized UCL changes and record attributable evidence."
+          },
+          "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/ucl-engine-validation/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null
+        },
+        {
+          "name": "ucl-experiment-audit",
+          "description": "Audit UCL match, benchmark and ablation bundles for provenance, pairing, integrity and justified statistical claims using existing tools. Use for experiment evidence or strength claims, not ordinary engine regression checks.",
+          "interface": {
+            "displayName": "UCL Experiment Audit",
+            "shortDescription": "Audit experiment provenance and statistical claims",
+            "iconSmall": null,
+            "iconLarge": null,
+            "iconSmallUrl": null,
+            "iconLargeUrl": null,
+            "brandColor": null,
+            "defaultPrompt": "Use $ucl-experiment-audit to validate the requested UCL bundle and assess the conclusions supported by its evidence."
+          },
+          "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/ucl-experiment-audit/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null
+        }
+      ]
+    },
+    {
+      "cwd": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/tests",
+      "errors": [],
+      "totalSkills": 23,
+      "skills": [
+        {
+          "name": "gh-fix-ci",
+          "description": "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL.",
+          "interface": {
+            "displayName": "GitHub Fix CI",
+            "shortDescription": "Debug failing GitHub Actions CI",
+            "iconSmall": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/gh-fix-ci/assets/github-small.svg",
+            "iconLarge": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/gh-fix-ci/assets/github.png",
+            "iconSmallUrl": null,
+            "iconLargeUrl": null,
+            "brandColor": null,
+            "defaultPrompt": "Use $gh-fix-ci to inspect failing GitHub Actions checks in this repo and repair them within the authorized scope."
+          },
+          "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/gh-fix-ci/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null
+        },
+        {
+          "name": "ucl-engine-validation",
+          "description": "Validate UCL engine changes and regressions with existing CTest, Perft, search and UCI checks; collect milestone evidence. Use for engine correctness or acceptance, not statistical experiment conclusions.",
+          "interface": {
+            "displayName": "UCL Engine Validation",
+            "shortDescription": "Run existing engine checks and retain evidence",
+            "iconSmall": null,
+            "iconLarge": null,
+            "iconSmallUrl": null,
+            "iconLargeUrl": null,
+            "brandColor": null,
+            "defaultPrompt": "Use $ucl-engine-validation to verify the authorized UCL changes and record attributable evidence."
+          },
+          "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/ucl-engine-validation/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null
+        },
+        {
+          "name": "ucl-experiment-audit",
+          "description": "Audit UCL match, benchmark and ablation bundles for provenance, pairing, integrity and justified statistical claims using existing tools. Use for experiment evidence or strength claims, not ordinary engine regression checks.",
+          "interface": {
+            "displayName": "UCL Experiment Audit",
+            "shortDescription": "Audit experiment provenance and statistical claims",
+            "iconSmall": null,
+            "iconLarge": null,
+            "iconSmallUrl": null,
+            "iconLargeUrl": null,
+            "brandColor": null,
+            "defaultPrompt": "Use $ucl-experiment-audit to validate the requested UCL bundle and assess the conclusions supported by its evidence."
+          },
+          "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.agents/skills/ucl-experiment-audit/SKILL.md",
+          "scope": "repo",
+          "enabled": true,
+          "pluginId": null
+        }
+      ]
+    }
+  ]
+}

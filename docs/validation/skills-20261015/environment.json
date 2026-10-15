@@ -1,0 +1,64 @@
+{
+  "tested_revision": "8a7d450fcad3ff1733160ffc29af178e837a5847",
+  "dirty": true,
+  "time_zone": "Asia/Singapore",
+  "date": "2026-10-15",
+  "codex_cli_on_path": "0.133.0",
+  "codex_desktop_cli": "0.162.0-alpha.17.2",
+  "discovery_command": [
+    "python3",
+    "docs/validation/skills-20261015/probe_discovery.py",
+    "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex"
+  ],
+  "discovery_returncode": 0,
+  "skills_sha256": {
+    ".agents/skills/gh-fix-ci/LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+    ".agents/skills/gh-fix-ci/SKILL.md": "7c783d7e728bc3d744b55ad8bc84e4c92dca0c104f9c56314cb360337b999a37",
+    ".agents/skills/gh-fix-ci/agents/openai.yaml": "ececa6a9617a626bfad935cb736308fd6109ccc713c5723f800ed8c9996191a5",
+    ".agents/skills/gh-fix-ci/assets/github-small.svg": "ee05e92d373d4d84f4612af3c1090ef67698d421bbe30896a4ed5a00cb86a069",
+    ".agents/skills/gh-fix-ci/assets/github.png": "d55a9baa41798d8b5108e3058df3a5bda09914ea9fd73b49929cc38a8832424f",
+    ".agents/skills/gh-fix-ci/scripts/inspect_pr_checks.py": "9459e5b03f86785d184a83e5cd8d621b832e918ec04158a2962d867785812c6c",
+    ".agents/skills/ucl-engine-validation/SKILL.md": "047db0775433abb358fba0a1fd51166ed270a46f4ae7e9a5f3b33c4247682aca",
+    ".agents/skills/ucl-engine-validation/agents/openai.yaml": "6dc5a8bb94b10935c2e30791811b5a8dbb041737554463372952da4fcd4fa429",
+    ".agents/skills/ucl-experiment-audit/SKILL.md": "bfd319cba90e2fcf192809bcf49975dde4b5a3c3d6dca3a90eca5c3ca433a6cb",
+    ".agents/skills/ucl-experiment-audit/agents/openai.yaml": "269b52bbdad1ca74ec6404afbb80eb08e92d7b72e8a6a4f2bfbb8c29dbc158f4"
+  },
+  "prior_ci": {
+    "conclusion": "success",
+    "headSha": "eee9d44b5a73b36f06ae837e079a6afc66f8caaf",
+    "jobs": [
+      {
+        "name": "sanitizers",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38700282364/job/116306539970"
+      },
+      {
+        "name": "test (windows-latest, release)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38700282364/job/116306540052"
+      },
+      {
+        "name": "test (windows-latest, debug)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38700282364/job/116306540159"
+      },
+      {
+        "name": "test (macos-latest, release)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38700282364/job/116306540306"
+      },
+      {
+        "name": "test (macos-latest, debug)",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38700282364/job/116306540355"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38700282364"
+  }
+}

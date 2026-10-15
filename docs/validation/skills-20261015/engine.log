@@ -1,0 +1,64 @@
+$ cmake --preset release -DPython3_EXECUTABLE=/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/bin/python3.14
+-- Found Python3: /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/bin/python3.14 (found suitable version "3.14.5", minimum required is "3.11") found components: Interpreter
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+$ cmake --build --preset release --parallel 4
+[1/2] Building CXX object CMakeFiles/ucl.dir/engine/src/main.cpp.o
+[2/2] Linking CXX executable ucl
+$ ctest --preset release -N
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+  Test #1: unit
+  Test #2: search
+  Test #3: perft
+  Test #4: uci
+  Test #5: experiments
+
+Total Tests: 5
+$ ctest --preset release -R '^(unit|perft|search|uci|experiments)$'
+Test project /Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release
+    Start 1: unit
+1/5 Test #1: unit .............................   Passed    0.01 sec
+    Start 2: search
+2/5 Test #2: search ...........................   Passed    0.27 sec
+    Start 3: perft
+3/5 Test #3: perft ............................   Passed    0.00 sec
+    Start 4: uci
+4/5 Test #4: uci ..............................***Failed    0.05 sec
+Traceback (most recent call last):
+  File "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/tests/test_uci.py", line 14, in <module>
+    import chess
+ModuleNotFoundError: No module named 'chess'
+
+    Start 5: experiments
+5/5 Test #5: experiments ......................***Failed    0.06 sec
+E
+======================================================================
+ERROR: test_experiments (unittest.loader._FailedTest.test_experiments)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_experiments
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/tests/test_experiments.py", line 10, in <module>
+    from jsonschema import ValidationError
+ModuleNotFoundError: No module named 'jsonschema'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+
+
+60% tests passed, 2 tests failed out of 5
+
+Total Test time (real) =   0.39 sec
+
+The following tests FAILED:
+	  4 - uci (Failed)
+	  5 - experiments (Failed)
+Errors while running CTest

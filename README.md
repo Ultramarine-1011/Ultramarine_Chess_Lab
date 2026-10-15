@@ -113,6 +113,39 @@ ucl-lab match --config .tools/comparison-001/match.json \
 Python/CLI 路径，在 VS Developer PowerShell 运行相同步骤。实际原始证据和限制见
 [验证记录](VALIDATION.md)；长实验条件见 [实验规范](EXPERIMENTS.md)。
 
+## Codex Skills
+
+仓库只维护三项 `.agents/skills/` 能力，随 `git clone` / `git pull` 同步到
+macOS 和 Windows。无需复制到用户 Skills 目录、创建符号链接或设置绝对路径。
+Codex 从仓库根目录或子目录发现 Skills；更新后可在下一轮通过技能选择器查看，
+若未刷新则重启 Codex。发现机制见 [官方说明](https://learn.chatgpt.com/docs/build-skills)。
+
+| Skill | 用途 / 调用示例 |
+| --- | --- |
+| `ucl-engine-validation` | `$ucl-engine-validation 验证当前授权改动并记录证据` |
+| `ucl-experiment-audit` | `$ucl-experiment-audit 审计 experiments/results/<bundle>/record.json 及统计结论` |
+| `gh-fix-ci` | `$gh-fix-ci 检查指定 PR 或提交的 Actions 失败，并在授权范围内修复` |
+
+保留自动匹配；前两项分别负责工程正确性和实验结论，复用现有测试与 CLI。
+`gh-fix-ci` 需要 Python 3.11+、Git、GitHub CLI 和本机 `gh auth login`；
+Windows 同样需要安装 GitHub CLI 并在本机登录。
+无 PR 的分支推送按提交 SHA 使用 `gh run list/view`，不强行创建 PR。
+其他两项依赖上述现有工程环境，审计历史包无需原机器上的引擎二进制。
+
+运行时发现验证（仅需标准库和可用的 Codex CLI；从仓库根目录运行）：
+
+```text
+python docs/validation/skills-20261015/probe_discovery.py <codex可执行文件路径>
+```
+
+不重复安装内置 `skill-creator` / `skill-installer` / `openai-docs`。
+当前没有 Notebook 流程，暂不安装 `jupyter-notebook`；R3 获授权且需要 `.ipynb`
+时再评估。全局文档、表格、浏览器和插件 Skills 不复制进本项目，也不为本项目
+卸载其他工作的全局能力。以后机器若已全局安装同名 `gh-fix-ci`，优先保留仓库
+版本，移走或禁用用户目录副本以避免选择器重复；项目自有 Skills 只保留此处一份。
+
+来源、局部适配和验证结果见 [Skills 审计](docs/validation/skills-20261015/report.md)。
+
 ## 工程结构
 
 ```text

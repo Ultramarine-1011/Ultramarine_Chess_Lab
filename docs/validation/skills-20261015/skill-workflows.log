@@ -1,0 +1,105 @@
+$ .tools/skills-audit-20261015/venv/bin/python /Users/ultramarine/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/gh-fix-ci
+Skill is valid!
+$ .tools/skills-audit-20261015/venv/bin/python /Users/ultramarine/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/ucl-engine-validation
+Skill is valid!
+$ .tools/skills-audit-20261015/venv/bin/python /Users/ultramarine/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/ucl-experiment-audit
+Skill is valid!
+$ .venv/bin/ucl-lab validate experiments/results/r2-ablation-final-20261015/record.json
+valid experiment bundle (artifacts and recomputed results)
+$ .venv/bin/ucl-lab report experiments/results/r2-ablation-final-20261015/record.json
+# UCL search benchmark
+
+Revision: `eee9d44b5a73b36f06ae837e079a6afc66f8caaf`; dirty: False
+
+Per-position medians; wall time includes UCI round trip and TT allocation. Single search thread; cold TT per query.
+
+| Engine | Limit | Nodes | Wall ms | Wall NPS | Tactical checks |
+|---|---|---:|---:|---:|---:|
+| q0t0p0 | {'depth': 1} | 165 | 3.16 | 52268 | 5/6 |
+| q0t0p0 | {'depth': 4} | 91000 | 14.64 | 6217952 | 6/6 |
+| q0t0p0 | {'nodes': 10000} | 60905 | 10.74 | 5672815 | 6/6 |
+| q0t0p1 | {'depth': 1} | 165 | 3.44 | 47964 | 5/6 |
+| q0t0p1 | {'depth': 4} | 41677 | 10.50 | 3970451 | 6/6 |
+| q0t0p1 | {'nodes': 10000} | 60905 | 10.84 | 5617914 | 6/6 |
+| q0t1p0 | {'depth': 1} | 165 | 10.17 | 16221 | 5/6 |
+| q0t1p0 | {'depth': 4} | 76552 | 20.39 | 3754973 | 6/6 |
+| q0t1p0 | {'nodes': 10000} | 60905 | 17.16 | 3548260 | 6/6 |
+| q0t1p1 | {'depth': 1} | 165 | 9.71 | 16998 | 5/6 |
+| q0t1p1 | {'depth': 4} | 18411 | 14.40 | 1278834 | 6/6 |
+| q0t1p1 | {'nodes': 10000} | 60905 | 17.87 | 3408711 | 6/6 |
+| q1t0p0 | {'depth': 1} | 3223 | 4.43 | 728122 | 6/6 |
+| q1t0p0 | {'depth': 4} | 389687 | 111.08 | 3508107 | 6/6 |
+| q1t0p0 | {'nodes': 10000} | 60994 | 14.01 | 4352582 | 6/6 |
+| q1t0p1 | {'depth': 1} | 3223 | 4.52 | 713342 | 6/6 |
+| q1t0p1 | {'depth': 4} | 333568 | 107.90 | 3091326 | 6/6 |
+| q1t0p1 | {'nodes': 10000} | 60994 | 14.21 | 4291373 | 6/6 |
+| q1t1p0 | {'depth': 1} | 3223 | 11.19 | 287916 | 6/6 |
+| q1t1p0 | {'depth': 4} | 369510 | 109.58 | 3372074 | 6/6 |
+| q1t1p0 | {'nodes': 10000} | 60994 | 20.34 | 2998409 | 6/6 |
+| q1t1p1 | {'depth': 1} | 3223 | 11.16 | 288928 | 6/6 |
+| q1t1p1 | {'depth': 4} | 266968 | 93.59 | 2852537 | 6/6 |
+| q1t1p1 | {'nodes': 10000} | 60994 | 20.60 | 2960832 | 6/6 |
+
+QS changes leaf semantics. Tactical labels are narrow regression checks; this suite and throughput do not measure Elo.
+R1 lacks final interrupted-search counters; its node-limited totals are last completed iteration only. Compare R1 at fixed depth.
+
+$ .venv/bin/ucl-lab validate experiments/results/r1-r2-benchmark-final-20261015/record.json
+valid experiment bundle (artifacts and recomputed results)
+$ .venv/bin/ucl-lab report experiments/results/r1-r2-benchmark-final-20261015/record.json
+# UCL search benchmark
+
+Revision: `eee9d44b5a73b36f06ae837e079a6afc66f8caaf`; dirty: False
+
+Per-position medians; wall time includes UCI round trip and TT allocation. Single search thread; cold TT per query.
+
+| Engine | Limit | Nodes | Wall ms | Wall NPS | Tactical checks |
+|---|---|---:|---:|---:|---:|
+| R1 | {'depth': 1} | 165 | 2.92 | 56450 | 5/6 |
+| R1 | {'depth': 4} | 91000 | 13.31 | 6836472 | 6/6 |
+| R2 | {'depth': 1} | 3223 | 7.04 | 457626 | 6/6 |
+| R2 | {'depth': 4} | 266968 | 80.02 | 3336256 | 6/6 |
+| R2-reference | {'depth': 1} | 165 | 3.02 | 54615 | 5/6 |
+| R2-reference | {'depth': 4} | 91000 | 14.16 | 6428237 | 6/6 |
+
+QS changes leaf semantics. Tactical labels are narrow regression checks; this suite and throughput do not measure Elo.
+R1 lacks final interrupted-search counters; its node-limited totals are last completed iteration only. Compare R1 at fixed depth.
+
+$ .venv/bin/ucl-lab validate experiments/results/r1-r2-match-final-20261015/record.json
+valid experiment bundle (artifacts and recomputed results)
+$ .venv/bin/ucl-lab report experiments/results/r1-r2-match-final-20261015/record.json
+# UCL experiment fb10b152-b604-432d-94f0-69f0a53f1364
+
+Revision: `eee9d44b5a73b36f06ae837e079a6afc66f8caaf`; dirty: `False`
+
+R2 vs R1: 13 W / 3 D / 0 L (16 games), score 0.906.
+
+Paired rounds: 8; paired bootstrap score CI95: [0.8125, 0.96875].
+
+Pair scores (0, 0.5, 1, 1.5, 2): [0, 0, 0, 3, 5].
+
+Descriptive smoke/baseline statistics; not evidence of Elo improvement.
+
+$ .venv/bin/python -m unittest discover -s tests -p test_experiments.py
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.212s
+
+OK
+$ .venv/bin/python .agents/skills/gh-fix-ci/scripts/inspect_pr_checks.py --help
+usage: inspect_pr_checks.py [-h] [--repo REPO] [--pr PR]
+                            [--max-lines MAX_LINES] [--context CONTEXT]
+                            [--json]
+
+Inspect failing GitHub PR checks, fetch GitHub Actions logs, and extract a
+failure snippet.
+
+options:
+  -h, --help            show this help message and exit
+  --repo REPO           Path inside the target Git repository. (default: .)
+  --pr PR               PR number or URL (defaults to current branch PR).
+                        (default: None)
+  --max-lines MAX_LINES
+  --context CONTEXT
+  --json                Emit JSON instead of text output. (default: False)
+$ .venv/bin/python .agents/skills/gh-fix-ci/scripts/inspect_pr_checks.py --repo . --json
+no pull requests found for branch "main"
