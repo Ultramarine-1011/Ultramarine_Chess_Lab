@@ -59,7 +59,7 @@ def freeze(study,benchmarks,match_config):
         'openings_epd_sha256':sha256(ROOT/'experiments/results/r4-openings-v1/openings.epd')}
     write_json(study/'freeze.json',frozen)
     config={'version':1,'comparison':'ablation','seed':20261015,'engines':engines(study,chosen),
-        'rounds':200,'games':2,'concurrency':1,'tc':'1+0.01','maxmoves':150,'timeout_seconds':10800,
+        'rounds':200,'games':2,'concurrency':1,'pgn_telemetry':True,'tc':'1+0.01','maxmoves':150,'timeout_seconds':10800,
         'openings':{'path':'experiments/results/r4-openings-v1/openings.epd','format':'epd','order':'sequential'}}
     write_json(match_config,config)
     return frozen

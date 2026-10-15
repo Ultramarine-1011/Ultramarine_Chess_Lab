@@ -1,5 +1,7 @@
 """Run a pinned external fastchess, retaining metadata even on failure."""
 import json
+import gzip
+import hashlib
 import os
 from pathlib import Path
 import re
@@ -21,8 +23,10 @@ def executable(value, root):
 
 def validate_config(c):
     required = {"version", "seed", "engines", "rounds", "games", "concurrency", "tc", "maxmoves", "timeout_seconds"}
-    if not required <= c.keys() or c.keys() - required - {"depth", "nodes", "openings", "comparison"}:
+    if not required <= c.keys() or c.keys() - required - {"depth", "nodes", "openings", "comparison", "pgn_telemetry"}:
         raise ValueError("missing or unknown match configuration fields")
+    if 'pgn_telemetry' in c and type(c['pgn_telemetry']) is not bool:
+        raise ValueError('pgn_telemetry must be boolean')
     if c["version"] != 1 or len(c["engines"]) != 2 or c["games"] != 2:
         raise ValueError("version 1 requires two engines and color-swapped game pairs")
     for key in ("rounds", "concurrency", "maxmoves", "timeout_seconds", "depth", "nodes"):
@@ -64,8 +68,11 @@ def command(config, paths, fastchess, pgn, opening=None, engine_options=None):
             args.append(f"{field}={config[field]}")
     for field in ("rounds", "games", "concurrency", "maxmoves"):
         args += [f"-{field}", str(config[field])]
-    args += ["-srand", str(config["seed"]), "-pgnout", f"file={pgn}", "append=false",
-             "-autosaveinterval", "0", "-strict"]
+    args += ["-srand", str(config["seed"]), "-pgnout", f"file={pgn}", "append=false"]
+    if config.get('pgn_telemetry'):
+        args += ['nodes=true','nps=true','timeleft=true','latency=true',
+                 '-log',f'file={Path(pgn).parent / "engine.log"}','level=trace','engine=true','append=false','compress=false']
+    args += ["-autosaveinterval", "0", "-strict"]
     if opening:
         args += ["-openings", f"file={opening}", f"format={config['openings']['format']}", f"order={config['openings']['order']}"]
     return args
@@ -136,6 +143,13 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
         record["status"], record["error"] = "failed", f"{type(exc).__name__}: {exc}"
     finally:
         record["finished_at"] = utc_now()
+        if config.get('pgn_telemetry') and (output/'engine.log').exists():
+            original=output/'engine.log'
+            record['tools']['telemetry']={'file':'engine.log.gz','raw_sha256':sha256(original),'raw_bytes':original.stat().st_size}
+            with original.open('rb') as source, (output/'engine.log.gz').open('wb') as target:
+                with gzip.GzipFile(filename='',mode='wb',fileobj=target,mtime=0) as compressed:
+                    shutil.copyfileobj(source,compressed)
+            original.unlink() # Exact raw bytes are retained reversibly in gzip.
         for path in output.iterdir():
             if path.is_file() and path.name not in ("record.json", "report.md"):
                 record["artifacts"][path.name] = {"sha256": sha256(path), "bytes": path.stat().st_size}
@@ -235,3 +249,17 @@ def validate_evaluation(entry, directory, artifacts):
 def model_identity(path, model_hash):
     from .model import load_model
     return 'linear-v2' if len(load_model(path,model_hash))==14 else 'linear-v1'
+
+
+def validate_telemetry(record, directory):
+    if not record['parameters'].get('pgn_telemetry'):
+        return
+    meta=record['tools'].get('telemetry',{})
+    if meta.get('file')!='engine.log.gz' or 'engine.log.gz' not in record['artifacts']:
+        raise ValueError('missing match telemetry')
+    digest=hashlib.sha256();size=0
+    with gzip.open(Path(directory)/'engine.log.gz','rb') as stream:
+        for block in iter(lambda:stream.read(1024*1024),b''):
+            digest.update(block);size+=len(block)
+    if digest.hexdigest()!=meta.get('raw_sha256') or size!=meta.get('raw_bytes'):
+        raise ValueError('match raw telemetry integrity mismatch')

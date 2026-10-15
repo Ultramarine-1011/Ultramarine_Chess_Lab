@@ -1,0 +1,18 @@
+Started game 1 of 4 (UCL-candidate vs UCL-baseline)
+Finished game 1 (UCL-candidate vs UCL-baseline): 0-1 {Black mates}
+Started game 2 of 4 (UCL-baseline vs UCL-candidate)
+Finished game 2 (UCL-baseline vs UCL-candidate): 0-1 {Black mates}
+Started game 3 of 4 (UCL-candidate vs UCL-baseline)
+Finished game 3 (UCL-candidate vs UCL-baseline): 1-0 {White mates}
+Started game 4 of 4 (UCL-baseline vs UCL-candidate)
+Finished game 4 (UCL-baseline vs UCL-candidate): 1-0 {White mates}
+--------------------------------------------------
+Results of UCL-candidate vs UCL-baseline (10+0.1, NULL, 16MB, openings.epd):
+Elo: -0.00 +/- 0.00, nElo: nan +/- nan
+LOS: nan %, DrawRatio: 100.00 %, PairsRatio: nan
+Games: 4, Wins: 2, Losses: 2, Draws: 0, Points: 2.0 (50.00 %)
+Ptnml(0-2): [0, 0, 2, 0, 0], WL/DD Ratio: inf
+--------------------------------------------------
+Finished match
+Total Time: 00:00:01 (hours:minutes:seconds)
+

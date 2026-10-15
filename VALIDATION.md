@@ -598,3 +598,26 @@ R4.3代码Actions#38719798185五项success（r43-ci.json）。新增v2真实benc
 完整性测试（含非零新增特征checksum）、成本/validation选择guard通过；
 最新完整Release6/6（r43-models-release.log）。成本定义在任何计时前明确为原R3
 统计口径：逐局面中位数的均值之比。接下来只跑冻结四组性能，不打开test。
+
+### R4.4 候选与正式赛准备（尚未运行test/match）
+
+断点恢复已核实：上一目标轮完成真实实现、测试与数据产物，属于progress；
+原telemetry诊断进程已退出0，未重启正式研究。最新main deab470已推送，
+Actions#38720180531五项success。四组clean deab470 benchmark均validate/report通过。
+全模型静态113.95ns/call vs手工28.44ns（4.007倍），满足冻结<=10门槛；
+根据validation最低BCE选择唯一full模型，SHA43e2e1ad...。冻结选择文件已生成。
+全模型depth4节点195889 vs266968，wall86.81 vs85.66ms；成本、树变化和棋力分开。
+
+补充必要的正式赛观测：可选pgn_telemetry保存PGN节点/NPS/时钟及完整UCI trace，
+不改搜索/模型/对弈参数。原日志赛后无损gzip，保留原/压缩hash并验证。
+4局同手工模型dirty smoke证明完整压缩/解析链（非候选比赛，不用于棋力或选择），
+逐引擎final-stats与PGN步数覆盖完全一致，见r44-telemetry-smoke.log及诊断包。
+正式400局仍未开始，test未打开；下一步提交配置后clean重建，先test一次再正式赛。
+
+R4.4日志扩展targeted3/3与完整Release6/6通过（r44-targeted/release.log）。
+冻结成本与候选文件将随本提交入库，正式比赛固定为
+`experiments/results/r4-match-final-20261015`，400局/200不同开局换色轮。
+正式test marker尚不存在。不得恢复时重复启动、调整模型/开局/样本量或重新test。
+归档检查识别fastchess原始PGN/stdout末尾的标准空行；原字节保持不变。
+代码/文档diff --check通过，原始产物仅对blank-at-eof关闭样式告警后归档，
+不改实验结果或验证标准。

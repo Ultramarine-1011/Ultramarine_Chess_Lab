@@ -236,3 +236,24 @@ OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/pyth
 
 正式导出/拟合前提交并重新configure/build；输出拒绝覆盖。此fit不计算test指标；
 待所有扩展模型与候选选择冻结后统一进行独立测试。
+
+R4扩展导出、开发消融、性能冻结及唯一正式test/match（全部输出拒绝覆盖）：
+
+```sh
+.venv/bin/python -c 'from ucl.feature_data import export_dataset; export_dataset("experiments/results/r4-data-v1", "build/release/ucl", "experiments/results/r4-features-v2", "interpretable-v2")'
+OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m ucl.r4_training --features experiments/results/r4-features-v2 --output experiments/results/r4-models-v1 --expanded
+.venv/bin/python -m ucl.r4_experiment prepare
+# commit + clean configure/build before benchmarks
+.venv/bin/ucl-lab benchmark --config experiments/configs/r4/full-benchmark.json --output experiments/results/r4-benchmarks-v1/full
+# likewise refit8/pawn/king; validate/report each retained record
+.venv/bin/python -m ucl.r4_experiment freeze
+# commit freeze/config, clean configure/build before these once-only operations
+OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m ucl.r4_analysis --study experiments/results/r4-models-v1 --freeze experiments/results/r4-models-v1/freeze.json
+.venv/bin/ucl-lab match --config experiments/configs/r4-match.json --output experiments/results/r4-match-final-20261015 --fastchess .tools/bin/fastchess
+.venv/bin/ucl-lab validate experiments/results/r4-match-final-20261015/record.json
+.venv/bin/python -m ucl.r4_results experiments/results/r4-match-final-20261015/record.json --output experiments/results/r4-match-final-20261015/analysis.json
+```
+
+`pgn_telemetry=true`保留每步PGN nodes/NPS/clock和原始UCI日志；赛后将日志原字节gzip，
+同时保存压缩/原字节hash。分析逐引擎核对全部PGN步数与最终ucl_stats覆盖，区分
+中断迭代节点和普通info最后完整层。已存在的冻结test/match不得再次执行或覆盖。

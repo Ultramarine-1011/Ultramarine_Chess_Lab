@@ -1,0 +1,45 @@
+{
+  "kind": "r4-candidate-freeze",
+  "code": {
+    "revision": "deab47005cad0615d7f150e008c33cb2017311bf",
+    "dirty": false
+  },
+  "selection_sha256": "697f8c61e1839aecaf69597220ae53fbc48a1fb2e75c66d72f3bd1004a33cf8c",
+  "candidate": "full",
+  "models": {
+    "handcrafted": "f48c494c4b7a75634297b0d5da2a2f67ca3e2c76584c9893640736df193644ec",
+    "calibration": "b17b54d1cb9f33fc709a4a235a1b64b460676bdb7a773c27b55fb9e30b89a16e",
+    "frozen_r3": "446d18379cfa66e018c4be56218db044339e4be137309c9a17dfbab69874269b",
+    "refit8": "fe8b34d5cf3fab436a03a4d7d15581aa5b5b35477990834cf168e977fb9deb18",
+    "pawn": "074a364b2f0b3b7137f2d5d725ea3da5e83a8e6749ac847204862653a4118993",
+    "king": "6213e17d885fbd86b0a2f3bf97abb97067a828a1a71678af71074f4337dce013",
+    "full": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+  },
+  "cost_evidence": {
+    "refit8": {
+      "path": "experiments/results/r4-benchmarks-v1/refit8/record.json",
+      "sha256": "6a441d1d68596a75a58cfcaf3cf422295f1bb729147d69ea8b50add48518965c",
+      "cost_ratio": 1.0974932158468782
+    },
+    "pawn": {
+      "path": "experiments/results/r4-benchmarks-v1/pawn/record.json",
+      "sha256": "9e639f436e13dfc15e2b2863babd2cea39ea10e21ea58f2df2fd1360084f48fb",
+      "cost_ratio": 3.8021420761376534
+    },
+    "king": {
+      "path": "experiments/results/r4-benchmarks-v1/king/record.json",
+      "sha256": "73535a46de7c6b8628ce6fd19ade956b87dc509a2b503071d645456e817f3bc2",
+      "cost_ratio": 3.6245437565204295
+    },
+    "full": {
+      "path": "experiments/results/r4-benchmarks-v1/full/record.json",
+      "sha256": "11a30b26ec38c8d1baa07b806aa65513a8bc6e17b9c939549081f636efc36090",
+      "cost_ratio": 4.00632980086194
+    }
+  },
+  "rule": "minimum validation equal-game BCE; converged; ratio of mean per-position median static ns <=10; fewer active dimensions on exact tie",
+  "analysis_sha256": "8217ce2490c51b8ae9985fdae3b5961580d7959f399af060e664714a2b687497",
+  "protocol_sha256": "7df72c121c15d33474e7458eb7edffa690376e23047d1662ad6e7de3753dbc65",
+  "openings_manifest_sha256": "7698199778a51dc88e8c40e3fa5b0339b6eee200d2d857de84bd578e795771de",
+  "openings_epd_sha256": "75d6915cab390a2187992d9cb0f4ea2cd99288f2117ee5619ee5d8741f0afa34"
+}

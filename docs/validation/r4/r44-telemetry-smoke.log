@@ -1,0 +1,62 @@
+{
+  "kind": "r4-match-analysis",
+  "record_sha256": "3852a8f89600fc0d4032cca6a614f978e0f5764ea9075b0ed05726d1c2c7551b",
+  "games": 4,
+  "paired_rounds": 2,
+  "wins": 2,
+  "draws": 0,
+  "losses": 2,
+  "score": 0.5,
+  "score_ci95_paired_bootstrap": [
+    0.5,
+    0.5
+  ],
+  "elo_equivalent": 0.0,
+  "elo_equivalent_ci95": [
+    0.0,
+    0.0
+  ],
+  "paired_score_counts": [
+    0,
+    0,
+    2,
+    0,
+    0
+  ],
+  "terminations": {
+    "normal": 4
+  },
+  "natural_reasons": {
+    "CHECKMATE": 4
+  },
+  "abnormal_games": 0,
+  "engines": {
+    "UCL-candidate": {
+      "moves": 187,
+      "final_nodes": 317589,
+      "final_qnodes": 311800,
+      "engine_elapsed_us": 194052,
+      "aggregate_final_nps": 1636618.0199121884,
+      "completed_depth_median": 2,
+      "pgn_last_completed_nodes": 317589,
+      "pgn_move_wall_seconds_rounded_ms": 0.09800000000000003,
+      "counter_scope": "final includes interrupted iteration; PGN n= uses last completed UCI info"
+    },
+    "UCL-baseline": {
+      "moves": 187,
+      "final_nodes": 317589,
+      "final_qnodes": 311800,
+      "engine_elapsed_us": 193557,
+      "aggregate_final_nps": 1640803.484244951,
+      "completed_depth_median": 2,
+      "pgn_last_completed_nodes": 317589,
+      "pgn_move_wall_seconds_rounded_ms": 0.09500000000000001,
+      "counter_scope": "final includes interrupted iteration; PGN n= uses last completed UCI info"
+    }
+  },
+  "limitations": [
+    "Fixed 200 paired-opening sample and short clock; not SPRT or universal Elo.",
+    "Opening dependence and desktop background activity limit external validity.",
+    "Elo interval is monotone transform of descriptive paired-score percentile bootstrap."
+  ]
+}

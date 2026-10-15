@@ -48,3 +48,26 @@ ctest --preset sanitize
 
 Original compliance stdout retained gzip (ANSI/CR bytes preserved).
 First fixture assertion failure retained; final Release/Debug/sanitizer logs labeled final.
+
+## R4.4 candidate freeze and formal run
+
+Clean benchmark code `deab47005cad0615d7f150e008c33cb2017311bf`; same Release
+configure/build as above, logs in `.tools/r4-benchmark-build`.
+
+```
+.venv/bin/ucl-lab benchmark --config experiments/configs/r4/refit8-benchmark.json --output experiments/results/r4-benchmarks-v1/refit8
+# same commands for pawn / king / full, each followed by:
+.venv/bin/ucl-lab validate experiments/results/r4-benchmarks-v1/<group>/record.json
+.venv/bin/ucl-lab report experiments/results/r4-benchmarks-v1/<group>/record.json
+.venv/bin/python -m ucl.r4_experiment freeze
+```
+
+Four raw bundles retain actual UCI identity, model copies, 480 search queries and
+280 static repeats. Freeze points to each record hash. Logging extension only
+adds observations; telemetry smoke is 4 games, both same Handcrafted, dirty
+prototype, depth2 and existing smoke openings. `r44-telemetry-smoke.log` verifies
+all374 moves have final stats; this diagnostic does not select model or openings.
+
+Formal commands are in README; output `experiments/results/r4-match-final-20261015`
+is unique, 400 games/200 pairs. If `record.json` already exists, inspect process/
+status before any action; never restart just because a tool observation times out.

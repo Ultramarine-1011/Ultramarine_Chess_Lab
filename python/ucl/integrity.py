@@ -19,7 +19,7 @@ def validate_bundle(record_path, schema):
     if record["kind"] == "benchmark":
         from .benchmark import validate_benchmark_bundle
         return validate_benchmark_bundle(path, record)
-    from .match import validate_config, validate_comparison, validate_evaluation
+    from .match import validate_config, validate_comparison, validate_evaluation, validate_telemetry
     config = record["parameters"]
     validate_config(config)
     if record["seed"] != config["seed"]:
@@ -38,6 +38,7 @@ def validate_bundle(record_path, schema):
         required.add("openings." + config["openings"]["format"])
     if not required <= record["artifacts"].keys():
         raise ValueError("missing required experiment artifacts")
+    validate_telemetry(record, path.parent)
     for actual, declared in zip(record["engines"], config["engines"], strict=True):
         validate_evaluation(actual, path.parent, record["artifacts"])
         for key in ("name", "options", "build"):

@@ -29,10 +29,29 @@ class ExperimentTests(unittest.TestCase):
         self.assertIn("cmd=/engine two", args)
         self.assertIn("-srand", args)
         self.assertIn("-strict", args)
-        for field, value in (("rounds", 0), ("games", 1), ("seed", -1), ("depth", True)):
+        telemetry={**CONFIG,'pgn_telemetry':True}
+        validate_config(telemetry)
+        detailed=command(telemetry,[Path('/engine1'),Path('/engine2')],Path('/fastchess'),Path('/run/games.pgn'))
+        for item in ('nodes=true','nps=true','-log','file=/run/engine.log','engine=true'):
+            self.assertIn(item,detailed)
+        for field, value in (("rounds", 0), ("games", 1), ("seed", -1), ("depth", True), ('pgn_telemetry',1)):
             bad = deepcopy(CONFIG); bad[field] = value
             with self.assertRaises(ValueError):
                 validate_config(bad)
+
+    def test_compressed_raw_telemetry_integrity(self):
+        import gzip,hashlib
+        from ucl.match import validate_telemetry
+        raw=b'engine raw protocol\n'
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp);(p/'engine.log.gz').write_bytes(gzip.compress(raw,mtime=0))
+            record={'parameters':{'pgn_telemetry':True},'artifacts':{'engine.log.gz':{}},
+                    'tools':{'telemetry':{'file':'engine.log.gz','raw_bytes':len(raw),'raw_sha256':hashlib.sha256(raw).hexdigest()}}}
+            validate_telemetry(record,p)
+            record['tools']['telemetry']['raw_bytes']+=1
+            with self.assertRaisesRegex(ValueError,'raw telemetry'):validate_telemetry(record,p)
+            record['artifacts'].clear()
+            with self.assertRaisesRegex(ValueError,'missing match telemetry'):validate_telemetry(record,p)
 
     def test_schema_and_atomic_json(self):
         with patch("ucl.records.git_state", return_value={"revision": "a" * 40, "dirty": False}):

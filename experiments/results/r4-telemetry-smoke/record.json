@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "id": "383d1b2b-871e-4591-93a4-6210e2c7a4c9",
+  "kind": "match",
+  "status": "completed",
+  "started_at": "2026-10-15T10:28:20.383043+00:00",
+  "finished_at": "2026-10-15T10:28:21.718199+00:00",
+  "code": {
+    "revision": "deab47005cad0615d7f150e008c33cb2017311bf",
+    "dirty": true
+  },
+  "parameters": {
+    "version": 1,
+    "seed": 20261015,
+    "engines": [
+      {
+        "name": "UCL-candidate",
+        "path": "build/release/ucl",
+        "revision": "HEAD",
+        "build": "CMake release preset",
+        "ucl_build_info": true,
+        "options": {
+          "MoveOverhead": 0
+        }
+      },
+      {
+        "name": "UCL-baseline",
+        "path": "build/release/ucl",
+        "revision": "HEAD",
+        "build": "CMake release preset; same binary smoke only",
+        "ucl_build_info": true,
+        "options": {
+          "MoveOverhead": 0
+        }
+      }
+    ],
+    "rounds": 2,
+    "games": 2,
+    "concurrency": 1,
+    "tc": "10+0.1",
+    "depth": 2,
+    "openings": {
+      "path": "experiments/openings/smoke.epd",
+      "format": "epd",
+      "order": "sequential"
+    },
+    "maxmoves": 60,
+    "timeout_seconds": 120,
+    "pgn_telemetry": true
+  },
+  "seed": 20261015,
+  "hardware": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "tools": {
+    "fastchess": {
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/bin/fastchess",
+      "sha256": "11e7b51ce96815a362096fa3b64697b381257a61af42a7d215757a3dee56b39a",
+      "version": "fastchess alpha 1.8.2 20261011-ebfd64c"
+    },
+    "command": [
+      "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/bin/fastchess",
+      "-engine",
+      "cmd=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "name=UCL-candidate",
+      "proto=uci",
+      "option.MoveOverhead=0",
+      "-engine",
+      "cmd=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "name=UCL-baseline",
+      "proto=uci",
+      "option.MoveOverhead=0",
+      "-each",
+      "tc=10+0.1",
+      "depth=2",
+      "-rounds",
+      "2",
+      "-games",
+      "2",
+      "-concurrency",
+      "1",
+      "-maxmoves",
+      "60",
+      "-srand",
+      "20261015",
+      "-pgnout",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-telemetry-smoke/games.pgn",
+      "append=false",
+      "nodes=true",
+      "nps=true",
+      "timeleft=true",
+      "latency=true",
+      "-log",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-telemetry-smoke/engine.log",
+      "level=trace",
+      "engine=true",
+      "append=false",
+      "compress=false",
+      "-autosaveinterval",
+      "0",
+      "-strict",
+      "-openings",
+      "file=/Users/ultramarine/Documents/Ultramarine_Chess_Lab/experiments/results/r4-telemetry-smoke/openings.epd",
+      "format=epd",
+      "order=sequential"
+    ],
+    "telemetry": {
+      "file": "engine.log.gz",
+      "raw_sha256": "1e18bd5e75cb2e0c2a4e5dbb3d6cf057aa9b667642b6dfe28ef5c83010915ca1",
+      "raw_bytes": 981636
+    }
+  },
+  "engines": [
+    {
+      "name": "UCL-candidate",
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "revision": "deab47005cad0615d7f150e008c33cb2017311bf",
+      "build": "CMake release preset",
+      "options": {
+        "MoveOverhead": 0
+      },
+      "sha256": "9d96e36a58a3903c7cada98f221c079603c468ed8c919c3ae647d4be58679c3e",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "deab47005cad0615d7f150e008c33cb2017311bf",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      }
+    },
+    {
+      "name": "UCL-baseline",
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/build/release/ucl",
+      "revision": "deab47005cad0615d7f150e008c33cb2017311bf",
+      "build": "CMake release preset; same binary smoke only",
+      "options": {
+        "MoveOverhead": 0
+      },
+      "sha256": "9d96e36a58a3903c7cada98f221c079603c468ed8c919c3ae647d4be58679c3e",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "deab47005cad0615d7f150e008c33cb2017311bf",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      }
+    }
+  ],
+  "artifacts": {
+    "config.json": {
+      "sha256": "1017ade079ad2059e2ff24c74408f3d8eeff3236ae49b126be8fe45bd67628ce",
+      "bytes": 3983
+    },
+    "games.pgn": {
+      "sha256": "ff3b75e43b4eeee4ffef7190518ff005cfced036fc6ec8b6c9b45c1d3eeee13f",
+      "bytes": 29105
+    },
+    "fastchess.log": {
+      "sha256": "e1fd7757b279250bfdf8a67f3ab7d37a0d82d35549b89ec356e7bd6818bdc601",
+      "bytes": 912
+    },
+    "openings.epd": {
+      "sha256": "b9549b982c8e958f7da9aa7ead05293b767ab17c7c5398710ca68ee5f23c0fc7",
+      "bytes": 243
+    },
+    "match-config.json": {
+      "sha256": "2e470d437a55cac2b961b96cbba1df16736aa21b342a30f53db8b8bc8b8dc6a4",
+      "bytes": 799
+    },
+    "engine.log.gz": {
+      "sha256": "af2dcd095f3f317214123065dbdc6647c04e1846e23c423896ecba9f831ac9fc",
+      "bytes": 66044
+    }
+  },
+  "results": {
+    "paired_score_counts": [
+      0,
+      0,
+      2,
+      0,
+      0
+    ],
+    "candidate": "UCL-candidate",
+    "baseline": "UCL-baseline",
+    "games": 4,
+    "wins": 2,
+    "draws": 0,
+    "losses": 2,
+    "score": 0.5,
+    "paired_rounds": 2,
+    "score_ci95_paired_bootstrap": [
+      0.5,
+      0.5
+    ],
+    "bootstrap_seed": 20261015,
+    "terminations": {
+      "normal": 4
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "error": null
+}
