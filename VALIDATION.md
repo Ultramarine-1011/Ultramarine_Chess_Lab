@@ -797,3 +797,17 @@ HypervisorPresent=true为系统报告，不将其误认作本次远程CI。ACPI�
 工具SHA c6d7e4458a58025983c81bf38c524cb213e6f27559657dcfd72543392a431a71；
 R4 Mac固定开发版与本轮官方发布版不同。全部原始/失败/重建证据与命令见docs/validation/r5。
 后续：提交/推送本阶段，核对CI，clean重构建，再按组件profile选择局部优化。
+
+### R5.1 Windows归档字节修复
+
+发现真实兼容性缺陷：Windows write_json 默认写CRLF，但 .gitattributes text=auto eol=lf
+使30个新R5产物的Git blob与运行时hash不同；本地验证通过不能代表克隆可验证。
+原始工作区字节未修改，现为R5实验原始文件/证据json/log添加-text精确保存；
+write_json后续显式newline=LF，保持跨平台生成一致。R3/R4文件未改。
+原30项差异列表见r51-git-byte-precheck.json；本次提交前逐项比对index与工作区原字节。
+一次新PowerShell未加载本机env，ctest命令未找到，实际NOT_RUN，随后使用venv绝对ctest重跑。
+修复后Release6/6退出0（r51-integrity-ctest.log）；引擎仍为2bd3111 clean构建，
+仅Python/归档规则修改。2bd3111 CI此前仍运行中，后续核对最终状态。
+组件profile已在2bd3111 clean源码上实际运行210条：全提取153.46ns，去王环127.03ns，
+去通路兵141.18ns；为移除组件的诊断，不把差值当可加因果成本。
+接下来选择预计算通路兵mask、合并已有扫描/向量分配的局部候选；保留王环isAttacked语义。

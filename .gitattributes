@@ -2,3 +2,7 @@
 * text=auto eol=lf
 *.gz binary
 *.zst binary
+# R5 Windows tool output is research evidence: preserve bytes hashed at runtime.
+experiments/results/r5-*/** -text
+docs/validation/r5/*.json -text
+docs/validation/r5/*.log -text
