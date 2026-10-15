@@ -6,6 +6,7 @@ import json
 import os
 from pathlib import Path
 import platform
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -54,8 +55,26 @@ def hardware():
             "packages": {name: importlib.metadata.version(name) for name in ("chess", "jsonschema", "ucl-lab")}}
 
 
-def new_record(root, config):
+def prepare_output(root, output, overwrite=False):
+    """Replace disposable runs only; archived or tracked evidence stays intact."""
+    output = Path(output).resolve()
+    if output.exists() and overwrite:
+        record = json.loads((output / 'record.json').read_text(encoding='utf-8'))
+        if record.get('mode') != 'exploratory':
+            raise ValueError('only exploratory runs can be overwritten')
+        root = Path(root).resolve()
+        if output == root or output in root.parents:
+            raise ValueError('output cannot contain the repository')
+        if output.is_relative_to(root) and subprocess.check_output(
+                ['git', '-C', str(root), 'ls-files', '--', output.relative_to(root).as_posix()]):
+            raise ValueError('tracked experiment evidence cannot be overwritten')
+        shutil.rmtree(output)
+    output.mkdir(parents=True, exist_ok=False)
+
+
+def new_record(root, config, formal=False):
     return {"schema_version": 1, "id": str(uuid.uuid4()), "kind": "match",
+            "mode": "formal" if formal else "exploratory",
             "status": "running", "started_at": utc_now(), "finished_at": None,
             "code": git_state(root), "parameters": config, "seed": config["seed"],
             "hardware": hardware(), "tools": {}, "engines": [], "artifacts": {},

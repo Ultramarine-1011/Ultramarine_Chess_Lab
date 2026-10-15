@@ -235,7 +235,7 @@ class UciTests(unittest.TestCase):
                            "options": {"Quiescence": True, "UseTT": True, "PVOrdering": True, "Hash": 1}}]}
             source = tmp / "input.json"; write_json(source, config)
             output = tmp / "benchmark"
-            record = run_benchmark(root, source, output, allow_dirty=True)
+            record = run_benchmark(root, source, output)
             self.assertEqual(record["status"], "completed", record["error"])
             schema = json.loads((root / "schemas/benchmark-v1.schema.json").read_text())
             validate_bundle(output / "record.json", schema)
@@ -279,7 +279,7 @@ class UciTests(unittest.TestCase):
                 engines.append({'name':name,'path':str(Path(ENGINE).resolve()),'revision':info['revision'],'build':'CTest binary','ucl_build_info':True,'options':opts})
             config={'version':1,'seed':7,'suite':str(suite),'repeats':1,'limits':[{'depth':1}],'engines':engines,'static_evaluation':True}
             source=tmp/'input.json';write_json(source,config)
-            out=tmp/'bundle';record=run_benchmark(root,source,out,allow_dirty=True)
+            out=tmp/'bundle';record=run_benchmark(root,source,out)
             self.assertEqual(record['status'],'completed',record['error'])
             schema=json.loads((root/'schemas/benchmark-v1.schema.json').read_text())
             validate_bundle(out/'record.json',schema)

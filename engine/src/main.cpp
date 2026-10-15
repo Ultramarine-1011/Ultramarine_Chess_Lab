@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
         ucl::HandcraftedEvaluator evaluator(features);
         std::optional<ucl::LinearEvaluator> linear;
         if (argc == 4) {
-            try { linear.emplace(ucl::LinearEvaluator::load(features, argv[2], argv[3])); }
+            try { linear.emplace(ucl::LinearEvaluator::load(argv[2], argv[3])); }
             catch (const std::exception& e) { std::cerr << "model rejected: " << e.what() << '\n'; return 1; }
         }
         std::cout << std::setprecision(17);

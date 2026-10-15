@@ -1,0 +1,26 @@
+{
+  "kind": "r5-whole-group-continuation",
+  "code": {
+    "revision": "b065947cf5c2682a5765c4ba344581028a0c82fa",
+    "dirty": false
+  },
+  "started_at": "2026-10-15T17:10:32.728446+00:00",
+  "status": "PASS",
+  "groups": {
+    "B": {
+      "status": "completed",
+      "record_sha256": "0bf20f95e47313905c73c12a7c91f88babcdfeca4f28b38a8b4e573e9bf507d2"
+    },
+    "C": {
+      "status": "completed",
+      "record_sha256": "b79854c1207770b7bc6a17f33150f93e66f1422aeef13891a4d040b2087e256f"
+    },
+    "D": {
+      "status": "completed",
+      "record_sha256": "e070e720569827d982817e40d35980341eb87143c48cd39c71724aa050389c83"
+    }
+  },
+  "error": null,
+  "plan_sha256": "9c60450db2caffbd44764afc0e8d9211eafa76e918cb022e0501be554c189700",
+  "finished_at": "2026-10-15T18:07:22.889545+00:00"
+}

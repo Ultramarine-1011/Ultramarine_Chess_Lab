@@ -1,0 +1,108 @@
+﻿{
+    "utc":  "2026-10-15T17:49:28.1609445Z",
+    "cpu":  [
+                {
+                    "Name":  "AMD Ryzen 9 8940HX with Radeon Graphics        ",
+                    "NumberOfCores":  16,
+                    "NumberOfLogicalProcessors":  32,
+                    "MaxClockSpeed":  2401,
+                    "CurrentClockSpeed":  2401,
+                    "LoadPercentage":  5
+                }
+            ],
+    "os":  {
+               "Caption":  "Microsoft Windows 11 家庭中文版",
+               "Version":  "10.0.26100",
+               "BuildNumber":  "26100",
+               "LastBootUpTime":  "\/Date(1790167184360)\/"
+           },
+    "computer":  {
+                     "Manufacturer":  "ASUSTeK COMPUTER INC.",
+                     "Model":  "TX Gaming FA608PP_FA608PP",
+                     "TotalPhysicalMemory":  33517670400,
+                     "HypervisorPresent":  true
+                 },
+    "battery":  [
+                    {
+                        "BatteryStatus":  2,
+                        "EstimatedChargeRemaining":  100,
+                        "EstimatedRunTime":  71582788
+                    }
+                ],
+    "power_plan":  [
+                       "电源方案 GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)"
+                   ],
+    "processor_load":  [
+                           {
+                               "Name":  "_Total",
+                               "PercentProcessorTime":  1
+                           }
+                       ],
+    "thermal_acpi_raw_tenths_kelvin":  [
+
+                                       ],
+    "thermal_error":  "拒绝访问 ",
+    "top_processes_by_cumulative_cpu_seconds":  [
+                                                    {
+                                                        "ProcessName":  "msedgewebview2",
+                                                        "CPU":  7568.921875,
+                                                        "Id":  24772
+                                                    },
+                                                    {
+                                                        "ProcessName":  "msedgewebview2",
+                                                        "CPU":  2780.25,
+                                                        "Id":  78548
+                                                    },
+                                                    {
+                                                        "ProcessName":  "MSPCManagerService",
+                                                        "CPU":  1875.984375,
+                                                        "Id":  12732
+                                                    },
+                                                    {
+                                                        "ProcessName":  "chrome",
+                                                        "CPU":  1006.40625,
+                                                        "Id":  62524
+                                                    },
+                                                    {
+                                                        "ProcessName":  "ArmouryCrate.UserSessionHelper",
+                                                        "CPU":  711.140625,
+                                                        "Id":  49368
+                                                    },
+                                                    {
+                                                        "ProcessName":  "ChatGPT",
+                                                        "CPU":  681.046875,
+                                                        "Id":  33404
+                                                    },
+                                                    {
+                                                        "ProcessName":  "chrome",
+                                                        "CPU":  659.71875,
+                                                        "Id":  64208
+                                                    },
+                                                    {
+                                                        "ProcessName":  "explorer",
+                                                        "CPU":  507.28125,
+                                                        "Id":  66212
+                                                    },
+                                                    {
+                                                        "ProcessName":  "ChatGPT",
+                                                        "CPU":  496.75,
+                                                        "Id":  59132
+                                                    },
+                                                    {
+                                                        "ProcessName":  "ChatGPT",
+                                                        "CPU":  415.453125,
+                                                        "Id":  70288
+                                                    },
+                                                    {
+                                                        "ProcessName":  "NVIDIA Overlay",
+                                                        "CPU":  395.703125,
+                                                        "Id":  59812
+                                                    },
+                                                    {
+                                                        "ProcessName":  "chrome",
+                                                        "CPU":  393.765625,
+                                                        "Id":  72060
+                                                    }
+                                                ],
+    "disk_free_bytes":  275663351808
+}

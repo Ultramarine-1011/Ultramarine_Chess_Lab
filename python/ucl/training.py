@@ -1,4 +1,4 @@
-"""Reproducible fractional logistic linear evaluation using the existing Trainer boundary."""
+"""Reproducible fractional logistic linear evaluation with direct fit/evaluate functions."""
 from dataclasses import asdict, dataclass
 import gzip
 import importlib.metadata
@@ -6,7 +6,6 @@ import json
 from pathlib import Path
 import platform
 import time
-from typing import Protocol
 
 import numpy as np
 from scipy.optimize import minimize
@@ -26,11 +25,6 @@ class TrainingSpec:
     target: str
     split_manifest: str
 
-
-class Trainer(Protocol):
-    def fit(self, spec: TrainingSpec, output_directory: str) -> str:
-        """Return path to a model manifest with weights, feature version and metrics."""
-        ...
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -54,10 +48,7 @@ def objective(beta, x, y, prior, penalty, sample_weight=None):
         loss = np.mean(np.logaddexp(0., z) - y*z) + penalty/2 * (delta @ delta)
         grad = x.T @ (expit(z)-y) / len(y) + penalty * delta
     else:
-        weight = np.asarray(sample_weight, dtype=float)
-        if weight.shape != y.shape or not np.isfinite(weight).all() or (weight < 0).any() or weight.sum() <= 0:
-            raise ValueError('invalid observation weights')
-        weight = weight / weight.sum()
+        weight = sample_weight
         loss = weight @ (np.logaddexp(0., z) - y*z) + penalty/2 * (delta @ delta)
         grad = x.T @ ((expit(z)-y)*weight) + penalty * delta
     return float(loss), grad
@@ -129,47 +120,45 @@ def validate_model_manifest(path):
     return m
 
 
-class LinearTrainer:
-    def __init__(self, feature_manifest):
-        self.feature_manifest = str(feature_manifest)
-
-    def fit(self, spec: TrainingSpec, output_directory: str) -> str:
-        rows, provenance = read_features(self.feature_manifest, spec)
-        output = Path(output_directory)
-        output.mkdir(parents=True, exist_ok=False)
-        _, train_x, train_y = arrays(rows, 'train')
-        _, val_x, val_y = arrays(rows, 'validation')
-        candidates = []
-        for penalty in LAMBDAS:
-            result = optimize(train_x, train_y, penalty)
-            result['train'] = metrics(train_x, train_y, result['weights'])
-            result['validation'] = metrics(val_x, val_y, result['weights'])
-            candidates.append(result)
-        selection = {'spec': asdict(spec), 'feature_manifest': self.feature_manifest,
-                     'feature_provenance': provenance, 'candidates': candidates,
-                     'handcrafted': {'train': metrics(train_x, train_y, WEIGHTS),
-                                     'validation': metrics(val_x, val_y, WEIGHTS)}}
-        write_json(output/'selection.json', selection)
-        if not all(r['success'] for r in candidates):
-            raise ValueError('optimizer failed; see retained selection.json')
-        chosen = min((r for r in candidates if r['lambda'] > 0), key=lambda r: (r['validation']['bce'], -r['lambda']))
-        text = encode_model(chosen['weights'], sha256(spec.dataset_manifest), sha256(spec.split_manifest))
-        (output/'model.txt').write_bytes(text.encode('ascii'))
-        manifest = {'schema_version': 1, 'kind': 'ucl-linear-model', 'status': 'frozen',
-                    'feature_version': VERSION, 'perspective': 'white', 'temperature': TAU,
-                    'intercept': 0, 'weights': chosen['weights'], 'lambda': chosen['lambda'], 'seed': spec.seed,
-                    'model_file': 'model.txt', 'model_sha256': sha256(output/'model.txt'),
-                    'dataset_sha256': sha256(spec.dataset_manifest), 'split_sha256': sha256(spec.split_manifest),
-                    'features_sha256': provenance['features_sha256'], 'selection_sha256': sha256(output/'selection.json'),
-                    'code': git_state(ROOT), 'environment': {**hardware(), 'numpy': np.__version__,
-                        'scipy': importlib.metadata.version('scipy'), 'numpy_config': str(np.show_config(mode='dicts'))},
-                    'training_spec': asdict(spec), 'configuration': {'lambdas': LAMBDAS, 'loss': 'fractional-BCE',
-                        'penalty': 'lambda/2 * ||w*train_RMS/400 - w_handcrafted*train_RMS/400||^2',
-                        'intercept': 0, 'scaling': 'train-only RMS; no centering; raw deploy weights',
-                        'optimizer': 'L-BFGS-B', 'maxiter': 1000, 'gtol': 1e-9, 'ftol': 1e-12}}
-        write_json(output/'model-manifest.json', manifest)
-        validate_model_manifest(output/'model-manifest.json')
-        return str(output/'model-manifest.json')
+def fit(feature_manifest, spec: TrainingSpec, output_directory: str) -> str:
+    feature_manifest = str(feature_manifest)
+    rows, provenance = read_features(feature_manifest, spec)
+    output = Path(output_directory)
+    if (output/'test-results.json').exists():
+        raise ValueError('cannot refit a study with held-out results; use a development directory')
+    output.mkdir(parents=True, exist_ok=True)
+    _, train_x, train_y = arrays(rows, 'train')
+    _, val_x, val_y = arrays(rows, 'validation')
+    candidates = []
+    for penalty in LAMBDAS:
+        result = optimize(train_x, train_y, penalty)
+        result['train'] = metrics(train_x, train_y, result['weights'])
+        result['validation'] = metrics(val_x, val_y, result['weights'])
+        candidates.append(result)
+    selection = {'spec': asdict(spec), 'feature_manifest': feature_manifest,
+                 'feature_provenance': provenance, 'candidates': candidates,
+                 'handcrafted': {'train': metrics(train_x, train_y, WEIGHTS),
+                                 'validation': metrics(val_x, val_y, WEIGHTS)}}
+    write_json(output/'selection.json', selection)
+    if not all(r['success'] for r in candidates):
+        raise ValueError('optimizer failed; see retained selection.json')
+    chosen = min((r for r in candidates if r['lambda'] > 0), key=lambda r: (r['validation']['bce'], -r['lambda']))
+    text = encode_model(chosen['weights'], sha256(spec.dataset_manifest), sha256(spec.split_manifest))
+    (output/'model.txt').write_bytes(text.encode('ascii'))
+    manifest = {'schema_version': 1, 'kind': 'ucl-linear-model', 'status': 'frozen',
+                'feature_version': VERSION, 'perspective': 'white', 'temperature': TAU,
+                'intercept': 0, 'weights': chosen['weights'], 'lambda': chosen['lambda'], 'seed': spec.seed,
+                'model_file': 'model.txt', 'model_sha256': sha256(output/'model.txt'),
+                'dataset_sha256': sha256(spec.dataset_manifest), 'split_sha256': sha256(spec.split_manifest),
+                'features_sha256': provenance['features_sha256'], 'selection_sha256': sha256(output/'selection.json'),
+                'code': git_state(ROOT), 'environment': {**hardware(), 'numpy': np.__version__,
+                    'scipy': importlib.metadata.version('scipy'), 'numpy_config': str(np.show_config(mode='dicts'))},
+                'training_spec': asdict(spec), 'configuration': {'lambdas': LAMBDAS, 'loss': 'fractional-BCE',
+                    'penalty': 'lambda/2 * ||w*train_RMS/400 - w_handcrafted*train_RMS/400||^2',
+                    'intercept': 0, 'scaling': 'train-only RMS; no centering; raw deploy weights',
+                    'optimizer': 'L-BFGS-B', 'maxiter': 1000, 'gtol': 1e-9, 'ftol': 1e-12}}
+    write_json(output/'model-manifest.json', manifest)
+    return str(output/'model-manifest.json')
 
 
 def evaluate_frozen(manifest_path, feature_manifest):
@@ -184,10 +173,8 @@ def evaluate_frozen(manifest_path, feature_manifest):
     rows, _ = read_features(feature_manifest, spec)
     selected, x, y = arrays(rows, 'test')
     models = {'handcrafted': WEIGHTS, 'unregularized': selection['candidates'][0]['weights'], 'regularized': m['weights']}
-    # Exclusive marker prevents accidental re-opening the frozen test procedure.
-    with (output/'test-evaluation.started.json').open('x') as stream:
-        json.dump({'model_sha256': m['model_sha256'], 'features_sha256': m['features_sha256'],
-                   'test_position_ids_sha256': __import__('hashlib').sha256('\n'.join(r['position_id'] for r in selected).encode()).hexdigest()}, stream)
+    if (output/'test-results.json').exists():
+        raise FileExistsError('held-out results already exist; use validation for development')
     result = {'model_sha256': m['model_sha256'], 'test_games': len({r['game_id'] for r in selected}),
               'models': {name: metrics(x, y, w) for name, w in models.items()}, 'strata': {}}
     for name, predicate in {'white_to_move': lambda r: r['fen'].split()[1] == 'w',

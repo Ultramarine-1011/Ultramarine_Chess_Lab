@@ -87,7 +87,7 @@ def markdown_report(record):
     if r is None:
         return f"# UCL experiment {record['id']}\n\nStatus: {record['status']}\n\n{record['error'] or ''}\n"
     return (f"# UCL experiment {record['id']}\n\n"
-            f"Revision: `{record['code']['revision']}`; dirty: `{record['code']['dirty']}`\n\n"
+            f"Mode: {record.get('mode', 'historical')}; revision: `{record['code']['revision']}`; dirty: `{record['code']['dirty']}`\n\n"
             f"{r['candidate']} vs {r['baseline']}: {r['wins']} W / {r['draws']} D / {r['losses']} L "
             f"({r['games']} games), score {r['score']:.3f}.\n\n"
             f"Paired rounds: {r['paired_rounds']}; paired bootstrap score CI95: "

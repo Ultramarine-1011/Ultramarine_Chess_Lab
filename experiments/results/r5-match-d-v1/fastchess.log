@@ -1,0 +1,943 @@
+Started game 1 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 1 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 2 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 2 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 3 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 3 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 4 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 4 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 5 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 5 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 6 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 6 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 7 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 7 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 8 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 8 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 9 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 9 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 10 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 10 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 11 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 11 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 12 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 12 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 13 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 13 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 14 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 14 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 15 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 15 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 16 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 16 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 17 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 17 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 18 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 18 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 19 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 19 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 20 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 20 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 52.51 +/- 102.18, nElo: 81.89 +/- 152.27
+LOS: 85.41 %, DrawRatio: 40.00 %, PairsRatio: 5.00
+Games: 20, Wins: 9, Losses: 6, Draws: 5, Points: 11.5 (57.50 %)
+Ptnml(0-2): [1, 0, 4, 5, 0], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 21 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 21 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 22 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 22 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 23 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 23 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 24 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 24 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 25 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 25 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 26 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 26 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 27 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 27 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 28 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 28 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 29 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 29 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 30 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 30 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 31 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 31 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 32 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 32 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 33 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 33 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 34 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 34 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 35 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 35 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 36 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 36 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 37 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 37 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 38 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 38 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 39 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 39 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 40 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 40 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 43.66 +/- 59.90, nElo: 80.13 +/- 107.67
+LOS: 92.77 %, DrawRatio: 50.00 %, PairsRatio: 4.00
+Games: 40, Wins: 18, Losses: 13, Draws: 9, Points: 22.5 (56.25 %)
+Ptnml(0-2): [1, 1, 10, 8, 0], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 41 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 41 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 42 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 42 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 43 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 43 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 44 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 44 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 45 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 45 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 46 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 46 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by adjudication}
+Started game 47 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 47 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 48 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 48 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 49 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 49 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 50 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 50 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 51 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 51 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 52 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 52 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 53 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 53 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 54 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 54 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 55 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 55 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 56 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 56 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 57 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 57 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 58 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 58 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 59 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 59 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 60 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 60 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 23.20 +/- 55.70, nElo: 37.04 +/- 87.91
+LOS: 79.55 %, DrawRatio: 50.00 %, PairsRatio: 2.00
+Games: 60, Wins: 25, Losses: 21, Draws: 14, Points: 32.0 (53.33 %)
+Ptnml(0-2): [2, 3, 15, 9, 1], WL/DD Ratio: 14.00
+--------------------------------------------------
+Started game 61 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 61 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 62 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 62 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 63 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 63 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 64 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 64 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 65 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 65 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 66 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 66 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 67 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 67 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 68 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 68 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 69 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 69 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 70 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 70 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 71 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 71 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 72 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 72 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 73 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 73 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 74 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 74 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 75 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 75 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 76 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 76 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 77 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 77 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 78 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 78 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 79 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 79 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 80 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 80 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 30.48 +/- 48.68, nElo: 48.24 +/- 76.13
+LOS: 89.28 %, DrawRatio: 55.00 %, PairsRatio: 2.00
+Games: 80, Wins: 36, Losses: 29, Draws: 15, Points: 43.5 (54.37 %)
+Ptnml(0-2): [2, 4, 22, 9, 3], WL/DD Ratio: 21.00
+--------------------------------------------------
+Started game 81 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 81 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 82 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 82 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 83 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 83 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 84 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 84 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 85 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 85 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 86 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 86 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 87 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 87 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 88 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 88 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 89 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 89 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 90 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 90 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 91 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 91 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 92 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 92 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 93 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 93 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 94 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 94 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 95 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 95 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 96 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 96 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 97 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 97 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 98 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 98 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 99 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 99 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 100 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 100 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 38.37 +/- 44.16, nElo: 59.99 +/- 68.10
+LOS: 95.79 %, DrawRatio: 56.00 %, PairsRatio: 2.14
+Games: 100, Wins: 47, Losses: 36, Draws: 17, Points: 55.5 (55.50 %)
+Ptnml(0-2): [2, 5, 28, 10, 5], WL/DD Ratio: 27.00
+--------------------------------------------------
+Started game 101 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 101 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 102 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 102 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 103 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 103 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 104 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 104 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 105 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 105 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 106 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 106 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 107 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 107 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 108 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 108 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 109 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 109 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 110 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 110 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 111 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 111 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 112 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 112 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 113 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 113 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 114 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 114 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 115 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 115 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 116 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 116 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 117 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 117 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 118 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 118 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 119 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 119 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 120 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 120 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by insufficient mating material}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 31.94 +/- 38.54, nElo: 52.02 +/- 62.16
+LOS: 94.95 %, DrawRatio: 56.67 %, PairsRatio: 1.89
+Games: 120, Wins: 55, Losses: 44, Draws: 21, Points: 65.5 (54.58 %)
+Ptnml(0-2): [2, 7, 34, 12, 5], WL/DD Ratio: 33.00
+--------------------------------------------------
+Started game 121 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 121 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 122 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 122 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 123 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 123 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 124 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 124 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 125 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 125 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 126 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 126 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 127 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 127 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 128 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 128 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 129 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 129 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 130 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 130 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 131 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 131 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 132 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 132 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 133 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 133 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 134 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 134 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 135 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 135 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 136 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 136 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 137 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 137 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 138 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 138 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 139 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 139 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 140 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 140 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 24.86 +/- 37.56, nElo: 38.37 +/- 57.55
+LOS: 90.43 %, DrawRatio: 57.14 %, PairsRatio: 1.73
+Games: 140, Wins: 64, Losses: 54, Draws: 22, Points: 75.0 (53.57 %)
+Ptnml(0-2): [4, 7, 40, 13, 6], WL/DD Ratio: 39.00
+--------------------------------------------------
+Started game 141 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 141 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 142 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 142 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 143 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 143 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 144 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 144 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 145 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 145 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 146 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 146 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 147 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 147 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 148 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 148 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 149 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 149 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 150 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 150 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 151 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 151 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 152 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 152 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 153 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 153 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 154 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 154 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 155 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 155 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 156 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 156 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 157 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 157 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 158 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 158 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 159 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 159 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 160 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 160 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 26.11 +/- 33.86, nElo: 41.79 +/- 53.83
+LOS: 93.59 %, DrawRatio: 61.25 %, PairsRatio: 1.82
+Games: 160, Wins: 75, Losses: 63, Draws: 22, Points: 86.0 (53.75 %)
+Ptnml(0-2): [4, 7, 49, 13, 7], WL/DD Ratio: 48.00
+--------------------------------------------------
+Started game 161 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 161 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 162 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 162 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 163 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 163 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 164 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 164 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 165 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 165 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 166 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 166 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 167 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 167 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 168 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 168 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 169 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 169 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 170 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 170 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 171 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 171 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 172 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 172 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 173 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 173 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 174 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 174 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 175 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 175 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 176 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 176 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 177 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 177 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 178 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 178 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 179 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 179 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 180 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 180 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 30.96 +/- 31.80, nElo: 49.82 +/- 50.76
+LOS: 97.28 %, DrawRatio: 63.33 %, PairsRatio: 2.00
+Games: 180, Wins: 87, Losses: 71, Draws: 22, Points: 98.0 (54.44 %)
+Ptnml(0-2): [4, 7, 57, 13, 9], WL/DD Ratio: 56.00
+--------------------------------------------------
+Started game 181 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 181 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 182 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 182 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 183 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 183 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 184 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 184 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 185 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 185 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 186 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 186 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 187 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 187 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 188 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 188 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 189 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 189 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 190 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 190 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 191 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 191 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 192 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 192 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 193 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 193 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 194 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 194 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 195 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 195 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 196 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 196 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 197 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 197 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 198 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 198 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 199 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 199 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 200 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 200 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 29.60 +/- 32.29, nElo: 44.49 +/- 48.15
+LOS: 96.49 %, DrawRatio: 60.00 %, PairsRatio: 1.86
+Games: 200, Wins: 95, Losses: 78, Draws: 27, Points: 108.5 (54.25 %)
+Ptnml(0-2): [6, 8, 60, 15, 11], WL/DD Ratio: 29.00
+--------------------------------------------------
+Started game 201 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 201 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 202 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 202 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 203 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 203 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 204 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 204 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 205 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 205 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 206 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 206 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 207 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 207 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 208 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 208 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 209 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 209 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 210 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 210 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 211 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 211 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 212 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 212 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 213 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 213 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 214 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 214 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 215 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 215 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 216 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 216 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 217 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 217 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 218 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 218 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 219 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 219 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 220 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 220 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 17.39 +/- 31.41, nElo: 25.53 +/- 45.91
+LOS: 86.21 %, DrawRatio: 60.91 %, PairsRatio: 1.53
+Games: 220, Wins: 102, Losses: 91, Draws: 27, Points: 115.5 (52.50 %)
+Ptnml(0-2): [9, 8, 67, 15, 11], WL/DD Ratio: 32.50
+--------------------------------------------------
+Started game 221 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 221 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 222 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 222 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 223 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 223 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 224 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 224 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 225 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 225 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 226 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 226 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 227 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 227 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 228 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 228 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 229 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 229 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 230 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 230 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 231 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 231 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 232 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 232 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 233 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 233 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by stalemate}
+Started game 234 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 234 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 235 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 235 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 236 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 236 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 237 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 237 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 238 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 238 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 239 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 239 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 240 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 240 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 21.74 +/- 29.55, nElo: 32.50 +/- 43.96
+LOS: 92.64 %, DrawRatio: 61.67 %, PairsRatio: 1.71
+Games: 240, Wins: 113, Losses: 98, Draws: 29, Points: 127.5 (53.12 %)
+Ptnml(0-2): [9, 8, 74, 17, 12], WL/DD Ratio: 36.00
+--------------------------------------------------
+Started game 241 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 241 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 242 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 242 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 243 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 243 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 244 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 244 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 245 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 245 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 246 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 246 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 247 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 247 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 248 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 248 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 249 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 249 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 250 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 250 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 251 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 251 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 252 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 252 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 253 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 253 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 254 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 254 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 255 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 255 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 256 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 256 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 257 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 257 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 258 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 258 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 259 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 259 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 260 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 260 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 29.47 +/- 28.76, nElo: 43.59 +/- 42.23
+LOS: 97.85 %, DrawRatio: 61.54 %, PairsRatio: 1.94
+Games: 260, Wins: 126, Losses: 104, Draws: 30, Points: 141.0 (54.23 %)
+Ptnml(0-2): [9, 8, 80, 18, 15], WL/DD Ratio: 39.00
+--------------------------------------------------
+Started game 261 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 261 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 262 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 262 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 263 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 263 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 264 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 264 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 265 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 265 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 266 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 266 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 267 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 267 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 268 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 268 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 269 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 269 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 270 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 270 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 271 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 271 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 272 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 272 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 273 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 273 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 274 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 274 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 275 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 275 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 276 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 276 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 277 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 277 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 278 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 278 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 279 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 279 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 280 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 280 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 33.61 +/- 28.25, nElo: 48.83 +/- 40.70
+LOS: 99.07 %, DrawRatio: 60.00 %, PairsRatio: 2.11
+Games: 280, Wins: 137, Losses: 110, Draws: 33, Points: 153.5 (54.82 %)
+Ptnml(0-2): [10, 8, 84, 21, 17], WL/DD Ratio: 41.00
+--------------------------------------------------
+Started game 281 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 281 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 282 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 282 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 283 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 283 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 284 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 284 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 285 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 285 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 286 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 286 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 287 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 287 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 288 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 288 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 289 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 289 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 290 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 290 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 291 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 291 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 292 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 292 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 293 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 293 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 294 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 294 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 295 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 295 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 296 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 296 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 297 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 297 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 298 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 298 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 299 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 299 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 300 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 300 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 39.55 +/- 28.06, nElo: 56.01 +/- 39.32
+LOS: 99.74 %, DrawRatio: 58.00 %, PairsRatio: 2.15
+Games: 300, Wins: 149, Losses: 115, Draws: 36, Points: 167.0 (55.67 %)
+Ptnml(0-2): [10, 10, 87, 22, 21], WL/DD Ratio: 42.50
+--------------------------------------------------
+Started game 301 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 301 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 302 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 302 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 303 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 303 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 304 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 304 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 305 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 305 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 306 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 306 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 307 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 307 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 308 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 308 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 309 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 309 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 310 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 310 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 311 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 311 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 312 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 312 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by adjudication}
+Started game 313 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 313 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 314 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 314 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 315 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 315 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 316 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 316 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 317 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 317 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 318 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 318 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 319 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 319 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 320 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 320 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 40.35 +/- 26.86, nElo: 57.83 +/- 38.07
+LOS: 99.85 %, DrawRatio: 58.13 %, PairsRatio: 2.19
+Games: 320, Wins: 158, Losses: 121, Draws: 41, Points: 178.5 (55.78 %)
+Ptnml(0-2): [10, 11, 93, 24, 22], WL/DD Ratio: 30.00
+--------------------------------------------------
+Started game 321 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 321 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by adjudication}
+Started game 322 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 322 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 323 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 323 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 324 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 324 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 325 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 325 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 326 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 326 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 327 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 327 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 328 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 328 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 329 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 329 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 330 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 330 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 331 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 331 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 332 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 332 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 333 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 333 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 334 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 334 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 335 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 335 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 336 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 336 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 337 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 337 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 338 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 338 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 339 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 339 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 340 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 340 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by insufficient mating material}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 35.89 +/- 25.80, nElo: 51.85 +/- 36.93
+LOS: 99.70 %, DrawRatio: 57.06 %, PairsRatio: 1.92
+Games: 340, Wins: 164, Losses: 129, Draws: 47, Points: 187.5 (55.15 %)
+Ptnml(0-2): [10, 15, 97, 26, 22], WL/DD Ratio: 31.33
+--------------------------------------------------
+Started game 341 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 341 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 342 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 342 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 343 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 343 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 344 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 344 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 345 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 345 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 346 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 346 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 347 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 347 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 348 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 348 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 349 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 349 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 350 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 350 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 351 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 351 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 352 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 352 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 353 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 353 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 354 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 354 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 355 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 355 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 356 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 356 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 357 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 357 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 358 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 358 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 359 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 359 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 360 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 360 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 39.74 +/- 25.15, nElo: 57.30 +/- 35.89
+LOS: 99.91 %, DrawRatio: 56.11 %, PairsRatio: 2.04
+Games: 360, Wins: 174, Losses: 133, Draws: 53, Points: 200.5 (55.69 %)
+Ptnml(0-2): [10, 16, 101, 29, 24], WL/DD Ratio: 24.25
+--------------------------------------------------
+Started game 361 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 361 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 362 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 362 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 363 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 363 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 364 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 364 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 365 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 365 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 366 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 366 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 367 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 367 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 368 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 368 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 369 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 369 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 370 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 370 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 371 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 371 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 372 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 372 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 373 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 373 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 374 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 374 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 375 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 375 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 376 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 376 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 377 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 377 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 378 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 378 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by insufficient mating material}
+Started game 379 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 379 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 380 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 380 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 35.78 +/- 24.27, nElo: 51.95 +/- 34.93
+LOS: 99.82 %, DrawRatio: 56.84 %, PairsRatio: 1.93
+Games: 380, Wins: 182, Losses: 143, Draws: 55, Points: 209.5 (55.13 %)
+Ptnml(0-2): [11, 17, 108, 30, 24], WL/DD Ratio: 26.00
+--------------------------------------------------
+Started game 381 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 381 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 382 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 382 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 383 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 383 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 384 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 384 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 385 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 385 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 386 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 386 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 387 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 387 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 388 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 388 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 389 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 389 (OptimizedFull14 vs OriginalFull14): 1/2-1/2 {Draw by fifty moves rule}
+Started game 390 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 390 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 391 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 391 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 392 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 392 (OriginalFull14 vs OptimizedFull14): 0-1 {Black mates}
+Started game 393 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 393 (OptimizedFull14 vs OriginalFull14): 0-1 {Black mates}
+Started game 394 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 394 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 395 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 395 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 396 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 396 (OriginalFull14 vs OptimizedFull14): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 397 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 397 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 398 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 398 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+Started game 399 of 400 (OptimizedFull14 vs OriginalFull14)
+Finished game 399 (OptimizedFull14 vs OriginalFull14): 1-0 {White mates}
+Started game 400 of 400 (OriginalFull14 vs OptimizedFull14)
+Finished game 400 (OriginalFull14 vs OptimizedFull14): 1-0 {White mates}
+--------------------------------------------------
+Results of OptimizedFull14 vs OriginalFull14 (1+0.01, NULL, 16MB, openings.epd):
+Elo: 35.74 +/- 23.67, nElo: 51.86 +/- 34.05
+LOS: 99.86 %, DrawRatio: 57.00 %, PairsRatio: 1.97
+Games: 400, Wins: 192, Losses: 151, Draws: 57, Points: 220.5 (55.12 %)
+Ptnml(0-2): [12, 17, 114, 32, 25], WL/DD Ratio: 27.50
+--------------------------------------------------
+Finished match
+Total Time: 00:17:25 (hours:minutes:seconds)
+

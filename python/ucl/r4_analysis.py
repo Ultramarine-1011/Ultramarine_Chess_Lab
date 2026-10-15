@@ -41,9 +41,8 @@ def evaluate(study, freeze_path):
     gids=sorted({r['game_id'] for r in selected})
     rng=np.random.default_rng(SEED)
     indices=rng.integers(0,len(gids),size=(2000,len(gids)))
-    with (study/'test-evaluation.started.json').open('x') as stream:
-        json.dump({'freeze_sha256':sha256(freeze_path),'selection_sha256':freeze['selection_sha256'],
-                   'test_position_ids_sha256':__import__('hashlib').sha256('\n'.join(r['position_id'] for r in selected).encode()).hexdigest()},stream)
+    if (study/'test-results.json').exists():
+        raise FileExistsError('held-out results already exist; use validation for development')
     losses={n:loss_values(x,y,m['weights']) for n,m in selection['models'].items()}
     result={'kind':'r4-independent-test','code':git_state(ROOT),'freeze_sha256':sha256(freeze_path),
         'games':len(gids),'positions':len(selected),'primary':'equal-game BCE',

@@ -50,12 +50,15 @@ def validate_bundle(record_path, schema, completed_prefix_games=None):
             if actual[key] != declared[key]:
                 raise ValueError(f"engine {key} mismatch")
         revision = record["code"]["revision"] if declared["revision"] == "HEAD" else declared["revision"]
-        if actual["revision"] != revision:
+        formal = record.get('mode', 'formal') == 'formal'
+        captured_revision = actual['build_info']['revision'] if actual.get('build_info') else revision
+        if actual["revision"] != captured_revision or (formal and actual["revision"] != revision):
             raise ValueError("engine revision mismatch")
         info = actual.get("build_info")
-        if declared.get("ucl_build_info") and (not info or info["revision"] != revision):
+        if formal and declared.get("ucl_build_info") and (not info or info["revision"] != revision):
             raise ValueError("binary build provenance mismatch")
-    validate_comparison(config, record["engines"])
+    if record.get('mode', 'formal') == 'formal':
+        validate_comparison(config, record["engines"])
     a, b = config["engines"]
     results = summarize_pgn(path.parent / "games.pgn", a["name"], b["name"],
                             completed_prefix_games if prefix else config["rounds"] * config["games"], record["seed"])

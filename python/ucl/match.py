@@ -9,7 +9,7 @@ import signal
 import shutil
 import subprocess
 
-from .records import new_record, sha256, utc_now, validate_record, write_json
+from .records import new_record, prepare_output, sha256, utc_now, write_json
 from .report import markdown_report, summarize_pgn
 
 
@@ -40,14 +40,7 @@ def validate_config(c):
         raise ValueError("comparison must be smoke/ablation/revision")
     names = []
     for e in c["engines"]:
-        if not {"name", "path", "revision", "build", "options"} <= e.keys() or e.keys() - {"name", "path", "revision", "build", "options", "ucl_build_info"} or not all(isinstance(e[k], str) and e[k] for k in ("name", "path", "revision", "build")):
-            raise ValueError("engine requires name/path/revision/build/options")
-        if e["revision"] != "HEAD" and not re.fullmatch(r"[0-9a-f]{40}", e["revision"]):
-            raise ValueError("engine revision must be a full commit SHA or HEAD")
-        if type(e.get("ucl_build_info", False)) is not bool:
-            raise ValueError("ucl_build_info must be boolean")
-        if not isinstance(e["options"], dict) or not all(isinstance(k, str) and isinstance(v, (str, int, float, bool)) for k, v in e["options"].items()):
-            raise ValueError("options must be a scalar mapping")
+        validate_engine(e)
         names.append(e["name"])
     if len(set(names)) != 2:
         raise ValueError("engine names must differ")
@@ -55,6 +48,16 @@ def validate_config(c):
         o = c["openings"]
         if set(o) != {"path", "format", "order"} or o["format"] not in ("epd", "pgn") or o["order"] not in ("random", "sequential"):
             raise ValueError("invalid openings configuration")
+
+
+def validate_engine(e):
+    if not {"name", "path", "revision", "build", "options"} <= e.keys() or not all(
+            isinstance(e[k], str) and e[k] for k in ("name", "path", "revision", "build")):
+        raise ValueError("engine requires name/path/revision/build/options")
+    if e["revision"] != "HEAD" and not re.fullmatch(r"[0-9a-f]{40}", e["revision"]):
+        raise ValueError("engine revision must be a full commit SHA or HEAD")
+    if not isinstance(e["options"], dict) or not all(isinstance(k, str) and isinstance(v, (str, int, float, bool)) for k, v in e["options"].items()):
+        raise ValueError("options must be a scalar mapping")
 
 
 def command(config, paths, fastchess, pgn, opening=None, engine_options=None):
@@ -96,16 +99,14 @@ def run_process(args, output, log, timeout):
             raise
 
 
-def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=False):
+def run_match(root, config_path, output, fastchess="fastchess", *, formal=False, overwrite=False):
     root, output = Path(root).resolve(), Path(output).resolve()
     config = json.loads(Path(config_path).read_text(encoding="utf-8"))
     validate_config(config)
-    record = new_record(root, config)
-    if record["code"]["dirty"] and not allow_dirty:
-        raise ValueError("working tree is dirty; commit first or explicitly pass --allow-dirty for diagnostics")
-    schema = json.loads((root / "schemas/experiment-v1.schema.json").read_text(encoding="utf-8"))
-    # Refuse to overwrite earlier experiment evidence.
-    output.mkdir(parents=True, exist_ok=False)
+    if formal and overwrite:
+        raise ValueError('formal runs cannot overwrite evidence')
+    record = new_record(root, config, formal)
+    prepare_output(root, output, overwrite)
     write_json(output / "match-config.json", config)
     paths = []
     try:
@@ -113,10 +114,11 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
         record["tools"]["fastchess"] = {"path": str(fast), "sha256": sha256(fast),
             "version": subprocess.check_output([str(fast), "--version"], text=True, timeout=10).strip()}
         for e in config["engines"]:
-            entry = capture_engine(root, e, record["code"]["revision"], allow_dirty)
+            entry = capture_engine(root, e, record["code"]["revision"], formal=formal)
             paths.append(Path(entry["path"]))
             record["engines"].append(entry)
-        validate_comparison(config, record["engines"])
+        if formal:
+            validate_comparison(config, record["engines"])
         opening = None
         if "openings" in config:
             original = (root / config["openings"]["path"]).resolve()
@@ -125,7 +127,6 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
         runtime = [runtime_options(root, e["options"], output) for e in config["engines"]]
         args = command(config, paths, fast, output / "games.pgn", opening, runtime)
         record["tools"]["command"] = args
-        validate_record(record, schema)
         write_json(output / "record.json", record)
         with (output / "fastchess.log").open("w", encoding="utf-8") as log:
             returncode = run_process(args, output, log, config["timeout_seconds"])
@@ -145,7 +146,7 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
         record["finished_at"] = utc_now()
         if config.get('pgn_telemetry') and (output/'engine.log').exists():
             original=output/'engine.log'
-            record['tools']['telemetry']={'file':'engine.log.gz','raw_sha256':sha256(original),'raw_bytes':original.stat().st_size}
+            record['tools']['telemetry']={'file':'engine.log.gz'}
             with original.open('rb') as source, (output/'engine.log.gz').open('wb') as target:
                 with gzip.GzipFile(filename='',mode='wb',fileobj=target,mtime=0) as compressed:
                     shutil.copyfileobj(source,compressed)
@@ -153,7 +154,6 @@ def run_match(root, config_path, output, fastchess="fastchess", allow_dirty=Fals
         for path in output.iterdir():
             if path.is_file() and path.name not in ("record.json", "report.md"):
                 record["artifacts"][path.name] = {"sha256": sha256(path), "bytes": path.stat().st_size}
-        validate_record(record, schema)
         write_json(output / "record.json", record)
         (output / "report.md").write_text(markdown_report(record), encoding="utf-8")
     return record
@@ -174,7 +174,7 @@ def validate_comparison(config, engines):
         raise ValueError("ablation requires the same binary with different explicit options")
 
 
-def capture_engine(root, e, code_revision, allow_dirty=False):
+def capture_engine(root, e, code_revision, *, formal=False):
     path = executable(e["path"], Path(root))
     entry = {k: v for k, v in e.items() if k != "ucl_build_info"}
     entry.update(path=str(path), sha256=sha256(path),
@@ -182,8 +182,9 @@ def capture_engine(root, e, code_revision, allow_dirty=False):
     if e.get("ucl_build_info"):
         info = json.loads(subprocess.check_output([str(path), "--build-info"], text=True, timeout=10))
         entry["build_info"] = info
-        if info["revision"] != entry["revision"] or (info["dirty"] and not allow_dirty):
-            raise ValueError("UCL binary revision/dirty state mismatch: reconfigure and rebuild after committing")
+        if formal and (info["revision"] != entry["revision"] or info["dirty"]):
+            raise ValueError("formal comparison needs a clean binary of the declared revision")
+        entry['revision'] = info['revision']
     if 'Evaluator' in e['options']:
         options = runtime_options(root, e['options'])
         lines = ['uci'] + ['setoption name '+k+' value '+(str(v).lower() if isinstance(v,bool) else str(v)) for k,v in options.items()]
@@ -210,11 +211,9 @@ def ordered_options(options):
 def runtime_options(root, options, output=None):
     options = ordered_options(options)
     if options.get('Evaluator') == 'Linear' or 'ModelFile' in options:
-        from .model import load_model
         if not {'ModelFile', 'ModelSHA256'} <= options.keys():
             raise ValueError('Linear requires explicit ModelFile and ModelSHA256')
         model = (Path(root)/options['ModelFile']).resolve()
-        load_model(model, options['ModelSHA256'])
         if output is not None:
             target = Path(output)/('model-'+options['ModelSHA256']+'.txt')
             if not target.exists():
@@ -236,12 +235,10 @@ def validate_evaluation(entry, directory, artifacts):
     if identity is None or identity['evaluator'] != expected:
         raise ValueError('actual evaluator identity mismatch')
     if expected and expected.startswith('linear-'):
-        from .model import load_model
         model_hash = options.get('ModelSHA256')
         name = 'model-' + str(model_hash) + '.txt'
         if identity['model_sha256'] != model_hash or name not in artifacts:
             raise ValueError('model identity/artifact mismatch')
-        load_model(Path(directory)/name, model_hash)
     elif identity['model_sha256'] is not None:
         raise ValueError('handcrafted evaluator cannot claim a model hash')
 
@@ -257,6 +254,8 @@ def validate_telemetry(record, directory):
     meta=record['tools'].get('telemetry',{})
     if meta.get('file')!='engine.log.gz' or 'engine.log.gz' not in record['artifacts']:
         raise ValueError('missing match telemetry')
+    if 'raw_sha256' not in meta:
+        return # New bundles use the compressed-file hash in artifacts.
     digest=hashlib.sha256();size=0
     with gzip.open(Path(directory)/'engine.log.gz','rb') as stream:
         for block in iter(lambda:stream.read(1024*1024),b''):

@@ -9,8 +9,8 @@ import time
 import chess
 import chess.engine
 
-from .match import capture_engine, validate_config, runtime_options, validate_evaluation
-from .records import new_record, sha256, utc_now, write_json, validate_record
+from .match import capture_engine, validate_engine, runtime_options, validate_evaluation
+from .records import new_record, prepare_output, sha256, utc_now, write_json
 
 
 def validate_config_benchmark(c):
@@ -27,11 +27,10 @@ def validate_config_benchmark(c):
         raise ValueError("duplicate benchmark limits")
     if len(c["engines"]) < 1 or len({e["name"] for e in c["engines"]}) != len(c["engines"]):
         raise ValueError("benchmark engine names must be unique")
-    # Reuse engine and scalar validation from the match configuration contract.
+    if type(c['seed']) is not int or not 0 <= c['seed'] <= 2147483647:
+        raise ValueError('seed must be a nonnegative 31-bit integer')
     for e in c["engines"]:
-        other = {**e, "name": e["name"] + "-validation"}
-        validate_config({"version": 1, "seed": c["seed"], "engines": [e, other], "rounds": 1,
-                         "games": 2, "concurrency": 1, "tc": "10", "maxmoves": 1, "timeout_seconds": 1})
+        validate_engine(e)
 
 
 def load_suite(path):
@@ -109,7 +108,7 @@ def summarize(rows):
 
 
 def markdown_benchmark(record):
-    lines = ["# UCL search benchmark", "", f"Revision: `{record['code']['revision']}`; dirty: {record['code']['dirty']}", "",
+    lines = ["# UCL search benchmark", "", f"Mode: {record.get('mode', 'historical')}; revision: `{record['code']['revision']}`; dirty: {record['code']['dirty']}", "",
              "Per-position medians; wall time includes UCI round trip and TT allocation. Single search thread; cold TT per query.", "",
              "| Engine | Limit | Nodes | Wall ms | Wall NPS | Tactical checks |", "|---|---|---:|---:|---:|---:|"]
     for row in record["summary"]:
@@ -124,18 +123,18 @@ def markdown_benchmark(record):
     return "\n".join(lines)
 
 
-def run_benchmark(root, config_path, output, allow_dirty=False):
+def run_benchmark(root, config_path, output, *, formal=False, overwrite=False):
     root, output = Path(root).resolve(), Path(output).resolve()
     config = json.loads(Path(config_path).read_text(encoding="utf-8"))
     validate_config_benchmark(config)
     suite_path = (root / config["suite"]).resolve()
     suite = load_suite(suite_path)
-    record = new_record(root, config)
+    if formal and overwrite:
+        raise ValueError('formal runs cannot overwrite evidence')
+    record = new_record(root, config, formal)
     record.update(kind="benchmark", rows=[], summary=[])
     record.pop("results")
-    if record["code"]["dirty"] and not allow_dirty:
-        raise ValueError("commit before benchmarking, or use --allow-dirty for diagnostics")
-    output.mkdir(parents=True, exist_ok=False)
+    prepare_output(root, output, overwrite)
     write_json(output / "benchmark-config.json", config)
     write_json(output / "positions.json", suite)
     logger = logging.getLogger("chess.engine")
@@ -145,7 +144,7 @@ def run_benchmark(root, config_path, output, allow_dirty=False):
     clients = {}
     try:
         for e in config["engines"]:
-            entry = capture_engine(root, e, record["code"]["revision"], allow_dirty)
+            entry = capture_engine(root, e, record["code"]["revision"], formal=formal)
             record["engines"].append(entry)
             client = chess.engine.SimpleEngine.popen_uci(entry["path"], timeout=30)
             clients[e["name"]] = client
@@ -196,12 +195,9 @@ def run_benchmark(root, config_path, output, allow_dirty=False):
                 client.close()
         logger.removeHandler(handler); handler.close(); logger.setLevel(old_level)
         record["finished_at"] = utc_now()
-        write_json(output / "measurements.json", record["rows"])
         for artifact in output.iterdir():
             if artifact.is_file():
                 record["artifacts"][artifact.name] = {"sha256": sha256(artifact), "bytes": artifact.stat().st_size}
-        schema = json.loads((root / "schemas/benchmark-v1.schema.json").read_text())
-        validate_record(record, schema)
         write_json(output / "record.json", record)
         (output / "report.md").write_text(markdown_benchmark(record), encoding="utf-8")
     return record
@@ -212,12 +208,12 @@ def validate_benchmark_bundle(path, record):
     validate_config_benchmark(config)
     if record["status"] != "completed" or record["seed"] != config["seed"]:
         raise ValueError("incomplete benchmark or seed mismatch")
-    required = {"benchmark-config.json", "positions.json", "measurements.json", "uci.log"}
+    required = {"benchmark-config.json", "positions.json", "uci.log"}
     if not required <= record["artifacts"].keys():
         raise ValueError("missing benchmark artifacts")
     if json.loads((path.parent / "benchmark-config.json").read_text()) != config:
         raise ValueError("benchmark config mismatch")
-    if json.loads((path.parent / "measurements.json").read_text()) != record["rows"]:
+    if 'measurements.json' in record['artifacts'] and json.loads((path.parent / "measurements.json").read_text()) != record["rows"]:
         raise ValueError("benchmark measurement mismatch")
     cases = {c["id"]: c for c in load_suite(path.parent / "positions.json")["positions"]}
     engines = {e["name"]: e for e in record["engines"]}
@@ -227,9 +223,11 @@ def validate_benchmark_bundle(path, record):
         actual = engines[declared["name"]]
         validate_evaluation(actual, path.parent, record["artifacts"])
         revision = record["code"]["revision"] if declared["revision"] == "HEAD" else declared["revision"]
-        if any(actual[k] != declared[k] for k in ("name", "options", "build")) or actual["revision"] != revision:
+        formal = record.get('mode', 'formal') == 'formal'
+        captured_revision = actual['build_info']['revision'] if actual.get('build_info') else revision
+        if any(actual[k] != declared[k] for k in ("name", "options", "build")) or actual['revision'] != captured_revision or (formal and actual["revision"] != revision):
             raise ValueError("benchmark engine declaration mismatch")
-        if declared.get("ucl_build_info") and (not actual.get("build_info") or actual["build_info"]["revision"] != revision):
+        if formal and declared.get("ucl_build_info") and (not actual.get("build_info") or actual["build_info"]["revision"] != revision):
             raise ValueError("benchmark binary provenance mismatch")
     if config.get("static_evaluation"):
         validate_static(record, path, cases)

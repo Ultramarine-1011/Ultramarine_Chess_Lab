@@ -1,0 +1,203 @@
+{
+    "resign": {
+        "move_count": 1,
+        "score": 0,
+        "twosided": false,
+        "enabled": false
+    },
+    "draw": {
+        "move_number": 0,
+        "move_count": 1,
+        "score": 0,
+        "enabled": false
+    },
+    "maxmoves": {
+        "move_count": 150,
+        "enabled": true
+    },
+    "tb_adjudication": {
+        "syzygy_dirs": "",
+        "max_pieces": 0,
+        "ignore_50_move_rule": false,
+        "enabled": false
+    },
+    "opening": {
+        "file": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-b-v1\\openings.epd",
+        "format": 0,
+        "order": 1,
+        "plies": -1,
+        "start": 1
+    },
+    "pgn": {
+        "additional_lines_rgx": [],
+        "event_name": "Fastchess Tournament",
+        "site": "?",
+        "file": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-b-v1\\games.pgn",
+        "notation": 0,
+        "append_file": false,
+        "track_nodes": true,
+        "track_seldepth": false,
+        "track_nps": true,
+        "track_hashfull": false,
+        "track_tbhits": false,
+        "track_timeleft": true,
+        "track_latency": true,
+        "track_pv": false,
+        "min": false,
+        "crc": false
+    },
+    "epd": {
+        "file": "",
+        "append_file": true
+    },
+    "sprt": {
+        "alpha": 0.0,
+        "beta": 0.0,
+        "elo0": 0.0,
+        "elo1": 0.0,
+        "model": "normalized",
+        "enabled": false
+    },
+    "config_name": "config.json",
+    "output": 0,
+    "seed": 20261016,
+    "variant": 0,
+    "type": 0,
+    "gauntlet_seeds": 1,
+    "ratinginterval": 10,
+    "scoreinterval": 1,
+    "wait": 0,
+    "autosaveinterval": 0,
+    "games": 2,
+    "rounds": 200,
+    "concurrency": 1,
+    "force_concurrency": false,
+    "recover": false,
+    "noswap": false,
+    "reverse": false,
+    "report_penta": true,
+    "affinity": false,
+    "check_mate_pvs": false,
+    "show_latency": false,
+    "log": {
+        "file": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-b-v1\\engine.log",
+        "level": 1,
+        "append_file": false,
+        "compress": false,
+        "realtime": true,
+        "engine_coms": true
+    },
+    "engines": [
+        {
+            "name": "OriginalFull14",
+            "dir": "",
+            "cmd": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+            "args": "",
+            "restart": false,
+            "options": [
+                [
+                    "ModelSHA256",
+                    "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+                ],
+                [
+                    "ModelFile",
+                    "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-b-v1\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt"
+                ],
+                [
+                    "Evaluator",
+                    "Linear"
+                ],
+                [
+                    "Hash",
+                    "16"
+                ],
+                [
+                    "MoveOverhead",
+                    "10"
+                ],
+                [
+                    "PVOrdering",
+                    "true"
+                ],
+                [
+                    "Quiescence",
+                    "true"
+                ],
+                [
+                    "UseTT",
+                    "true"
+                ]
+            ],
+            "limit": {
+                "tc": {
+                    "increment": 10000,
+                    "fixed_time": 0,
+                    "time": 1000000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 50000,
+                "plies": 0
+            },
+            "variant": 0
+        },
+        {
+            "name": "Handcrafted",
+            "dir": "",
+            "cmd": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+            "args": "",
+            "restart": false,
+            "options": [
+                [
+                    "Evaluator",
+                    "Handcrafted"
+                ],
+                [
+                    "Hash",
+                    "16"
+                ],
+                [
+                    "MoveOverhead",
+                    "10"
+                ],
+                [
+                    "PVOrdering",
+                    "true"
+                ],
+                [
+                    "Quiescence",
+                    "true"
+                ],
+                [
+                    "UseTT",
+                    "true"
+                ]
+            ],
+            "limit": {
+                "tc": {
+                    "increment": 10000,
+                    "fixed_time": 0,
+                    "time": 1000000,
+                    "moves": 0,
+                    "timemargin": 0
+                },
+                "nodes": 50000,
+                "plies": 0
+            },
+            "variant": 0
+        }
+    ],
+    "stats": {
+        "OriginalFull14 vs Handcrafted": {
+            "wins": 158,
+            "losses": 178,
+            "draws": 64,
+            "penta_WW": 33,
+            "penta_WD": 27,
+            "penta_WL": 65,
+            "penta_DD": 3,
+            "penta_LD": 31,
+            "penta_LL": 41
+        }
+    }
+}

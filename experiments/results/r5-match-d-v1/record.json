@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "id": "76d56f00-630e-4eda-93d5-9b825d01c554",
+  "kind": "match",
+  "status": "completed",
+  "started_at": "2026-10-15T17:49:39.002206+00:00",
+  "finished_at": "2026-10-15T18:07:05.569478+00:00",
+  "code": {
+    "revision": "b065947cf5c2682a5765c4ba344581028a0c82fa",
+    "dirty": false
+  },
+  "parameters": {
+    "version": 1,
+    "comparison": "revision",
+    "seed": 20261016,
+    "engines": [
+      {
+        "name": "OptimizedFull14",
+        "path": ".tools/engines/0cf58acacee5be9e5aee4385515caac2c3a8cb0c/ucl.exe",
+        "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "ucl_build_info": true,
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        }
+      },
+      {
+        "name": "OriginalFull14",
+        "path": ".tools/engines/f933fe24ed983cb011b7a1bb0b9382c36a9b8d11/ucl.exe",
+        "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+        "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+        "ucl_build_info": true,
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+          "ModelFile": "experiments/results/r4-models-v1/full.txt",
+          "Evaluator": "Linear"
+        }
+      }
+    ],
+    "rounds": 200,
+    "games": 2,
+    "concurrency": 1,
+    "tc": "1+0.01",
+    "maxmoves": 150,
+    "timeout_seconds": 21600,
+    "pgn_telemetry": true,
+    "openings": {
+      "path": "experiments/results/r5-openings-v1/openings.epd",
+      "format": "epd",
+      "order": "sequential"
+    }
+  },
+  "seed": 20261016,
+  "hardware": {
+    "os": "Windows-11-10.0.26100-SP0",
+    "architecture": "AMD64",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpus": 32,
+    "memory_bytes": 33517670400,
+    "python": "3.12.14",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "tools": {
+    "fastchess": {
+      "path": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\.tools\\bin\\fastchess.exe",
+      "sha256": "c6d7e4458a58025983c81bf38c524cb213e6f27559657dcfd72543392a431a71",
+      "version": "fastchess alpha 1.8.2 compiled for windows-latest 20260726-f618e34 (CI)"
+    },
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\.tools\\bin\\fastchess.exe",
+      "-engine",
+      "cmd=C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\.tools\\engines\\0cf58acacee5be9e5aee4385515caac2c3a8cb0c\\ucl.exe",
+      "name=OptimizedFull14",
+      "proto=uci",
+      "option.ModelSHA256=43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "option.ModelFile=C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-d-v1\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt",
+      "option.Evaluator=Linear",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-engine",
+      "cmd=C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+      "name=OriginalFull14",
+      "proto=uci",
+      "option.ModelSHA256=43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "option.ModelFile=C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-d-v1\\model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt",
+      "option.Evaluator=Linear",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-each",
+      "tc=1+0.01",
+      "-rounds",
+      "200",
+      "-games",
+      "2",
+      "-concurrency",
+      "1",
+      "-maxmoves",
+      "150",
+      "-srand",
+      "20261016",
+      "-pgnout",
+      "file=C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-d-v1\\games.pgn",
+      "append=false",
+      "nodes=true",
+      "nps=true",
+      "timeleft=true",
+      "latency=true",
+      "-log",
+      "file=C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-d-v1\\engine.log",
+      "level=trace",
+      "engine=true",
+      "append=false",
+      "compress=false",
+      "-autosaveinterval",
+      "0",
+      "-strict",
+      "-openings",
+      "file=C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\experiments\\results\\r5-match-d-v1\\openings.epd",
+      "format=epd",
+      "order=sequential"
+    ],
+    "telemetry": {
+      "file": "engine.log.gz",
+      "raw_sha256": "0f1d4c32e0d8e8e7e5676ca451388cb3e8234274e340cd004bb48bbba219cc37",
+      "raw_bytes": 130223860
+    }
+  },
+  "engines": [
+    {
+      "name": "OptimizedFull14",
+      "path": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\.tools\\engines\\0cf58acacee5be9e5aee4385515caac2c3a8cb0c\\ucl.exe",
+      "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+      "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+        "ModelFile": "experiments/results/r4-models-v1/full.txt",
+        "Evaluator": "Linear"
+      },
+      "sha256": "3fd3041074f42d9b76476a0892b1d0c304c810b03dc2a7a93e9fbb3f9ce3cf88",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "0cf58acacee5be9e5aee4385515caac2c3a8cb0c",
+        "dirty": false,
+        "compiler": "MSVC 19.51.36260.0",
+        "build_type": "Release",
+        "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "linear-v2",
+        "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+      }
+    },
+    {
+      "name": "OriginalFull14",
+      "path": "C:\\Ultramarine_Chess_Lab\\r5-frozen-runner\\.tools\\engines\\f933fe24ed983cb011b7a1bb0b9382c36a9b8d11\\ucl.exe",
+      "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+      "build": "isolated CMake Release; MSVC /O2 /Ob2 /DNDEBUG; single search thread",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "ModelSHA256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+        "ModelFile": "experiments/results/r4-models-v1/full.txt",
+        "Evaluator": "Linear"
+      },
+      "sha256": "82cdd1be701ad30be9ddc08ea255a9c0da864663b815ad0a222e100fe30f1605",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "f933fe24ed983cb011b7a1bb0b9382c36a9b8d11",
+        "dirty": false,
+        "compiler": "MSVC 19.51.36260.0",
+        "build_type": "Release",
+        "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "linear-v2",
+        "model_sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e"
+      }
+    }
+  ],
+  "artifacts": {
+    "config.json": {
+      "sha256": "50bd3bb1560c0f47940021d398f4c9870d1a0a42b8d9cce5f09b378d78dbcca0",
+      "bytes": 6048
+    },
+    "engine.log.gz": {
+      "sha256": "dd63708586f442599d2205f00d4fec7d43501639d5ca24c9068cf29aa8bf59e3",
+      "bytes": 12158864
+    },
+    "fastchess.log": {
+      "sha256": "f9aad74b81c6aa3753fe18ab1c2129cd95fadd605bd0bc51a162bc139a4f1c4d",
+      "bytes": 63080
+    },
+    "games.pgn": {
+      "sha256": "b55443e95a1aba259142ee3dd7ac9427ac4f4d0e5279813674848e8d97d914ca",
+      "bytes": 3614499
+    },
+    "match-config.json": {
+      "sha256": "fe550b984b68924d6ced98a9ff6285cad2fbbd056da37dbb42a47c5ac734e68c",
+      "bytes": 1651
+    },
+    "model-43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e.txt": {
+      "sha256": "43e2e1ad509bfef9a529ce98706d6b64004d50166e115d7871a7666b05dd728e",
+      "bytes": 525
+    },
+    "openings.epd": {
+      "sha256": "5753882fcea086c9e0531b7364d0f0d8084991b7b282dd134ad5195d76881e75",
+      "bytes": 15048
+    }
+  },
+  "results": {
+    "paired_score_counts": [
+      12,
+      17,
+      114,
+      32,
+      25
+    ],
+    "candidate": "OptimizedFull14",
+    "baseline": "OriginalFull14",
+    "games": 400,
+    "wins": 192,
+    "draws": 57,
+    "losses": 151,
+    "score": 0.55125,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.5175,
+      0.585
+    ],
+    "bootstrap_seed": 20261016,
+    "terminations": {
+      "normal": 397,
+      "adjudication": 3
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "error": null
+}
