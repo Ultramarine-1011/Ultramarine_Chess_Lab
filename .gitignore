@@ -1,0 +1,9 @@
+build/
+.venv/
+.tools/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+experiments/results/*
+!experiments/results/README.md
