@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "comparison": "ablation",
+  "seed": 20261016,
+  "engines": [
+    {
+      "name": "G",
+      "path": ".tools/r6-engine/ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "ucl_build_info": true,
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Linear",
+        "ModelFile": "experiments/results/r6-models-v1/G.txt",
+        "ModelSHA256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f"
+      }
+    },
+    {
+      "name": "Handcrafted",
+      "path": ".tools/r6-engine/ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "ucl_build_info": true,
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Handcrafted"
+      }
+    }
+  ],
+  "rounds": 200,
+  "games": 2,
+  "concurrency": 1,
+  "tc": "1+0.01",
+  "maxmoves": 150,
+  "timeout_seconds": 21600,
+  "pgn_telemetry": true,
+  "openings": {
+    "path": "experiments/results/r6-data-v1/openings.epd",
+    "format": "epd",
+    "order": "sequential"
+  }
+}

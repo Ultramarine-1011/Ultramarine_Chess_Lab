@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "seed": 20261016,
+  "suite": "experiments/positions/r6-validation-v1.json",
+  "repeats": 3,
+  "limits": [
+    {
+      "depth": 4
+    },
+    {
+      "nodes": 50000
+    }
+  ],
+  "engines": [
+    {
+      "name": "Handcrafted",
+      "path": ".tools/r6-engine/ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "ucl_build_info": true,
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Handcrafted"
+      }
+    },
+    {
+      "name": "G",
+      "path": ".tools/r6-engine/ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "ucl_build_info": true,
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Linear",
+        "ModelFile": "experiments/results/r6-models-v1/G.txt",
+        "ModelSHA256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f"
+      }
+    },
+    {
+      "name": "T",
+      "path": ".tools/r6-engine/ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "ucl_build_info": true,
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Linear",
+        "ModelFile": "experiments/results/r6-models-v1/T.txt",
+        "ModelSHA256": "188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c"
+      }
+    },
+    {
+      "name": "M08",
+      "path": ".tools/r6-engine/ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "ucl_build_info": true,
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Linear",
+        "ModelFile": "experiments/results/r6-models-v1/M08.txt",
+        "ModelSHA256": "632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69"
+      }
+    }
+  ]
+}

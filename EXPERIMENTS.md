@@ -59,3 +59,9 @@ benchmark 不再另存同一份 measurements.json。日志可选详细 PGN/UCI t
 bootstrap，预定四比较用名义98.75% Bonferroni区间；共享开局的组间差值仅作
 探索性诊断，不作精确可加因果分解。结果与恢复偏差见[R5报告](docs/r5/final-report.md)。
 正式数据使用封存Original/Optimized二进制；后续推理热路径简化的额外性能未测量。
+
+[R6](docs/r6/protocol.md)固定同数据/特征/模型结构，比较棋局结果、教师和混合监督；
+以validation合法候选子局面排序选模后才运行新的独立test。四组各400局中仅C
+（混合监督对G，固定时间）为预定确认性棋力比较，其余组和事后C−D差值探索性。
+补充validation推理/搜索成本在正式比赛结束后测量，未参与选模或比赛决策。
+结果与局限见[R6报告](docs/r6/final-report.md)，不与历史原始比赛/计时合并。

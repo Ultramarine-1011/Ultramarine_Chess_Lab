@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "id": "c2438e76-a212-47a7-9053-c569f0740b4d",
+  "kind": "match",
+  "mode": "formal",
+  "status": "completed",
+  "started_at": "2026-10-16T11:46:48.828087+00:00",
+  "finished_at": "2026-10-16T12:07:56.439523+00:00",
+  "code": {
+    "revision": "3524319eaea508b36fb4ccf4a34e65fd8a6d5e87",
+    "dirty": true
+  },
+  "parameters": {
+    "version": 1,
+    "comparison": "ablation",
+    "seed": 20261016,
+    "engines": [
+      {
+        "name": "M08",
+        "path": ".tools/r6-engine/ucl.exe",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+        "ucl_build_info": true,
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Linear",
+          "ModelFile": "experiments/results/r6-models-v1/M08.txt",
+          "ModelSHA256": "632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69"
+        }
+      },
+      {
+        "name": "G",
+        "path": ".tools/r6-engine/ucl.exe",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+        "ucl_build_info": true,
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Linear",
+          "ModelFile": "experiments/results/r6-models-v1/G.txt",
+          "ModelSHA256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f"
+        }
+      }
+    ],
+    "rounds": 200,
+    "games": 2,
+    "concurrency": 1,
+    "tc": "1000+10",
+    "maxmoves": 150,
+    "timeout_seconds": 21600,
+    "pgn_telemetry": true,
+    "openings": {
+      "path": "experiments/results/r6-data-v1/openings.epd",
+      "format": "epd",
+      "order": "sequential"
+    },
+    "nodes": 50000
+  },
+  "seed": 20261016,
+  "hardware": {
+    "os": "Windows-11-10.0.26100-SP0",
+    "architecture": "AMD64",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpus": 32,
+    "memory_bytes": 33517670400,
+    "python": "3.12.14",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "tools": {
+    "fastchess": {
+      "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\bin\\fastchess.exe",
+      "sha256": "c6d7e4458a58025983c81bf38c524cb213e6f27559657dcfd72543392a431a71",
+      "version": "fastchess alpha 1.8.2 compiled for windows-latest 20260726-f618e34 (CI)"
+    },
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\bin\\fastchess.exe",
+      "-engine",
+      "cmd=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "name=M08",
+      "proto=uci",
+      "option.ModelSHA256=632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69",
+      "option.ModelFile=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\D\\model-632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69.txt",
+      "option.Evaluator=Linear",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-engine",
+      "cmd=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "name=G",
+      "proto=uci",
+      "option.ModelSHA256=e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f",
+      "option.ModelFile=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\D\\model-e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f.txt",
+      "option.Evaluator=Linear",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-each",
+      "tc=1000+10",
+      "nodes=50000",
+      "-rounds",
+      "200",
+      "-games",
+      "2",
+      "-concurrency",
+      "1",
+      "-maxmoves",
+      "150",
+      "-srand",
+      "20261016",
+      "-pgnout",
+      "file=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\D\\games.pgn",
+      "append=false",
+      "nodes=true",
+      "nps=true",
+      "timeleft=true",
+      "latency=true",
+      "-log",
+      "file=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\D\\engine.log",
+      "level=trace",
+      "engine=true",
+      "append=false",
+      "compress=false",
+      "-autosaveinterval",
+      "0",
+      "-strict",
+      "-openings",
+      "file=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\D\\openings.epd",
+      "format=epd",
+      "order=sequential"
+    ],
+    "telemetry": {
+      "file": "engine.log.gz"
+    }
+  },
+  "engines": [
+    {
+      "name": "M08",
+      "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Linear",
+        "ModelFile": "experiments/results/r6-models-v1/M08.txt",
+        "ModelSHA256": "632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69"
+      },
+      "sha256": "5771d578dccf628a2d9bd9ee08cbee28fccb583e366313f56ac22e650fdf2931",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "dirty": false,
+        "compiler": "MSVC 19.51.36260.0",
+        "build_type": "Release",
+        "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "linear-v2",
+        "model_sha256": "632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69"
+      }
+    },
+    {
+      "name": "G",
+      "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Linear",
+        "ModelFile": "experiments/results/r6-models-v1/G.txt",
+        "ModelSHA256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f"
+      },
+      "sha256": "5771d578dccf628a2d9bd9ee08cbee28fccb583e366313f56ac22e650fdf2931",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "dirty": false,
+        "compiler": "MSVC 19.51.36260.0",
+        "build_type": "Release",
+        "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "linear-v2",
+        "model_sha256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f"
+      }
+    }
+  ],
+  "artifacts": {
+    "config.json": {
+      "sha256": "4fddb23bd6afe6767faad41307367002327b31cf2b2caf0fe846667c4cbe183f",
+      "bytes": 5987
+    },
+    "engine.log.gz": {
+      "sha256": "867dff7c5f8981409f288ed3de51add7a8f8e17840e9ec1e80a0a9d85a79f91e",
+      "bytes": 12508119
+    },
+    "fastchess.log": {
+      "sha256": "c932a9f2f96a989d63dfaf90b63fb6cca45fe16f02f52669148707ef6b314384",
+      "bytes": 42542
+    },
+    "games.pgn": {
+      "sha256": "d2cc66a78bcd6c8b1d46813f7e276754011c82ad2c9149e707d6722df0e58610",
+      "bytes": 3756406
+    },
+    "match-config.json": {
+      "sha256": "f37998ee29cf1f47b59137d2ae85e768765e78fb1af32dfcb2b7eec16419974c",
+      "bytes": 1549
+    },
+    "model-632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69.txt": {
+      "sha256": "632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69",
+      "bytes": 525
+    },
+    "model-e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f.txt": {
+      "sha256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f",
+      "bytes": 526
+    },
+    "openings.epd": {
+      "sha256": "6624a681ed03d31506ba12065073c6aabc2184ba75ea9397c95b93108884381e",
+      "bytes": 15120
+    }
+  },
+  "results": {
+    "paired_score_counts": [
+      28,
+      20,
+      83,
+      24,
+      45
+    ],
+    "candidate": "M08",
+    "baseline": "G",
+    "games": 400,
+    "wins": 195,
+    "draws": 48,
+    "losses": 157,
+    "score": 0.5475,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.505,
+      0.59375
+    ],
+    "bootstrap_seed": 20261016,
+    "terminations": {
+      "normal": 399,
+      "adjudication": 1
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "error": null
+}

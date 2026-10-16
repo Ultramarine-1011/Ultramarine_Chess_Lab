@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "checks": {
+    "r6-data-v1": true,
+    "r6-features-v1": true,
+    "r6-labels-v1": true,
+    "r6-ranking-validation-v1": true,
+    "r6-ranking-test-v1": true,
+    "selection_frozen": true,
+    "training_input_frozen": true,
+    "validation_children_frozen": true,
+    "test_children_frozen": true,
+    "test_bound_to_freeze": true,
+    "models_frozen": true,
+    "configs_frozen": true,
+    "engine_frozen": true,
+    "tool_frozen": true,
+    "openings_frozen": true
+  }
+}

@@ -48,3 +48,29 @@ C组37.25%，仍负于Handcrafted；B组47.50%，证据不确定。默认不变�
 [对应GitHub Actions](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38784569667)
 五项全部成功。主工作树和隔离工作树均已重新configure/build，实际build-info为该提交、
 dirty=false、标准MSVC Release。随后仅补充本段与命令索引，不改代码或研究数据。
+
+## R6 Evaluation Target Alignment Study — 2026-10-16
+
+R6.1–R6.5研究执行完成。2018-01..04真实来源保留3601局/23998双标签局面；
+2018-05独立200开局。256位置先预检，再固定Stockfish17.1/每查询20000节点标注。
+同数据同14维训练G/T/M，20次拟合均收敛，四部署模型重新拟合字节一致，
+全部95992次部署推理与Python取整精确一致。候选M08在1ca065a冻结，随后一次独立test。
+
+四组正式比赛全部完成，每组200开局换色400局；完整PGN/UCI逐着核验通过，异常完整局0。
+唯一预定确认性C：M08对G，202W/53D/145L，57.125%，配对95%[52.750%,61.625%]，
+支持本短时控/开局/硬件条件下的收益。A为48.500%、B为50.500%，均未证明胜过Handcrafted。
+D固定50000节点为54.750%，95%[50.500%,59.375%]，按预定仅作探索性；
+实际命令、节点、时钟余量及1710次mate/max-depth提前停止均已核验。
+事后探索性C−D差值2.375个百分点，95%[−3.375,7.750]，未证明预算条件差异。
+
+M08独立test教师MAE从G的214.872降至173.978，但静态候选排序未可靠改善、结果BCE退步。
+这与实际搜索对弈的正向结果并列保留，不能用单个离线代理替代实战。
+R2预注册成本测量和事后共同validation补测分开保存；没有据这些结果改选候选或追加对局。
+R3–R5原始数据/模型/报告及C++引擎源码保持不变；Handcrafted继续默认，不启动R7。
+
+[最终报告](docs/r6/final-report.md)、[协议](docs/r6/protocol.md)、
+[复现与执行证据](docs/validation/r6/commands.md)、
+[原始比赛](experiments/results/r6-matches-v1/A/record.json)、
+[完整统计](experiments/results/r6-analysis-v1/summary.json)。
+Windows Release CTest6/6；3524319的五项跨平台CI成功，见ci-code.json。
+最终提交、推送和CI身份在交付后补充于下。

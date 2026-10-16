@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "id": "c0b7ff2e-1102-4aa7-a3c2-7dd1dd953db4",
+  "kind": "match",
+  "mode": "formal",
+  "status": "completed",
+  "started_at": "2026-10-16T10:53:34.861362+00:00",
+  "finished_at": "2026-10-16T11:10:37.677795+00:00",
+  "code": {
+    "revision": "1ca065aed204607b683d9727afdff714d6977314",
+    "dirty": true
+  },
+  "parameters": {
+    "version": 1,
+    "comparison": "ablation",
+    "seed": 20261016,
+    "engines": [
+      {
+        "name": "G",
+        "path": ".tools/r6-engine/ucl.exe",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+        "ucl_build_info": true,
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Linear",
+          "ModelFile": "experiments/results/r6-models-v1/G.txt",
+          "ModelSHA256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f"
+        }
+      },
+      {
+        "name": "Handcrafted",
+        "path": ".tools/r6-engine/ucl.exe",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+        "ucl_build_info": true,
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Handcrafted"
+        }
+      }
+    ],
+    "rounds": 200,
+    "games": 2,
+    "concurrency": 1,
+    "tc": "1+0.01",
+    "maxmoves": 150,
+    "timeout_seconds": 21600,
+    "pgn_telemetry": true,
+    "openings": {
+      "path": "experiments/results/r6-data-v1/openings.epd",
+      "format": "epd",
+      "order": "sequential"
+    }
+  },
+  "seed": 20261016,
+  "hardware": {
+    "os": "Windows-11-10.0.26100-SP0",
+    "architecture": "AMD64",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpus": 32,
+    "memory_bytes": 33517670400,
+    "python": "3.12.14",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "tools": {
+    "fastchess": {
+      "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\bin\\fastchess.exe",
+      "sha256": "c6d7e4458a58025983c81bf38c524cb213e6f27559657dcfd72543392a431a71",
+      "version": "fastchess alpha 1.8.2 compiled for windows-latest 20260726-f618e34 (CI)"
+    },
+    "command": [
+      "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\bin\\fastchess.exe",
+      "-engine",
+      "cmd=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "name=G",
+      "proto=uci",
+      "option.ModelSHA256=e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f",
+      "option.ModelFile=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\A\\model-e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f.txt",
+      "option.Evaluator=Linear",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-engine",
+      "cmd=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "name=Handcrafted",
+      "proto=uci",
+      "option.Evaluator=Handcrafted",
+      "option.Hash=16",
+      "option.MoveOverhead=10",
+      "option.PVOrdering=true",
+      "option.Quiescence=true",
+      "option.UseTT=true",
+      "-each",
+      "tc=1+0.01",
+      "-rounds",
+      "200",
+      "-games",
+      "2",
+      "-concurrency",
+      "1",
+      "-maxmoves",
+      "150",
+      "-srand",
+      "20261016",
+      "-pgnout",
+      "file=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\A\\games.pgn",
+      "append=false",
+      "nodes=true",
+      "nps=true",
+      "timeleft=true",
+      "latency=true",
+      "-log",
+      "file=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\A\\engine.log",
+      "level=trace",
+      "engine=true",
+      "append=false",
+      "compress=false",
+      "-autosaveinterval",
+      "0",
+      "-strict",
+      "-openings",
+      "file=C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-matches-v1\\A\\openings.epd",
+      "format=epd",
+      "order=sequential"
+    ],
+    "telemetry": {
+      "file": "engine.log.gz"
+    }
+  },
+  "engines": [
+    {
+      "name": "G",
+      "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Linear",
+        "ModelFile": "experiments/results/r6-models-v1/G.txt",
+        "ModelSHA256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f"
+      },
+      "sha256": "5771d578dccf628a2d9bd9ee08cbee28fccb583e366313f56ac22e650fdf2931",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "dirty": false,
+        "compiler": "MSVC 19.51.36260.0",
+        "build_type": "Release",
+        "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "linear-v2",
+        "model_sha256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f"
+      }
+    },
+    {
+      "name": "Handcrafted",
+      "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Handcrafted"
+      },
+      "sha256": "5771d578dccf628a2d9bd9ee08cbee28fccb583e366313f56ac22e650fdf2931",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "dirty": false,
+        "compiler": "MSVC 19.51.36260.0",
+        "build_type": "Release",
+        "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "handcrafted-v1",
+        "model_sha256": null
+      }
+    }
+  ],
+  "artifacts": {
+    "config.json": {
+      "sha256": "4b85c15250adfdaf75421e287480663781589107f87f7d1a6ced91252b84e131",
+      "bytes": 5564
+    },
+    "engine.log.gz": {
+      "sha256": "b9521b69f6b760b9c2026db71ab6767ea602b3879e0bcfa1cd5496cc32e942ba",
+      "bytes": 12269572
+    },
+    "fastchess.log": {
+      "sha256": "b78a871f47859cb4de3e9251bb3d6c38136febc53eaa054e91bd0e4937f3184e",
+      "bytes": 49114
+    },
+    "games.pgn": {
+      "sha256": "b0bfee56d39ef4e8cf38fba30acbeca05c3e285d6e562f56f1e9a36199d9efda",
+      "bytes": 3572896
+    },
+    "match-config.json": {
+      "sha256": "4c680563714048efcee4f325aae58d4c60524bc831b31b60d8bfb927669766b2",
+      "bytes": 1387
+    },
+    "model-e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f.txt": {
+      "sha256": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f",
+      "bytes": 526
+    },
+    "openings.epd": {
+      "sha256": "6624a681ed03d31506ba12065073c6aabc2184ba75ea9397c95b93108884381e",
+      "bytes": 15120
+    }
+  },
+  "results": {
+    "paired_score_counts": [
+      31,
+      28,
+      88,
+      28,
+      25
+    ],
+    "candidate": "G",
+    "baseline": "Handcrafted",
+    "games": 400,
+    "wins": 160,
+    "draws": 68,
+    "losses": 172,
+    "score": 0.485,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.44625,
+      0.5225
+    ],
+    "bootstrap_seed": 20261016,
+    "terminations": {
+      "normal": 382,
+      "adjudication": 18
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "error": null
+}

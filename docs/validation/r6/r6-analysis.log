@@ -1,0 +1,110 @@
+{
+  "A": {
+    "paired_score_counts": [
+      31,
+      28,
+      88,
+      28,
+      25
+    ],
+    "candidate": "G",
+    "baseline": "Handcrafted",
+    "games": 400,
+    "wins": 160,
+    "draws": 68,
+    "losses": 172,
+    "score": 0.485,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.44625,
+      0.5225
+    ],
+    "bootstrap_seed": 20261016,
+    "terminations": {
+      "normal": 382,
+      "adjudication": 18
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "B": {
+    "paired_score_counts": [
+      31,
+      27,
+      78,
+      35,
+      29
+    ],
+    "candidate": "M08",
+    "baseline": "Handcrafted",
+    "games": 400,
+    "wins": 168,
+    "draws": 68,
+    "losses": 164,
+    "score": 0.505,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.46125,
+      0.5475
+    ],
+    "bootstrap_seed": 20261016,
+    "terminations": {
+      "normal": 390,
+      "adjudication": 10
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "C": {
+    "paired_score_counts": [
+      24,
+      23,
+      75,
+      28,
+      50
+    ],
+    "candidate": "M08",
+    "baseline": "G",
+    "games": 400,
+    "wins": 202,
+    "draws": 53,
+    "losses": 145,
+    "score": 0.57125,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.5275,
+      0.61625
+    ],
+    "bootstrap_seed": 20261016,
+    "terminations": {
+      "normal": 398,
+      "adjudication": 2
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  },
+  "D": {
+    "paired_score_counts": [
+      28,
+      20,
+      83,
+      24,
+      45
+    ],
+    "candidate": "M08",
+    "baseline": "G",
+    "games": 400,
+    "wins": 195,
+    "draws": 48,
+    "losses": 157,
+    "score": 0.5475,
+    "paired_rounds": 200,
+    "score_ci95_paired_bootstrap": [
+      0.505,
+      0.59375
+    ],
+    "bootstrap_seed": 20261016,
+    "terminations": {
+      "normal": 399,
+      "adjudication": 1
+    },
+    "interpretation": "Descriptive smoke/baseline statistics; not evidence of Elo improvement."
+  }
+}

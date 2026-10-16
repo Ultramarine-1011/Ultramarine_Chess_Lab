@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "selection": "first 10 of the registered validation-ranking root order; supplemental measurement after matches, no selection use",
+  "input_sha256": "21a422656eb09a2724f6d8259d876ac8816d1c38757d94b1c19b5ac68f87dcc4",
+  "positions": [
+    {
+      "id": "r6-val-01",
+      "fen": "6k1/p4p1p/2p1p1p1/1p6/4P3/PQPq1PK1/6PP/8 w - - 0 30",
+      "source_position_id": "8c61c7bc116db50064191e668a12dc295d25a3d66710e9b64d575ca3e6cc867c",
+      "game_id": "d78bf30b554ab39c0e99e40df0c4b9c3d0f5e9093c2cf7aed8359bb727c84187"
+    },
+    {
+      "id": "r6-val-02",
+      "fen": "rn1qkb1r/1b3pp1/p2p3p/2pNpP2/2B1n3/P4N2/1PP3PP/R1BQR1K1 b kq - 1 12",
+      "source_position_id": "344642143c20f2ccf16a3d5bdcec355776a59eae26e02665dd42d3da8d90b215",
+      "game_id": "7496f00b58b1dd77ab0ca98576944bdf8b340dc0683737ac99abf090c64f5af2"
+    },
+    {
+      "id": "r6-val-03",
+      "fen": "r1b3k1/bpQ3p1/7p/1P2Nn2/4pr2/2P4P/5PPK/RN3R2 w - - 1 23",
+      "source_position_id": "219140b9c66782e6a0ef4af7e29c91b2b016f584c0c44c99befb4134074197fe",
+      "game_id": "e5f159e7ca2cb8870a8f7b182adb96244e0638567a559fd048440a4b97463324"
+    },
+    {
+      "id": "r6-val-04",
+      "fen": "2rr4/1b3pkp/p3p1p1/1p1nN3/2pPB2P/P4PP1/1P4K1/R3R3 b - - 4 26",
+      "source_position_id": "a71ecb358a9b678f346e3800e5a22ea3b21f5a9354f95b7d22433bd47ceb4e09",
+      "game_id": "b0f3994f2646f4ef80b8e9672fe973c8e36f9e04283723a202d520e97bbcba73"
+    },
+    {
+      "id": "r6-val-05",
+      "fen": "8/5p2/1P5k/7P/8/8/2K2p2/8 w - - 0 44",
+      "source_position_id": "a554e14706f921bfc882a52e15954426ec3581f968af1d0b81943a5553404d16",
+      "game_id": "f2121eb92c810123634014e384436dde86ac9df5fd1cbe0e9f90d1ecdefdbe32"
+    },
+    {
+      "id": "r6-val-06",
+      "fen": "r4rk1/p2qbb2/1p4p1/2pn2Pp/3p4/5NB1/PPQ2PK1/RN2R3 w - - 0 23",
+      "source_position_id": "c4ae4eaa6ad02d9777496be29c1243098da94a678b912ceeffa35ab8e99f6d8a",
+      "game_id": "ff889ec0a3fcdfcd421d01d943f8268e4f185d44f5d1b9f473665b31f587b6d0"
+    },
+    {
+      "id": "r6-val-07",
+      "fen": "3r1rk1/pp3ppp/1qp2n2/8/2PP4/PB1R4/1P1Q2PP/5RK1 b - - 2 19",
+      "source_position_id": "c9bed8eed9af7c8abfcf97fc90b5d09c92b2283a0850372ee684a725514e41ff",
+      "game_id": "966ebb1bd90c68f7e37c0af83c784e67f22d6272000f7d1fcbd51ee7094f4135"
+    },
+    {
+      "id": "r6-val-08",
+      "fen": "r1bq1rk1/pp2bp1p/2p2ppB/3n4/3P4/2PB1N2/PPQ2PPP/2KR3R b - - 3 12",
+      "source_position_id": "23c6bbaeb93ddfed59ee58cefde56ee69cd6d5d282724c95c803f38230c71020",
+      "game_id": "c6982e343816add3f194bffda94d4c3b402a5edc7a8f1b6529a9d5d920c1b43f"
+    },
+    {
+      "id": "r6-val-09",
+      "fen": "q3knr1/5p1p/2b1p2P/4Pp2/1PpP4/5P2/6P1/1N1QNRK1 w - - 1 23",
+      "source_position_id": "7be94c7772be401c383c0cef407e3c75efb77d5e72ae79de2cb6e5eb7502269f",
+      "game_id": "b4bb7e1582262fe5439a1eeb5f5b62dfc9d63ec6c88c2a367ae6c82edef20f2b"
+    },
+    {
+      "id": "r6-val-10",
+      "fen": "r4rk1/1p1b2pp/1q2pp2/3p4/pP1Q4/2P3P1/P2NB2P/R3K2R b KQ - 1 19",
+      "source_position_id": "e30bb0cbdd7c27e89190386144942945aefeb04969cbbec68d3d450388ac4672",
+      "game_id": "586cbc1d997dad494334d7874302c49d656b2151344091ec13d0b5c0b195c4ed"
+    }
+  ]
+}

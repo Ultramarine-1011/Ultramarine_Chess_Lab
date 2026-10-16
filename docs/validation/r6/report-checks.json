@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "local_links": true,
+  "deterministic_report": true,
+  "supplemental_validation_cases": "exact first 10 of registered root order; no test cases",
+  "report_sha256": "fc7c1a09e8a08d43bca97d720e7e36b22f3453fe8bd977670989de2fca501c1f"
+}

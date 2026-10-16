@@ -1,0 +1,943 @@
+Started game 1 of 400 (M08 vs G)
+Finished game 1 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 2 of 400 (G vs M08)
+Finished game 2 (G vs M08): 0-1 {Black mates}
+Started game 3 of 400 (M08 vs G)
+Finished game 3 (M08 vs G): 1-0 {White mates}
+Started game 4 of 400 (G vs M08)
+Finished game 4 (G vs M08): 1-0 {White mates}
+Started game 5 of 400 (M08 vs G)
+Finished game 5 (M08 vs G): 0-1 {Black mates}
+Started game 6 of 400 (G vs M08)
+Finished game 6 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 7 of 400 (M08 vs G)
+Finished game 7 (M08 vs G): 1-0 {White mates}
+Started game 8 of 400 (G vs M08)
+Finished game 8 (G vs M08): 0-1 {Black mates}
+Started game 9 of 400 (M08 vs G)
+Finished game 9 (M08 vs G): 1-0 {White mates}
+Started game 10 of 400 (G vs M08)
+Finished game 10 (G vs M08): 1-0 {White mates}
+Started game 11 of 400 (M08 vs G)
+Finished game 11 (M08 vs G): 0-1 {Black mates}
+Started game 12 of 400 (G vs M08)
+Finished game 12 (G vs M08): 1-0 {White mates}
+Started game 13 of 400 (M08 vs G)
+Finished game 13 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 14 of 400 (G vs M08)
+Finished game 14 (G vs M08): 1-0 {White mates}
+Started game 15 of 400 (M08 vs G)
+Finished game 15 (M08 vs G): 1/2-1/2 {Draw by adjudication}
+Started game 16 of 400 (G vs M08)
+Finished game 16 (G vs M08): 0-1 {Black mates}
+Started game 17 of 400 (M08 vs G)
+Finished game 17 (M08 vs G): 1-0 {White mates}
+Started game 18 of 400 (G vs M08)
+Finished game 18 (G vs M08): 0-1 {Black mates}
+Started game 19 of 400 (M08 vs G)
+Finished game 19 (M08 vs G): 1-0 {White mates}
+Started game 20 of 400 (G vs M08)
+Finished game 20 (G vs M08): 1-0 {White mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 34.86 +/- 143.76, nElo: 39.34 +/- 152.27
+LOS: 69.37 %, DrawRatio: 30.00 %, PairsRatio: 1.33
+Games: 20, Wins: 9, Losses: 7, Draws: 4, Points: 11.0 (55.00 %)
+Ptnml(0-2): [1, 2, 3, 2, 2], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 21 of 400 (M08 vs G)
+Finished game 21 (M08 vs G): 1-0 {White mates}
+Started game 22 of 400 (G vs M08)
+Finished game 22 (G vs M08): 1/2-1/2 {Draw by insufficient mating material}
+Started game 23 of 400 (M08 vs G)
+Finished game 23 (M08 vs G): 1-0 {White mates}
+Started game 24 of 400 (G vs M08)
+Finished game 24 (G vs M08): 0-1 {Black mates}
+Started game 25 of 400 (M08 vs G)
+Finished game 25 (M08 vs G): 1-0 {White mates}
+Started game 26 of 400 (G vs M08)
+Finished game 26 (G vs M08): 1-0 {White mates}
+Started game 27 of 400 (M08 vs G)
+Finished game 27 (M08 vs G): 1-0 {White mates}
+Started game 28 of 400 (G vs M08)
+Finished game 28 (G vs M08): 1-0 {White mates}
+Started game 29 of 400 (M08 vs G)
+Finished game 29 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 30 of 400 (G vs M08)
+Finished game 30 (G vs M08): 1-0 {White mates}
+Started game 31 of 400 (M08 vs G)
+Finished game 31 (M08 vs G): 1-0 {White mates}
+Started game 32 of 400 (G vs M08)
+Finished game 32 (G vs M08): 0-1 {Black mates}
+Started game 33 of 400 (M08 vs G)
+Finished game 33 (M08 vs G): 1/2-1/2 {Draw by fifty moves rule}
+Started game 34 of 400 (G vs M08)
+Finished game 34 (G vs M08): 0-1 {Black mates}
+Started game 35 of 400 (M08 vs G)
+Finished game 35 (M08 vs G): 1-0 {White mates}
+Started game 36 of 400 (G vs M08)
+Finished game 36 (G vs M08): 1-0 {White mates}
+Started game 37 of 400 (M08 vs G)
+Finished game 37 (M08 vs G): 0-1 {Black mates}
+Started game 38 of 400 (G vs M08)
+Finished game 38 (G vs M08): 0-1 {Black mates}
+Started game 39 of 400 (M08 vs G)
+Finished game 39 (M08 vs G): 1-0 {White mates}
+Started game 40 of 400 (G vs M08)
+Finished game 40 (G vs M08): 1-0 {White mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 61.43 +/- 89.10, nElo: 77.61 +/- 107.67
+LOS: 92.11 %, DrawRatio: 40.00 %, PairsRatio: 2.00
+Games: 40, Wins: 20, Losses: 13, Draws: 7, Points: 23.5 (58.75 %)
+Ptnml(0-2): [1, 3, 8, 4, 4], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 41 of 400 (M08 vs G)
+Finished game 41 (M08 vs G): 0-1 {Black mates}
+Started game 42 of 400 (G vs M08)
+Finished game 42 (G vs M08): 0-1 {Black mates}
+Started game 43 of 400 (M08 vs G)
+Finished game 43 (M08 vs G): 1-0 {White mates}
+Started game 44 of 400 (G vs M08)
+Finished game 44 (G vs M08): 0-1 {Black mates}
+Started game 45 of 400 (M08 vs G)
+Finished game 45 (M08 vs G): 1-0 {White mates}
+Started game 46 of 400 (G vs M08)
+Finished game 46 (G vs M08): 1-0 {White mates}
+Started game 47 of 400 (M08 vs G)
+Finished game 47 (M08 vs G): 1-0 {White mates}
+Started game 48 of 400 (G vs M08)
+Finished game 48 (G vs M08): 1-0 {White mates}
+Started game 49 of 400 (M08 vs G)
+Finished game 49 (M08 vs G): 1-0 {White mates}
+Started game 50 of 400 (G vs M08)
+Finished game 50 (G vs M08): 0-1 {Black mates}
+Started game 51 of 400 (M08 vs G)
+Finished game 51 (M08 vs G): 1/2-1/2 {Draw by insufficient mating material}
+Started game 52 of 400 (G vs M08)
+Finished game 52 (G vs M08): 1-0 {White mates}
+Started game 53 of 400 (M08 vs G)
+Finished game 53 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 54 of 400 (G vs M08)
+Finished game 54 (G vs M08): 0-1 {Black mates}
+Started game 55 of 400 (M08 vs G)
+Finished game 55 (M08 vs G): 0-1 {Black mates}
+Started game 56 of 400 (G vs M08)
+Finished game 56 (G vs M08): 0-1 {Black mates}
+Started game 57 of 400 (M08 vs G)
+Finished game 57 (M08 vs G): 1-0 {White mates}
+Started game 58 of 400 (G vs M08)
+Finished game 58 (G vs M08): 0-1 {Black mates}
+Started game 59 of 400 (M08 vs G)
+Finished game 59 (M08 vs G): 1-0 {White mates}
+Started game 60 of 400 (G vs M08)
+Finished game 60 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 82.59 +/- 72.70, nElo: 105.44 +/- 87.91
+LOS: 99.06 %, DrawRatio: 40.00 %, PairsRatio: 2.60
+Games: 60, Wins: 32, Losses: 18, Draws: 10, Points: 37.0 (61.67 %)
+Ptnml(0-2): [1, 4, 12, 6, 7], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 61 of 400 (M08 vs G)
+Finished game 61 (M08 vs G): 1-0 {White mates}
+Started game 62 of 400 (G vs M08)
+Finished game 62 (G vs M08): 1-0 {White mates}
+Started game 63 of 400 (M08 vs G)
+Finished game 63 (M08 vs G): 0-1 {Black mates}
+Started game 64 of 400 (G vs M08)
+Finished game 64 (G vs M08): 1-0 {White mates}
+Started game 65 of 400 (M08 vs G)
+Finished game 65 (M08 vs G): 0-1 {Black mates}
+Started game 66 of 400 (G vs M08)
+Finished game 66 (G vs M08): 0-1 {Black mates}
+Started game 67 of 400 (M08 vs G)
+Finished game 67 (M08 vs G): 0-1 {Black mates}
+Started game 68 of 400 (G vs M08)
+Finished game 68 (G vs M08): 1-0 {White mates}
+Started game 69 of 400 (M08 vs G)
+Finished game 69 (M08 vs G): 1-0 {White mates}
+Started game 70 of 400 (G vs M08)
+Finished game 70 (G vs M08): 0-1 {Black mates}
+Started game 71 of 400 (M08 vs G)
+Finished game 71 (M08 vs G): 0-1 {Black mates}
+Started game 72 of 400 (G vs M08)
+Finished game 72 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 73 of 400 (M08 vs G)
+Finished game 73 (M08 vs G): 0-1 {Black mates}
+Started game 74 of 400 (G vs M08)
+Finished game 74 (G vs M08): 1-0 {White mates}
+Started game 75 of 400 (M08 vs G)
+Finished game 75 (M08 vs G): 0-1 {Black mates}
+Started game 76 of 400 (G vs M08)
+Finished game 76 (G vs M08): 0-1 {Black mates}
+Started game 77 of 400 (M08 vs G)
+Finished game 77 (M08 vs G): 1/2-1/2 {Draw by insufficient mating material}
+Started game 78 of 400 (G vs M08)
+Finished game 78 (G vs M08): 1-0 {White mates}
+Started game 79 of 400 (M08 vs G)
+Finished game 79 (M08 vs G): 0-1 {Black mates}
+Started game 80 of 400 (G vs M08)
+Finished game 80 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 34.86 +/- 66.53, nElo: 40.66 +/- 76.13
+LOS: 85.24 %, DrawRatio: 40.00 %, PairsRatio: 1.40
+Games: 80, Wins: 38, Losses: 30, Draws: 12, Points: 44.0 (55.00 %)
+Ptnml(0-2): [4, 6, 16, 6, 8], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 81 of 400 (M08 vs G)
+Finished game 81 (M08 vs G): 0-1 {Black mates}
+Started game 82 of 400 (G vs M08)
+Finished game 82 (G vs M08): 0-1 {Black mates}
+Started game 83 of 400 (M08 vs G)
+Finished game 83 (M08 vs G): 0-1 {Black mates}
+Started game 84 of 400 (G vs M08)
+Finished game 84 (G vs M08): 1-0 {White mates}
+Started game 85 of 400 (M08 vs G)
+Finished game 85 (M08 vs G): 0-1 {Black mates}
+Started game 86 of 400 (G vs M08)
+Finished game 86 (G vs M08): 1-0 {White mates}
+Started game 87 of 400 (M08 vs G)
+Finished game 87 (M08 vs G): 1/2-1/2 {Draw by insufficient mating material}
+Started game 88 of 400 (G vs M08)
+Finished game 88 (G vs M08): 1-0 {White mates}
+Started game 89 of 400 (M08 vs G)
+Finished game 89 (M08 vs G): 1-0 {White mates}
+Started game 90 of 400 (G vs M08)
+Finished game 90 (G vs M08): 0-1 {Black mates}
+Started game 91 of 400 (M08 vs G)
+Finished game 91 (M08 vs G): 0-1 {Black mates}
+Started game 92 of 400 (G vs M08)
+Finished game 92 (G vs M08): 0-1 {Black mates}
+Started game 93 of 400 (M08 vs G)
+Finished game 93 (M08 vs G): 1-0 {White mates}
+Started game 94 of 400 (G vs M08)
+Finished game 94 (G vs M08): 1-0 {White mates}
+Started game 95 of 400 (M08 vs G)
+Finished game 95 (M08 vs G): 0-1 {Black mates}
+Started game 96 of 400 (G vs M08)
+Finished game 96 (G vs M08): 0-1 {Black mates}
+Started game 97 of 400 (M08 vs G)
+Finished game 97 (M08 vs G): 0-1 {Black mates}
+Started game 98 of 400 (G vs M08)
+Finished game 98 (G vs M08): 1-0 {White mates}
+Started game 99 of 400 (M08 vs G)
+Finished game 99 (M08 vs G): 1-0 {White mates}
+Started game 100 of 400 (G vs M08)
+Finished game 100 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 17.39 +/- 61.90, nElo: 19.36 +/- 68.10
+LOS: 71.13 %, DrawRatio: 40.00 %, PairsRatio: 1.14
+Games: 100, Wins: 46, Losses: 41, Draws: 13, Points: 52.5 (52.50 %)
+Ptnml(0-2): [7, 7, 20, 6, 10], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 101 of 400 (M08 vs G)
+Finished game 101 (M08 vs G): 1-0 {White mates}
+Started game 102 of 400 (G vs M08)
+Finished game 102 (G vs M08): 1-0 {White mates}
+Started game 103 of 400 (M08 vs G)
+Finished game 103 (M08 vs G): 0-1 {Black mates}
+Started game 104 of 400 (G vs M08)
+Finished game 104 (G vs M08): 1-0 {White mates}
+Started game 105 of 400 (M08 vs G)
+Finished game 105 (M08 vs G): 0-1 {Black mates}
+Started game 106 of 400 (G vs M08)
+Finished game 106 (G vs M08): 1-0 {White mates}
+Started game 107 of 400 (M08 vs G)
+Finished game 107 (M08 vs G): 1-0 {White mates}
+Started game 108 of 400 (G vs M08)
+Finished game 108 (G vs M08): 0-1 {Black mates}
+Started game 109 of 400 (M08 vs G)
+Finished game 109 (M08 vs G): 1-0 {White mates}
+Started game 110 of 400 (G vs M08)
+Finished game 110 (G vs M08): 1/2-1/2 {Draw by insufficient mating material}
+Started game 111 of 400 (M08 vs G)
+Finished game 111 (M08 vs G): 0-1 {Black mates}
+Started game 112 of 400 (G vs M08)
+Finished game 112 (G vs M08): 0-1 {Black mates}
+Started game 113 of 400 (M08 vs G)
+Finished game 113 (M08 vs G): 1-0 {White mates}
+Started game 114 of 400 (G vs M08)
+Finished game 114 (G vs M08): 0-1 {Black mates}
+Started game 115 of 400 (M08 vs G)
+Finished game 115 (M08 vs G): 1-0 {White mates}
+Started game 116 of 400 (G vs M08)
+Finished game 116 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 117 of 400 (M08 vs G)
+Finished game 117 (M08 vs G): 1-0 {White mates}
+Started game 118 of 400 (G vs M08)
+Finished game 118 (G vs M08): 0-1 {Black mates}
+Started game 119 of 400 (M08 vs G)
+Finished game 119 (M08 vs G): 1-0 {White mates}
+Started game 120 of 400 (G vs M08)
+Finished game 120 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 31.94 +/- 59.22, nElo: 34.05 +/- 62.16
+LOS: 85.85 %, DrawRatio: 36.67 %, PairsRatio: 1.38
+Games: 120, Wins: 58, Losses: 47, Draws: 15, Points: 65.5 (54.58 %)
+Ptnml(0-2): [9, 7, 22, 8, 14], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 121 of 400 (M08 vs G)
+Finished game 121 (M08 vs G): 0-1 {Black mates}
+Started game 122 of 400 (G vs M08)
+Finished game 122 (G vs M08): 1-0 {White mates}
+Started game 123 of 400 (M08 vs G)
+Finished game 123 (M08 vs G): 1-0 {White mates}
+Started game 124 of 400 (G vs M08)
+Finished game 124 (G vs M08): 1-0 {White mates}
+Started game 125 of 400 (M08 vs G)
+Finished game 125 (M08 vs G): 1-0 {White mates}
+Started game 126 of 400 (G vs M08)
+Finished game 126 (G vs M08): 0-1 {Black mates}
+Started game 127 of 400 (M08 vs G)
+Finished game 127 (M08 vs G): 1-0 {White mates}
+Started game 128 of 400 (G vs M08)
+Finished game 128 (G vs M08): 0-1 {Black mates}
+Started game 129 of 400 (M08 vs G)
+Finished game 129 (M08 vs G): 1/2-1/2 {Draw by insufficient mating material}
+Started game 130 of 400 (G vs M08)
+Finished game 130 (G vs M08): 0-1 {Black mates}
+Started game 131 of 400 (M08 vs G)
+Finished game 131 (M08 vs G): 0-1 {Black mates}
+Started game 132 of 400 (G vs M08)
+Finished game 132 (G vs M08): 0-1 {Black mates}
+Started game 133 of 400 (M08 vs G)
+Finished game 133 (M08 vs G): 1-0 {White mates}
+Started game 134 of 400 (G vs M08)
+Finished game 134 (G vs M08): 1/2-1/2 {Draw by insufficient mating material}
+Started game 135 of 400 (M08 vs G)
+Finished game 135 (M08 vs G): 0-1 {Black mates}
+Started game 136 of 400 (G vs M08)
+Finished game 136 (G vs M08): 1/2-1/2 {Draw by insufficient mating material}
+Started game 137 of 400 (M08 vs G)
+Finished game 137 (M08 vs G): 1/2-1/2 {Draw by fifty moves rule}
+Started game 138 of 400 (G vs M08)
+Finished game 138 (G vs M08): 0-1 {Black mates}
+Started game 139 of 400 (M08 vs G)
+Finished game 139 (M08 vs G): 1-0 {White mates}
+Started game 140 of 400 (G vs M08)
+Finished game 140 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 39.88 +/- 54.53, nElo: 42.83 +/- 57.55
+LOS: 92.77 %, DrawRatio: 34.29 %, PairsRatio: 1.56
+Games: 140, Wins: 68, Losses: 52, Draws: 20, Points: 78.0 (55.71 %)
+Ptnml(0-2): [10, 8, 24, 12, 16], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 141 of 400 (M08 vs G)
+Finished game 141 (M08 vs G): 1-0 {White mates}
+Started game 142 of 400 (G vs M08)
+Finished game 142 (G vs M08): 1-0 {White mates}
+Started game 143 of 400 (M08 vs G)
+Finished game 143 (M08 vs G): 0-1 {Black mates}
+Started game 144 of 400 (G vs M08)
+Finished game 144 (G vs M08): 1-0 {White mates}
+Started game 145 of 400 (M08 vs G)
+Finished game 145 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 146 of 400 (G vs M08)
+Finished game 146 (G vs M08): 1-0 {White mates}
+Started game 147 of 400 (M08 vs G)
+Finished game 147 (M08 vs G): 1-0 {White mates}
+Started game 148 of 400 (G vs M08)
+Finished game 148 (G vs M08): 0-1 {Black mates}
+Started game 149 of 400 (M08 vs G)
+Finished game 149 (M08 vs G): 1-0 {White mates}
+Started game 150 of 400 (G vs M08)
+Finished game 150 (G vs M08): 1-0 {White mates}
+Started game 151 of 400 (M08 vs G)
+Finished game 151 (M08 vs G): 1-0 {White mates}
+Started game 152 of 400 (G vs M08)
+Finished game 152 (G vs M08): 1-0 {White mates}
+Started game 153 of 400 (M08 vs G)
+Finished game 153 (M08 vs G): 1-0 {White mates}
+Started game 154 of 400 (G vs M08)
+Finished game 154 (G vs M08): 1-0 {White mates}
+Started game 155 of 400 (M08 vs G)
+Finished game 155 (M08 vs G): 0-1 {Black mates}
+Started game 156 of 400 (G vs M08)
+Finished game 156 (G vs M08): 0-1 {Black mates}
+Started game 157 of 400 (M08 vs G)
+Finished game 157 (M08 vs G): 1-0 {White mates}
+Started game 158 of 400 (G vs M08)
+Finished game 158 (G vs M08): 0-1 {Black mates}
+Started game 159 of 400 (M08 vs G)
+Finished game 159 (M08 vs G): 1-0 {White mates}
+Started game 160 of 400 (G vs M08)
+Finished game 160 (G vs M08): 1-0 {White mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 37.05 +/- 50.07, nElo: 40.43 +/- 53.83
+LOS: 92.95 %, DrawRatio: 37.50 %, PairsRatio: 1.50
+Games: 160, Wins: 78, Losses: 61, Draws: 21, Points: 88.5 (55.31 %)
+Ptnml(0-2): [11, 9, 30, 12, 18], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 161 of 400 (M08 vs G)
+Finished game 161 (M08 vs G): 0-1 {Black mates}
+Started game 162 of 400 (G vs M08)
+Finished game 162 (G vs M08): 0-1 {Black mates}
+Started game 163 of 400 (M08 vs G)
+Finished game 163 (M08 vs G): 0-1 {Black mates}
+Started game 164 of 400 (G vs M08)
+Finished game 164 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 165 of 400 (M08 vs G)
+Finished game 165 (M08 vs G): 0-1 {Black mates}
+Started game 166 of 400 (G vs M08)
+Finished game 166 (G vs M08): 1-0 {White mates}
+Started game 167 of 400 (M08 vs G)
+Finished game 167 (M08 vs G): 0-1 {Black mates}
+Started game 168 of 400 (G vs M08)
+Finished game 168 (G vs M08): 1-0 {White mates}
+Started game 169 of 400 (M08 vs G)
+Finished game 169 (M08 vs G): 0-1 {Black mates}
+Started game 170 of 400 (G vs M08)
+Finished game 170 (G vs M08): 0-1 {Black mates}
+Started game 171 of 400 (M08 vs G)
+Finished game 171 (M08 vs G): 0-1 {Black mates}
+Started game 172 of 400 (G vs M08)
+Finished game 172 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 173 of 400 (M08 vs G)
+Finished game 173 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 174 of 400 (G vs M08)
+Finished game 174 (G vs M08): 1-0 {White mates}
+Started game 175 of 400 (M08 vs G)
+Finished game 175 (M08 vs G): 1-0 {White mates}
+Started game 176 of 400 (G vs M08)
+Finished game 176 (G vs M08): 0-1 {Black mates}
+Started game 177 of 400 (M08 vs G)
+Finished game 177 (M08 vs G): 1-0 {White mates}
+Started game 178 of 400 (G vs M08)
+Finished game 178 (G vs M08): 1-0 {White mates}
+Started game 179 of 400 (M08 vs G)
+Finished game 179 (M08 vs G): 0-1 {Black mates}
+Started game 180 of 400 (G vs M08)
+Finished game 180 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 23.20 +/- 46.89, nElo: 25.34 +/- 50.76
+LOS: 83.61 %, DrawRatio: 37.78 %, PairsRatio: 1.24
+Games: 180, Wins: 84, Losses: 72, Draws: 24, Points: 96.0 (53.33 %)
+Ptnml(0-2): [13, 12, 34, 12, 19], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 181 of 400 (M08 vs G)
+Finished game 181 (M08 vs G): 0-1 {Black mates}
+Started game 182 of 400 (G vs M08)
+Finished game 182 (G vs M08): 1-0 {White mates}
+Started game 183 of 400 (M08 vs G)
+Finished game 183 (M08 vs G): 1-0 {White mates}
+Started game 184 of 400 (G vs M08)
+Finished game 184 (G vs M08): 0-1 {Black mates}
+Started game 185 of 400 (M08 vs G)
+Finished game 185 (M08 vs G): 1-0 {White mates}
+Started game 186 of 400 (G vs M08)
+Finished game 186 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 187 of 400 (M08 vs G)
+Finished game 187 (M08 vs G): 0-1 {Black mates}
+Started game 188 of 400 (G vs M08)
+Finished game 188 (G vs M08): 1-0 {White mates}
+Started game 189 of 400 (M08 vs G)
+Finished game 189 (M08 vs G): 0-1 {Black mates}
+Started game 190 of 400 (G vs M08)
+Finished game 190 (G vs M08): 0-1 {Black mates}
+Started game 191 of 400 (M08 vs G)
+Finished game 191 (M08 vs G): 1-0 {White mates}
+Started game 192 of 400 (G vs M08)
+Finished game 192 (G vs M08): 1-0 {White mates}
+Started game 193 of 400 (M08 vs G)
+Finished game 193 (M08 vs G): 1-0 {White mates}
+Started game 194 of 400 (G vs M08)
+Finished game 194 (G vs M08): 0-1 {Black mates}
+Started game 195 of 400 (M08 vs G)
+Finished game 195 (M08 vs G): 0-1 {Black mates}
+Started game 196 of 400 (G vs M08)
+Finished game 196 (G vs M08): 0-1 {Black mates}
+Started game 197 of 400 (M08 vs G)
+Finished game 197 (M08 vs G): 1-0 {White mates}
+Started game 198 of 400 (G vs M08)
+Finished game 198 (G vs M08): 0-1 {Black mates}
+Started game 199 of 400 (M08 vs G)
+Finished game 199 (M08 vs G): 1-0 {White mates}
+Started game 200 of 400 (G vs M08)
+Finished game 200 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 29.60 +/- 45.52, nElo: 31.65 +/- 48.15
+LOS: 90.12 %, DrawRatio: 37.00 %, PairsRatio: 1.33
+Games: 200, Wins: 96, Losses: 79, Draws: 25, Points: 108.5 (54.25 %)
+Ptnml(0-2): [15, 12, 37, 13, 23], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 201 of 400 (M08 vs G)
+Finished game 201 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 202 of 400 (G vs M08)
+Finished game 202 (G vs M08): 0-1 {Black mates}
+Started game 203 of 400 (M08 vs G)
+Finished game 203 (M08 vs G): 1-0 {White mates}
+Started game 204 of 400 (G vs M08)
+Finished game 204 (G vs M08): 0-1 {Black mates}
+Started game 205 of 400 (M08 vs G)
+Finished game 205 (M08 vs G): 0-1 {Black mates}
+Started game 206 of 400 (G vs M08)
+Finished game 206 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 207 of 400 (M08 vs G)
+Finished game 207 (M08 vs G): 1-0 {White mates}
+Started game 208 of 400 (G vs M08)
+Finished game 208 (G vs M08): 1-0 {White mates}
+Started game 209 of 400 (M08 vs G)
+Finished game 209 (M08 vs G): 1-0 {White mates}
+Started game 210 of 400 (G vs M08)
+Finished game 210 (G vs M08): 1-0 {White mates}
+Started game 211 of 400 (M08 vs G)
+Finished game 211 (M08 vs G): 1/2-1/2 {Draw by fifty moves rule}
+Started game 212 of 400 (G vs M08)
+Finished game 212 (G vs M08): 1-0 {White mates}
+Started game 213 of 400 (M08 vs G)
+Finished game 213 (M08 vs G): 1-0 {White mates}
+Started game 214 of 400 (G vs M08)
+Finished game 214 (G vs M08): 1-0 {White mates}
+Started game 215 of 400 (M08 vs G)
+Finished game 215 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 216 of 400 (G vs M08)
+Finished game 216 (G vs M08): 0-1 {Black mates}
+Started game 217 of 400 (M08 vs G)
+Finished game 217 (M08 vs G): 0-1 {Black mates}
+Started game 218 of 400 (G vs M08)
+Finished game 218 (G vs M08): 0-1 {Black mates}
+Started game 219 of 400 (M08 vs G)
+Finished game 219 (M08 vs G): 1-0 {White mates}
+Started game 220 of 400 (G vs M08)
+Finished game 220 (G vs M08): 1-0 {White mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 30.08 +/- 42.25, nElo: 33.02 +/- 45.91
+LOS: 92.07 %, DrawRatio: 38.18 %, PairsRatio: 1.34
+Games: 220, Wins: 105, Losses: 86, Draws: 29, Points: 119.5 (54.32 %)
+Ptnml(0-2): [15, 14, 42, 15, 24], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 221 of 400 (M08 vs G)
+Finished game 221 (M08 vs G): 1-0 {White mates}
+Started game 222 of 400 (G vs M08)
+Finished game 222 (G vs M08): 0-1 {Black mates}
+Started game 223 of 400 (M08 vs G)
+Finished game 223 (M08 vs G): 0-1 {Black mates}
+Started game 224 of 400 (G vs M08)
+Finished game 224 (G vs M08): 0-1 {Black mates}
+Started game 225 of 400 (M08 vs G)
+Finished game 225 (M08 vs G): 1-0 {White mates}
+Started game 226 of 400 (G vs M08)
+Finished game 226 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 227 of 400 (M08 vs G)
+Finished game 227 (M08 vs G): 1-0 {White mates}
+Started game 228 of 400 (G vs M08)
+Finished game 228 (G vs M08): 0-1 {Black mates}
+Started game 229 of 400 (M08 vs G)
+Finished game 229 (M08 vs G): 0-1 {Black mates}
+Started game 230 of 400 (G vs M08)
+Finished game 230 (G vs M08): 0-1 {Black mates}
+Started game 231 of 400 (M08 vs G)
+Finished game 231 (M08 vs G): 0-1 {Black mates}
+Started game 232 of 400 (G vs M08)
+Finished game 232 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 233 of 400 (M08 vs G)
+Finished game 233 (M08 vs G): 0-1 {Black mates}
+Started game 234 of 400 (G vs M08)
+Finished game 234 (G vs M08): 0-1 {Black mates}
+Started game 235 of 400 (M08 vs G)
+Finished game 235 (M08 vs G): 1-0 {White mates}
+Started game 236 of 400 (G vs M08)
+Finished game 236 (G vs M08): 0-1 {Black mates}
+Started game 237 of 400 (M08 vs G)
+Finished game 237 (M08 vs G): 0-1 {Black mates}
+Started game 238 of 400 (G vs M08)
+Finished game 238 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 239 of 400 (M08 vs G)
+Finished game 239 (M08 vs G): 0-1 {Black mates}
+Started game 240 of 400 (G vs M08)
+Finished game 240 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 33.40 +/- 40.34, nElo: 36.79 +/- 43.96
+LOS: 94.95 %, DrawRatio: 37.50 %, PairsRatio: 1.34
+Games: 240, Wins: 115, Losses: 92, Draws: 33, Points: 131.5 (54.79 %)
+Ptnml(0-2): [15, 17, 45, 16, 27], WL/DD Ratio: inf
+--------------------------------------------------
+Started game 241 of 400 (M08 vs G)
+Finished game 241 (M08 vs G): 1-0 {White mates}
+Started game 242 of 400 (G vs M08)
+Finished game 242 (G vs M08): 1/2-1/2 {Draw by insufficient mating material}
+Started game 243 of 400 (M08 vs G)
+Finished game 243 (M08 vs G): 1/2-1/2 {Draw by insufficient mating material}
+Started game 244 of 400 (G vs M08)
+Finished game 244 (G vs M08): 0-1 {Black mates}
+Started game 245 of 400 (M08 vs G)
+Finished game 245 (M08 vs G): 1-0 {White mates}
+Started game 246 of 400 (G vs M08)
+Finished game 246 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 247 of 400 (M08 vs G)
+Finished game 247 (M08 vs G): 0-1 {Black mates}
+Started game 248 of 400 (G vs M08)
+Finished game 248 (G vs M08): 0-1 {Black mates}
+Started game 249 of 400 (M08 vs G)
+Finished game 249 (M08 vs G): 1/2-1/2 {Draw by fifty moves rule}
+Started game 250 of 400 (G vs M08)
+Finished game 250 (G vs M08): 1/2-1/2 {Draw by insufficient mating material}
+Started game 251 of 400 (M08 vs G)
+Finished game 251 (M08 vs G): 1-0 {White mates}
+Started game 252 of 400 (G vs M08)
+Finished game 252 (G vs M08): 0-1 {Black mates}
+Started game 253 of 400 (M08 vs G)
+Finished game 253 (M08 vs G): 1-0 {White mates}
+Started game 254 of 400 (G vs M08)
+Finished game 254 (G vs M08): 1-0 {White mates}
+Started game 255 of 400 (M08 vs G)
+Finished game 255 (M08 vs G): 1-0 {White mates}
+Started game 256 of 400 (G vs M08)
+Finished game 256 (G vs M08): 0-1 {Black mates}
+Started game 257 of 400 (M08 vs G)
+Finished game 257 (M08 vs G): 1-0 {White mates}
+Started game 258 of 400 (G vs M08)
+Finished game 258 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 259 of 400 (M08 vs G)
+Finished game 259 (M08 vs G): 1-0 {White mates}
+Started game 260 of 400 (G vs M08)
+Finished game 260 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 44.34 +/- 38.61, nElo: 49.23 +/- 42.23
+LOS: 98.88 %, DrawRatio: 36.92 %, PairsRatio: 1.56
+Games: 260, Wins: 127, Losses: 94, Draws: 39, Points: 146.5 (56.35 %)
+Ptnml(0-2): [15, 17, 48, 20, 30], WL/DD Ratio: 47.00
+--------------------------------------------------
+Started game 261 of 400 (M08 vs G)
+Finished game 261 (M08 vs G): 0-1 {Black mates}
+Started game 262 of 400 (G vs M08)
+Finished game 262 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 263 of 400 (M08 vs G)
+Finished game 263 (M08 vs G): 1-0 {White mates}
+Started game 264 of 400 (G vs M08)
+Finished game 264 (G vs M08): 1-0 {White mates}
+Started game 265 of 400 (M08 vs G)
+Finished game 265 (M08 vs G): 0-1 {Black mates}
+Started game 266 of 400 (G vs M08)
+Finished game 266 (G vs M08): 0-1 {Black mates}
+Started game 267 of 400 (M08 vs G)
+Finished game 267 (M08 vs G): 0-1 {Black mates}
+Started game 268 of 400 (G vs M08)
+Finished game 268 (G vs M08): 1-0 {White mates}
+Started game 269 of 400 (M08 vs G)
+Finished game 269 (M08 vs G): 1/2-1/2 {Draw by insufficient mating material}
+Started game 270 of 400 (G vs M08)
+Finished game 270 (G vs M08): 1-0 {White mates}
+Started game 271 of 400 (M08 vs G)
+Finished game 271 (M08 vs G): 1-0 {White mates}
+Started game 272 of 400 (G vs M08)
+Finished game 272 (G vs M08): 0-1 {Black mates}
+Started game 273 of 400 (M08 vs G)
+Finished game 273 (M08 vs G): 1-0 {White mates}
+Started game 274 of 400 (G vs M08)
+Finished game 274 (G vs M08): 1-0 {White mates}
+Started game 275 of 400 (M08 vs G)
+Finished game 275 (M08 vs G): 0-1 {Black mates}
+Started game 276 of 400 (G vs M08)
+Finished game 276 (G vs M08): 1-0 {White mates}
+Started game 277 of 400 (M08 vs G)
+Finished game 277 (M08 vs G): 0-1 {Black mates}
+Started game 278 of 400 (G vs M08)
+Finished game 278 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 279 of 400 (M08 vs G)
+Finished game 279 (M08 vs G): 1-0 {White mates}
+Started game 280 of 400 (G vs M08)
+Finished game 280 (G vs M08): 1/2-1/2 {Draw by insufficient mating material}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 36.11 +/- 37.18, nElo: 39.97 +/- 40.70
+LOS: 97.29 %, DrawRatio: 36.43 %, PairsRatio: 1.41
+Games: 280, Wins: 133, Losses: 104, Draws: 43, Points: 154.5 (55.18 %)
+Ptnml(0-2): [17, 20, 51, 21, 31], WL/DD Ratio: 50.00
+--------------------------------------------------
+Started game 281 of 400 (M08 vs G)
+Finished game 281 (M08 vs G): 1-0 {White mates}
+Started game 282 of 400 (G vs M08)
+Finished game 282 (G vs M08): 1-0 {White mates}
+Started game 283 of 400 (M08 vs G)
+Finished game 283 (M08 vs G): 1-0 {White mates}
+Started game 284 of 400 (G vs M08)
+Finished game 284 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 285 of 400 (M08 vs G)
+Finished game 285 (M08 vs G): 0-1 {Black mates}
+Started game 286 of 400 (G vs M08)
+Finished game 286 (G vs M08): 0-1 {Black mates}
+Started game 287 of 400 (M08 vs G)
+Finished game 287 (M08 vs G): 0-1 {Black mates}
+Started game 288 of 400 (G vs M08)
+Finished game 288 (G vs M08): 1-0 {White mates}
+Started game 289 of 400 (M08 vs G)
+Finished game 289 (M08 vs G): 1-0 {White mates}
+Started game 290 of 400 (G vs M08)
+Finished game 290 (G vs M08): 1-0 {White mates}
+Started game 291 of 400 (M08 vs G)
+Finished game 291 (M08 vs G): 1-0 {White mates}
+Started game 292 of 400 (G vs M08)
+Finished game 292 (G vs M08): 1-0 {White mates}
+Started game 293 of 400 (M08 vs G)
+Finished game 293 (M08 vs G): 0-1 {Black mates}
+Started game 294 of 400 (G vs M08)
+Finished game 294 (G vs M08): 0-1 {Black mates}
+Started game 295 of 400 (M08 vs G)
+Finished game 295 (M08 vs G): 1-0 {White mates}
+Started game 296 of 400 (G vs M08)
+Finished game 296 (G vs M08): 0-1 {Black mates}
+Started game 297 of 400 (M08 vs G)
+Finished game 297 (M08 vs G): 1-0 {White mates}
+Started game 298 of 400 (G vs M08)
+Finished game 298 (G vs M08): 0-1 {Black mates}
+Started game 299 of 400 (M08 vs G)
+Finished game 299 (M08 vs G): 1-0 {White mates}
+Started game 300 of 400 (G vs M08)
+Finished game 300 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 39.55 +/- 35.92, nElo: 43.81 +/- 39.32
+LOS: 98.55 %, DrawRatio: 37.33 %, PairsRatio: 1.47
+Games: 300, Wins: 145, Losses: 111, Draws: 44, Points: 167.0 (55.67 %)
+Ptnml(0-2): [18, 20, 56, 22, 34], WL/DD Ratio: 55.00
+--------------------------------------------------
+Started game 301 of 400 (M08 vs G)
+Finished game 301 (M08 vs G): 1-0 {White mates}
+Started game 302 of 400 (G vs M08)
+Finished game 302 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 303 of 400 (M08 vs G)
+Finished game 303 (M08 vs G): 1-0 {White mates}
+Started game 304 of 400 (G vs M08)
+Finished game 304 (G vs M08): 0-1 {Black mates}
+Started game 305 of 400 (M08 vs G)
+Finished game 305 (M08 vs G): 1-0 {White mates}
+Started game 306 of 400 (G vs M08)
+Finished game 306 (G vs M08): 1-0 {White mates}
+Started game 307 of 400 (M08 vs G)
+Finished game 307 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 308 of 400 (G vs M08)
+Finished game 308 (G vs M08): 0-1 {Black mates}
+Started game 309 of 400 (M08 vs G)
+Finished game 309 (M08 vs G): 0-1 {Black mates}
+Started game 310 of 400 (G vs M08)
+Finished game 310 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 311 of 400 (M08 vs G)
+Finished game 311 (M08 vs G): 0-1 {Black mates}
+Started game 312 of 400 (G vs M08)
+Finished game 312 (G vs M08): 0-1 {Black mates}
+Started game 313 of 400 (M08 vs G)
+Finished game 313 (M08 vs G): 1-0 {White mates}
+Started game 314 of 400 (G vs M08)
+Finished game 314 (G vs M08): 0-1 {Black mates}
+Started game 315 of 400 (M08 vs G)
+Finished game 315 (M08 vs G): 1-0 {White mates}
+Started game 316 of 400 (G vs M08)
+Finished game 316 (G vs M08): 1-0 {White mates}
+Started game 317 of 400 (M08 vs G)
+Finished game 317 (M08 vs G): 1-0 {White mates}
+Started game 318 of 400 (G vs M08)
+Finished game 318 (G vs M08): 0-1 {Black mates}
+Started game 319 of 400 (M08 vs G)
+Finished game 319 (M08 vs G): 0-1 {Black mates}
+Started game 320 of 400 (G vs M08)
+Finished game 320 (G vs M08): 1-0 {White mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 42.56 +/- 34.92, nElo: 47.02 +/- 38.07
+LOS: 99.23 %, DrawRatio: 36.88 %, PairsRatio: 1.52
+Games: 320, Wins: 156, Losses: 117, Draws: 47, Points: 179.5 (56.09 %)
+Ptnml(0-2): [19, 21, 59, 24, 37], WL/DD Ratio: 58.00
+--------------------------------------------------
+Started game 321 of 400 (M08 vs G)
+Finished game 321 (M08 vs G): 0-1 {Black mates}
+Started game 322 of 400 (G vs M08)
+Finished game 322 (G vs M08): 0-1 {Black mates}
+Started game 323 of 400 (M08 vs G)
+Finished game 323 (M08 vs G): 1-0 {White mates}
+Started game 324 of 400 (G vs M08)
+Finished game 324 (G vs M08): 0-1 {Black mates}
+Started game 325 of 400 (M08 vs G)
+Finished game 325 (M08 vs G): 0-1 {Black mates}
+Started game 326 of 400 (G vs M08)
+Finished game 326 (G vs M08): 0-1 {Black mates}
+Started game 327 of 400 (M08 vs G)
+Finished game 327 (M08 vs G): 1-0 {White mates}
+Started game 328 of 400 (G vs M08)
+Finished game 328 (G vs M08): 0-1 {Black mates}
+Started game 329 of 400 (M08 vs G)
+Finished game 329 (M08 vs G): 1-0 {White mates}
+Started game 330 of 400 (G vs M08)
+Finished game 330 (G vs M08): 0-1 {Black mates}
+Started game 331 of 400 (M08 vs G)
+Finished game 331 (M08 vs G): 1-0 {White mates}
+Started game 332 of 400 (G vs M08)
+Finished game 332 (G vs M08): 1-0 {White mates}
+Started game 333 of 400 (M08 vs G)
+Finished game 333 (M08 vs G): 0-1 {Black mates}
+Started game 334 of 400 (G vs M08)
+Finished game 334 (G vs M08): 1-0 {White mates}
+Started game 335 of 400 (M08 vs G)
+Finished game 335 (M08 vs G): 1-0 {White mates}
+Started game 336 of 400 (G vs M08)
+Finished game 336 (G vs M08): 0-1 {Black mates}
+Started game 337 of 400 (M08 vs G)
+Finished game 337 (M08 vs G): 0-1 {Black mates}
+Started game 338 of 400 (G vs M08)
+Finished game 338 (G vs M08): 0-1 {Black mates}
+Started game 339 of 400 (M08 vs G)
+Finished game 339 (M08 vs G): 0-1 {Black mates}
+Started game 340 of 400 (G vs M08)
+Finished game 340 (G vs M08): 1-0 {White mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 44.18 +/- 34.30, nElo: 48.24 +/- 36.93
+LOS: 99.48 %, DrawRatio: 37.06 %, PairsRatio: 1.55
+Games: 340, Wins: 168, Losses: 125, Draws: 47, Points: 191.5 (56.32 %)
+Ptnml(0-2): [21, 21, 63, 24, 41], WL/DD Ratio: 62.00
+--------------------------------------------------
+Started game 341 of 400 (M08 vs G)
+Finished game 341 (M08 vs G): 1-0 {White mates}
+Started game 342 of 400 (G vs M08)
+Finished game 342 (G vs M08): 1-0 {White mates}
+Started game 343 of 400 (M08 vs G)
+Finished game 343 (M08 vs G): 0-1 {Black mates}
+Started game 344 of 400 (G vs M08)
+Finished game 344 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 345 of 400 (M08 vs G)
+Finished game 345 (M08 vs G): 1-0 {White mates}
+Started game 346 of 400 (G vs M08)
+Finished game 346 (G vs M08): 1-0 {White mates}
+Started game 347 of 400 (M08 vs G)
+Finished game 347 (M08 vs G): 1-0 {White mates}
+Started game 348 of 400 (G vs M08)
+Finished game 348 (G vs M08): 1/2-1/2 {Draw by fifty moves rule}
+Started game 349 of 400 (M08 vs G)
+Finished game 349 (M08 vs G): 1-0 {White mates}
+Started game 350 of 400 (G vs M08)
+Finished game 350 (G vs M08): 0-1 {Black mates}
+Started game 351 of 400 (M08 vs G)
+Finished game 351 (M08 vs G): 1-0 {White mates}
+Started game 352 of 400 (G vs M08)
+Finished game 352 (G vs M08): 0-1 {Black mates}
+Started game 353 of 400 (M08 vs G)
+Finished game 353 (M08 vs G): 1-0 {White mates}
+Started game 354 of 400 (G vs M08)
+Finished game 354 (G vs M08): 1-0 {White mates}
+Started game 355 of 400 (M08 vs G)
+Finished game 355 (M08 vs G): 0-1 {Black mates}
+Started game 356 of 400 (G vs M08)
+Finished game 356 (G vs M08): 1-0 {White mates}
+Started game 357 of 400 (M08 vs G)
+Finished game 357 (M08 vs G): 1-0 {White mates}
+Started game 358 of 400 (G vs M08)
+Finished game 358 (G vs M08): 1-0 {White mates}
+Started game 359 of 400 (M08 vs G)
+Finished game 359 (M08 vs G): 1/2-1/2 {Draw by fifty moves rule}
+Started game 360 of 400 (G vs M08)
+Finished game 360 (G vs M08): 1-0 {White mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 42.68 +/- 33.21, nElo: 46.73 +/- 35.89
+LOS: 99.46 %, DrawRatio: 37.22 %, PairsRatio: 1.51
+Games: 360, Wins: 177, Losses: 133, Draws: 50, Points: 202.0 (56.11 %)
+Ptnml(0-2): [22, 23, 67, 25, 43], WL/DD Ratio: 66.00
+--------------------------------------------------
+Started game 361 of 400 (M08 vs G)
+Finished game 361 (M08 vs G): 1-0 {White mates}
+Started game 362 of 400 (G vs M08)
+Finished game 362 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 363 of 400 (M08 vs G)
+Finished game 363 (M08 vs G): 0-1 {Black mates}
+Started game 364 of 400 (G vs M08)
+Finished game 364 (G vs M08): 1-0 {White mates}
+Started game 365 of 400 (M08 vs G)
+Finished game 365 (M08 vs G): 1-0 {White mates}
+Started game 366 of 400 (G vs M08)
+Finished game 366 (G vs M08): 1/2-1/2 {Draw by adjudication}
+Started game 367 of 400 (M08 vs G)
+Finished game 367 (M08 vs G): 1-0 {White mates}
+Started game 368 of 400 (G vs M08)
+Finished game 368 (G vs M08): 1-0 {White mates}
+Started game 369 of 400 (M08 vs G)
+Finished game 369 (M08 vs G): 1-0 {White mates}
+Started game 370 of 400 (G vs M08)
+Finished game 370 (G vs M08): 0-1 {Black mates}
+Started game 371 of 400 (M08 vs G)
+Finished game 371 (M08 vs G): 1-0 {White mates}
+Started game 372 of 400 (G vs M08)
+Finished game 372 (G vs M08): 0-1 {Black mates}
+Started game 373 of 400 (M08 vs G)
+Finished game 373 (M08 vs G): 1-0 {White mates}
+Started game 374 of 400 (G vs M08)
+Finished game 374 (G vs M08): 0-1 {Black mates}
+Started game 375 of 400 (M08 vs G)
+Finished game 375 (M08 vs G): 1-0 {White mates}
+Started game 376 of 400 (G vs M08)
+Finished game 376 (G vs M08): 1-0 {White mates}
+Started game 377 of 400 (M08 vs G)
+Finished game 377 (M08 vs G): 1-0 {White mates}
+Started game 378 of 400 (G vs M08)
+Finished game 378 (G vs M08): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 379 of 400 (M08 vs G)
+Finished game 379 (M08 vs G): 1-0 {White mates}
+Started game 380 of 400 (G vs M08)
+Finished game 380 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 48.78 +/- 32.60, nElo: 53.12 +/- 34.93
+LOS: 99.86 %, DrawRatio: 36.32 %, PairsRatio: 1.63
+Games: 380, Wins: 190, Losses: 137, Draws: 53, Points: 216.5 (56.97 %)
+Ptnml(0-2): [23, 23, 69, 28, 47], WL/DD Ratio: 68.00
+--------------------------------------------------
+Started game 381 of 400 (M08 vs G)
+Finished game 381 (M08 vs G): 0-1 {Black mates}
+Started game 382 of 400 (G vs M08)
+Finished game 382 (G vs M08): 0-1 {Black mates}
+Started game 383 of 400 (M08 vs G)
+Finished game 383 (M08 vs G): 1-0 {White mates}
+Started game 384 of 400 (G vs M08)
+Finished game 384 (G vs M08): 1-0 {White mates}
+Started game 385 of 400 (M08 vs G)
+Finished game 385 (M08 vs G): 0-1 {Black mates}
+Started game 386 of 400 (G vs M08)
+Finished game 386 (G vs M08): 1-0 {White mates}
+Started game 387 of 400 (M08 vs G)
+Finished game 387 (M08 vs G): 1-0 {White mates}
+Started game 388 of 400 (G vs M08)
+Finished game 388 (G vs M08): 0-1 {Black mates}
+Started game 389 of 400 (M08 vs G)
+Finished game 389 (M08 vs G): 1-0 {White mates}
+Started game 390 of 400 (G vs M08)
+Finished game 390 (G vs M08): 0-1 {Black mates}
+Started game 391 of 400 (M08 vs G)
+Finished game 391 (M08 vs G): 0-1 {Black mates}
+Started game 392 of 400 (G vs M08)
+Finished game 392 (G vs M08): 0-1 {Black mates}
+Started game 393 of 400 (M08 vs G)
+Finished game 393 (M08 vs G): 1-0 {White mates}
+Started game 394 of 400 (G vs M08)
+Finished game 394 (G vs M08): 1-0 {White mates}
+Started game 395 of 400 (M08 vs G)
+Finished game 395 (M08 vs G): 0-1 {Black mates}
+Started game 396 of 400 (G vs M08)
+Finished game 396 (G vs M08): 0-1 {Black mates}
+Started game 397 of 400 (M08 vs G)
+Finished game 397 (M08 vs G): 1-0 {White mates}
+Started game 398 of 400 (G vs M08)
+Finished game 398 (G vs M08): 1-0 {White mates}
+Started game 399 of 400 (M08 vs G)
+Finished game 399 (M08 vs G): 1-0 {White mates}
+Started game 400 of 400 (G vs M08)
+Finished game 400 (G vs M08): 0-1 {Black mates}
+--------------------------------------------------
+Results of M08 vs G (1+0.01, NULL, 16MB, openings.epd):
+Elo: 49.85 +/- 31.70, nElo: 54.45 +/- 34.05
+LOS: 99.91 %, DrawRatio: 37.50 %, PairsRatio: 1.66
+Games: 400, Wins: 202, Losses: 145, Draws: 53, Points: 228.5 (57.12 %)
+Ptnml(0-2): [24, 23, 75, 28, 50], WL/DD Ratio: 74.00
+--------------------------------------------------
+Finished match
+Total Time: 00:17:44 (hours:minutes:seconds)
+

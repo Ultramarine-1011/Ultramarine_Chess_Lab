@@ -94,6 +94,8 @@ R6目标对齐研究使用同一批新真实局面比较G（棋局结果）、T�
 `python -X utf8 -m ucl.r6_study --help`；完整命令和教师二进制身份见
 [R6复现入口](docs/validation/r6/commands.md)，设计见[R6协议](docs/r6/protocol.md)。
 已封存test结果可直接阅读；重复训练或新独立测试使用新的开发目录。
+实际结果见[R6最终报告](docs/r6/final-report.md)：M08相对G取得本条件下的实战收益，
+尚无优于Handcrafted的充分证据；默认评估器不变。
 
 R5完成了Windows性能研究和四组共1600局正式对弈，见[R5研究报告](docs/r5/final-report.md)。
 静态耗时下降31.03%；直接对原版有条件性收益，对Handcrafted仍未改善到可替换默认。

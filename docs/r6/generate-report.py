@@ -6,6 +6,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT/'python'))
 from ucl.r4_features import NAMES
+from ucl.r5_analysis import bootstrap
 
 
 def load(path):
@@ -31,12 +32,13 @@ def generate():
     groups = analysis['groups']
     candidate = selection['candidate']
     c = groups['C']
+    time_node = bootstrap([a-b for a, b in zip(groups['C']['paired_means'], groups['D']['paired_means'], strict=True)])
     conclusion = {'above': '在本条件下支持混合监督相对 G 的棋力改善',
                   'below': '在本条件下显示混合监督相对 G 的棋力退步',
                   'inconclusive': '未获得混合监督相对 G 改善棋力的充分证据'}[c['confirmatory_vs_half']]
     lines = ['# R6 评估目标对齐研究', '',
              f'**{conclusion}。** 冻结候选为 {candidate}（α=0.8）。教师/混合监督降低了教师评分误差，',
-             '但共同独立 test 未观察到可靠的着法排序改善。离线目标拟合和搜索决策表现仍存在差距。',
+             '共同独立 test 未观察到可靠的静态着法排序改善；该单步代理没有检出实战中的收益。',
              f'C 组 {pct(c["bootstrap"]["score"])}，配对95%区间 {ci(c["bootstrap"]["ci95"], True)}。',
              '**Handcrafted 继续默认；R3–R5 已封存数据、模型和结论不变。R6 完成后停止。**', '',
              '## 完成范围与预先固定的比较', '',
@@ -126,6 +128,16 @@ def generate():
     lines += ['', '| 模型/限制 | 节点 | wall ms | wall NPS |', '|---|---:|---:|---:|']
     for r in load(base+'r6-performance-v1/benchmark/record.json')['summary']:
         lines.append(f'| {r["engine"]}/{r["limit"]} | {r["median_nodes_sum"]:.0f} | {r["median_wall_ms_sum"]:.3f} | {r["wall_nps"]:.0f} |')
+    lines += ['', '补充共同validation成本对照：正式赛结束后，按原排序样本的固定hash顺序取前10个',
+              '真实validation根局面，执行相同静态/搜索测量。没有按比赛或test结果挑位置；',
+              '这批是事后探索性补测，未用于候选选择，不能与前一批原始计时直接合并。', '',
+              '| validation模型 | 静态ns/次 | 同批手工ns/次 |', '|---|---:|---:|']
+    for n in ('G', 'T', 'M08'):
+        perf = load(base+f'r6-validation-performance-v1/validation-static-{n}/record.json')['tools']['static_evaluation']['summary']
+        lines.append(f'| {n} | {perf["mean_position_median_linear_ns"]:.3f} | {perf["mean_position_median_handcrafted_ns"]:.3f} |')
+    lines += ['', '| validation模型/限制 | 节点 | wall ms | wall NPS |', '|---|---:|---:|---:|']
+    for r in load(base+'r6-validation-performance-v1/validation-search/record.json')['summary']:
+        lines.append(f'| {r["engine"]}/{r["limit"]} | {r["median_nodes_sum"]:.0f} | {r["median_wall_ms_sum"]:.3f} | {r["wall_nps"]:.0f} |')
     lines += ['', '改变目标会改变评分尺度、搜索树、剪枝和QS工作；不同模型的NPS/节点变化不能单独认定纯推理成本。',
               '没有更改搜索或特征。温度传感器不可读，保留各组前后电源/负载快照，不能排除调度/散热漂移。', '',
               '## 真实棋力：固定时间与节点', '',
@@ -139,7 +151,13 @@ def generate():
         st = r['statistics']
         # Existing report statistics retain unambiguous explicit W/D/L keys.
         lines.append(f'| {group} {opponents[group]} | {st["wins"]}/{st["draws"]}/{st["losses"]} | {pct(r["bootstrap"]["score"])} | {ci(r["bootstrap"]["ci95"],True)} | {r["elo_equivalent"]:.2f} | {r["confirmatory_vs_half"]} |')
-    lines += ['', '按200开局配对bootstrap2000次，seed20261016。C为唯一确认性判断，其余三组探索性；',
+    lines += ['', 'C组预定确认性区间全部高于50%，支持M08相对同数据G的条件性实战改善。',
+              'A/B对Handcrafted的区间均包含50%，没有证明G或M08胜过默认评估器。',
+              'D点估计同向且描述区间高于50%，但它按预定仅作探索性证据。',
+              f'事后探索性同开局配对C−D差值为{100*time_node["score"]:.3f}个百分点，',
+              f'95%区间[{100*time_node["ci95"][0]:.3f}, {100*time_node["ci95"][1]:.3f}]个百分点；',
+              '没有可靠的时间/节点条件差异证据，亦未作新的确认性判断。', '',
+              '按200开局配对bootstrap2000次，seed20261016。C为唯一确认性判断，其余三组探索性；',
               '不把跨条件差值相加为速度与语义的因果贡献。Elo等效只适用于本时控/开局/硬件，非通用定级。', '',
               '| 组 | 终局分类 | 异常完整局 |', '|---|---|---:|']
     for group, r in groups.items():
@@ -156,9 +174,11 @@ def generate():
     lines += ['',
               '## 解释与下一阶段', '',
               '1. 教师/混合监督改善对教师搜索输出的拟合；G在结果预测上更好。这说明监督目标确实改变拟合方向。',
-              '2. 教师误差降低没有转化为本批合法候选着法的排序提升，实战结论以上述C组为准。',
+              '2. 教师误差降低没有转化为本批合法候选着法的静态排序提升，但C组支持M08相对G的实战改善。',
+              '   这说明当前单步排序代理不足以替代真实搜索对弈；尚未证明M08优于Handcrafted。',
               f'3. 时间C得分{pct(groups["C"]["bootstrap"]["score"])}，节点D得分{pct(groups["D"]["bootstrap"]["score"])}；',
-              '   D仅探索性，区间和预算条件一起解释，不能把点估计差异归因为单一机制。',
+              '   两种预算的点估计方向一致，事后配对差值区间含0，不能认定存在可靠的条件差异。',
+              '   D仅探索性，不能把点估计差异归因为单一机制。',
               '4. 同数据同结构的G与M08是目标干预对照；相对历史R4还同时改变了数据窗口、样本量、',
               '   平台和评估实现成本。新数据上G与旧Full14的离线差异不能识别数据本身的因果贡献，',
               '   没有进行旧/新数据×旧/新目标的完整交叉干预。',

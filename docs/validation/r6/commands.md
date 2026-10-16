@@ -74,6 +74,18 @@ the archived freeze: configure with `--study .tools/r6-replica-models`, the rebu
 a replication on already known data/openings, not a new independent sample;
 do not merge it into the R6 fixed 1600 games.
 
+The preregistered cost suite is R2. To also cover the requested common validation
+positions, an exploratory supplement was measured after all matches, using the
+first ten of the registered validation-root hash order. The committed
+`experiments/positions/r6-validation-v1.json` stores FENs/source identities and
+the input hash. Its identity was checked against the original validation rows.
+Run the four `experiments/configs/r6/validation-*.json` configurations through
+`ucl-lab benchmark --config <config> --output <new-directory>` to repeat this
+measurement with the retained binary; a rebuilt binary needs copied configs with
+its own path/identity. Raw outputs are in `r6-validation-performance-v1`.
+This supplement and the reported paired C−D interval are explicitly post hoc
+exploratory diagnostics. Neither changed model selection or any formal game.
+
 During formal execution, the CLI was corrected to pass --study to this freeze
 lookup for new replication directories. The live coordinator was not restarted;
 its engine, models, budgets, openings and analysis were unchanged. A separate
@@ -99,3 +111,26 @@ CRLF bytes; source and generated research JSON/model files use LF.
 The teacher's own NNUE is an external fixed label source. No NNUE/RL/MCTS or new
 search algorithm was implemented in UCL. Archive data directories intentionally
 omit disposable duplicate plain-text journals.
+
+## Completed execution
+
+| Check | Actual outcome | Evidence |
+|---|---|---|
+| Data/opening reconstruction | exit0, 3601 games/23998 positions/200 openings | r6-reconstruct.log; dataset manifest |
+| Features and deployment | all23998 C++/Python features exact; 95992 rounded scores exact | r6-deployment.log; verification.json |
+| Fit/re-fit | all20 candidates converged; four model files byte-identical | fits.json; refit.json |
+| Independent test | exit0, once after1ca065a freeze; candidate unchanged | r6-test.log; test-results.json |
+| Registered and supplemental costs | exit0, all records completed | r6-performance.log; r6-validation-performance.log |
+| Formal A/B/C/D | exit0, each400/200 pairs, total1600 | r6-matches.log; raw record/PGN/UCI bundles |
+| Full match analysis | exit0, every PGN move/PV/history matches UCI, abnormal0 | r6-analysis.log; r6-analysis-v1 |
+| Node condition D | actual go/counters/clock verified; 1703 mate + 7 max-depth undershoots | D/analysis.json; moves.jsonl.gz |
+| Frozen identity audit | dataset/model/config/binary/tool/opening hashes agree | final-input-checks.json; final-match-checks.json |
+| Report | links valid, deterministic generation, numerical tables read from actual JSON | report-checks.json |
+| Windows Release | configure/build/CTest exit0, 6/6 | r6-configure.log; r6-build.log; r6-final-ctest.log |
+| Cross-platform code CI | five successful jobs at3524319 | ci-code.json; link below |
+
+[Code CI run](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38893285837)
+covers Windows/macOS Release/Debug and sanitizer. The earlier bb75a56 snapshot is
+also retained in ci.json. Final results/report delivery is recorded in VALIDATION.md.
+One normal push encountered a Schannel handshake failure; a per-command OpenSSL
+backend retry succeeded. No global Git/system configuration changed.
