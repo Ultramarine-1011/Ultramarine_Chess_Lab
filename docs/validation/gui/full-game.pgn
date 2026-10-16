@@ -1,0 +1,13 @@
+[Event "UCL local game"]
+[Site "Local"]
+[Date "2026.10.16"]
+[Round "?"]
+[White "Human"]
+[Black "UCL"]
+[Result "1-0"]
+[Evaluator "handcrafted-v1"]
+[TimeControl "?"]
+[UCLMoveTime "0.01"]
+[Termination "checkmate"]
+
+1. Nc3 a6 2. Nf3 a5 3. a4 b6 4. d4 b5 5. axb5 a4 6. b3 axb3 7. Rxa8 bxc2 8. Qxc2 c6 9. Rxb8 cxb5 10. Nxb5 d6 11. Rxc8 Kd7 12. Qc6+ Ke6 13. d5+ Kf5 14. Nfd4+ Ke4 15. f3+ Ke5 16. f4+ Ke4 17. Rxd8 e6 18. dxe6+ d5 19. Qxd5# 1-0

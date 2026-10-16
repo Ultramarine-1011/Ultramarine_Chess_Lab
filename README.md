@@ -25,6 +25,34 @@ Debug 与 Clang/GCC ASan/UBSan。CI 保留 macOS/Windows Release/Debug 和 sanit
 -DCMAKE_BUILD_TYPE=Release`，再 `cmake --build build/engine`，无需 Python。
 棋盘库和模型哈希库已随仓库提供，CMake 不联网下载依赖。
 
+## 本地人机对弈
+
+完成上面的 Python 安装和 Release 构建后，在仓库根目录运行一条命令：
+
+```sh
+python -m ucl.gui
+```
+
+自动打开 `http://127.0.0.1:8765`。macOS 未激活虚拟环境时使用
+`.venv/bin/python -m ucl.gui`；Windows 使用 `.venv/Scripts/python.exe -m ucl.gui`。
+页面支持执白/执黑、新对局、点击/拖动合法落子、四种升变、悔棋、终局和 PGN 下载。
+悔棋回到你的上一个回合；可申和的五十步/三次重复（包括下一步可申和）自动判和。
+每步思考时间可设为 0.01–10 秒，设置在新对局生效，无整局时钟。
+
+默认 Handcrafted；选 Linear 后填写已有 UCL v1/v2 模型路径（相对启动目录或绝对路径）。
+GUI 自动计算 SHA-256，并通过 `evalinfo` 核实实际加载身份；无效配置保留当前棋局。
+也可以从命令行指定：
+
+```sh
+python -m ucl.gui --color black --seconds 0.5 --evaluator Linear --model experiments/results/r3-model-v1/model.txt
+# 自定义引擎/端口，或关闭自动打开浏览器：
+python -m ucl.gui --engine build/release/ucl --port 8766 --no-browser
+```
+
+仅监听本机，单进程共享一局；棋局只在内存中，退出前可导出 PGN。
+`Ctrl+C` 关闭服务和引擎子进程。无需 npm、网络资源或额外 Python 依赖。
+独立回归：`ctest --preset release -R '^gui$'`，使用真实 UCL 并包含开局到自然终局的 HTTP 对局。
+
 ## UCI
 
 ```text

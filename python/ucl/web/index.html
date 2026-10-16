@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UCL · 本地对弈</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/vendor/cm-chessboard/assets/chessboard.css">
+  <link rel="stylesheet" href="/vendor/cm-chessboard/assets/extensions/markers/markers.css">
+  <link rel="stylesheet" href="/vendor/cm-chessboard/assets/extensions/promotion-dialog/promotion-dialog.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header><a class="brand" href="/" aria-label="UCL 本地对弈"><span class="monogram">UCL</span><span>Ultramarine <span class="brand-light">Chess Lab</span></span></a><span class="local-badge"><i></i> 本地对弈</span></header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">PLAY THE ENGINE</p><h1>下一步，轮到你。</h1></div><p class="intro-note">一张棋盘，一场好棋。<br>与 UCL 慢慢过招。</p></div>
+    <div class="layout">
+      <section class="play-area" aria-label="对弈棋盘">
+        <div class="player-bar"><div><span class="side-dot" id="top-dot"></span><strong id="top-player">UCL</strong><span class="player-detail" id="top-detail">Handcrafted</span></div><span id="turn-label">准备棋局</span></div>
+        <div class="board-shell"><div id="board" aria-label="国际象棋棋盘，点击或拖动棋子落子"></div></div>
+        <div class="player-bar bottom-player"><div><span class="side-dot" id="bottom-dot"></span><strong>你</strong><span class="player-detail" id="human-color">执白</span></div><span id="move-count">第 1 回合</span></div>
+        <div class="status-box" role="status" aria-live="polite"><span class="status-indicator" id="status-indicator"></span><span id="status">正在连接引擎…</span></div>
+        <p id="error" role="alert" hidden></p>
+        <div class="board-actions"><button id="undo" disabled>悔棋</button><a class="button-link" href="/api/pgn" download="ucl-game.pgn">导出 PGN <span aria-hidden="true">↗</span></a><button id="retry" hidden>重试引擎</button></div>
+      </section>
+      <aside>
+        <section class="card"><div class="card-heading"><h2>对局设置</h2><span>01</span></div>
+          <form id="settings">
+            <fieldset><legend>选择执棋</legend><div class="color-options"><label><input type="radio" name="color" value="white" checked><span><i class="side-dot white"></i> 执白先行</span></label><label><input type="radio" name="color" value="black"><span><i class="side-dot black"></i> 执黑应战</span></label></div></fieldset>
+            <div class="settings-row"><label for="seconds">每步思考时间 <span>秒</span></label><input id="seconds" name="seconds" type="number" min="0.01" max="10" step="0.01" value="0.25" required></div>
+            <label for="evaluator">评估器</label><select id="evaluator" name="evaluator"><option>Handcrafted</option><option>Linear</option></select>
+            <div id="model-field" hidden><label for="model">本地模型路径</label><input id="model" name="model" type="text" placeholder="experiments/results/…/model.txt" autocomplete="off"><p class="field-note">相对启动目录或绝对路径，支持现有 v1 / v2 模型。</p></div>
+            <button class="primary" id="new-game" type="submit">开始新对局 <span aria-hidden="true">→</span></button>
+            <p class="field-note">设置在新对局生效，当前棋谱将被替换。</p>
+          </form>
+        </section>
+        <section class="card history-card"><div class="card-heading"><h2>着法记录</h2><span id="result">*</span></div><div class="history-scroll" id="history-scroll"><table aria-label="着法记录"><thead><tr><th>回合</th><th>白方</th><th>黑方</th></tr></thead><tbody id="history"></tbody></table><p id="empty-history">故事从第一步开始。</p></div></section>
+        <details><summary>操作与规则</summary><p>点击棋子再点击目标格，或拖动落子。圆点表示合法目标格；升变可选择后、车、象、马。悔棋退回你的上一个回合。</p><p>将死、逼和、子力不足自动结束。满足五十步或三次重复申和条件时（包括下一步可申和）自动判和。没有整局时钟。</p><p>也可以在下方输入 UCI 着法，使用键盘完成落子。</p><p>棋盘：<a href="https://github.com/shaack/cm-chessboard" target="_blank" rel="noreferrer">cm-chessboard 8.12.7</a>（MIT）；标准棋子来自 Wikimedia Commons（<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noreferrer">CC BY-SA 3.0</a>）。</p></details>
+        <form id="move-form" class="move-form"><label for="uci-move">键盘落子 <span>UCI</span></label><div><input id="uci-move" placeholder="e2e4 / a7a8n" autocomplete="off" maxlength="5" required aria-label="UCI 着法"><button id="submit-move" type="submit" disabled>落子</button></div></form>
+      </aside>
+    </div>
+  </main>
+  <footer><span>ULTRAMARINE CHESS LAB</span><span>在本机运行 · 棋局仅保存在本次会话</span></footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

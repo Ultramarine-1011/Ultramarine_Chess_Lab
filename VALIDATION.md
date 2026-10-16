@@ -78,3 +78,14 @@ Windows Release CTest6/6；3524319的五项跨平台CI成功，见ci-code.json�
 五项全部成功。最终核验集中在docs/validation/r6/final-checks.json：111份Git内研究
 产物与运行时hash一致，八个性能包通过内容核验，默认评估器实际返回Handcrafted。
 随后仅合并验证记录并补充本文和命令索引，不改源码、模型、数据或对局。
+
+## 本地人机对弈 GUI — 2026-10-16
+
+基于最新 main `eff1a6e` 的隔离克隆实现 `python -m ucl.gui`：标准库 HTTP、
+本地 cm-chessboard、python-chess 与现有 UCI。支持执白/黑、合法落子、四种升变、
+悔棋、自动终局、PGN、思考时间和 Handcrafted/Linear v1/v2，未改 C++、GOAL.md、
+实验实现或 R6 研究产物。
+
+真实引擎 GUI 测试13项通过；Release全套7/7。实际浏览器通过页面控件完成37半回合
+将死对局，下载PGN重放一致；升变/取消、悔棋、非法着法、执黑及Linear切换通过。
+[命令、环境、限制与棋谱](docs/validation/gui/README.md)。CI待推送后核对。

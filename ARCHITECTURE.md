@@ -74,6 +74,16 @@ UCI ModelSHA256 → ModelFile → Evaluator=Linear；新模型完全加载成功
 
 ## Python
 
+`ucl.gui` 是独立的本机单用户适配器：标准库 `ThreadingHTTPServer` 服务本地静态资源，
+通过 python-chess `SimpleEngine` 调用现有 UCI，不依赖实验 runner。
+`GameSession` 以 python-chess Board/完整 move_stack 为唯一棋局状态，先校验合法性和终局，
+再提交着法；进程内锁串行化操作，revision 拒绝重复或过期请求。
+浏览器分别提交用户着法和引擎应答请求，因此可在思考期间显示最新棋盘及状态。
+新局在新引擎确认 `evalinfo` 与预期模型哈希一致后替换旧会话；失败不清空当前棋局。
+悔棋退回用户回合；`outcome(claim_draw=True)` 自动处理可申和终局，PGN 保留实际结果。
+棋盘只负责展示/输入，规则始终在服务端；固定版 cm-chessboard 和标准棋子随包分发。
+HTTP 仅绑定 127.0.0.1，检查 Host/Origin，静态文件限制在 web 目录。
+
 - records：版本/主机信息、SHA-256、原子 JSON、探索输出覆盖。
 - match / benchmark：输入校验、资源清理、执行、原始结果；共用引擎配置校验。
 - integrity / report：离线产物与棋谱验证、配对统计；report 内调用验证。

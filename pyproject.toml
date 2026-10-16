@@ -14,3 +14,13 @@ ucl-lab = "ucl.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["python"]
+
+[tool.setuptools.package-data]
+ucl = ["web/*.html", "web/*.css", "web/*.js", "web/vendor/cm-chessboard/LICENSE",
+       "web/vendor/cm-chessboard/src/*.js", "web/vendor/cm-chessboard/src/lib/*.js",
+       "web/vendor/cm-chessboard/src/model/*.js", "web/vendor/cm-chessboard/src/view/*.js",
+       "web/vendor/cm-chessboard/src/extensions/markers/*.js",
+       "web/vendor/cm-chessboard/src/extensions/promotion-dialog/*.js",
+       "web/vendor/cm-chessboard/assets/*.css", "web/vendor/cm-chessboard/assets/pieces/*.svg",
+       "web/vendor/cm-chessboard/assets/extensions/markers/*",
+       "web/vendor/cm-chessboard/assets/extensions/promotion-dialog/*.css"]

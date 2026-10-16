@@ -51,6 +51,9 @@ if(BUILD_TESTING)
   add_test(NAME uci COMMAND ${Python3_EXECUTABLE} ${CMAKE_SOURCE_DIR}/tests/test_uci.py $<TARGET_FILE:ucl>)
   add_test(NAME experiments COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tests -p test_experiments.py)
   add_test(NAME research COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tests -p test_research.py)
+  add_test(NAME gui COMMAND ${Python3_EXECUTABLE} -m unittest discover -s tests -p test_gui.py)
+  set_tests_properties(gui PROPERTIES WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    ENVIRONMENT "PYTHONPATH=${CMAKE_SOURCE_DIR}/python;UCL_ENGINE=$<TARGET_FILE:ucl>" TIMEOUT 180)
   set_tests_properties(experiments research PROPERTIES WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
     ENVIRONMENT "PYTHONPATH=${CMAKE_SOURCE_DIR}/python")
   set_property(TEST research APPEND PROPERTY ENVIRONMENT "UCL_ENGINE=$<TARGET_FILE:ucl>")
