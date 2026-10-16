@@ -1,0 +1,249 @@
+{
+  "splits": {
+    "train": {
+      "games": 2086,
+      "positions": 14000,
+      "unique_players": 3498,
+      "utc_min": "2017.12.31 23:00:01",
+      "utc_max": "2018.03.01 00:12:44",
+      "dates": {
+        "2018.03.01": 710,
+        "2017.12.31": 700,
+        "2018.01.31": 676
+      },
+      "months": {
+        "2018-03": 710,
+        "2018-01": 700,
+        "2018-02": 676
+      },
+      "eco_top10": [
+        [
+          "C00",
+          91
+        ],
+        [
+          "A00",
+          80
+        ],
+        [
+          "B01",
+          76
+        ],
+        [
+          "A40",
+          72
+        ],
+        [
+          "D00",
+          69
+        ],
+        [
+          "C41",
+          61
+        ],
+        [
+          "C50",
+          61
+        ],
+        [
+          "B00",
+          58
+        ],
+        [
+          "D02",
+          50
+        ],
+        [
+          "B20",
+          43
+        ]
+      ],
+      "eco_hhi": 0.01575172657234598,
+      "game_results": {
+        "0-1": 948,
+        "1-0": 1031,
+        "1/2-1/2": 107
+      },
+      "position_labels": {
+        "1.0": 6775,
+        "0.0": 6410,
+        "0.5": 815
+      },
+      "side_to_move": {
+        "w": 7393,
+        "b": 6607
+      },
+      "material_phase": {
+        "opening_17_24": 7840,
+        "middle_9_16": 3327,
+        "endgame_0_8": 2833
+      }
+    },
+    "validation": {
+      "games": 523,
+      "positions": 3499,
+      "unique_players": 1006,
+      "utc_min": "2017.12.31 23:00:02",
+      "utc_max": "2018.03.01 00:12:37",
+      "dates": {
+        "2018.01.31": 195,
+        "2017.12.31": 165,
+        "2018.03.01": 163
+      },
+      "months": {
+        "2018-02": 195,
+        "2018-01": 165,
+        "2018-03": 163
+      },
+      "eco_top10": [
+        [
+          "B01",
+          25
+        ],
+        [
+          "D00",
+          22
+        ],
+        [
+          "A40",
+          19
+        ],
+        [
+          "C00",
+          18
+        ],
+        [
+          "C50",
+          16
+        ],
+        [
+          "A00",
+          16
+        ],
+        [
+          "B00",
+          15
+        ],
+        [
+          "B21",
+          12
+        ],
+        [
+          "C41",
+          11
+        ],
+        [
+          "C02",
+          11
+        ]
+      ],
+      "eco_hhi": 0.01637486336000936,
+      "game_results": {
+        "1/2-1/2": 27,
+        "1-0": 260,
+        "0-1": 236
+      },
+      "position_labels": {
+        "1.0": 1716,
+        "0.0": 1588,
+        "0.5": 195
+      },
+      "side_to_move": {
+        "w": 1831,
+        "b": 1668
+      },
+      "material_phase": {
+        "opening_17_24": 1933,
+        "middle_9_16": 817,
+        "endgame_0_8": 749
+      }
+    },
+    "test": {
+      "games": 992,
+      "positions": 6499,
+      "unique_players": 1746,
+      "utc_min": "2018.03.31 22:00:00",
+      "utc_max": "2018.03.31 22:08:21",
+      "dates": {
+        "2018.03.31": 992
+      },
+      "months": {
+        "2018-04": 992
+      },
+      "eco_top10": [
+        [
+          "B01",
+          56
+        ],
+        [
+          "A00",
+          40
+        ],
+        [
+          "C41",
+          33
+        ],
+        [
+          "D00",
+          33
+        ],
+        [
+          "B00",
+          33
+        ],
+        [
+          "A40",
+          32
+        ],
+        [
+          "C00",
+          32
+        ],
+        [
+          "B20",
+          27
+        ],
+        [
+          "B21",
+          19
+        ],
+        [
+          "A45",
+          17
+        ]
+      ],
+      "eco_hhi": 0.01621032778355879,
+      "game_results": {
+        "1-0": 476,
+        "0-1": 462,
+        "1/2-1/2": 54
+      },
+      "position_labels": {
+        "1.0": 3091,
+        "0.0": 3007,
+        "0.5": 401
+      },
+      "side_to_move": {
+        "w": 3444,
+        "b": 3055
+      },
+      "material_phase": {
+        "opening_17_24": 3743,
+        "middle_9_16": 1481,
+        "endgame_0_8": 1275
+      }
+    }
+  },
+  "player_overlap": {
+    "train:validation": 322,
+    "train:test": 125,
+    "validation:test": 38
+  },
+  "strict_temporal_separation": true,
+  "distinct_dates": 4,
+  "limitations": [
+    "Monthly convenience prefixes; not random within-month sampling.",
+    "Repeated players induce cross-game dependence; game bootstrap is conditional/descriptive.",
+    "Only two future source windows; no precise inference over unseen months."
+  ]
+}

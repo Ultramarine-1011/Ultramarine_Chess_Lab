@@ -6,3 +6,6 @@
 experiments/results/r5-*/** -text
 docs/validation/r5/*.json -text
 docs/validation/r5/*.log -text
+# R6 manifests identify the exact produced research bytes.
+experiments/results/r6-*/** -text
+docs/validation/r6/*.log -text

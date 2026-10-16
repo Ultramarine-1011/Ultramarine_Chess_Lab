@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "byte_identical": {
+    "G.txt": true,
+    "M05.txt": true,
+    "M08.txt": true,
+    "T.txt": true
+  }
+}

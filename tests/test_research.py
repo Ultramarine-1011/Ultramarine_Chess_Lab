@@ -9,6 +9,50 @@ from ucl.dataset import prepare, position_key, split_for
 from ucl.report import CheckedGameBuilder, check_game_result
 
 
+class R6TargetTests(unittest.TestCase):
+    def test_teacher_perspectives_and_mate(self):
+        import chess.engine
+        from ucl.r6_data import teacher_record
+        for turn in chess.COLORS:
+            b = chess.Board()
+            b.turn = turn
+            r = teacher_record(b, {'score': chess.engine.PovScore(chess.engine.Cp(200), turn)})
+            self.assertEqual(r['white_cp'], 200 if turn else -200)
+            self.assertEqual(r['stm_cp'], 200)
+            self.assertGreater(r['target'] if turn else 1-r['target'], .5)
+            m = teacher_record(b, {'score': chess.engine.PovScore(chess.engine.Mate(2), turn)})
+            self.assertIsNone(m['white_cp'])
+            self.assertEqual(m['target'], float(turn))
+        with self.assertRaises(ValueError):
+            teacher_record(chess.Board(), {'score': chess.engine.PovScore(chess.engine.Cp(200), True), 'lowerbound': True})
+        with self.assertRaises(ValueError):
+            teacher_record(chess.Board(), {})
+
+    def test_terminal_and_black_root_ranking(self):
+        from ucl.r6_data import teacher_record
+        from ucl.r6_training import rank_values, rank_metrics
+        b = chess.Board('7k/6Q1/5K2/8/8/8/8/8 b - - 0 1')
+        t = teacher_record(b)
+        self.assertEqual((t['kind'], t['target'], t['white_order']), ('terminal', 1., 100000))
+        children = [{'root_id': 'black', 'game_id': 'g', 'root_turn': False,
+                     'move': m, 'features': [cp], 'teacher_evaluation': {'white_order': cp, 'kind': 'cp'}}
+                    for m, cp in [('a7a6', 100), ('b7b6', -200), ('c7c6', -200)]]
+        values = rank_values(children, [1.])
+        self.assertEqual(values[0]['selected_move'], 'b7b6')
+        self.assertEqual(rank_metrics(values)['primary_accuracy'], 1.)
+        self.assertEqual(rank_metrics(rank_values(children, [0.]))['primary_accuracy'], .5)
+
+    def test_temporal_split_and_child_candidate_set(self):
+        from ucl.r6_data import ranking_rows, split
+        self.assertEqual(split({'UCLSourceMonth': '2018-04'}, 'x'), 'test')
+        b = chess.Board()
+        roots = [{'position_id': 'p', 'game_id': 'g', 'split': 'validation', 'fen': b.fen()}]
+        children = ranking_rows(roots, 'validation')
+        self.assertEqual({r['move'] for r in children}, {m.uci() for m in b.legal_moves})
+        self.assertTrue(all(chess.Board(r['fen']).turn == chess.BLACK for r in children))
+        self.assertEqual(ranking_rows(roots, 'test'), [])
+
+
 class DatasetTests(unittest.TestCase):
     def test_reproducibility_and_dedup(self):
         text = (Path(__file__).parent / 'fixtures/data-games.pgn').read_text()

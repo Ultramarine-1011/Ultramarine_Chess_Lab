@@ -1,0 +1,14 @@
+{
+  "sha256": "5f95eaea0d4eb697381989187ce6eb4d6ad59283c34421765ecc73cdb09ba766",
+  "requested_nodes": 20000,
+  "options": {
+    "Threads": 1,
+    "Hash": 16,
+    "Skill Level": 20,
+    "UCI_LimitStrength": false,
+    "UCI_ShowWDL": true,
+    "SyzygyPath": ""
+  },
+  "perspective": "white",
+  "cold_hash": true
+}

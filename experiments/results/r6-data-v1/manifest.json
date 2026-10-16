@@ -1,0 +1,219 @@
+{
+  "kind": "r6-dataset",
+  "seed": 20261016,
+  "sources": [
+    {
+      "month": "2018-01",
+      "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2018-01.pgn.zst",
+      "license": "CC0-1.0",
+      "license_url": "https://database.lichess.org/",
+      "acquired_at": "2026-10-16T10:37:24.948286+00:00",
+      "range": [
+        0,
+        3145727
+      ],
+      "headers": {
+        "Server": "nginx",
+        "Date": "Fri, 16 Oct 2026 10:37:21 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "3145728",
+        "Last-Modified": "Sat, 05 Nov 2022 01:54:38 GMT",
+        "Connection": "close",
+        "ETag": "\"6365c25e-146294f09\"",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-Frame-Options": "DENY",
+        "Content-Range": "bytes 0-3145727/5472079625"
+      },
+      "bytes": 3145728,
+      "sha256": "87cebc7feabfca6553a449bfd39fff539955784bd260f904001dc804ffff610d"
+    },
+    {
+      "month": "2018-02",
+      "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2018-02.pgn.zst",
+      "license": "CC0-1.0",
+      "license_url": "https://database.lichess.org/",
+      "acquired_at": "2026-10-16T10:37:32.920342+00:00",
+      "range": [
+        0,
+        3145727
+      ],
+      "headers": {
+        "Server": "nginx",
+        "Date": "Fri, 16 Oct 2026 10:37:26 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "3145728",
+        "Last-Modified": "Sat, 05 Nov 2022 02:42:41 GMT",
+        "Connection": "close",
+        "ETag": "\"6365cda1-13ae1cd13\"",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-Frame-Options": "DENY",
+        "Content-Range": "bytes 0-3145727/5282843923"
+      },
+      "bytes": 3145728,
+      "sha256": "a98a2861a5cf86ae3e58d46b38f60d535f5ee314b7898266e7570bc114275dba"
+    },
+    {
+      "month": "2018-03",
+      "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2018-03.pgn.zst",
+      "license": "CC0-1.0",
+      "license_url": "https://database.lichess.org/",
+      "acquired_at": "2026-10-16T10:37:41.847550+00:00",
+      "range": [
+        0,
+        3145727
+      ],
+      "headers": {
+        "Server": "nginx",
+        "Date": "Fri, 16 Oct 2026 10:37:35 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "3145728",
+        "Last-Modified": "Tue, 05 Nov 2024 23:09:00 GMT",
+        "Connection": "close",
+        "ETag": "\"672aa58c-187755e6a\"",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-Frame-Options": "DENY",
+        "Content-Range": "bytes 0-3145727/6567583338"
+      },
+      "bytes": 3145728,
+      "sha256": "58b1a00f68f6de19f58abb1c2efec77cb248526ca2585dbfbbed369185f2f812"
+    },
+    {
+      "month": "2018-04",
+      "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2018-04.pgn.zst",
+      "license": "CC0-1.0",
+      "license_url": "https://database.lichess.org/",
+      "acquired_at": "2026-10-16T10:37:48.909367+00:00",
+      "range": [
+        0,
+        3145727
+      ],
+      "headers": {
+        "Server": "nginx",
+        "Date": "Fri, 16 Oct 2026 10:37:43 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "3145728",
+        "Last-Modified": "Sat, 05 Nov 2022 04:32:23 GMT",
+        "Connection": "close",
+        "ETag": "\"6365e757-166987d07\"",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-Frame-Options": "DENY",
+        "Content-Range": "bytes 0-3145727/6016236807"
+      },
+      "bytes": 3145728,
+      "sha256": "3457c2b5b8d93cfa4aaf7bbd8c567ececb8bd4fa251924bb47f9e619b2d2dddd"
+    },
+    {
+      "month": "2018-05",
+      "url": "https://database.lichess.org/standard/lichess_db_standard_rated_2018-05.pgn.zst",
+      "license": "CC0-1.0",
+      "license_url": "https://database.lichess.org/",
+      "acquired_at": "2026-10-16T10:37:56.505168+00:00",
+      "range": [
+        0,
+        3145727
+      ],
+      "headers": {
+        "Server": "nginx",
+        "Date": "Fri, 16 Oct 2026 10:37:51 GMT",
+        "Content-Type": "application/octet-stream",
+        "Content-Length": "3145728",
+        "Last-Modified": "Sat, 05 Nov 2022 05:31:42 GMT",
+        "Connection": "close",
+        "ETag": "\"6365f53e-18131f286\"",
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-Frame-Options": "DENY",
+        "Content-Range": "bytes 0-3145727/6462501510"
+      },
+      "bytes": 3145728,
+      "sha256": "2f0c49a1e9f4061c7229c1845ef5aab2e5aea40da672241d941a919b81a4973a"
+    }
+  ],
+  "caps": {
+    "train": 14000,
+    "validation": 3500,
+    "test": 6500
+  },
+  "counts": {
+    "source_games": 16000,
+    "reject:termination": 5705,
+    "reject:rating": 4349,
+    "reject:short_game": 332,
+    "reject:time_control": 1695,
+    "reject:invalid literal for int() with base 10: '-'": 18,
+    "reject:invalid or unfinished PGN": 4,
+    "cross_split_position_removed": 57,
+    "duplicate_position_removed": 12,
+    "accepted_games": 3897,
+    "positions_before_dedup": 26090,
+    "positions": 26021,
+    "positions:train": 15479,
+    "positions:validation": 4023,
+    "positions:test": 6519,
+    "r6_retained": 23998,
+    "r6_games": 3601
+  },
+  "opening_counts": {
+    "source_games": 4000,
+    "reject:termination": 1376,
+    "reject:rating": 1147,
+    "reject:time_control": 432,
+    "reject:short_game": 85,
+    "reject:invalid or unfinished PGN": 5,
+    "reject:invalid literal for int() with base 10: '-'": 5,
+    "cross_split_position_removed": 2,
+    "duplicate_position_removed": 2,
+    "accepted_games": 950,
+    "positions_before_dedup": 6293,
+    "positions": 6289,
+    "positions:train": 4401,
+    "positions:validation": 962,
+    "positions:test": 926
+  },
+  "code": {
+    "revision": "e3888f3a472fd5adf6bf5168e750695fd3e26dc6",
+    "dirty": true
+  },
+  "protocol_sha256": "61b4032375c7ff5129a8e03c0d6fb91f9dbb0e5bd635840a21311c1b9b884197",
+  "files": {
+    "diagnostics.json": {
+      "sha256": "62e47234847021c28c68770d6ac05e6a19af8ff4bb715939427933365b7c69d7",
+      "bytes": 4388
+    },
+    "openings.epd": {
+      "sha256": "6624a681ed03d31506ba12065073c6aabc2184ba75ea9397c95b93108884381e",
+      "bytes": 15120
+    },
+    "openings.json": {
+      "sha256": "66ac4adb8e4a70a57a2191ee1ca2c7aab4969c898e4b88f2ba16f67881b33500",
+      "bytes": 145105
+    },
+    "positions.jsonl.gz": {
+      "sha256": "2723f8c775440507b79045592965da7a2faea5787d49968bfda135bf6601603c",
+      "bytes": 1808624
+    },
+    "source-2018-01.pgn.gz": {
+      "sha256": "e2f2545b0160c1ac7f4a3b79c9de07a9f3fdb9e0a93bb9514dfd9517d7c4f53f",
+      "bytes": 1681132
+    },
+    "source-2018-02.pgn.gz": {
+      "sha256": "a7775f5abb31b92bf5e8c2cb03ebe50060a251d3013f7daf991534f423502f6e",
+      "bytes": 1725309
+    },
+    "source-2018-03.pgn.gz": {
+      "sha256": "0ade7e63f97f83c17fbb22c4bae3282e0a2673ab4b7a28a31302948703ce3960",
+      "bytes": 1872490
+    },
+    "source-2018-04.pgn.gz": {
+      "sha256": "b1569192770095cf13277e27556134ea23b5a7c7a0e7669cf278ab5dfce25295",
+      "bytes": 1716726
+    },
+    "source-2018-05.pgn.gz": {
+      "sha256": "5f9021ac9378823f5d79a270f582d07c111296258193225fffe62f0850406499",
+      "bytes": 1697603
+    },
+    "splits.json": {
+      "sha256": "bc91cfeae19b7a5e12502b82e1bbf6bd117f361aee42813025e2afae44bcff43",
+      "bytes": 1145204
+    }
+  }
+}

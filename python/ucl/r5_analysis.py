@@ -14,7 +14,7 @@ import chess.pgn
 
 from .integrity import validate_bundle
 from .r4_results import analyze as analyze_r4, elo_equivalent
-from .r5_study import ROOT, MODEL_SHA, SEED
+from .r5_study import ROOT, SEED
 from .records import git_state, sha256, write_json
 from .report import CheckedGameBuilder, check_game_result
 
@@ -72,7 +72,7 @@ def node_stop_reason(stats, board):
     return None
 
 
-def analyze_group(group, directory, output):
+def analyze_group(group, directory, output, *, node_group='B'):
     directory = Path(directory)
     record = validate_bundle(directory/'record.json', json.loads((ROOT/'schemas/experiment-v1.schema.json').read_text()))
     names = [e['name'] for e in record['engines']]
@@ -82,7 +82,7 @@ def analyze_group(group, directory, output):
             actual = actual_options[e['name']].get(key)
             expected = str(value).lower() if isinstance(value,bool) else str(value)
             if key=='ModelFile':
-                if actual is None or Path(actual.replace('\\','/')).name!='model-'+MODEL_SHA+'.txt':
+                if actual is None or Path(actual.replace('\\','/')).name!='model-'+str(e['options']['ModelSHA256'])+'.txt':
                     raise ValueError('runtime model path mismatch')
             elif actual!=expected: raise ValueError('runtime option mismatch: '+key)
     openings = (directory/'openings.epd').read_text().splitlines()
@@ -120,7 +120,7 @@ def analyze_group(group, directory, output):
                 for move in q['pv']: pv_board.push_uci(move)
                 if q['pv'] and q['pv'][0]!=q['move']: raise ValueError('PV mismatch')
                 stats = q['stats']
-                if group=='B':
+                if group==node_group:
                     parts=q['go'].split(); values=dict(zip(parts[1::2],parts[2::2]))
                     if values.get('nodes')!='50000' or stats['nodes']>50000:
                         raise ValueError('fixed-node command/counter mismatch')

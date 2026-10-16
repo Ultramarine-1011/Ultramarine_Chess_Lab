@@ -1,0 +1,15 @@
+{
+  "release": "https://github.com/official-stockfish/Stockfish/releases/tag/sf_17.1",
+  "tag": "sf_17.1",
+  "published_at": "2025-03-30T12:13:16Z",
+  "asset": {
+    "name": "stockfish-windows-x86-64-avx2.zip",
+    "url": "https://github.com/official-stockfish/Stockfish/releases/download/sf_17.1/stockfish-windows-x86-64-avx2.zip",
+    "bytes": 65443094,
+    "sha256": "92a77f8d8116b4331696eeb7b232bd03db30d6641a6ce1be1759478b8931d28b"
+  },
+  "executable_sha256": "5f95eaea0d4eb697381989187ce6eb4d6ad59283c34421765ecc73cdb09ba766",
+  "source": "https://github.com/official-stockfish/Stockfish/tree/sf_17.1",
+  "license": "GPL-3.0",
+  "binary_in_git": false
+}

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "positions": 256,
+  "features": "all dataset C++/Python exact",
+  "perspectives": {
+    "w": 139,
+    "b": 117
+  },
+  "repeated_queries_exact": 8,
+  "fits_and_deployment": {
+    "G": {
+      "success": true,
+      "lambda": 0.01,
+      "model_sha256": "1d0bc7e6e8a7f5368ab03e91d38cd62256daa0adc43c21ab788adbfc3c52c152"
+    },
+    "T": {
+      "success": true,
+      "lambda": 0.01,
+      "model_sha256": "5f00732800a9d0572a332d3b1234a2438cefcff70d1266c8f98d06594978acc5"
+    },
+    "M": {
+      "success": true,
+      "lambda": 0.01,
+      "model_sha256": "605864f9cfeddf81b760465eb3c459d40f7ca9f3fdeae8e437ba1a75f512a2b2"
+    }
+  },
+  "seconds": 3.0630000000819564,
+  "formal_positions": 23998,
+  "formal_decision": "retain registered caps, 20000 nodes and four workers",
+  "pilot_scope": "training split only; optimizer/deployment smoke, no model selection"
+}

@@ -1,0 +1,24 @@
+2018-01: bounded source retained
+2018-02: bounded source retained
+2018-03: bounded source retained
+2018-04: bounded source retained
+2018-05: bounded source retained
+{
+  "source_games": 16000,
+  "reject:termination": 5705,
+  "reject:rating": 4349,
+  "reject:short_game": 332,
+  "reject:time_control": 1695,
+  "reject:invalid literal for int() with base 10: '-'": 18,
+  "reject:invalid or unfinished PGN": 4,
+  "cross_split_position_removed": 57,
+  "duplicate_position_removed": 12,
+  "accepted_games": 3897,
+  "positions_before_dedup": 26090,
+  "positions": 26021,
+  "positions:train": 15479,
+  "positions:validation": 4023,
+  "positions:test": 6519,
+  "r6_retained": 23998,
+  "r6_games": 3601
+}
