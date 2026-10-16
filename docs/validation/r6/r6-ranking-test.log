@@ -1,0 +1,8 @@
+labels 512/3887; 5.3s
+labels 1024/3887; 10.4s
+labels 1536/3887; 15.4s
+labels 2048/3887; 22.8s
+labels 2560/3887; 26.3s
+labels 3072/3887; 31.3s
+labels 3584/3887; 36.6s
+completed 3887 rows

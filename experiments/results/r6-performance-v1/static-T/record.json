@@ -1,0 +1,806 @@
+{
+  "schema_version": 1,
+  "id": "9e9e5de9-db61-4c8d-8644-d6ad0ccbd564",
+  "kind": "benchmark",
+  "mode": "formal",
+  "status": "completed",
+  "started_at": "2026-10-16T10:52:43.754524+00:00",
+  "finished_at": "2026-10-16T10:52:45.184317+00:00",
+  "code": {
+    "revision": "1ca065aed204607b683d9727afdff714d6977314",
+    "dirty": true
+  },
+  "parameters": {
+    "version": 1,
+    "seed": 20261016,
+    "suite": "experiments/positions/r2-v1.json",
+    "repeats": 1,
+    "limits": [
+      {
+        "depth": 1
+      }
+    ],
+    "static_evaluation": true,
+    "engines": [
+      {
+        "name": "Handcrafted",
+        "path": ".tools/r6-engine/ucl.exe",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+        "ucl_build_info": true,
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Handcrafted"
+        }
+      },
+      {
+        "name": "T",
+        "path": ".tools/r6-engine/ucl.exe",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+        "ucl_build_info": true,
+        "options": {
+          "Quiescence": true,
+          "UseTT": true,
+          "PVOrdering": true,
+          "Hash": 16,
+          "MoveOverhead": 10,
+          "Evaluator": "Linear",
+          "ModelFile": "experiments/results/r6-models-v1/T.txt",
+          "ModelSHA256": "188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c"
+        }
+      }
+    ]
+  },
+  "seed": 20261016,
+  "hardware": {
+    "os": "Windows-11-10.0.26100-SP0",
+    "architecture": "AMD64",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpus": 32,
+    "memory_bytes": 33517670400,
+    "python": "3.12.14",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "tools": {
+    "static_evaluation": {
+      "command": [
+        "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+        "--eval-benchmark",
+        "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\experiments\\results\\r6-performance-v1\\static-T\\model-188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c.txt",
+        "188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c"
+      ],
+      "summary": {
+        "positions": [
+          {
+            "position": "start",
+            "handcrafted_ns_per_call": 71.789,
+            "linear_ns_per_call": 158.696
+          },
+          {
+            "position": "kiwipete",
+            "handcrafted_ns_per_call": 70.895,
+            "linear_ns_per_call": 157.932
+          },
+          {
+            "position": "rook-ending",
+            "handcrafted_ns_per_call": 50.188,
+            "linear_ns_per_call": 119.516
+          },
+          {
+            "position": "poisoned-pawn",
+            "handcrafted_ns_per_call": 44.683,
+            "linear_ns_per_call": 99.667
+          },
+          {
+            "position": "mate-one",
+            "handcrafted_ns_per_call": 44.747,
+            "linear_ns_per_call": 93.414
+          },
+          {
+            "position": "promotion-mate",
+            "handcrafted_ns_per_call": 45.644,
+            "linear_ns_per_call": 95.504
+          },
+          {
+            "position": "check-evasion",
+            "handcrafted_ns_per_call": 46.421,
+            "linear_ns_per_call": 89.866
+          },
+          {
+            "position": "en-passant",
+            "handcrafted_ns_per_call": 46.814,
+            "linear_ns_per_call": 97.556
+          },
+          {
+            "position": "near-fifty",
+            "handcrafted_ns_per_call": 48.463,
+            "linear_ns_per_call": 125.079
+          },
+          {
+            "position": "stalemate",
+            "handcrafted_ns_per_call": 46.574,
+            "linear_ns_per_call": 93.718
+          }
+        ],
+        "mean_position_median_handcrafted_ns": 51.6218,
+        "mean_position_median_linear_ns": 113.09479999999999
+      }
+    }
+  },
+  "engines": [
+    {
+      "name": "Handcrafted",
+      "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Handcrafted"
+      },
+      "sha256": "5771d578dccf628a2d9bd9ee08cbee28fccb583e366313f56ac22e650fdf2931",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "dirty": false,
+        "compiler": "MSVC 19.51.36260.0",
+        "build_type": "Release",
+        "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "handcrafted-v1",
+        "model_sha256": null
+      }
+    },
+    {
+      "name": "T",
+      "path": "C:\\Ultramarine_Chess_Lab\\Ultramarine_Chess_Lab\\.tools\\r6-engine\\ucl.exe",
+      "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+      "build": "Windows CMake Release MSVC /O2 /Ob2 /DNDEBUG, one search thread",
+      "options": {
+        "Quiescence": true,
+        "UseTT": true,
+        "PVOrdering": true,
+        "Hash": 16,
+        "MoveOverhead": 10,
+        "Evaluator": "Linear",
+        "ModelFile": "experiments/results/r6-models-v1/T.txt",
+        "ModelSHA256": "188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c"
+      },
+      "sha256": "5771d578dccf628a2d9bd9ee08cbee28fccb583e366313f56ac22e650fdf2931",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+        "dirty": false,
+        "compiler": "MSVC 19.51.36260.0",
+        "build_type": "Release",
+        "flags": "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG"
+      },
+      "evaluation": {
+        "evaluator": "linear-v2",
+        "model_sha256": "188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c"
+      }
+    }
+  ],
+  "artifacts": {
+    "benchmark-config.json": {
+      "sha256": "81d2c8f39c84338db3d696671a1d69ea4a4b571ea6468602e68466f98a4aff9e",
+      "bytes": 1231
+    },
+    "model-188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c.txt": {
+      "sha256": "188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c",
+      "bytes": 528
+    },
+    "positions.json": {
+      "sha256": "2ebd7564549a2bb470ac65603e475a59c136af55b1d74649754bcbcfa583d205",
+      "bytes": 1344
+    },
+    "static-evaluation.json": {
+      "sha256": "554d9f3d872ac96e97ffa1db11b8152908bc8ae4967ea5060e96ee86114b315d",
+      "bytes": 17657
+    },
+    "uci.log": {
+      "sha256": "92cd0ebb4606912d5c14f00b97265e042495abff225ec42a49e35d2581a05987",
+      "bytes": 14508
+    }
+  },
+  "error": null,
+  "rows": [
+    {
+      "engine": "T",
+      "position": "start",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 42,
+      "pv": [
+        "b1c3"
+      ],
+      "move": "b1c3",
+      "nodes": 21,
+      "wall_ns": 4668000,
+      "elapsed_us": 2458,
+      "counter_scope": "final",
+      "qnodes": 20,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 8543.531326281529,
+      "tactical_pass": null
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "start",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 12,
+      "pv": [
+        "b1c3"
+      ],
+      "move": "b1c3",
+      "nodes": 21,
+      "wall_ns": 4644800,
+      "elapsed_us": 2300,
+      "counter_scope": "final",
+      "qnodes": 20,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 9130.434782608696,
+      "tactical_pass": null
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "kiwipete",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 34,
+      "pv": [
+        "e2a6",
+        "b4c3",
+        "d2c3",
+        "e6d5",
+        "g2h3",
+        "f6e4"
+      ],
+      "move": "e2a6",
+      "nodes": 3045,
+      "wall_ns": 6354700,
+      "elapsed_us": 4255,
+      "counter_scope": "final",
+      "qnodes": 3044,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 715628.6721504113,
+      "tactical_pass": null
+    },
+    {
+      "engine": "T",
+      "position": "kiwipete",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 157,
+      "pv": [
+        "e2a6",
+        "b4c3",
+        "d2c3",
+        "h3g2",
+        "f3g2",
+        "e6d5"
+      ],
+      "move": "e2a6",
+      "nodes": 639,
+      "wall_ns": 4042200,
+      "elapsed_us": 2723,
+      "counter_scope": "final",
+      "qnodes": 638,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 234667.64597869996,
+      "tactical_pass": null
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "rook-ending",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 110,
+      "pv": [
+        "b4f4",
+        "h4g3"
+      ],
+      "move": "b4f4",
+      "nodes": 37,
+      "wall_ns": 4231900,
+      "elapsed_us": 2544,
+      "counter_scope": "final",
+      "qnodes": 36,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 14544.025157232705,
+      "tactical_pass": null
+    },
+    {
+      "engine": "T",
+      "position": "rook-ending",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 115,
+      "pv": [
+        "b4f4",
+        "h4g5"
+      ],
+      "move": "b4f4",
+      "nodes": 20,
+      "wall_ns": 4296800,
+      "elapsed_us": 2408,
+      "counter_scope": "final",
+      "qnodes": 19,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 8305.647840531561,
+      "tactical_pass": null
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "poisoned-pawn",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 290,
+      "pv": [
+        "e1f1"
+      ],
+      "move": "e1f1",
+      "nodes": 35,
+      "wall_ns": 3427100,
+      "elapsed_us": 2205,
+      "counter_scope": "final",
+      "qnodes": 34,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 15873.015873015873,
+      "tactical_pass": true
+    },
+    {
+      "engine": "T",
+      "position": "poisoned-pawn",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 262,
+      "pv": [
+        "d1f3"
+      ],
+      "move": "d1f3",
+      "nodes": 47,
+      "wall_ns": 4350700,
+      "elapsed_us": 2526,
+      "counter_scope": "final",
+      "qnodes": 46,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 18606.492478226446,
+      "tactical_pass": true
+    },
+    {
+      "engine": "T",
+      "position": "mate-one",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 29999,
+      "pv": [
+        "f7g7"
+      ],
+      "move": "f7g7",
+      "nodes": 29,
+      "wall_ns": 3973700,
+      "elapsed_us": 2263,
+      "counter_scope": "final",
+      "qnodes": 28,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 12814.847547503314,
+      "tactical_pass": true
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "mate-one",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 29999,
+      "pv": [
+        "f7g7"
+      ],
+      "move": "f7g7",
+      "nodes": 29,
+      "wall_ns": 4007400,
+      "elapsed_us": 2176,
+      "counter_scope": "final",
+      "qnodes": 28,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 13327.20588235294,
+      "tactical_pass": true
+    },
+    {
+      "engine": "T",
+      "position": "promotion-mate",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 29999,
+      "pv": [
+        "e7e8q"
+      ],
+      "move": "e7e8q",
+      "nodes": 11,
+      "wall_ns": 3689600,
+      "elapsed_us": 2275,
+      "counter_scope": "final",
+      "qnodes": 10,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 4835.1648351648355,
+      "tactical_pass": true
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "promotion-mate",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 29999,
+      "pv": [
+        "e7e8q"
+      ],
+      "move": "e7e8q",
+      "nodes": 11,
+      "wall_ns": 4779400,
+      "elapsed_us": 2411,
+      "counter_scope": "final",
+      "qnodes": 10,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 4562.422231439236,
+      "tactical_pass": true
+    },
+    {
+      "engine": "T",
+      "position": "check-evasion",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": -935,
+      "pv": [
+        "a1b1"
+      ],
+      "move": "a1b1",
+      "nodes": 2,
+      "wall_ns": 4628900,
+      "elapsed_us": 2644,
+      "counter_scope": "final",
+      "qnodes": 1,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 756.4296520423601,
+      "tactical_pass": true
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "check-evasion",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": -1000,
+      "pv": [
+        "a1b1"
+      ],
+      "move": "a1b1",
+      "nodes": 2,
+      "wall_ns": 3945200,
+      "elapsed_us": 2394,
+      "counter_scope": "final",
+      "qnodes": 1,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 835.421888053467,
+      "tactical_pass": true
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "en-passant",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 120,
+      "pv": [
+        "e5d6"
+      ],
+      "move": "e5d6",
+      "nodes": 6,
+      "wall_ns": 3839900,
+      "elapsed_us": 2319,
+      "counter_scope": "final",
+      "qnodes": 5,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 2587.3221216041397,
+      "tactical_pass": true
+    },
+    {
+      "engine": "T",
+      "position": "en-passant",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 165,
+      "pv": [
+        "e5d6"
+      ],
+      "move": "e5d6",
+      "nodes": 6,
+      "wall_ns": 3772100,
+      "elapsed_us": 2354,
+      "counter_scope": "final",
+      "qnodes": 5,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 2548.8530161427357,
+      "tactical_pass": true
+    },
+    {
+      "engine": "T",
+      "position": "near-fifty",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 115,
+      "pv": [
+        "b4f4",
+        "h4g5"
+      ],
+      "move": "b4f4",
+      "nodes": 20,
+      "wall_ns": 3900700,
+      "elapsed_us": 2346,
+      "counter_scope": "final",
+      "qnodes": 19,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 8525.149190110827,
+      "tactical_pass": null
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "near-fifty",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 1,
+      "score_cp": 110,
+      "pv": [
+        "b4f4",
+        "h4g3"
+      ],
+      "move": "b4f4",
+      "nodes": 37,
+      "wall_ns": 3524200,
+      "elapsed_us": 2270,
+      "counter_scope": "final",
+      "qnodes": 36,
+      "tt_probes": 1,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 1,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 16299.55947136564,
+      "tactical_pass": null
+    },
+    {
+      "engine": "T",
+      "position": "stalemate",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 0,
+      "score_cp": 0,
+      "pv": [],
+      "move": null,
+      "nodes": 0,
+      "wall_ns": 3910400,
+      "elapsed_us": 0,
+      "counter_scope": "final",
+      "qnodes": 0,
+      "tt_probes": 0,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 0,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 0.0,
+      "tactical_pass": true
+    },
+    {
+      "engine": "Handcrafted",
+      "position": "stalemate",
+      "repeat": 0,
+      "limit": {
+        "depth": 1
+      },
+      "depth": 0,
+      "score_cp": 0,
+      "pv": [],
+      "move": null,
+      "nodes": 0,
+      "wall_ns": 4257400,
+      "elapsed_us": 0,
+      "counter_scope": "final",
+      "qnodes": 0,
+      "tt_probes": 0,
+      "tt_hits": 0,
+      "tt_cutoffs": 0,
+      "tt_stores": 0,
+      "pv_order_hits": 0,
+      "tt_order_hits": 0,
+      "nps": 0.0,
+      "tactical_pass": true
+    }
+  ],
+  "summary": [
+    {
+      "engine": "Handcrafted",
+      "limit": {
+        "depth": 1
+      },
+      "positions": 10,
+      "median_nodes_sum": 3223,
+      "median_wall_ms_sum": 43.012,
+      "wall_nps": 74932.57695526829,
+      "tactical_passes": 6,
+      "tactical_total": 6,
+      "depth_min": 0,
+      "depth_max": 1,
+      "tt_hits_sum": 0,
+      "tt_cutoffs_sum": 0
+    },
+    {
+      "engine": "T",
+      "limit": {
+        "depth": 1
+      },
+      "positions": 10,
+      "median_nodes_sum": 795,
+      "median_wall_ms_sum": 41.2331,
+      "wall_nps": 19280.626486972844,
+      "tactical_passes": 6,
+      "tactical_total": 6,
+      "depth_min": 0,
+      "depth_max": 1,
+      "tt_hits_sum": 0,
+      "tt_cutoffs_sum": 0
+    }
+  ]
+}

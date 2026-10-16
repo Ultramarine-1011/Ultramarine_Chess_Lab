@@ -1,0 +1,397 @@
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "1"]
+[White "G"]
+[Black "Handcrafted"]
+[Result "1/2-1/2"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rn1qk1nr/ppb2ppp/2p1p3/2Pp1b2/3P4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 0 1"]
+[GameDuration "00:00:01"]
+[GameStartTime "2026-10-16T18:53:05 +0800"]
+[GameEndTime "2026-10-16T18:53:07 +0800"]
+[PlyCount "71"]
+[Termination "normal"]
+[TimeControl "1+0.01"]
+
+1. Bd3 {+0.64/4 0.039s, tl=0.981s, latency=0.011s, n=34678, nps=1238500}
+Nf6 {-0.26/4 0.039s, tl=0.981s, latency=0.010s, n=40158, nps=1384758}
+2. Bxf5 {+0.97/4 0.037s, tl=0.954s, latency=0.024s, n=15566, nps=1197384}
+exf5 {-0.21/4 0.037s, tl=0.954s, latency=0.027s, n=13830, nps=1383000}
+3. Bd2 {+1.45/3 0.036s, tl=0.928s, latency=0.025s, n=12964, nps=1178545}
+b5 {-0.16/4 0.036s, tl=0.928s, latency=0.019s, n=24289, nps=1428764}
+4. cxb6 {+2.38/3 0.035s, tl=0.903s, latency=0.031s, n=3386, nps=846500}
+axb6 {-0.09/4 0.035s, tl=0.903s, latency=0.029s, n=8592, nps=1432000}
+5. Ng5 {+1.72/3 0.034s, tl=0.879s, latency=0.023s, n=12787, nps=1162454}
+h6 {+0.16/3 0.034s, tl=0.879s, latency=0.029s, n=5243, nps=1048600}
+6. Nf3 {+0.60/4 0.033s, tl=0.856s, latency=0.017s, n=20047, nps=1252937}
+Nbd7 {+0.06/4 0.033s, tl=0.856s, latency=0.015s, n=25852, nps=1436222}
+7. Nh4 {+0.68/3 0.033s, tl=0.833s, latency=0.028s, n=4975, nps=995000}
+g6 {+0.20/4 0.033s, tl=0.833s, latency=0.006s, n=27070, nps=1002592}
+8. Nf3 {+0.44/3 0.033s, tl=0.810s, latency=0.026s, n=4776, nps=682285}
+Ne4 {+0.21/4 0.032s, tl=0.811s, latency=0.006s, n=24528, nps=943384}
+9. Qc1 {-0.04/3 0.031s, tl=0.789s, latency=0.023s, n=10290, nps=1286250}
+Nxd2 {+0.29/4 0.031s, tl=0.790s, latency=0.009s, n=36771, nps=1671409}
+10. Nxd2 {-0.07/4 0.030s, tl=0.769s, latency=0.021s, n=10876, nps=1208444}
+Bd6 {+0.29/4 0.031s, tl=0.769s, latency=0.016s, n=22614, nps=1507600}
+11. Nxd5 {+0.28/4 0.030s, tl=0.749s, latency=0.010s, n=24806, nps=1240300}
+cxd5 {+1.65/5 0.030s, tl=0.749s, latency=0.002s, n=65880, nps=2352857}
+12. Qc6 {-0.43/4 0.029s, tl=0.730s, latency=0.016s, n=15368, nps=1182153}
+Qb8 {+2.44/4 0.029s, tl=0.730s, latency=0.014s, n=22067, nps=1471133}
+13. Qxd5 {+0.20/3 0.029s, tl=0.711s, latency=0.023s, n=6482, nps=1080333}
+Ra5 {+2.44/3 0.029s, tl=0.711s, latency=0.025s, n=3923, nps=980750}
+14. Qc6 {+0.47/4 0.028s, tl=0.693s, latency=0.016s, n=15566, nps=1297166}
+g5 {+1.55/4 0.028s, tl=0.693s, latency=0.002s, n=41116, nps=1581384}
+15. h4 {+0.81/3 0.027s, tl=0.676s, latency=0.016s, n=14041, nps=1276454}
+gxh4 {+1.60/3 0.027s, tl=0.676s, latency=0.022s, n=6429, nps=1285800}
+16. Rxh4 {+1.37/3 0.027s, tl=0.659s, latency=0.018s, n=11203, nps=1244777}
+h5 {+1.52/3 0.027s, tl=0.659s, latency=0.019s, n=10998, nps=1374750}
+17. Rh1 {+1.55/3 0.026s, tl=0.643s, latency=0.009s, n=23687, nps=1393352}
+h4 {+1.57/3 0.026s, tl=0.643s, latency=0.018s, n=11350, nps=1418750}
+18. Rc1 {+1.64/3 0.026s, tl=0.627s, latency=0.013s, n=17200, nps=1323076}
+Rxa2 {+2.53/4 0.026s, tl=0.627s, latency=0.006s, n=30779, nps=1538950}
+19. d5 {+0.82/3 0.025s, tl=0.612s, latency=0.011s, n=19800, nps=1414285}
+Rxb2 {+3.48/3 0.025s, tl=0.612s, latency=0.018s, n=9232, nps=1318857}
+20. Qc3 {+0.47/3 0.025s, tl=0.597s, latency=0.015s, n=13776, nps=1377600}
+Be5 {+3.52/4 0.025s, tl=0.597s, latency=0.017s, n=10810, nps=1351250}
+21. Qc8+ {+0.16/3 0.024s, tl=0.583s, latency=0.021s, n=2588, nps=862666}
+Ke7 {+3.40/5 0.024s, tl=0.583s, latency=0.011s, n=18962, nps=1458615}
+22. Qc6 {-0.67/3 0.024s, tl=0.569s, latency=0.015s, n=10997, nps=1221888}
+Qg8 {+3.69/3 0.024s, tl=0.569s, latency=0.009s, n=24193, nps=1612866}
+23. Rg1 {-1.59/2 0.023s, tl=0.556s, latency=0.011s, n=17849, nps=1487416}
+Nc5 {+3.73/3 0.023s, tl=0.556s, latency=0.010s, n=22451, nps=1727000}
+24. Rb1 {-0.98/3 0.023s, tl=0.543s, latency=0.005s, n=24060, nps=1336666}
+Rxb1+ {+3.86/4 0.023s, tl=0.543s, latency=0.011s, n=19106, nps=1592166}
+25. Nxb1 {-2.48/5 0.022s, tl=0.531s, latency=0.005s, n=24635, nps=1449117}
+Nd3+ {+3.76/4 0.022s, tl=0.531s, latency=0.009s, n=25268, nps=1943692}
+26. Ke2 {-1.72/4 0.022s, tl=0.519s, latency=0.016s, n=6839, nps=1139833}
+Nb4 {+3.72/3 0.022s, tl=0.519s, latency=0.018s, n=4576, nps=1144000}
+27. Qb7+ {-0.49/4 0.021s, tl=0.508s, latency=0.013s, n=9185, nps=1148125}
+Ke8 {+2.71/5 0.021s, tl=0.508s, latency=0.009s, n=21090, nps=1757500}
+28. Qc8+ {-0.17/3 0.021s, tl=0.497s, latency=0.016s, n=5342, nps=1068400}
+Ke7 {+2.57/5 0.021s, tl=0.497s, latency=0.013s, n=11753, nps=1469125}
+29. Qb7+ {-0.49/5 0.021s, tl=0.486s, latency=0.007s, n=22578, nps=1612714}
+Kf8 {+2.71/5 0.021s, tl=0.486s, latency=0.003s, n=31280, nps=1737777}
+30. Qc8+ {-0.62/4 0.020s, tl=0.476s, latency=0.005s, n=19823, nps=1321533}
+Kg7 {+2.55/5 0.020s, tl=0.476s, latency=0.013s, n=10336, nps=1476571}
+31. Qxf5 {-0.30/4 0.020s, tl=0.466s, latency=0.010s, n=9768, nps=976800}
+Bh2 {+2.46/4 0.020s, tl=0.466s, latency=0.011s, n=16057, nps=1784111}
+32. Qg5+ {+1.30/4 0.020s, tl=0.456s, latency=0.011s, n=10693, nps=1188111}
+Kf8 {+2.46/6 0.020s, tl=0.456s, latency=0.013s, n=14487, nps=2069571}
+33. Qd8+ {+1.30/5 0.019s, tl=0.447s, latency=0.012s, n=13577, nps=1939571}
+Kg7 {0.00/6 0.019s, tl=0.447s, latency=0.011s, n=18173, nps=2271625}
+34. Qg5+ {0.00/5 0.020s, tl=0.437s, latency=0.007s, n=25074, nps=1928769}
+Kf8 {0.00/6 0.019s, tl=0.438s, latency=0.013s, n=14352, nps=2392000}
+35. Qd8+ {0.00/5 0.019s, tl=0.428s, latency=0.012s, n=13410, nps=1915714}
+Kg7 {0.00/6 0.019s, tl=0.429s, latency=0.012s, n=14971, nps=2138714}
+36. Qg5+ {0.00/5 0.018s, tl=0.420s, latency=0.010s, n=13733, nps=1716625, Draw by 3-fold repetition}
+1/2-1/2
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "1"]
+[White "Handcrafted"]
+[Black "G"]
+[Result "0-1"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rn1qk1nr/ppb2ppp/2p1p3/2Pp1b2/3P4/2N1PN2/PP3PPP/R1BQKB1R w KQkq - 0 1"]
+[GameDuration "00:00:01"]
+[GameStartTime "2026-10-16T18:53:07 +0800"]
+[GameEndTime "2026-10-16T18:53:08 +0800"]
+[PlyCount "50"]
+[Termination "normal"]
+[TimeControl "1+0.01"]
+
+1. Bd3 {+0.28/3 0.038s, tl=0.982s, latency=0.033s, n=5230, nps=1046000}
+Ne7 {-0.96/4 0.038s, tl=0.982s, latency=0.026s, n=15410, nps=1284166}
+2. e4 {+0.19/4 0.037s, tl=0.955s, latency=0.018s, n=27468, nps=1445684}
+dxe4 {-0.01/5 0.037s, tl=0.955s, latency=0.001s, n=59296, nps=1647111}
+3. Nxe4 {+0.21/4 0.036s, tl=0.929s, latency=0.017s, n=26018, nps=1369368}
+Ba5+ {0.00/3 0.036s, tl=0.929s, latency=0.030s, n=4702, nps=783666}
+4. Kf1 {+0.31/4 0.035s, tl=0.904s, latency=0.024s, n=14078, nps=1279818}
+Nd7 {-0.35/3 0.035s, tl=0.904s, latency=0.029s, n=5766, nps=961000}
+5. Nd6+ {+1.03/5 0.034s, tl=0.880s, latency=0.019s, n=35309, nps=2353933}
+Kf8 {-1.07/5 0.034s, tl=0.880s, latency=0.015s, n=24632, nps=1296421}
+6. Nxb7 {+1.17/5 0.034s, tl=0.856s, latency=0.009s, n=48688, nps=1947520}
+Bxd3+ {-1.40/5 0.034s, tl=0.856s, latency=0.009s, n=42852, nps=1714080}
+7. Qxd3 {+1.25/6 0.033s, tl=0.833s, latency=0.006s, n=53306, nps=1974296}
+Qc7 {-2.65/4 0.033s, tl=0.833s, latency=0.024s, n=10595, nps=1177222}
+8. Nxa5 {+1.25/4 0.032s, tl=0.811s, latency=0.020s, n=16748, nps=1395666}
+Qxa5 {-1.92/4 0.032s, tl=0.811s, latency=0.019s, n=17400, nps=1338461}
+9. a4 {+1.29/3 0.031s, tl=0.790s, latency=0.025s, n=6742, nps=1123666}
+Qb4 {-1.02/4 0.031s, tl=0.790s, latency=0.001s, n=36300, nps=1210000}
+10. g4 {+1.32/3 0.031s, tl=0.769s, latency=0.022s, n=10377, nps=1153000}
+h5 {+0.06/3 0.032s, tl=0.768s, latency=0.027s, n=5193, nps=1038600}
+11. gxh5 {+1.27/4 0.030s, tl=0.749s, latency=0.012s, n=27834, nps=1546333}
+Rxh5 {+0.58/3 0.030s, tl=0.748s, latency=0.023s, n=7710, nps=1101428}
+12. h4 {+1.32/3 0.029s, tl=0.730s, latency=0.021s, n=11704, nps=1463000}
+Nd5 {+0.65/3 0.029s, tl=0.729s, latency=0.013s, n=22696, nps=1418500}
+13. Qa6 {+1.41/3 0.029s, tl=0.711s, latency=0.023s, n=7117, nps=1186166}
+Ne7 {+0.65/3 0.028s, tl=0.711s, latency=0.019s, n=7807, nps=867444}
+14. Qe2 {+1.39/3 0.028s, tl=0.693s, latency=0.019s, n=12407, nps=1378555}
+Nf6 {+0.24/3 0.028s, tl=0.693s, latency=0.013s, n=21839, nps=1455933}
+15. Be3 {+1.45/3 0.027s, tl=0.676s, latency=0.020s, n=8539, nps=1219857}
+Nf5 {0.00/3 0.027s, tl=0.676s, latency=0.008s, n=23122, nps=1216947}
+16. a5 {+1.37/4 0.027s, tl=0.659s, latency=0.009s, n=29042, nps=1613444}
+Nxe3+ {+1.12/3 0.027s, tl=0.659s, latency=0.018s, n=11930, nps=1325555}
+17. fxe3 {+1.27/4 0.026s, tl=0.643s, latency=0.019s, n=9909, nps=1415571}
+Ne4 {+1.13/3 0.026s, tl=0.643s, latency=0.020s, n=7499, nps=1249833}
+18. Kg2 {+1.35/3 0.026s, tl=0.627s, latency=0.019s, n=8306, nps=1186571}
+Rb8 {+1.21/3 0.026s, tl=0.627s, latency=0.015s, n=17152, nps=1559272}
+19. Ra2 {+1.35/3 0.025s, tl=0.612s, latency=0.020s, n=7244, nps=1448800}
+Qb3 {+1.75/3 0.025s, tl=0.612s, latency=0.019s, n=8140, nps=1356666}
+20. Rha1 {+1.27/4 0.025s, tl=0.597s, latency=0.008s, n=29122, nps=1713058}
+Rh6 {+1.15/3 0.025s, tl=0.597s, latency=0.016s, n=15004, nps=1667111}
+21. Ne5 {+1.45/3 0.024s, tl=0.583s, latency=0.018s, n=9385, nps=1564166}
+Rxh4 {+1.19/3 0.024s, tl=0.583s, latency=0.015s, n=11849, nps=1316555}
+22. Nd7+ {+1.91/3 0.024s, tl=0.569s, latency=0.020s, n=5068, nps=1267000}
+Ke8 {+1.28/5 0.024s, tl=0.569s, latency=0.005s, n=31001, nps=1631631}
+23. Nxb8 {+1.91/4 0.023s, tl=0.556s, latency=0.010s, n=23212, nps=1785538}
+Qxb8 {+0.29/4 0.023s, tl=0.556s, latency=0.010s, n=19753, nps=1519461}
+24. Qa6 {+1.91/3 0.023s, tl=0.543s, latency=0.020s, n=2557, nps=852333}
+Qh2+ {+M3/3 0.004s, tl=0.562s, latency=0.001s, n=2601, nps=867000}
+25. Kf1 {-M2/2 0.003s, tl=0.550s, latency=0.001s, n=626, nps=313000}
+Qf2# {+M1/1 0.003s, tl=0.569s, latency=0.001s, n=438, nps=219000, Black mates}
+0-1
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "2"]
+[White "G"]
+[Black "Handcrafted"]
+[Result "1-0"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rnbqkb1r/p4ppp/2p1pn2/1p6/2BP4/P3PN2/1P3PPP/RNBQK2R w KQkq - 0 1"]
+[GameDuration "00:00:03"]
+[GameStartTime "2026-10-16T18:53:08 +0800"]
+[GameEndTime "2026-10-16T18:53:11 +0800"]
+[PlyCount "139"]
+[Termination "normal"]
+[TimeControl "1+0.01"]
+
+1. Bd3 {0.00/4 0.038s, tl=0.982s, latency=0.020s, n=22893, nps=1271833}
+Bd6 {0.00/3 0.038s, tl=0.982s, latency=0.030s, n=8851, nps=1106375}
+2. Nbd2 {+0.63/3 0.037s, tl=0.955s, latency=0.025s, n=14578, nps=1214833}
+Nbd7 {-0.04/3 0.037s, tl=0.955s, latency=0.029s, n=9213, nps=1151625}
+3. Qc2 {+0.63/3 0.036s, tl=0.929s, latency=0.028s, n=6818, nps=852250}
+Bb7 {-0.05/4 0.036s, tl=0.929s, latency=0.003s, n=45156, nps=1368363}
+4. Ng5 {+0.62/3 0.035s, tl=0.904s, latency=0.027s, n=8626, nps=1078250}
+h5 {+0.02/3 0.035s, tl=0.904s, latency=0.022s, n=16752, nps=1288615}
+5. Bg6 {+1.24/3 0.034s, tl=0.880s, latency=0.025s, n=9781, nps=1086777}
+O-O {-0.12/4 0.034s, tl=0.880s, latency=0.006s, n=43043, nps=1537250}
+6. Bxh5 {+1.31/3 0.034s, tl=0.856s, latency=0.026s, n=8178, nps=1022250}
+Qc7 {-0.12/3 0.034s, tl=0.856s, latency=0.026s, n=9838, nps=1229750}
+7. Be2 {+1.94/3 0.033s, tl=0.833s, latency=0.018s, n=18713, nps=1247533}
+Bxh2 {-0.14/3 0.033s, tl=0.833s, latency=0.021s, n=14552, nps=1212666}
+8. a4 {+2.32/3 0.032s, tl=0.811s, latency=0.014s, n=22854, nps=1269666}
+bxa4 {-0.01/3 0.032s, tl=0.811s, latency=0.018s, n=17303, nps=1235928}
+9. Rxa4 {+2.57/3 0.031s, tl=0.790s, latency=0.017s, n=17260, nps=1232857}
+Nb6 {-0.05/3 0.031s, tl=0.790s, latency=0.019s, n=15450, nps=1287500}
+10. Ra1 {+2.57/3 0.031s, tl=0.769s, latency=0.023s, n=9332, nps=1166500}
+Bd6 {-0.13/3 0.031s, tl=0.769s, latency=0.013s, n=24485, nps=1360277}
+11. Nc4 {+2.37/3 0.030s, tl=0.749s, latency=0.017s, n=15589, nps=1199153}
+Nxc4 {-0.05/4 0.030s, tl=0.749s, latency=0.013s, n=22239, nps=1308176}
+12. Bxc4 {+2.37/3 0.029s, tl=0.730s, latency=0.022s, n=8219, nps=1174142}
+a5 {+0.03/3 0.029s, tl=0.730s, latency=0.020s, n=12242, nps=1360222}
+13. Bd2 {+2.98/3 0.029s, tl=0.711s, latency=0.009s, n=18964, nps=948200}
+c5 {+0.02/3 0.029s, tl=0.711s, latency=0.014s, n=17701, nps=1180066}
+14. Nxe6 {+2.97/3 0.028s, tl=0.693s, latency=0.019s, n=12361, nps=1373444}
+fxe6 {+0.13/4 0.028s, tl=0.693s, latency=0.012s, n=26076, nps=1629750}
+15. Bxe6+ {+3.16/3 0.027s, tl=0.676s, latency=0.013s, n=19981, nps=1427214}
+Rf7 {+0.08/4 0.027s, tl=0.676s, latency=0.017s, n=11337, nps=1133700}
+16. Qg6 {+2.98/3 0.027s, tl=0.659s, latency=0.018s, n=11270, nps=1252222}
+cxd4 {+1.08/3 0.027s, tl=0.659s, latency=0.021s, n=6911, nps=1151833}
+17. Bxf7+ {+6.71/3 0.026s, tl=0.643s, latency=0.018s, n=11360, nps=1420000}
+Qxf7 {-2.56/6 0.026s, tl=0.643s, latency=0.004s, n=50415, nps=2291590}
+18. Rh8+ {+6.20/5 0.026s, tl=0.627s, latency=0.003s, n=44844, nps=1949739}
+Kxh8 {-2.56/6 0.026s, tl=0.627s, latency=0.010s, n=32628, nps=2039250}
+19. Qxf7 {+5.70/5 0.025s, tl=0.612s, latency=0.006s, n=33686, nps=1772947}
+Bd5 {-2.66/5 0.025s, tl=0.612s, latency=0.006s, n=42602, nps=2242210}
+20. Qg6 {+4.48/4 0.025s, tl=0.597s, latency=0.018s, n=9228, nps=1318285}
+Be4 {-2.68/4 0.025s, tl=0.597s, latency=0.011s, n=23473, nps=1676642}
+21. Qf7 {+4.70/4 0.024s, tl=0.583s, latency=0.017s, n=9865, nps=1409285}
+Bd5 {-2.56/4 0.024s, tl=0.583s, latency=0.010s, n=23095, nps=1649642}
+22. Qg6 {+4.40/5 0.024s, tl=0.569s, latency=0.001s, n=42261, nps=1837434}
+Be4 {-2.68/4 0.024s, tl=0.569s, latency=0.010s, n=23371, nps=1669357}
+23. Qg5 {+5.35/5 0.023s, tl=0.556s, latency=0.001s, n=40110, nps=1823181}
+dxe3 {-2.76/4 0.023s, tl=0.556s, latency=0.010s, n=20417, nps=1570538}
+24. fxe3 {+4.99/4 0.023s, tl=0.543s, latency=0.012s, n=17207, nps=1564272}
+a4 {-2.74/3 0.023s, tl=0.543s, latency=0.019s, n=4104, nps=1026000}
+25. Bc3 {+7.30/4 0.022s, tl=0.531s, latency=0.013s, n=13046, nps=1449555}
+Ra6 {-4.01/4 0.022s, tl=0.531s, latency=0.011s, n=20092, nps=1826545}
+26. Bxf6 {+8.91/4 0.022s, tl=0.519s, latency=0.011s, n=16219, nps=1474454}
+Bb4+ {-6.36/5 0.022s, tl=0.519s, latency=0.009s, n=28617, nps=2201307}
+27. Bc3 {+9.44/6 0.021s, tl=0.508s, latency=0.001s, n=37475, nps=1873750}
+Bxc3+ {-6.51/5 0.021s, tl=0.508s, latency=0.011s, n=20765, nps=2076500}
+28. bxc3 {+10.39/5 0.021s, tl=0.497s, latency=0.008s, n=24557, nps=1889000}
+Bc2 {-6.63/4 0.021s, tl=0.497s, latency=0.011s, n=23022, nps=2302200}
+29. Qh5+ {+10.39/4 0.021s, tl=0.486s, latency=0.008s, n=19801, nps=1523153}
+Rh6 {-6.63/6 0.021s, tl=0.486s, latency=0.014s, n=15321, nps=2188714}
+30. Qe8+ {+10.86/5 0.020s, tl=0.476s, latency=0.002s, n=36253, nps=2014055}
+Kh7 {-6.53/5 0.020s, tl=0.476s, latency=0.011s, n=16360, nps=1817777}
+31. Kd2 {+10.24/4 0.020s, tl=0.466s, latency=0.007s, n=20797, nps=1599769}
+Bb3 {-6.53/5 0.020s, tl=0.466s, latency=0.008s, n=24461, nps=2038416}
+32. Qe4+ {+10.17/4 0.020s, tl=0.456s, latency=0.005s, n=26744, nps=1782933}
+Kg8 {-6.53/5 0.020s, tl=0.456s, latency=0.007s, n=28063, nps=2158692}
+33. Qe8+ {+10.53/4 0.019s, tl=0.447s, latency=0.010s, n=13573, nps=1508111}
+Kh7 {-6.53/5 0.019s, tl=0.447s, latency=0.010s, n=16280, nps=1808888}
+34. Qe4+ {+9.66/4 0.019s, tl=0.438s, latency=0.001s, n=28891, nps=1605055}
+Kg8 {-6.53/5 0.019s, tl=0.438s, latency=0.005s, n=27639, nps=1974214}
+35. Qa8+ {+10.53/3 0.019s, tl=0.429s, latency=0.015s, n=3667, nps=916750}
+Kh7 {-6.53/5 0.019s, tl=0.429s, latency=0.010s, n=19566, nps=2174000}
+36. Qf8 {+10.53/3 0.018s, tl=0.421s, latency=0.014s, n=4389, nps=1097250}
+Rh2 {-6.48/5 0.018s, tl=0.421s, latency=0.006s, n=28182, nps=2348500}
+37. Qf5+ {+9.55/4 0.018s, tl=0.413s, latency=0.009s, n=16289, nps=1809888}
+Kg8 {-6.53/5 0.018s, tl=0.413s, latency=0.009s, n=17956, nps=1995111}
+38. Qg4 {+9.90/4 0.018s, tl=0.405s, latency=0.008s, n=16620, nps=1662000}
+Rh6 {-6.53/5 0.018s, tl=0.405s, latency=0.001s, n=39398, nps=2317529}
+39. Qc8+ {+10.53/3 0.018s, tl=0.397s, latency=0.014s, n=4612, nps=1153000}
+Kh7 {-6.53/5 0.018s, tl=0.397s, latency=0.005s, n=25107, nps=1931307}
+40. Qf8 {+10.53/3 0.017s, tl=0.390s, latency=0.012s, n=5168, nps=1033600}
+Rh2 {-6.48/5 0.017s, tl=0.390s, latency=0.005s, n=28168, nps=2347333}
+41. Qf5+ {+9.55/4 0.017s, tl=0.383s, latency=0.008s, n=16305, nps=1811666}
+Kg8 {-6.53/5 0.017s, tl=0.383s, latency=0.008s, n=17727, nps=1969666}
+42. Qg4 {+9.90/4 0.017s, tl=0.376s, latency=0.007s, n=16287, nps=1628700}
+Kh7 {-6.58/4 0.017s, tl=0.376s, latency=0.012s, n=7386, nps=1477200}
+43. e4 {+9.99/4 0.017s, tl=0.369s, latency=0.009s, n=13093, nps=1636625}
+g6 {-6.63/5 0.017s, tl=0.369s, latency=0.004s, n=28946, nps=2226615}
+44. Qg5 {+10.51/4 0.016s, tl=0.363s, latency=0.006s, n=15998, nps=1599800}
+Rh5 {-6.63/5 0.016s, tl=0.363s, latency=0.009s, n=13061, nps=1865857}
+45. Qe7+ {+11.97/5 0.016s, tl=0.357s, latency=0.001s, n=30088, nps=2005866}
+Kh6 {-6.58/5 0.016s, tl=0.357s, latency=0.005s, n=18895, nps=1717727}
+46. Qf6 {+11.24/4 0.016s, tl=0.351s, latency=0.002s, n=21497, nps=1535500}
+Kh7 {-6.63/5 0.016s, tl=0.351s, latency=0.003s, n=26056, nps=2004307}
+47. Ke3 {+11.72/4 0.016s, tl=0.345s, latency=0.004s, n=19121, nps=1593416}
+g5 {-6.58/4 0.016s, tl=0.345s, latency=0.008s, n=16192, nps=2024000}
+48. Kd4 {+11.70/4 0.017s, tl=0.338s, latency=0.003s, n=24664, nps=1761714}
+g4 {-6.48/4 0.016s, tl=0.339s, latency=0.011s, n=6861, nps=1372200}
+49. c4 {+12.09/4 0.015s, tl=0.333s, latency=0.007s, n=12839, nps=1604875}
+Rh6 {-6.53/5 0.016s, tl=0.333s, latency=0.005s, n=21298, nps=1936181}
+50. Qf7+ {+13.05/4 0.015s, tl=0.328s, latency=0.008s, n=9518, nps=1359714}
+Kh8 {-7.63/5 0.015s, tl=0.328s, latency=0.008s, n=14018, nps=2002571}
+51. e5 {+13.57/4 0.015s, tl=0.323s, latency=0.006s, n=13361, nps=1484555}
+g3 {-6.53/4 0.015s, tl=0.323s, latency=0.010s, n=7903, nps=1580600}
+52. Qf8+ {+13.67/4 0.015s, tl=0.318s, latency=0.008s, n=10418, nps=1488285}
+Kh7 {-6.53/5 0.015s, tl=0.318s, latency=0.001s, n=31619, nps=2258500}
+53. Qf7+ {+13.86/4 0.015s, tl=0.313s, latency=0.008s, n=10900, nps=1557142}
+Kh8 {-6.58/5 0.015s, tl=0.313s, latency=0.007s, n=15647, nps=1955875}
+54. Re1 {+13.23/4 0.015s, tl=0.308s, latency=0.006s, n=13916, nps=1546222}
+Rh4+ {-6.48/5 0.015s, tl=0.308s, latency=0.004s, n=21399, nps=1945363}
+55. Re4 {+13.21/6 0.014s, tl=0.304s, latency=0.006s, n=13805, nps=1725625}
+Rxe4+ {-6.48/4 0.014s, tl=0.304s, latency=0.012s, n=1420, nps=710000}
+56. Kxe4 {+13.99/6 0.014s, tl=0.300s, latency=0.008s, n=10945, nps=1824166}
+Bc2+ {-7.63/6 0.014s, tl=0.300s, latency=0.009s, n=13279, nps=2655800}
+57. Kd5 {+15.10/6 0.014s, tl=0.296s, latency=0.001s, n=27351, nps=2103923}
+Bh7 {-7.81/6 0.014s, tl=0.296s, latency=0.003s, n=31552, nps=2868363}
+58. e6 {+16.13/5 0.014s, tl=0.292s, latency=0.006s, n=20248, nps=2531000}
+Bg8 {-8.80/6 0.014s, tl=0.292s, latency=0.004s, n=29769, nps=2976900}
+59. Qf6+ {+16.20/5 0.014s, tl=0.288s, latency=0.009s, n=9204, nps=1840800}
+Kh7 {-9.95/6 0.014s, tl=0.288s, latency=0.007s, n=21861, nps=3123000}
+60. c5 {+16.20/5 0.014s, tl=0.284s, latency=0.008s, n=13124, nps=2187333}
+a3 {-9.01/6 0.014s, tl=0.284s, latency=0.005s, n=25144, nps=2793777}
+61. Ke4 {+16.26/5 0.014s, tl=0.280s, latency=0.006s, n=17514, nps=2189250}
+a2 {-7.86/6 0.014s, tl=0.280s, latency=0.006s, n=20785, nps=2598125}
+62. e7 {+17.90/5 0.015s, tl=0.275s, latency=0.004s, n=18237, nps=1657909}
+a1=Q {-8.98/5 0.014s, tl=0.276s, latency=0.008s, n=9182, nps=1530333}
+63. Qxa1 {+17.62/4 0.013s, tl=0.272s, latency=0.008s, n=6623, nps=1324600}
+Bf7 {-9.95/5 0.013s, tl=0.273s, latency=0.005s, n=16276, nps=2034500}
+64. c6 {+17.85/3 0.013s, tl=0.269s, latency=0.009s, n=3409, nps=852250}
+Bg6+ {-14.42/6 0.013s, tl=0.270s, latency=0.001s, n=26872, nps=2239333}
+65. Kf4 {+23.18/5 0.013s, tl=0.266s, latency=0.001s, n=24430, nps=2035833}
+Be8 {-15.62/5 0.013s, tl=0.267s, latency=0.005s, n=15714, nps=1964250}
+66. c7 {+23.84/4 0.013s, tl=0.263s, latency=0.006s, n=12368, nps=1766857}
+Bd7 {-17.80/5 0.013s, tl=0.264s, latency=0.001s, n=31880, nps=2656666}
+67. Qf6 {+25.75/3 0.013s, tl=0.260s, latency=0.008s, n=8680, nps=1736000}
+Ba4 {-19.00/4 0.013s, tl=0.261s, latency=0.006s, n=13190, nps=1884285}
+68. c8=Q {+28.01/3 0.013s, tl=0.257s, latency=0.008s, n=7838, nps=1567600}
+Be8 {-M4/4 0.006s, tl=0.265s, latency=0.000s, n=10403, nps=1733833}
+69. Qc2+ {+M3/3 0.006s, tl=0.261s, latency=0.001s, n=7764, nps=1552800}
+Kg8 {-M2/2 0.002s, tl=0.273s, latency=0.000s, n=124, nps=62000}
+70. Qf8# {+M1/1 0.002s, tl=0.269s, latency=0.000s, n=116, nps=58000, White mates}
+1-0
+
+[Event "Fastchess Tournament"]
+[Site "?"]
+[Date "2026.10.16"]
+[Round "2"]
+[White "Handcrafted"]
+[Black "G"]
+[Result "1-0"]
+[EngineWhiteName "Ultramarine Chess Lab 0.1.0"]
+[EngineWhiteAuthor "UCL contributors"]
+[EngineBlackName "Ultramarine Chess Lab 0.1.0"]
+[EngineBlackAuthor "UCL contributors"]
+[SetUp "1"]
+[FEN "rnbqkb1r/p4ppp/2p1pn2/1p6/2BP4/P3PN2/1P3PPP/RNBQK2R w KQkq - 0 1"]
+[GameDuration "00:00:01"]
+[GameStartTime "2026-10-16T18:53:11 +0800"]
+[GameEndTime "2026-10-16T18:53:13 +0800"]
+[PlyCount "49"]
+[Termination "normal"]
+[TimeControl "1+0.01"]
+
+1. Bd3 {0.00/4 0.038s, tl=0.982s, latency=0.020s, n=25402, nps=1411222}
+Bd6 {-0.63/4 0.038s, tl=0.982s, latency=0.004s, n=44563, nps=1310676}
+2. Nbd2 {+0.10/3 0.037s, tl=0.955s, latency=0.030s, n=7940, nps=1134285}
+Nbd7 {-0.63/4 0.037s, tl=0.955s, latency=0.008s, n=35131, nps=1211413}
+3. Qc2 {+0.10/3 0.036s, tl=0.929s, latency=0.028s, n=8548, nps=1068500}
+Bb7 {-0.62/4 0.036s, tl=0.929s, latency=0.004s, n=40971, nps=1280343}
+4. b3 {+0.05/3 0.035s, tl=0.904s, latency=0.026s, n=13043, nps=1449222}
+Qa5 {+0.28/3 0.035s, tl=0.904s, latency=0.019s, n=17838, nps=1114875}
+5. h4 {+0.10/3 0.034s, tl=0.880s, latency=0.024s, n=12198, nps=1219800}
+c5 {+0.61/3 0.034s, tl=0.880s, latency=0.023s, n=12658, nps=1150727}
+6. a4 {+0.12/3 0.034s, tl=0.856s, latency=0.015s, n=25896, nps=1362947}
+cxd4 {+0.91/3 0.034s, tl=0.856s, latency=0.023s, n=14120, nps=1283636}
+7. exd4 {+0.20/3 0.033s, tl=0.833s, latency=0.025s, n=10279, nps=1284875}
+Bxf3 {+2.01/3 0.033s, tl=0.833s, latency=0.027s, n=5982, nps=997000}
+8. gxf3 {+0.52/4 0.032s, tl=0.811s, latency=0.001s, n=47737, nps=1539903}
+Qb6 {+1.38/3 0.032s, tl=0.811s, latency=0.014s, n=23039, nps=1279944}
+9. axb5 {+0.62/4 0.031s, tl=0.790s, latency=0.016s, n=20014, nps=1334266}
+Qxd4 {+1.77/3 0.031s, tl=0.790s, latency=0.023s, n=7907, nps=988375}
+10. Bb2 {+0.66/4 0.031s, tl=0.769s, latency=0.010s, n=27981, nps=1332428}
+Qc5 {+1.61/4 0.031s, tl=0.769s, latency=0.003s, n=36337, nps=1297750}
+11. Nc4 {+0.66/3 0.030s, tl=0.749s, latency=0.021s, n=12193, nps=1354777}
+Bf4 {+1.23/3 0.030s, tl=0.749s, latency=0.018s, n=13763, nps=1146916}
+12. Ra5 {+0.56/2 0.029s, tl=0.730s, latency=0.025s, n=2415, nps=603750}
+Kf8 {+2.15/2 0.029s, tl=0.730s, latency=0.025s, n=2291, nps=572750}
+13. Ba3 {+5.84/4 0.029s, tl=0.711s, latency=0.008s, n=33046, nps=1573619}
+Nd5 {-5.05/4 0.029s, tl=0.711s, latency=0.021s, n=10203, nps=1275375}
+14. Bxc5+ {+5.82/3 0.028s, tl=0.693s, latency=0.022s, n=7371, nps=1228500}
+Nxc5 {-5.60/5 0.028s, tl=0.693s, latency=0.005s, n=33779, nps=1468652}
+15. Be4 {+5.89/4 0.027s, tl=0.676s, latency=0.007s, n=35416, nps=1770800}
+f6 {-5.35/4 0.027s, tl=0.676s, latency=0.011s, n=23515, nps=1469687}
+16. b6 {+6.71/4 0.027s, tl=0.659s, latency=0.004s, n=42157, nps=1832913}
+Nb4 {-8.78/3 0.027s, tl=0.659s, latency=0.017s, n=11169, nps=1116900}
+17. Qc3 {+6.90/4 0.026s, tl=0.643s, latency=0.011s, n=21898, nps=1459866}
+Nbd3+ {-8.78/4 0.026s, tl=0.643s, latency=0.009s, n=22741, nps=1337705}
+18. Bxd3 {+9.20/5 0.026s, tl=0.627s, latency=0.017s, n=12507, nps=1389666}
+Nxd3+ {-13.35/4 0.026s, tl=0.627s, latency=0.015s, n=12411, nps=1128272}
+19. Qxd3 {+10.15/5 0.025s, tl=0.612s, latency=0.009s, n=29551, nps=1846937}
+a6 {-14.52/4 0.025s, tl=0.612s, latency=0.006s, n=30759, nps=1618894}
+20. Qe4 {+12.55/4 0.025s, tl=0.597s, latency=0.008s, n=30022, nps=1766000}
+Rd8 {-16.59/4 0.025s, tl=0.597s, latency=0.012s, n=22126, nps=1702000}
+21. Qxf4 {+13.65/4 0.024s, tl=0.583s, latency=0.007s, n=30777, nps=1810411}
+e5 {-17.38/4 0.024s, tl=0.583s, latency=0.015s, n=13187, nps=1465222}
+22. Nxe5 {+13.74/4 0.024s, tl=0.569s, latency=0.011s, n=22088, nps=1699076}
+Kg8 {-17.38/3 0.024s, tl=0.569s, latency=0.021s, n=1767, nps=589000}
+23. Qc4+ {+M5/5 0.022s, tl=0.557s, latency=0.001s, n=64116, nps=3053142}
+Rd5 {-M4/4 0.004s, tl=0.575s, latency=0.001s, n=2798, nps=932666}
+24. Qc8+ {+M3/3 0.003s, tl=0.564s, latency=0.000s, n=2651, nps=883666}
+Rd8 {-M2/2 0.002s, tl=0.583s, latency=0.000s, n=58, nps=29000}
+25. Qxd8# {+M1/1 0.002s, tl=0.572s, latency=0.000s, n=52, nps=26000, White mates}
+1-0
+

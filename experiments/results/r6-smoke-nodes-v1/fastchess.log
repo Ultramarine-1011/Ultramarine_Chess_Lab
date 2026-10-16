@@ -1,0 +1,18 @@
+Started game 1 of 4 (M08 vs G)
+Finished game 1 (M08 vs G): 1/2-1/2 {Draw by 3-fold repetition}
+Started game 2 of 4 (G vs M08)
+Finished game 2 (G vs M08): 0-1 {Black mates}
+Started game 3 of 4 (M08 vs G)
+Finished game 3 (M08 vs G): 1-0 {White mates}
+Started game 4 of 4 (G vs M08)
+Finished game 4 (G vs M08): 1-0 {White mates}
+--------------------------------------------------
+Results of M08 vs G (1000+10, NULL, 16MB, openings.epd):
+Elo: 88.74 +/- 136.27, nElo: 245.67 +/- 340.48
+LOS: 92.14 %, DrawRatio: 50.00 %, PairsRatio: inf
+Games: 4, Wins: 2, Losses: 1, Draws: 1, Points: 2.5 (62.50 %)
+Ptnml(0-2): [0, 0, 1, 1, 0], WL/DD Ratio: inf
+--------------------------------------------------
+Finished match
+Total Time: 00:00:12 (hours:minutes:seconds)
+

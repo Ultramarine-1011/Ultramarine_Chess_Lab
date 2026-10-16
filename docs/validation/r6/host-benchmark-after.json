@@ -1,0 +1,106 @@
+{
+  "utc": "2026-10-16T10:52:46.9060286Z",
+  "cpu": [
+    {
+      "Name": "AMD Ryzen 9 8940HX with Radeon Graphics        ",
+      "NumberOfCores": 16,
+      "NumberOfLogicalProcessors": 32,
+      "MaxClockSpeed": 2401,
+      "CurrentClockSpeed": 2401,
+      "LoadPercentage": 17
+    }
+  ],
+  "os": {
+    "Caption": "Microsoft Windows 11 家庭中文版",
+    "Version": "10.0.26100",
+    "BuildNumber": "26100",
+    "LastBootUpTime": "2026-09-23T20:39:55.769868+08:00"
+  },
+  "computer": {
+    "Manufacturer": "ASUSTeK COMPUTER INC.",
+    "Model": "TX Gaming FA608PP_FA608PP",
+    "TotalPhysicalMemory": 33517670400,
+    "HypervisorPresent": true
+  },
+  "battery": [
+    {
+      "BatteryStatus": 2,
+      "EstimatedChargeRemaining": 100,
+      "EstimatedRunTime": 71582788
+    }
+  ],
+  "power_plan": [
+    "电源方案 GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf  (Turbo)"
+  ],
+  "processor_load": [
+    {
+      "Name": "_Total",
+      "PercentProcessorTime": 1
+    }
+  ],
+  "thermal_acpi_raw_tenths_kelvin": [],
+  "thermal_error": "拒绝访问 ",
+  "top_processes_by_cumulative_cpu_seconds": [
+    {
+      "ProcessName": "MSPCManagerService",
+      "CPU": 1950.0625,
+      "Id": 12732
+    },
+    {
+      "ProcessName": "msedgewebview2",
+      "CPU": 1525.734375,
+      "Id": 21032
+    },
+    {
+      "ProcessName": "chrome",
+      "CPU": 621.1875,
+      "Id": 53932
+    },
+    {
+      "ProcessName": "audiodg",
+      "CPU": 605.4375,
+      "Id": 42148
+    },
+    {
+      "ProcessName": "msedgewebview2",
+      "CPU": 536.71875,
+      "Id": 63960
+    },
+    {
+      "ProcessName": "chrome",
+      "CPU": 448.984375,
+      "Id": 48008
+    },
+    {
+      "ProcessName": "chrome",
+      "CPU": 351.53125,
+      "Id": 73752
+    },
+    {
+      "ProcessName": "ChatGPT",
+      "CPU": 223.015625,
+      "Id": 42376
+    },
+    {
+      "ProcessName": "ChatGPT",
+      "CPU": 203.859375,
+      "Id": 58100
+    },
+    {
+      "ProcessName": "explorer",
+      "CPU": 170.78125,
+      "Id": 36296
+    },
+    {
+      "ProcessName": "wallpaper64",
+      "CPU": 158.453125,
+      "Id": 77396
+    },
+    {
+      "ProcessName": "ChatGPT",
+      "CPU": 151.8125,
+      "Id": 67388
+    }
+  ],
+  "disk_free_bytes": 266989223936
+}

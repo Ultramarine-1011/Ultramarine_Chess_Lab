@@ -1,0 +1,14 @@
+{
+  "time": {
+    "status": "PASS",
+    "games": 4,
+    "queries": 309,
+    "scope": "protocol/budget smoke only"
+  },
+  "nodes": {
+    "status": "PASS",
+    "games": 4,
+    "queries": 408,
+    "scope": "protocol/budget smoke only"
+  }
+}

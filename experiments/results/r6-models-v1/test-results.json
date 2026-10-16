@@ -1,0 +1,4604 @@
+{
+  "kind": "r6-independent-test",
+  "code": {
+    "revision": "1ca065aed204607b683d9727afdff714d6977314",
+    "dirty": false
+  },
+  "candidate": "M08",
+  "freeze_sha256": "67d4e09f65bf3ed4f3c6e05f6660fb22e91e99e2f4127ee55d051c8b2963ab6c",
+  "rank_sha256": "2bad8889e048dae4b681f91d4b45317910aefe43ecac1644869d94f4e1ea629a",
+  "models": {
+    "G": {
+      "positions": 6499,
+      "games": 992,
+      "game_bce": 0.6004998020714813,
+      "game_brier": 0.1949795629438508,
+      "teacher_bce": 0.6577573331770941,
+      "teacher_brier": 0.02305582107784746,
+      "cp_mae": 214.87226322537953,
+      "cp_mse": 89665.4781022071,
+      "cp_rmse": 299.44194446036965,
+      "calibration_position_weighted": [
+        {
+          "range": [
+            0.0,
+            0.1
+          ],
+          "positions": 259,
+          "mean_prediction": 0.05098188609728823,
+          "mean_teacher": 0.15912939455101113,
+          "mean_result": 0.055984555984555984
+        },
+        {
+          "range": [
+            0.1,
+            0.2
+          ],
+          "positions": 291,
+          "mean_prediction": 0.14902590720539405,
+          "mean_teacher": 0.24419899032794182,
+          "mean_result": 0.140893470790378
+        },
+        {
+          "range": [
+            0.2,
+            0.3
+          ],
+          "positions": 440,
+          "mean_prediction": 0.2530312117703143,
+          "mean_teacher": 0.34647563740541665,
+          "mean_result": 0.2409090909090909
+        },
+        {
+          "range": [
+            0.3,
+            0.4
+          ],
+          "positions": 650,
+          "mean_prediction": 0.35385218677233266,
+          "mean_teacher": 0.41361606907035847,
+          "mean_result": 0.33
+        },
+        {
+          "range": [
+            0.4,
+            0.5
+          ],
+          "positions": 1346,
+          "mean_prediction": 0.4549035028291671,
+          "mean_teacher": 0.4885296707669664,
+          "mean_result": 0.4587667161961367
+        },
+        {
+          "range": [
+            0.5,
+            0.6
+          ],
+          "positions": 1531,
+          "mean_prediction": 0.5476954966361647,
+          "mean_teacher": 0.5377649680776874,
+          "mean_result": 0.5457217504898759
+        },
+        {
+          "range": [
+            0.6,
+            0.7
+          ],
+          "positions": 834,
+          "mean_prediction": 0.6442907847806938,
+          "mean_teacher": 0.5942590339107812,
+          "mean_result": 0.6378896882494005
+        },
+        {
+          "range": [
+            0.7,
+            0.8
+          ],
+          "positions": 485,
+          "mean_prediction": 0.7468806434032965,
+          "mean_teacher": 0.6832110867973618,
+          "mean_result": 0.7329896907216494
+        },
+        {
+          "range": [
+            0.8,
+            0.9
+          ],
+          "positions": 333,
+          "mean_prediction": 0.8442220220120361,
+          "mean_teacher": 0.7493229364152652,
+          "mean_result": 0.8063063063063063
+        },
+        {
+          "range": [
+            0.9,
+            1.0
+          ],
+          "positions": 330,
+          "mean_prediction": 0.9510666892545979,
+          "mean_teacher": 0.861175546616805,
+          "mean_result": 0.9287878787878788
+        }
+      ]
+    },
+    "T": {
+      "positions": 6499,
+      "games": 992,
+      "game_bce": 0.6080677611946655,
+      "game_brier": 0.1978142855077851,
+      "teacher_bce": 0.6438803700454807,
+      "teacher_brier": 0.019374266950035766,
+      "cp_mae": 172.23671628942594,
+      "cp_mse": 55418.617072145644,
+      "cp_rmse": 235.41159077697438,
+      "calibration_position_weighted": [
+        {
+          "range": [
+            0.0,
+            0.1
+          ],
+          "positions": 61,
+          "mean_prediction": 0.06423968593551564,
+          "mean_teacher": 0.06564959516584004,
+          "mean_result": 0.0
+        },
+        {
+          "range": [
+            0.1,
+            0.2
+          ],
+          "positions": 195,
+          "mean_prediction": 0.1508119165178449,
+          "mean_teacher": 0.1865001634255024,
+          "mean_result": 0.07948717948717948
+        },
+        {
+          "range": [
+            0.2,
+            0.3
+          ],
+          "positions": 320,
+          "mean_prediction": 0.2536442370100664,
+          "mean_teacher": 0.24549992809430057,
+          "mean_result": 0.1328125
+        },
+        {
+          "range": [
+            0.3,
+            0.4
+          ],
+          "positions": 649,
+          "mean_prediction": 0.3532349274930642,
+          "mean_teacher": 0.3610526945862129,
+          "mean_result": 0.26194144838212635
+        },
+        {
+          "range": [
+            0.4,
+            0.5
+          ],
+          "positions": 1797,
+          "mean_prediction": 0.46148673144808744,
+          "mean_teacher": 0.47568898522524583,
+          "mean_result": 0.444629938786867
+        },
+        {
+          "range": [
+            0.5,
+            0.6
+          ],
+          "positions": 2077,
+          "mean_prediction": 0.5409124802218291,
+          "mean_teacher": 0.5501924318644796,
+          "mean_result": 0.5587385652383245
+        },
+        {
+          "range": [
+            0.6,
+            0.7
+          ],
+          "positions": 710,
+          "mean_prediction": 0.6450708591559129,
+          "mean_teacher": 0.6620457797256044,
+          "mean_result": 0.7147887323943662
+        },
+        {
+          "range": [
+            0.7,
+            0.8
+          ],
+          "positions": 366,
+          "mean_prediction": 0.744492156198051,
+          "mean_teacher": 0.7541824293136029,
+          "mean_result": 0.8101092896174863
+        },
+        {
+          "range": [
+            0.8,
+            0.9
+          ],
+          "positions": 216,
+          "mean_prediction": 0.8451082063014295,
+          "mean_teacher": 0.82408526330422,
+          "mean_result": 0.8888888888888888
+        },
+        {
+          "range": [
+            0.9,
+            1.0
+          ],
+          "positions": 108,
+          "mean_prediction": 0.9416088679581526,
+          "mean_teacher": 0.928086271351839,
+          "mean_result": 1.0
+        }
+      ]
+    },
+    "M08": {
+      "positions": 6499,
+      "games": 992,
+      "game_bce": 0.6051507126328816,
+      "game_brier": 0.19673880709309266,
+      "teacher_bce": 0.644500725774361,
+      "teacher_brier": 0.019527907525477603,
+      "cp_mae": 173.9779033162751,
+      "cp_mse": 57232.37423539254,
+      "cp_rmse": 239.23288702724912,
+      "calibration_position_weighted": [
+        {
+          "range": [
+            0.0,
+            0.1
+          ],
+          "positions": 85,
+          "mean_prediction": 0.062079909452204686,
+          "mean_teacher": 0.09437294268467217,
+          "mean_result": 0.011764705882352941
+        },
+        {
+          "range": [
+            0.1,
+            0.2
+          ],
+          "positions": 230,
+          "mean_prediction": 0.15082993063201916,
+          "mean_teacher": 0.19652077883837835,
+          "mean_result": 0.08478260869565217
+        },
+        {
+          "range": [
+            0.2,
+            0.3
+          ],
+          "positions": 339,
+          "mean_prediction": 0.2553954708204443,
+          "mean_teacher": 0.2692810983808406,
+          "mean_result": 0.168141592920354
+        },
+        {
+          "range": [
+            0.3,
+            0.4
+          ],
+          "positions": 647,
+          "mean_prediction": 0.3530924350497727,
+          "mean_teacher": 0.36749014932929147,
+          "mean_result": 0.26120556414219476
+        },
+        {
+          "range": [
+            0.4,
+            0.5
+          ],
+          "positions": 1700,
+          "mean_prediction": 0.4594556362616083,
+          "mean_teacher": 0.4793109598702996,
+          "mean_result": 0.44823529411764707
+        },
+        {
+          "range": [
+            0.5,
+            0.6
+          ],
+          "positions": 1993,
+          "mean_prediction": 0.5426987108554933,
+          "mean_teacher": 0.5469537168060749,
+          "mean_result": 0.5564475664826894
+        },
+        {
+          "range": [
+            0.6,
+            0.7
+          ],
+          "positions": 717,
+          "mean_prediction": 0.6437420543971212,
+          "mean_teacher": 0.6508620363178824,
+          "mean_result": 0.7099023709902371
+        },
+        {
+          "range": [
+            0.7,
+            0.8
+          ],
+          "positions": 415,
+          "mean_prediction": 0.7441894258012602,
+          "mean_teacher": 0.7325693856327782,
+          "mean_result": 0.7819277108433735
+        },
+        {
+          "range": [
+            0.8,
+            0.9
+          ],
+          "positions": 240,
+          "mean_prediction": 0.8489832565900718,
+          "mean_teacher": 0.8161907538124463,
+          "mean_result": 0.875
+        },
+        {
+          "range": [
+            0.9,
+            1.0
+          ],
+          "positions": 133,
+          "mean_prediction": 0.944951936526093,
+          "mean_teacher": 0.9126743135411075,
+          "mean_result": 0.981203007518797
+        }
+      ]
+    },
+    "Handcrafted": {
+      "positions": 6499,
+      "games": 992,
+      "game_bce": 0.6140256807963874,
+      "game_brier": 0.20077046315619268,
+      "teacher_bce": 0.6505376676806819,
+      "teacher_brier": 0.02207676355450772,
+      "cp_mae": 180.04731782834102,
+      "cp_mse": 64176.9979610695,
+      "cp_rmse": 253.33179421673367,
+      "calibration_position_weighted": [
+        {
+          "range": [
+            0.0,
+            0.1
+          ],
+          "positions": 106,
+          "mean_prediction": 0.06483833995554505,
+          "mean_teacher": 0.1328354049573759,
+          "mean_result": 0.0660377358490566
+        },
+        {
+          "range": [
+            0.1,
+            0.2
+          ],
+          "positions": 207,
+          "mean_prediction": 0.15349218954381605,
+          "mean_teacher": 0.18495784747899532,
+          "mean_result": 0.07246376811594203
+        },
+        {
+          "range": [
+            0.2,
+            0.3
+          ],
+          "positions": 359,
+          "mean_prediction": 0.2563550239559222,
+          "mean_teacher": 0.30978462092537695,
+          "mean_result": 0.20334261838440112
+        },
+        {
+          "range": [
+            0.3,
+            0.4
+          ],
+          "positions": 555,
+          "mean_prediction": 0.35146294993581034,
+          "mean_teacher": 0.35937335399736553,
+          "mean_result": 0.24054054054054055
+        },
+        {
+          "range": [
+            0.4,
+            0.5
+          ],
+          "positions": 1776,
+          "mean_prediction": 0.4664774688450636,
+          "mean_teacher": 0.47893658428859726,
+          "mean_result": 0.45467342342342343
+        },
+        {
+          "range": [
+            0.5,
+            0.6
+          ],
+          "positions": 2199,
+          "mean_prediction": 0.5302409470406727,
+          "mean_teacher": 0.5522634349228029,
+          "mean_result": 0.5632105502501137
+        },
+        {
+          "range": [
+            0.6,
+            0.7
+          ],
+          "positions": 530,
+          "mean_prediction": 0.6484962762139154,
+          "mean_teacher": 0.667419205234873,
+          "mean_result": 0.7235849056603774
+        },
+        {
+          "range": [
+            0.7,
+            0.8
+          ],
+          "positions": 385,
+          "mean_prediction": 0.74196609711574,
+          "mean_teacher": 0.7049084353639049,
+          "mean_result": 0.7493506493506493
+        },
+        {
+          "range": [
+            0.8,
+            0.9
+          ],
+          "positions": 229,
+          "mean_prediction": 0.847417625235087,
+          "mean_teacher": 0.8098612382984844,
+          "mean_result": 0.8755458515283843
+        },
+        {
+          "range": [
+            0.9,
+            1.0
+          ],
+          "positions": 153,
+          "mean_prediction": 0.943548507532394,
+          "mean_teacher": 0.8921999510428962,
+          "mean_result": 0.9444444444444444
+        }
+      ]
+    },
+    "R4Full14": {
+      "positions": 6499,
+      "games": 992,
+      "game_bce": 0.6011440503119202,
+      "game_brier": 0.19542847157153415,
+      "teacher_bce": 0.6551224742313126,
+      "teacher_brier": 0.02242385326030134,
+      "cp_mae": 205.34793931327246,
+      "cp_mse": 83222.29940922555,
+      "cp_rmse": 288.4827540932483,
+      "calibration_position_weighted": [
+        {
+          "range": [
+            0.0,
+            0.1
+          ],
+          "positions": 235,
+          "mean_prediction": 0.052736503871961535,
+          "mean_teacher": 0.15558407889095827,
+          "mean_result": 0.06170212765957447
+        },
+        {
+          "range": [
+            0.1,
+            0.2
+          ],
+          "positions": 290,
+          "mean_prediction": 0.15232650443315182,
+          "mean_teacher": 0.23247336936241655,
+          "mean_result": 0.12586206896551724
+        },
+        {
+          "range": [
+            0.2,
+            0.3
+          ],
+          "positions": 452,
+          "mean_prediction": 0.25364473063227466,
+          "mean_teacher": 0.3455162164361227,
+          "mean_result": 0.24557522123893805
+        },
+        {
+          "range": [
+            0.3,
+            0.4
+          ],
+          "positions": 584,
+          "mean_prediction": 0.3542775103000928,
+          "mean_teacher": 0.40316760599690593,
+          "mean_result": 0.3099315068493151
+        },
+        {
+          "range": [
+            0.4,
+            0.5
+          ],
+          "positions": 1513,
+          "mean_prediction": 0.4585290957282978,
+          "mean_teacher": 0.49216542740240765,
+          "mean_result": 0.46959682749504295
+        },
+        {
+          "range": [
+            0.5,
+            0.6
+          ],
+          "positions": 1630,
+          "mean_prediction": 0.5440618774548718,
+          "mean_teacher": 0.5407137415663453,
+          "mean_result": 0.5472392638036809
+        },
+        {
+          "range": [
+            0.6,
+            0.7
+          ],
+          "positions": 717,
+          "mean_prediction": 0.6457284206277787,
+          "mean_teacher": 0.6071786002866989,
+          "mean_result": 0.6520223152022315
+        },
+        {
+          "range": [
+            0.7,
+            0.8
+          ],
+          "positions": 453,
+          "mean_prediction": 0.7484283353702793,
+          "mean_teacher": 0.6858520088174416,
+          "mean_result": 0.7384105960264901
+        },
+        {
+          "range": [
+            0.8,
+            0.9
+          ],
+          "positions": 320,
+          "mean_prediction": 0.8459982953574722,
+          "mean_teacher": 0.7630167811654565,
+          "mean_result": 0.815625
+        },
+        {
+          "range": [
+            0.9,
+            1.0
+          ],
+          "positions": 305,
+          "mean_prediction": 0.9504598826357163,
+          "mean_teacher": 0.8633485348330627,
+          "mean_result": 0.9278688524590164
+        }
+      ]
+    }
+  },
+  "ranking": {
+    "G": {
+      "positions": 128,
+      "eligible_positions": 125,
+      "clear_pairs": 35182,
+      "primary_accuracy": 0.5109730991633253,
+      "all_accuracy": 0.5236610303802102,
+      "mean_teacher_regret_order_units": 283.125,
+      "zero_regret_fraction": 0.1953125
+    },
+    "T": {
+      "positions": 128,
+      "eligible_positions": 125,
+      "clear_pairs": 35182,
+      "primary_accuracy": 0.5069038056574092,
+      "all_accuracy": 0.52186077391944,
+      "mean_teacher_regret_order_units": 283.1171875,
+      "zero_regret_fraction": 0.203125
+    },
+    "M08": {
+      "positions": 128,
+      "eligible_positions": 125,
+      "clear_pairs": 35182,
+      "primary_accuracy": 0.5081518306513487,
+      "all_accuracy": 0.522423762332054,
+      "mean_teacher_regret_order_units": 283.1171875,
+      "zero_regret_fraction": 0.203125
+    },
+    "Handcrafted": {
+      "positions": 128,
+      "eligible_positions": 125,
+      "clear_pairs": 35182,
+      "primary_accuracy": 0.540759506659973,
+      "all_accuracy": 0.5316858534812124,
+      "mean_teacher_regret_order_units": 1069.9140625,
+      "zero_regret_fraction": 0.2265625
+    },
+    "R4Full14": {
+      "positions": 128,
+      "eligible_positions": 125,
+      "clear_pairs": 35182,
+      "primary_accuracy": 0.4954521095040119,
+      "all_accuracy": 0.5156281356605398,
+      "mean_teacher_regret_order_units": 1841.7734375,
+      "zero_regret_fraction": 0.2109375
+    }
+  },
+  "strata": {
+    "white_to_move": {
+      "G": {
+        "positions": 3444,
+        "games": 992,
+        "game_bce": 0.6031575943138365,
+        "game_brier": 0.1959227467047749,
+        "teacher_bce": 0.6620032317932271,
+        "teacher_brier": 0.022845812118708717,
+        "cp_mae": 208.59955936950786,
+        "cp_mse": 86836.45308720563,
+        "cp_rmse": 294.68025567927964,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 153,
+            "mean_prediction": 0.050484043904166116,
+            "mean_teacher": 0.18848332298353704,
+            "mean_result": 0.08496732026143791
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 180,
+            "mean_prediction": 0.14888851845958984,
+            "mean_teacher": 0.27792367403251916,
+            "mean_result": 0.18333333333333332
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 270,
+            "mean_prediction": 0.2528368913325238,
+            "mean_teacher": 0.40297353330647423,
+            "mean_result": 0.3
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 399,
+            "mean_prediction": 0.35430313613656134,
+            "mean_teacher": 0.44839205775928426,
+            "mean_result": 0.3634085213032581
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 753,
+            "mean_prediction": 0.45359659149536474,
+            "mean_teacher": 0.5149118591375254,
+            "mean_result": 0.45750332005312083
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 824,
+            "mean_prediction": 0.5465024252786005,
+            "mean_teacher": 0.5569467484325528,
+            "mean_result": 0.5625
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 417,
+            "mean_prediction": 0.6418900815360427,
+            "mean_teacher": 0.6236537826707126,
+            "mean_result": 0.6510791366906474
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 196,
+            "mean_prediction": 0.7471381904660215,
+            "mean_teacher": 0.7450876390361424,
+            "mean_result": 0.8622448979591837
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 121,
+            "mean_prediction": 0.8491244036507367,
+            "mean_teacher": 0.799092732836207,
+            "mean_result": 0.8471074380165289
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 131,
+            "mean_prediction": 0.9514202629872066,
+            "mean_teacher": 0.9078622218539589,
+            "mean_result": 0.9732824427480916
+          }
+        ]
+      },
+      "T": {
+        "positions": 3444,
+        "games": 992,
+        "game_bce": 0.6114774203387267,
+        "game_brier": 0.1991866605343102,
+        "teacher_bce": 0.6483818558069724,
+        "teacher_brier": 0.01905722466605284,
+        "cp_mae": 170.77105858089385,
+        "cp_mse": 55619.02796581234,
+        "cp_rmse": 235.8368672744199,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 32,
+            "mean_prediction": 0.0627256441702812,
+            "mean_teacher": 0.07441989827406509,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 120,
+            "mean_prediction": 0.1480894210633286,
+            "mean_teacher": 0.21637286920251178,
+            "mean_result": 0.11666666666666667
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 197,
+            "mean_prediction": 0.25242903742699596,
+            "mean_teacher": 0.2797895817187612,
+            "mean_result": 0.1548223350253807
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 395,
+            "mean_prediction": 0.3518149871047048,
+            "mean_teacher": 0.41173359961872563,
+            "mean_result": 0.32151898734177214
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1053,
+            "mean_prediction": 0.4608949828710844,
+            "mean_teacher": 0.5027343399244376,
+            "mean_result": 0.4515669515669516
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1092,
+            "mean_prediction": 0.5396604384502008,
+            "mean_teacher": 0.5739830379658101,
+            "mean_result": 0.5796703296703297
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 287,
+            "mean_prediction": 0.6432520779980272,
+            "mean_teacher": 0.7126654295584207,
+            "mean_result": 0.7909407665505227
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 139,
+            "mean_prediction": 0.7476329482169164,
+            "mean_teacher": 0.8047234970637055,
+            "mean_result": 0.8489208633093526
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 85,
+            "mean_prediction": 0.8446096116349805,
+            "mean_teacher": 0.8746601485621148,
+            "mean_result": 0.9588235294117647
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 44,
+            "mean_prediction": 0.9467433790643344,
+            "mean_teacher": 0.9532574291312478,
+            "mean_result": 1.0
+          }
+        ]
+      },
+      "M08": {
+        "positions": 3444,
+        "games": 992,
+        "game_bce": 0.6085298405465988,
+        "game_brier": 0.19806500428526433,
+        "teacher_bce": 0.6490666435607155,
+        "teacher_brier": 0.01925488179939357,
+        "cp_mae": 171.87427436614036,
+        "cp_mse": 57287.89820068775,
+        "cp_rmse": 239.34890474094038,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 50,
+            "mean_prediction": 0.06428815026909335,
+            "mean_teacher": 0.11782247278002721,
+            "mean_result": 0.02
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 142,
+            "mean_prediction": 0.15119300162649207,
+            "mean_teacher": 0.22392288679815314,
+            "mean_result": 0.1267605633802817
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 208,
+            "mean_prediction": 0.25601176901164785,
+            "mean_teacher": 0.31345061674069147,
+            "mean_result": 0.20192307692307693
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 394,
+            "mean_prediction": 0.3529886366114615,
+            "mean_teacher": 0.41596058027757593,
+            "mean_result": 0.3134517766497462
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 986,
+            "mean_prediction": 0.45872182866665834,
+            "mean_teacher": 0.506453223752603,
+            "mean_result": 0.45233265720081134
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1060,
+            "mean_prediction": 0.5418852497166815,
+            "mean_teacher": 0.5692459964999119,
+            "mean_result": 0.5773584905660377
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 305,
+            "mean_prediction": 0.6428335798895836,
+            "mean_teacher": 0.6974187035249516,
+            "mean_result": 0.7737704918032787
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 147,
+            "mean_prediction": 0.7464628390248605,
+            "mean_teacher": 0.8008819247536125,
+            "mean_result": 0.8639455782312925
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 98,
+            "mean_prediction": 0.8471915233890517,
+            "mean_teacher": 0.8552807739108088,
+            "mean_result": 0.9285714285714286
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 54,
+            "mean_prediction": 0.9483446719698649,
+            "mean_teacher": 0.9472472784804844,
+            "mean_result": 1.0
+          }
+        ]
+      },
+      "Handcrafted": {
+        "positions": 3444,
+        "games": 992,
+        "game_bce": 0.6169661342461913,
+        "game_brier": 0.20195089942650168,
+        "teacher_bce": 0.6542522160308281,
+        "teacher_brier": 0.021389532169215505,
+        "cp_mae": 177.20364583333333,
+        "cp_mse": 63294.16903561828,
+        "cp_rmse": 251.583324239939,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 67,
+            "mean_prediction": 0.0663969153601743,
+            "mean_teacher": 0.1660205936858049,
+            "mean_result": 0.09701492537313433
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 121,
+            "mean_prediction": 0.1514388177803366,
+            "mean_teacher": 0.2139907470589727,
+            "mean_result": 0.10330578512396695
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 230,
+            "mean_prediction": 0.25599885872084066,
+            "mean_teacher": 0.3508496749345359,
+            "mean_result": 0.2543478260869565
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 339,
+            "mean_prediction": 0.34835792508347285,
+            "mean_teacher": 0.4055201336483273,
+            "mean_result": 0.28171091445427726
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1039,
+            "mean_prediction": 0.4663954761705882,
+            "mean_teacher": 0.5026363020958614,
+            "mean_result": 0.4615014436958614
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1144,
+            "mean_prediction": 0.5275101344991354,
+            "mean_teacher": 0.5779771268626003,
+            "mean_result": 0.5852272727272727
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 210,
+            "mean_prediction": 0.6469225852581982,
+            "mean_teacher": 0.7187633409501593,
+            "mean_result": 0.7738095238095238
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 135,
+            "mean_prediction": 0.7437934795148917,
+            "mean_teacher": 0.7860901996727926,
+            "mean_result": 0.8666666666666667
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 99,
+            "mean_prediction": 0.846744894201764,
+            "mean_teacher": 0.8356213046870624,
+            "mean_result": 0.9090909090909091
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 60,
+            "mean_prediction": 0.947719461090248,
+            "mean_teacher": 0.9422045390038802,
+            "mean_result": 0.9833333333333333
+          }
+        ]
+      },
+      "R4Full14": {
+        "positions": 3444,
+        "games": 992,
+        "game_bce": 0.6038857340398067,
+        "game_brier": 0.19640367439018863,
+        "teacher_bce": 0.6594677384279014,
+        "teacher_brier": 0.022178114719534528,
+        "cp_mae": 199.77279029464106,
+        "cp_mse": 80999.06309840149,
+        "cp_rmse": 284.6033434420641,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 142,
+            "mean_prediction": 0.05340256997274362,
+            "mean_teacher": 0.1856118391586307,
+            "mean_result": 0.09154929577464789
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 178,
+            "mean_prediction": 0.15297763463190586,
+            "mean_teacher": 0.26239012712393794,
+            "mean_result": 0.16292134831460675
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 281,
+            "mean_prediction": 0.2537709617782608,
+            "mean_teacher": 0.3996480546886382,
+            "mean_result": 0.304270462633452
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 331,
+            "mean_prediction": 0.3546082357375168,
+            "mean_teacher": 0.44240292959988675,
+            "mean_result": 0.3459214501510574
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 906,
+            "mean_prediction": 0.4586042246522684,
+            "mean_teacher": 0.5135050544239134,
+            "mean_result": 0.46357615894039733
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 862,
+            "mean_prediction": 0.5427812218530174,
+            "mean_teacher": 0.5627727040146924,
+            "mean_result": 0.5626450116009281
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 322,
+            "mean_prediction": 0.6458202905903874,
+            "mean_teacher": 0.6527405687310288,
+            "mean_result": 0.7127329192546584
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 168,
+            "mean_prediction": 0.7444092125331042,
+            "mean_teacher": 0.7524762893616147,
+            "mean_result": 0.8601190476190477
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 128,
+            "mean_prediction": 0.8451736957450091,
+            "mean_teacher": 0.7984255111021581,
+            "mean_result": 0.8359375
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 126,
+            "mean_prediction": 0.9502836313690083,
+            "mean_teacher": 0.904824044390733,
+            "mean_result": 0.9722222222222222
+          }
+        ]
+      }
+    },
+    "black_to_move": {
+      "G": {
+        "positions": 3055,
+        "games": 992,
+        "game_bce": 0.6010392305781345,
+        "game_brier": 0.19552946767400078,
+        "teacher_bce": 0.6537421282212591,
+        "teacher_brier": 0.02260260462460326,
+        "cp_mae": 220.76160933855886,
+        "cp_mse": 90711.8377101455,
+        "cp_rmse": 301.1840595219898,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 106,
+            "mean_prediction": 0.051700469640190906,
+            "mean_teacher": 0.11676004502104455,
+            "mean_result": 0.014150943396226415
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 111,
+            "mean_prediction": 0.14924869976615762,
+            "mean_teacher": 0.18951031405024893,
+            "mean_result": 0.07207207207207207
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 170,
+            "mean_prediction": 0.2533398383479815,
+            "mean_teacher": 0.2567436850919722,
+            "mean_result": 0.14705882352941177
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 251,
+            "mean_prediction": 0.3531353389782002,
+            "mean_teacher": 0.3583347165329826,
+            "mean_result": 0.27689243027888444
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 593,
+            "mean_prediction": 0.4565630377943494,
+            "mean_teacher": 0.4550291853655654,
+            "mean_result": 0.46037099494097805
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 707,
+            "mean_prediction": 0.5490860069595493,
+            "mean_teacher": 0.5154088336895558,
+            "mean_result": 0.5261669024045261
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 417,
+            "mean_prediction": 0.646691488025345,
+            "mean_teacher": 0.5648642851508499,
+            "mean_result": 0.6247002398081535
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 289,
+            "mean_prediction": 0.7467059748071231,
+            "mean_teacher": 0.6412463662478772,
+            "mean_result": 0.6453287197231834
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 212,
+            "mean_prediction": 0.8414239645673062,
+            "mean_teacher": 0.7209165903448216,
+            "mean_result": 0.7830188679245284
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 199,
+            "mean_prediction": 0.9508339346869008,
+            "mean_teacher": 0.8304421071390804,
+            "mean_result": 0.8994974874371859
+          }
+        ]
+      },
+      "T": {
+        "positions": 3055,
+        "games": 992,
+        "game_bce": 0.606619280885955,
+        "game_brier": 0.1973614256660968,
+        "teacher_bce": 0.639717640065885,
+        "teacher_brier": 0.019073424469269493,
+        "cp_mae": 173.2261698240269,
+        "cp_mse": 54198.74025392696,
+        "cp_rmse": 232.8062289843787,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 29,
+            "mean_prediction": 0.06591035271094677,
+            "mean_teacher": 0.05597201932228134,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 75,
+            "mean_prediction": 0.15516790924507104,
+            "mean_teacher": 0.13870383418228743,
+            "mean_result": 0.02
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 123,
+            "mean_prediction": 0.2555905322772605,
+            "mean_teacher": 0.1905807267608148,
+            "mean_result": 0.0975609756097561
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 254,
+            "mean_prediction": 0.3554431025064577,
+            "mean_teacher": 0.28223790132699017,
+            "mean_result": 0.16929133858267717
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 744,
+            "mean_prediction": 0.4623242465711845,
+            "mean_teacher": 0.43741108401792217,
+            "mean_result": 0.43481182795698925
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 985,
+            "mean_prediction": 0.5423005305919999,
+            "mean_teacher": 0.5238174655064564,
+            "mean_result": 0.5355329949238579
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 423,
+            "mean_prediction": 0.6463048785230835,
+            "mean_teacher": 0.6277010054891544,
+            "mean_result": 0.6631205673758865
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 227,
+            "mean_prediction": 0.7425689399398029,
+            "mean_teacher": 0.7232343746119981,
+            "mean_result": 0.7863436123348018
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 131,
+            "mean_prediction": 0.845431721924698,
+            "mean_teacher": 0.7912694980605477,
+            "mean_result": 0.8435114503816794
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 64,
+            "mean_prediction": 0.9380788915726523,
+            "mean_teacher": 0.9107811003784955,
+            "mean_result": 1.0
+          }
+        ]
+      },
+      "M08": {
+        "positions": 3055,
+        "games": 992,
+        "game_bce": 0.6039508279863527,
+        "game_brier": 0.19643618757503306,
+        "teacher_bce": 0.6402578224094918,
+        "teacher_brier": 0.01917532877408893,
+        "cp_mae": 175.77229833787527,
+        "cp_mse": 56061.69064932737,
+        "cp_rmse": 236.7735007329312,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 35,
+            "mean_prediction": 0.05892527971379234,
+            "mean_teacher": 0.0608736139770221,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 88,
+            "mean_prediction": 0.15024406607275603,
+            "mean_teacher": 0.15230374099419627,
+            "mean_result": 0.017045454545454544
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 131,
+            "mean_prediction": 0.25441692102067065,
+            "mean_teacher": 0.1991493440384819,
+            "mean_result": 0.11450381679389313
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 253,
+            "mean_prediction": 0.3532540816295934,
+            "mean_teacher": 0.2920065533070619,
+            "mean_result": 0.17984189723320157
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 714,
+            "mean_prediction": 0.46046898960701527,
+            "mean_teacher": 0.441828785937595,
+            "mean_result": 0.4425770308123249
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 933,
+            "mean_prediction": 0.5436229003593952,
+            "mean_teacher": 0.5216270110445878,
+            "mean_result": 0.5326902465166131
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 412,
+            "mean_prediction": 0.6444145901369244,
+            "mean_teacher": 0.6163965423903193,
+            "mean_result": 0.662621359223301
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 268,
+            "mean_prediction": 0.7429424416823451,
+            "mean_teacher": 0.6950994481299324,
+            "mean_result": 0.7369402985074627
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 142,
+            "mean_prediction": 0.8502198048555646,
+            "mean_teacher": 0.7892131343079427,
+            "mean_result": 0.8380281690140845
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 79,
+            "mean_prediction": 0.9426328515392111,
+            "mean_teacher": 0.8890421602914071,
+            "mean_result": 0.9683544303797469
+          }
+        ]
+      },
+      "Handcrafted": {
+        "positions": 3055,
+        "games": 992,
+        "game_bce": 0.6125771428350504,
+        "game_brier": 0.20024842145572516,
+        "teacher_bce": 0.6472124028020398,
+        "teacher_brier": 0.022192432565888917,
+        "cp_mae": 182.29936091490077,
+        "cp_mse": 64120.17403296334,
+        "cp_rmse": 253.21961620886194,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 39,
+            "mean_prediction": 0.062160787337335835,
+            "mean_teacher": 0.07582495252648504,
+            "mean_result": 0.01282051282051282
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 86,
+            "mean_prediction": 0.1563812358622,
+            "mean_teacher": 0.1441092329536784,
+            "mean_result": 0.029069767441860465
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 129,
+            "mean_prediction": 0.256990047243277,
+            "mean_teacher": 0.2365678579633106,
+            "mean_result": 0.1124031007751938
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 216,
+            "mean_prediction": 0.3563361139401734,
+            "mean_teacher": 0.28694854704516176,
+            "mean_result": 0.17592592592592593
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 737,
+            "mean_prediction": 0.46659305960324543,
+            "mean_teacher": 0.4455254488723863,
+            "mean_result": 0.4450474898236092
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1055,
+            "mean_prediction": 0.5332021314459037,
+            "mean_teacher": 0.5243805310563308,
+            "mean_result": 0.5393364928909953
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 320,
+            "mean_prediction": 0.6495290109036047,
+            "mean_teacher": 0.633724616171716,
+            "mean_result": 0.690625
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 250,
+            "mean_prediction": 0.7409793106201981,
+            "mean_teacher": 0.6610702826371052,
+            "mean_result": 0.686
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 130,
+            "mean_prediction": 0.8479299357912332,
+            "mean_teacher": 0.7902439569717982,
+            "mean_result": 0.85
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 93,
+            "mean_prediction": 0.9408575697531335,
+            "mean_teacher": 0.8599389265519387,
+            "mean_result": 0.9193548387096774
+          }
+        ]
+      },
+      "R4Full14": {
+        "positions": 3055,
+        "games": 992,
+        "game_bce": 0.6007514135342968,
+        "game_brier": 0.1955734401146912,
+        "teacher_bce": 0.6510247332176234,
+        "teacher_brier": 0.02201945021494603,
+        "cp_mae": 210.09998866527513,
+        "cp_mse": 83804.84548555607,
+        "cp_rmse": 289.490665627678,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 93,
+            "mean_prediction": 0.05171949971807922,
+            "mean_teacher": 0.10973524063279178,
+            "mean_result": 0.016129032258064516
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 112,
+            "mean_prediction": 0.1512916725101321,
+            "mean_teacher": 0.1849270936342844,
+            "mean_result": 0.06696428571428571
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 171,
+            "mean_prediction": 0.25343729816430904,
+            "mean_teacher": 0.25656272784573186,
+            "mean_result": 0.14912280701754385
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 253,
+            "mean_prediction": 0.3538448220795893,
+            "mean_teacher": 0.35183601661909314,
+            "mean_result": 0.2628458498023715
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 607,
+            "mean_prediction": 0.4584169593113005,
+            "mean_teacher": 0.4603141883884303,
+            "mean_result": 0.4785831960461285
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 768,
+            "mean_prediction": 0.5454992799663282,
+            "mean_teacher": 0.515954854026664,
+            "mean_result": 0.5299479166666666
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 395,
+            "mean_prediction": 0.645653529164589,
+            "mean_teacher": 0.5700369449979034,
+            "mean_result": 0.6025316455696202
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 285,
+            "mean_prediction": 0.7507975025164036,
+            "mean_teacher": 0.6465787487071921,
+            "mean_result": 0.6666666666666666
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 192,
+            "mean_prediction": 0.8465480284324475,
+            "mean_teacher": 0.7394109612076555,
+            "mean_result": 0.8020833333333334
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 179,
+            "mean_prediction": 0.9505839477731757,
+            "mean_teacher": 0.8341534834125798,
+            "mean_result": 0.8966480446927374
+          }
+        ]
+      }
+    },
+    "draw": {
+      "G": {
+        "positions": 401,
+        "games": 54,
+        "game_bce": 0.7747793330997109,
+        "game_brier": 0.030641792932263146,
+        "teacher_bce": 0.7106454035387716,
+        "teacher_brier": 0.02298279456567864,
+        "cp_mae": 208.69909585314514,
+        "cp_mse": 86475.09429782165,
+        "cp_rmse": 294.0664793848861,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 5,
+            "mean_prediction": 0.05595351513959392,
+            "mean_teacher": 0.45678044403443313,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 20,
+            "mean_prediction": 0.16512817405620883,
+            "mean_teacher": 0.37914932875113483,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 32,
+            "mean_prediction": 0.260400183026802,
+            "mean_teacher": 0.39466228547267,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 43,
+            "mean_prediction": 0.35162990362268876,
+            "mean_teacher": 0.4305995323228022,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 95,
+            "mean_prediction": 0.4524093698451996,
+            "mean_teacher": 0.47729491854213535,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 99,
+            "mean_prediction": 0.5503769710358772,
+            "mean_teacher": 0.5230586727822456,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 58,
+            "mean_prediction": 0.6499542204466595,
+            "mean_teacher": 0.5740804926819003,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 31,
+            "mean_prediction": 0.7461219937325373,
+            "mean_teacher": 0.6309820807248488,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 11,
+            "mean_prediction": 0.8378073095529721,
+            "mean_teacher": 0.6915432468788683,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 7,
+            "mean_prediction": 0.9332180796452679,
+            "mean_teacher": 0.7423947118168982,
+            "mean_result": 0.5
+          }
+        ]
+      },
+      "T": {
+        "positions": 401,
+        "games": 54,
+        "game_bce": 0.7277167028438772,
+        "game_brier": 0.014947319773006515,
+        "teacher_bce": 0.6861923582185476,
+        "teacher_brier": 0.015239989189531185,
+        "cp_mae": 159.11492770593807,
+        "cp_mse": 46713.32294238437,
+        "cp_rmse": 216.13265126395035,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 5,
+            "mean_prediction": 0.14225503615441398,
+            "mean_teacher": 0.45678044403443313,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 19,
+            "mean_prediction": 0.26693625772069685,
+            "mean_teacher": 0.3670580286632475,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 50,
+            "mean_prediction": 0.35413132078917636,
+            "mean_teacher": 0.38789959793290313,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 116,
+            "mean_prediction": 0.45883889101042186,
+            "mean_teacher": 0.4727847268584721,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 135,
+            "mean_prediction": 0.5398986386229021,
+            "mean_teacher": 0.5301835526977535,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 59,
+            "mean_prediction": 0.6428563697039588,
+            "mean_teacher": 0.6160263935464494,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 9,
+            "mean_prediction": 0.7428024601682741,
+            "mean_teacher": 0.7189316182993396,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 8,
+            "mean_prediction": 0.8390920478699749,
+            "mean_teacher": 0.7389756360524096,
+            "mean_result": 0.5
+          }
+        ]
+      },
+      "M08": {
+        "positions": 401,
+        "games": 54,
+        "game_bce": 0.7341716248333063,
+        "game_brier": 0.01735148458825237,
+        "teacher_bce": 0.6889516329008364,
+        "teacher_brier": 0.01621034351108149,
+        "cp_mae": 164.5674418865268,
+        "cp_mse": 50847.05406438167,
+        "cp_rmse": 225.49291355690465,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 7,
+            "mean_prediction": 0.14184651362084405,
+            "mean_teacher": 0.46921817426380646,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 22,
+            "mean_prediction": 0.26261812418195823,
+            "mean_teacher": 0.36482938766310813,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 52,
+            "mean_prediction": 0.35348156706524086,
+            "mean_teacher": 0.40048286471606764,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 110,
+            "mean_prediction": 0.4587488205045471,
+            "mean_teacher": 0.4727972172604832,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 132,
+            "mean_prediction": 0.5436121909320639,
+            "mean_teacher": 0.5283124355889939,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 54,
+            "mean_prediction": 0.6467237444344355,
+            "mean_teacher": 0.6185982569193443,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 15,
+            "mean_prediction": 0.7328453123277563,
+            "mean_teacher": 0.6401073594278391,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 8,
+            "mean_prediction": 0.8448793837173161,
+            "mean_teacher": 0.7604137322993347,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 1,
+            "mean_prediction": 0.9152249473815375,
+            "mean_teacher": 0.8284952300245991,
+            "mean_result": 0.5
+          }
+        ]
+      },
+      "Handcrafted": {
+        "positions": 401,
+        "games": 54,
+        "game_bce": 0.7333307146866793,
+        "game_brier": 0.016515061274334147,
+        "teacher_bce": 0.6907287923798892,
+        "teacher_brier": 0.01638085174987816,
+        "cp_mae": 156.3365520282187,
+        "cp_mse": 53920.36922398589,
+        "cp_rmse": 232.2075994104971,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 4,
+            "mean_prediction": 0.08973967240291458,
+            "mean_teacher": 0.4213036400149284,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 4,
+            "mean_prediction": 0.15458686766615176,
+            "mean_teacher": 0.3295612831879241,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 18,
+            "mean_prediction": 0.26829419942014154,
+            "mean_teacher": 0.4168733559696982,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 43,
+            "mean_prediction": 0.3484786309871484,
+            "mean_teacher": 0.38794523023493405,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 105,
+            "mean_prediction": 0.4600818732897034,
+            "mean_teacher": 0.45301034544309954,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 161,
+            "mean_prediction": 0.5293448705279242,
+            "mean_teacher": 0.5311573734427384,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 41,
+            "mean_prediction": 0.6420532816991554,
+            "mean_teacher": 0.6680249377715105,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 19,
+            "mean_prediction": 0.7507679667229992,
+            "mean_teacher": 0.6328617294565306,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 5,
+            "mean_prediction": 0.8342598877513389,
+            "mean_teacher": 0.7224041535721732,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 1,
+            "mean_prediction": 0.9105199406664386,
+            "mean_teacher": 0.5018749912109869,
+            "mean_result": 0.5
+          }
+        ]
+      },
+      "R4Full14": {
+        "positions": 401,
+        "games": 54,
+        "game_bce": 0.7701987967263103,
+        "game_brier": 0.029305752044943695,
+        "teacher_bce": 0.7075107622051322,
+        "teacher_brier": 0.022198747346977514,
+        "cp_mae": 203.53376512037718,
+        "cp_mse": 80719.53267238896,
+        "cp_rmse": 284.1118312784404,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 5,
+            "mean_prediction": 0.06016701557012856,
+            "mean_teacher": 0.45678044403443313,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 13,
+            "mean_prediction": 0.15892315683347033,
+            "mean_teacher": 0.3414502587445377,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 38,
+            "mean_prediction": 0.2539368118944567,
+            "mean_teacher": 0.410966641593536,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 40,
+            "mean_prediction": 0.350388780448138,
+            "mean_teacher": 0.4130460972745911,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 101,
+            "mean_prediction": 0.455717451770785,
+            "mean_teacher": 0.48492608785569347,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 98,
+            "mean_prediction": 0.5424683626393004,
+            "mean_teacher": 0.5198646254319205,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 57,
+            "mean_prediction": 0.6467572195144351,
+            "mean_teacher": 0.5779592236700478,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 35,
+            "mean_prediction": 0.7488427147705495,
+            "mean_teacher": 0.6246081654675808,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 6,
+            "mean_prediction": 0.847733100601674,
+            "mean_teacher": 0.7160288022387679,
+            "mean_result": 0.5
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 8,
+            "mean_prediction": 0.9257074765889104,
+            "mean_teacher": 0.7389756360524096,
+            "mean_result": 0.5
+          }
+        ]
+      }
+    },
+    "early_ply16_40": {
+      "G": {
+        "positions": 3374,
+        "games": 987,
+        "game_bce": 0.674317608368957,
+        "game_brier": 0.22628802146917373,
+        "teacher_bce": 0.6964896503121316,
+        "teacher_brier": 0.01902033223840317,
+        "cp_mae": 182.92444516773688,
+        "cp_mse": 68298.34367944516,
+        "cp_rmse": 261.33951802099347,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 35,
+            "mean_prediction": 0.05760192224320384,
+            "mean_teacher": 0.22973180478789645,
+            "mean_result": 0.17142857142857143
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 63,
+            "mean_prediction": 0.15729371716591742,
+            "mean_teacher": 0.2951152796101328,
+            "mean_result": 0.23015873015873015
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 166,
+            "mean_prediction": 0.2545334704671479,
+            "mean_teacher": 0.3897338877395264,
+            "mean_result": 0.29518072289156627
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 324,
+            "mean_prediction": 0.35604504513032614,
+            "mean_teacher": 0.44153893737003647,
+            "mean_result": 0.3549382716049383
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 885,
+            "mean_prediction": 0.4567126595220659,
+            "mean_teacher": 0.49833614797024933,
+            "mean_result": 0.47401129943502823
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1071,
+            "mean_prediction": 0.5471900952417269,
+            "mean_teacher": 0.5296146001878713,
+            "mean_result": 0.53828197945845
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 462,
+            "mean_prediction": 0.6418578157923847,
+            "mean_teacher": 0.5694818361707485,
+            "mean_result": 0.6103896103896104
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 206,
+            "mean_prediction": 0.7456751575405192,
+            "mean_teacher": 0.6386672485828585,
+            "mean_result": 0.6432038834951457
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 107,
+            "mean_prediction": 0.8379151670934427,
+            "mean_teacher": 0.6776707604231575,
+            "mean_result": 0.6915887850467289
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 55,
+            "mean_prediction": 0.9437107403809915,
+            "mean_teacher": 0.7888629191271272,
+            "mean_result": 0.8181818181818182
+          }
+        ]
+      },
+      "T": {
+        "positions": 3374,
+        "games": 987,
+        "game_bce": 0.6675245240615295,
+        "game_brier": 0.224428642772399,
+        "teacher_bce": 0.68103754318044,
+        "teacher_brier": 0.013833850824958756,
+        "cp_mae": 147.04890787065034,
+        "cp_mse": 42350.54052452518,
+        "cp_rmse": 205.79246955252074,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 3,
+            "mean_prediction": 0.05863828725057537,
+            "mean_teacher": 0.08002887341562236,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 32,
+            "mean_prediction": 0.15090536956925676,
+            "mean_teacher": 0.24727496753816275,
+            "mean_result": 0.21875
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 75,
+            "mean_prediction": 0.2652641144146873,
+            "mean_teacher": 0.2926418758419479,
+            "mean_result": 0.19333333333333333
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 239,
+            "mean_prediction": 0.3526959521701128,
+            "mean_teacher": 0.40187737873568,
+            "mean_result": 0.29916317991631797
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1136,
+            "mean_prediction": 0.46496731294206206,
+            "mean_teacher": 0.4865529965264629,
+            "mean_result": 0.46742957746478875
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1410,
+            "mean_prediction": 0.5372791954309035,
+            "mean_teacher": 0.538088894915437,
+            "mean_result": 0.5439716312056737
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 309,
+            "mean_prediction": 0.6443003640788986,
+            "mean_teacher": 0.6294432600375781,
+            "mean_result": 0.6504854368932039
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 118,
+            "mean_prediction": 0.7386467602614534,
+            "mean_teacher": 0.6785572972191779,
+            "mean_result": 0.6864406779661016
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 43,
+            "mean_prediction": 0.847537952298773,
+            "mean_teacher": 0.7687880680472388,
+            "mean_result": 0.7441860465116279
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 9,
+            "mean_prediction": 0.954100134981799,
+            "mean_teacher": 0.8879396694441948,
+            "mean_result": 1.0
+          }
+        ]
+      },
+      "M08": {
+        "positions": 3374,
+        "games": 987,
+        "game_bce": 0.667600037048244,
+        "game_brier": 0.2243785650820156,
+        "teacher_bce": 0.6825622292772298,
+        "teacher_brier": 0.014385803511708149,
+        "cp_mae": 150.3390200135485,
+        "cp_mse": 44646.329406256446,
+        "cp_rmse": 211.29678039728017,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 8,
+            "mean_prediction": 0.07400913895417457,
+            "mean_teacher": 0.17274351120124004,
+            "mean_result": 0.125
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 35,
+            "mean_prediction": 0.15147192338389753,
+            "mean_teacher": 0.23779326214096472,
+            "mean_result": 0.17142857142857143
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 90,
+            "mean_prediction": 0.2628974490910822,
+            "mean_teacher": 0.33418445348170217,
+            "mean_result": 0.2611111111111111
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 249,
+            "mean_prediction": 0.35205253377758056,
+            "mean_teacher": 0.39453778782560295,
+            "mean_result": 0.28714859437751006
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1089,
+            "mean_prediction": 0.4618365958339265,
+            "mean_teacher": 0.4901441647895144,
+            "mean_result": 0.4641873278236915
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1370,
+            "mean_prediction": 0.5399713383508694,
+            "mean_teacher": 0.5378148222485106,
+            "mean_result": 0.5478102189781022
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 322,
+            "mean_prediction": 0.6426954793740504,
+            "mean_teacher": 0.6131329025348352,
+            "mean_result": 0.6490683229813664
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 148,
+            "mean_prediction": 0.7392655413357605,
+            "mean_teacher": 0.6584727771860375,
+            "mean_result": 0.6554054054054054
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 49,
+            "mean_prediction": 0.8501204171318747,
+            "mean_teacher": 0.7823713826504137,
+            "mean_result": 0.7755102040816326
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 14,
+            "mean_prediction": 0.9435799653856607,
+            "mean_teacher": 0.8130607481742834,
+            "mean_result": 0.8571428571428571
+          }
+        ]
+      },
+      "Handcrafted": {
+        "positions": 3374,
+        "games": 987,
+        "game_bce": 0.671391456120738,
+        "game_brier": 0.22608334141979136,
+        "teacher_bce": 0.6852326162268548,
+        "teacher_brier": 0.01544945668780791,
+        "cp_mae": 152.85317460317458,
+        "cp_mse": 48437.95719351571,
+        "cp_rmse": 220.0862494421578,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 17,
+            "mean_prediction": 0.07764319932295717,
+            "mean_teacher": 0.24971389022820792,
+            "mean_result": 0.23529411764705882
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 30,
+            "mean_prediction": 0.16087310453754736,
+            "mean_teacher": 0.20880232442462043,
+            "mean_result": 0.15
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 120,
+            "mean_prediction": 0.2624024641233375,
+            "mean_teacher": 0.3570465599232167,
+            "mean_result": 0.25
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 203,
+            "mean_prediction": 0.34725979201952356,
+            "mean_teacher": 0.40857750462814857,
+            "mean_result": 0.2881773399014778
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1110,
+            "mean_prediction": 0.4726748910261878,
+            "mean_teacher": 0.490243877897747,
+            "mean_result": 0.47927927927927927
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1461,
+            "mean_prediction": 0.5246806442199288,
+            "mean_teacher": 0.540841325638214,
+            "mean_result": 0.5462012320328542
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 198,
+            "mean_prediction": 0.64900826825313,
+            "mean_teacher": 0.6241073975419543,
+            "mean_result": 0.6388888888888888
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 165,
+            "mean_prediction": 0.7371324708988122,
+            "mean_teacher": 0.6374830007673075,
+            "mean_result": 0.6333333333333333
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 46,
+            "mean_prediction": 0.8437027024984296,
+            "mean_teacher": 0.7571482077215366,
+            "mean_result": 0.8043478260869565
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 24,
+            "mean_prediction": 0.9318083885890641,
+            "mean_teacher": 0.7905688721175829,
+            "mean_result": 0.7916666666666666
+          }
+        ]
+      },
+      "R4Full14": {
+        "positions": 3374,
+        "games": 987,
+        "game_bce": 0.6713086012734008,
+        "game_brier": 0.22528172431182078,
+        "teacher_bce": 0.6921331130532543,
+        "teacher_brier": 0.017491592520833647,
+        "cp_mae": 168.91915084287675,
+        "cp_mse": 61190.5150594283,
+        "cp_rmse": 247.36716649431932,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 31,
+            "mean_prediction": 0.05932390162579542,
+            "mean_teacher": 0.23913258720401392,
+            "mean_result": 0.1935483870967742
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 59,
+            "mean_prediction": 0.16372174366703346,
+            "mean_teacher": 0.2636848752093084,
+            "mean_result": 0.17796610169491525
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 170,
+            "mean_prediction": 0.2546643400709752,
+            "mean_teacher": 0.39491968422384743,
+            "mean_result": 0.3
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 248,
+            "mean_prediction": 0.36009619414983474,
+            "mean_teacher": 0.43024532661920356,
+            "mean_result": 0.3588709677419355
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1044,
+            "mean_prediction": 0.4622227683354946,
+            "mean_teacher": 0.49777833577744535,
+            "mean_result": 0.47701149425287354
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1155,
+            "mean_prediction": 0.5417017835440121,
+            "mean_teacher": 0.5325388940685204,
+            "mean_result": 0.5380952380952381
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 339,
+            "mean_prediction": 0.6443052971587093,
+            "mean_teacher": 0.5909727009263284,
+            "mean_result": 0.6356932153392331
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 193,
+            "mean_prediction": 0.7494483354569242,
+            "mean_teacher": 0.6344371437153091,
+            "mean_result": 0.6373056994818653
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 87,
+            "mean_prediction": 0.8412374952444877,
+            "mean_teacher": 0.6983334454376214,
+            "mean_result": 0.7068965517241379
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 48,
+            "mean_prediction": 0.9437518681108461,
+            "mean_teacher": 0.793427157948669,
+            "mean_result": 0.7916666666666666
+          }
+        ]
+      }
+    },
+    "opening_phase17_24": {
+      "G": {
+        "positions": 3743,
+        "games": 944,
+        "game_bce": 0.6702683034746915,
+        "game_brier": 0.2250699070055014,
+        "teacher_bce": 0.6972464018395015,
+        "teacher_brier": 0.02189495216956137,
+        "cp_mae": 193.96375164704347,
+        "cp_mse": 76616.99543049162,
+        "cp_rmse": 276.79775185230756,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 41,
+            "mean_prediction": 0.058423489469394255,
+            "mean_teacher": 0.20040350686806122,
+            "mean_result": 0.10975609756097561
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 83,
+            "mean_prediction": 0.15434400882755112,
+            "mean_teacher": 0.3034511711848915,
+            "mean_result": 0.21084337349397592
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 207,
+            "mean_prediction": 0.255976886898794,
+            "mean_teacher": 0.39650609380762264,
+            "mean_result": 0.2922705314009662
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 355,
+            "mean_prediction": 0.3574336799235196,
+            "mean_teacher": 0.44211865598560324,
+            "mean_result": 0.352112676056338
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 961,
+            "mean_prediction": 0.45633528573875154,
+            "mean_teacher": 0.4963044270984818,
+            "mean_result": 0.45733610822060355
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1139,
+            "mean_prediction": 0.5475637190428762,
+            "mean_teacher": 0.536324864475754,
+            "mean_result": 0.5333625987708516
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 526,
+            "mean_prediction": 0.6419939812620736,
+            "mean_teacher": 0.5822867328070062,
+            "mean_result": 0.6188212927756654
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 244,
+            "mean_prediction": 0.7447396506349929,
+            "mean_teacher": 0.6572928171618005,
+            "mean_result": 0.6700819672131147
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 132,
+            "mean_prediction": 0.840561391851501,
+            "mean_teacher": 0.7010117191204036,
+            "mean_result": 0.7386363636363636
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 55,
+            "mean_prediction": 0.9417509959380781,
+            "mean_teacher": 0.8037511750380669,
+            "mean_result": 0.8727272727272727
+          }
+        ]
+      },
+      "T": {
+        "positions": 3743,
+        "games": 944,
+        "game_bce": 0.6635330304978768,
+        "game_brier": 0.22328255919709414,
+        "teacher_bce": 0.6807229064452887,
+        "teacher_brier": 0.016566106687837794,
+        "cp_mae": 157.66956034986885,
+        "cp_mse": 48751.69323294965,
+        "cp_rmse": 220.79785604246624,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 4,
+            "mean_prediction": 0.05901831471542522,
+            "mean_teacher": 0.06002165506171677,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 36,
+            "mean_prediction": 0.1500000778166965,
+            "mean_teacher": 0.21574227307414162,
+            "mean_result": 0.125
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 98,
+            "mean_prediction": 0.25979706116194673,
+            "mean_teacher": 0.3029511725345258,
+            "mean_result": 0.18877551020408162
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 294,
+            "mean_prediction": 0.35368237367219185,
+            "mean_teacher": 0.40182152832273865,
+            "mean_result": 0.3010204081632653
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1235,
+            "mean_prediction": 0.46458216088863213,
+            "mean_teacher": 0.4871388661766957,
+            "mean_result": 0.4518218623481781
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1518,
+            "mean_prediction": 0.5383176723843536,
+            "mean_teacher": 0.5463943144599445,
+            "mean_result": 0.5454545454545454
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 362,
+            "mean_prediction": 0.6440891534520177,
+            "mean_teacher": 0.6451078410759814,
+            "mean_result": 0.6671270718232044
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 140,
+            "mean_prediction": 0.7398726091264233,
+            "mean_teacher": 0.7074385458044337,
+            "mean_result": 0.7357142857142858
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 45,
+            "mean_prediction": 0.8430889813016296,
+            "mean_teacher": 0.7771799538319644,
+            "mean_result": 0.8
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 11,
+            "mean_prediction": 0.9321695873240525,
+            "mean_teacher": 0.8398569262105346,
+            "mean_result": 1.0
+          }
+        ]
+      },
+      "M08": {
+        "positions": 3743,
+        "games": 944,
+        "game_bce": 0.6635028552304704,
+        "game_brier": 0.2231884359745502,
+        "teacher_bce": 0.6823632375356798,
+        "teacher_brier": 0.017131493622617514,
+        "cp_mae": 161.01132410083412,
+        "cp_mse": 51205.51222146886,
+        "cp_rmse": 226.28635005556313,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 9,
+            "mean_prediction": 0.07038626118146235,
+            "mean_teacher": 0.14090234084941666,
+            "mean_result": 0.1111111111111111
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 45,
+            "mean_prediction": 0.154290082085986,
+            "mean_teacher": 0.2277714006810217,
+            "mean_result": 0.12222222222222222
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 116,
+            "mean_prediction": 0.26131338634450385,
+            "mean_teacher": 0.33557021914596363,
+            "mean_result": 0.2413793103448276
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 298,
+            "mean_prediction": 0.3529576700807209,
+            "mean_teacher": 0.39860077999811644,
+            "mean_result": 0.27684563758389263
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1182,
+            "mean_prediction": 0.4616492519488095,
+            "mean_teacher": 0.4901830769125893,
+            "mean_result": 0.4526226734348562
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1469,
+            "mean_prediction": 0.5407289074379733,
+            "mean_teacher": 0.5444931158984255,
+            "mean_result": 0.5469707283866576
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 379,
+            "mean_prediction": 0.6420391760048718,
+            "mean_teacher": 0.634614189618945,
+            "mean_result": 0.662269129287599
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 177,
+            "mean_prediction": 0.7407751450876429,
+            "mean_teacher": 0.6878605664398625,
+            "mean_result": 0.7146892655367232
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 52,
+            "mean_prediction": 0.8454132212818217,
+            "mean_teacher": 0.7630391872204801,
+            "mean_result": 0.7692307692307693
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 16,
+            "mean_prediction": 0.9340512573078806,
+            "mean_teacher": 0.8265405482781402,
+            "mean_result": 1.0
+          }
+        ]
+      },
+      "Handcrafted": {
+        "positions": 3743,
+        "games": 944,
+        "game_bce": 0.6711718938545805,
+        "game_brier": 0.22662202677208992,
+        "teacher_bce": 0.6869900242172694,
+        "teacher_brier": 0.019124782492069916,
+        "cp_mae": 166.35196226795804,
+        "cp_mse": 57151.01111783696,
+        "cp_rmse": 239.06277652080627,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 17,
+            "mean_prediction": 0.07434721329136379,
+            "mean_teacher": 0.18388692980542995,
+            "mean_result": 0.14705882352941177
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 43,
+            "mean_prediction": 0.1645992007536521,
+            "mean_teacher": 0.2171536418210918,
+            "mean_result": 0.10465116279069768
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 141,
+            "mean_prediction": 0.26082432952780366,
+            "mean_teacher": 0.3730923463078435,
+            "mean_result": 0.2765957446808511
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 254,
+            "mean_prediction": 0.34892203439165276,
+            "mean_teacher": 0.41001761292347705,
+            "mean_result": 0.2854330708661417
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1207,
+            "mean_prediction": 0.4704184858610895,
+            "mean_teacher": 0.4959166591916532,
+            "mean_result": 0.4751449875724938
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1567,
+            "mean_prediction": 0.5262226245513631,
+            "mean_teacher": 0.5466155689346034,
+            "mean_result": 0.5421186981493299
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 246,
+            "mean_prediction": 0.6463283420185191,
+            "mean_teacher": 0.6317678292372847,
+            "mean_result": 0.6483739837398373
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 193,
+            "mean_prediction": 0.7364117926717747,
+            "mean_teacher": 0.6526354503641498,
+            "mean_result": 0.6683937823834197
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 51,
+            "mean_prediction": 0.8445914328296176,
+            "mean_teacher": 0.7494546081595406,
+            "mean_result": 0.7450980392156863
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 24,
+            "mean_prediction": 0.9271836686674989,
+            "mean_teacher": 0.8220285311197149,
+            "mean_result": 0.875
+          }
+        ]
+      },
+      "R4Full14": {
+        "positions": 3743,
+        "games": 944,
+        "game_bce": 0.6663396409701231,
+        "game_brier": 0.22373639799210307,
+        "teacher_bce": 0.69294618860413,
+        "teacher_brier": 0.020468837982483827,
+        "cp_mae": 181.23975958303396,
+        "cp_mse": 69376.86721772904,
+        "cp_rmse": 263.3948883667431,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 35,
+            "mean_prediction": 0.05833118540344143,
+            "mean_teacher": 0.20167385328540485,
+            "mean_result": 0.1
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 81,
+            "mean_prediction": 0.1595962140909395,
+            "mean_teacher": 0.27871223807951023,
+            "mean_result": 0.18518518518518517
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 201,
+            "mean_prediction": 0.25620049810761325,
+            "mean_teacher": 0.40038687466324324,
+            "mean_result": 0.30845771144278605
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 297,
+            "mean_prediction": 0.35798261878860227,
+            "mean_teacher": 0.4279803272699047,
+            "mean_result": 0.3400673400673401
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 1107,
+            "mean_prediction": 0.46169512161474047,
+            "mean_teacher": 0.49862481572207307,
+            "mean_result": 0.46160794941282746
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 1246,
+            "mean_prediction": 0.5423875056727175,
+            "mean_teacher": 0.5382861785219195,
+            "mean_result": 0.5349117174959872
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 407,
+            "mean_prediction": 0.644568269008876,
+            "mean_teacher": 0.6083506728908745,
+            "mean_result": 0.6461916461916462
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 211,
+            "mean_prediction": 0.7502048252971057,
+            "mean_teacher": 0.651137507426649,
+            "mean_result": 0.6777251184834123
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 107,
+            "mean_prediction": 0.841462156628773,
+            "mean_teacher": 0.7290492463878343,
+            "mean_result": 0.7476635514018691
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 51,
+            "mean_prediction": 0.9422107394403033,
+            "mean_teacher": 0.799120173761237,
+            "mean_result": 0.8627450980392157
+          }
+        ]
+      }
+    },
+    "middle_phase9_16": {
+      "G": {
+        "positions": 1481,
+        "games": 651,
+        "game_bce": 0.5305878519826148,
+        "game_brier": 0.16254193716551457,
+        "teacher_bce": 0.6310357417433399,
+        "teacher_brier": 0.03493332155880035,
+        "cp_mae": 287.15936280571435,
+        "cp_mse": 156389.61879875392,
+        "cp_rmse": 395.46127345007363,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 109,
+            "mean_prediction": 0.04970290000775469,
+            "mean_teacher": 0.1806281187201287,
+            "mean_result": 0.07339449541284404
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 102,
+            "mean_prediction": 0.14372270052083533,
+            "mean_teacher": 0.22673174787550548,
+            "mean_result": 0.11274509803921569
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 118,
+            "mean_prediction": 0.25002964316577736,
+            "mean_teacher": 0.30840868630629,
+            "mean_result": 0.2033898305084746
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 155,
+            "mean_prediction": 0.34818974551954385,
+            "mean_teacher": 0.36639100486313186,
+            "mean_result": 0.3
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 214,
+            "mean_prediction": 0.4508890976440858,
+            "mean_teacher": 0.47354896734048296,
+            "mean_result": 0.46261682242990654
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 214,
+            "mean_prediction": 0.5497709252963627,
+            "mean_teacher": 0.5421079442257969,
+            "mean_result": 0.5747663551401869
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 177,
+            "mean_prediction": 0.6486325874344919,
+            "mean_teacher": 0.6163781028614728,
+            "mean_result": 0.6468926553672316
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 143,
+            "mean_prediction": 0.7507612736509273,
+            "mean_teacher": 0.6945559459342687,
+            "mean_result": 0.7482517482517482
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 109,
+            "mean_prediction": 0.8460179888139772,
+            "mean_teacher": 0.7650147613707942,
+            "mean_result": 0.8165137614678899
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 140,
+            "mean_prediction": 0.9523277888287839,
+            "mean_teacher": 0.852880194547605,
+            "mean_result": 0.9321428571428572
+          }
+        ]
+      },
+      "T": {
+        "positions": 1481,
+        "games": 651,
+        "game_bce": 0.5428783694619627,
+        "game_brier": 0.16748632957548984,
+        "teacher_bce": 0.6054799676674439,
+        "teacher_brier": 0.03045719590284461,
+        "cp_mae": 207.28437024487553,
+        "cp_mse": 78531.83198424676,
+        "cp_rmse": 280.23531537664337,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 24,
+            "mean_prediction": 0.06654043609714139,
+            "mean_teacher": 0.08118573804121333,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 83,
+            "mean_prediction": 0.14779802008137902,
+            "mean_teacher": 0.20888321966450132,
+            "mean_result": 0.10843373493975904
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 114,
+            "mean_prediction": 0.2512927321516006,
+            "mean_teacher": 0.22258049040425737,
+            "mean_result": 0.10526315789473684
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 184,
+            "mean_prediction": 0.3560923142484969,
+            "mean_teacher": 0.3337940751325091,
+            "mean_result": 0.22010869565217392
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 296,
+            "mean_prediction": 0.45509442644119547,
+            "mean_teacher": 0.45554101725963486,
+            "mean_result": 0.46452702702702703
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 318,
+            "mean_prediction": 0.5486496020076387,
+            "mean_teacher": 0.5561535447296151,
+            "mean_result": 0.550314465408805
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 202,
+            "mean_prediction": 0.6462400700593863,
+            "mean_teacher": 0.6708301222749661,
+            "mean_result": 0.7475247524752475
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 131,
+            "mean_prediction": 0.7485636545521136,
+            "mean_teacher": 0.7722576648119084,
+            "mean_result": 0.8282442748091603
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 84,
+            "mean_prediction": 0.8480090815758122,
+            "mean_teacher": 0.8098981540175598,
+            "mean_result": 0.8869047619047619
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 45,
+            "mean_prediction": 0.9429383082506301,
+            "mean_teacher": 0.9350860222713808,
+            "mean_result": 1.0
+          }
+        ]
+      },
+      "M08": {
+        "positions": 1481,
+        "games": 651,
+        "game_bce": 0.5382584571958918,
+        "game_brier": 0.1658609183046247,
+        "teacher_bce": 0.6068675551909067,
+        "teacher_brier": 0.030623096989097907,
+        "cp_mae": 211.21593496166946,
+        "cp_mse": 83772.78643061167,
+        "cp_rmse": 289.4352888481494,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 37,
+            "mean_prediction": 0.06607506537521368,
+            "mean_teacher": 0.1147528858882393,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 95,
+            "mean_prediction": 0.14990584704166274,
+            "mean_teacher": 0.2132830844306872,
+            "mean_result": 0.11578947368421053
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 108,
+            "mean_prediction": 0.25217044376383524,
+            "mean_teacher": 0.24217319333807324,
+            "mean_result": 0.13425925925925927
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 186,
+            "mean_prediction": 0.3549210960367682,
+            "mean_teacher": 0.34170442810997925,
+            "mean_result": 0.239247311827957
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 271,
+            "mean_prediction": 0.45438157819641173,
+            "mean_teacher": 0.45987637458454755,
+            "mean_result": 0.45940959409594095
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 301,
+            "mean_prediction": 0.5491258875003127,
+            "mean_teacher": 0.5495152000471433,
+            "mean_result": 0.5448504983388704
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 193,
+            "mean_prediction": 0.6461155257796949,
+            "mean_teacher": 0.661409448105103,
+            "mean_result": 0.7564766839378239
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 136,
+            "mean_prediction": 0.7459754961662666,
+            "mean_teacher": 0.7515518471820215,
+            "mean_result": 0.7941176470588235
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 101,
+            "mean_prediction": 0.8510155256269328,
+            "mean_teacher": 0.8125516033520859,
+            "mean_result": 0.8861386138613861
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 53,
+            "mean_prediction": 0.9475285523426031,
+            "mean_teacher": 0.912791246492799,
+            "mean_result": 0.9622641509433962
+          }
+        ]
+      },
+      "Handcrafted": {
+        "positions": 1481,
+        "games": 651,
+        "game_bce": 0.5510948580260936,
+        "game_brier": 0.1711453493120889,
+        "teacher_bce": 0.6213807075406921,
+        "teacher_brier": 0.03630555342808308,
+        "cp_mae": 226.7918233585569,
+        "cp_mse": 98526.27620385234,
+        "cp_rmse": 313.88895521163585,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 48,
+            "mean_prediction": 0.06693326656483593,
+            "mean_teacher": 0.17077588021765788,
+            "mean_result": 0.09375
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 82,
+            "mean_prediction": 0.147528488358111,
+            "mean_teacher": 0.19190337403646937,
+            "mean_result": 0.0975609756097561
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 114,
+            "mean_prediction": 0.25071439278331215,
+            "mean_teacher": 0.2914938499955685,
+            "mean_result": 0.17543859649122806
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 177,
+            "mean_prediction": 0.3528628070572676,
+            "mean_teacher": 0.3258173146584874,
+            "mean_result": 0.18926553672316385
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 281,
+            "mean_prediction": 0.45999820899568883,
+            "mean_teacher": 0.4664534451030155,
+            "mean_result": 0.46441281138790036
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 338,
+            "mean_prediction": 0.5406483963148703,
+            "mean_teacher": 0.5565761380889245,
+            "mean_result": 0.5710059171597633
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 179,
+            "mean_prediction": 0.6519295717686164,
+            "mean_teacher": 0.6854729367979373,
+            "mean_result": 0.7653631284916201
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 108,
+            "mean_prediction": 0.7488013344915876,
+            "mean_teacher": 0.7382355935337633,
+            "mean_result": 0.8055555555555556
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 96,
+            "mean_prediction": 0.8527997787170108,
+            "mean_teacher": 0.7991167997072056,
+            "mean_result": 0.8958333333333334
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 58,
+            "mean_prediction": 0.9480287872999121,
+            "mean_teacher": 0.8859487226588214,
+            "mean_result": 0.9224137931034483
+          }
+        ]
+      },
+      "R4Full14": {
+        "positions": 1481,
+        "games": 651,
+        "game_bce": 0.5321035911384264,
+        "game_brier": 0.16334761292158875,
+        "teacher_bce": 0.6261238930244458,
+        "teacher_brier": 0.03457056503305276,
+        "cp_mae": 272.0603153465944,
+        "cp_mse": 138366.069031274,
+        "cp_rmse": 371.97589845482463,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 98,
+            "mean_prediction": 0.052212173213982895,
+            "mean_teacher": 0.17772483072290973,
+            "mean_result": 0.09183673469387756
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 101,
+            "mean_prediction": 0.14780246458076726,
+            "mean_teacher": 0.21435259846698781,
+            "mean_result": 0.09405940594059406
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 127,
+            "mean_prediction": 0.2490715609077316,
+            "mean_teacher": 0.31180278703576875,
+            "mean_result": 0.1889763779527559
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 156,
+            "mean_prediction": 0.3486232688976635,
+            "mean_teacher": 0.3676882152982243,
+            "mean_result": 0.2692307692307692
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 221,
+            "mean_prediction": 0.45224463159538114,
+            "mean_teacher": 0.48239603038833256,
+            "mean_result": 0.5294117647058824
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 221,
+            "mean_prediction": 0.5513785138124625,
+            "mean_teacher": 0.5463297538360022,
+            "mean_result": 0.5656108597285068
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 174,
+            "mean_prediction": 0.64843265640326,
+            "mean_teacher": 0.6051417563044111,
+            "mean_result": 0.6293103448275862
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 139,
+            "mean_prediction": 0.7454741692780383,
+            "mean_teacher": 0.7002668507918977,
+            "mean_result": 0.7482014388489209
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 120,
+            "mean_prediction": 0.8479063101017584,
+            "mean_teacher": 0.7701096656375895,
+            "mean_result": 0.8208333333333333
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 124,
+            "mean_prediction": 0.9501450592477222,
+            "mean_teacher": 0.8559717443134106,
+            "mean_result": 0.9233870967741935
+          }
+        ]
+      }
+    },
+    "endgame_phase0_8": {
+      "G": {
+        "positions": 1275,
+        "games": 375,
+        "game_bce": 0.45228616190401477,
+        "game_brier": 0.12141611660186698,
+        "teacher_bce": 0.5724359863646644,
+        "teacher_brier": 0.02044775874549353,
+        "cp_mae": 253.38146933014272,
+        "cp_mse": 117692.0204475607,
+        "cp_rmse": 343.0627062907898,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 109,
+            "mean_prediction": 0.049461736973460776,
+            "mean_teacher": 0.12210554556538848,
+            "mean_result": 0.01834862385321101
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 106,
+            "mean_prediction": 0.1499648189712993,
+            "mean_teacher": 0.21461151597908984,
+            "mean_result": 0.11320754716981132
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 115,
+            "mean_prediction": 0.25080886693327115,
+            "mean_teacher": 0.29548081787881053,
+            "mean_result": 0.18695652173913044
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 140,
+            "mean_prediction": 0.35103967481169635,
+            "mean_teacher": 0.39362654476470343,
+            "mean_result": 0.30714285714285716
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 171,
+            "mean_prediction": 0.4518809258320719,
+            "mean_teacher": 0.4635842304083774,
+            "mean_result": 0.4619883040935672
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 178,
+            "mean_prediction": 0.5460435468916328,
+            "mean_teacher": 0.5417586821614326,
+            "mean_result": 0.5898876404494382
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 131,
+            "mean_prediction": 0.6476466594453655,
+            "mean_teacher": 0.6124449512872183,
+            "mean_result": 0.7022900763358778
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 98,
+            "mean_prediction": 0.7465487261589582,
+            "mean_teacher": 0.7311880555167418,
+            "mean_result": 0.8673469387755102
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 92,
+            "mean_prediction": 0.8473464002705041,
+            "mean_teacher": 0.8000476294888412,
+            "mean_result": 0.8913043478260869
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 135,
+            "mean_prediction": 0.9535541647510614,
+            "mean_teacher": 0.8931732482947203,
+            "mean_result": 0.9481481481481482
+          }
+        ]
+      },
+      "T": {
+        "positions": 1275,
+        "games": 375,
+        "game_bce": 0.48398792651105926,
+        "game_brier": 0.13141457902579626,
+        "teacher_bce": 0.5621157014303673,
+        "teacher_brier": 0.01883027830236436,
+        "cp_mae": 196.94321435275862,
+        "cp_mse": 67280.27934560664,
+        "cp_rmse": 259.384423868525,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 33,
+            "mean_prediction": 0.06319930657192001,
+            "mean_teacher": 0.05503275672364407,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 76,
+            "mean_prediction": 0.1544879638529503,
+            "mean_teacher": 0.1482039842782929,
+            "mean_result": 0.02631578947368421
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 108,
+            "mean_prediction": 0.2505432628154446,
+            "mean_teacher": 0.21756098310840105,
+            "mean_result": 0.1111111111111111
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 171,
+            "mean_prediction": 0.3493910190739814,
+            "mean_teacher": 0.3202898224279843,
+            "mean_result": 0.23976608187134502
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 266,
+            "mean_prediction": 0.4542283364216488,
+            "mean_teacher": 0.44494911884472094,
+            "mean_result": 0.3890977443609023
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 241,
+            "mean_prediction": 0.54704739129818,
+            "mean_teacher": 0.5662501427730736,
+            "mean_result": 0.6535269709543569
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 146,
+            "mean_prediction": 0.645887276021039,
+            "mean_teacher": 0.6918889070967854,
+            "mean_result": 0.7876712328767124
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 95,
+            "mean_prediction": 0.745685527836426,
+            "mean_teacher": 0.7981433539557677,
+            "mean_result": 0.8947368421052632
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 87,
+            "mean_prediction": 0.8433517879329567,
+            "mean_teacher": 0.862044528894231,
+            "mean_result": 0.9367816091954023
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 52,
+            "mean_prediction": 0.9424551616853372,
+            "mean_teacher": 0.9406926945282805,
+            "mean_result": 1.0
+          }
+        ]
+      },
+      "M08": {
+        "positions": 1275,
+        "games": 375,
+        "game_bce": 0.4760427868117844,
+        "game_brier": 0.1287744877921483,
+        "teacher_bce": 0.5610315010328956,
+        "teacher_brier": 0.01838981778138357,
+        "cp_mae": 195.03717160009435,
+        "cp_mse": 67783.47457843655,
+        "cp_rmse": 260.35259664239294,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 39,
+            "mean_prediction": 0.0563727829210598,
+            "mean_teacher": 0.06430057135096233,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 90,
+            "mean_prediction": 0.15007527647263413,
+            "mean_teacher": 0.16320192312517512,
+            "mean_result": 0.03333333333333333
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 115,
+            "mean_prediction": 0.25245481622325183,
+            "mean_teacher": 0.22787340912748907,
+            "mean_result": 0.12608695652173912
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 163,
+            "mean_prediction": 0.35125212227183594,
+            "mean_teacher": 0.3400372426267283,
+            "mean_result": 0.25766871165644173
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 247,
+            "mean_prediction": 0.45452533663973127,
+            "mean_teacher": 0.4486062241150464,
+            "mean_result": 0.4149797570850202
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 223,
+            "mean_prediction": 0.5469994330539071,
+            "mean_teacher": 0.5597053593073095,
+            "mean_result": 0.6345291479820628
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 145,
+            "mean_prediction": 0.6450338539407471,
+            "mean_teacher": 0.6792915771728049,
+            "mean_result": 0.7724137931034483
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 102,
+            "mean_prediction": 0.7477327798862544,
+            "mean_teacher": 0.784842387852866,
+            "mean_result": 0.8823529411764706
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 87,
+            "mean_prediction": 0.8487577699614054,
+            "mean_teacher": 0.8521842671374883,
+            "mean_result": 0.9252873563218391
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 64,
+            "mean_prediction": 0.9455433463575986,
+            "mean_teacher": 0.9341109197562302,
+            "mean_result": 0.9921875
+          }
+        ]
+      },
+      "Handcrafted": {
+        "positions": 1275,
+        "games": 375,
+        "game_bce": 0.4788713460758313,
+        "game_brier": 0.1300378429736625,
+        "teacher_bce": 0.5632620820404938,
+        "teacher_brier": 0.019008879519824887,
+        "cp_mae": 192.81390737116763,
+        "cp_mse": 72153.99175472929,
+        "cp_rmse": 268.61495072822976,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 41,
+            "mean_prediction": 0.058443039371279655,
+            "mean_teacher": 0.06724958215468191,
+            "mean_result": 0.0
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 82,
+            "mean_prediction": 0.15363148241216817,
+            "mean_teacher": 0.1611291604738366,
+            "mean_result": 0.03048780487804878
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 104,
+            "mean_prediction": 0.2564786765332517,
+            "mean_teacher": 0.24400345368566909,
+            "mean_result": 0.1346153846153846
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 124,
+            "mean_prediction": 0.3546695454012788,
+            "mean_teacher": 0.303532847511471,
+            "mean_result": 0.2217741935483871
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 288,
+            "mean_prediction": 0.4562825538427408,
+            "mean_teacher": 0.4199532915912362,
+            "mean_result": 0.359375
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 294,
+            "mean_prediction": 0.5396933058368265,
+            "mean_teacher": 0.5774080346961349,
+            "mean_result": 0.6666666666666666
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 105,
+            "mean_prediction": 0.6477224848594012,
+            "mean_teacher": 0.7201679723359982,
+            "mean_result": 0.8285714285714286
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 84,
+            "mean_prediction": 0.7459396104620942,
+            "mean_teacher": 0.782162638014,
+            "mean_result": 0.8630952380952381
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 82,
+            "mean_prediction": 0.8428743213133096,
+            "mean_teacher": 0.8600100705161541,
+            "mean_result": 0.9329268292682927
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 71,
+            "mean_prediction": 0.9454203371977666,
+            "mean_teacher": 0.9210265049081454,
+            "mean_result": 0.9859154929577465
+          }
+        ]
+      },
+      "R4Full14": {
+        "positions": 1275,
+        "games": 375,
+        "game_bce": 0.4525856560644676,
+        "game_brier": 0.12194475633970533,
+        "teacher_bce": 0.5718775619555724,
+        "teacher_brier": 0.020534816609535243,
+        "cp_mae": 250.88713999967928,
+        "cp_mse": 114440.24059483,
+        "cp_rmse": 338.29017218185635,
+        "calibration_position_weighted": [
+          {
+            "range": [
+              0.0,
+              0.1
+            ],
+            "positions": 102,
+            "mean_prediction": 0.051320528880590084,
+            "mean_teacher": 0.11849647317196929,
+            "mean_result": 0.0196078431372549
+          },
+          {
+            "range": [
+              0.1,
+              0.2
+            ],
+            "positions": 108,
+            "mean_prediction": 0.15110503723694854,
+            "mean_teacher": 0.21474049431013603,
+            "mean_result": 0.1111111111111111
+          },
+          {
+            "range": [
+              0.2,
+              0.3
+            ],
+            "positions": 124,
+            "mean_prediction": 0.25418572492641894,
+            "mean_teacher": 0.29110172635703974,
+            "mean_result": 0.20161290322580644
+          },
+          {
+            "range": [
+              0.3,
+              0.4
+            ],
+            "positions": 131,
+            "mean_prediction": 0.3526106739465938,
+            "mean_teacher": 0.3891630772252549,
+            "mean_result": 0.2900763358778626
+          },
+          {
+            "range": [
+              0.4,
+              0.5
+            ],
+            "positions": 185,
+            "mean_prediction": 0.44709166825306773,
+            "mean_teacher": 0.4651843131874937,
+            "mean_result": 0.44594594594594594
+          },
+          {
+            "range": [
+              0.5,
+              0.6
+            ],
+            "positions": 163,
+            "mean_prediction": 0.5469409609244222,
+            "mean_teacher": 0.5516561025587401,
+            "mean_result": 0.6165644171779141
+          },
+          {
+            "range": [
+              0.6,
+              0.7
+            ],
+            "positions": 136,
+            "mean_prediction": 0.6457405138921882,
+            "mean_teacher": 0.6062769628088946,
+            "mean_result": 0.6985294117647058
+          },
+          {
+            "range": [
+              0.7,
+              0.8
+            ],
+            "positions": 103,
+            "mean_prediction": 0.7487758083048534,
+            "mean_teacher": 0.7375131424000413,
+            "mean_result": 0.8495145631067961
+          },
+          {
+            "range": [
+              0.8,
+              0.9
+            ],
+            "positions": 93,
+            "mean_prediction": 0.8487553391709821,
+            "mean_teacher": 0.7929455992788933,
+            "mean_result": 0.8870967741935484
+          },
+          {
+            "range": [
+              0.9,
+              1.0
+            ],
+            "positions": 130,
+            "mean_prediction": 0.9539963780440036,
+            "mean_teacher": 0.8955821382107548,
+            "mean_result": 0.9576923076923077
+          }
+        ]
+      }
+    }
+  },
+  "candidate_minus_G": {
+    "game_bce": {
+      "difference": 0.004650910561400105,
+      "ci95": [
+        0.00043479982215374253,
+        0.008592037336607801
+      ],
+      "games": 992,
+      "resamples": 2000
+    },
+    "teacher_bce": {
+      "difference": -0.013256607402732937,
+      "ci95": [
+        -0.014626183723334943,
+        -0.011898095283393244
+      ],
+      "games": 992,
+      "resamples": 2000
+    },
+    "cp_mae": {
+      "difference": -40.89435990910442,
+      "ci95": [
+        -44.47709242223932,
+        -37.16074420515917
+      ],
+      "games": 992,
+      "resamples": 2000
+    },
+    "ranking_accuracy": {
+      "difference": -0.0028212685119766035,
+      "ci95": [
+        -0.0066635445103075735,
+        0.00032188182668048583
+      ],
+      "games": 118,
+      "resamples": 2000
+    }
+  },
+  "interval_scope": "descriptive whole-game clusters, not familywise claims"
+}
