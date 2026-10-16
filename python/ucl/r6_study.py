@@ -55,9 +55,9 @@ def configure(study, engine, output):
     return freeze
 
 
-def run(configs, output, fastchess):
+def run(configs, output, fastchess, study='experiments/results/r6-models-v1'):
     output = Path(output)
-    freeze = json.loads((ROOT/'experiments/results/r6-models-v1/freeze.json').read_text(encoding='utf-8'))
+    freeze = json.loads((ROOT/study/'freeze.json').read_text(encoding='utf-8'))
     for g, h in freeze['configs'].items():
         if sha256(Path(configs)/f'{g}.json') != h:
             raise ValueError('match configuration changed after freeze')
@@ -117,6 +117,6 @@ if __name__ == '__main__':
     if a.operation == 'configure':
         print(configure(a.study, a.engine, a.output))
     elif a.operation == 'matches':
-        run(a.input, a.output, a.fastchess)
+        run(a.input, a.output, a.fastchess, a.study)
     else:
         print(json.dumps({g: r['statistics'] for g, r in analyze(a.input, a.output)['groups'].items()}, indent=2))

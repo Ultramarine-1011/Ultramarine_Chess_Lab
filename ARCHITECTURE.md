@@ -83,6 +83,12 @@ UCI ModelSHA256 → ModelFile → Evaluator=Linear；新模型完全加载成功
 - r4_analysis：冻结候选后的独立测试、整局 bootstrap；r4_study 只读重建历史两批结果。
 - r5_*：保留已有等价性/分析能力与研究配置；通用 runner 承担执行和身份记录，
   不再以脚本自身哈希、全仓库快照或一次性冻结文件锁定普通开发。
+- r6_data：复用有界PGN/整局划分与C++特征核对；固定Stockfish冷哈希节点标注，
+  同行保留棋局结果与白方教师评分；排序对每个合法子局面独立查询。
+- r6_training：复用R4优化器，仅改变G/T/M软目标；validation排序选择候选，
+  保留部署/重拟合核对和冻结后的单次独立test。
+- r6_study：固定四组现有match配置，复用R5逐着核验（节点组可指定为D）；
+  C为唯一确认性棋力判断，A/B/D探索性。没有改变引擎搜索/推理接口。
 
 Schema 保留归档记录格式和外部输入检查；训练与部署数值格式有明确边界。
 实验模式和统计约束集中于 [EXPERIMENTS.md](EXPERIMENTS.md)。

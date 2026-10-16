@@ -86,6 +86,7 @@ def generate():
               '统一转换到根走棋方视角。比较同一批子局面静态评分，不用根评分充当着法价值。',
               '主指标为教师分差≥100的候选对准确率，静态打平计.5，先位置再整局等权。',
               'mate/终局仅以±100000作排序哨兵，非普通cp误差；无合格对的位置明确排除。',
+              f'validation有{selection["models"]["G"]["ranking"]["eligible_positions"]}/128个合格根位置、{selection["models"]["G"]["ranking"]["clear_pairs"]}个清晰分差对。',
               f'M08在T/M05/M08中主指标最高，因此冻结；G略高也没有改换目标或重调候选。', '',
               '| 特征 | G | T | M08 |', '|---|---:|---:|---:|']
     for i, name in enumerate(NAMES):
@@ -97,13 +98,21 @@ def generate():
     for n, m in test['models'].items():
         lines.append(f'| {n} | {m["game_bce"]:.6f} | {m["game_brier"]:.6f} | {m["teacher_bce"]:.6f} | {m["cp_mae"]:.3f}/{m["cp_rmse"]:.3f} | {pct(test["ranking"][n]["primary_accuracy"])} |')
     lines += ['', 'cp误差只用非mate，双方都截断到±2000；是教师尺度一致性诊断，不是精确真实价值误差。',
+              f'test有{test["ranking"]["G"]["eligible_positions"]}/128个合格根位置、{test["ranking"]["G"]["clear_pairs"]}个清晰分差对。',
               'R4Full14一行是在这批新数据上的冻结模型参考，没有重算或改写旧独立test。', '',
               '| M08−G，整局聚类描述区间 | 差值 | 95%区间 | 游戏簇 |', '|---|---:|---|---:|']
     for k, v in test['candidate_minus_G'].items():
         lines.append(f'| {k} | {v["difference"]:.6f} | {ci(v["ci95"])} | {v["games"]} |')
     lines += ['', '混合监督可靠降低本样本教师误差，但结果BCE较G退步；排序差值区间包含0，点估计略差。',
               '离线各区间是描述性、并未对所有指标进行家族确认性判断。',
-              '开/中/残局按子力phase分层，另保留ply16–40、白黑走棋方与和棋样本。',
+              '开/中/残局按子力phase分层，另保留ply16–40、白黑走棋方与和棋样本。', '',
+              '| test分层 | 游戏簇/局面 | G结果BCE | M08结果BCE | M08教师cp MAE |',
+              '|---|---:|---:|---:|---:|']
+    for name, ms in test['strata'].items():
+        g, m = ms['G'], ms['M08']
+        lines.append(f'| {name} | {g["games"]}/{g["positions"]} | {g["game_bce"]:.6f} | {m["game_bce"]:.6f} | {m["cp_mae"]:.3f} |')
+    lines += ['', 'M08在早期、子力较全和和棋样本的结果BCE改善，代价是中残局结果预测退步；',
+              '这些是未校正的分层诊断，没有据此重新选模。',
               '完整分层和十档校准均值在[test-results.json](../../experiments/results/r6-models-v1/test-results.json)，',
               '不以总体改善替代分层证据，也不把材料phase直接等同实际开局阶段。', '',
               '## 推理成本与实际搜索', '',

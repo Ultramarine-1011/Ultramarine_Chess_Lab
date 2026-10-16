@@ -88,6 +88,13 @@ R3 训练默认使用已保存的八维数据/特征；R4 扩展训练使用十�
 直接重跑；含正式 test 结果或 R4 候选冻结的目录受保护。独立测试是单独步骤，详见
 实验规范。历史重现应检出相应提交；历史协议中的逐阶段审计流程不约束日常开发。
 
+R6目标对齐研究使用同一批新真实局面比较G（棋局结果）、T（固定Stockfish评分）
+和M（混合软标签），复用十四维模型及R4优化器。数据/教师、训练与实战入口分别为
+`python -X utf8 -m ucl.r6_data --help`、`python -X utf8 -m ucl.r6_training --help`、
+`python -X utf8 -m ucl.r6_study --help`；完整命令和教师二进制身份见
+[R6复现入口](docs/validation/r6/commands.md)，设计见[R6协议](docs/r6/protocol.md)。
+已封存test结果可直接阅读；重复训练或新独立测试使用新的开发目录。
+
 R5完成了Windows性能研究和四组共1600局正式对弈，见[R5研究报告](docs/r5/final-report.md)。
 静态耗时下降31.03%；直接对原版有条件性收益，对Handcrafted仍未改善到可替换默认。
 已归档数据可离线重算，无需历史引擎或重跑比赛：

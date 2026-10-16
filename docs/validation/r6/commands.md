@@ -5,6 +5,28 @@ the existing venv, MSVC prefix fix and pinned fastchess. All Python commands use
 `python -X utf8` (`.venv/Scripts/python.exe` below). New outputs must use separate
 directories; do not overwrite the archived independent test or formal matches.
 
+For a fresh host, use an installed VS Developer PowerShell and the venv from
+README.md; `.tools/windows-env.ps1` is a local convenience helper. The recorded
+local `.tools/windows-msvc-rules.cmake` is byte-identical to the committed
+`docs/validation/windows-init-20261015/windows-msvc-rules.cmake`. The following
+optional acquisition commands apply to a fresh tools directory; the actual R6
+run reused its already verified fastchess and downloaded Stockfish once.
+
+```powershell
+New-Item -ItemType Directory -Force .tools/r6-stockfish,.tools/bin | Out-Null
+curl.exe -L --connect-timeout 20 --max-time 600 -o .tools/r6-stockfish/stockfish.zip https://github.com/official-stockfish/Stockfish/releases/download/sf_17.1/stockfish-windows-x86-64-avx2.zip
+if ((Get-FileHash .tools/r6-stockfish/stockfish.zip).Hash -ne '92a77f8d8116b4331696eeb7b232bd03db30d6641a6ce1be1759478b8931d28b') { throw 'Stockfish ZIP identity mismatch' }
+Expand-Archive .tools/r6-stockfish/stockfish.zip .tools/r6-stockfish/unpacked
+curl.exe -L --connect-timeout 20 --max-time 600 -o .tools/fastchess-1.8.2.zip https://github.com/Disservin/fastchess/releases/download/v1.8.2-alpha/fastchess-windows-x86-64.zip
+Expand-Archive .tools/fastchess-1.8.2.zip .tools/fastchess-v1.8.2-alpha
+$r6Fastchess = '.tools/fastchess-v1.8.2-alpha/fastchess-windows-x86-64/fastchess.exe'
+if ((Get-FileHash $r6Fastchess).Hash -ne 'c6d7e4458a58025983c81bf38c524cb213e6f27559657dcfd72543392a431a71') { throw 'fastchess identity mismatch' }
+Copy-Item $r6Fastchess .tools/bin/fastchess.exe
+```
+
+The general `bootstrap_fastchess.py` pins the older research/CI tool; it does
+not supply the v1.8.2-alpha executable used in these Windows formal matches.
+
 ```powershell
 . .tools/windows-env.ps1
 python -X utf8 -m ucl.r6_data acquire --output experiments/results/r6-data-v1
@@ -18,7 +40,9 @@ python -X utf8 -m ucl.r6_data rank --input experiments/results/r6-features-v1/fe
 python -X utf8 -m ucl.r6_training fit --input experiments/results/r6-labels-v1/labels.jsonl.gz --rank experiments/results/r6-ranking-validation-v1/children.jsonl.gz --output experiments/results/r6-models-v1
 python -X utf8 -m ucl.r6_training verify --output experiments/results/r6-models-v1
 # Refit to .tools/r6-refit produced all four identical model files (refit.json).
-cmake --preset release -DPython3_EXECUTABLE=C:/Ultramarine_Chess_Lab/Ultramarine_Chess_Lab/.venv/Scripts/python.exe -DCMAKE_PROJECT_INCLUDE=C:/Ultramarine_Chess_Lab/Ultramarine_Chess_Lab/.tools/windows-msvc-rules.cmake
+$r6Python = (Resolve-Path .venv/Scripts/python.exe).Path
+$r6MsvcFix = (Resolve-Path docs/validation/windows-init-20261015/windows-msvc-rules.cmake).Path
+cmake --preset release "-DPython3_EXECUTABLE=$r6Python" "-DCMAKE_PROJECT_INCLUDE=$r6MsvcFix"
 cmake --build --preset release --parallel 4
 ctest --preset release
 # Copy this clean binary to ignored .tools/r6-engine/ucl.exe before later commits.
@@ -38,6 +62,22 @@ queries; partial work uses an ignored append journal. Use another directory to
 rebuild labels from scratch. Ranking child records retain their own queried
 scores; root scores are never substituted. Teacher output selects the last exact
 iteration, excluding aspiration bounds; actual final nodes are retained too.
+
+To check model reproducibility, fit into a fresh directory such as
+`.tools/r6-replica-models`, then compare its four model hashes with the archived
+files. A new independent replication may rebuild the clean engine with
+`python -X utf8 scripts/build_revision.py 0403a9dbf0f4104593990467720c9116b2f014fe`.
+If that binary has a different build hash, create a new freeze rather than edit
+the archived freeze: configure with `--study .tools/r6-replica-models`, the rebuilt
+`--engine`, and `--output .tools/r6-replica-configs`; run matches with that same
+`--study`, `--input .tools/r6-replica-configs` and a new output directory. This is
+a replication on already known data/openings, not a new independent sample;
+do not merge it into the R6 fixed 1600 games.
+
+During formal execution, the CLI was corrected to pass --study to this freeze
+lookup for new replication directories. The live coordinator was not restarted;
+its engine, models, budgets, openings and analysis were unchanged. A separate
+checksum-guard check confirmed rejection before creating output or starting games.
 
 Preflight: 256 real training positions, 139 white/117 black to move; eight cold
 queries exact on repetition. Three pilot fits/deployments passed. Final 23998
