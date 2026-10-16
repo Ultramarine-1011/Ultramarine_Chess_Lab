@@ -124,8 +124,8 @@ omit disposable duplicate plain-text journals.
 | Formal A/B/C/D | exit0, each400/200 pairs, total1600 | r6-matches.log; raw record/PGN/UCI bundles |
 | Full match analysis | exit0, every PGN move/PV/history matches UCI, abnormal0 | r6-analysis.log; r6-analysis-v1 |
 | Node condition D | actual go/counters/clock verified; 1703 mate + 7 max-depth undershoots | D/analysis.json; moves.jsonl.gz |
-| Frozen identity audit | dataset/model/config/binary/tool/opening hashes agree | final-input-checks.json; final-match-checks.json |
-| Report | links valid, deterministic generation, numerical tables read from actual JSON | report-checks.json |
+| Frozen identity audit | dataset/model/config/binary/tool/opening hashes agree | final-checks.json (inputs/matches) |
+| Report | links valid, deterministic generation, numerical tables read from actual JSON | final-checks.json (report) |
 | Windows Release | configure/build/CTest exit0, 6/6 | r6-configure.log; r6-build.log; r6-final-ctest.log |
 | Cross-platform code CI | five successful jobs at3524319 | ci-code.json; link below |
 
@@ -134,3 +134,11 @@ covers Windows/macOS Release/Debug and sanitizer. The earlier bb75a56 snapshot i
 also retained in ci.json. Final results/report delivery is recorded in VALIDATION.md.
 One normal push encountered a Schannel handshake failure; a per-command OpenSSL
 backend retry succeeded. No global Git/system configuration changed.
+
+Research delivery `97b8017e91eddc982092bc707f01385aed74bb2f` is pushed.
+[Final delivery CI](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38899531869)
+passed all five jobs. `final-checks.json` consolidates the actual input/match,
+report, Git-byte, default-evaluator and CI checks: 111 committed research
+artifacts match runtime hashes, and all eight performance bundles validate.
+The following documentation-only commit records this evidence without altering
+source, models, datasets or matches.

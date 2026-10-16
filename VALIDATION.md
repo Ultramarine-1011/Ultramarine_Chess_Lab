@@ -73,4 +73,8 @@ R3–R5原始数据/模型/报告及C++引擎源码保持不变；Handcrafted继
 [原始比赛](experiments/results/r6-matches-v1/A/record.json)、
 [完整统计](experiments/results/r6-analysis-v1/summary.json)。
 Windows Release CTest6/6；3524319的五项跨平台CI成功，见ci-code.json。
-最终提交、推送和CI身份在交付后补充于下。
+研究交付提交`97b8017e91eddc982092bc707f01385aed74bb2f`已推送main；
+[对应最终CI](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38899531869)
+五项全部成功。最终核验集中在docs/validation/r6/final-checks.json：111份Git内研究
+产物与运行时hash一致，八个性能包通过内容核验，默认评估器实际返回Handcrafted。
+随后仅合并验证记录并补充本文和命令索引，不改源码、模型、数据或对局。
