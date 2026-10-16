@@ -1,0 +1,25 @@
+{
+  "selection_sha256": "f6ba00dad21dd1f9bfde7a0b7fdeafaddd861975d86b0819205e3ac6cd868fa5",
+  "candidate": "M08",
+  "models": {
+    "G": "e463a9a8f27dab902f1a40b3bc51768595020a6700233881450c9b16e977082f",
+    "T": "188bd44a0e0582f98796398baa2bdfacc09fbc329837c48ab3d05cec4a3b788c",
+    "M05": "8b8b30818354b5d161ec14a85d7d5c48be74c3cabd0dc5bab71c1ec0bac7a3fe",
+    "M08": "632c5b55c9cf074aab99c65f257dd64f1005942ee6f3399939c747f4958b8c69"
+  },
+  "engine_sha256": "5771d578dccf628a2d9bd9ee08cbee28fccb583e366313f56ac22e650fdf2931",
+  "engine_revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+  "openings_sha256": "6624a681ed03d31506ba12065073c6aabc2184ba75ea9397c95b93108884381e",
+  "configs": {
+    "A": "4c680563714048efcee4f325aae58d4c60524bc831b31b60d8bfb927669766b2",
+    "B": "729f5b018ff752cad2897fd7a991d861a79d4fa773e00e08c3c8903c444e2826",
+    "C": "8979ed51661e7d0893a30a4be9aba7ccd933c517ddeae0433cc8abbd14381ebd",
+    "D": "f37998ee29cf1f47b59137d2ae85e768765e78fb1af32dfcb2b7eec16419974c"
+  },
+  "code": {
+    "revision": "0403a9dbf0f4104593990467720c9116b2f014fe",
+    "dirty": true
+  },
+  "confirmatory": "C only",
+  "fastchess_sha256": "c6d7e4458a58025983c81bf38c524cb213e6f27559657dcfd72543392a431a71"
+}
