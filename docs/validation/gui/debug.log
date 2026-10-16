@@ -1,0 +1,19 @@
+Test project /Users/ultramarine/Documents/UCL_GUI_Local/build/debug
+    Start 1: unit
+1/7 Test #1: unit .............................   Passed    0.58 sec
+    Start 2: search
+2/7 Test #2: search ...........................   Passed   11.89 sec
+    Start 3: perft
+3/7 Test #3: perft ............................   Passed    0.12 sec
+    Start 4: uci
+4/7 Test #4: uci ..............................   Passed   10.41 sec
+    Start 5: experiments
+5/7 Test #5: experiments ......................   Passed    0.94 sec
+    Start 6: research
+6/7 Test #6: research .........................   Passed   15.80 sec
+    Start 7: gui
+7/7 Test #7: gui ..............................   Passed    2.65 sec
+
+100% tests passed out of 7
+
+Total Test time (real) =  42.39 sec

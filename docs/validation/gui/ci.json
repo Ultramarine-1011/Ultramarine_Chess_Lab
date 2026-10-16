@@ -1,0 +1,85 @@
+{
+  "conclusion": "failure",
+  "headSha": "f3f40407b9b66cff877536f82e2c14e5244118d1",
+  "jobs": [
+    {
+      "completedAt": "2026-10-16T13:06:51Z",
+      "conclusion": "failure",
+      "databaseId": 116987456384,
+      "name": "test (macos-latest, release)",
+      "startedAt": "2026-10-16T13:06:45Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38905365257/job/116987456384"
+    },
+    {
+      "completedAt": "2026-10-16T13:06:52Z",
+      "conclusion": "failure",
+      "databaseId": 116987456755,
+      "name": "sanitizers",
+      "startedAt": "2026-10-16T13:06:45Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38905365257/job/116987456755"
+    },
+    {
+      "completedAt": "2026-10-16T13:06:50Z",
+      "conclusion": "failure",
+      "databaseId": 116987456787,
+      "name": "test (windows-latest, release)",
+      "startedAt": "2026-10-16T13:06:45Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38905365257/job/116987456787"
+    },
+    {
+      "completedAt": "2026-10-16T13:06:52Z",
+      "conclusion": "failure",
+      "databaseId": 116987456945,
+      "name": "test (macos-latest, debug)",
+      "startedAt": "2026-10-16T13:06:45Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38905365257/job/116987456945"
+    },
+    {
+      "completedAt": "2026-10-16T13:06:49Z",
+      "conclusion": "failure",
+      "databaseId": 116987457116,
+      "name": "test (windows-latest, debug)",
+      "startedAt": "2026-10-16T13:06:46Z",
+      "status": "completed",
+      "steps": [],
+      "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38905365257/job/116987457116"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38905365257",
+  "annotations": [
+    {
+      "path": ".github",
+      "blob_href": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/blob/f3f40407b9b66cff877536f82e2c14e5244118d1/.github",
+      "start_line": 1,
+      "start_column": null,
+      "end_line": 1,
+      "end_column": null,
+      "annotation_level": "failure",
+      "title": "",
+      "message": "The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the 'Billing & plans' section in your settings",
+      "raw_details": ""
+    },
+    {
+      "path": ".github",
+      "blob_href": "https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/blob/f3f40407b9b66cff877536f82e2c14e5244118d1/.github",
+      "start_line": 1,
+      "start_column": null,
+      "end_line": 1,
+      "end_column": null,
+      "annotation_level": "notice",
+      "title": "",
+      "message": "Due to capacity constraints, jobs targeting macOS arm64 runners may experience longer queue times.",
+      "raw_details": ""
+    }
+  ],
+  "interpretation": "All five jobs failed before steps started: account payments/spending limit. No hosted code/tests ran; no retry without an external account change."
+}

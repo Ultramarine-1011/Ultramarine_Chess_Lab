@@ -1,0 +1,19 @@
+Test project /Users/ultramarine/Documents/UCL_GUI_Local/build/sanitize
+    Start 1: unit
+1/7 Test #1: unit .............................   Passed    1.00 sec
+    Start 2: search
+2/7 Test #2: search ...........................   Passed   42.91 sec
+    Start 3: perft
+3/7 Test #3: perft ............................   Passed    0.45 sec
+    Start 4: uci
+4/7 Test #4: uci ..............................   Passed   28.85 sec
+    Start 5: experiments
+5/7 Test #5: experiments ......................   Passed    0.86 sec
+    Start 6: research
+6/7 Test #6: research .........................   Passed   16.47 sec
+    Start 7: gui
+7/7 Test #7: gui ..............................   Passed    6.15 sec
+
+100% tests passed out of 7
+
+Total Test time (real) =  96.70 sec

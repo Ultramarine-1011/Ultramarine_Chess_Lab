@@ -88,4 +88,11 @@ Windows Release CTest6/6；3524319的五项跨平台CI成功，见ci-code.json�
 
 真实引擎 GUI 测试13项通过；Release全套7/7。实际浏览器通过页面控件完成37半回合
 将死对局，下载PGN重放一致；升变/取消、悔棋、非法着法、执黑及Linear切换通过。
-[命令、环境、限制与棋谱](docs/validation/gui/README.md)。CI待推送后核对。
+[命令、环境、限制与棋谱](docs/validation/gui/README.md)。
+代码提交 `f3f4040` 已推送 `codex/local-chess-gui`；clean Release7/7、Debug7/7、ASan/UBSan7/7（无诊断）。
+GitHub [Actions#38905365257](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38905365257)
+因账户付款/支出额度问题在所有步骤开始前被拒绝，不能声称本轮跨平台CI通过；
+原始状态和注释见上述记录。Windows物理主机未运行。
+
+收尾修复极短时控换边时棋盘组件的异步方向刷新竞态；六次快速换边实查SVG坐标、
+完整37半回合浏览器对局及终局悔棋通过，保留browser-check.js；Python/C++未变。

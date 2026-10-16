@@ -51,5 +51,49 @@ full suite lacked the sparse clone's archived r3-data-v1 fixture; the original
 fixture was fetched and all tests rerun. Neither failure required engine/research
 changes. GUI responses/errors were not weakened.
 
-Local Debug/sanitizer and Windows physical-host checks were not run for this
-Python/static-only change. Hosted macOS/Windows CI status is recorded below after push.
+## Clean delivery checks
+
+Code commit `f3f40407b9b66cff877536f82e2c14e5244118d1` was pushed to
+`codex/local-chess-gui`. Reconfigured and rebuilt from clean source (`--build-info`
+reports dirty=false): [Release 7/7](release.log), 15.15 s, and [Debug 7/7](debug.log),
+42.39 s. Debug used the same configure/build/ctest commands above with preset `debug`.
+[ASan/UBSan 7/7](sanitize.log), 96.70 s, with no sanitizer diagnostics. Sanitizer used preset `sanitize`. CLI with `--port 0 --no-browser`
+served `/api/state`, then handled SIGINT/Ctrl+C, exited 0 and closed its engine.
+The final wheel rebuilt successfully. `git diff --check` passes except the exact
+vendored `standard.svg` LICENSE underline (`=======`), which Git mistakes for a
+conflict marker; all 17 vendored files are byte-identical to the verified archive.
+
+[GitHub Actions run 38905365257](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/38905365257)
+failed **before any job steps started**. GitHub reports: “The job was not started
+because recent account payments have failed or your spending limit needs to be
+increased.” The [saved response](ci.json) records all five empty-step jobs and
+annotations. This is an external account/billing blocker; no hosted macOS/Windows
+code/tests ran, and the failure cannot be repaired by changing GUI code. No workflow
+or billing settings were changed and no identical reruns were triggered.
+Windows physical-host GUI checks were not run. Local checks do not establish a
+Windows result; earlier main's successful CI remains historical evidence only.
+
+## Final browser race regression
+
+Final review found the initial renderer could lose a board flip when a fast new
+game completed before cm-chessboard's queued `setOrientation`. The displayed
+player/turn was correct but the board could remain White-oriented. The renderer
+now constructs the new game's board directly in the requested orientation; it
+never queues redundant flips. Python/C++ are unchanged from the clean f3f4040 tests.
+
+Tested `f3f4040` + dirty `web/app.js` fix and [browser regression](browser-check.js):
+
+```sh
+agent-browser --session ucl-gui open http://127.0.0.1:8765
+agent-browser --session ucl-gui eval --stdin < docs/validation/gui/browser-check.js
+agent-browser --session ucl-gui errors
+agent-browser --session ucl-gui console
+node --input-type=module --check < python/ucl/web/app.js
+ctest --preset release --output-on-failure
+```
+
+Six alternating White/Black new games at 0.01 s PASS with actual SVG square
+coordinates asserted, followed by the full 37-ply checkmate through the move form
+and undo from terminal PASS. No browser errors/console messages. The final Release
+run also passes 7/7. This regression is retained as a small browser script without
+adding a browser/runtime build dependency.

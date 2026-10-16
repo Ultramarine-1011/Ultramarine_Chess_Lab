@@ -3,11 +3,7 @@ import {Markers, MARKER_TYPE} from './vendor/cm-chessboard/src/extensions/marker
 import {PromotionDialog, PROMOTION_DIALOG_RESULT_TYPE} from './vendor/cm-chessboard/src/extensions/promotion-dialog/PromotionDialog.js';
 
 const $ = id => document.getElementById(id);
-const board = new Chessboard($('board'), {
-  assetsUrl: '/vendor/cm-chessboard/assets/',
-  style: {animationDuration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 160},
-  extensions: [{class: Markers}, {class: PromotionDialog, props: {language: 'en'}}]
-});
+let board;
 let state = null;
 let busy = true;
 let promoting = false;
@@ -68,8 +64,18 @@ function controls() {
 }
 function render() {
   if (!state) { controls(); return; }
+  const orientation = state.config.color === 'white' ? COLOR.white : COLOR.black;
+  if (!board || board.getOrientation() !== orientation) {
+    // A new game may finish before the component's queued turn animation.
+    // Construct the new orientation directly, without racing that queue.
+    board?.destroy();
+    board = new Chessboard($('board'), {
+      orientation, position: state.fen, assetsUrl: '/vendor/cm-chessboard/assets/',
+      style: {animationDuration: matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 160},
+      extensions: [{class: Markers}, {class: PromotionDialog, props: {language: 'en'}}]
+    });
+  }
   board.disableMoveInput();
-  board.setOrientation(state.config.color === 'white' ? COLOR.white : COLOR.black);
   board.setPosition(state.fen, false);
   board.removeMarkers();
   lastMove();
