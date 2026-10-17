@@ -8,7 +8,9 @@ macOS dirty工作区真实8局、4组换色配对通过：5W/0D/3L，62.5%，条
 Baseline缓存复用（hash/mtime不变）、Candidate增量无额外编译、PGN独立计数和
 开局换色核对通过。21项实验工具测试通过，重新configure/build后Release CTest6/6。
 文档、命令、版本及小型证据见[验证记录](docs/validation/daily-elo-20261017/notes.md)。
-Windows实际对弈本轮NOT_RUN；推送后的现有跨平台CI待核对。不新增CI对弈。
+功能提交`32686fb`已推送main。[本次CI](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/39007702283)
+因GitHub账户付款/支出额度限制，五个任务均未启动（GitHub状态failure、步骤为空），
+不属于代码测试失败；跨平台CI与Windows实际对弈均为NOT_RUN。不新增CI对弈。
 
 工程简化验收，2026-10-16（Asia/Singapore），提交697737c。
 旧开发记录移至 [历史记录](docs/validation/history.md)。

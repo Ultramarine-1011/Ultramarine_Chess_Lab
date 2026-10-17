@@ -54,4 +54,11 @@ loop only; the displayed Elo is descriptive, not a strength claim.
 
 Windows physical-host match: NOT_RUN. The wrapper uses portable pathlib,
 argument arrays, Ninja Release and platform-specific executable/cache names.
-Pushed-sha existing GitHub Actions verification: pending. No workflow was changed.
+Feature commit `32686fbaad12faf52264f3b74a3d6a867ede3af7` is pushed to main.
+[Existing Actions run](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/39007702283)
+has GitHub conclusion failure for all five jobs, each with no executed steps.
+The retained `ci.json` annotation says the jobs were not started because recent
+account payments failed or the spending limit needs to be increased. Accordingly
+cross-platform execution is NOT_RUN, not a demonstrated code-test failure.
+No workflow was changed and no new CI match was introduced. The follow-up
+documentation commit records this result with `[skip ci]`.
