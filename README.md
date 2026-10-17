@@ -54,27 +54,33 @@ evalinfo
 
 ## 日常 Elo 快测
 
-完成上述 Python 依赖安装，并准备好 fastchess（macOS 用
-`python scripts/bootstrap_fastchess.py`；Windows 把 `fastchess.exe` 放到
-`.tools/bin/` 或 PATH）。Windows 在 Developer PowerShell 中运行，使用
-`.venv/Scripts/python.exe`；macOS 激活 `.venv` 后：
+安装上述 Python 依赖和 fastchess（macOS：`python scripts/bootstrap_fastchess.py`）。
+默认对手固定为 [Stockfish 17.1官方二进制](https://github.com/official-stockfish/Stockfish/releases/tag/sf_17.1)，
+选择匹配操作系统/CPU的文件并解压至`.tools/r6-stockfish/`，可直接复用R6的安装。
+也会查找`.tools/bin/stockfish-17.1`、`.tools/bin/stockfish`及PATH；Windows加`.exe`。
+macOS如缺少执行权限，使用`chmod +x <Stockfish路径>`。不自动下载或构建Stockfish。
 
 ```sh
-python scripts/elo.py --set-baseline HEAD   # 可选：固定指定提交并缓存 Release 二进制
-python scripts/elo.py                      # 128局，2+0.02，4并发
-python scripts/elo.py --games 8 --tc 2+0.02 --concurrency 2
+python scripts/elo.py                     # 128局，2+0.02，4并发，Stockfish目标1600
+python scripts/elo.py --sf-elo 1800 --games 8 --tc 2+0.02 --concurrency 2
+python scripts/elo.py --stockfish "/path/to/stockfish" --sf-elo 1600
 ```
 
-未设置基准时，首次自动固定当前已提交的 HEAD；后续始终使用保存的完整 SHA。
-`--set-baseline <revision>` 只设置/构建基准后退出，不启动比赛。基准按平台、
-架构和 SHA 缓存，日常复用；Candidate 每次重新 configure 并增量构建当前工作区，
-允许未提交修改，无需预先构建。工具链升级后可删除对应基准缓存并重新运行。
+Windows在VS Developer PowerShell中使用`.venv/Scripts/python.exe`，例如
+`.venv/Scripts/python.exe scripts/elo.py --stockfish "C:/engines/stockfish.exe"`。
+指定路径允许明确选择其他Stockfish版本；默认查找的对手必须报告`Stockfish 17.1`。
+启动时检查`UCI_LimitStrength`、`UCI_Elo`及目标数值范围，再配置限强、单线程和
+固定Hash16MiB。Candidate每次重新configure并增量编译当前Release工作区，允许未提交修改。
+无需历史UCL Baseline；通用`build_revision.py`/`prepare_comparison.py`继续可用。
 
-结果在 `.tools/elo/latest/`：终端和 `report.md` 显示 W/D/L、得分率、相对 Elo
-及换色配对 bootstrap 95% CI；`games.pgn`、`record.json`、配置和 fastchess
-日志保留在同目录。下次快测覆盖 latest；需要保留时自行复制该目录。
-独立开发开局集支持 2–512 个偶数局，每个开局换色两局，无 depth/nodes 限制，
-150回合仍未结束则裁和。快测仅提供当前设置的描述性比较；不覆盖正式研究报告。
+终端和`.tools/elo/latest/report.md`显示UCL的W/D/L、得分率、相对Stockfish的Elo
+差值及配对bootstrap95%区间，另显示“Stockfish目标Elo + 差值”的粗略评级和区间。
+这是Stockfish限强参考标尺，**不是FIDE/Chess.com绝对等级分**；全胜/全负、样本
+不足或退化配对区间不显示虚假的有限评级。版本、二进制SHA、限强设置和时控均明确记录。
+
+`games.pgn`、`record.json`、配置和fastchess日志保留在同目录；下次覆盖latest，
+需要保留时复制目录。沿用256个独立开发开局，支持2–512个偶数局，每开局换色两局，
+无depth/nodes限制，150回合裁和。短赛只作粗略参考，正式实验与历史报告保持原样。
 
 ## 探索实验
 

@@ -1,5 +1,34 @@
 # 验证结果
 
+## 日常 Stockfish 限强标尺 — 2026-10-17
+
+在`b9d5d030397f2c70740ff6e18384b7eda93d4d78` + dirty工作区验证，
+默认入口改为增量Release UCL对Stockfish17.1，目标1600、单线程、Hash16MiB。
+使用官方macOS Apple Silicon发行包（R6同一版本），实际UCI_Elo范围[1320,3190]；
+二进制SHA256为`9345c44970093cabed9757be86a9ca86809a5b6ca1bdc654cf51a5eed7568858`。
+外部引擎记录实际UCI版本/身份、哈希及选项，revision/build_info均为null；
+UCL SHA和历史版本比较验证保留。原有CI工作区修改保持未提交，不属于本次改动。
+
+短赛调用`elo.main(['--games','8'])`，仅用临时测试patch启用既有
+`pgn_telemetry=true`诊断；时控2+0.02、并发4、四个开发开局换色，无depth/nodes。
+真实8局6W/0D/2L，75%；配对bootstrap95%得分[50%,100%]，相对Elo
++190.8485 [0,+inf]；限强参考评级1790.8485 [1600,+inf]，不是绝对等级分。
+[终端报告](docs/validation/stockfish-daily-20261017.log)保留实际配置和区间。
+原始PGN、record和UCI日志在`.tools/elo/latest/`；四个Stockfish实例均收到全部
+限强/Threads/Hash设置并返回readyok，226次时钟搜索未设置depth/nodes。
+独立PGN胜负计数、逐开局换色和bundle统计重算通过。
+
+首次真实尝试因限强Stockfish的bestmove不同于最优PV，被旧`-strict`中止。
+现日常`strict=false`仅允许限强Stockfish的这一告警，其他告警在运行后和离线验证
+仍判失败；历史默认strict不变。原failed包留在`.tools/elo/stockfish-initial-strict-failed/`。
+新告警测试fixture曾误保留UCL build-info标志，校正为外部身份后通过。
+
+`PYTHONPATH=python .venv/bin/python -m unittest discover -s tests -p test_experiments.py`
+24项通过；重新`cmake --preset release -DPython3_EXECUTABLE="$PWD/.venv/bin/python"`、
+`cmake --build --preset release --parallel 4`后，`ctest --preset release -R '^experiments$'`
+及`ctest --preset release`通过，完整6/6（12.35s）。R1/R2、R3、R4续跑、R6A四份
+历史比赛包额外离线验证通过。Windows实机对弈NOT_RUN；推送后CI状态待核对。
+
 ## 日常 Elo 入口 — 2026-10-17
 
 在最新main `eff1a6e38ffd9cdb324e1637ad773949f22b4a75` 上实现`scripts/elo.py`。

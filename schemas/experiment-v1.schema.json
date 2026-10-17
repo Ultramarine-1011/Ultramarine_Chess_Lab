@@ -35,7 +35,9 @@
         "type": "object", "additionalProperties": false,
         "required": ["name", "path", "revision", "build", "options", "sha256"],
         "properties": {"name": {"type": "string", "minLength": 1}, "path": {"type": "string"},
-          "revision": {"$ref": "#/$defs/revision"}, "build": {"type": "string", "minLength": 1},
+          "revision": {"anyOf": [{"$ref": "#/$defs/revision"}, {"type": "null"}]},
+          "version": {"type": "string", "minLength": 1}, "uci_id": {"type": "object", "additionalProperties": {"type": "string"}},
+          "build": {"type": "string", "minLength": 1},
           "options": {"type": "object"}, "sha256": {"$ref": "#/$defs/hash"},
           "build_info": {"type": ["object", "null"]},
           "evaluation": {"type":"object","additionalProperties":false,"required":["evaluator","model_sha256"],"properties":{"evaluator":{"enum":["handcrafted-v1","linear-v1", "linear-v2"]},"model_sha256":{"oneOf":[{"type":"null"},{"type":"string","pattern":"^[0-9a-f]{64}$"}]}}}}

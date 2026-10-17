@@ -148,8 +148,10 @@
             "type": "string"
           },
           "revision": {
-            "$ref": "#/$defs/revision"
+            "anyOf": [{"$ref": "#/$defs/revision"}, {"type": "null"}]
           },
+          "version": {"type": "string", "minLength": 1},
+          "uci_id": {"type": "object", "additionalProperties": {"type": "string"}},
           "build": {
             "type": "string",
             "minLength": 1

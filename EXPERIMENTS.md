@@ -53,21 +53,29 @@ benchmark 不再另存同一份 measurements.json。日志可选详细 PGN/UCI t
 
 ## 日常开发快测
 
-`scripts/elo.py` 直接复用 `ucl.match.run_match`、`ucl.report` 和 bundle 验证；
-基准复用 `scripts/build_revision.py` 的隔离 Release 构建。用 `comparison=smoke`
-及默认 exploratory 模式支持同 SHA、未提交 Candidate 和同版本自对弈；正式
-`comparison=revision` 的干净版本与编译控制检查保持不变。
+`scripts/elo.py`直接复用`ucl.match.run_match`、`ucl.report`和bundle验证。
+当前工作区增量Release对固定Stockfish17.1；可用`--stockfish PATH`明确选择其他
+版本。默认目标`--sf-elo 1600`，启动时验证实际UCI身份、限强选项类型和数值范围；
+配置`UCI_LimitStrength=true`、`UCI_Elo=N`、`Threads=1`、`Hash=16`。
+不使用历史UCL基准，不修改通用版本比较工具。
 
-开局 `experiments/openings/elo-dev.epd` 为独立开发集，来源/构造/固定种子/哈希
-在相邻 JSON：人工指定常见开局前缀后做合法安静续着，不使用引擎评分或棋局结果。
-256个位置无重复、行棋方均衡，与已归档实验 EPD 无重叠；仅供开发，不充当独立正式test。
-每开局只取一轮换色配对，最多512局；默认64轮/128局、2+0.02、并发4。
-不限制 depth/nodes，maxmoves=150，异常终局由现有 match 拒绝并保留诊断。
+第三方未知Git提交在引擎配置/记录中为`revision=null`，另记录实际UCI版本名、
+`uci_id`、二进制SHA256和选项；不会继承运行器的UCL Git SHA。非空历史SHA与
+UCL build-info仍按原规则验证，`code.revision`仍为运行器的完整Git SHA。
 
-沿用按轮 bootstrap 2000次；相对 Elo 为 `400*log10(p/(1-p))`，区间端点由
-同一得分区间单调变换，不采用 fastchess 的自动 Elo/LOS。全胜/全负显示无穷；
-仅一轮时区间显示 unavailable。小样本或重复使用开发开局不能证明普遍棋力提升。
-`.tools/elo/` 全部忽略，latest 可以覆盖；正式实验仍使用原来不可覆盖的结果目录。
+沿用`experiments/openings/elo-dev.epd`和相邻JSON的独立开发位置/构造/固定种子/哈希。
+256个位置、每开局一轮换色、最多512局；默认64轮/128局、2+0.02、并发4。
+不限制depth/nodes，maxmoves=150，异常终局由现有match拒绝并保留诊断。
+限强Stockfish的bestmove可能不同于最优PV；日常配置`strict=false`仅容许该
+已知PV首着不符告警，运行后及离线验证均拒绝其他告警。原有默认strict不变。
+
+相对Elo为`400*log10(p/(1-p))`，配对bootstrap2000次的得分区间作单调变换；
+粗略评级将同一差值和区间加上Stockfish目标Elo，不采用fastchess自动Elo/LOS。
+全胜/全负差值为无穷；不足两轮或退化区间不提供有限粗略评级，区间边界保持无穷。
+该评级只是Stockfish限强参考标尺，不等同于FIDE或Chess.com；实际限强表现随版本、
+时控、开局及硬件变化，尤其短时控不能视为绝对标定。不能跨这些条件直接合并结果。
+报告标明版本/二进制SHA、限强配置和时控，原始PGN与配置可重算。
+`.tools/elo/`忽略且latest可覆盖；正式实验仍使用原保护规则和独立输出。
 
 ## 历史研究
 

@@ -9,6 +9,8 @@ import signal
 import shutil
 import subprocess
 
+import chess.engine
+
 from .records import new_record, prepare_output, sha256, utc_now, write_json
 from .report import markdown_report, summarize_pgn
 
@@ -23,10 +25,12 @@ def executable(value, root):
 
 def validate_config(c):
     required = {"version", "seed", "engines", "rounds", "games", "concurrency", "tc", "maxmoves", "timeout_seconds"}
-    if not required <= c.keys() or c.keys() - required - {"depth", "nodes", "openings", "comparison", "pgn_telemetry"}:
+    if not required <= c.keys() or c.keys() - required - {"depth", "nodes", "openings", "comparison", "pgn_telemetry", "strict"}:
         raise ValueError("missing or unknown match configuration fields")
     if 'pgn_telemetry' in c and type(c['pgn_telemetry']) is not bool:
         raise ValueError('pgn_telemetry must be boolean')
+    if "strict" in c and type(c["strict"]) is not bool:
+        raise ValueError("strict must be boolean")
     if c["version"] != 1 or len(c["engines"]) != 2 or c["games"] != 2:
         raise ValueError("version 1 requires two engines and color-swapped game pairs")
     for key in ("rounds", "concurrency", "maxmoves", "timeout_seconds", "depth", "nodes"):
@@ -52,9 +56,12 @@ def validate_config(c):
 
 def validate_engine(e):
     if not {"name", "path", "revision", "build", "options"} <= e.keys() or not all(
-            isinstance(e[k], str) and e[k] for k in ("name", "path", "revision", "build")):
+            isinstance(e[k], str) and e[k] for k in ("name", "path", "build")):
         raise ValueError("engine requires name/path/revision/build/options")
-    if e["revision"] != "HEAD" and not re.fullmatch(r"[0-9a-f]{40}", e["revision"]):
+    if e["revision"] is None:
+        if not isinstance(e.get("version"), str) or not e["version"] or e.get("ucl_build_info"):
+            raise ValueError("external engine requires version and cannot use UCL build-info")
+    elif not isinstance(e["revision"], str) or (e["revision"] != "HEAD" and not re.fullmatch(r"[0-9a-f]{40}", e["revision"])):
         raise ValueError("engine revision must be a full commit SHA or HEAD")
     if not isinstance(e["options"], dict) or not all(isinstance(k, str) and isinstance(v, (str, int, float, bool)) for k, v in e["options"].items()):
         raise ValueError("options must be a scalar mapping")
@@ -75,7 +82,9 @@ def command(config, paths, fastchess, pgn, opening=None, engine_options=None):
     if config.get('pgn_telemetry'):
         args += ['nodes=true','nps=true','timeleft=true','latency=true',
                  '-log',f'file={Path(pgn).parent / "engine.log"}','level=trace','engine=true','append=false','compress=false']
-    args += ["-autosaveinterval", "0", "-strict"]
+    args += ["-autosaveinterval", "0"]
+    if config.get("strict", True):
+        args.append("-strict")
     if opening:
         args += ["-openings", f"file={opening}", f"format={config['openings']['format']}", f"order={config['openings']['order']}"]
     return args
@@ -132,6 +141,7 @@ def run_match(root, config_path, output, fastchess="fastchess", *, formal=False,
             returncode = run_process(args, output, log, config["timeout_seconds"])
         if returncode:
             raise RuntimeError(f"fastchess exited {returncode}; see fastchess.log")
+        validate_match_warnings(config, output / "fastchess.log")
         e1, e2 = config["engines"]
         record["results"] = summarize_pgn(output / "games.pgn", e1["name"], e2["name"],
             config["rounds"] * config["games"], config["seed"])
@@ -159,6 +169,19 @@ def run_match(root, config_path, output, fastchess="fastchess", *, formal=False,
     return record
 
 
+def validate_match_warnings(config, path):
+    if config.get("strict", True):
+        return  # Legacy runs retain fastchess's fail-on-warning behavior.
+    limited = [e["name"] for e in config["engines"] if e.get("version", "").startswith("Stockfish ")
+               and e["options"].get("UCI_LimitStrength") is True and "UCI_Elo" in e["options"]]
+    with Path(path).open(encoding="utf-8") as log:
+        for line in log:
+            if line.startswith("Warning;") and not (
+                    line.startswith("Warning; Bestmove does not match beginning of last PV - move ")
+                    and any(line.rstrip().endswith(" from " + name) for name in limited)):
+                raise ValueError("unexpected fastchess warning: " + line.strip())
+
+
 def validate_comparison(config, engines):
     kind = config.get("comparison", "smoke")
     a, b = engines
@@ -179,6 +202,13 @@ def capture_engine(root, e, code_revision, *, formal=False):
     entry = {k: v for k, v in e.items() if k != "ucl_build_info"}
     entry.update(path=str(path), sha256=sha256(path),
                  revision=code_revision if e["revision"] == "HEAD" else e["revision"], build_info=None)
+    if e["revision"] is None:
+        with chess.engine.SimpleEngine.popen_uci(str(path), timeout=10) as client:
+            entry["uci_id"] = dict(client.id)
+            if client.id.get("name") != e["version"]:
+                raise ValueError("external engine UCI version mismatch")
+            client.configure(e["options"])
+            client.ping()
     if e.get("ucl_build_info"):
         info = json.loads(subprocess.check_output([str(path), "--build-info"], text=True, timeout=10))
         entry["build_info"] = info
@@ -200,6 +230,14 @@ def capture_engine(root, e, code_revision, *, formal=False):
         if entry['evaluation'] != {'evaluator': expected, 'model_sha256': e['options'].get('ModelSHA256') if expected.startswith('linear-') else None}:
             raise ValueError('engine evaluator/model identity mismatch')
     return entry
+
+
+def validate_external_identity(actual, declared):
+    if declared["revision"] is None and (
+            actual["revision"] is not None or actual.get("build_info") is not None
+            or actual.get("version") != declared["version"]
+            or actual.get("uci_id", {}).get("name") != declared["version"]):
+        raise ValueError("external engine identity mismatch")
 
 
 def ordered_options(options):

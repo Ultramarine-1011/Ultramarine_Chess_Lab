@@ -19,7 +19,7 @@ def validate_bundle(record_path, schema, completed_prefix_games=None):
     if record["kind"] == "benchmark":
         from .benchmark import validate_benchmark_bundle
         return validate_benchmark_bundle(path, record)
-    from .match import validate_config, validate_comparison, validate_evaluation, validate_telemetry
+    from .match import validate_config, validate_comparison, validate_evaluation, validate_telemetry, validate_external_identity, validate_match_warnings
     config = record["parameters"]
     validate_config(config)
     if record["seed"] != config["seed"]:
@@ -44,7 +44,9 @@ def validate_bundle(record_path, schema, completed_prefix_games=None):
     if not required <= record["artifacts"].keys():
         raise ValueError("missing required experiment artifacts")
     validate_telemetry(record, path.parent)
+    validate_match_warnings(config, path.parent / "fastchess.log")
     for actual, declared in zip(record["engines"], config["engines"], strict=True):
+        validate_external_identity(actual, declared)
         validate_evaluation(actual, path.parent, record["artifacts"])
         for key in ("name", "options", "build"):
             if actual[key] != declared[key]:

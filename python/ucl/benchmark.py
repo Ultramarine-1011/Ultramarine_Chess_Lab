@@ -9,7 +9,7 @@ import time
 import chess
 import chess.engine
 
-from .match import capture_engine, validate_engine, runtime_options, validate_evaluation
+from .match import capture_engine, validate_engine, runtime_options, validate_evaluation, validate_external_identity
 from .records import new_record, prepare_output, sha256, utc_now, write_json
 
 
@@ -221,6 +221,7 @@ def validate_benchmark_bundle(path, record):
         raise ValueError("benchmark engine names mismatch")
     for declared in config["engines"]:
         actual = engines[declared["name"]]
+        validate_external_identity(actual, declared)
         validate_evaluation(actual, path.parent, record["artifacts"])
         revision = record["code"]["revision"] if declared["revision"] == "HEAD" else declared["revision"]
         formal = record.get('mode', 'formal') == 'formal'

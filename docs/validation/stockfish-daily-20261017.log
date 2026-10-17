@@ -1,0 +1,32 @@
+Opponent: Stockfish 17.1, UCI_Elo=1600, Threads=1, Hash=16 MiB
+Building workspace candidate (incremental Release) ...
+Playing 8 games, tc=2+0.02, concurrency=4 ...
+# UCL experiment 5468d0d0-c06d-4ddc-a8cb-8c646d5dda3c
+
+Mode: exploratory; revision: `b9d5d030397f2c70740ff6e18384b7eda93d4d78`; dirty: `True`
+
+UCL vs Stockfish 17.1: 6 W / 0 D / 2 L (8 games), score 0.750.
+
+Paired rounds: 4; paired bootstrap score CI95: [0.5, 1.0].
+
+Pair scores (0, 0.5, 1, 1.5, 2): [0, 0, 2, 0, 2].
+
+Descriptive smoke/baseline statistics; not evidence of Elo improvement.
+
+Daily development comparison:
+
+Opponent: Stockfish 17.1; binary SHA256: `9345c44970093cabed9757be86a9ca86809a5b6ca1bdc654cf51a5eed7568858`
+
+Stockfish UCI: {'UCI_LimitStrength': True, 'UCI_Elo': 1600, 'Threads': 1, 'Hash': 16}; tc=2+0.02; concurrency=4
+
+W/D/L: 6/0/2; score: 75.00%
+
+Relative Elo vs Stockfish: +190.85; paired bootstrap 95% CI: [+0.00, +inf]
+
+Score paired bootstrap 95% CI: [50.00%, 100.00%]
+
+Approximate rating (Stockfish target 1600 + relative Elo): +1790.85; paired bootstrap 95% CI: [+1600.00, +inf]
+
+Stockfish limited-strength reference scale only; not a FIDE or Chess.com absolute rating. Conditional on version, time control, openings and hardware; small-sample intervals are descriptive.
+
+Results / PGN / versions / config: /Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/elo/latest

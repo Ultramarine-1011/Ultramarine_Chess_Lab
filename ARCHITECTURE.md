@@ -77,8 +77,9 @@ UCI ModelSHA256 → ModelFile → Evaluator=Linear；新模型完全加载成功
 - records：版本/主机信息、SHA-256、原子 JSON、探索输出覆盖。
 - match / benchmark：输入校验、资源清理、执行、原始结果；共用引擎配置校验。
 - integrity / report：离线产物与棋谱验证、配对统计；report 内调用验证。
-- scripts/elo.py：日常入口，复用历史构建、match 和 report；基准按平台/SHA缓存，
-  Candidate增量编译当前工作区，探索输出位于.tools/elo/latest。
+- scripts/elo.py：日常入口，增量Release工作区对固定Stockfish17.1限强标尺；
+  复用match/report及配对区间，探索输出位于.tools/elo/latest。
+  外部引擎未知revision为null，独立记录实际UCI版本/身份、二进制哈希及选项。
 - dataset / r4_data、feature_data：有界下载、棋局划分/去重、C++ 特征与 Python 参考核对。
 - training.fit / r4_training.fit：直接函数训练；train-only RMS、零截距 BCE、L2；
   R4 每局等权。没有额外 Trainer 协议或单实现适配器。

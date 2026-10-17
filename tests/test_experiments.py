@@ -275,6 +275,73 @@ class ExperimentTests(unittest.TestCase):
                                 (chess.engine.MateGiven, 30000)):
             self.assertEqual(uci_score_cp(score), expected)
 
+    def test_limited_stockfish_pv_warning_is_the_only_allowed_warning(self):
+        from ucl.match import validate_match_warnings
+        config = deepcopy(CONFIG)
+        config["strict"] = False
+        config["engines"][1].update(version="Stockfish 17.1", revision=None, ucl_build_info=False,
+            options={"UCI_LimitStrength": True, "UCI_Elo": 1600})
+        validate_config(config)
+        args = command(config, ["ucl", "sf"], "fastchess", "games.pgn")
+        self.assertNotIn("-strict", args)
+        self.assertIn("-strict", command(CONFIG, ["a", "b"], "fastchess", "games.pgn"))
+        name = config["engines"][1]["name"]
+        allowed = f"Warning; Bestmove does not match beginning of last PV - move e2e4 from {name}\n"
+        with tempfile.TemporaryDirectory() as tmp:
+            log = Path(tmp) / "fastchess.log"
+            log.write_text(allowed)
+            validate_match_warnings(config, log)
+            for warning in ("Warning; Illegal PV move - move a1a8 from " + name + "\n",
+                            allowed.replace(name, config["engines"][0]["name"])):
+                log.write_text(warning)
+                with self.assertRaisesRegex(ValueError, "unexpected fastchess warning"):
+                    validate_match_warnings(config, log)
+            log.write_text(allowed)
+            config["engines"][1]["options"]["UCI_LimitStrength"] = False
+            with self.assertRaisesRegex(ValueError, "unexpected fastchess warning"):
+                validate_match_warnings(config, log)
+        config["strict"] = 0
+        with self.assertRaisesRegex(ValueError, "strict must be boolean"):
+            validate_config(config)
+
+    def test_external_identity_capture_and_validation(self):
+        from unittest.mock import MagicMock
+        from ucl.match import validate_external_identity
+        declared = {**CONFIG["engines"][1], "path": sys.executable, "revision": None,
+                    "version": "Stockfish 17.1", "ucl_build_info": False}
+        config = deepcopy(CONFIG)
+        config["engines"][1] = declared
+        validate_config(config)
+        for bad in ({**declared, "version": ""}, {**declared, "ucl_build_info": True},
+                    {**declared, "revision": "Stockfish 17.1"}):
+            config["engines"][1] = bad
+            with self.assertRaises(ValueError):
+                validate_config(config)
+        client = MagicMock()
+        client.id = {"name": "Stockfish 17.1", "author": "Stockfish developers"}
+        with patch("ucl.match.chess.engine.SimpleEngine.popen_uci") as start:
+            start.return_value.__enter__.return_value = client
+            actual = capture_engine(ROOT, declared, "b" * 40, formal=True)
+            self.assertIsNone(actual["revision"])
+            self.assertIsNone(actual["build_info"])
+            self.assertEqual(actual["sha256"], sha256(sys.executable))
+            self.assertEqual(actual["uci_id"], client.id)
+            client.configure.assert_called_with(declared["options"])
+            client.ping.assert_called_once()
+            client.id["name"] = "Stockfish 18"
+            with self.assertRaisesRegex(ValueError, "UCI version mismatch"):
+                capture_engine(ROOT, declared, "b" * 40)
+        validate_external_identity(actual, declared)
+        for bad in ({**actual, "revision": "b" * 40}, {**actual, "version": "Stockfish 18"},
+                    {**actual, "uci_id": {}}, {**actual, "build_info": {"revision": "b" * 40}}):
+            with self.assertRaisesRegex(ValueError, "external engine identity"):
+                validate_external_identity(bad, declared)
+        for name in ("experiment-v1.schema.json", "benchmark-v1.schema.json"):
+            schema = json.loads((ROOT / "schemas" / name).read_text())
+            self.assertEqual(schema["properties"]["code"]["properties"]["revision"], {"$ref": "#/$defs/revision"})
+        # The offline validator must continue accepting archived UCL-only evidence.
+        validate_bundle(ROOT / "experiments/results/r4-telemetry-smoke/record.json", SCHEMA)
+
     def test_timeout_stops_process(self):
         with tempfile.TemporaryDirectory() as tmp:
             with (Path(tmp) / "log.txt").open("w") as log:
@@ -283,50 +350,80 @@ class ExperimentTests(unittest.TestCase):
 
 
 class DailyEloTests(unittest.TestCase):
+    SF = {"version": "Stockfish 17.1", "options": {
+        "UCI_LimitStrength": True, "UCI_Elo": 1600, "Threads": 1, "Hash": 16}}
+
     def test_defaults_and_unlimited_search(self):
         with tempfile.TemporaryDirectory() as tmp, patch.object(elo, "STATE", Path(tmp)):
-            with patch.object(elo, "baseline_binary", return_value=("a" * 40, Path("baseline"))) as baseline, \
+            with patch.object(elo, "find_stockfish", return_value=Path(sys.executable)), \
+                    patch.object(elo, "stockfish_identity", return_value=self.SF) as identity, \
                     patch.object(elo, "build_candidate", return_value=Path("candidate")), \
                     patch.object(elo, "executable", return_value=Path(sys.executable)), \
                     patch.object(elo, "run_match", return_value={"status": "failed", "error": "test stop"}) as match:
                 with self.assertRaises(SystemExit) as stopped:
                     elo.main([])
                 self.assertEqual(stopped.exception.code, 1)
-            self.assertEqual(baseline.call_args.args, ("HEAD",))
+            self.assertEqual(identity.call_args.args[1], 1600)
+            self.assertTrue(identity.call_args.kwargs["pinned"])
+            self.assertFalse((Path(tmp) / "baseline.json").exists())
             config = json.loads((Path(tmp) / "match.json").read_text())
             self.assertEqual((config["rounds"], config["games"], config["tc"], config["concurrency"]),
                              (64, 2, "2+0.02", 4))
             self.assertEqual(config["engines"][0]["revision"], "HEAD")
-            self.assertEqual(config["engines"][1]["revision"], "a" * 40)
+            self.assertIsNone(config["engines"][1]["revision"])
+            self.assertEqual(config["engines"][1]["options"], self.SF["options"])
             self.assertTrue(match.call_args.kwargs["overwrite"])
             self.assertNotIn("depth", config)
             self.assertNotIn("nodes", config)
             validate_config(config)
-            args = command(config, ["candidate", "baseline"], "fastchess", "games.pgn", elo.OPENINGS)
+            args = command(config, ["candidate", "stockfish"], "fastchess", "games.pgn", elo.OPENINGS)
             self.assertFalse(any(a.startswith(("depth=", "nodes=")) for a in args))
+            for option in ("option.UCI_LimitStrength=true", "option.UCI_Elo=1600", "option.Threads=1", "option.Hash=16"):
+                self.assertIn(option, args)
 
-    def test_baseline_cache_and_set_baseline(self):
-        with tempfile.TemporaryDirectory(prefix="ucl elo ") as tmp, patch.object(elo, "STATE", Path(tmp)):
-            full = "b" * 40
-            def build(revision, output):
-                output.mkdir(parents=True)
-                binary = output / elo.BINARY
-                binary.write_bytes(b"cached baseline")
-                write_json(output / "manifest.json", {"sha256": sha256(binary), "build_info": {
-                    "revision": revision, "dirty": False, "build_type": "Release"}})
-            with patch.object(elo.subprocess, "check_output", return_value=full), \
-                    patch.object(elo, "build_revision", side_effect=build) as builder, \
-                    patch.object(elo, "build_candidate") as candidate, patch.object(elo, "run_match") as match:
-                elo.main(["--set-baseline", "HEAD~1"])
-                _, binary = elo.baseline_binary(full)
-                builder.assert_called_once()
-                candidate.assert_not_called()
-                match.assert_not_called()
-                self.assertEqual(json.loads((Path(tmp) / "baseline.json").read_text()), {"revision": full})
-                binary.write_bytes(b"corrupted")
-                with self.assertRaisesRegex(ValueError, "cache mismatch"):
-                    elo.baseline_binary(full)
-                builder.assert_called_once()
+    def test_stockfish_discovery_and_missing_installation_message(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(elo, "ROOT", Path(tmp)), \
+                patch.object(elo.shutil, "which", return_value=None):
+            with self.assertRaisesRegex(FileNotFoundError, "sf_17.1.*--stockfish"):
+                elo.find_stockfish()
+            name = "stockfish.exe" if sys.platform == "win32" else "stockfish"
+            r6 = Path(tmp) / ".tools/r6-stockfish/unpacked/stockfish" / name
+            r6.parent.mkdir(parents=True)
+            r6.write_bytes(b"installed R6 engine")
+            r6.chmod(0o755)
+            self.assertEqual(elo.find_stockfish(), r6.resolve())
+            explicit = Path(tmp) / "custom engine.exe"
+            explicit.write_bytes(b"another engine")
+            self.assertEqual(elo.find_stockfish(str(explicit)), explicit.resolve())
+
+    def test_stockfish_options_ranges_versions_and_configuration(self):
+        import chess.engine
+        from unittest.mock import MagicMock
+        client = MagicMock()
+        client.id = {"name": "Stockfish 17.1", "author": "Stockfish developers"}
+        client.options = {
+            "UCI_LimitStrength": chess.engine.Option("UCI_LimitStrength", "check", False, None, None, None),
+            "UCI_Elo": chess.engine.Option("UCI_Elo", "spin", 1320, 1320, 3190, None),
+            "Threads": chess.engine.Option("Threads", "spin", 1, 1, 1024, None),
+            "Hash": chess.engine.Option("Hash", "spin", 16, 1, 33554432, None)}
+        with patch.object(elo.chess.engine.SimpleEngine, "popen_uci") as start:
+            start.return_value.__enter__.return_value = client
+            identity = elo.stockfish_identity(Path("engine with spaces.exe"), 1600)
+            self.assertEqual(identity["options"], self.SF["options"])
+            client.configure.assert_called_with(self.SF["options"])
+            client.ping.assert_called_once()
+            for target in (1319, 3191):
+                with self.assertRaisesRegex(ValueError, "UCI_Elo.*supported range"):
+                    elo.stockfish_identity(Path("engine"), target)
+            for name in tuple(client.options):
+                option = client.options.pop(name)
+                with self.assertRaisesRegex(ValueError, name):
+                    elo.stockfish_identity(Path("engine"), 1600)
+                client.options[name] = option
+            client.id["name"] = "Stockfish 18"
+            with self.assertRaisesRegex(ValueError, "default opponent"):
+                elo.stockfish_identity(Path("engine"), 1600)
+            self.assertEqual(elo.stockfish_identity(Path("engine"), 1600, pinned=False)["version"], "Stockfish 18")
 
     def test_candidate_reconfigures_and_builds_incrementally(self):
         info = {"revision": "a" * 40, "dirty": True, "build_type": "Release"}
@@ -355,7 +452,7 @@ class DailyEloTests(unittest.TestCase):
                     elo.main(args)
                 self.assertEqual(failed.exception.code, 2)
             build.assert_not_called()
-        config = elo.match_config(Path("C:/candidate with spaces.exe"), Path("baseline"), "a" * 40,
+        config = elo.match_config(Path("C:/candidate with spaces.exe"), Path("stockfish"), self.SF,
                                   8, elo.time_control("0:02+0.02"), 2)
         self.assertEqual((config["rounds"], config["tc"], config["concurrency"]), (4, "0:02+0.02", 2))
 
@@ -366,16 +463,26 @@ class DailyEloTests(unittest.TestCase):
         r = {"candidate": "Candidate", "baseline": "Baseline", "wins": 5, "draws": 2, "losses": 1,
              "games": 8, "score": .75, "paired_rounds": 4,
              "score_ci95_paired_bootstrap": [.25, .9], "interpretation": "development"}
-        record = {"id": "test", "code": {"revision": "a" * 40, "dirty": True}, "results": r}
+        record = {"id": "test", "code": {"revision": "a" * 40, "dirty": True}, "results": r,
+                  "engines": [{}, {**self.SF, "sha256": "1" * 64}],
+                  "parameters": {"tc": "2+0.02", "concurrency": 4}}
         text = elo.result_report(record)
         self.assertIn("W/D/L: 5/2/1; score: 75.00%", text)
-        self.assertIn("Relative Elo: +190.85", text)
+        self.assertIn("Relative Elo vs Stockfish: +190.85", text)
         self.assertIn("95% CI: [-190.85, +381.70]", text)
-        r.update(score=0, score_ci95_paired_bootstrap=[0, 1])
-        self.assertIn("Relative Elo: -inf", elo.result_report(record))
+        self.assertIn("Approximate rating (Stockfish target 1600 + relative Elo): +1790.85", text)
+        self.assertIn("95% CI: [+1409.15, +1981.70]", text)
+        self.assertIn("not a FIDE or Chess.com absolute rating", text)
+        r.update(score=.5, score_ci95_paired_bootstrap=[0, 1])
         self.assertIn("95% CI: [-inf, +inf]", elo.result_report(record))
+        r.update(score=.5, score_ci95_paired_bootstrap=[.5, .5])
+        self.assertIn("unavailable (boundary score or insufficient paired variation)", elo.result_report(record))
+        r.update(score=0, score_ci95_paired_bootstrap=[0, 1])
+        self.assertIn("Relative Elo vs Stockfish: -inf", elo.result_report(record))
+        self.assertIn("95% CI: [-inf, +inf]", elo.result_report(record))
+        self.assertIn("Approximate rating (Stockfish target 1600 + relative Elo): unavailable", elo.result_report(record))
         r.update(score=1, score_ci95_paired_bootstrap=None)
-        self.assertIn("Relative Elo: +inf", elo.result_report(record))
+        self.assertIn("Relative Elo vs Stockfish: +inf", elo.result_report(record))
         self.assertIn("unavailable (fewer than two pairs)", elo.result_report(record))
 
     def test_development_openings_are_legal_unique_and_separate(self):
