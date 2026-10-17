@@ -2,7 +2,6 @@
 from collections import Counter,defaultdict
 import gzip
 import json
-import math
 from pathlib import Path
 import re
 import statistics
@@ -11,14 +10,8 @@ import chess.pgn
 
 from .integrity import validate_bundle
 from .records import sha256,write_json
-from .report import CheckedGameBuilder,check_game_result
+from .report import CheckedGameBuilder,check_game_result,elo_equivalent
 from .r4_training import ROOT
-
-
-def elo_equivalent(score):
-    if score==0:return '-inf'
-    if score==1:return '+inf'
-    return 400*math.log10(score/(1-score))
 
 
 def analyze(record_path, completed_prefix_games=None):

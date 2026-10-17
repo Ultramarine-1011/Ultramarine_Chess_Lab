@@ -1,5 +1,15 @@
 # 验证结果
 
+## 日常 Elo 入口 — 2026-10-17
+
+在最新main `eff1a6e38ffd9cdb324e1637ad773949f22b4a75` 上实现`scripts/elo.py`。
+macOS dirty工作区真实8局、4组换色配对通过：5W/0D/3L，62.5%，条件Elo
++88.74，配对95%区间[0.00,338.04]；同源引擎流程验证，不说明棋力提升。
+Baseline缓存复用（hash/mtime不变）、Candidate增量无额外编译、PGN独立计数和
+开局换色核对通过。21项实验工具测试通过，重新configure/build后Release CTest6/6。
+文档、命令、版本及小型证据见[验证记录](docs/validation/daily-elo-20261017/notes.md)。
+Windows实际对弈本轮NOT_RUN；推送后的现有跨平台CI待核对。不新增CI对弈。
+
 工程简化验收，2026-10-16（Asia/Singapore），提交697737c。
 旧开发记录移至 [历史记录](docs/validation/history.md)。
 

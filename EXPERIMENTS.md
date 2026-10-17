@@ -51,6 +51,24 @@ benchmark 不再另存同一份 measurements.json。日志可选详细 PGN/UCI t
 中断正式比赛时保留已完成数据，说明失败原因和修复范围，按原定开局/颜色安排
 补齐缺失局。若环境或算法改变使结果不可合并，报告部分结果；无需通用审批状态机。
 
+## 日常开发快测
+
+`scripts/elo.py` 直接复用 `ucl.match.run_match`、`ucl.report` 和 bundle 验证；
+基准复用 `scripts/build_revision.py` 的隔离 Release 构建。用 `comparison=smoke`
+及默认 exploratory 模式支持同 SHA、未提交 Candidate 和同版本自对弈；正式
+`comparison=revision` 的干净版本与编译控制检查保持不变。
+
+开局 `experiments/openings/elo-dev.epd` 为独立开发集，来源/构造/固定种子/哈希
+在相邻 JSON：人工指定常见开局前缀后做合法安静续着，不使用引擎评分或棋局结果。
+256个位置无重复、行棋方均衡，与已归档实验 EPD 无重叠；仅供开发，不充当独立正式test。
+每开局只取一轮换色配对，最多512局；默认64轮/128局、2+0.02、并发4。
+不限制 depth/nodes，maxmoves=150，异常终局由现有 match 拒绝并保留诊断。
+
+沿用按轮 bootstrap 2000次；相对 Elo 为 `400*log10(p/(1-p))`，区间端点由
+同一得分区间单调变换，不采用 fastchess 的自动 Elo/LOS。全胜/全负显示无穷；
+仅一轮时区间显示 unavailable。小样本或重复使用开发开局不能证明普遍棋力提升。
+`.tools/elo/` 全部忽略，latest 可以覆盖；正式实验仍使用原来不可覆盖的结果目录。
+
 ## 历史研究
 
 [R3](docs/r3/protocol.md)、[R4](docs/r4/protocol.md)、[R5](docs/r5/protocol.md)

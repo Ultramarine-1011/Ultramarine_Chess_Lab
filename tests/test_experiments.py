@@ -16,6 +16,9 @@ from ucl.report import summarize_pgn
 from ucl.benchmark import uci_score_cp
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+import elo
+
 CONFIG = json.loads((ROOT / "experiments/configs/smoke.json").read_text())
 SCHEMA = json.loads((ROOT / "schemas/experiment-v1.schema.json").read_text())
 
@@ -277,6 +280,124 @@ class ExperimentTests(unittest.TestCase):
             with (Path(tmp) / "log.txt").open("w") as log:
                 with self.assertRaises(subprocess.TimeoutExpired):
                     run_process([sys.executable, "-c", "import time; time.sleep(30)"], tmp, log, 0.05)
+
+
+class DailyEloTests(unittest.TestCase):
+    def test_defaults_and_unlimited_search(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(elo, "STATE", Path(tmp)):
+            with patch.object(elo, "baseline_binary", return_value=("a" * 40, Path("baseline"))) as baseline, \
+                    patch.object(elo, "build_candidate", return_value=Path("candidate")), \
+                    patch.object(elo, "executable", return_value=Path(sys.executable)), \
+                    patch.object(elo, "run_match", return_value={"status": "failed", "error": "test stop"}) as match:
+                with self.assertRaises(SystemExit) as stopped:
+                    elo.main([])
+                self.assertEqual(stopped.exception.code, 1)
+            self.assertEqual(baseline.call_args.args, ("HEAD",))
+            config = json.loads((Path(tmp) / "match.json").read_text())
+            self.assertEqual((config["rounds"], config["games"], config["tc"], config["concurrency"]),
+                             (64, 2, "2+0.02", 4))
+            self.assertEqual(config["engines"][0]["revision"], "HEAD")
+            self.assertEqual(config["engines"][1]["revision"], "a" * 40)
+            self.assertTrue(match.call_args.kwargs["overwrite"])
+            self.assertNotIn("depth", config)
+            self.assertNotIn("nodes", config)
+            validate_config(config)
+            args = command(config, ["candidate", "baseline"], "fastchess", "games.pgn", elo.OPENINGS)
+            self.assertFalse(any(a.startswith(("depth=", "nodes=")) for a in args))
+
+    def test_baseline_cache_and_set_baseline(self):
+        with tempfile.TemporaryDirectory(prefix="ucl elo ") as tmp, patch.object(elo, "STATE", Path(tmp)):
+            full = "b" * 40
+            def build(revision, output):
+                output.mkdir(parents=True)
+                binary = output / elo.BINARY
+                binary.write_bytes(b"cached baseline")
+                write_json(output / "manifest.json", {"sha256": sha256(binary), "build_info": {
+                    "revision": revision, "dirty": False, "build_type": "Release"}})
+            with patch.object(elo.subprocess, "check_output", return_value=full), \
+                    patch.object(elo, "build_revision", side_effect=build) as builder, \
+                    patch.object(elo, "build_candidate") as candidate, patch.object(elo, "run_match") as match:
+                elo.main(["--set-baseline", "HEAD~1"])
+                _, binary = elo.baseline_binary(full)
+                builder.assert_called_once()
+                candidate.assert_not_called()
+                match.assert_not_called()
+                self.assertEqual(json.loads((Path(tmp) / "baseline.json").read_text()), {"revision": full})
+                binary.write_bytes(b"corrupted")
+                with self.assertRaisesRegex(ValueError, "cache mismatch"):
+                    elo.baseline_binary(full)
+                builder.assert_called_once()
+
+    def test_candidate_reconfigures_and_builds_incrementally(self):
+        info = {"revision": "a" * 40, "dirty": True, "build_type": "Release"}
+        with tempfile.TemporaryDirectory(prefix="ucl elo ") as tmp, patch.object(elo, "STATE", Path(tmp)):
+            binary = Path(tmp) / "candidate-build" / elo.BINARY
+            binary.parent.mkdir()
+            binary.write_bytes(b"dirty workspace binary")
+            with patch.object(elo.subprocess, "check_output", return_value=json.dumps(info)), \
+                    patch.object(elo.subprocess, "run") as run:
+                self.assertEqual(elo.build_candidate(), binary)
+                self.assertEqual(elo.build_candidate(), binary)
+                self.assertEqual(run.call_count, 4)
+                self.assertEqual([c.args for c in run.call_args_list[:2]],
+                                 [c.args for c in run.call_args_list[2:]])
+                commands = [c.args[0] for c in run.call_args_list[:2]]
+                self.assertIn("-DCMAKE_BUILD_TYPE=Release", commands[0])
+                self.assertIn("--build", commands[1])
+                self.assertNotIn("--clean-first", commands[1])
+            self.assertEqual(json.loads((Path(tmp) / "candidate.json").read_text())["build_info"], info)
+
+    def test_arguments_reject_invalid_values_before_build(self):
+        with patch.object(elo, "build_candidate") as build:
+            for args in (["--games", "3"], ["--games", "0"], ["--concurrency", "0"],
+                         ["--tc", "0+0"], ["--tc", "nan"], ["--tc", "2+inf"]):
+                with self.subTest(args=args), self.assertRaises(SystemExit) as failed:
+                    elo.main(args)
+                self.assertEqual(failed.exception.code, 2)
+            build.assert_not_called()
+        config = elo.match_config(Path("C:/candidate with spaces.exe"), Path("baseline"), "a" * 40,
+                                  8, elo.time_control("0:02+0.02"), 2)
+        self.assertEqual((config["rounds"], config["tc"], config["concurrency"]), (4, "0:02+0.02", 2))
+
+    def test_elo_uses_existing_paired_score_interval_and_boundary_scores(self):
+        from ucl.report import elo_equivalent
+        from ucl.r4_results import elo_equivalent as historical_elo
+        self.assertIs(elo_equivalent, historical_elo)
+        r = {"candidate": "Candidate", "baseline": "Baseline", "wins": 5, "draws": 2, "losses": 1,
+             "games": 8, "score": .75, "paired_rounds": 4,
+             "score_ci95_paired_bootstrap": [.25, .9], "interpretation": "development"}
+        record = {"id": "test", "code": {"revision": "a" * 40, "dirty": True}, "results": r}
+        text = elo.result_report(record)
+        self.assertIn("W/D/L: 5/2/1; score: 75.00%", text)
+        self.assertIn("Relative Elo: +190.85", text)
+        self.assertIn("95% CI: [-190.85, +381.70]", text)
+        r.update(score=0, score_ci95_paired_bootstrap=[0, 1])
+        self.assertIn("Relative Elo: -inf", elo.result_report(record))
+        self.assertIn("95% CI: [-inf, +inf]", elo.result_report(record))
+        r.update(score=1, score_ci95_paired_bootstrap=None)
+        self.assertIn("Relative Elo: +inf", elo.result_report(record))
+        self.assertIn("unavailable (fewer than two pairs)", elo.result_report(record))
+
+    def test_development_openings_are_legal_unique_and_separate(self):
+        import chess
+        positions = elo.OPENINGS.read_text().splitlines()
+        metadata = json.loads(elo.OPENINGS.with_suffix(".json").read_text())
+        self.assertEqual(sha256(elo.OPENINGS), metadata["sha256"])
+        self.assertEqual(len(positions), metadata["positions"])
+        self.assertEqual(len(set(positions)), len(positions))
+        self.assertGreaterEqual(len(positions), 64)
+        white_to_move = 0
+        for position in positions:
+            board = chess.Board(position + " 0 1")
+            self.assertTrue(board.is_valid())
+            self.assertFalse(board.is_game_over())
+            white_to_move += board.turn
+        self.assertEqual(white_to_move * 2, len(positions))
+        for other in (ROOT / "experiments").rglob("*.epd"):
+            if other == elo.OPENINGS:
+                continue
+            old = {" ".join(line.split()[:4]) for line in other.read_text().splitlines() if line.strip()}
+            self.assertFalse(set(positions) & old, str(other))
 
 
 if __name__ == "__main__":

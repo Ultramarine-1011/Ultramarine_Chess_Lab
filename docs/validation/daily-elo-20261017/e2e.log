@@ -1,0 +1,26 @@
+Baseline: eff1a6e38ffd9cdb324e1637ad773949f22b4a75 (cached)
+Building workspace candidate (incremental Release) ...
+Playing 8 games, tc=2+0.02, concurrency=4 ...
+# UCL experiment ea444dab-7612-44f0-85f6-7051504f4d92
+
+Mode: exploratory; revision: `eff1a6e38ffd9cdb324e1637ad773949f22b4a75`; dirty: `True`
+
+Candidate vs Baseline: 5 W / 0 D / 3 L (8 games), score 0.625.
+
+Paired rounds: 4; paired bootstrap score CI95: [0.5, 0.875].
+
+Pair scores (0, 0.5, 1, 1.5, 2): [0, 0, 3, 0, 1].
+
+Descriptive smoke/baseline statistics; not evidence of Elo improvement.
+
+Daily development comparison:
+
+W/D/L: 5/0/3; score: 62.50%
+
+Relative Elo: +88.74; paired bootstrap 95% CI: [+0.00, +338.04]
+
+Score paired bootstrap 95% CI: [50.00%, 87.50%]
+
+Elo is the logistic transform of score and its paired interval; descriptive only.
+
+Results / PGN / versions / config: /Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/elo/latest

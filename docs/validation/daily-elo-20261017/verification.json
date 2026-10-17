@@ -1,0 +1,76 @@
+{
+  "tested_revision": "eff1a6e38ffd9cdb324e1637ad773949f22b4a75",
+  "dirty": true,
+  "games": 8,
+  "wdl": [
+    5,
+    0,
+    3
+  ],
+  "score": 0.625,
+  "elo": 88.73949984654256,
+  "score_ci95": [
+    0.5,
+    0.875
+  ],
+  "elo_ci95": [
+    0.0,
+    338.0392160057027
+  ],
+  "baseline_cache_sha_and_mtime_unchanged": true,
+  "candidate_incremental_no_work": true,
+  "actual_first_four_development_openings_color_swapped": true,
+  "pgn_wdl_independent_header_count_matches": true,
+  "no_depth_or_nodes_command_limits": true,
+  "hardware": {
+    "os": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+    "architecture": "arm64",
+    "cpu": "Apple A18 Pro",
+    "logical_cpus": 6,
+    "memory_bytes": 8589934592,
+    "python": "3.14.5",
+    "packages": {
+      "chess": "1.11.2",
+      "jsonschema": "4.25.1",
+      "ucl-lab": "0.1.0"
+    }
+  },
+  "engines": [
+    {
+      "name": "Candidate",
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/elo/candidate-build/ucl",
+      "revision": "eff1a6e38ffd9cdb324e1637ad773949f22b4a75",
+      "build": "CMake Ninja Release; current workspace",
+      "options": {
+        "MoveOverhead": 10
+      },
+      "sha256": "0539357d3f3bb8d77f3b998872c823b018c6793d6dd514ce29f2c3db538c1976",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "eff1a6e38ffd9cdb324e1637ad773949f22b4a75",
+        "dirty": true,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      }
+    },
+    {
+      "name": "Baseline",
+      "path": "/Users/ultramarine/Documents/Ultramarine_Chess_Lab/.tools/elo/baselines/darwin-arm64/eff1a6e38ffd9cdb324e1637ad773949f22b4a75/ucl",
+      "revision": "eff1a6e38ffd9cdb324e1637ad773949f22b4a75",
+      "build": "CMake Ninja Release; isolated clean revision",
+      "options": {
+        "MoveOverhead": 10
+      },
+      "sha256": "705b8c1bda165653c83b0e183eb681305c964c5ce6a296eb8f9c104b2441efcb",
+      "build_info": {
+        "version": "0.1.0",
+        "revision": "eff1a6e38ffd9cdb324e1637ad773949f22b4a75",
+        "dirty": false,
+        "compiler": "AppleClang 21.0.0.21000101",
+        "build_type": "Release",
+        "flags": " -O3 -DNDEBUG"
+      }
+    }
+  ]
+}

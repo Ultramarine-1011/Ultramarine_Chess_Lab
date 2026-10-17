@@ -7,6 +7,15 @@ import statistics
 import chess.pgn
 
 
+def elo_equivalent(score):
+    """Descriptive logistic Elo difference, including exact boundary scores."""
+    if score == 0:
+        return "-inf"
+    if score == 1:
+        return "+inf"
+    return 400 * math.log10(score / (1 - score))
+
+
 class CheckedGameBuilder(chess.pgn.GameBuilder):
     def begin_game(self):
         self.saw_result = False

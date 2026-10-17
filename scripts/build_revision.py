@@ -17,16 +17,17 @@ sys.path.insert(0, str(ROOT / "python"))
 from ucl.records import sha256, write_json
 
 
-def build_revision(revision):
+def build_revision(revision, output=None):
+    """Build/reuse a clean revision; optional output supports platform-specific caches."""
     full = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "--verify", revision + "^{commit}"], text=True).strip()
-    output = ROOT / ".tools" / "engines" / full
+    output = Path(output) if output is not None else ROOT / ".tools" / "engines" / full
     manifest_path = output / 'manifest.json'
     if manifest_path.exists():
-        manifest = json.loads(manifest_path.read_text())
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         if sha256(manifest['binary']) != manifest['sha256']:
             raise ValueError('cached binary differs from its manifest')
         print(manifest_path)
-        return
+        return manifest_path
     output.mkdir(parents=True, exist_ok=True)
     commands = []
     with tempfile.TemporaryDirectory(prefix="ucl-revision-") as tmp:
@@ -50,6 +51,7 @@ def build_revision(revision):
                 if source.exists():
                     run(["git", "-C", ROOT, "worktree", "remove", source], log)
     print(output / "manifest.json")
+    return output / "manifest.json"
 
 
 if __name__ == "__main__":

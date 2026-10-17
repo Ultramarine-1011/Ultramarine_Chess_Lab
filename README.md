@@ -52,6 +52,30 @@ evalinfo
 `--features` / `--features-v2` 按行导出 FEN 特征；`--infer <model> <sha256>` 批量推理。
 `--build-info` 显示 configure 时的源码/编译信息；需要刷新时重新 configure/build。
 
+## 日常 Elo 快测
+
+完成上述 Python 依赖安装，并准备好 fastchess（macOS 用
+`python scripts/bootstrap_fastchess.py`；Windows 把 `fastchess.exe` 放到
+`.tools/bin/` 或 PATH）。Windows 在 Developer PowerShell 中运行，使用
+`.venv/Scripts/python.exe`；macOS 激活 `.venv` 后：
+
+```sh
+python scripts/elo.py --set-baseline HEAD   # 可选：固定指定提交并缓存 Release 二进制
+python scripts/elo.py                      # 128局，2+0.02，4并发
+python scripts/elo.py --games 8 --tc 2+0.02 --concurrency 2
+```
+
+未设置基准时，首次自动固定当前已提交的 HEAD；后续始终使用保存的完整 SHA。
+`--set-baseline <revision>` 只设置/构建基准后退出，不启动比赛。基准按平台、
+架构和 SHA 缓存，日常复用；Candidate 每次重新 configure 并增量构建当前工作区，
+允许未提交修改，无需预先构建。工具链升级后可删除对应基准缓存并重新运行。
+
+结果在 `.tools/elo/latest/`：终端和 `report.md` 显示 W/D/L、得分率、相对 Elo
+及换色配对 bootstrap 95% CI；`games.pgn`、`record.json`、配置和 fastchess
+日志保留在同目录。下次快测覆盖 latest；需要保留时自行复制该目录。
+独立开发开局集支持 2–512 个偶数局，每个开局换色两局，无 depth/nodes 限制，
+150回合仍未结束则裁和。快测仅提供当前设置的描述性比较；不覆盖正式研究报告。
+
 ## 探索实验
 
 ```sh
