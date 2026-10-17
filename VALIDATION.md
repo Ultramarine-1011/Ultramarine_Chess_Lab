@@ -27,7 +27,11 @@ UCL SHA和历史版本比较验证保留。原有CI工作区修改保持未提�
 24项通过；重新`cmake --preset release -DPython3_EXECUTABLE="$PWD/.venv/bin/python"`、
 `cmake --build --preset release --parallel 4`后，`ctest --preset release -R '^experiments$'`
 及`ctest --preset release`通过，完整6/6（12.35s）。R1/R2、R3、R4续跑、R6A四份
-历史比赛包额外离线验证通过。Windows实机对弈NOT_RUN；推送后CI状态待核对。
+历史比赛包额外离线验证通过。Windows实机对弈NOT_RUN。
+功能提交`23d669b5476947562030866afeba8470b995ef2f`已推送main；
+[本次Actions](https://github.com/Ultramarine-1011/Ultramarine_Chess_Lab/actions/runs/39015989909)
+因账户付款/支出额度限制，五项均未启动（状态failure、执行步骤为空），跨平台CI
+为NOT_RUN。一次CI读取失败后已用直接API复查最终状态，不作为代码测试失败。
 
 ## 日常 Elo 入口 — 2026-10-17
 
