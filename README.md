@@ -40,26 +40,29 @@ Ultramarine Chess Lab 是一个从零构建的**研究型 UCI 国际象棋引擎
 
 ## 系统架构与实验流程
 
-```mermaid
-flowchart LR
-    subgraph CPP["C++20 引擎与推理核心"]
-        Board["chess::Board (chess-library)"] --> Feat["FeatureExtractor (8维 / 14维)"]
-        Feat --> Eval["Evaluator (Handcrafted / Linear+SHA256)"]
-        Eval --> Search["Search (ID + Alpha-Beta + QS + TT + PV)"]
-        Search --> UCI["UCI Session / CLI (--features, --infer)"]
-    end
+**1. C++20 引擎与推理核心**（接口边界见 [ARCHITECTURE.md](ARCHITECTURE.md)）
 
-    subgraph PY["Python 数据、训练与统计管线"]
-        Data["Lichess CC0 + SF17.1 教师标注"] --> Split["整局划分与镜像去重"]
-        Split --> Train["L-BFGS-B 训练与 Validation 选模"]
-        Train --> Freeze["模型冻结与单次独立 Test"]
-        Freeze --> Match["fastchess 配对对弈与逐着 UCI 核验"]
-        Match --> Stats["2000次配对 Bootstrap / 多重校正报告"]
-    end
+```text
+GUI / fastchess / CLI
+  -> UCI Session (jthread 异步搜索, ModelSHA256 / ModelFile 校验加载)
+       -> Search (迭代加深 fail-soft Negamax + Alpha-Beta + QS + TT + PV)
+            |-> chess::Board (chess-library: 合法走法、终局与和棋)
+            |-> Evaluator (默认 Handcrafted / Linear + SHA-256)
+                  -> FeatureExtractor (8 维 handcrafted-v1 / 14 维 interpretable-v2)
+```
 
-    UCI <-->|"--features / --infer 一致性核对 (误差低于 1e-9 cp)"| Split
-    Freeze -->|"ASCII 模型 + SHA-256"| UCI
-    UCI <-->|"UCI 对弈 / 遥测日志"| Match
+**2. Python 数据、训练与统计闭环**（实验规范见 [EXPERIMENTS.md](EXPERIMENTS.md)）
+
+```text
+Lichess CC0 PGN (+ R6 Stockfish 17.1 教师标注)
+  -> 整局划分与跨集合镜像去重 (ucl.dataset, r4_data, r6_data)
+       <=> ucl --features / --features-v2: 与 python-chess 特征一致
+  -> train 拟合 / val 选模 (L-BFGS-B; training, r4_training, r6_training)
+  -> 模型冻结与单次独立 test (输出 ASCII 模型 + SHA-256)
+       <=> ucl --infer: 推理误差 < 1e-9 cp 且取整 cp 全等后接入 UCI
+  -> 同开局换色对弈, 无早停 (fastchess; ucl.match, r5_study, r6_study)
+       <=> 核验逐着 PGN/UCI 遥测对应与引擎配置一致性
+  -> 2000 次配对 Bootstrap 归档 (ucl-lab report, r4_analysis, r5_analysis)
 ```
 
 ## 研究报告与技术文档
